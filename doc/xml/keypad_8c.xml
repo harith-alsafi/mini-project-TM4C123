@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="keypad_8c" kind="file" language="C++">
+    <compoundname>keypad.c</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="keypad_8c_1ae6ab35ff194b314a314a5054259ffa9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int IsPressed</definition>
+        <argsstring>()</argsstring>
+        <name>IsPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="keypad.c" line="1" column="5" declfile="keypad.c" declline="1" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="keypad_8c_1a2d42937c3f3d49c8958ce119e6b745fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char GetKey</definition>
+        <argsstring>()</argsstring>
+        <name>GetKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="keypad.c" line="3" column="6" declfile="keypad.c" declline="3" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="keypad_8c_1ae6ab35ff194b314a314a5054259ffa9a" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="keypad_8c_1ae6ab35ff194b314a314a5054259ffa9a" kindref="member">IsPressed</ref>();</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="keypad_8c_1a2d42937c3f3d49c8958ce119e6b745fd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="keypad_8c_1a2d42937c3f3d49c8958ce119e6b745fd" kindref="member">GetKey</ref>();</highlight></codeline>
+    </programlisting>
+    <location file="keypad.c"/>
+  </compounddef>
+</doxygen>

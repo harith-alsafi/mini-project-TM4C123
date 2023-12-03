@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_t_exa_s_8h" kind="file" language="C++">
+    <compoundname>TExaS.h</compoundname>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_t_exa_s_8h_1a53ea182d5a09a410df69fca268877072" prot="public" static="no" strong="no">
+        <type></type>
+        <name>InputPorts</name>
+        <enumvalue id="_t_exa_s_8h_1a53ea182d5a09a410df69fca268877072a931c4bc0840b2f59a701eabfd69fd1c9" prot="public">
+          <name>SW_PIN_PF40</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TExaS.h" line="25" column="1" bodyfile="TExaS.h" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="enum" id="_t_exa_s_8h_1a3bc4dd15d49b553a283366165300d515" prot="public" static="no" strong="no">
+        <type></type>
+        <name>OutputPorts</name>
+        <enumvalue id="_t_exa_s_8h_1a3bc4dd15d49b553a283366165300d515adc1d716abf5f4d3f101cb8e06161a29b" prot="public">
+          <name>LED_PIN_PF321</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TExaS.h" line="29" column="1" bodyfile="TExaS.h" bodystart="29" bodyend="31"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_t_exa_s_8h_1ad2b7923d22b40d0651b1be3ed8214c1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TExaS_Init</definition>
+        <argsstring>(enum InputPorts iport, enum OutputPorts oport)</argsstring>
+        <name>TExaS_Init</name>
+        <param>
+          <type>enum <ref refid="_t_exa_s_8h_1a53ea182d5a09a410df69fca268877072" kindref="member">InputPorts</ref></type>
+          <declname>iport</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="_t_exa_s_8h_1a3bc4dd15d49b553a283366165300d515" kindref="member">OutputPorts</ref></type>
+          <declname>oport</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TExaS.h" line="39" column="6" declfile="TExaS.h" declline="39" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_t_exa_s_8h_1adeb7fccbbb1881b866ba3ad16712294c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TExaS_Stop</definition>
+        <argsstring>(void)</argsstring>
+        <name>TExaS_Stop</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TExaS.h" line="45" column="6" declfile="TExaS.h" declline="45" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>TExaS.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Runs<sp/>on<sp/>LM4F120/TM4C123</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Periodic<sp/>timer<sp/>Timer5A<sp/>which<sp/>will<sp/>interact<sp/>with<sp/>debugger<sp/>and<sp/>grade<sp/>the<sp/>lab<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>It<sp/>initializes<sp/>on<sp/>reset<sp/>and<sp/>runs<sp/>whenever<sp/>interrupts<sp/>are<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Daniel<sp/>Valvano<sp/>and<sp/>Jonathan<sp/>Valvano</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>December<sp/>5,<sp/>2013</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>example<sp/>accompanies<sp/>the<sp/>book</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/>&quot;Embedded<sp/>Systems:<sp/>Real<sp/>Time<sp/>Operating<sp/>Systems<sp/>for<sp/>ARM<sp/>Cortex<sp/>M<sp/>Microcontrollers&quot;,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/>ISBN:<sp/>978-1466468863,<sp/>Jonathan<sp/>Valvano,<sp/>copyright<sp/>(c)<sp/>2013</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>Copyright<sp/>2013<sp/>by<sp/>Jonathan<sp/>W.<sp/>Valvano,<sp/>valvano@mail.utexas.edu</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/>You<sp/>may<sp/>use,<sp/>edit,<sp/>run<sp/>or<sp/>distribute<sp/>this<sp/>file</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/>as<sp/>long<sp/>as<sp/>the<sp/>above<sp/>copyright<sp/>notice<sp/>remains</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;.<sp/><sp/>NO<sp/>WARRANTIES,<sp/>WHETHER<sp/>EXPRESS,<sp/>IMPLIED</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>OR<sp/>STATUTORY,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>APPLY<sp/>TO<sp/>THIS<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>VALVANO<sp/>SHALL<sp/>NOT,<sp/>IN<sp/>ANY<sp/>CIRCUMSTANCES,<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>SPECIAL,<sp/>INCIDENTAL,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES,<sp/>FOR<sp/>ANY<sp/>REASON<sp/>WHATSOEVER.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>For<sp/>more<sp/>information<sp/>about<sp/>my<sp/>classes,<sp/>my<sp/>research,<sp/>and<sp/>my<sp/>books,<sp/>see</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>http://users.ece.utexas.edu/~valvano/</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IMPORTANT:<sp/>These<sp/>enumerated<sp/>types<sp/>are<sp/>specific<sp/>to<sp/>Lab<sp/>6<sp/>and<sp/>should<sp/>NOT<sp/>be<sp/>changed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="_t_exa_s_8h_1a53ea182d5a09a410df69fca268877072" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_t_exa_s_8h_1a53ea182d5a09a410df69fca268877072" kindref="member">InputPorts</ref>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><ref refid="_t_exa_s_8h_1a53ea182d5a09a410df69fca268877072a931c4bc0840b2f59a701eabfd69fd1c9" kindref="member">SW_PIN_PF40</ref><sp/>=<sp/>5</highlight></codeline>
+<codeline lineno="27" refid="_t_exa_s_8h_1a53ea182d5a09a410df69fca268877072a931c4bc0840b2f59a701eabfd69fd1c9" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="_t_exa_s_8h_1a3bc4dd15d49b553a283366165300d515" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_t_exa_s_8h_1a3bc4dd15d49b553a283366165300d515" kindref="member">OutputPorts</ref>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><ref refid="_t_exa_s_8h_1a3bc4dd15d49b553a283366165300d515adc1d716abf5f4d3f101cb8e06161a29b" kindref="member">LED_PIN_PF321</ref><sp/>=<sp/>5</highlight></codeline>
+<codeline lineno="31" refid="_t_exa_s_8h_1a3bc4dd15d49b553a283366165300d515adc1d716abf5f4d3f101cb8e06161a29b" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>************TExaS_Init*****************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Initialize<sp/>grader,<sp/>triggered<sp/>by<sp/>timer<sp/>5A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>needs<sp/>to<sp/>be<sp/>called<sp/>once<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Inputs:<sp/>iport<sp/>input(s)<sp/>connected<sp/>to<sp/>this<sp/>port</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oport<sp/>output(s)<sp/>connected<sp/>to<sp/>this<sp/>port</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Outputs:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="_t_exa_s_8h_1ad2b7923d22b40d0651b1be3ed8214c1d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_t_exa_s_8h_1ad2b7923d22b40d0651b1be3ed8214c1d" kindref="member">TExaS_Init</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_t_exa_s_8h_1a53ea182d5a09a410df69fca268877072" kindref="member">InputPorts</ref><sp/>iport,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_t_exa_s_8h_1a3bc4dd15d49b553a283366165300d515" kindref="member">OutputPorts</ref><sp/>oport);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>************TExaS_Stop*****************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Stop<sp/>the<sp/>transfer<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Inputs:<sp/><sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Outputs:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="_t_exa_s_8h_1adeb7fccbbb1881b866ba3ad16712294c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_t_exa_s_8h_1adeb7fccbbb1881b866ba3ad16712294c" kindref="member">TExaS_Stop</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+    </programlisting>
+    <location file="TExaS.h"/>
+  </compounddef>
+</doxygen>

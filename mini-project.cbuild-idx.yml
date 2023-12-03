@@ -1,0 +1,9 @@
+build-idx:
+  generated-by: csolution version 2.2.0
+  csolution: mini-project.csolution.yml
+  cprojects:
+    - cproject: mini-project.cproject.yml
+  cbuilds:
+    - cbuild: mini-project+Target_1.cbuild.yml
+      project: mini-project
+      configuration: +Target_1

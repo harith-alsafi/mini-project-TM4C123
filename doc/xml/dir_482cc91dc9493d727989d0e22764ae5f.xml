@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_482cc91dc9493d727989d0e22764ae5f" kind="dir">
+    <compoundname>RTE/Device</compoundname>
+    <innerdir refid="dir_4f23b4d826f98e28f19bce6cf0e4c139">RTE/Device/TM4C123GH6PM</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="RTE/Device/"/>
+  </compounddef>
+</doxygen>

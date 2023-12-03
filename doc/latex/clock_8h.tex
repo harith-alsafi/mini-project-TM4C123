@@ -1,0 +1,102 @@
+\doxysection{clock.\+h File Reference}
+\hypertarget{clock_8h}{}\label{clock_8h}\index{clock.h@{clock.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{clock_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{clock_8h_adcfc8530f81c2ebea5d6b229ba4f9d3f}{NVIC\+\_\+\+ST\+\_\+\+CTRL\+\_\+R}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x\+E000\+E010))
+\item 
+\#define \mbox{\hyperlink{clock_8h_a1c404f068f1ba79d68c7cc4302112da3}{NVIC\+\_\+\+ST\+\_\+\+RELOAD\+\_\+R}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x\+E000\+E014))
+\item 
+\#define \mbox{\hyperlink{clock_8h_a83b8a7cd422c2dde3c671c9255216cff}{NVIC\+\_\+\+ST\+\_\+\+CURRENT\+\_\+R}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x\+E000\+E018))
+\item 
+\#define \mbox{\hyperlink{clock_8h_a2fedfceccf18bd54a499e73d1b76e506}{SYSCTL\+\_\+\+RCGC2\+\_\+R}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x400\+FE108))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{clock_8h_a58cf193ae5c1f330e4868e32afb9445d}{Sys\+Tick\+Init}} ()
+\item 
+void \mbox{\hyperlink{clock_8h_a21cfe49b38d53efaf75df16d21ed882a}{PLLInit}} ()
+\item 
+void \mbox{\hyperlink{clock_8h_a3a41872da02412b070aa025207d4709b}{Delay\+Micro}} (unsigned long millisecond)
+\item 
+void \mbox{\hyperlink{clock_8h_a9ae38f0acb2451f378777d5b5dd69a52}{Delay\+Milli}} (unsigned long microseconds)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{clock_8h_adcfc8530f81c2ebea5d6b229ba4f9d3f}\label{clock_8h_adcfc8530f81c2ebea5d6b229ba4f9d3f} 
+\index{clock.h@{clock.h}!NVIC\_ST\_CTRL\_R@{NVIC\_ST\_CTRL\_R}}
+\index{NVIC\_ST\_CTRL\_R@{NVIC\_ST\_CTRL\_R}!clock.h@{clock.h}}
+\doxysubsubsection{\texorpdfstring{NVIC\_ST\_CTRL\_R}{NVIC\_ST\_CTRL\_R}}
+{\footnotesize\ttfamily \#define NVIC\+\_\+\+ST\+\_\+\+CTRL\+\_\+R~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x\+E000\+E010))}
+
+
+
+Definition at line \mbox{\hyperlink{clock_8h_source_l00001}{1}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
+
+\Hypertarget{clock_8h_a83b8a7cd422c2dde3c671c9255216cff}\label{clock_8h_a83b8a7cd422c2dde3c671c9255216cff} 
+\index{clock.h@{clock.h}!NVIC\_ST\_CURRENT\_R@{NVIC\_ST\_CURRENT\_R}}
+\index{NVIC\_ST\_CURRENT\_R@{NVIC\_ST\_CURRENT\_R}!clock.h@{clock.h}}
+\doxysubsubsection{\texorpdfstring{NVIC\_ST\_CURRENT\_R}{NVIC\_ST\_CURRENT\_R}}
+{\footnotesize\ttfamily \#define NVIC\+\_\+\+ST\+\_\+\+CURRENT\+\_\+R~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x\+E000\+E018))}
+
+
+
+Definition at line \mbox{\hyperlink{clock_8h_source_l00003}{3}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
+
+\Hypertarget{clock_8h_a1c404f068f1ba79d68c7cc4302112da3}\label{clock_8h_a1c404f068f1ba79d68c7cc4302112da3} 
+\index{clock.h@{clock.h}!NVIC\_ST\_RELOAD\_R@{NVIC\_ST\_RELOAD\_R}}
+\index{NVIC\_ST\_RELOAD\_R@{NVIC\_ST\_RELOAD\_R}!clock.h@{clock.h}}
+\doxysubsubsection{\texorpdfstring{NVIC\_ST\_RELOAD\_R}{NVIC\_ST\_RELOAD\_R}}
+{\footnotesize\ttfamily \#define NVIC\+\_\+\+ST\+\_\+\+RELOAD\+\_\+R~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x\+E000\+E014))}
+
+
+
+Definition at line \mbox{\hyperlink{clock_8h_source_l00002}{2}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
+
+\Hypertarget{clock_8h_a2fedfceccf18bd54a499e73d1b76e506}\label{clock_8h_a2fedfceccf18bd54a499e73d1b76e506} 
+\index{clock.h@{clock.h}!SYSCTL\_RCGC2\_R@{SYSCTL\_RCGC2\_R}}
+\index{SYSCTL\_RCGC2\_R@{SYSCTL\_RCGC2\_R}!clock.h@{clock.h}}
+\doxysubsubsection{\texorpdfstring{SYSCTL\_RCGC2\_R}{SYSCTL\_RCGC2\_R}}
+{\footnotesize\ttfamily \#define SYSCTL\+\_\+\+RCGC2\+\_\+R~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x400\+FE108))}
+
+
+
+Definition at line \mbox{\hyperlink{clock_8h_source_l00004}{4}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{clock_8h_a3a41872da02412b070aa025207d4709b}\label{clock_8h_a3a41872da02412b070aa025207d4709b} 
+\index{clock.h@{clock.h}!DelayMicro@{DelayMicro}}
+\index{DelayMicro@{DelayMicro}!clock.h@{clock.h}}
+\doxysubsubsection{\texorpdfstring{DelayMicro()}{DelayMicro()}}
+{\footnotesize\ttfamily void Delay\+Micro (\begin{DoxyParamCaption}\item[{unsigned long}]{millisecond }\end{DoxyParamCaption})}
+
+\Hypertarget{clock_8h_a9ae38f0acb2451f378777d5b5dd69a52}\label{clock_8h_a9ae38f0acb2451f378777d5b5dd69a52} 
+\index{clock.h@{clock.h}!DelayMilli@{DelayMilli}}
+\index{DelayMilli@{DelayMilli}!clock.h@{clock.h}}
+\doxysubsubsection{\texorpdfstring{DelayMilli()}{DelayMilli()}}
+{\footnotesize\ttfamily void Delay\+Milli (\begin{DoxyParamCaption}\item[{unsigned long}]{microseconds }\end{DoxyParamCaption})}
+
+\Hypertarget{clock_8h_a21cfe49b38d53efaf75df16d21ed882a}\label{clock_8h_a21cfe49b38d53efaf75df16d21ed882a} 
+\index{clock.h@{clock.h}!PLLInit@{PLLInit}}
+\index{PLLInit@{PLLInit}!clock.h@{clock.h}}
+\doxysubsubsection{\texorpdfstring{PLLInit()}{PLLInit()}}
+{\footnotesize\ttfamily void PLLInit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{clock_8h_a58cf193ae5c1f330e4868e32afb9445d}\label{clock_8h_a58cf193ae5c1f330e4868e32afb9445d} 
+\index{clock.h@{clock.h}!SysTickInit@{SysTickInit}}
+\index{SysTickInit@{SysTickInit}!clock.h@{clock.h}}
+\doxysubsubsection{\texorpdfstring{SysTickInit()}{SysTickInit()}}
+{\footnotesize\ttfamily void Sys\+Tick\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

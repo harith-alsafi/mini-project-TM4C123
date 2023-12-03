@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="lcd_8h" kind="file" language="C++">
+    <compoundname>lcd.h</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="lcd_8h_1ae3c22aa0ea62f7f26f03726dfc56d6ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SendDisplayNibble</definition>
+        <argsstring>()</argsstring>
+        <name>SendDisplayNibble</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lcd.h" line="1" column="6" declfile="lcd.h" declline="1" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8h_1a19eb74400b883d56dd0af0d2ac885fa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SendDisplayByte</definition>
+        <argsstring>()</argsstring>
+        <name>SendDisplayByte</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lcd.h" line="3" column="6" declfile="lcd.h" declline="3" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8h_1a5bd2abdd0f70b7ed553fedd04ae4ff88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitDisplayPort</definition>
+        <argsstring>()</argsstring>
+        <name>InitDisplayPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lcd.h" line="5" column="6" declfile="lcd.h" declline="5" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8h_1a4af801a241efb9b64193a806e31c2437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClearDisplayScreen</definition>
+        <argsstring>()</argsstring>
+        <name>ClearDisplayScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lcd.h" line="9" column="6" declfile="lcd.h" declline="9" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8h_1a60ba9111ef4e0e503ad416b606563fac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MoveDisplayCursor</definition>
+        <argsstring>()</argsstring>
+        <name>MoveDisplayCursor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lcd.h" line="11" column="6" declfile="lcd.h" declline="11" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8h_1ab881e4036845f68552f9ff3f1dfda75c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PrintDisplay</definition>
+        <argsstring>()</argsstring>
+        <name>PrintDisplay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lcd.h" line="13" column="6" declfile="lcd.h" declline="13" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="lcd_8h_1ae3c22aa0ea62f7f26f03726dfc56d6ab" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8h_1ae3c22aa0ea62f7f26f03726dfc56d6ab" kindref="member">SendDisplayNibble</ref>()<sp/>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="lcd_8h_1a19eb74400b883d56dd0af0d2ac885fa6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8h_1a19eb74400b883d56dd0af0d2ac885fa6" kindref="member">SendDisplayByte</ref>()<sp/>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="lcd_8h_1a5bd2abdd0f70b7ed553fedd04ae4ff88" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8h_1a5bd2abdd0f70b7ed553fedd04ae4ff88" kindref="member">InitDisplayPort</ref>();</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8h_1a19eb74400b883d56dd0af0d2ac885fa6" kindref="member">SendDisplayByte</ref>()<sp/>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="lcd_8h_1a4af801a241efb9b64193a806e31c2437" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8h_1a4af801a241efb9b64193a806e31c2437" kindref="member">ClearDisplayScreen</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="lcd_8h_1a60ba9111ef4e0e503ad416b606563fac" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8h_1a60ba9111ef4e0e503ad416b606563fac" kindref="member">MoveDisplayCursor</ref>();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="lcd_8h_1ab881e4036845f68552f9ff3f1dfda75c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8h_1ab881e4036845f68552f9ff3f1dfda75c" kindref="member">PrintDisplay</ref>();</highlight></codeline>
+    </programlisting>
+    <location file="lcd.h"/>
+  </compounddef>
+</doxygen>

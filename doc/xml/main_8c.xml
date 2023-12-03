@@ -1,0 +1,382 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="main_8c" kind="file" language="C++">
+    <compoundname>main.c</compoundname>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" prot="public" static="no">
+        <name>GPIO_PORTF_DATA_R</name>
+        <initializer>(*((volatile unsigned long *)0x400253FC))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="21" column="9" bodyfile="main.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8c_1a4af807e7c41e4e51a09ab6598280d09b" prot="public" static="no">
+        <name>GPIO_PORTF_DIR_R</name>
+        <initializer>(*((volatile unsigned long *)0x40025400))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="22" column="9" bodyfile="main.c" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8c_1a8f9c5b1caa2f2206e46d6e55033ba1df" prot="public" static="no">
+        <name>GPIO_PORTF_AFSEL_R</name>
+        <initializer>(*((volatile unsigned long *)0x40025420))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="23" column="9" bodyfile="main.c" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8c_1ad61970840fbdec3b021a6cd4b176ceb5" prot="public" static="no">
+        <name>GPIO_PORTF_PUR_R</name>
+        <initializer>(*((volatile unsigned long *)0x40025510))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="24" column="9" bodyfile="main.c" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8c_1ace684566ac3dee1c9230633165118a61" prot="public" static="no">
+        <name>GPIO_PORTF_DEN_R</name>
+        <initializer>(*((volatile unsigned long *)0x4002551C))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="25" column="9" bodyfile="main.c" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8c_1a905788cdfb00eea4f716d3ed280f1e20" prot="public" static="no">
+        <name>GPIO_PORTF_LOCK_R</name>
+        <initializer>(*((volatile unsigned long *)0x40025520))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="26" column="9" bodyfile="main.c" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8c_1a5b37d58feb20c8629db10975b31b6dbc" prot="public" static="no">
+        <name>GPIO_PORTF_CR_R</name>
+        <initializer>(*((volatile unsigned long *)0x40025524))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="27" column="9" bodyfile="main.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8c_1a792408dc154a55fd9e0ad13cca3db4c3" prot="public" static="no">
+        <name>GPIO_PORTF_AMSEL_R</name>
+        <initializer>(*((volatile unsigned long *)0x40025528))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="28" column="9" bodyfile="main.c" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8c_1abdf740d2017978b00975ad06bf38f1eb" prot="public" static="no">
+        <name>GPIO_PORTF_PCTL_R</name>
+        <initializer>(*((volatile unsigned long *)0x4002552C))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="29" column="9" bodyfile="main.c" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8c_1a2fedfceccf18bd54a499e73d1b76e506" prot="public" static="no">
+        <name>SYSCTL_RCGC2_R</name>
+        <initializer>(*((volatile unsigned long *)0x400FE108))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="30" column="9" bodyfile="main.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="main_8c_1aaffcb829b17f75f5e57ae7d810e18def" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long SW1</definition>
+        <argsstring></argsstring>
+        <name>SW1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="34" column="15" bodyfile="main.c" bodystart="34" bodyend="-1"/>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="44" endline="58">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="main_8c_1a17bc02cea6c2d2bb1322a102153fca04" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long SW2</definition>
+        <argsstring></argsstring>
+        <name>SW2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="35" column="15" bodyfile="main.c" bodystart="35" bodyend="-1"/>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="44" endline="58">main</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="main_8c_1ae19ef8807dc64129635da5b3b781588a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PortF_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>PortF_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="64" column="6" bodyfile="main.c" bodystart="64" bodyend="76" declfile="main.c" declline="37" declcolumn="6"/>
+        <references refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="main_8c" startline="126" endline="135">delay</references>
+        <references refid="main_8c_1a8f9c5b1caa2f2206e46d6e55033ba1df" compoundref="main_8c" startline="23">GPIO_PORTF_AFSEL_R</references>
+        <references refid="main_8c_1a792408dc154a55fd9e0ad13cca3db4c3" compoundref="main_8c" startline="28">GPIO_PORTF_AMSEL_R</references>
+        <references refid="main_8c_1a5b37d58feb20c8629db10975b31b6dbc" compoundref="main_8c" startline="27">GPIO_PORTF_CR_R</references>
+        <references refid="main_8c_1ace684566ac3dee1c9230633165118a61" compoundref="main_8c" startline="25">GPIO_PORTF_DEN_R</references>
+        <references refid="main_8c_1a4af807e7c41e4e51a09ab6598280d09b" compoundref="main_8c" startline="22">GPIO_PORTF_DIR_R</references>
+        <references refid="main_8c_1a905788cdfb00eea4f716d3ed280f1e20" compoundref="main_8c" startline="26">GPIO_PORTF_LOCK_R</references>
+        <references refid="main_8c_1abdf740d2017978b00975ad06bf38f1eb" compoundref="main_8c" startline="29">GPIO_PORTF_PCTL_R</references>
+        <references refid="main_8c_1ad61970840fbdec3b021a6cd4b176ceb5" compoundref="main_8c" startline="24">GPIO_PORTF_PUR_R</references>
+        <references refid="main_8c_1a2fedfceccf18bd54a499e73d1b76e506" compoundref="main_8c" startline="30">SYSCTL_RCGC2_R</references>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="44" endline="58">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1a7a3a2d8021a1d89fd58583318c4ae560" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FlashSOS</definition>
+        <argsstring>(void)</argsstring>
+        <name>FlashSOS</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="94" column="6" bodyfile="main.c" bodystart="94" bodyend="118" declfile="main.c" declline="38" declcolumn="6"/>
+        <references refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="main_8c" startline="126" endline="135">delay</references>
+        <references refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" compoundref="main_8c" startline="21">GPIO_PORTF_DATA_R</references>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="44" endline="58">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void delay</definition>
+        <argsstring>(unsigned long halfsecs)</argsstring>
+        <name>delay</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>halfsecs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="126" column="6" bodyfile="main.c" bodystart="126" bodyend="135" declfile="main.c" declline="39" declcolumn="6"/>
+        <referencedby refid="main_8c_1a7a3a2d8021a1d89fd58583318c4ae560" compoundref="main_8c" startline="94" endline="118">FlashSOS</referencedby>
+        <referencedby refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8c" startline="44" endline="58">main</referencedby>
+        <referencedby refid="port__init_8c_1a2c10edb046a08d0f0d72d288c9c64dfc" compoundref="port__init_8c" startline="4" endline="17">PortEInit</referencedby>
+        <referencedby refid="main_8c_1ae19ef8807dc64129635da5b3b781588a" compoundref="main_8c" startline="64" endline="76">PortF_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="44" column="5" bodyfile="main.c" bodystart="44" bodyend="58"/>
+        <references refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="main_8c" startline="126" endline="135">delay</references>
+        <references refid="main_8c_1a7a3a2d8021a1d89fd58583318c4ae560" compoundref="main_8c" startline="94" endline="118">FlashSOS</references>
+        <references refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" compoundref="main_8c" startline="21">GPIO_PORTF_DATA_R</references>
+        <references refid="main_8c_1ae19ef8807dc64129635da5b3b781588a" compoundref="main_8c" startline="64" endline="76">PortF_Init</references>
+        <references refid="main_8c_1aaffcb829b17f75f5e57ae7d810e18def" compoundref="main_8c" startline="34">SW1</references>
+        <references refid="main_8c_1a17bc02cea6c2d2bb1322a102153fca04" compoundref="main_8c" startline="35">SW2</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>0.Documentation<sp/>Section<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Lab7_SOS,<sp/>main.c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Runs<sp/>on<sp/>LM4F120<sp/>or<sp/>TM4C123<sp/>LaunchPad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Input<sp/>from<sp/>PF4(SW1)<sp/>and<sp/>PF0(SW2),<sp/>output<sp/>to<sp/>PF3<sp/>(Green<sp/>LED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Pressing<sp/>SW1<sp/>starts<sp/>SOS<sp/>(Green<sp/>LED<sp/>flashes<sp/>SOS).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>S:<sp/>Toggle<sp/>light<sp/>3<sp/>times<sp/>with<sp/>1/2<sp/>sec<sp/>gap<sp/>between<sp/>ON....1/2sec....OFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>O:<sp/>Toggle<sp/>light<sp/>3<sp/>times<sp/>with<sp/>2<sp/>sec<sp/>gap<sp/>between<sp/>ON....2sec....OFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>S:<sp/>Toggle<sp/>light<sp/>3<sp/>times<sp/>with<sp/>1/2<sp/>sec<sp/>gap<sp/>between<sp/>ON....1/2sec....OFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>4<sp/>second<sp/>delay<sp/>between<sp/>SOS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Pressing<sp/>SW2<sp/>stops<sp/>SOS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Authors:<sp/>Daniel<sp/>Valvano,<sp/>Jonathan<sp/>Valvano<sp/>and<sp/>Ramesh<sp/>Yerraballi</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date:<sp/>July<sp/>15,<sp/>2013</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1.<sp/>Pre-processor<sp/>Directives<sp/>Section</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;TExaS.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constant<sp/>declarations<sp/>to<sp/>access<sp/>port<sp/>registers<sp/>using<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>symbolic<sp/>names<sp/>instead<sp/>of<sp/>addresses</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_DATA_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400253FC))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="main_8c_1a4af807e7c41e4e51a09ab6598280d09b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_DIR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025400))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="main_8c_1a8f9c5b1caa2f2206e46d6e55033ba1df" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_AFSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025420))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="main_8c_1ad61970840fbdec3b021a6cd4b176ceb5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_PUR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025510))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="main_8c_1ace684566ac3dee1c9230633165118a61" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_DEN_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4002551C))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="main_8c_1a905788cdfb00eea4f716d3ed280f1e20" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_LOCK_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025520))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="main_8c_1a5b37d58feb20c8629db10975b31b6dbc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_CR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025524))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="main_8c_1a792408dc154a55fd9e0ad13cca3db4c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_AMSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025528))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="main_8c_1abdf740d2017978b00975ad06bf38f1eb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_PCTL_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4002552C))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="main_8c_1a2fedfceccf18bd54a499e73d1b76e506" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYSCTL_RCGC2_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400FE108))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>2.<sp/>Declarations<sp/>Section</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>Global<sp/>Variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="main_8c_1aaffcb829b17f75f5e57ae7d810e18def" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="main_8c_1aaffcb829b17f75f5e57ae7d810e18def" kindref="member">SW1</ref>;<sp/></highlight><highlight class="comment">//<sp/>input<sp/>from<sp/>PF4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="main_8c_1a17bc02cea6c2d2bb1322a102153fca04" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="main_8c_1a17bc02cea6c2d2bb1322a102153fca04" kindref="member">SW2</ref>;<sp/></highlight><highlight class="comment">//<sp/>input<sp/>from<sp/>PF0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>Function<sp/>Prototypes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1ae19ef8807dc64129635da5b3b781588a" kindref="member">PortF_Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1a7a3a2d8021a1d89fd58583318c4ae560" kindref="member">FlashSOS</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>halfsecs);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//void<sp/>EnableInterrupts(void);<sp/><sp/>//<sp/>Enable<sp/>interrupts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>3.<sp/>Subroutines<sp/>Section</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MAIN:<sp/>Mandatory<sp/>for<sp/>a<sp/>C<sp/>Program<sp/>to<sp/>be<sp/>executable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" kindref="member">main</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//TExaS_Init(SW_PIN_PF40,<sp/>LED_PIN_PF321);<sp/><sp/>//<sp/>activate<sp/>grader<sp/>and<sp/>set<sp/>system<sp/>clock<sp/>to<sp/>80<sp/>MHz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1ae19ef8807dc64129635da5b3b781588a" kindref="member">PortF_Init</ref>();<sp/></highlight><highlight class="comment">//<sp/>Init<sp/>port<sp/>PF4<sp/>PF2<sp/>PF0<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//EnableInterrupts();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>enable<sp/>interrupts<sp/>for<sp/>the<sp/>grader</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(1){</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8c_1aaffcb829b17f75f5e57ae7d810e18def" kindref="member">SW1</ref><sp/>=<sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref>&amp;0x10;<sp/></highlight><highlight class="comment">//<sp/>PF4<sp/>into<sp/>SW1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8c_1a17bc02cea6c2d2bb1322a102153fca04" kindref="member">SW2</ref><sp/>=<sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref>&amp;0x01;<sp/></highlight><highlight class="comment">//<sp/>PF0<sp/>into<sp/>SW2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="main_8c_1aaffcb829b17f75f5e57ae7d810e18def" kindref="member">SW1</ref><sp/>==<sp/>0x00<sp/>&amp;&amp;<sp/><ref refid="main_8c_1a17bc02cea6c2d2bb1322a102153fca04" kindref="member">SW2</ref><sp/>==<sp/>0x00){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8c_1a7a3a2d8021a1d89fd58583318c4ae560" kindref="member">FlashSOS</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8c_1aaffcb829b17f75f5e57ae7d810e18def" kindref="member">SW1</ref><sp/>=<sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref>&amp;0x10;<sp/></highlight><highlight class="comment">//<sp/>PF4<sp/>into<sp/>SW1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8c_1a17bc02cea6c2d2bb1322a102153fca04" kindref="member">SW2</ref><sp/>=<sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref>&amp;0x01;<sp/></highlight><highlight class="comment">//<sp/>PF0<sp/>into<sp/>SW2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>&amp;=<sp/>~0x0A;<sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(1);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Subroutine<sp/>to<sp/>initialize<sp/>port<sp/>F<sp/>pins<sp/>for<sp/>input<sp/>and<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/>PF4<sp/>is<sp/>input<sp/>SW1<sp/>and<sp/>PF2<sp/>is<sp/>output<sp/>Blue<sp/>LED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Inputs:<sp/>None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Outputs:<sp/>None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Notes:<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="main_8c_1ae19ef8807dc64129635da5b3b781588a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1ae19ef8807dc64129635da5b3b781588a" kindref="member">PortF_Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a2fedfceccf18bd54a499e73d1b76e506" kindref="member">SYSCTL_RCGC2_R</ref><sp/>|=<sp/>0x00000020;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1)<sp/>F<sp/>clock</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref><sp/>=<sp/><ref refid="main_8c_1a2fedfceccf18bd54a499e73d1b76e506" kindref="member">SYSCTL_RCGC2_R</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delay<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a905788cdfb00eea4f716d3ed280f1e20" kindref="member">GPIO_PORTF_LOCK_R</ref><sp/>=<sp/>0x4C4F434B;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2)<sp/>unlock<sp/>PortF<sp/>PF0<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a5b37d58feb20c8629db10975b31b6dbc" kindref="member">GPIO_PORTF_CR_R</ref><sp/>|=<sp/>0x1F;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>allow<sp/>changes<sp/>to<sp/>PF4-0<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a792408dc154a55fd9e0ad13cca3db4c3" kindref="member">GPIO_PORTF_AMSEL_R</ref><sp/>&amp;=<sp/>0x00;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3)<sp/>disable<sp/>analog<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1abdf740d2017978b00975ad06bf38f1eb" kindref="member">GPIO_PORTF_PCTL_R</ref><sp/>&amp;=<sp/>0x00000000;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>4)<sp/>GPIO<sp/>clear<sp/>bit<sp/>PCTL<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//GPIO_PORTF_DIR_R<sp/>&amp;=<sp/>~0x11;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>5.1)<sp/>PF4,PF0<sp/>input,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a4af807e7c41e4e51a09ab6598280d09b" kindref="member">GPIO_PORTF_DIR_R</ref><sp/>|=<sp/>0x0E;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>5.2)<sp/>PF1,<sp/>PF2,<sp/>and<sp/>PF3<sp/>outputs<sp/><sp/>PF4,PF0<sp/>input,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a8f9c5b1caa2f2206e46d6e55033ba1df" kindref="member">GPIO_PORTF_AFSEL_R</ref><sp/>&amp;=<sp/>0x00;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>6)<sp/>no<sp/>alternate<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1ad61970840fbdec3b021a6cd4b176ceb5" kindref="member">GPIO_PORTF_PUR_R</ref><sp/>|=<sp/>0x11;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>enable<sp/>pullup<sp/>resistors<sp/>on<sp/>PF4,PF0<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1ace684566ac3dee1c9230633165118a61" kindref="member">GPIO_PORTF_DEN_R</ref><sp/>|=<sp/>0x1F;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>7)<sp/>enable<sp/>digital<sp/>pins<sp/>PF4-PF0<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Color<sp/><sp/><sp/><sp/>LED(s)<sp/>PortF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>dark<sp/><sp/><sp/><sp/><sp/>---<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>red<sp/><sp/><sp/><sp/><sp/><sp/>R--<sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">//<sp/>blue<sp/><sp/><sp/><sp/><sp/>--B<sp/><sp/><sp/><sp/>0x04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/>green<sp/><sp/><sp/><sp/>-G-<sp/><sp/><sp/><sp/>0x08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//<sp/>yellow<sp/><sp/><sp/>RG-<sp/><sp/><sp/><sp/>0x0A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/>sky<sp/>blue<sp/>-GB<sp/><sp/><sp/><sp/>0x0C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>white<sp/><sp/><sp/><sp/>RGB<sp/><sp/><sp/><sp/>0x0E</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Subroutine<sp/>to<sp/>Flash<sp/>a<sp/>green<sp/>LED<sp/>SOS<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//<sp/>PF3<sp/>is<sp/>green<sp/>LED:<sp/>SOS<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>S:<sp/>Toggle<sp/>light<sp/>3<sp/>times<sp/>with<sp/>1/2<sp/>sec<sp/>gap<sp/>between<sp/>ON....1/2sec....OFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>O:<sp/>Toggle<sp/>light<sp/>3<sp/>times<sp/>with<sp/>2<sp/>sec<sp/>gap<sp/>between<sp/>ON....2sec....OFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>S:<sp/>Toggle<sp/>light<sp/>3<sp/>times<sp/>with<sp/>1/2<sp/>sec<sp/>gap<sp/>between<sp/>ON....1/2sec....OFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Inputs:<sp/>None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Outputs:<sp/>None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Notes:<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="main_8c_1a7a3a2d8021a1d89fd58583318c4ae560" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1a7a3a2d8021a1d89fd58583318c4ae560" kindref="member">FlashSOS</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//S</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>|=<sp/>0x0A;<sp/><sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(1);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>&amp;=<sp/>~0x0A;<sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(1);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>|=<sp/>0x0A;<sp/><sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(1);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>&amp;=<sp/>~0x0A;<sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(1);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>|=<sp/>0x0A;<sp/><sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(1);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>&amp;=<sp/>~0x0A;<sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(1);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//O</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>|=<sp/>0x0A;<sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(4);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>&amp;=<sp/>~0x0A;<ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(4);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>|=<sp/>0x0A;<sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(4);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>&amp;=<sp/>~0x0A;<ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(4);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>|=<sp/>0x0A;<sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(4);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>&amp;=<sp/>~0x0A;<ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(4);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//S</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>|=<sp/>0x0A;<sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(1);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>&amp;=<sp/>~0x0A;<ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(1);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>|=<sp/>0x0A;<sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(1);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>&amp;=<sp/>~0x0A;<ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(1);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>|=<sp/>0x0A;<sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(1);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kindref="member">GPIO_PORTF_DATA_R</ref><sp/>&amp;=<sp/>~0x0A;<ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(1);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(10);<sp/></highlight><highlight class="comment">//<sp/>Delay<sp/>for<sp/>5<sp/>secs<sp/>in<sp/>between<sp/>flashes<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Subroutine<sp/>to<sp/>delay<sp/>in<sp/>units<sp/>of<sp/>half<sp/>seconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Inputs:<sp/>Number<sp/>of<sp/>half<sp/>seconds<sp/>to<sp/>delay</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Outputs:<sp/>None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">//<sp/>simple<sp/>delay<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment">//<sp/>which<sp/>delays<sp/>time*500<sp/>milliseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">//<sp/>assuming<sp/>80<sp/>MHz<sp/>clock</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>time){</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(time<sp/>&gt;<sp/>0){</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>i<sp/>=<sp/>6666665/5;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(i<sp/>&gt;<sp/>0){</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/>i<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>time<sp/>=<sp/>time<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="main.c"/>
+  </compounddef>
+</doxygen>

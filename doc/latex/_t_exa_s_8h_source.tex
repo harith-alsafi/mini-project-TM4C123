@@ -1,0 +1,50 @@
+\doxysection{TExa\+S.\+h}
+\hypertarget{_t_exa_s_8h_source}{}\label{_t_exa_s_8h_source}\mbox{\hyperlink{_t_exa_s_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00001}00001\ \textcolor{comment}{//\ TExaS.h}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00002}00002\ \textcolor{comment}{//\ Runs\ on\ LM4F120/TM4C123}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00003}00003\ \textcolor{comment}{//\ Periodic\ timer\ Timer5A\ which\ will\ interact\ with\ debugger\ and\ grade\ the\ lab\ 6}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00004}00004\ \textcolor{comment}{//\ It\ initializes\ on\ reset\ and\ runs\ whenever\ interrupts\ are\ enabled}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00005}00005\ \textcolor{comment}{//\ Daniel\ Valvano\ and\ Jonathan\ Valvano}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00006}00006\ \textcolor{comment}{//\ December\ 5,\ 2013}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00008}00008\ \textcolor{comment}{/*\ This\ example\ accompanies\ the\ book}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00009}00009\ \textcolor{comment}{\ \ \ "{}Embedded\ Systems:\ Real\ Time\ Operating\ Systems\ for\ ARM\ Cortex\ M\ Microcontrollers"{},}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00010}00010\ \textcolor{comment}{\ \ \ ISBN:\ 978-\/1466468863,\ Jonathan\ Valvano,\ copyright\ (c)\ 2013}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00011}00011\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00012}00012\ \textcolor{comment}{\ Copyright\ 2013\ by\ Jonathan\ W.\ Valvano,\ valvano@mail.utexas.edu}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00013}00013\ \textcolor{comment}{\ \ \ \ You\ may\ use,\ edit,\ run\ or\ distribute\ this\ file}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00014}00014\ \textcolor{comment}{\ \ \ \ as\ long\ as\ the\ above\ copyright\ notice\ remains}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00015}00015\ \textcolor{comment}{\ THIS\ SOFTWARE\ IS\ PROVIDED\ "{}AS\ IS"{}.\ \ NO\ WARRANTIES,\ WHETHER\ EXPRESS,\ IMPLIED}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00016}00016\ \textcolor{comment}{\ OR\ STATUTORY,\ INCLUDING,\ BUT\ NOT\ LIMITED\ TO,\ IMPLIED\ WARRANTIES\ OF}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00017}00017\ \textcolor{comment}{\ MERCHANTABILITY\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE\ APPLY\ TO\ THIS\ SOFTWARE.}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00018}00018\ \textcolor{comment}{\ VALVANO\ SHALL\ NOT,\ IN\ ANY\ CIRCUMSTANCES,\ BE\ LIABLE\ FOR\ SPECIAL,\ INCIDENTAL,}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00019}00019\ \textcolor{comment}{\ OR\ CONSEQUENTIAL\ DAMAGES,\ FOR\ ANY\ REASON\ WHATSOEVER.}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00020}00020\ \textcolor{comment}{\ For\ more\ information\ about\ my\ classes,\ my\ research,\ and\ my\ books,\ see}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00021}00021\ \textcolor{comment}{\ http://users.ece.utexas.edu/\string~valvano/}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00022}00022\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00024}00024\ \textcolor{comment}{//\ IMPORTANT:\ These\ enumerated\ types\ are\ specific\ to\ Lab\ 6\ and\ should\ NOT\ be\ changed.}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00025}\mbox{\hyperlink{_t_exa_s_8h_a53ea182d5a09a410df69fca268877072}{00025}}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_t_exa_s_8h_a53ea182d5a09a410df69fca268877072}{InputPorts}}\{}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00026}00026\ \ \ \mbox{\hyperlink{_t_exa_s_8h_a53ea182d5a09a410df69fca268877072a931c4bc0840b2f59a701eabfd69fd1c9}{SW\_PIN\_PF40}}\ =\ 5}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00027}\mbox{\hyperlink{_t_exa_s_8h_a53ea182d5a09a410df69fca268877072a931c4bc0840b2f59a701eabfd69fd1c9}{00027}}\ \};}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00029}\mbox{\hyperlink{_t_exa_s_8h_a3bc4dd15d49b553a283366165300d515}{00029}}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_t_exa_s_8h_a3bc4dd15d49b553a283366165300d515}{OutputPorts}}\{}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00030}00030\ \ \ \mbox{\hyperlink{_t_exa_s_8h_a3bc4dd15d49b553a283366165300d515adc1d716abf5f4d3f101cb8e06161a29b}{LED\_PIN\_PF321}}\ =\ 5}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00031}\mbox{\hyperlink{_t_exa_s_8h_a3bc4dd15d49b553a283366165300d515adc1d716abf5f4d3f101cb8e06161a29b}{00031}}\ \};}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00033}00033\ \textcolor{comment}{//\ ************TExaS\_Init*****************}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00034}00034\ \textcolor{comment}{//\ Initialize\ grader,\ triggered\ by\ timer\ 5A}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00035}00035\ \textcolor{comment}{//\ This\ needs\ to\ be\ called\ once\ }}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00036}00036\ \textcolor{comment}{//\ Inputs:\ iport\ input(s)\ connected\ to\ this\ port}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00037}00037\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ oport\ output(s)\ connected\ to\ this\ port}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00038}00038\ \textcolor{comment}{//\ Outputs:\ none}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00039}\mbox{\hyperlink{_t_exa_s_8h_ad2b7923d22b40d0651b1be3ed8214c1d}{00039}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_t_exa_s_8h_ad2b7923d22b40d0651b1be3ed8214c1d}{TExaS\_Init}}(\textcolor{keyword}{enum}\ \mbox{\hyperlink{_t_exa_s_8h_a53ea182d5a09a410df69fca268877072}{InputPorts}}\ iport,\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_t_exa_s_8h_a3bc4dd15d49b553a283366165300d515}{OutputPorts}}\ oport);}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00041}00041\ \textcolor{comment}{//\ ************TExaS\_Stop*****************}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00042}00042\ \textcolor{comment}{//\ Stop\ the\ transfer\ }}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00043}00043\ \textcolor{comment}{//\ Inputs:\ \ none}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00044}00044\ \textcolor{comment}{//\ Outputs:\ none}}
+\DoxyCodeLine{\Hypertarget{_t_exa_s_8h_source_l00045}\mbox{\hyperlink{_t_exa_s_8h_adeb7fccbbb1881b866ba3ad16712294c}{00045}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_t_exa_s_8h_adeb7fccbbb1881b866ba3ad16712294c}{TExaS\_Stop}}(\textcolor{keywordtype}{void});}
+
+\end{DoxyCode}

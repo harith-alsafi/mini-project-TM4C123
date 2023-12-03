@@ -1,0 +1,147 @@
+build:
+  generated-by: csolution version 2.2.0
+  solution: mini-project.csolution.yml
+  project: mini-project.cproject.yml
+  context: mini-project+Target_1
+  compiler: AC6
+  device: TM4C123GH6PM
+  device-pack: Keil::TM4C_DFP@1.1.0
+  processor:
+    endian: little
+    fpu: sp
+    trustzone: non-secure
+    core: Cortex-M4
+  packs:
+    - pack: ARM::CMSIS@5.9.0
+      path: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0
+    - pack: Keil::TM4C_DFP@1.1.0
+      path: ${CMSIS_PACK_ROOT}/Keil/TM4C_DFP/1.1.0
+  optimize: none
+  debug: on
+  misc:
+    ASM:
+      - -masm=auto
+    C:
+      - -std=c90
+      - -fno-rtti
+      - -funsigned-char
+      - -fshort-enums
+      - -fshort-wchar
+      - -ffunction-sections
+      - -Wno-packed
+      - -Wno-missing-variable-declarations
+      - -Wno-missing-prototypes
+      - -Wno-missing-noreturn
+      - -Wno-sign-conversion
+      - -Wno-nonportable-include-path
+      - -Wno-reserved-id-macro
+      - -Wno-unused-macros
+      - -Wno-documentation-unknown-command
+      - -Wno-documentation
+      - -Wno-license-management
+      - -Wno-parentheses-equality
+    CPP:
+      - -xc++
+      - -std=c++03
+      - -fno-rtti
+      - -funsigned-char
+      - -fshort-enums
+      - -fshort-wchar
+      - -ffunction-sections
+      - -Wno-packed
+      - -Wno-missing-variable-declarations
+      - -Wno-missing-prototypes
+      - -Wno-missing-noreturn
+      - -Wno-sign-conversion
+      - -Wno-nonportable-include-path
+      - -Wno-reserved-id-macro
+      - -Wno-unused-macros
+      - -Wno-documentation-unknown-command
+      - -Wno-documentation
+      - -Wno-license-management
+      - -Wno-parentheses-equality
+    Link:
+      - --map
+      - --load_addr_map_info
+      - --xref
+      - --callgraph
+      - --symbols
+      - --info sizes
+      - --info totals
+      - --info unused
+      - --info veneers
+      - --strict
+      - --summary_stderr
+      - --info summarysizes
+  define:
+    - TM4C123GH6PM
+    - _RTE_
+  add-path:
+    - RTE/_Target_1
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+    - ${CMSIS_PACK_ROOT}/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123
+  output-dirs:
+    intdir: tmp/mini-project/Target_1
+    outdir: out/mini-project/Target_1
+    rtedir: RTE
+  output:
+    - type: elf
+      file: mini-project.axf
+  components:
+    - component: ARM::CMSIS:CORE@5.6.0
+      condition: ARMv6_7_8-M Device
+      from-pack: ARM::CMSIS@5.9.0
+      selected-by: ARM::CMSIS:CORE
+    - component: Keil::Device:Startup@1.0.1
+      condition: TM4C123x CMSIS
+      from-pack: Keil::TM4C_DFP@1.1.0
+      selected-by: Keil::Device:Startup
+      files:
+        - file: RTE/Device/TM4C123GH6PM/startup_TM4C123.s
+          category: source
+          attr: config
+          version: 1.0.0
+        - file: RTE/Device/TM4C123GH6PM/system_TM4C123.c
+          category: source
+          attr: config
+          version: 1.0.1
+  linker:
+    script: RTE/Device/TM4C123GH6PM/ac6_linker_script.sct.src
+    regions: RTE/Device/TM4C123GH6PM/regions_TM4C123GH6PM.h
+  groups:
+    - group: Source Group 1
+      files:
+        - file: main.c
+          category: sourceC
+        - file: texas.o
+          category: object
+        - file: port_init.h
+          category: header
+        - file: port_init.c
+          category: sourceC
+        - file: clock.h
+          category: header
+        - file: clock.c
+          category: sourceC
+        - file: lcd.h
+          category: header
+        - file: lcd.c
+          category: sourceC
+        - file: keypad.h
+          category: header
+        - file: keypad.c
+          category: sourceC
+  constructed-files:
+    - file: RTE/_Target_1/RTE_Components.h
+      category: header
+  licenses:
+    - license: <unknown>
+      packs:
+        - pack: ARM::CMSIS@5.9.0
+      components:
+        - component: ARM::CMSIS:CORE@5.6.0
+    - license: <unknown>
+      packs:
+        - pack: Keil::TM4C_DFP@1.1.0
+      components:
+        - component: Keil::Device:Startup@1.0.1

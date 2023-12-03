@@ -1,0 +1,141 @@
+\doxysection{main.\+c}
+\hypertarget{main_8c_source}{}\label{main_8c_source}\mbox{\hyperlink{main_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00001}00001\ \textcolor{comment}{//\ 0.Documentation\ Section\ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00002}00002\ \textcolor{comment}{//\ Lab7\_SOS,\ main.c}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00004}00004\ \textcolor{comment}{//\ Runs\ on\ LM4F120\ or\ TM4C123\ LaunchPad}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00005}00005\ \textcolor{comment}{//\ Input\ from\ PF4(SW1)\ and\ PF0(SW2),\ output\ to\ PF3\ (Green\ LED)}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00006}00006\ \textcolor{comment}{//\ Pressing\ SW1\ starts\ SOS\ (Green\ LED\ flashes\ SOS).}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00007}00007\ \textcolor{comment}{//\ \ \ \ S:\ Toggle\ light\ 3\ times\ with\ 1/2\ sec\ gap\ between\ ON....1/2sec....OFF}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00008}00008\ \textcolor{comment}{//\ \ \ \ O:\ Toggle\ light\ 3\ times\ with\ 2\ sec\ gap\ between\ ON....2sec....OFF}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00009}00009\ \textcolor{comment}{//\ \ \ \ S:\ Toggle\ light\ 3\ times\ with\ 1/2\ sec\ gap\ between\ ON....1/2sec....OFF}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00010}00010\ \textcolor{comment}{//\ \ \ \ 4\ second\ delay\ between\ SOS}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00011}00011\ \textcolor{comment}{//\ Pressing\ SW2\ stops\ SOS}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00013}00013\ \textcolor{comment}{//\ Authors:\ Daniel\ Valvano,\ Jonathan\ Valvano\ and\ Ramesh\ Yerraballi}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00014}00014\ \textcolor{comment}{//\ Date:\ July\ 15,\ 2013}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00016}00016\ \textcolor{comment}{//\ 1.\ Pre-\/processor\ Directives\ Section}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00017}00017\ \textcolor{comment}{//\#include\ "{}TExaS.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00019}00019\ \textcolor{comment}{//\ Constant\ declarations\ to\ access\ port\ registers\ using\ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00020}00020\ \textcolor{comment}{//\ symbolic\ names\ instead\ of\ addresses}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00021}\mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{00021}}\ \textcolor{preprocessor}{\#define\ GPIO\_PORTF\_DATA\_R\ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x400253FC))}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00022}\mbox{\hyperlink{main_8c_a4af807e7c41e4e51a09ab6598280d09b}{00022}}\ \textcolor{preprocessor}{\#define\ GPIO\_PORTF\_DIR\_R\ \ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x40025400))}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00023}\mbox{\hyperlink{main_8c_a8f9c5b1caa2f2206e46d6e55033ba1df}{00023}}\ \textcolor{preprocessor}{\#define\ GPIO\_PORTF\_AFSEL\_R\ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x40025420))}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00024}\mbox{\hyperlink{main_8c_ad61970840fbdec3b021a6cd4b176ceb5}{00024}}\ \textcolor{preprocessor}{\#define\ GPIO\_PORTF\_PUR\_R\ \ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x40025510))}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00025}\mbox{\hyperlink{main_8c_ace684566ac3dee1c9230633165118a61}{00025}}\ \textcolor{preprocessor}{\#define\ GPIO\_PORTF\_DEN\_R\ \ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x4002551C))}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00026}\mbox{\hyperlink{main_8c_a905788cdfb00eea4f716d3ed280f1e20}{00026}}\ \textcolor{preprocessor}{\#define\ GPIO\_PORTF\_LOCK\_R\ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x40025520))}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00027}\mbox{\hyperlink{main_8c_a5b37d58feb20c8629db10975b31b6dbc}{00027}}\ \textcolor{preprocessor}{\#define\ GPIO\_PORTF\_CR\_R\ \ \ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x40025524))}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00028}\mbox{\hyperlink{main_8c_a792408dc154a55fd9e0ad13cca3db4c3}{00028}}\ \textcolor{preprocessor}{\#define\ GPIO\_PORTF\_AMSEL\_R\ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x40025528))}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00029}\mbox{\hyperlink{main_8c_abdf740d2017978b00975ad06bf38f1eb}{00029}}\ \textcolor{preprocessor}{\#define\ GPIO\_PORTF\_PCTL\_R\ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x4002552C))}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00030}\mbox{\hyperlink{main_8c_a2fedfceccf18bd54a499e73d1b76e506}{00030}}\ \textcolor{preprocessor}{\#define\ SYSCTL\_RCGC2\_R\ \ \ \ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x400FE108))}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00032}00032\ \textcolor{comment}{//\ 2.\ Declarations\ Section}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00033}00033\ \textcolor{comment}{//\ \ \ Global\ Variables}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00034}\mbox{\hyperlink{main_8c_aaffcb829b17f75f5e57ae7d810e18def}{00034}}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{main_8c_aaffcb829b17f75f5e57ae7d810e18def}{SW1}};\ \textcolor{comment}{//\ input\ from\ PF4}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00035}\mbox{\hyperlink{main_8c_a17bc02cea6c2d2bb1322a102153fca04}{00035}}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{main_8c_a17bc02cea6c2d2bb1322a102153fca04}{SW2}};\ \textcolor{comment}{//\ input\ from\ PF0}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00036}00036\ \textcolor{comment}{//\ \ \ Function\ Prototypes}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00037}00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_ae19ef8807dc64129635da5b3b781588a}{PortF\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00038}00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_a7a3a2d8021a1d89fd58583318c4ae560}{FlashSOS}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00039}00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ halfsecs);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00040}00040\ \textcolor{comment}{//void\ EnableInterrupts(void);\ \ //\ Enable\ interrupts}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00042}00042\ \textcolor{comment}{//\ 3.\ Subroutines\ Section}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00043}00043\ \textcolor{comment}{//\ MAIN:\ Mandatory\ for\ a\ C\ Program\ to\ be\ executable}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00044}\mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{00044}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00045}00045\ \ \ \textcolor{comment}{//TExaS\_Init(SW\_PIN\_PF40,\ LED\_PIN\_PF321);\ \ //\ activate\ grader\ and\ set\ system\ clock\ to\ 80\ MHz}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00046}00046\ \ \ \mbox{\hyperlink{main_8c_ae19ef8807dc64129635da5b3b781588a}{PortF\_Init}}();\ \textcolor{comment}{//\ Init\ port\ PF4\ PF2\ PF0\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00047}00047\ \ \ \textcolor{comment}{//EnableInterrupts();\ \ \ \ \ \ \ \ \ \ \ //\ enable\ interrupts\ for\ the\ grader}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00048}00048\ \ \ \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8c_aaffcb829b17f75f5e57ae7d810e18def}{SW1}}\ =\ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\&0x10;\ \textcolor{comment}{//\ PF4\ into\ SW1}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8c_a17bc02cea6c2d2bb1322a102153fca04}{SW2}}\ =\ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\&0x01;\ \textcolor{comment}{//\ PF0\ into\ SW2}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{main_8c_aaffcb829b17f75f5e57ae7d810e18def}{SW1}}\ ==\ 0x00\ \&\&\ \mbox{\hyperlink{main_8c_a17bc02cea6c2d2bb1322a102153fca04}{SW2}}\ ==\ 0x00)\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8c_a7a3a2d8021a1d89fd58583318c4ae560}{FlashSOS}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8c_aaffcb829b17f75f5e57ae7d810e18def}{SW1}}\ =\ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\&0x10;\ \textcolor{comment}{//\ PF4\ into\ SW1}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8c_a17bc02cea6c2d2bb1322a102153fca04}{SW2}}\ =\ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\&0x01;\ \textcolor{comment}{//\ PF0\ into\ SW2}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ \&=\ \string~0x0A;\ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(1);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00057}00057\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00058}00058\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00059}00059\ \textcolor{comment}{//\ Subroutine\ to\ initialize\ port\ F\ pins\ for\ input\ and\ output}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00060}00060\ \textcolor{comment}{//\ PF4\ is\ input\ SW1\ and\ PF2\ is\ output\ Blue\ LED}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00061}00061\ \textcolor{comment}{//\ Inputs:\ None}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00062}00062\ \textcolor{comment}{//\ Outputs:\ None}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00063}00063\ \textcolor{comment}{//\ Notes:\ ...}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00064}\mbox{\hyperlink{main_8c_ae19ef8807dc64129635da5b3b781588a}{00064}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_ae19ef8807dc64129635da5b3b781588a}{PortF\_Init}}(\textcolor{keywordtype}{void})\{\ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00065}00065\ \ \ \mbox{\hyperlink{main_8c_a2fedfceccf18bd54a499e73d1b76e506}{SYSCTL\_RCGC2\_R}}\ |=\ 0x00000020;\ \ \ \ \ \textcolor{comment}{//\ 1)\ F\ clock}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00066}00066\ \ \ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}\ =\ \mbox{\hyperlink{main_8c_a2fedfceccf18bd54a499e73d1b76e506}{SYSCTL\_RCGC2\_R}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ delay\ \ \ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00067}00067\ \ \ \mbox{\hyperlink{main_8c_a905788cdfb00eea4f716d3ed280f1e20}{GPIO\_PORTF\_LOCK\_R}}\ =\ 0x4C4F434B;\ \ \ \textcolor{comment}{//\ 2)\ unlock\ PortF\ PF0\ \ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00068}00068\ \ \ \mbox{\hyperlink{main_8c_a5b37d58feb20c8629db10975b31b6dbc}{GPIO\_PORTF\_CR\_R}}\ |=\ 0x1F;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ allow\ changes\ to\ PF4-\/0\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00069}00069\ \ \ \mbox{\hyperlink{main_8c_a792408dc154a55fd9e0ad13cca3db4c3}{GPIO\_PORTF\_AMSEL\_R}}\ \&=\ 0x00;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3)\ disable\ analog\ function}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00070}00070\ \ \ \mbox{\hyperlink{main_8c_abdf740d2017978b00975ad06bf38f1eb}{GPIO\_PORTF\_PCTL\_R}}\ \&=\ 0x00000000;\ \ \ \textcolor{comment}{//\ 4)\ GPIO\ clear\ bit\ PCTL\ \ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00071}00071\ \ \ \textcolor{comment}{//GPIO\_PORTF\_DIR\_R\ \&=\ \string~0x11;\ \ \ \ \ \ \ \ \ \ //\ 5.1)\ PF4,PF0\ input,\ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00072}00072\ \ \ \mbox{\hyperlink{main_8c_a4af807e7c41e4e51a09ab6598280d09b}{GPIO\_PORTF\_DIR\_R}}\ |=\ 0x0E;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 5.2)\ PF1,\ PF2,\ and\ PF3\ outputs\ \ PF4,PF0\ input,\ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00073}00073\ \ \ \mbox{\hyperlink{main_8c_a8f9c5b1caa2f2206e46d6e55033ba1df}{GPIO\_PORTF\_AFSEL\_R}}\ \&=\ 0x00;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ 6)\ no\ alternate\ function}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00074}00074\ \ \ \mbox{\hyperlink{main_8c_ad61970840fbdec3b021a6cd4b176ceb5}{GPIO\_PORTF\_PUR\_R}}\ |=\ 0x11;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ enable\ pullup\ resistors\ on\ PF4,PF0\ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00075}00075\ \ \ \mbox{\hyperlink{main_8c_ace684566ac3dee1c9230633165118a61}{GPIO\_PORTF\_DEN\_R}}\ |=\ 0x1F;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 7)\ enable\ digital\ pins\ PF4-\/PF0\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00076}00076\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00077}00077\ \textcolor{comment}{//\ Color\ \ \ \ LED(s)\ PortF}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00078}00078\ \textcolor{comment}{//\ dark\ \ \ \ \ -\/-\/-\/\ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00079}00079\ \textcolor{comment}{//\ red\ \ \ \ \ \ R-\/-\/\ \ \ \ 0x02}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00080}00080\ \textcolor{comment}{//\ blue\ \ \ \ \ -\/-\/B\ \ \ \ 0x04}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00081}00081\ \textcolor{comment}{//\ green\ \ \ \ -\/G-\/\ \ \ \ 0x08}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00082}00082\ \textcolor{comment}{//\ yellow\ \ \ RG-\/\ \ \ \ 0x0A}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00083}00083\ \textcolor{comment}{//\ sky\ blue\ -\/GB\ \ \ \ 0x0C}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00084}00084\ \textcolor{comment}{//\ white\ \ \ \ RGB\ \ \ \ 0x0E}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00086}00086\ \textcolor{comment}{//\ Subroutine\ to\ Flash\ a\ green\ LED\ SOS\ once}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00087}00087\ \textcolor{comment}{//\ PF3\ is\ green\ LED:\ SOS\ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00088}00088\ \textcolor{comment}{//\ \ \ \ S:\ Toggle\ light\ 3\ times\ with\ 1/2\ sec\ gap\ between\ ON....1/2sec....OFF}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00089}00089\ \textcolor{comment}{//\ \ \ \ O:\ Toggle\ light\ 3\ times\ with\ 2\ sec\ gap\ between\ ON....2sec....OFF}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00090}00090\ \textcolor{comment}{//\ \ \ \ S:\ Toggle\ light\ 3\ times\ with\ 1/2\ sec\ gap\ between\ ON....1/2sec....OFF}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00091}00091\ \textcolor{comment}{//\ Inputs:\ None}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00092}00092\ \textcolor{comment}{//\ Outputs:\ None}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00093}00093\ \textcolor{comment}{//\ Notes:\ ...}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00094}\mbox{\hyperlink{main_8c_a7a3a2d8021a1d89fd58583318c4ae560}{00094}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_a7a3a2d8021a1d89fd58583318c4ae560}{FlashSOS}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00095}00095\ \ \ \textcolor{comment}{//S}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00096}00096\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ |=\ 0x0A;\ \ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(1);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00097}00097\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ \&=\ \string~0x0A;\ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(1);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00098}00098\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ |=\ 0x0A;\ \ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(1);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00099}00099\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ \&=\ \string~0x0A;\ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(1);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00100}00100\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ |=\ 0x0A;\ \ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(1);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00101}00101\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ \&=\ \string~0x0A;\ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(1);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00102}00102\ \ \ \textcolor{comment}{//O}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00103}00103\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ |=\ 0x0A;\ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(4);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00104}00104\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ \&=\ \string~0x0A;\mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(4);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00105}00105\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ |=\ 0x0A;\ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(4);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00106}00106\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ \&=\ \string~0x0A;\mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(4);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00107}00107\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ |=\ 0x0A;\ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(4);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00108}00108\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ \&=\ \string~0x0A;\mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(4);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00109}00109\ \ \ \textcolor{comment}{//S}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00110}00110\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ |=\ 0x0A;\ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(1);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00111}00111\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ \&=\ \string~0x0A;\mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(1);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00112}00112\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ |=\ 0x0A;\ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(1);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00113}00113\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ \&=\ \string~0x0A;\mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(1);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00114}00114\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ |=\ 0x0A;\ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(1);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00115}00115\ \ \ \mbox{\hyperlink{main_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\_PORTF\_DATA\_R}}\ \&=\ \string~0x0A;\mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(1);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00116}00116\ \ \ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(10);\ \textcolor{comment}{//\ Delay\ for\ 5\ secs\ in\ between\ flashes\ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00118}00118\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00120}00120\ \textcolor{comment}{//\ Subroutine\ to\ delay\ in\ units\ of\ half\ seconds}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00121}00121\ \textcolor{comment}{//\ Inputs:\ Number\ of\ half\ seconds\ to\ delay}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00122}00122\ \textcolor{comment}{//\ Outputs:\ None}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00123}00123\ \textcolor{comment}{//\ simple\ delay\ function}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00124}00124\ \textcolor{comment}{//\ which\ delays\ time*500\ milliseconds}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00125}00125\ \textcolor{comment}{//\ assuming\ 80\ MHz\ clock}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00126}\mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{00126}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ time)\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00127}00127\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keyword}{volatile}\ i;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00128}00128\ \ \ \textcolor{keywordflow}{while}(time\ >\ 0)\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00129}00129\ \ \ \ \ i\ =\ 6666665/5;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00130}00130\ \ \ \ \ \textcolor{keywordflow}{while}(i\ >\ 0)\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00131}00131\ \ \ \ \ \ \ i\ =\ i\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00132}00132\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00133}00133\ \ \ \ \ time\ =\ time\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00134}00134\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00135}00135\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00136}00136\ }
+
+\end{DoxyCode}

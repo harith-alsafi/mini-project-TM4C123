@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_4f23b4d826f98e28f19bce6cf0e4c139" kind="dir">
+    <compoundname>RTE/Device/TM4C123GH6PM</compoundname>
+    <innerfile refid="regions___t_m4_c123_g_h6_p_m_8h">regions_TM4C123GH6PM.h</innerfile>
+    <innerfile refid="system___t_m4_c123_8c">system_TM4C123.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="RTE/Device/TM4C123GH6PM/"/>
+  </compounddef>
+</doxygen>

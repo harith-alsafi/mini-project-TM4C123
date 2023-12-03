@@ -3,14 +3,18 @@
 #define GPIO_PORTE_DIR_R        (*((volatile unsigned long *)0x40024400))
 #define GPIO_PORTE_AFSEL_R      (*((volatile unsigned long *)0x40024420))
 #define GPIO_PORTE_PUR_R        (*((volatile unsigned long *)0x40024510))
+#define GPIO_PORTE_PDR_R        (*((volatile unsigned long *)0x40024514))
 #define GPIO_PORTE_DEN_R        (*((volatile unsigned long *)0x4002451C))
 #define GPIO_PORTE_LOCK_R       (*((volatile unsigned long *)0x40024520))
 #define GPIO_PORTE_CR_R         (*((volatile unsigned long *)0x40024524))
 #define GPIO_PORTE_AMSEL_R      (*((volatile unsigned long *)0x40024528))
 #define GPIO_PORTE_PCTL_R       (*((volatile unsigned long *)0x4002452C))
 
-void Port_E_Init();
-
+/**
+ * @brief Initiates Port E
+ * 
+ */
+void PortEInit();
 
 // GPIO pins D
 #define GPIO_PORTD_DATA_R       (*((volatile unsigned long *)0x400073FC))
@@ -23,8 +27,11 @@ void Port_E_Init();
 #define GPIO_PORTD_AMSEL_R      (*((volatile unsigned long *)0x40007528))
 #define GPIO_PORTD_PCTL_R       (*((volatile unsigned long *)0x4000752C))
 
-void Port_D_Init();
-
+/**
+ * @brief Initiates Port D
+ * 
+ */
+void PortDInit();
 
 // GPIO pins B 
 #define GPIO_PORTB_DATA_R       (*((volatile unsigned long *)0x400053FC))
@@ -37,8 +44,11 @@ void Port_D_Init();
 #define GPIO_PORTB_AMSEL_R      (*((volatile unsigned long *)0x40005528))
 #define GPIO_PORTB_PCTL_R       (*((volatile unsigned long *)0x4000552C))
 
-void Port_B_Init();
-
+/**
+ * @brief Initiates Port B
+ * 
+ */
+void PortBInit();
 
 // GPIO pins A 
 #define GPIO_PORTA_DATA_R       (*((volatile unsigned long *)0x400043FC))
@@ -50,6 +60,9 @@ void Port_B_Init();
 #define GPIO_PORTA_CR_R         (*((volatile unsigned long *)0x40004524))
 #define GPIO_PORTA_AMSEL_R      (*((volatile unsigned long *)0x40004528))
 #define GPIO_PORTA_PCTL_R       (*((volatile unsigned long *)0x4000452C))
-	
-void Port_A_Init();
 
+/**
+ * @brief Initiates Port A
+ * 
+ */	
+void PortAInit();

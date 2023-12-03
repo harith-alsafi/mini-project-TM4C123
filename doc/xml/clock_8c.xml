@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="clock_8c" kind="file" language="C++">
+    <compoundname>clock.c</compoundname>
+    <includes refid="clock_8h" local="yes">clock.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>clock.c</label>
+        <link refid="clock_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>clock.h</label>
+        <link refid="clock_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="clock_8h" kindref="compound">clock.h</ref>&quot;</highlight></codeline>
+    </programlisting>
+    <location file="clock.c"/>
+  </compounddef>
+</doxygen>
