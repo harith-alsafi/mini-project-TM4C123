@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rcc2_5fval_0',['RCC2_Val',['../system___t_m4_c123_8c.html#afd4d4cb07db4562632da94cb7cf9c173',1,'system_TM4C123.c']]],
-  ['rcc_5fval_1',['RCC_Val',['../system___t_m4_c123_8c.html#a6365581ad94c923afd0d1e7e591f0c76',1,'system_TM4C123.c']]]
+  ['platform_5fid_0',['PLATFORM_ID',['../_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b',1,'CMakeCCompilerId.c']]],
+  ['pll_5fclk_1',['PLL_CLK',['../system___t_m4_c123_8c.html#ae895cd58a49e14437e6c959517d4af3b',1,'system_TM4C123.c']]]
 ];

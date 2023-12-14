@@ -2,9 +2,19 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="port__init_8h" kind="file" language="C++">
     <compoundname>port_init.h</compoundname>
+    <includedby refid="lcd_8c" local="yes">lcd.c</includedby>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
     <includedby refid="port__init_8c" local="yes">port_init.c</includedby>
     <invincdepgraph>
       <node id="2">
+        <label>lcd.c</label>
+        <link refid="lcd_8c"/>
+      </node>
+      <node id="3">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="4">
         <label>port_init.c</label>
         <link refid="port__init_8c"/>
       </node>
@@ -12,6 +22,10 @@
         <label>port_init.h</label>
         <link refid="port__init_8h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -438,7 +452,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="port_init.h" line="17" column="6" bodyfile="port_init.c" bodystart="4" bodyend="17" declfile="port_init.h" declline="17" declcolumn="6"/>
-        <references refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="main_8c" startline="126" endline="135">delay</references>
+        <references refid="test_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="test_8c" startline="126" endline="135">delay</references>
         <references refid="port__init_8h_1af2e23e7556959fbbf0cd4c19aab7ebf3" compoundref="port__init_8h" startline="4">GPIO_PORTE_AFSEL_R</references>
         <references refid="port__init_8h_1a3da5ec11f639e4aa05b7306a6104cc7c" compoundref="port__init_8h" startline="10">GPIO_PORTE_AMSEL_R</references>
         <references refid="port__init_8h_1aab70b1d3f9ffa90dc0c70b4fd4479859" compoundref="port__init_8h" startline="9">GPIO_PORTE_CR_R</references>
@@ -461,7 +475,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="port_init.h" line="34" column="6" bodyfile="port_init.c" bodystart="20" bodyend="23" declfile="port_init.h" declline="34" declcolumn="6"/>
+        <location file="port_init.h" line="34" column="6" bodyfile="port_init.c" bodystart="19" bodyend="30" declfile="port_init.h" declline="34" declcolumn="6"/>
+        <references refid="test_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="test_8c" startline="126" endline="135">delay</references>
+        <references refid="port__init_8h_1a97eeedd60368782e6374a99071b00779" compoundref="port__init_8h" startline="22">GPIO_PORTD_AFSEL_R</references>
+        <references refid="port__init_8h_1a405d017e972db8371ab51129aa17c0b1" compoundref="port__init_8h" startline="27">GPIO_PORTD_AMSEL_R</references>
+        <references refid="port__init_8h_1a92b46ca3cdd353e4c93d2fdb364fa47c" compoundref="port__init_8h" startline="26">GPIO_PORTD_CR_R</references>
+        <references refid="port__init_8h_1a37a81aa284c08f621656d5a3375dd42e" compoundref="port__init_8h" startline="24">GPIO_PORTD_DEN_R</references>
+        <references refid="port__init_8h_1a6d6b3cdd74974a77f72f48b850350734" compoundref="port__init_8h" startline="21">GPIO_PORTD_DIR_R</references>
+        <references refid="port__init_8h_1a9632c3e19b49afe8ce5f8d10c8a45e6e" compoundref="port__init_8h" startline="28">GPIO_PORTD_PCTL_R</references>
+        <references refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" compoundref="clock_8h" startline="4">SYSCTL_RCGC2_R</references>
       </memberdef>
       <memberdef kind="function" id="port__init_8h_1aaebad24f567e2e1f53e6252fd325371a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -475,7 +497,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="port_init.h" line="51" column="6" bodyfile="port_init.c" bodystart="25" bodyend="27" declfile="port_init.h" declline="51" declcolumn="6"/>
+        <location file="port_init.h" line="51" column="6" bodyfile="port_init.c" bodystart="32" bodyend="45" declfile="port_init.h" declline="51" declcolumn="6"/>
+        <references refid="test_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="test_8c" startline="126" endline="135">delay</references>
+        <references refid="port__init_8h_1abcfeaa888e77b65fe7d8f24151a8e54e" compoundref="port__init_8h" startline="41">GPIO_PORTB_DEN_R</references>
+        <references refid="port__init_8h_1a8a1bacf2a566d3044b8796425744fac4" compoundref="port__init_8h" startline="38">GPIO_PORTB_DIR_R</references>
+        <references refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" compoundref="clock_8h" startline="4">SYSCTL_RCGC2_R</references>
+        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="80" endline="95">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="port__init_8h_1a03c4992f00f155be0425086ad67578f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -489,7 +516,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="port_init.h" line="68" column="6" bodyfile="port_init.c" bodystart="30" bodyend="32" declfile="port_init.h" declline="68" declcolumn="6"/>
+        <location file="port_init.h" line="68" column="6" bodyfile="port_init.c" bodystart="47" bodyend="58" declfile="port_init.h" declline="68" declcolumn="6"/>
+        <references refid="test_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="test_8c" startline="126" endline="135">delay</references>
+        <references refid="port__init_8h_1a803f6958edee8ea0e1b655978e66b8e1" compoundref="port__init_8h" startline="58">GPIO_PORTA_DEN_R</references>
+        <references refid="port__init_8h_1a97eeedd60368782e6374a99071b00779" compoundref="port__init_8h" startline="22">GPIO_PORTD_AFSEL_R</references>
+        <references refid="port__init_8h_1a405d017e972db8371ab51129aa17c0b1" compoundref="port__init_8h" startline="27">GPIO_PORTD_AMSEL_R</references>
+        <references refid="port__init_8h_1a92b46ca3cdd353e4c93d2fdb364fa47c" compoundref="port__init_8h" startline="26">GPIO_PORTD_CR_R</references>
+        <references refid="port__init_8h_1a6d6b3cdd74974a77f72f48b850350734" compoundref="port__init_8h" startline="21">GPIO_PORTD_DIR_R</references>
+        <references refid="port__init_8h_1a9632c3e19b49afe8ce5f8d10c8a45e6e" compoundref="port__init_8h" startline="28">GPIO_PORTD_PCTL_R</references>
+        <references refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" compoundref="clock_8h" startline="4">SYSCTL_RCGC2_R</references>
+        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="80" endline="95">main</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>

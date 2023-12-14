@@ -21,6 +21,9 @@
   <compound refid="keypad_8h" kind="file"><name>keypad.h</name>
   </compound>
   <compound refid="lcd_8c" kind="file"><name>lcd.c</name>
+    <member refid="lcd_8c_1a0526693165bd140bdaaa0f27b240db1c" kind="define"><name>LCD_DB</name></member>
+    <member refid="lcd_8c_1a1640ffbc0d8ec0f7edb04a2b93918072" kind="define"><name>LCD_EN</name></member>
+    <member refid="lcd_8c_1a4781e073871c6f27f89b9463ad3a4ed1" kind="define"><name>LCD_RS</name></member>
   </compound>
   <compound refid="lcd_8h" kind="file"><name>lcd.h</name>
     <member refid="lcd_8h_1ae3c22aa0ea62f7f26f03726dfc56d6ab" kind="function"><name>SendDisplayNibble</name></member>
@@ -31,22 +34,20 @@
     <member refid="lcd_8h_1ab881e4036845f68552f9ff3f1dfda75c" kind="function"><name>PrintDisplay</name></member>
   </compound>
   <compound refid="main_8c" kind="file"><name>main.c</name>
-    <member refid="main_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kind="define"><name>GPIO_PORTF_DATA_R</name></member>
-    <member refid="main_8c_1a4af807e7c41e4e51a09ab6598280d09b" kind="define"><name>GPIO_PORTF_DIR_R</name></member>
-    <member refid="main_8c_1a8f9c5b1caa2f2206e46d6e55033ba1df" kind="define"><name>GPIO_PORTF_AFSEL_R</name></member>
-    <member refid="main_8c_1ad61970840fbdec3b021a6cd4b176ceb5" kind="define"><name>GPIO_PORTF_PUR_R</name></member>
-    <member refid="main_8c_1ace684566ac3dee1c9230633165118a61" kind="define"><name>GPIO_PORTF_DEN_R</name></member>
-    <member refid="main_8c_1a905788cdfb00eea4f716d3ed280f1e20" kind="define"><name>GPIO_PORTF_LOCK_R</name></member>
-    <member refid="main_8c_1a5b37d58feb20c8629db10975b31b6dbc" kind="define"><name>GPIO_PORTF_CR_R</name></member>
-    <member refid="main_8c_1a792408dc154a55fd9e0ad13cca3db4c3" kind="define"><name>GPIO_PORTF_AMSEL_R</name></member>
-    <member refid="main_8c_1abdf740d2017978b00975ad06bf38f1eb" kind="define"><name>GPIO_PORTF_PCTL_R</name></member>
-    <member refid="main_8c_1a2fedfceccf18bd54a499e73d1b76e506" kind="define"><name>SYSCTL_RCGC2_R</name></member>
-    <member refid="main_8c_1aaffcb829b17f75f5e57ae7d810e18def" kind="variable"><name>SW1</name></member>
-    <member refid="main_8c_1a17bc02cea6c2d2bb1322a102153fca04" kind="variable"><name>SW2</name></member>
-    <member refid="main_8c_1ae19ef8807dc64129635da5b3b781588a" kind="function"><name>PortF_Init</name></member>
-    <member refid="main_8c_1a7a3a2d8021a1d89fd58583318c4ae560" kind="function"><name>FlashSOS</name></member>
-    <member refid="main_8c_1acd46d0cd2123cbf3f87498f9f3060403" kind="function"><name>delay</name></member>
-    <member refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" kind="function"><name>main</name></member>
+    <member refid="main_8c_1a077def6ebb43bf9aee4e7cad468ed726" kind="define"><name>LCD_DATA_PORT</name></member>
+    <member refid="main_8c_1af6f8b226252ecd14def60139d76d971e" kind="define"><name>LCD_EN_PORT</name></member>
+    <member refid="main_8c_1a0968e47930e4e5e5637bb728198cb6bc" kind="define"><name>LCD_EN_PIN</name></member>
+    <member refid="main_8c_1ac5be2a22727fd9ca349e1c9bcbfbcd47" kind="define"><name>LCD_RS_PORT</name></member>
+    <member refid="main_8c_1ae5c0a0a5750f3aaea06083e3a4a31f5d" kind="define"><name>LCD_RS_PIN</name></member>
+    <member refid="main_8c_1a6aa8aa2057294b7d06088e834299b369" kind="define"><name>LCD_CLEAR</name></member>
+    <member refid="main_8c_1a8f9bf7b2d236dfd31791e1c178e43e74" kind="define"><name>LCD_RETURN_HOME</name></member>
+    <member refid="main_8c_1ae5d757ddb6d94de8c82191b60b40e442" kind="define"><name>LCD_ENTRY_MODE</name></member>
+    <member refid="main_8c_1a846dac5d1bb72bef7a76ee110c0445b6" kind="define"><name>LCD_DISPLAY_ON</name></member>
+    <member refid="main_8c_1a5618e3feb6b82570955238fd3f8e8e23" kind="function"><name>Delay1ms</name></member>
+    <member refid="main_8c_1a7a1e4a69dd4bbc1d380bd44d2f1d1ae7" kind="function"><name>SendDisplayNibble</name></member>
+    <member refid="main_8c_1a902c1af74cbe0cfb10248b7618de7022" kind="function"><name>InitDisplay</name></member>
+    <member refid="main_8c_1a7acbf38038dec0c68cf893471a88cedc" kind="function"><name>PrintString</name></member>
+    <member refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>
   <compound refid="port__init_8c" kind="file"><name>port_init.c</name>
     <member refid="port__init_8c_1a2c10edb046a08d0f0d72d288c9c64dfc" kind="function"><name>PortEInit</name></member>
@@ -144,6 +145,23 @@
     <member refid="system___t_m4_c123_8c_1a1c4e4c39696727ba74cf847cf4f51369" kind="function"><name>getOscClk</name></member>
     <member refid="system___t_m4_c123_8c_1ae0c36a9591fe6e9c45ecb21a794f0f0f" kind="function"><name>SystemCoreClockUpdate</name></member>
     <member refid="system___t_m4_c123_8c_1a93f514700ccf00d08dbdcff7f1224eb2" kind="function"><name>SystemInit</name></member>
+  </compound>
+  <compound refid="test_8c" kind="file"><name>test.c</name>
+    <member refid="test_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kind="define"><name>GPIO_PORTF_DATA_R</name></member>
+    <member refid="test_8c_1a4af807e7c41e4e51a09ab6598280d09b" kind="define"><name>GPIO_PORTF_DIR_R</name></member>
+    <member refid="test_8c_1a8f9c5b1caa2f2206e46d6e55033ba1df" kind="define"><name>GPIO_PORTF_AFSEL_R</name></member>
+    <member refid="test_8c_1ad61970840fbdec3b021a6cd4b176ceb5" kind="define"><name>GPIO_PORTF_PUR_R</name></member>
+    <member refid="test_8c_1ace684566ac3dee1c9230633165118a61" kind="define"><name>GPIO_PORTF_DEN_R</name></member>
+    <member refid="test_8c_1a905788cdfb00eea4f716d3ed280f1e20" kind="define"><name>GPIO_PORTF_LOCK_R</name></member>
+    <member refid="test_8c_1a5b37d58feb20c8629db10975b31b6dbc" kind="define"><name>GPIO_PORTF_CR_R</name></member>
+    <member refid="test_8c_1a792408dc154a55fd9e0ad13cca3db4c3" kind="define"><name>GPIO_PORTF_AMSEL_R</name></member>
+    <member refid="test_8c_1abdf740d2017978b00975ad06bf38f1eb" kind="define"><name>GPIO_PORTF_PCTL_R</name></member>
+    <member refid="test_8c_1a2fedfceccf18bd54a499e73d1b76e506" kind="define"><name>SYSCTL_RCGC2_R</name></member>
+    <member refid="test_8c_1aaffcb829b17f75f5e57ae7d810e18def" kind="variable"><name>SW1</name></member>
+    <member refid="test_8c_1a17bc02cea6c2d2bb1322a102153fca04" kind="variable"><name>SW2</name></member>
+    <member refid="test_8c_1ae19ef8807dc64129635da5b3b781588a" kind="function"><name>PortF_Init</name></member>
+    <member refid="test_8c_1a7a3a2d8021a1d89fd58583318c4ae560" kind="function"><name>FlashSOS</name></member>
+    <member refid="test_8c_1acd46d0cd2123cbf3f87498f9f3060403" kind="function"><name>delay</name></member>
   </compound>
   <compound refid="_t_exa_s_8h" kind="file"><name>TExaS.h</name>
     <member refid="_t_exa_s_8h_1a53ea182d5a09a410df69fca268877072" kind="enum"><name>InputPorts</name></member>

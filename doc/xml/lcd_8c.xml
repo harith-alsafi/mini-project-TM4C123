@@ -2,11 +2,72 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="lcd_8c" kind="file" language="C++">
     <compoundname>lcd.c</compoundname>
+    <includes refid="lcd_8h" local="yes">lcd.h</includes>
+    <includes refid="port__init_8h" local="yes">port_init.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>lcd.c</label>
+        <link refid="lcd_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lcd.h</label>
+        <link refid="lcd_8h"/>
+      </node>
+      <node id="3">
+        <label>port_init.h</label>
+        <link refid="port__init_8h"/>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="lcd_8c_1a0526693165bd140bdaaa0f27b240db1c" prot="public" static="no">
+        <name>LCD_DB</name>
+        <initializer><ref refid="port__init_8h_1aa8d764ef0ff488cb4d3aa5ebaed85c63" kindref="member">GPIO_PORTB_DATA_R</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lcd.c" line="4" column="9" bodyfile="lcd.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lcd_8c_1a1640ffbc0d8ec0f7edb04a2b93918072" prot="public" static="no">
+        <name>LCD_EN</name>
+        <initializer><ref refid="port__init_8h_1aa8d764ef0ff488cb4d3aa5ebaed85c63" kindref="member">GPIO_PORTB_DATA_R</ref>&amp;0x4;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lcd.c" line="5" column="9" bodyfile="lcd.c" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lcd_8c_1a4781e073871c6f27f89b9463ad3a4ed1" prot="public" static="no">
+        <name>LCD_RS</name>
+        <initializer><ref refid="port__init_8h_1aa8d764ef0ff488cb4d3aa5ebaed85c63" kindref="member">GPIO_PORTB_DATA_R</ref>&amp;0x8;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lcd.c" line="6" column="9" bodyfile="lcd.c" bodystart="6" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lcd_8h" kindref="compound">lcd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="port__init_8h" kindref="compound">port_init.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="lcd_8c_1a0526693165bd140bdaaa0f27b240db1c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LCD_DB<sp/>GPIO_PORTB_DATA_R</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="lcd_8c_1a1640ffbc0d8ec0f7edb04a2b93918072" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LCD_EN<sp/>GPIO_PORTB_DATA_R&amp;0x4;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="lcd_8c_1a4781e073871c6f27f89b9463ad3a4ed1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LCD_RS<sp/>GPIO_PORTB_DATA_R&amp;0x8;</highlight></codeline>
     </programlisting>
     <location file="lcd.c"/>
   </compounddef>

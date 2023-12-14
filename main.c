@@ -3,9 +3,9 @@
 // LCD Port and Pin Definitions
 #define LCD_DATA_PORT GPIO_PORTB_DATA_R  
 #define LCD_EN_PORT   GPIO_PORTA_DATA_R
-#define LCD_EN_PIN    (1<<2)
+#define LCD_EN_PIN    0x3
 #define LCD_RS_PORT   GPIO_PORTA_DATA_R   
-#define LCD_RS_PIN    (1<<3)
+#define LCD_RS_PIN    0x4
 // LCD Instruction Codes
 #define LCD_CLEAR           0x01 
 #define LCD_RETURN_HOME     0x02
@@ -19,9 +19,7 @@ void Delay1ms(unsigned long milliseconds){
   }
 }
 
-
 void SendDisplayNibble(unsigned char nibble, unsigned char mode) {
-
   LCD_DATA_PORT = (LCD_DATA_PORT & 0x0F) | (nibble & 0xF0);
   
   if(mode == 0) {
@@ -37,8 +35,6 @@ void SendDisplayNibble(unsigned char nibble, unsigned char mode) {
 }
 
 void InitDisplay() {
-
-	
   // Initialization sequence
   Delay1ms(30); 
   
@@ -75,7 +71,6 @@ void PrintString(char *str) {
     str++; 
   }
 }
-
 
 int main() { 
 	PortAInit();

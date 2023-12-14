@@ -6,7 +6,7 @@ var indexSectionsWithContent =
   3: "is",
   4: "io",
   5: "ls",
-  6: "_acdghnprsx"
+  6: "_acdghlnprsx"
 };
 
 var indexSectionNames =

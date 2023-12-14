@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['platform_5fid_0',['PLATFORM_ID',['../_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b',1,'CMakeCCompilerId.c']]],
-  ['pll_5fclk_1',['PLL_CLK',['../system___t_m4_c123_8c.html#ae895cd58a49e14437e6c959517d4af3b',1,'system_TM4C123.c']]]
+  ['nvic_5fst_5fctrl_5fr_0',['NVIC_ST_CTRL_R',['../clock_8h.html#adcfc8530f81c2ebea5d6b229ba4f9d3f',1,'clock.h']]],
+  ['nvic_5fst_5fcurrent_5fr_1',['NVIC_ST_CURRENT_R',['../clock_8h.html#a83b8a7cd422c2dde3c671c9255216cff',1,'clock.h']]],
+  ['nvic_5fst_5freload_5fr_2',['NVIC_ST_RELOAD_R',['../clock_8h.html#a1c404f068f1ba79d68c7cc4302112da3',1,'clock.h']]]
 ];

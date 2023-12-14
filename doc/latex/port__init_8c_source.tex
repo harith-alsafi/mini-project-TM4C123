@@ -4,34 +4,60 @@
 \DoxyCodeLine{\Hypertarget{port__init_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{port__init_8h}{port\_init.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{port__init_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{clock_8h}{clock.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{port__init_8c_source_l00003}00003\ }
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00004}\mbox{\hyperlink{port__init_8c_a2c10edb046a08d0f0d72d288c9c64dfc}{00004}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port__init_8c_a2c10edb046a08d0f0d72d288c9c64dfc}{PortEInit}}()\{}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}};}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00006}00006\ \ \ \ \ \mbox{\hyperlink{clock_8h_a2fedfceccf18bd54a499e73d1b76e506}{SYSCTL\_RCGC2\_R}}\ |=\ 0x00000010;\ \ \ \ \ \textcolor{comment}{//\ 1)\ E\ clock}}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00007}00007\ \ \ \mbox{\hyperlink{main_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}\ =\ \mbox{\hyperlink{clock_8h_a2fedfceccf18bd54a499e73d1b76e506}{SYSCTL\_RCGC2\_R}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ delay\ \ \ }}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00008}00008\ \ \ \textcolor{comment}{//\ GPIO\_PORTE\_LOCK\_R\ =\ 0x4C4F434B;\ \ \ //\ 2)\ unlock\ PortF\ PF0\ \ }}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00009}00009\ \ \ \mbox{\hyperlink{port__init_8h_aab70b1d3f9ffa90dc0c70b4fd4479859}{GPIO\_PORTE\_CR\_R}}\ |=\ 0xF;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ allow\ changes\ to\ PE4-\/0\ \ \ \ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00010}00010\ \ \ \mbox{\hyperlink{port__init_8h_a3da5ec11f639e4aa05b7306a6104cc7c}{GPIO\_PORTE\_AMSEL\_R}}\ \&=\ 0x00;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3)\ disable\ analog\ function}}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00011}00011\ \ \ \mbox{\hyperlink{port__init_8h_aa0f23f6b60cb39e1a89f6add5f812dbf}{GPIO\_PORTE\_PCTL\_R}}\ \&=\ 0x00000000;\ \ \ \textcolor{comment}{//\ 4)\ GPIO\ clear\ bit\ PCTL\ \ }}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00012}00012\ \ \ \mbox{\hyperlink{port__init_8h_aabac097a16539e9dc054b9ebb6bfe6c5}{GPIO\_PORTE\_DIR\_R}}\ |=\ 0x0;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 5.2)\ PE4-\/PE0\ input\ }}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00013}00013\ \ \ \mbox{\hyperlink{port__init_8h_af2e23e7556959fbbf0cd4c19aab7ebf3}{GPIO\_PORTE\_AFSEL\_R}}\ \&=\ 0x0;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ 6)\ no\ alternate\ function}}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00014}00014\ \ \ \mbox{\hyperlink{port__init_8h_a780d4382200cf49047f85429aeebfbdd}{GPIO\_PORTE\_PUR\_R}}\ |=\ 0x0;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ disable\ pullup\ resistors\ on\ PE4-\/PE0\ \ \ }}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00015}00015\ \ \ \mbox{\hyperlink{port__init_8h_aa1c99162bac922e30af2bb6960272e23}{GPIO\_PORTE\_PDR\_R}}\ |=\ 0xF;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ enable\ pulldown\ resistors\ on\ PE4-\/PE0\ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00016}00016\ \ \ \mbox{\hyperlink{port__init_8h_a4eb0814dc5e7e015bf1714dcb606f0b5}{GPIO\_PORTE\_DEN\_R}}\ |=\ 0xF;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 7)\ enable\ digital\ pins\ PE4-\/PE0\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00004}\mbox{\hyperlink{port__init_8c_a2c10edb046a08d0f0d72d288c9c64dfc}{00004}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port__init_8c_a2c10edb046a08d0f0d72d288c9c64dfc}{PortEInit}}()\ \{}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00005}00005\ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{test_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}};}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00006}00006\ \ \ \mbox{\hyperlink{clock_8h_a2fedfceccf18bd54a499e73d1b76e506}{SYSCTL\_RCGC2\_R}}\ |=\ 0x00000010;\ \textcolor{comment}{//\ 1)\ E\ clock}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00007}00007\ \ \ \mbox{\hyperlink{test_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}\ =\ \mbox{\hyperlink{clock_8h_a2fedfceccf18bd54a499e73d1b76e506}{SYSCTL\_RCGC2\_R}};\ \ \ \ \ \ \ \textcolor{comment}{//\ delay}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00008}00008\ \ \ \textcolor{comment}{//\ GPIO\_PORTE\_LOCK\_R\ =\ 0x4C4F434B;\ \ \ //\ 2)\ unlock\ PortF\ PF0}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00009}00009\ \ \ \mbox{\hyperlink{port__init_8h_aab70b1d3f9ffa90dc0c70b4fd4479859}{GPIO\_PORTE\_CR\_R}}\ |=\ 0xF;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ allow\ changes\ to\ PE4-\/0}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00010}00010\ \ \ \mbox{\hyperlink{port__init_8h_a3da5ec11f639e4aa05b7306a6104cc7c}{GPIO\_PORTE\_AMSEL\_R}}\ \&=\ 0x00;\ \ \ \ \ \ \textcolor{comment}{//\ 3)\ disable\ analog\ function}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00011}00011\ \ \ \mbox{\hyperlink{port__init_8h_aa0f23f6b60cb39e1a89f6add5f812dbf}{GPIO\_PORTE\_PCTL\_R}}\ \&=\ 0x00000000;\ \textcolor{comment}{//\ 4)\ GPIO\ clear\ bit\ PCTL}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00012}00012\ \ \ \mbox{\hyperlink{port__init_8h_aabac097a16539e9dc054b9ebb6bfe6c5}{GPIO\_PORTE\_DIR\_R}}\ |=\ 0x0;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 5.2)\ PE4-\/PE0\ input}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00013}00013\ \ \ \mbox{\hyperlink{port__init_8h_af2e23e7556959fbbf0cd4c19aab7ebf3}{GPIO\_PORTE\_AFSEL\_R}}\ \&=\ 0x0;\ \ \ \ \ \ \ \textcolor{comment}{//\ 6)\ no\ alternate\ function}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00014}00014\ \ \ \mbox{\hyperlink{port__init_8h_a780d4382200cf49047f85429aeebfbdd}{GPIO\_PORTE\_PUR\_R}}\ |=\ 0x0;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ disable\ pullup\ resistors\ on\ PE4-\/PE0}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00015}00015\ \ \ \mbox{\hyperlink{port__init_8h_aa1c99162bac922e30af2bb6960272e23}{GPIO\_PORTE\_PDR\_R}}\ |=\ 0xF;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ enable\ pulldown\ resistors\ on\ PE4-\/PE0}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00016}00016\ \ \ \mbox{\hyperlink{port__init_8h_a4eb0814dc5e7e015bf1714dcb606f0b5}{GPIO\_PORTE\_DEN\_R}}\ |=\ 0xF;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 7)\ enable\ digital\ pins\ PE4-\/PE0}}
 \DoxyCodeLine{\Hypertarget{port__init_8c_source_l00017}00017\ \}}
 \DoxyCodeLine{\Hypertarget{port__init_8c_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00020}\mbox{\hyperlink{port__init_8c_a21efc6fa081c0b9c85eafe9d7455b9b6}{00020}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port__init_8c_a21efc6fa081c0b9c85eafe9d7455b9b6}{PortDInit}}()\{}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00021}00021\ \ \ }
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00022}00022\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00023}00023\ \}}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00025}\mbox{\hyperlink{port__init_8c_aaebad24f567e2e1f53e6252fd325371a}{00025}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port__init_8c_aaebad24f567e2e1f53e6252fd325371a}{PortBInit}}()\{}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00026}00026\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00027}00027\ \}}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00030}\mbox{\hyperlink{port__init_8c_a03c4992f00f155be0425086ad67578f2}{00030}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port__init_8c_a03c4992f00f155be0425086ad67578f2}{PortAInit}}()\{}
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00031}00031\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00019}\mbox{\hyperlink{port__init_8c_a21efc6fa081c0b9c85eafe9d7455b9b6}{00019}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port__init_8c_a21efc6fa081c0b9c85eafe9d7455b9b6}{PortDInit}}()\ \{}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00020}00020\ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{test_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}};}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00021}00021\ \ \ \mbox{\hyperlink{clock_8h_a2fedfceccf18bd54a499e73d1b76e506}{SYSCTL\_RCGC2\_R}}\ |=\ 0x00000008;\ \textcolor{comment}{//\ 1)\ D\ clock}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00022}00022\ \ \ \mbox{\hyperlink{test_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}\ =\ \mbox{\hyperlink{clock_8h_a2fedfceccf18bd54a499e73d1b76e506}{SYSCTL\_RCGC2\_R}};\ \ \ \ \ \ \ \textcolor{comment}{//\ delay}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00023}00023\ \ \ \textcolor{comment}{//\ GPIO\_PORTE\_LOCK\_R\ =\ 0x4C4F434B;\ \ \ //\ 2)\ unlock\ PortF\ PF0}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00024}00024\ \ \ \mbox{\hyperlink{port__init_8h_a92b46ca3cdd353e4c93d2fdb364fa47c}{GPIO\_PORTD\_CR\_R}}\ |=\ 0xF;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ allow\ changes\ to\ PD4-\/0}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00025}00025\ \ \ \mbox{\hyperlink{port__init_8h_a405d017e972db8371ab51129aa17c0b1}{GPIO\_PORTD\_AMSEL\_R}}\ \&=\ 0x00;\ \ \ \ \ \ \textcolor{comment}{//\ 3)\ disable\ analog\ function}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00026}00026\ \ \ \mbox{\hyperlink{port__init_8h_a9632c3e19b49afe8ce5f8d10c8a45e6e}{GPIO\_PORTD\_PCTL\_R}}\ \&=\ 0x00000000;\ \textcolor{comment}{//\ 4)\ GPIO\ clear\ bit\ PCTL}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00027}00027\ \ \ \mbox{\hyperlink{port__init_8h_a6d6b3cdd74974a77f72f48b850350734}{GPIO\_PORTD\_DIR\_R}}\ |=\ 0xF;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 5.2)\ PD4-\/PD0\ ouput}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00028}00028\ \ \ \mbox{\hyperlink{port__init_8h_a97eeedd60368782e6374a99071b00779}{GPIO\_PORTD\_AFSEL\_R}}\ \&=\ 0x0;\ \ \ \ \ \ \ \textcolor{comment}{//\ 6)\ no\ alternate\ function}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00029}00029\ \ \ \mbox{\hyperlink{port__init_8h_a37a81aa284c08f621656d5a3375dd42e}{GPIO\_PORTD\_DEN\_R}}\ |=\ 0xF;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 7)\ enable\ digital\ pins\ PD4-\/PD0}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00032}\mbox{\hyperlink{port__init_8c_aaebad24f567e2e1f53e6252fd325371a}{00032}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port__init_8c_aaebad24f567e2e1f53e6252fd325371a}{PortBInit}}()\ \{}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00033}00033\ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{test_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}};}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00034}00034\ \ \ \mbox{\hyperlink{clock_8h_a2fedfceccf18bd54a499e73d1b76e506}{SYSCTL\_RCGC2\_R}}\ |=\ 0x00000002;\ \textcolor{comment}{//\ 1)\ B\ clock}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00035}00035\ \ \ \mbox{\hyperlink{test_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}\ =\ \mbox{\hyperlink{clock_8h_a2fedfceccf18bd54a499e73d1b76e506}{SYSCTL\_RCGC2\_R}};\ \ \ \ \ \ \ \textcolor{comment}{//\ delay}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00036}00036\ \ \ \textcolor{comment}{//\ GPIO\_PORTE\_LOCK\_R\ =\ 0x4C4F434B;\ \ \ //\ 2)\ unlock\ PortF\ PF0}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00037}00037\ \ \ \textcolor{comment}{//\ GPIO\_PORTB\_CR\_R\ |=\ 0xFF;\ \ \ \ \ \ \ \ \ \ //\ allow\ changes\ to\ PB7-\/0}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00038}00038\ \ \ \textcolor{comment}{//\ GPIO\_PORTE\_AMSEL\_R\ \&=\ 0x00;\ \ \ \ \ \ //\ 3)\ disable\ analog\ function}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00039}00039\ \ \ \textcolor{comment}{//\ GPIO\_PORTE\_PCTL\_R\ \&=\ 0x00000000;\ //\ 4)\ GPIO\ clear\ bit\ PCTL}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00040}00040\ \ \ \mbox{\hyperlink{port__init_8h_a8a1bacf2a566d3044b8796425744fac4}{GPIO\_PORTB\_DIR\_R}}\ |=\ 0xFF;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 5.2)\ PB7-\/0\ output\ pins\ }}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00041}00041\ \ \ \textcolor{comment}{//\ GPIO\_PORTE\_AFSEL\_R\ \&=\ 0x0;\ \ \ \ \ \ \ //\ 6)\ no\ alternate\ function}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00042}00042\ \ \ \textcolor{comment}{//\ GPIO\_PORTE\_PUR\_R\ |=\ 0x0;\ \ \ \ \ \ \ \ \ //\ disable\ pullup\ resistors\ on\ PE4-\/PE0}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00043}00043\ \ \ \textcolor{comment}{//\ GPIO\_PORTE\_PDR\_R\ |=\ 0xF;\ \ \ \ \ \ \ \ \ //\ enable\ pulldown\ resistors\ on\ PE4-\/PE0}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00044}00044\ \ \ \mbox{\hyperlink{port__init_8h_abcfeaa888e77b65fe7d8f24151a8e54e}{GPIO\_PORTB\_DEN\_R}}\ |=\ 0xFF;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 7)\ enable\ digital\ pins\ PB7-\/0}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00047}\mbox{\hyperlink{port__init_8c_a03c4992f00f155be0425086ad67578f2}{00047}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port__init_8c_a03c4992f00f155be0425086ad67578f2}{PortAInit}}()\ \{}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00048}00048\ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{test_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}};}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00049}00049\ \ \ \mbox{\hyperlink{clock_8h_a2fedfceccf18bd54a499e73d1b76e506}{SYSCTL\_RCGC2\_R}}\ |=\ 0x00000001;\ \textcolor{comment}{//\ 1)\ A\ clock}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00050}00050\ \ \ \mbox{\hyperlink{test_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}}\ =\ \mbox{\hyperlink{clock_8h_a2fedfceccf18bd54a499e73d1b76e506}{SYSCTL\_RCGC2\_R}};\ \ \ \ \ \ \ \textcolor{comment}{//\ delay}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00051}00051\ \ \ \textcolor{comment}{//\ GPIO\_PORTE\_LOCK\_R\ =\ 0x4C4F434B;\ \ \ //\ 2)\ unlock\ PortF\ PF0}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00052}00052\ \ \ \mbox{\hyperlink{port__init_8h_a92b46ca3cdd353e4c93d2fdb364fa47c}{GPIO\_PORTD\_CR\_R}}\ |=\ 0xF;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ allow\ changes\ to\ PD4-\/0}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00053}00053\ \ \ \mbox{\hyperlink{port__init_8h_a405d017e972db8371ab51129aa17c0b1}{GPIO\_PORTD\_AMSEL\_R}}\ \&=\ 0x00;\ \ \ \ \ \ \textcolor{comment}{//\ 3)\ disable\ analog\ function}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00054}00054\ \ \ \mbox{\hyperlink{port__init_8h_a9632c3e19b49afe8ce5f8d10c8a45e6e}{GPIO\_PORTD\_PCTL\_R}}\ \&=\ 0x00000000;\ \textcolor{comment}{//\ 4)\ GPIO\ clear\ bit\ PCTL}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00055}00055\ \ \ \mbox{\hyperlink{port__init_8h_a6d6b3cdd74974a77f72f48b850350734}{GPIO\_PORTD\_DIR\_R}}\ |=\ 0xF;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 5.2)\ PD4-\/PD0\ ouput}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00056}00056\ \ \ \mbox{\hyperlink{port__init_8h_a97eeedd60368782e6374a99071b00779}{GPIO\_PORTD\_AFSEL\_R}}\ \&=\ 0x0;\ \ \ \ \ \ \ \textcolor{comment}{//\ 6)\ no\ alternate\ function}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00057}00057\ \ \ \mbox{\hyperlink{port__init_8h_a803f6958edee8ea0e1b655978e66b8e1}{GPIO\_PORTA\_DEN\_R}}\ |=\ 0xC;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 7)\ enable\ digital\ pins\ PA3,\ PA2}}
+\DoxyCodeLine{\Hypertarget{port__init_8c_source_l00058}00058\ \}}
 
 \end{DoxyCode}

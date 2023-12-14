@@ -1,0 +1,7 @@
+<map id="InitDisplay" name="InitDisplay">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,87,57"/>
+<area shape="rect" id="Node000002" href="$main_8c.html#a5618e3feb6b82570955238fd3f8e8e23" title=" " alt="" coords="160,5,240,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,35,144,25,145,30,87,40"/>
+<area shape="rect" id="Node000003" href="$lcd_8h.html#ae3c22aa0ea62f7f26f03726dfc56d6ab" title=" " alt="" coords="135,56,265,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="87,48,120,53,119,59,87,53"/>
+</map>
