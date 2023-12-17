@@ -1,1 +1,1 @@
-./objects/main.o: main.c port_init.h
+./objects/main.o: main.c clock.h lcd.h port_init.h

@@ -1,9 +1,11 @@
 CompileFlags:
-  Add: 
-    - "--include-directory=C:\\Users\\harit\\AppData\\Local\\Arm\\Packs\\Keil\\TM4C_DFP\\1.1.0\\Device\\Include\\TM4C123"
-    - "--include-directory=C:\\Users\\harit\\AppData\\Local\\Arm\\Packs\\ARM\\CMSIS\\5.9.0\\CMSIS\\Core\\Include"
-    - "--include-directory=C:\\Keil_v5\\ARM\\ARMCLANG\\include"
-    - "--include-directory=C:\\Keil_v5\\ARM\\ARMCLANG\\include\\arm_linux"
-    - "--include-directory=C:\\Keil_v5\\ARM\\ARMCLANG\\include\\arm_linux_compat"
-    - "--include-directory=C:\\Keil_v5\\ARM\\ARMCLANG\\include\\libcxx"
+  Add:
+  - >-
+    --include-directory=C:\Users\harit\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123
+  - >-
+    --include-directory=C:\Users\harit\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+  - '--include-directory=C:\Keil_v5\ARM\ARMCLANG\include'
+  - '--include-directory=C:\Keil_v5\ARM\ARMCLANG\include\arm_linux'
+  - '--include-directory=C:\Keil_v5\ARM\ARMCLANG\include\arm_linux_compat'
+  - '--include-directory=C:\Keil_v5\ARM\ARMCLANG\include\libcxx'
   CompilationDatabase: a:\Work\Projects\mbed\mini-project-TM4C123\tmp\mini-project\Target_1

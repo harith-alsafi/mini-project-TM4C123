@@ -41,21 +41,21 @@ void delay(unsigned long halfsecs);
 
 // 3. Subroutines Section
 // MAIN: Mandatory for a C Program to be executable
-//int main(void){
-  //TExaS_Init(SW_PIN_PF40, LED_PIN_PF321);  // activate grader and set system clock to 80 MHz
-  //PortF_Init(); // Init port PF4 PF2 PF0    
-  //EnableInterrupts();           // enable interrupts for the grader
-  //while(1){
-		//SW1 = GPIO_PORTF_DATA_R&0x10; // PF4 into SW1
-		//SW2 = GPIO_PORTF_DATA_R&0x01; // PF0 into SW2
-		//while(SW1 == 0x00 && SW2 == 0x00){
-			//FlashSOS();
-			//SW1 = GPIO_PORTF_DATA_R&0x10; // PF4 into SW1
-			//SW2 = GPIO_PORTF_DATA_R&0x01; // PF0 into SW2
-		//}
-		//GPIO_PORTF_DATA_R &= ~0x0A; delay(1);
-  //}
-//}
+// int main(void){
+//   // TExaS_Init(SW_PIN_PF40, LED_PIN_PF321);  // activate grader and set system clock to 80 MHz
+//   //PortF_Init(); // Init port PF4 PF2 PF0    
+//   //EnableInterrupts();           // enable interrupts for the grader
+//   while(1){
+// 		SW1 = GPIO_PORTF_DATA_R&0x10; // PF4 into SW1
+// 		SW2 = GPIO_PORTF_DATA_R&0x01; // PF0 into SW2
+// 		while(SW1 == 0x00 && SW2 == 0x00){
+// 			FlashSOS();
+// 			SW1 = GPIO_PORTF_DATA_R&0x10; // PF4 into SW1
+// 			SW2 = GPIO_PORTF_DATA_R&0x01; // PF0 into SW2
+// 		}
+// 		GPIO_PORTF_DATA_R &= ~0x0A; delay(1);
+//   }
+// }
 // Subroutine to initialize port F pins for input and output
 // PF4 is input SW1 and PF2 is output Blue LED
 // Inputs: None
