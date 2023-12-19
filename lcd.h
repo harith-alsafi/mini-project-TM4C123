@@ -4,7 +4,7 @@
 // DB5 -> PB1
 // DB6 -> PB2
 // DB7 -> PB3
-#define LCD_DB (*((volatile unsigned long *)0x40005042))
+#define LCD_DB (*((volatile unsigned long *)0x4000503C))
 #define LCD_EN (*((volatile unsigned long *)0x40004010))
 #define LCD_RS (*((volatile unsigned long *)0x40004020))
 
@@ -43,7 +43,7 @@ void PrintDisplay();
 
 // N = 2 F = 0
 
-void LcdSetRs();
+void LcdSetRs(int rs);
 
 void LcdPulseEn();
 

@@ -25,7 +25,6 @@ void SendLcdCommand(int rs, unsigned char command){
 void SendLcdByte(unsigned char byte){
     SendLcdNibble(byte >> 4);
     SendLcdNibble(byte & 0xF);
-    DelayMicro(40);
 }
 
 void SendLcdCommandByte(int rs, unsigned char byte){
@@ -51,33 +50,41 @@ void LcdInit() {
     SendLcdNibble(0x3);
 
     // Wait time > 100 us
-    DelayMicro(110);
+    DelayMicro(40);
 
     // Function set
     SendLcdNibble(0x3);
+    DelayMicro(40);
 
     // Function set (Set interface to be 4 bits length)
     SendLcdNibble(0x2);
+    DelayMicro(40);
 
     // Function set (Interface is 4 bits length. Specify the number of the display lines and character font.)
     SendLcdByte(0x28);
+    DelayMicro(40);
 
     // Display off
     SendLcdByte(0x08);
+    DelayMicro(40);
 
     // Display clear
     SendLcdByte(0x01);
+    DelayMilli(2);
 
     // Entry mode set
     SendLcdByte(0x06);
+    DelayMicro(40);
+
+    SendLcdByte(0x0E);
+    DelayMicro(40);
+
+    SendLcdByte(0x06);
+    DelayMicro(40);
 }
 
 void LcdPrintChar(char ch) {
-    // Send higher nibble
-    SendLcdCommand(1, ch >> 4);
-
-    // Send lower nibble
-    SendLcdCommand(1, ch & 0xF);
-
+    SendLcdRs(1);
+    SendLcdByte(ch);
     DelayMicro(40);
 }

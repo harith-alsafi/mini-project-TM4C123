@@ -13,10 +13,8 @@ void InitAll() {
 int main() {
     InitAll();
 	// DelayMilli(5000);
-	DelayMilli(100);
-
-	SendLcdCommandByte(1, 0x53);
-	DelayMilli(5000);
+	// DelayMilli(100);
+	LcdPrintChar('S');
 	LcdPrintChar('A');
     while (1)
         ;
