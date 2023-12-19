@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['nvic_5fst_5fctrl_5fr_0',['NVIC_ST_CTRL_R',['../clock_8h.html#adcfc8530f81c2ebea5d6b229ba4f9d3f',1,'clock.h']]],
-  ['nvic_5fst_5fcurrent_5fr_1',['NVIC_ST_CURRENT_R',['../clock_8h.html#a83b8a7cd422c2dde3c671c9255216cff',1,'clock.h']]],
-  ['nvic_5fst_5freload_5fr_2',['NVIC_ST_RELOAD_R',['../clock_8h.html#a1c404f068f1ba79d68c7cc4302112da3',1,'clock.h']]]
+  ['rcc2_5fval_0',['RCC2_Val',['../system___t_m4_c123_8c.html#afd4d4cb07db4562632da94cb7cf9c173',1,'system_TM4C123.c']]],
+  ['rcc_5fval_1',['RCC_Val',['../system___t_m4_c123_8c.html#a6365581ad94c923afd0d1e7e591f0c76',1,'system_TM4C123.c']]]
 ];

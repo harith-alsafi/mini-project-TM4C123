@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['rcc2_5fval_0',['RCC2_Val',['../system___t_m4_c123_8c.html#afd4d4cb07db4562632da94cb7cf9c173',1,'system_TM4C123.c']]],
-  ['rcc_5fval_1',['RCC_Val',['../system___t_m4_c123_8c.html#a6365581ad94c923afd0d1e7e591f0c76',1,'system_TM4C123.c']]]
+  ['xtal30k_0',['XTAL30K',['../system___t_m4_c123_8c.html#aae873e6b41dc2b7665b1a312cb062b4a',1,'system_TM4C123.c']]],
+  ['xtal32k_1',['XTAL32K',['../system___t_m4_c123_8c.html#a7981be1ae1f32cdfc7b1681860d440be',1,'system_TM4C123.c']]],
+  ['xtali_2',['XTALI',['../system___t_m4_c123_8c.html#aed5b0da9b247340ab65170e44a0e079f',1,'system_TM4C123.c']]],
+  ['xtalm_3',['XTALM',['../system___t_m4_c123_8c.html#a2257a737607a717c24541af4e55abf03',1,'system_TM4C123.c']]]
 ];

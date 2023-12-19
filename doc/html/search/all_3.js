@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['dec_0',['DEC',['../_c_make_c_compiler_id_8c.html#ad1280362da42492bbc11aa78cbf776ad',1,'CMakeCCompilerId.c']]],
-  ['delay_1',['delay',['../test_8c.html#acd46d0cd2123cbf3f87498f9f3060403',1,'test.c']]],
-  ['delay1ms_2',['Delay1ms',['../main_8c.html#a5618e3feb6b82570955238fd3f8e8e23',1,'main.c']]],
-  ['delaymicro_3',['DelayMicro',['../clock_8h.html#a3a41872da02412b070aa025207d4709b',1,'clock.h']]],
-  ['delaymilli_4',['DelayMilli',['../clock_8h.html#a9ae38f0acb2451f378777d5b5dd69a52',1,'clock.h']]]
+  ['delay_0',['delay',['../test_8c.html#acd46d0cd2123cbf3f87498f9f3060403',1,'test.c']]],
+  ['delaymicro_1',['delaymicro',['../clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e',1,'DelayMicro(unsigned long microseconds):&#160;clock.c'],['../clock_8h.html#a44cfb49005f69fe95c0ce5f30b9a660e',1,'DelayMicro(unsigned long microseconds):&#160;clock.c']]],
+  ['delaymilli_2',['delaymilli',['../clock_8c.html#a38d766a6d881470e7e8edfe0a222141e',1,'DelayMilli(unsigned long millisecond):&#160;clock.c'],['../clock_8h.html#a38d766a6d881470e7e8edfe0a222141e',1,'DelayMilli(unsigned long millisecond):&#160;clock.c']]],
+  ['delaynano_3',['delaynano',['../clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac',1,'DelayNano(unsigned long nanoseconds):&#160;clock.c'],['../clock_8h.html#a2b0d30a37314c42f7d52aeec96a6e3ac',1,'DelayNano(unsigned long nanoseconds):&#160;clock.c']]]
 ];

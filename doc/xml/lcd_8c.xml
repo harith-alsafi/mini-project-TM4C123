@@ -3,58 +3,229 @@
   <compounddef id="lcd_8c" kind="file" language="C++">
     <compoundname>lcd.c</compoundname>
     <includes refid="lcd_8h" local="yes">lcd.h</includes>
-    <includes refid="port__init_8h" local="yes">port_init.h</includes>
+    <includes refid="clock_8h" local="yes">clock.h</includes>
     <incdepgraph>
+      <node id="4">
+        <label>clock.h</label>
+        <link refid="clock_8h"/>
+      </node>
       <node id="1">
         <label>lcd.c</label>
         <link refid="lcd_8c"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>lcd.h</label>
         <link refid="lcd_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
       <node id="3">
-        <label>port_init.h</label>
-        <link refid="port__init_8h"/>
+        <label>ports.h</label>
+        <link refid="ports_8h"/>
       </node>
     </incdepgraph>
-    <sectiondef kind="define">
-      <memberdef kind="define" id="lcd_8c_1a0526693165bd140bdaaa0f27b240db1c" prot="public" static="no">
-        <name>LCD_DB</name>
-        <initializer><ref refid="port__init_8h_1aa8d764ef0ff488cb4d3aa5ebaed85c63" kindref="member">GPIO_PORTB_DATA_R</ref></initializer>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="lcd_8c_1a737f910552a1a1d9c2ee022b008da697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SendLcdRs</definition>
+        <argsstring>(int rs)</argsstring>
+        <name>SendLcdRs</name>
+        <param>
+          <type>int</type>
+          <declname>rs</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lcd.c" line="4" column="9" bodyfile="lcd.c" bodystart="4" bodyend="-1"/>
+        <location file="lcd.c" line="4" column="6" bodyfile="lcd.c" bodystart="4" bodyend="6"/>
+        <references refid="lcd_8h_1a4781e073871c6f27f89b9463ad3a4ed1" compoundref="lcd_8h" startline="9">LCD_RS</references>
+        <referencedby refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" compoundref="lcd_8c" startline="36" endline="73">LcdInit</referencedby>
+        <referencedby refid="lcd_8c_1a4c5d5c0a03d2071457e63ca13e0af2e1" compoundref="lcd_8c" startline="20" endline="23">SendLcdCommand</referencedby>
+        <referencedby refid="lcd_8c_1afbdcf081d356db6a9fbc8978bcd6833d" compoundref="lcd_8c" startline="31" endline="34">SendLcdCommandByte</referencedby>
       </memberdef>
-      <memberdef kind="define" id="lcd_8c_1a1640ffbc0d8ec0f7edb04a2b93918072" prot="public" static="no">
-        <name>LCD_EN</name>
-        <initializer><ref refid="port__init_8h_1aa8d764ef0ff488cb4d3aa5ebaed85c63" kindref="member">GPIO_PORTB_DATA_R</ref>&amp;0x4;</initializer>
+      <memberdef kind="function" id="lcd_8c_1a07e30a245315510382ca9d5e1b508de3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LcdPulseEn</definition>
+        <argsstring>()</argsstring>
+        <name>LcdPulseEn</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lcd.c" line="5" column="9" bodyfile="lcd.c" bodystart="5" bodyend="-1"/>
+        <location file="lcd.c" line="8" column="6" bodyfile="lcd.c" bodystart="8" bodyend="13"/>
+        <references refid="clock_8c_1a2b0d30a37314c42f7d52aeec96a6e3ac" compoundref="clock_8c" startline="42" endline="44">DelayNano</references>
+        <references refid="lcd_8h_1a1640ffbc0d8ec0f7edb04a2b93918072" compoundref="lcd_8h" startline="8">LCD_EN</references>
+        <referencedby refid="lcd_8c_1a287dfa68d47b371d2382934ee2c378cf" compoundref="lcd_8c" startline="15" endline="18">SendLcdNibble</referencedby>
       </memberdef>
-      <memberdef kind="define" id="lcd_8c_1a4781e073871c6f27f89b9463ad3a4ed1" prot="public" static="no">
-        <name>LCD_RS</name>
-        <initializer><ref refid="port__init_8h_1aa8d764ef0ff488cb4d3aa5ebaed85c63" kindref="member">GPIO_PORTB_DATA_R</ref>&amp;0x8;</initializer>
+      <memberdef kind="function" id="lcd_8c_1a287dfa68d47b371d2382934ee2c378cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SendLcdNibble</definition>
+        <argsstring>(unsigned char nibble)</argsstring>
+        <name>SendLcdNibble</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>nibble</declname>
+        </param>
+        <briefdescription>
+<para>Sends a nibble to the LCD. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nibble</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RS | R/W | DB4 | DB5 | DB6 | DB7 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lcd.c" line="15" column="6" bodyfile="lcd.c" bodystart="15" bodyend="18"/>
+        <references refid="lcd_8h_1a0526693165bd140bdaaa0f27b240db1c" compoundref="lcd_8h" startline="7">LCD_DB</references>
+        <references refid="lcd_8c_1a07e30a245315510382ca9d5e1b508de3" compoundref="lcd_8c" startline="8" endline="13">LcdPulseEn</references>
+        <referencedby refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" compoundref="lcd_8c" startline="36" endline="73">LcdInit</referencedby>
+        <referencedby refid="lcd_8c_1a4b5d69f267c6173aadd09a3926d1cc11" compoundref="lcd_8c" startline="25" endline="29">SendLcdByte</referencedby>
+        <referencedby refid="lcd_8c_1a4c5d5c0a03d2071457e63ca13e0af2e1" compoundref="lcd_8c" startline="20" endline="23">SendLcdCommand</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8c_1a4c5d5c0a03d2071457e63ca13e0af2e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SendLcdCommand</definition>
+        <argsstring>(int rs, unsigned char command)</argsstring>
+        <name>SendLcdCommand</name>
+        <param>
+          <type>int</type>
+          <declname>rs</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Sends a command to the LCD. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RS part of the command </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DB4 | DB5 | DB6 | DB7 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lcd.c" line="20" column="6" bodyfile="lcd.c" bodystart="20" bodyend="23"/>
+        <references refid="lcd_8c_1a287dfa68d47b371d2382934ee2c378cf" compoundref="lcd_8c" startline="15" endline="18">SendLcdNibble</references>
+        <references refid="lcd_8c_1a737f910552a1a1d9c2ee022b008da697" compoundref="lcd_8c" startline="4" endline="6">SendLcdRs</references>
+        <referencedby refid="lcd_8c_1aff2f3428c64a63264ad4349126fd33d9" compoundref="lcd_8c" startline="75" endline="83">LcdPrintChar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8c_1a4b5d69f267c6173aadd09a3926d1cc11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SendLcdByte</definition>
+        <argsstring>(unsigned char byte)</argsstring>
+        <name>SendLcdByte</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>byte</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lcd.c" line="6" column="9" bodyfile="lcd.c" bodystart="6" bodyend="-1"/>
+        <location file="lcd.c" line="25" column="6" bodyfile="lcd.c" bodystart="25" bodyend="29"/>
+        <references refid="clock_8c_1a44cfb49005f69fe95c0ce5f30b9a660e" compoundref="clock_8c" startline="46" endline="48">DelayMicro</references>
+        <references refid="lcd_8c_1a287dfa68d47b371d2382934ee2c378cf" compoundref="lcd_8c" startline="15" endline="18">SendLcdNibble</references>
+        <referencedby refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" compoundref="lcd_8c" startline="36" endline="73">LcdInit</referencedby>
+        <referencedby refid="lcd_8c_1afbdcf081d356db6a9fbc8978bcd6833d" compoundref="lcd_8c" startline="31" endline="34">SendLcdCommandByte</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8c_1afbdcf081d356db6a9fbc8978bcd6833d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SendLcdCommandByte</definition>
+        <argsstring>(int rs, unsigned char byte)</argsstring>
+        <name>SendLcdCommandByte</name>
+        <param>
+          <type>int</type>
+          <declname>rs</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>byte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lcd.c" line="31" column="6" bodyfile="lcd.c" bodystart="31" bodyend="34"/>
+        <references refid="lcd_8c_1a4b5d69f267c6173aadd09a3926d1cc11" compoundref="lcd_8c" startline="25" endline="29">SendLcdByte</references>
+        <references refid="lcd_8c_1a737f910552a1a1d9c2ee022b008da697" compoundref="lcd_8c" startline="4" endline="6">SendLcdRs</references>
+        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="13" endline="21">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LcdInit</definition>
+        <argsstring>()</argsstring>
+        <name>LcdInit</name>
+        <briefdescription>
+<para>Initializes the LCD. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lcd.c" line="36" column="6" bodyfile="lcd.c" bodystart="36" bodyend="73"/>
+        <references refid="clock_8c_1a44cfb49005f69fe95c0ce5f30b9a660e" compoundref="clock_8c" startline="46" endline="48">DelayMicro</references>
+        <references refid="clock_8c_1a38d766a6d881470e7e8edfe0a222141e" compoundref="clock_8c" startline="50" endline="50">DelayMilli</references>
+        <references refid="lcd_8c_1a4b5d69f267c6173aadd09a3926d1cc11" compoundref="lcd_8c" startline="25" endline="29">SendLcdByte</references>
+        <references refid="lcd_8c_1a287dfa68d47b371d2382934ee2c378cf" compoundref="lcd_8c" startline="15" endline="18">SendLcdNibble</references>
+        <references refid="lcd_8c_1a737f910552a1a1d9c2ee022b008da697" compoundref="lcd_8c" startline="4" endline="6">SendLcdRs</references>
+        <referencedby refid="main_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="main_8c" startline="5" endline="11">InitAll</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="lcd_8c_1aff2f3428c64a63264ad4349126fd33d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LcdPrintChar</definition>
+        <argsstring>(char ch)</argsstring>
+        <name>LcdPrintChar</name>
+        <param>
+          <type>char</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lcd.c" line="75" column="6" bodyfile="lcd.c" bodystart="75" bodyend="83"/>
+        <references refid="clock_8c_1a44cfb49005f69fe95c0ce5f30b9a660e" compoundref="clock_8c" startline="46" endline="48">DelayMicro</references>
+        <references refid="lcd_8c_1a4c5d5c0a03d2071457e63ca13e0af2e1" compoundref="lcd_8c" startline="20" endline="23">SendLcdCommand</references>
+        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="13" endline="21">main</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -63,11 +234,88 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lcd_8h" kindref="compound">lcd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="port__init_8h" kindref="compound">port_init.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="clock_8h" kindref="compound">clock.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4" refid="lcd_8c_1a0526693165bd140bdaaa0f27b240db1c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LCD_DB<sp/>GPIO_PORTB_DATA_R</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5" refid="lcd_8c_1a1640ffbc0d8ec0f7edb04a2b93918072" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LCD_EN<sp/>GPIO_PORTB_DATA_R&amp;0x4;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6" refid="lcd_8c_1a4781e073871c6f27f89b9463ad3a4ed1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LCD_RS<sp/>GPIO_PORTB_DATA_R&amp;0x8;</highlight></codeline>
+<codeline lineno="4" refid="lcd_8c_1a737f910552a1a1d9c2ee022b008da697" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1a737f910552a1a1d9c2ee022b008da697" kindref="member">SendLcdRs</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rs){</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8h_1a4781e073871c6f27f89b9463ad3a4ed1" kindref="member">LCD_RS</ref><sp/>=<sp/>rs<sp/>&gt;<sp/>0<sp/>?<sp/>0xFF<sp/>:<sp/>0x00;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="lcd_8c_1a07e30a245315510382ca9d5e1b508de3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1a07e30a245315510382ca9d5e1b508de3" kindref="member">LcdPulseEn</ref>(){</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8h_1a1640ffbc0d8ec0f7edb04a2b93918072" kindref="member">LCD_EN</ref><sp/>=<sp/>0xFF;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a2b0d30a37314c42f7d52aeec96a6e3ac" kindref="member">DelayNano</ref>(450);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8h_1a1640ffbc0d8ec0f7edb04a2b93918072" kindref="member">LCD_EN</ref><sp/>=<sp/>0x00;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a2b0d30a37314c42f7d52aeec96a6e3ac" kindref="member">DelayNano</ref>(450);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="lcd_8c_1a287dfa68d47b371d2382934ee2c378cf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1a287dfa68d47b371d2382934ee2c378cf" kindref="member">SendLcdNibble</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>nibble)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8h_1a0526693165bd140bdaaa0f27b240db1c" kindref="member">LCD_DB</ref><sp/>=<sp/>nibble&amp;0xF;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a07e30a245315510382ca9d5e1b508de3" kindref="member">LcdPulseEn</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="lcd_8c_1a4c5d5c0a03d2071457e63ca13e0af2e1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1a4c5d5c0a03d2071457e63ca13e0af2e1" kindref="member">SendLcdCommand</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rs,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>command){</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a737f910552a1a1d9c2ee022b008da697" kindref="member">SendLcdRs</ref>(rs);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a287dfa68d47b371d2382934ee2c378cf" kindref="member">SendLcdNibble</ref>(command);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="lcd_8c_1a4b5d69f267c6173aadd09a3926d1cc11" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1a4b5d69f267c6173aadd09a3926d1cc11" kindref="member">SendLcdByte</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a287dfa68d47b371d2382934ee2c378cf" kindref="member">SendLcdNibble</ref>(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>&gt;&gt;<sp/>4);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a287dfa68d47b371d2382934ee2c378cf" kindref="member">SendLcdNibble</ref>(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>&amp;<sp/>0xF);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a44cfb49005f69fe95c0ce5f30b9a660e" kindref="member">DelayMicro</ref>(40);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="lcd_8c_1afbdcf081d356db6a9fbc8978bcd6833d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1afbdcf081d356db6a9fbc8978bcd6833d" kindref="member">SendLcdCommandByte</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rs,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a737f910552a1a1d9c2ee022b008da697" kindref="member">SendLcdRs</ref>(rs);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a4b5d69f267c6173aadd09a3926d1cc11" kindref="member">SendLcdByte</ref>(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" kindref="member">LcdInit</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Power<sp/>On</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wait<sp/>time<sp/>&gt;<sp/>40<sp/>ms<sp/>after<sp/>VDD<sp/>&gt;<sp/>4.5V</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a38d766a6d881470e7e8edfe0a222141e" kindref="member">DelayMilli</ref>(40);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sets<sp/>LCD<sp/>Rs<sp/>to<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a737f910552a1a1d9c2ee022b008da697" kindref="member">SendLcdRs</ref>(0);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Function<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a287dfa68d47b371d2382934ee2c378cf" kindref="member">SendLcdNibble</ref>(0x3);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wait<sp/>time<sp/>&gt;<sp/>4.1<sp/>ms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a38d766a6d881470e7e8edfe0a222141e" kindref="member">DelayMilli</ref>(5);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Function<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a287dfa68d47b371d2382934ee2c378cf" kindref="member">SendLcdNibble</ref>(0x3);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wait<sp/>time<sp/>&gt;<sp/>100<sp/>us</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a44cfb49005f69fe95c0ce5f30b9a660e" kindref="member">DelayMicro</ref>(110);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Function<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a287dfa68d47b371d2382934ee2c378cf" kindref="member">SendLcdNibble</ref>(0x3);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Function<sp/>set<sp/>(Set<sp/>interface<sp/>to<sp/>be<sp/>4<sp/>bits<sp/>length)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a287dfa68d47b371d2382934ee2c378cf" kindref="member">SendLcdNibble</ref>(0x2);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Function<sp/>set<sp/>(Interface<sp/>is<sp/>4<sp/>bits<sp/>length.<sp/>Specify<sp/>the<sp/>number<sp/>of<sp/>the<sp/>display<sp/>lines<sp/>and<sp/>character<sp/>font.)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a4b5d69f267c6173aadd09a3926d1cc11" kindref="member">SendLcdByte</ref>(0x28);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Display<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a4b5d69f267c6173aadd09a3926d1cc11" kindref="member">SendLcdByte</ref>(0x08);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Display<sp/>clear</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a4b5d69f267c6173aadd09a3926d1cc11" kindref="member">SendLcdByte</ref>(0x01);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Entry<sp/>mode<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a4b5d69f267c6173aadd09a3926d1cc11" kindref="member">SendLcdByte</ref>(0x06);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="lcd_8c_1aff2f3428c64a63264ad4349126fd33d9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lcd_8c_1aff2f3428c64a63264ad4349126fd33d9" kindref="member">LcdPrintChar</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ch)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>higher<sp/>nibble</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a4c5d5c0a03d2071457e63ca13e0af2e1" kindref="member">SendLcdCommand</ref>(1,<sp/>ch<sp/>&gt;&gt;<sp/>4);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>lower<sp/>nibble</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a4c5d5c0a03d2071457e63ca13e0af2e1" kindref="member">SendLcdCommand</ref>(1,<sp/>ch<sp/>&amp;<sp/>0xF);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a44cfb49005f69fe95c0ce5f30b9a660e" kindref="member">DelayMicro</ref>(40);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="lcd.c"/>
   </compounddef>

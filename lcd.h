@@ -1,4 +1,4 @@
-#include "port_init.h"
+#include "ports.h"
 
 // DB4 -> PB0
 // DB5 -> PB1
@@ -11,7 +11,6 @@
 
 void SendLcdRs(int rs);
 
-void LcdPulseEn();
 
 /**
  * @brief Sends a nibble to the LCD 
@@ -32,14 +31,9 @@ void SendLcdByte(unsigned char byte);
 
 void SendLcdCommandByte(int rs, unsigned char byte);
 
-/**
- * @brief Initializes the LCD
- * 
- */
-void LcdInit();
 
 
-void LcdPrintChar(char ch);
+
 
 void ClearDisplayScreen();
 
@@ -48,3 +42,39 @@ void MoveDisplayCursor();
 void PrintDisplay();
 
 // N = 2 F = 0
+
+void LcdSetRs();
+
+void LcdPulseEn();
+
+/**
+ * @brief Initializes the LCD
+ * 
+ */
+void LcdInit();
+
+void LcdSendNibble(unsigned char nibble);
+
+void LcdSendByte(unsigned char byte);
+
+void LcdClearDisplay();
+
+void LcdReturnHome();
+
+void LcdEntryModeSet(int id, int s);
+
+void LcdDisplayControl(int d, int c, int b);
+
+void LcdCursorDisplayShift(int sc, int rl);
+
+void LcdFunctionSet(int dl, int n, int f);
+
+void LcdSetCgramAddress();
+
+void LcdSetDdramAddress();
+
+void LcdWriteToRam(unsigned char dbuses);   
+
+void LcdPrintChar(char ch);
+
+void LcdPrintString(char* str);

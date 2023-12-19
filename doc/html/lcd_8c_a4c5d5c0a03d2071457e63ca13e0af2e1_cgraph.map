@@ -1,0 +1,15 @@
+<map id="SendLcdCommand" name="SendLcdCommand">
+<area shape="rect" id="Node000001" title="Sends a command to the LCD." alt="" coords="5,31,137,57"/>
+<area shape="rect" id="Node000002" href="$lcd_8c.html#a287dfa68d47b371d2382934ee2c378cf" title="Sends a nibble to the LCD." alt="" coords="185,5,293,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,31,169,27,169,32,138,37"/>
+<area shape="rect" id="Node000007" href="$lcd_8c.html#a737f910552a1a1d9c2ee022b008da697" title=" " alt="" coords="195,56,283,83"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="138,51,180,58,179,63,137,57"/>
+<area shape="rect" id="Node000003" href="$lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title=" " alt="" coords="341,5,432,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="293,16,325,16,325,21,293,21"/>
+<area shape="rect" id="Node000004" href="$clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="480,5,565,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="433,16,465,16,465,21,433,21"/>
+<area shape="rect" id="Node000005" href="$clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="613,5,708,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="565,16,597,16,597,21,565,21"/>
+<area shape="rect" id="Node000006" href="$test_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="756,5,808,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="708,16,740,16,740,21,708,21"/>
+</map>

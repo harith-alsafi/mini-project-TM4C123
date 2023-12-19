@@ -44,21 +44,21 @@
 \DoxyCodeLine{\Hypertarget{test_8c_source_l00041}00041\ }
 \DoxyCodeLine{\Hypertarget{test_8c_source_l00042}00042\ \textcolor{comment}{//\ 3.\ Subroutines\ Section}}
 \DoxyCodeLine{\Hypertarget{test_8c_source_l00043}00043\ \textcolor{comment}{//\ MAIN:\ Mandatory\ for\ a\ C\ Program\ to\ be\ executable}}
-\DoxyCodeLine{\Hypertarget{test_8c_source_l00044}00044\ \textcolor{comment}{//int\ main(void)\{}}
-\DoxyCodeLine{\Hypertarget{test_8c_source_l00045}00045\ \ \ \textcolor{comment}{//TExaS\_Init(SW\_PIN\_PF40,\ LED\_PIN\_PF321);\ \ //\ activate\ grader\ and\ set\ system\ clock\ to\ 80\ MHz}}
-\DoxyCodeLine{\Hypertarget{test_8c_source_l00046}00046\ \ \ \textcolor{comment}{//PortF\_Init();\ //\ Init\ port\ PF4\ PF2\ PF0\ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{test_8c_source_l00047}00047\ \ \ \textcolor{comment}{//EnableInterrupts();\ \ \ \ \ \ \ \ \ \ \ //\ enable\ interrupts\ for\ the\ grader}}
-\DoxyCodeLine{\Hypertarget{test_8c_source_l00048}00048\ \ \ \textcolor{comment}{//while(1)\{}}
-\DoxyCodeLine{\Hypertarget{test_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//SW1\ =\ GPIO\_PORTF\_DATA\_R\&0x10;\ //\ PF4\ into\ SW1}}
-\DoxyCodeLine{\Hypertarget{test_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//SW2\ =\ GPIO\_PORTF\_DATA\_R\&0x01;\ //\ PF0\ into\ SW2}}
-\DoxyCodeLine{\Hypertarget{test_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//while(SW1\ ==\ 0x00\ \&\&\ SW2\ ==\ 0x00)\{}}
-\DoxyCodeLine{\Hypertarget{test_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//FlashSOS();}}
-\DoxyCodeLine{\Hypertarget{test_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//SW1\ =\ GPIO\_PORTF\_DATA\_R\&0x10;\ //\ PF4\ into\ SW1}}
-\DoxyCodeLine{\Hypertarget{test_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//SW2\ =\ GPIO\_PORTF\_DATA\_R\&0x01;\ //\ PF0\ into\ SW2}}
-\DoxyCodeLine{\Hypertarget{test_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\}}}
-\DoxyCodeLine{\Hypertarget{test_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//GPIO\_PORTF\_DATA\_R\ \&=\ \string~0x0A;\ delay(1);}}
-\DoxyCodeLine{\Hypertarget{test_8c_source_l00057}00057\ \ \ \textcolor{comment}{//\}}}
-\DoxyCodeLine{\Hypertarget{test_8c_source_l00058}00058\ \textcolor{comment}{//\}}}
+\DoxyCodeLine{\Hypertarget{test_8c_source_l00044}00044\ \textcolor{comment}{//\ int\ main(void)\{}}
+\DoxyCodeLine{\Hypertarget{test_8c_source_l00045}00045\ \textcolor{comment}{//\ \ \ //\ TExaS\_Init(SW\_PIN\_PF40,\ LED\_PIN\_PF321);\ \ //\ activate\ grader\ and\ set\ system\ clock\ to\ 80\ MHz}}
+\DoxyCodeLine{\Hypertarget{test_8c_source_l00046}00046\ \textcolor{comment}{//\ \ \ //PortF\_Init();\ //\ Init\ port\ PF4\ PF2\ PF0\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{test_8c_source_l00047}00047\ \textcolor{comment}{//\ \ \ //EnableInterrupts();\ \ \ \ \ \ \ \ \ \ \ //\ enable\ interrupts\ for\ the\ grader}}
+\DoxyCodeLine{\Hypertarget{test_8c_source_l00048}00048\ \textcolor{comment}{//\ \ \ while(1)\{}}
+\DoxyCodeLine{\Hypertarget{test_8c_source_l00049}00049\ \textcolor{comment}{//\ \ \ \ \ \ SW1\ =\ GPIO\_PORTF\_DATA\_R\&0x10;\ //\ PF4\ into\ SW1}}
+\DoxyCodeLine{\Hypertarget{test_8c_source_l00050}00050\ \textcolor{comment}{//\ \ \ \ \ \ SW2\ =\ GPIO\_PORTF\_DATA\_R\&0x01;\ //\ PF0\ into\ SW2}}
+\DoxyCodeLine{\Hypertarget{test_8c_source_l00051}00051\ \textcolor{comment}{//\ \ \ \ \ \ while(SW1\ ==\ 0x00\ \&\&\ SW2\ ==\ 0x00)\{}}
+\DoxyCodeLine{\Hypertarget{test_8c_source_l00052}00052\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ FlashSOS();}}
+\DoxyCodeLine{\Hypertarget{test_8c_source_l00053}00053\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ SW1\ =\ GPIO\_PORTF\_DATA\_R\&0x10;\ //\ PF4\ into\ SW1}}
+\DoxyCodeLine{\Hypertarget{test_8c_source_l00054}00054\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ SW2\ =\ GPIO\_PORTF\_DATA\_R\&0x01;\ //\ PF0\ into\ SW2}}
+\DoxyCodeLine{\Hypertarget{test_8c_source_l00055}00055\ \textcolor{comment}{//\ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{test_8c_source_l00056}00056\ \textcolor{comment}{//\ \ \ \ \ \ GPIO\_PORTF\_DATA\_R\ \&=\ \string~0x0A;\ delay(1);}}
+\DoxyCodeLine{\Hypertarget{test_8c_source_l00057}00057\ \textcolor{comment}{//\ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{test_8c_source_l00058}00058\ \textcolor{comment}{//\ \}}}
 \DoxyCodeLine{\Hypertarget{test_8c_source_l00059}00059\ \textcolor{comment}{//\ Subroutine\ to\ initialize\ port\ F\ pins\ for\ input\ and\ output}}
 \DoxyCodeLine{\Hypertarget{test_8c_source_l00060}00060\ \textcolor{comment}{//\ PF4\ is\ input\ SW1\ and\ PF2\ is\ output\ Blue\ LED}}
 \DoxyCodeLine{\Hypertarget{test_8c_source_l00061}00061\ \textcolor{comment}{//\ Inputs:\ None}}

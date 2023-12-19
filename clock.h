@@ -49,4 +49,4 @@ void DelayMicro(unsigned long microseconds);
  * 
  * @param millisecond delay of milliseconds
  */
-void DelayMilli(unsigned long millisecond);
+void DelayMilli(unsigned long milliseconds);

@@ -25,6 +25,7 @@ void SendLcdCommand(int rs, unsigned char command){
 void SendLcdByte(unsigned char byte){
     SendLcdNibble(byte >> 4);
     SendLcdNibble(byte & 0xF);
+    DelayMicro(40);
 }
 
 void SendLcdCommandByte(int rs, unsigned char byte){

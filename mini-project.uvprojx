@@ -395,16 +395,6 @@
               <FilePath>.\texas.o</FilePath>
             </File>
             <File>
-              <FileName>port_init.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\port_init.h</FilePath>
-            </File>
-            <File>
-              <FileName>port_init.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\port_init.c</FilePath>
-            </File>
-            <File>
               <FileName>clock.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\clock.h</FilePath>
@@ -433,6 +423,16 @@
               <FileName>keypad.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\keypad.c</FilePath>
+            </File>
+            <File>
+              <FileName>ports.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ports.c</FilePath>
+            </File>
+            <File>
+              <FileName>ports.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\ports.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -481,5 +481,14 @@
       </file>
     </files>
   </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>mini-project</LayName>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>

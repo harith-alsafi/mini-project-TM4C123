@@ -40,11 +40,20 @@ void SysTickWait(unsigned long delay) {
 }
 
 void DelayNano(unsigned long nanoseconds){
-  SysTickWait((unsigned long) nanoseconds / 12.5);
+  unsigned long delay = (nanoseconds * 8) / 100;
+  SysTickWait(delay);
 }
 
 void DelayMicro(unsigned long microseconds) {
-  DelayNano(microseconds * 1000);
+  unsigned long i;
+  for(i = 0; i < microseconds; i++) {
+    SysTickWait(80); // delay for 1 microsecond
+  }
 }
 
-void DelayMilli(unsigned long millisecond) { DelayMicro(millisecond * 1000); }
+void DelayMilli(unsigned long milliseconds) { 
+  unsigned long i;
+  for(i = 0; i < milliseconds; i++) {
+    SysTickWait(80000); // delay for 1 millisecond
+  }
+}

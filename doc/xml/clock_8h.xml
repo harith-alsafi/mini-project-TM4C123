@@ -3,7 +3,9 @@
   <compounddef id="clock_8h" kind="file" language="C++">
     <compoundname>clock.h</compoundname>
     <includedby refid="clock_8c" local="yes">clock.c</includedby>
-    <includedby refid="port__init_8c" local="yes">port_init.c</includedby>
+    <includedby refid="lcd_8c" local="yes">lcd.c</includedby>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
+    <includedby refid="ports_8c" local="yes">ports.c</includedby>
     <invincdepgraph>
       <node id="2">
         <label>clock.c</label>
@@ -16,13 +18,69 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
       <node id="3">
-        <label>port_init.c</label>
-        <link refid="port__init_8c"/>
+        <label>lcd.c</label>
+        <link refid="lcd_8c"/>
+      </node>
+      <node id="4">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="5">
+        <label>ports.c</label>
+        <link refid="ports_8c"/>
       </node>
     </invincdepgraph>
     <sectiondef kind="define">
+      <memberdef kind="define" id="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" prot="public" static="no">
+        <name>SYSCTL_RCGC2_R</name>
+        <initializer>(*((volatile unsigned long *)0x400FE108))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="clock.h" line="2" column="9" bodyfile="clock.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="clock_8h_1ac1e0e3bbc40315eaa5e3cad513d5dae8" prot="public" static="no">
+        <name>SYSCTL_RIS_R</name>
+        <initializer>(*((volatile unsigned long *)0x400FE050))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="clock.h" line="5" column="9" bodyfile="clock.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="clock_8h_1adaab842b86f022de9497dd36d1e35643" prot="public" static="no">
+        <name>SYSCTL_RCC_R</name>
+        <initializer>(*((volatile unsigned long *)0x400FE060))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="clock.h" line="6" column="9" bodyfile="clock.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="clock_8h_1a0dd31b093c1a83329f67d1df68df4d58" prot="public" static="no">
+        <name>SYSCTL_RCC2_R</name>
+        <initializer>(*((volatile unsigned long *)0x400FE070))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="clock.h" line="7" column="9" bodyfile="clock.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="define" id="clock_8h_1adcfc8530f81c2ebea5d6b229ba4f9d3f" prot="public" static="no">
         <name>NVIC_ST_CTRL_R</name>
         <initializer>(*((volatile unsigned long *)0xE000E010))</initializer>
@@ -32,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="clock.h" line="1" column="9" bodyfile="clock.h" bodystart="1" bodyend="-1"/>
+        <location file="clock.h" line="10" column="9" bodyfile="clock.h" bodystart="10" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="clock_8h_1a1c404f068f1ba79d68c7cc4302112da3" prot="public" static="no">
         <name>NVIC_ST_RELOAD_R</name>
@@ -43,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="clock.h" line="2" column="9" bodyfile="clock.h" bodystart="2" bodyend="-1"/>
+        <location file="clock.h" line="11" column="9" bodyfile="clock.h" bodystart="11" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="clock_8h_1a83b8a7cd422c2dde3c671c9255216cff" prot="public" static="no">
         <name>NVIC_ST_CURRENT_R</name>
@@ -54,18 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="clock.h" line="3" column="9" bodyfile="clock.h" bodystart="3" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" prot="public" static="no">
-        <name>SYSCTL_RCGC2_R</name>
-        <initializer>(*((volatile unsigned long *)0x400FE108))</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="clock.h" line="4" column="9" bodyfile="clock.h" bodystart="4" bodyend="-1"/>
+        <location file="clock.h" line="12" column="9" bodyfile="clock.h" bodystart="12" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -75,12 +122,17 @@
         <argsstring>()</argsstring>
         <name>SysTickInit</name>
         <briefdescription>
+<para>Initializes sys tick. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="clock.h" line="9" column="6" declfile="clock.h" declline="9" declcolumn="6"/>
+        <location file="clock.h" line="18" column="6" bodyfile="clock.c" bodystart="3" bodyend="8" declfile="clock.h" declline="18" declcolumn="6"/>
+        <references refid="clock_8h_1adcfc8530f81c2ebea5d6b229ba4f9d3f" compoundref="clock_8h" startline="10">NVIC_ST_CTRL_R</references>
+        <references refid="clock_8h_1a83b8a7cd422c2dde3c671c9255216cff" compoundref="clock_8h" startline="12">NVIC_ST_CURRENT_R</references>
+        <references refid="clock_8h_1a1c404f068f1ba79d68c7cc4302112da3" compoundref="clock_8h" startline="11">NVIC_ST_RELOAD_R</references>
+        <referencedby refid="main_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="main_8c" startline="5" endline="11">InitAll</referencedby>
       </memberdef>
       <memberdef kind="function" id="clock_8h_1a21cfe49b38d53efaf75df16d21ed882a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -88,46 +140,151 @@
         <argsstring>()</argsstring>
         <name>PLLInit</name>
         <briefdescription>
+<para>Initalizes the PLL to 80 MHz. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="clock.h" line="11" column="6" declfile="clock.h" declline="11" declcolumn="6"/>
+        <location file="clock.h" line="24" column="6" bodyfile="clock.c" bodystart="10" bodyend="32" declfile="clock.h" declline="24" declcolumn="6"/>
+        <references refid="clock_8h_1a0dd31b093c1a83329f67d1df68df4d58" compoundref="clock_8h" startline="7">SYSCTL_RCC2_R</references>
+        <references refid="clock_8h_1adaab842b86f022de9497dd36d1e35643" compoundref="clock_8h" startline="6">SYSCTL_RCC_R</references>
+        <references refid="clock_8h_1ac1e0e3bbc40315eaa5e3cad513d5dae8" compoundref="clock_8h" startline="5">SYSCTL_RIS_R</references>
+        <referencedby refid="main_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="main_8c" startline="5" endline="11">InitAll</referencedby>
       </memberdef>
-      <memberdef kind="function" id="clock_8h_1a3a41872da02412b070aa025207d4709b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="clock_8h_1a9b776ea9ad4388518694b3c099238a74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void DelayMicro</definition>
-        <argsstring>(unsigned long millisecond)</argsstring>
-        <name>DelayMicro</name>
+        <definition>void SysTickWait</definition>
+        <argsstring>(unsigned long delay)</argsstring>
+        <name>SysTickWait</name>
         <param>
           <type>unsigned long</type>
-          <declname>millisecond</declname>
+          <declname>delay</declname>
         </param>
         <briefdescription>
+<para>Uses the 80 MHz PLL to create a delay in units of 12.5ns. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>delay in units of 12.5ns </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="clock.h" line="13" column="6" declfile="clock.h" declline="13" declcolumn="6"/>
+        <location file="clock.h" line="31" column="6" bodyfile="clock.c" bodystart="35" bodyend="40" declfile="clock.h" declline="31" declcolumn="6"/>
+        <references refid="test_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="test_8c" startline="126" endline="135">delay</references>
+        <references refid="clock_8h_1adcfc8530f81c2ebea5d6b229ba4f9d3f" compoundref="clock_8h" startline="10">NVIC_ST_CTRL_R</references>
+        <references refid="clock_8h_1a83b8a7cd422c2dde3c671c9255216cff" compoundref="clock_8h" startline="12">NVIC_ST_CURRENT_R</references>
+        <references refid="clock_8h_1a1c404f068f1ba79d68c7cc4302112da3" compoundref="clock_8h" startline="11">NVIC_ST_RELOAD_R</references>
+        <referencedby refid="clock_8c_1a2b0d30a37314c42f7d52aeec96a6e3ac" compoundref="clock_8c" startline="42" endline="44">DelayNano</referencedby>
       </memberdef>
-      <memberdef kind="function" id="clock_8h_1a9ae38f0acb2451f378777d5b5dd69a52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="clock_8h_1a2b0d30a37314c42f7d52aeec96a6e3ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void DelayMilli</definition>
+        <definition>void DelayNano</definition>
+        <argsstring>(unsigned long nanoseconds)</argsstring>
+        <name>DelayNano</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>nanoseconds</declname>
+        </param>
+        <briefdescription>
+<para>Uses. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>SysTickWait() to create a delay in units of nanoseconds</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nanoseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>delay of nanoseconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="clock.h" line="38" column="6" bodyfile="clock.c" bodystart="42" bodyend="44" declfile="clock.h" declline="38" declcolumn="6"/>
+        <references refid="clock_8c_1a9b776ea9ad4388518694b3c099238a74" compoundref="clock_8c" startline="35" endline="40">SysTickWait</references>
+        <referencedby refid="clock_8c_1a44cfb49005f69fe95c0ce5f30b9a660e" compoundref="clock_8c" startline="46" endline="48">DelayMicro</referencedby>
+        <referencedby refid="lcd_8c_1a07e30a245315510382ca9d5e1b508de3" compoundref="lcd_8c" startline="8" endline="13">LcdPulseEn</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="clock_8h_1a44cfb49005f69fe95c0ce5f30b9a660e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DelayMicro</definition>
         <argsstring>(unsigned long microseconds)</argsstring>
-        <name>DelayMilli</name>
+        <name>DelayMicro</name>
         <param>
           <type>unsigned long</type>
           <declname>microseconds</declname>
         </param>
         <briefdescription>
+<para>Uses. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="see"><para>DelayNano() to create a delay in units of microseconds</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>microseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>delay of microseconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="clock.h" line="15" column="6" declfile="clock.h" declline="15" declcolumn="6"/>
+        <location file="clock.h" line="45" column="6" bodyfile="clock.c" bodystart="46" bodyend="48" declfile="clock.h" declline="45" declcolumn="6"/>
+        <references refid="clock_8c_1a2b0d30a37314c42f7d52aeec96a6e3ac" compoundref="clock_8c" startline="42" endline="44">DelayNano</references>
+        <referencedby refid="clock_8c_1a38d766a6d881470e7e8edfe0a222141e" compoundref="clock_8c" startline="50" endline="50">DelayMilli</referencedby>
+        <referencedby refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" compoundref="lcd_8c" startline="36" endline="73">LcdInit</referencedby>
+        <referencedby refid="lcd_8c_1aff2f3428c64a63264ad4349126fd33d9" compoundref="lcd_8c" startline="75" endline="83">LcdPrintChar</referencedby>
+        <referencedby refid="lcd_8c_1a4b5d69f267c6173aadd09a3926d1cc11" compoundref="lcd_8c" startline="25" endline="29">SendLcdByte</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="clock_8h_1a38d766a6d881470e7e8edfe0a222141e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DelayMilli</definition>
+        <argsstring>(unsigned long millisecond)</argsstring>
+        <name>DelayMilli</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>millisecond</declname>
+        </param>
+        <briefdescription>
+<para>Uses. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>DelayMicro() to create a delay in units of milliseconds</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>millisecond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>delay of milliseconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="clock.h" line="52" column="6" bodyfile="clock.c" bodystart="50" bodyend="50" declfile="clock.h" declline="52" declcolumn="6"/>
+        <references refid="clock_8c_1a44cfb49005f69fe95c0ce5f30b9a660e" compoundref="clock_8c" startline="46" endline="48">DelayMicro</references>
+        <referencedby refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" compoundref="lcd_8c" startline="36" endline="73">LcdInit</referencedby>
+        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="13" endline="21">main</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -135,21 +292,30 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1" refid="clock_8h_1adcfc8530f81c2ebea5d6b229ba4f9d3f" refkind="member"><highlight class="preprocessor">#define<sp/>NVIC_ST_CTRL_R<sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0xE000E010))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2" refid="clock_8h_1a1c404f068f1ba79d68c7cc4302112da3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_ST_RELOAD_R<sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0xE000E014))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="clock_8h_1a83b8a7cd422c2dde3c671c9255216cff" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_ST_CURRENT_R<sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0xE000E018))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4" refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYSCTL_RCGC2_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400FE108))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="comment">//GPIO<sp/>clocks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYSCTL_RCGC2_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400FE108))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//PLL<sp/>related<sp/>Defines</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="clock_8h_1ac1e0e3bbc40315eaa5e3cad513d5dae8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYSCTL_RIS_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400FE050))<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="clock_8h_1adaab842b86f022de9497dd36d1e35643" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYSCTL_RCC_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400FE060))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="clock_8h_1a0dd31b093c1a83329f67d1df68df4d58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYSCTL_RCC2_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400FE070))<sp/></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9" refid="clock_8h_1a58cf193ae5c1f330e4868e32afb9445d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="clock_8h_1a58cf193ae5c1f330e4868e32afb9445d" kindref="member">SysTickInit</ref>();</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11" refid="clock_8h_1a21cfe49b38d53efaf75df16d21ed882a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="clock_8h_1a21cfe49b38d53efaf75df16d21ed882a" kindref="member">PLLInit</ref>();</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13" refid="clock_8h_1a3a41872da02412b070aa025207d4709b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="clock_8h_1a3a41872da02412b070aa025207d4709b" kindref="member">DelayMicro</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>millisecond);</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15" refid="clock_8h_1a9ae38f0acb2451f378777d5b5dd69a52" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="clock_8h_1a9ae38f0acb2451f378777d5b5dd69a52" kindref="member">DelayMilli</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>microseconds);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//SysTick<sp/>related<sp/>Defines<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="clock_8h_1adcfc8530f81c2ebea5d6b229ba4f9d3f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_ST_CTRL_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0xE000E010))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="clock_8h_1a1c404f068f1ba79d68c7cc4302112da3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_ST_RELOAD_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0xE000E014))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="clock_8h_1a83b8a7cd422c2dde3c671c9255216cff" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_ST_CURRENT_R<sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0xE000E018))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="clock_8h_1a58cf193ae5c1f330e4868e32afb9445d" kindref="member">SysTickInit</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="clock_8h_1a21cfe49b38d53efaf75df16d21ed882a" kindref="member">PLLInit</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="clock_8h_1a9b776ea9ad4388518694b3c099238a74" kindref="member">SysTickWait</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="test_8c_1acd46d0cd2123cbf3f87498f9f3060403" kindref="member">delay</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="clock_8h_1a2b0d30a37314c42f7d52aeec96a6e3ac" kindref="member">DelayNano</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>nanoseconds);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="clock_8h_1a44cfb49005f69fe95c0ce5f30b9a660e" kindref="member">DelayMicro</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>microseconds);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="clock_8h_1a38d766a6d881470e7e8edfe0a222141e" kindref="member">DelayMilli</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>millisecond);</highlight></codeline>
     </programlisting>
     <location file="clock.h"/>
   </compounddef>
