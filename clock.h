@@ -1,3 +1,6 @@
+#ifndef CLOCK_H   // If not defined
+#define CLOCK_H   // Define it
+
 //GPIO clocks
 #define SYSCTL_RCGC2_R          (*((volatile unsigned long *)0x400FE108))
 
@@ -50,3 +53,5 @@ void DelayMicro(unsigned long microseconds);
  * @param millisecond delay of milliseconds
  */
 void DelayMilli(unsigned long milliseconds);
+
+#endif

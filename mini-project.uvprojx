@@ -434,6 +434,56 @@
               <FileType>5</FileType>
               <FilePath>.\ports.h</FilePath>
             </File>
+            <File>
+              <FileName>helpers.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\helpers.h</FilePath>
+            </File>
+            <File>
+              <FileName>helpers.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\helpers.c</FilePath>
+            </File>
+            <File>
+              <FileName>unit-test.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\unit-test.h</FilePath>
+            </File>
+            <File>
+              <FileName>unit-test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\unit-test.c</FilePath>
+            </File>
+            <File>
+              <FileName>flash-storage.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\flash-storage.h</FilePath>
+            </File>
+            <File>
+              <FileName>flash-storage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\flash-storage.c</FilePath>
+            </File>
+            <File>
+              <FileName>user-interface.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user-interface.h</FilePath>
+            </File>
+            <File>
+              <FileName>user-interface.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user-interface.c</FilePath>
+            </File>
+            <File>
+              <FileName>program-logic.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\program-logic.h</FilePath>
+            </File>
+            <File>
+              <FileName>program-logic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\program-logic.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

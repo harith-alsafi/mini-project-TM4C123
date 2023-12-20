@@ -1,1 +1,1 @@
-./objects/keypad.o: keypad.c
+./objects/keypad.o: keypad.c keypad.h

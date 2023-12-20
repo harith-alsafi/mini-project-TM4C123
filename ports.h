@@ -1,3 +1,6 @@
+#ifndef PORTS_H   // If not defined
+#define PORTS_H   // Define it
+
 // GPIO pins E
 #define GPIO_PORTE_DATA_R       (*((volatile unsigned long *)0x400243FC))
 #define GPIO_PORTE_DIR_R        (*((volatile unsigned long *)0x40024400))
@@ -83,3 +86,5 @@ void PortAInit();
  * 
  */
 void PortFInit();
+
+#endif
