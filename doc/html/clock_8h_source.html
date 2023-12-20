@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mini Project TM4C123: clock.h Source File</title>
+<title>Mini Project TM4C123G: src/clock.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Mini Project TM4C123
+   <div id="projectname">Mini Project TM4C123G
    </div>
   </td>
  </tr>
@@ -51,7 +51,6 @@ $(function() {
 $(document).ready(function() { init_codefold(0); });
 /* @license-end */
 </script>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -73,41 +72,51 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">clock.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="clock_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//GPIO clocks</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno"><a class="line" href="clock_8h.html#a2fedfceccf18bd54a499e73d1b76e506">    2</a></span><span class="preprocessor">#define SYSCTL_RCGC2_R          (*((volatile unsigned long *)0x400FE108))</span></div>
+<a href="clock_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CLOCK_H   </span><span class="comment">// If not defined</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno"><a class="line" href="clock_8h.html#a8d85d526f6d06f351f5ad915765de293">    2</a></span><span class="preprocessor">#define CLOCK_H   </span><span class="comment">// Define it</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//PLL related Defines</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="clock_8h.html#ac1e0e3bbc40315eaa5e3cad513d5dae8">    5</a></span><span class="preprocessor">#define SYSCTL_RIS_R          (*((volatile unsigned long *)0x400FE050)) </span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="clock_8h.html#adaab842b86f022de9497dd36d1e35643">    6</a></span><span class="preprocessor">#define SYSCTL_RCC_R          (*((volatile unsigned long *)0x400FE060))</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="clock_8h.html#a0dd31b093c1a83329f67d1df68df4d58">    7</a></span><span class="preprocessor">#define SYSCTL_RCC2_R         (*((volatile unsigned long *)0x400FE070)) </span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//SysTick related Defines   </span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="clock_8h.html#adcfc8530f81c2ebea5d6b229ba4f9d3f">   10</a></span><span class="preprocessor">#define NVIC_ST_CTRL_R        (*((volatile unsigned long *)0xE000E010))</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="clock_8h.html#a1c404f068f1ba79d68c7cc4302112da3">   11</a></span><span class="preprocessor">#define NVIC_ST_RELOAD_R      (*((volatile unsigned long *)0xE000E014))</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="clock_8h.html#a83b8a7cd422c2dde3c671c9255216cff">   12</a></span><span class="preprocessor">#define NVIC_ST_CURRENT_R     (*((volatile unsigned long *)0xE000E018))</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> <a class="code hl_function" href="clock_8h.html#a58cf193ae5c1f330e4868e32afb9445d">SysTickInit</a>();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> <a class="code hl_function" href="clock_8h.html#a21cfe49b38d53efaf75df16d21ed882a">PLLInit</a>();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">void</span> <a class="code hl_function" href="clock_8h.html#a9b776ea9ad4388518694b3c099238a74">SysTickWait</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_function" href="test_8c.html#acd46d0cd2123cbf3f87498f9f3060403">delay</a>);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="clock_8h.html#a2b0d30a37314c42f7d52aeec96a6e3ac">DelayNano</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> nanoseconds);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="clock_8h.html#a44cfb49005f69fe95c0ce5f30b9a660e">DelayMicro</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> microseconds);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">void</span> <a class="code hl_function" href="clock_8h.html#a38d766a6d881470e7e8edfe0a222141e">DelayMilli</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> millisecond);</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//GPIO clocks</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="clock_8h.html#a2fedfceccf18bd54a499e73d1b76e506">    5</a></span><span class="preprocessor">#define SYSCTL_RCGC2_R          (*((volatile unsigned long *)0x400FE108))</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//PLL related Defines</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="clock_8h.html#ac1e0e3bbc40315eaa5e3cad513d5dae8">    8</a></span><span class="preprocessor">#define SYSCTL_RIS_R          (*((volatile unsigned long *)0x400FE050)) </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="clock_8h.html#adaab842b86f022de9497dd36d1e35643">    9</a></span><span class="preprocessor">#define SYSCTL_RCC_R          (*((volatile unsigned long *)0x400FE060))</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="clock_8h.html#a0dd31b093c1a83329f67d1df68df4d58">   10</a></span><span class="preprocessor">#define SYSCTL_RCC2_R         (*((volatile unsigned long *)0x400FE070)) </span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//SysTick related Defines   </span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="clock_8h.html#adcfc8530f81c2ebea5d6b229ba4f9d3f">   13</a></span><span class="preprocessor">#define NVIC_ST_CTRL_R        (*((volatile unsigned long *)0xE000E010))</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="clock_8h.html#a1c404f068f1ba79d68c7cc4302112da3">   14</a></span><span class="preprocessor">#define NVIC_ST_RELOAD_R      (*((volatile unsigned long *)0xE000E014))</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="clock_8h.html#a83b8a7cd422c2dde3c671c9255216cff">   15</a></span><span class="preprocessor">#define NVIC_ST_CURRENT_R     (*((volatile unsigned long *)0xE000E018))</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> <a class="code hl_function" href="clock_8h.html#a58cf193ae5c1f330e4868e32afb9445d">SysTickInit</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> <a class="code hl_function" href="clock_8h.html#a21cfe49b38d53efaf75df16d21ed882a">PLLInit</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> <a class="code hl_function" href="clock_8h.html#a9b776ea9ad4388518694b3c099238a74">SysTickWait</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_function" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403">delay</a>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> <a class="code hl_function" href="clock_8h.html#a2b0d30a37314c42f7d52aeec96a6e3ac">DelayNano</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> nanoseconds);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">void</span> <a class="code hl_function" href="clock_8h.html#a44cfb49005f69fe95c0ce5f30b9a660e">DelayMicro</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> microseconds);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> <a class="code hl_function" href="clock_8h.html#a2e760c634cc89519ad0956fc258eab46">DelayMilli</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> milliseconds);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclock_8h_html_a21cfe49b38d53efaf75df16d21ed882a"><div class="ttname"><a href="clock_8h.html#a21cfe49b38d53efaf75df16d21ed882a">PLLInit</a></div><div class="ttdeci">void PLLInit()</div><div class="ttdoc">Initalizes the PLL to 80 MHz.</div><div class="ttdef"><b>Definition</b> <a href="clock_8c_source.html#l00010">clock.c:10</a></div></div>
 <div class="ttc" id="aclock_8h_html_a2b0d30a37314c42f7d52aeec96a6e3ac"><div class="ttname"><a href="clock_8h.html#a2b0d30a37314c42f7d52aeec96a6e3ac">DelayNano</a></div><div class="ttdeci">void DelayNano(unsigned long nanoseconds)</div><div class="ttdoc">Uses.</div><div class="ttdef"><b>Definition</b> <a href="clock_8c_source.html#l00042">clock.c:42</a></div></div>
-<div class="ttc" id="aclock_8h_html_a38d766a6d881470e7e8edfe0a222141e"><div class="ttname"><a href="clock_8h.html#a38d766a6d881470e7e8edfe0a222141e">DelayMilli</a></div><div class="ttdeci">void DelayMilli(unsigned long millisecond)</div><div class="ttdoc">Uses.</div><div class="ttdef"><b>Definition</b> <a href="clock_8c_source.html#l00050">clock.c:50</a></div></div>
-<div class="ttc" id="aclock_8h_html_a44cfb49005f69fe95c0ce5f30b9a660e"><div class="ttname"><a href="clock_8h.html#a44cfb49005f69fe95c0ce5f30b9a660e">DelayMicro</a></div><div class="ttdeci">void DelayMicro(unsigned long microseconds)</div><div class="ttdoc">Uses.</div><div class="ttdef"><b>Definition</b> <a href="clock_8c_source.html#l00046">clock.c:46</a></div></div>
+<div class="ttc" id="aclock_8h_html_a2e760c634cc89519ad0956fc258eab46"><div class="ttname"><a href="clock_8h.html#a2e760c634cc89519ad0956fc258eab46">DelayMilli</a></div><div class="ttdeci">void DelayMilli(unsigned long milliseconds)</div><div class="ttdoc">Uses.</div><div class="ttdef"><b>Definition</b> <a href="clock_8c_source.html#l00054">clock.c:54</a></div></div>
+<div class="ttc" id="aclock_8h_html_a44cfb49005f69fe95c0ce5f30b9a660e"><div class="ttname"><a href="clock_8h.html#a44cfb49005f69fe95c0ce5f30b9a660e">DelayMicro</a></div><div class="ttdeci">void DelayMicro(unsigned long microseconds)</div><div class="ttdoc">Uses.</div><div class="ttdef"><b>Definition</b> <a href="clock_8c_source.html#l00047">clock.c:47</a></div></div>
 <div class="ttc" id="aclock_8h_html_a58cf193ae5c1f330e4868e32afb9445d"><div class="ttname"><a href="clock_8h.html#a58cf193ae5c1f330e4868e32afb9445d">SysTickInit</a></div><div class="ttdeci">void SysTickInit()</div><div class="ttdoc">Initializes sys tick.</div><div class="ttdef"><b>Definition</b> <a href="clock_8c_source.html#l00003">clock.c:3</a></div></div>
 <div class="ttc" id="aclock_8h_html_a9b776ea9ad4388518694b3c099238a74"><div class="ttname"><a href="clock_8h.html#a9b776ea9ad4388518694b3c099238a74">SysTickWait</a></div><div class="ttdeci">void SysTickWait(unsigned long delay)</div><div class="ttdoc">Uses the 80 MHz PLL to create a delay in units of 12.5ns.</div><div class="ttdef"><b>Definition</b> <a href="clock_8c_source.html#l00035">clock.c:35</a></div></div>
-<div class="ttc" id="atest_8c_html_acd46d0cd2123cbf3f87498f9f3060403"><div class="ttname"><a href="test_8c.html#acd46d0cd2123cbf3f87498f9f3060403">delay</a></div><div class="ttdeci">void delay(unsigned long halfsecs)</div><div class="ttdef"><b>Definition</b> <a href="test_8c_source.html#l00126">test.c:126</a></div></div>
+<div class="ttc" id="aplayground_8c_html_acd46d0cd2123cbf3f87498f9f3060403"><div class="ttname"><a href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403">delay</a></div><div class="ttdeci">void delay(unsigned long halfsecs)</div><div class="ttdef"><b>Definition</b> <a href="playground_8c_source.html#l00126">playground.c:126</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

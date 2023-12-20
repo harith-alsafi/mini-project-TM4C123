@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="unit-test_8h" kind="file" language="C++">
+    <compoundname>unit-test.h</compoundname>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="unit-test_8h_1aaca9bad4dfe82f439fda079b604ea29d" prot="public" static="no">
+        <name>UNIT_TEST_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/unit-test.h" line="2" column="9" bodyfile="src/unit-test.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="unit-test_8h_1ac43be5887d2ddcce27989432c6415651" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RunAll</definition>
+        <argsstring>()</argsstring>
+        <name>RunAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/unit-test.h" line="5" column="6" declfile="src/unit-test.h" declline="5" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>UNIT_TEST_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>not<sp/>defined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="unit-test_8h_1aaca9bad4dfe82f439fda079b604ea29d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UNIT_TEST_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="unit-test_8h_1ac43be5887d2ddcce27989432c6415651" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="unit-test_8h_1ac43be5887d2ddcce27989432c6415651" kindref="member">RunAll</ref>();</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/unit-test.h"/>
+  </compounddef>
+</doxygen>

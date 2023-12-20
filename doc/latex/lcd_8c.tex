@@ -1,37 +1,287 @@
-\doxysection{lcd.\+c File Reference}
-\hypertarget{lcd_8c}{}\label{lcd_8c}\index{lcd.c@{lcd.c}}
+\doxysection{src/lcd.c File Reference}
+\hypertarget{lcd_8c}{}\label{lcd_8c}\index{src/lcd.c@{src/lcd.c}}
 {\ttfamily \#include "{}lcd.\+h"{}}\newline
 {\ttfamily \#include "{}clock.\+h"{}}\newline
+{\ttfamily \#include "{}helpers.\+h"{}}\newline
 Include dependency graph for lcd.\+c\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=187pt]{lcd_8c__incl}
+\includegraphics[width=261pt]{lcd_8c__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{lcd_8c_a737f910552a1a1d9c2ee022b008da697}{Send\+Lcd\+Rs}} (int rs)
-\item 
+void \mbox{\hyperlink{lcd_8c_aa2b64ca7fceac6ba52f4d3345acb5e69}{Lcd\+Set\+Rs}} (unsigned char rs)
+\begin{DoxyCompactList}\small\item\em Sets the rs flag to the given value. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{lcd_8c_a07e30a245315510382ca9d5e1b508de3}{Lcd\+Pulse\+En}} ()
-\item 
-void \mbox{\hyperlink{lcd_8c_a287dfa68d47b371d2382934ee2c378cf}{Send\+Lcd\+Nibble}} (unsigned char nibble)
+\begin{DoxyCompactList}\small\item\em Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_a0d25295265e475f1fdab816f24759206}{Lcd\+Send\+Nibble}} (unsigned char nibble)
 \begin{DoxyCompactList}\small\item\em Sends a nibble to the LCD. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{lcd_8c_a4c5d5c0a03d2071457e63ca13e0af2e1}{Send\+Lcd\+Command}} (int rs, unsigned char command)
-\begin{DoxyCompactList}\small\item\em Sends a command to the LCD. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{lcd_8c_a4b5d69f267c6173aadd09a3926d1cc11}{Send\+Lcd\+Byte}} (unsigned char byte)
-\item 
-void \mbox{\hyperlink{lcd_8c_afbdcf081d356db6a9fbc8978bcd6833d}{Send\+Lcd\+Command\+Byte}} (int rs, unsigned char byte)
+void \mbox{\hyperlink{lcd_8c_a9fd93d4ece7b9d019ffebf10e290f4ea}{Lcd\+Send\+Byte}} (unsigned char byte)
+\begin{DoxyCompactList}\small\item\em Sends a byte to the LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_abcfdb05f65f66ac2f004c865d8d34933}{Lcd\+Clear\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Clears the display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_a09b8fcddedb13ac22fa8cfc4dca9c78f}{Lcd\+Cursor\+Shift}} (int sc, int rl)
+\begin{DoxyCompactList}\small\item\em Sets the LCD cursor position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_a1e86a9c9a89725780eb464f5c42eb784}{Lcd\+Entry\+Mode\+Set}} (int id, int s)
+\begin{DoxyCompactList}\small\item\em Sets the entry mode of the LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_ab933996c707c767ce7c6933227bc5bd0}{Lcd\+Display\+Control}} (int d, int c, int b)
+\begin{DoxyCompactList}\small\item\em Controls the display, cursor, and blinking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_aad68360b11370fa86fcd068004ef903f}{Lcd\+Return\+Home}} ()
+\begin{DoxyCompactList}\small\item\em Resets cursor to original position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_a6d3f15072d85ed9eecadf4223f0bac1b}{Lcd\+Function\+Set}} (int dl, int n, int f)
 \item 
 void \mbox{\hyperlink{lcd_8c_a61b541c799955fc6b4e6cf28628de9a1}{Lcd\+Init}} ()
 \begin{DoxyCompactList}\small\item\em Initializes the LCD. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{lcd_8c_aff2f3428c64a63264ad4349126fd33d9}{Lcd\+Print\+Char}} (char ch)
+void \mbox{\hyperlink{lcd_8c_ae368e9d14a294f0c32c7028b377f84e6}{Lcd\+Set\+Ddram}} (unsigned char addr)
+\begin{DoxyCompactList}\small\item\em Sets the DDRAM address (cursor position) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_a1560ddb5bbf01143c0afe47bbc914b0e}{Lcd\+Set\+Cursor}} (unsigned char row, unsigned char col)
+\begin{DoxyCompactList}\small\item\em Sets the cursor position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_a60854aad97ec6bbdb5a001eea7c6b3b8}{Lcd\+Increment\+Cursor\+Row}} ()
+\item 
+void \mbox{\hyperlink{lcd_8c_a16d925f7b9140ef9283fcae38a45b7f4}{Lcd\+Increment\+Cursor\+Col}} ()
+\item 
+void \mbox{\hyperlink{lcd_8c_ab1c2efe3f6552fcef08eeba3904d9376}{Lcd\+Print\+Char}} (char ch, unsigned char cursor\+Shift)
+\begin{DoxyCompactList}\small\item\em Prints a character to the LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_a3dbe526a93440b9586f3f5f270c335b1}{Lcd\+Print\+Char\+At}} (char ch, unsigned char row, unsigned char col)
+\begin{DoxyCompactList}\small\item\em Prints a character to the LCD at a given position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_a6ba64316f53c5a71031db621b3fe435e}{Lcd\+Print\+String}} (char str\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Prints a string to the LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{lcd_8c_a40ba377d6a3a574ff03b859bc7cdd4b0}{current\+\_\+row}} = 0
+\item 
+int \mbox{\hyperlink{lcd_8c_a5f839b3ac61c0771c9f8fbef974afe76}{current\+\_\+col}} = 0
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{lcd_8c_abcfdb05f65f66ac2f004c865d8d34933}\label{lcd_8c_abcfdb05f65f66ac2f004c865d8d34933} 
+\index{lcd.c@{lcd.c}!LcdClearDisplay@{LcdClearDisplay}}
+\index{LcdClearDisplay@{LcdClearDisplay}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LcdClearDisplay()}{LcdClearDisplay()}}
+{\footnotesize\ttfamily void Lcd\+Clear\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the display. 
+
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00029}{29}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_abcfdb05f65f66ac2f004c865d8d34933_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_abcfdb05f65f66ac2f004c865d8d34933_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lcd_8c_a09b8fcddedb13ac22fa8cfc4dca9c78f}\label{lcd_8c_a09b8fcddedb13ac22fa8cfc4dca9c78f} 
+\index{lcd.c@{lcd.c}!LcdCursorShift@{LcdCursorShift}}
+\index{LcdCursorShift@{LcdCursorShift}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LcdCursorShift()}{LcdCursorShift()}}
+{\footnotesize\ttfamily void Lcd\+Cursor\+Shift (\begin{DoxyParamCaption}\item[{int}]{sc,  }\item[{int}]{rl }\end{DoxyParamCaption})}
+
+
+
+Sets the LCD cursor position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sc} & Display shift sc = 1, Cursor move sc = 0 \\
+\hline
+{\em rl} & Right shift rl = 1, Left shift rl = 0 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00041}{41}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_a09b8fcddedb13ac22fa8cfc4dca9c78f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lcd_8c_ab933996c707c767ce7c6933227bc5bd0}\label{lcd_8c_ab933996c707c767ce7c6933227bc5bd0} 
+\index{lcd.c@{lcd.c}!LcdDisplayControl@{LcdDisplayControl}}
+\index{LcdDisplayControl@{LcdDisplayControl}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LcdDisplayControl()}{LcdDisplayControl()}}
+{\footnotesize\ttfamily void Lcd\+Display\+Control (\begin{DoxyParamCaption}\item[{int}]{d,  }\item[{int}]{c,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Controls the display, cursor, and blinking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & D = 1\+: Display on, D = 0\+: Display off \\
+\hline
+{\em c} & C = 1\+: Cursor on, C = 0\+: Cursor off \\
+\hline
+{\em b} & B = 1\+: Blinks on, B= 0\+: Blinks off \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00073}{73}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_ab933996c707c767ce7c6933227bc5bd0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_ab933996c707c767ce7c6933227bc5bd0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lcd_8c_a1e86a9c9a89725780eb464f5c42eb784}\label{lcd_8c_a1e86a9c9a89725780eb464f5c42eb784} 
+\index{lcd.c@{lcd.c}!LcdEntryModeSet@{LcdEntryModeSet}}
+\index{LcdEntryModeSet@{LcdEntryModeSet}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LcdEntryModeSet()}{LcdEntryModeSet()}}
+{\footnotesize\ttfamily void Lcd\+Entry\+Mode\+Set (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{s }\end{DoxyParamCaption})}
+
+
+
+Sets the entry mode of the LCD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & I / D = 1\+: Increment, I / D = 0\+: Decrement. \\
+\hline
+{\em s} & S = 1\+: The display shift, S = 0\+: The display does not shift. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00058}{58}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_a1e86a9c9a89725780eb464f5c42eb784_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_a1e86a9c9a89725780eb464f5c42eb784_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lcd_8c_a6d3f15072d85ed9eecadf4223f0bac1b}\label{lcd_8c_a6d3f15072d85ed9eecadf4223f0bac1b} 
+\index{lcd.c@{lcd.c}!LcdFunctionSet@{LcdFunctionSet}}
+\index{LcdFunctionSet@{LcdFunctionSet}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LcdFunctionSet()}{LcdFunctionSet()}}
+{\footnotesize\ttfamily void Lcd\+Function\+Set (\begin{DoxyParamCaption}\item[{int}]{dl,  }\item[{int}]{n,  }\item[{int}]{f }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em dl} & DL = 1\+: 8-\/bit length (DB7 -\/ 0). DL = 0\+: 4-\/bit length (DB7 -\/ 4). \\
+\hline
+{\em n} & N = 0\+: One-\/line display. N = 1\+: Two-\/line display \\
+\hline
+{\em f} & F = 0\+: 5 x 8 dots character font. F = 1\+: 5 x 10 dots character font. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00096}{96}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_a6d3f15072d85ed9eecadf4223f0bac1b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_a6d3f15072d85ed9eecadf4223f0bac1b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lcd_8c_a16d925f7b9140ef9283fcae38a45b7f4}\label{lcd_8c_a16d925f7b9140ef9283fcae38a45b7f4} 
+\index{lcd.c@{lcd.c}!LcdIncrementCursorCol@{LcdIncrementCursorCol}}
+\index{LcdIncrementCursorCol@{LcdIncrementCursorCol}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LcdIncrementCursorCol()}{LcdIncrementCursorCol()}}
+{\footnotesize\ttfamily void Lcd\+Increment\+Cursor\+Col (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00202}{202}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_a16d925f7b9140ef9283fcae38a45b7f4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_a16d925f7b9140ef9283fcae38a45b7f4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lcd_8c_a60854aad97ec6bbdb5a001eea7c6b3b8}\label{lcd_8c_a60854aad97ec6bbdb5a001eea7c6b3b8} 
+\index{lcd.c@{lcd.c}!LcdIncrementCursorRow@{LcdIncrementCursorRow}}
+\index{LcdIncrementCursorRow@{LcdIncrementCursorRow}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LcdIncrementCursorRow()}{LcdIncrementCursorRow()}}
+{\footnotesize\ttfamily void Lcd\+Increment\+Cursor\+Row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00191}{191}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_a60854aad97ec6bbdb5a001eea7c6b3b8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_a60854aad97ec6bbdb5a001eea7c6b3b8_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{lcd_8c_a61b541c799955fc6b4e6cf28628de9a1}\label{lcd_8c_a61b541c799955fc6b4e6cf28628de9a1} 
 \index{lcd.c@{lcd.c}!LcdInit@{LcdInit}}
 \index{LcdInit@{LcdInit}!lcd.c@{lcd.c}}
@@ -44,7 +294,7 @@ Initializes the LCD.
 
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00036}{36}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00114}{114}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -54,30 +304,40 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{lcd_8c_a61b541c799955fc6b4e6cf28628de9a1_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=274pt]{lcd_8c_a61b541c799955fc6b4e6cf28628de9a1_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{lcd_8c_aff2f3428c64a63264ad4349126fd33d9}\label{lcd_8c_aff2f3428c64a63264ad4349126fd33d9} 
+\Hypertarget{lcd_8c_ab1c2efe3f6552fcef08eeba3904d9376}\label{lcd_8c_ab1c2efe3f6552fcef08eeba3904d9376} 
 \index{lcd.c@{lcd.c}!LcdPrintChar@{LcdPrintChar}}
 \index{LcdPrintChar@{LcdPrintChar}!lcd.c@{lcd.c}}
 \doxysubsubsection{\texorpdfstring{LcdPrintChar()}{LcdPrintChar()}}
-{\footnotesize\ttfamily void Lcd\+Print\+Char (\begin{DoxyParamCaption}\item[{char}]{ch }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Lcd\+Print\+Char (\begin{DoxyParamCaption}\item[{char}]{ch,  }\item[{unsigned char}]{cursor\+Shift }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00075}{75}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Prints a character to the LCD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & character to be printed \\
+\hline
+{\em cursor\+Shift} & 1 -\/\texorpdfstring{$>$}{>} shift cursor, 0 -\/\texorpdfstring{$>$}{>} don\textquotesingle{}t shift cursor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00210}{210}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{lcd_8c_aff2f3428c64a63264ad4349126fd33d9_cgraph}
+\includegraphics[width=350pt]{lcd_8c_ab1c2efe3f6552fcef08eeba3904d9376_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -85,7 +345,73 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=225pt]{lcd_8c_aff2f3428c64a63264ad4349126fd33d9_icgraph}
+\includegraphics[width=343pt]{lcd_8c_ab1c2efe3f6552fcef08eeba3904d9376_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lcd_8c_a3dbe526a93440b9586f3f5f270c335b1}\label{lcd_8c_a3dbe526a93440b9586f3f5f270c335b1} 
+\index{lcd.c@{lcd.c}!LcdPrintCharAt@{LcdPrintCharAt}}
+\index{LcdPrintCharAt@{LcdPrintCharAt}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LcdPrintCharAt()}{LcdPrintCharAt()}}
+{\footnotesize\ttfamily void Lcd\+Print\+Char\+At (\begin{DoxyParamCaption}\item[{char}]{ch,  }\item[{unsigned char}]{row,  }\item[{unsigned char}]{col }\end{DoxyParamCaption})}
+
+
+
+Prints a character to the LCD at a given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & character to be printed \\
+\hline
+{\em row} & row to be printed at \\
+\hline
+{\em col} & column to be printed at \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00225}{225}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_a3dbe526a93440b9586f3f5f270c335b1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lcd_8c_a6ba64316f53c5a71031db621b3fe435e}\label{lcd_8c_a6ba64316f53c5a71031db621b3fe435e} 
+\index{lcd.c@{lcd.c}!LcdPrintString@{LcdPrintString}}
+\index{LcdPrintString@{LcdPrintString}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LcdPrintString()}{LcdPrintString()}}
+{\footnotesize\ttfamily void Lcd\+Print\+String (\begin{DoxyParamCaption}\item[{char}]{str\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Prints a string to the LCD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & string to be printed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00230}{230}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_a6ba64316f53c5a71031db621b3fe435e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{lcd_8c_a6ba64316f53c5a71031db621b3fe435e_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{lcd_8c_a07e30a245315510382ca9d5e1b508de3}\label{lcd_8c_a07e30a245315510382ca9d5e1b508de3} 
@@ -96,7 +422,11 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00008}{8}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns. 
+
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00012}{12}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -114,59 +444,53 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{lcd_8c_a07e30a245315510382ca9d5e1b508de3_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{lcd_8c_a4b5d69f267c6173aadd09a3926d1cc11}\label{lcd_8c_a4b5d69f267c6173aadd09a3926d1cc11} 
-\index{lcd.c@{lcd.c}!SendLcdByte@{SendLcdByte}}
-\index{SendLcdByte@{SendLcdByte}!lcd.c@{lcd.c}}
-\doxysubsubsection{\texorpdfstring{SendLcdByte()}{SendLcdByte()}}
-{\footnotesize\ttfamily void Send\+Lcd\+Byte (\begin{DoxyParamCaption}\item[{unsigned char}]{byte }\end{DoxyParamCaption})}
+\Hypertarget{lcd_8c_aad68360b11370fa86fcd068004ef903f}\label{lcd_8c_aad68360b11370fa86fcd068004ef903f} 
+\index{lcd.c@{lcd.c}!LcdReturnHome@{LcdReturnHome}}
+\index{LcdReturnHome@{LcdReturnHome}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LcdReturnHome()}{LcdReturnHome()}}
+{\footnotesize\ttfamily void Lcd\+Return\+Home (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00025}{25}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Resets cursor to original position. 
+
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00090}{90}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{lcd_8c_a4b5d69f267c6173aadd09a3926d1cc11_cgraph}
+\includegraphics[width=350pt]{lcd_8c_aad68360b11370fa86fcd068004ef903f_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{lcd_8c_a4b5d69f267c6173aadd09a3926d1cc11_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{lcd_8c_a4c5d5c0a03d2071457e63ca13e0af2e1}\label{lcd_8c_a4c5d5c0a03d2071457e63ca13e0af2e1} 
-\index{lcd.c@{lcd.c}!SendLcdCommand@{SendLcdCommand}}
-\index{SendLcdCommand@{SendLcdCommand}!lcd.c@{lcd.c}}
-\doxysubsubsection{\texorpdfstring{SendLcdCommand()}{SendLcdCommand()}}
-{\footnotesize\ttfamily void Send\+Lcd\+Command (\begin{DoxyParamCaption}\item[{int}]{rs,  }\item[{unsigned char}]{command }\end{DoxyParamCaption})}
+\Hypertarget{lcd_8c_a9fd93d4ece7b9d019ffebf10e290f4ea}\label{lcd_8c_a9fd93d4ece7b9d019ffebf10e290f4ea} 
+\index{lcd.c@{lcd.c}!LcdSendByte@{LcdSendByte}}
+\index{LcdSendByte@{LcdSendByte}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LcdSendByte()}{LcdSendByte()}}
+{\footnotesize\ttfamily void Lcd\+Send\+Byte (\begin{DoxyParamCaption}\item[{unsigned char}]{byte }\end{DoxyParamCaption})}
 
 
 
-Sends a command to the LCD. 
+Sends a byte to the LCD. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em rs} & RS part of the command \\
-\hline
-{\em command} & DB4 \texorpdfstring{$\vert$}{|} DB5 \texorpdfstring{$\vert$}{|} DB6 \texorpdfstring{$\vert$}{|} DB7 \\
+{\em byte} & the byte to be sent \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00020}{20}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00024}{24}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{lcd_8c_a4c5d5c0a03d2071457e63ca13e0af2e1_cgraph}
+\includegraphics[width=350pt]{lcd_8c_a9fd93d4ece7b9d019ffebf10e290f4ea_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -174,40 +498,14 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{lcd_8c_a4c5d5c0a03d2071457e63ca13e0af2e1_icgraph}
+\includegraphics[width=350pt]{lcd_8c_a9fd93d4ece7b9d019ffebf10e290f4ea_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{lcd_8c_afbdcf081d356db6a9fbc8978bcd6833d}\label{lcd_8c_afbdcf081d356db6a9fbc8978bcd6833d} 
-\index{lcd.c@{lcd.c}!SendLcdCommandByte@{SendLcdCommandByte}}
-\index{SendLcdCommandByte@{SendLcdCommandByte}!lcd.c@{lcd.c}}
-\doxysubsubsection{\texorpdfstring{SendLcdCommandByte()}{SendLcdCommandByte()}}
-{\footnotesize\ttfamily void Send\+Lcd\+Command\+Byte (\begin{DoxyParamCaption}\item[{int}]{rs,  }\item[{unsigned char}]{byte }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00031}{31}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{lcd_8c_afbdcf081d356db6a9fbc8978bcd6833d_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=272pt]{lcd_8c_afbdcf081d356db6a9fbc8978bcd6833d_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{lcd_8c_a287dfa68d47b371d2382934ee2c378cf}\label{lcd_8c_a287dfa68d47b371d2382934ee2c378cf} 
-\index{lcd.c@{lcd.c}!SendLcdNibble@{SendLcdNibble}}
-\index{SendLcdNibble@{SendLcdNibble}!lcd.c@{lcd.c}}
-\doxysubsubsection{\texorpdfstring{SendLcdNibble()}{SendLcdNibble()}}
-{\footnotesize\ttfamily void Send\+Lcd\+Nibble (\begin{DoxyParamCaption}\item[{unsigned char}]{nibble }\end{DoxyParamCaption})}
+\Hypertarget{lcd_8c_a0d25295265e475f1fdab816f24759206}\label{lcd_8c_a0d25295265e475f1fdab816f24759206} 
+\index{lcd.c@{lcd.c}!LcdSendNibble@{LcdSendNibble}}
+\index{LcdSendNibble@{LcdSendNibble}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LcdSendNibble()}{LcdSendNibble()}}
+{\footnotesize\ttfamily void Lcd\+Send\+Nibble (\begin{DoxyParamCaption}\item[{unsigned char}]{nibble }\end{DoxyParamCaption})}
 
 
 
@@ -220,14 +518,14 @@ Sends a nibble to the LCD.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00015}{15}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00019}{19}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{lcd_8c_a287dfa68d47b371d2382934ee2c378cf_cgraph}
+\includegraphics[width=350pt]{lcd_8c_a0d25295265e475f1fdab816f24759206_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -235,24 +533,128 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{lcd_8c_a287dfa68d47b371d2382934ee2c378cf_icgraph}
+\includegraphics[width=350pt]{lcd_8c_a0d25295265e475f1fdab816f24759206_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{lcd_8c_a737f910552a1a1d9c2ee022b008da697}\label{lcd_8c_a737f910552a1a1d9c2ee022b008da697} 
-\index{lcd.c@{lcd.c}!SendLcdRs@{SendLcdRs}}
-\index{SendLcdRs@{SendLcdRs}!lcd.c@{lcd.c}}
-\doxysubsubsection{\texorpdfstring{SendLcdRs()}{SendLcdRs()}}
-{\footnotesize\ttfamily void Send\+Lcd\+Rs (\begin{DoxyParamCaption}\item[{int}]{rs }\end{DoxyParamCaption})}
+\Hypertarget{lcd_8c_a1560ddb5bbf01143c0afe47bbc914b0e}\label{lcd_8c_a1560ddb5bbf01143c0afe47bbc914b0e} 
+\index{lcd.c@{lcd.c}!LcdSetCursor@{LcdSetCursor}}
+\index{LcdSetCursor@{LcdSetCursor}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LcdSetCursor()}{LcdSetCursor()}}
+{\footnotesize\ttfamily void Lcd\+Set\+Cursor (\begin{DoxyParamCaption}\item[{unsigned char}]{row,  }\item[{unsigned char}]{col }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00004}{4}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Sets the cursor position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & row to be set \\
+\hline
+{\em col} & column to be set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00174}{174}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_a1560ddb5bbf01143c0afe47bbc914b0e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_a1560ddb5bbf01143c0afe47bbc914b0e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lcd_8c_ae368e9d14a294f0c32c7028b377f84e6}\label{lcd_8c_ae368e9d14a294f0c32c7028b377f84e6} 
+\index{lcd.c@{lcd.c}!LcdSetDdram@{LcdSetDdram}}
+\index{LcdSetDdram@{LcdSetDdram}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LcdSetDdram()}{LcdSetDdram()}}
+{\footnotesize\ttfamily void Lcd\+Set\+Ddram (\begin{DoxyParamCaption}\item[{unsigned char}]{addr }\end{DoxyParamCaption})}
+
+
+
+Sets the DDRAM address (cursor position) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & 7-\/bit address to be set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00166}{166}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_ae368e9d14a294f0c32c7028b377f84e6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8c_ae368e9d14a294f0c32c7028b377f84e6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{lcd_8c_aa2b64ca7fceac6ba52f4d3345acb5e69}\label{lcd_8c_aa2b64ca7fceac6ba52f4d3345acb5e69} 
+\index{lcd.c@{lcd.c}!LcdSetRs@{LcdSetRs}}
+\index{LcdSetRs@{LcdSetRs}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{LcdSetRs()}{LcdSetRs()}}
+{\footnotesize\ttfamily void Lcd\+Set\+Rs (\begin{DoxyParamCaption}\item[{unsigned char}]{rs }\end{DoxyParamCaption})}
+
+
+
+Sets the rs flag to the given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rs} & rs == 1 -\/\texorpdfstring{$>$}{>} data RS = HIGH, rs == 0 -\/\texorpdfstring{$>$}{>} command RS = LOW \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00008}{8}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{lcd_8c_a737f910552a1a1d9c2ee022b008da697_icgraph}
+\includegraphics[width=350pt]{lcd_8c_aa2b64ca7fceac6ba52f4d3345acb5e69_icgraph}
 \end{center}
 \end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{lcd_8c_a5f839b3ac61c0771c9f8fbef974afe76}\label{lcd_8c_a5f839b3ac61c0771c9f8fbef974afe76} 
+\index{lcd.c@{lcd.c}!current\_col@{current\_col}}
+\index{current\_col@{current\_col}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{current\_col}{current\_col}}
+{\footnotesize\ttfamily int current\+\_\+col = 0}
+
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00006}{6}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+
+\Hypertarget{lcd_8c_a40ba377d6a3a574ff03b859bc7cdd4b0}\label{lcd_8c_a40ba377d6a3a574ff03b859bc7cdd4b0} 
+\index{lcd.c@{lcd.c}!current\_row@{current\_row}}
+\index{current\_row@{current\_row}!lcd.c@{lcd.c}}
+\doxysubsubsection{\texorpdfstring{current\_row}{current\_row}}
+{\footnotesize\ttfamily int current\+\_\+row = 0}
+
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00005}{5}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+

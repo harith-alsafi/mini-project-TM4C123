@@ -1,5 +1,6 @@
 \doxysection{main.\+c}
-\hypertarget{main_8c_source}{}\label{main_8c_source}\mbox{\hyperlink{main_8c}{Go to the documentation of this file.}}
+\hypertarget{main_8c_source}{}\label{main_8c_source}\index{src/main.c@{src/main.c}}
+\mbox{\hyperlink{main_8c}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{clock_8h}{clock.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{lcd_8h}{lcd.h}}"{}}}
@@ -8,19 +9,50 @@
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00005}\mbox{\hyperlink{main_8c_a8468ead6b76c5ff5eb578a79fd591aa8}{00005}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_a8468ead6b76c5ff5eb578a79fd591aa8}{InitAll}}()\ \{}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00006}00006\ \ \ \ \ \mbox{\hyperlink{ports_8c_a03c4992f00f155be0425086ad67578f2}{PortAInit}}();}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00007}00007\ \ \ \ \ \mbox{\hyperlink{ports_8c_aaebad24f567e2e1f53e6252fd325371a}{PortBInit}}();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{clock_8c_a58cf193ae5c1f330e4868e32afb9445d}{SysTickInit}}();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{clock_8c_a21cfe49b38d53efaf75df16d21ed882a}{PLLInit}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{clock_8c_a21cfe49b38d53efaf75df16d21ed882a}{PLLInit}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{clock_8c_a58cf193ae5c1f330e4868e32afb9445d}{SysTickInit}}();}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00010}00010\ \ \ \ \ \mbox{\hyperlink{lcd_8c_a61b541c799955fc6b4e6cf28628de9a1}{LcdInit}}();}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00011}00011\ \}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00012}00012\ }
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00013}\mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{00013}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{main_8c_a8468ead6b76c5ff5eb578a79fd591aa8}{InitAll}}();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{clock_8c_a38d766a6d881470e7e8edfe0a222141e}{DelayMilli}}(100);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{lcd_8c_afbdcf081d356db6a9fbc8978bcd6833d}{SendLcdCommandByte}}(1,\ 0x57);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{clock_8c_a38d766a6d881470e7e8edfe0a222141e}{DelayMilli}}(100);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{lcd_8c_aff2f3428c64a63264ad4349126fd33d9}{LcdPrintChar}}(\textcolor{charliteral}{'A'});}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{while}\ (1)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ ;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00015}00015\ \ \ \ \ \textcolor{comment}{//\ DelayMilli(5000);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//\ DelayMilli(100);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//\ LcdPrintChar('S');}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00018}00018\ \ \ \ \ \textcolor{comment}{//\ LcdPrintChar('A');}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{lcd_8c_a6ba64316f53c5a71031db621b3fe435e}{LcdPrintString}}(\textcolor{stringliteral}{"{}Karith\ Al-\/Sadi\ aNd\ tHuraya\ gO\ everywhEre"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{lcd_8c_a6ba64316f53c5a71031db621b3fe435e}{LcdPrintString}}(\textcolor{stringliteral}{"{}Harith\ Al-\/Safi\ and\ Thuraya\ go\ everywhere"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{clock_8c_a2e760c634cc89519ad0956fc258eab46}{DelayMilli}}(3000);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{lcd_8c_a6ba64316f53c5a71031db621b3fe435e}{LcdPrintString}}(\textcolor{stringliteral}{"{}Barith\ Al-\/Nadi\ aNd\ thuRaya\ GO\ eveRywhEre"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{lcd_8c_a6ba64316f53c5a71031db621b3fe435e}{LcdPrintString}}(\textcolor{stringliteral}{"{}Harith\ Al-\/Safi\ and\ Thuraya\ go\ everywhere"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{clock_8c_a2e760c634cc89519ad0956fc258eab46}{DelayMilli}}(3000);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{lcd_8c_abcfdb05f65f66ac2f004c865d8d34933}{LcdClearDisplay}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{lcd_8c_a6ba64316f53c5a71031db621b3fe435e}{LcdPrintString}}(\textcolor{stringliteral}{"{}Jarith\ Al-\/Qadi\ ANd\ thuRAya\ Go\ EveRywhEre"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{lcd_8c_a6ba64316f53c5a71031db621b3fe435e}{LcdPrintString}}(\textcolor{stringliteral}{"{}Harith\ Al-\/Safi\ and\ Thuraya\ go\ everywhere"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00036}00036\ \ \ \ \ \textcolor{comment}{//\ LcdSetCursor(0,\ 0);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00037}00037\ \ \ \ \ \textcolor{comment}{//\ LcdPrintString("{}Harith\ Al-\/Safi"{});}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00039}00039\ \ \ \ \ \textcolor{comment}{//\ LcdSetCursor(1,\ 0);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ LcdPrintString("{}and\ Thuraya\ go"{});}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ LcdSetCursor(2,\ 3);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ LcdPrintString("{}Johnson\ go"{});}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00045}00045\ \ \ \ \ \textcolor{comment}{//\ LcdCursorShift(0,\ 1);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00046}00046\ \ \ \ \ \textcolor{comment}{//\ DelayMilli(3000);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//\ LcdSetCursor(3,\ 10);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ LcdPrintString("{}Khajo"{});}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{while}\ (1)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00052}00052\ \}}
 
 \end{DoxyCode}

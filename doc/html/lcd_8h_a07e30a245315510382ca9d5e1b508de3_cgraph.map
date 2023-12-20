@@ -1,9 +1,10 @@
 <map id="LcdPulseEn" name="LcdPulseEn">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,97,32"/>
+<area shape="rect" id="Node000001" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="5,5,97,32"/>
 <area shape="rect" id="Node000002" href="$clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="145,5,229,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,16,129,16,129,21,97,21"/>
-<area shape="rect" id="Node000003" href="$clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="277,5,372,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,16,262,16,262,21,229,21"/>
-<area shape="rect" id="Node000004" href="$test_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="420,5,473,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="373,16,405,16,405,21,373,21"/>
+<area shape="rect" id="Node000003" href="$playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="420,5,473,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,16,405,16,405,21,229,21"/>
+<area shape="rect" id="Node000004" href="$clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="277,31,372,57"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="230,24,262,30,261,35,229,29"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="372,31,404,25,406,30,373,37"/>
 </map>

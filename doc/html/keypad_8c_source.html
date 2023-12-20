@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mini Project TM4C123: keypad.c Source File</title>
+<title>Mini Project TM4C123G: src/keypad.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Mini Project TM4C123
+   <div id="projectname">Mini Project TM4C123G
    </div>
   </td>
  </tr>
@@ -51,7 +51,6 @@ $(function() {
 $(document).ready(function() { init_codefold(0); });
 /* @license-end */
 </script>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -73,15 +72,51 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">keypad.c</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="keypad_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="keypad_8c.html#ae6ab35ff194b314a314a5054259ffa9a">    1</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="keypad_8c.html#ae6ab35ff194b314a314a5054259ffa9a">IsPressed</a>();</div>
+<a href="keypad_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="keypad_8h.html">keypad.h</a>&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="keypad_8c.html#a2d42937c3f3d49c8958ce119e6b745fd">    3</a></span><span class="keywordtype">char</span> <a class="code hl_function" href="keypad_8c.html#a2d42937c3f3d49c8958ce119e6b745fd">GetKey</a>();</div>
-<div class="ttc" id="akeypad_8c_html_a2d42937c3f3d49c8958ce119e6b745fd"><div class="ttname"><a href="keypad_8c.html#a2d42937c3f3d49c8958ce119e6b745fd">GetKey</a></div><div class="ttdeci">char GetKey()</div></div>
-<div class="ttc" id="akeypad_8c_html_ae6ab35ff194b314a314a5054259ffa9a"><div class="ttname"><a href="keypad_8c.html#ae6ab35ff194b314a314a5054259ffa9a">IsPressed</a></div><div class="ttdeci">int IsPressed()</div></div>
+<div class="foldopen" id="foldopen00003" data-start="{" data-end="};">
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="keypad_8c.html#a7465f8ed0343f8e4044387a0429afb32">    3</a></span><span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="keypad_8c.html#a7465f8ed0343f8e4044387a0429afb32">keypad</a>[<a class="code hl_define" href="keypad_8h.html#acc73b1692bde87ce0a891af4dece22fc">KEYPAD_N</a>][<a class="code hl_define" href="keypad_8h.html#acc73b1692bde87ce0a891af4dece22fc">KEYPAD_N</a>] = {</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    {<span class="charliteral">&#39;1&#39;</span>, <span class="charliteral">&#39;2&#39;</span>, <span class="charliteral">&#39;3&#39;</span>, <span class="charliteral">&#39;A&#39;</span>},</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    {<span class="charliteral">&#39;4&#39;</span>, <span class="charliteral">&#39;5&#39;</span>, <span class="charliteral">&#39;6&#39;</span>, <span class="charliteral">&#39;B&#39;</span>},</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {<span class="charliteral">&#39;7&#39;</span>, <span class="charliteral">&#39;8&#39;</span>, <span class="charliteral">&#39;9&#39;</span>, <span class="charliteral">&#39;C&#39;</span>},</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {<span class="charliteral">&#39;*&#39;</span>, <span class="charliteral">&#39;0&#39;</span>, <span class="charliteral">&#39;#&#39;</span>, <span class="charliteral">&#39;D&#39;</span>}</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>};</div>
+</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="keypad_8c.html#a02e5cd605c64773d944bc322b51222cd">   10</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_function" href="keypad_8c.html#a02e5cd605c64773d944bc322b51222cd">KeypadGetRow</a>(){</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}</div>
+</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="keypad_8c.html#a7dba628d7c95a933378f3a008344a4d3">   14</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_function" href="keypad_8c.html#a7dba628d7c95a933378f3a008344a4d3">KeypadGetCol</a>(){</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="keypad_8c.html#ab826b54bc6305f49d758d28173041ab7">   19</a></span><span class="keywordtype">char</span> <a class="code hl_function" href="keypad_8c.html#ab826b54bc6305f49d758d28173041ab7">KeypadGetChar</a>(){</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+</div>
+<div class="ttc" id="akeypad_8c_html_a02e5cd605c64773d944bc322b51222cd"><div class="ttname"><a href="keypad_8c.html#a02e5cd605c64773d944bc322b51222cd">KeypadGetRow</a></div><div class="ttdeci">unsigned char KeypadGetRow()</div><div class="ttdef"><b>Definition</b> <a href="keypad_8c_source.html#l00010">keypad.c:10</a></div></div>
+<div class="ttc" id="akeypad_8c_html_a7465f8ed0343f8e4044387a0429afb32"><div class="ttname"><a href="keypad_8c.html#a7465f8ed0343f8e4044387a0429afb32">keypad</a></div><div class="ttdeci">const char keypad[KEYPAD_N][KEYPAD_N]</div><div class="ttdef"><b>Definition</b> <a href="keypad_8c_source.html#l00003">keypad.c:3</a></div></div>
+<div class="ttc" id="akeypad_8c_html_a7dba628d7c95a933378f3a008344a4d3"><div class="ttname"><a href="keypad_8c.html#a7dba628d7c95a933378f3a008344a4d3">KeypadGetCol</a></div><div class="ttdeci">unsigned char KeypadGetCol()</div><div class="ttdef"><b>Definition</b> <a href="keypad_8c_source.html#l00014">keypad.c:14</a></div></div>
+<div class="ttc" id="akeypad_8c_html_ab826b54bc6305f49d758d28173041ab7"><div class="ttname"><a href="keypad_8c.html#ab826b54bc6305f49d758d28173041ab7">KeypadGetChar</a></div><div class="ttdeci">char KeypadGetChar()</div><div class="ttdef"><b>Definition</b> <a href="keypad_8c_source.html#l00019">keypad.c:19</a></div></div>
+<div class="ttc" id="akeypad_8h_html"><div class="ttname"><a href="keypad_8h.html">keypad.h</a></div></div>
+<div class="ttc" id="akeypad_8h_html_acc73b1692bde87ce0a891af4dece22fc"><div class="ttname"><a href="keypad_8h.html#acc73b1692bde87ce0a891af4dece22fc">KEYPAD_N</a></div><div class="ttdeci">#define KEYPAD_N</div><div class="ttdef"><b>Definition</b> <a href="keypad_8h_source.html#l00015">keypad.h:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

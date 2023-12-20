@@ -2,16 +2,16 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="ports_8h" kind="file" language="C++">
     <compoundname>ports.h</compoundname>
-    <includedby refid="lcd_8h" local="yes">lcd.h</includedby>
-    <includedby refid="main_8c" local="yes">main.c</includedby>
-    <includedby refid="ports_8c" local="yes">ports.c</includedby>
+    <includedby refid="lcd_8h" local="yes">src/lcd.h</includedby>
+    <includedby refid="main_8c" local="yes">src/main.c</includedby>
+    <includedby refid="ports_8c" local="yes">src/ports.c</includedby>
     <invincdepgraph>
       <node id="3">
-        <label>lcd.c</label>
+        <label>src/lcd.c</label>
         <link refid="lcd_8c"/>
       </node>
       <node id="2">
-        <label>lcd.h</label>
+        <label>src/lcd.h</label>
         <link refid="lcd_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -19,15 +19,15 @@
         </childnode>
       </node>
       <node id="4">
-        <label>main.c</label>
+        <label>src/main.c</label>
         <link refid="main_8c"/>
       </node>
       <node id="5">
-        <label>ports.c</label>
+        <label>src/ports.c</label>
         <link refid="ports_8c"/>
       </node>
       <node id="1">
-        <label>ports.h</label>
+        <label>src/ports.h</label>
         <link refid="ports_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -38,6 +38,16 @@
       </node>
     </invincdepgraph>
     <sectiondef kind="define">
+      <memberdef kind="define" id="ports_8h_1a45ea33ff2946109d424b7238be6a7775" prot="public" static="no">
+        <name>PORTS_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ports.h" line="2" column="9" bodyfile="src/ports.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="define" id="ports_8h_1a7e8177f717264265e3fdea037f55d4bd" prot="public" static="no">
         <name>GPIO_PORTE_DATA_R</name>
         <initializer>(*((volatile unsigned long *)0x400243FC))</initializer>
@@ -47,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="2" column="9" bodyfile="ports.h" bodystart="2" bodyend="-1"/>
+        <location file="src/ports.h" line="5" column="9" bodyfile="src/ports.h" bodystart="5" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1aabac097a16539e9dc054b9ebb6bfe6c5" prot="public" static="no">
         <name>GPIO_PORTE_DIR_R</name>
@@ -58,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="3" column="9" bodyfile="ports.h" bodystart="3" bodyend="-1"/>
+        <location file="src/ports.h" line="6" column="9" bodyfile="src/ports.h" bodystart="6" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1af2e23e7556959fbbf0cd4c19aab7ebf3" prot="public" static="no">
         <name>GPIO_PORTE_AFSEL_R</name>
@@ -69,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="4" column="9" bodyfile="ports.h" bodystart="4" bodyend="-1"/>
+        <location file="src/ports.h" line="7" column="9" bodyfile="src/ports.h" bodystart="7" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a780d4382200cf49047f85429aeebfbdd" prot="public" static="no">
         <name>GPIO_PORTE_PUR_R</name>
@@ -80,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="5" column="9" bodyfile="ports.h" bodystart="5" bodyend="-1"/>
+        <location file="src/ports.h" line="8" column="9" bodyfile="src/ports.h" bodystart="8" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1aa1c99162bac922e30af2bb6960272e23" prot="public" static="no">
         <name>GPIO_PORTE_PDR_R</name>
@@ -91,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="6" column="9" bodyfile="ports.h" bodystart="6" bodyend="-1"/>
+        <location file="src/ports.h" line="9" column="9" bodyfile="src/ports.h" bodystart="9" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a4eb0814dc5e7e015bf1714dcb606f0b5" prot="public" static="no">
         <name>GPIO_PORTE_DEN_R</name>
@@ -102,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="7" column="9" bodyfile="ports.h" bodystart="7" bodyend="-1"/>
+        <location file="src/ports.h" line="10" column="9" bodyfile="src/ports.h" bodystart="10" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a79449afe84506a94221893d7a712c39c" prot="public" static="no">
         <name>GPIO_PORTE_LOCK_R</name>
@@ -113,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="8" column="9" bodyfile="ports.h" bodystart="8" bodyend="-1"/>
+        <location file="src/ports.h" line="11" column="9" bodyfile="src/ports.h" bodystart="11" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1aab70b1d3f9ffa90dc0c70b4fd4479859" prot="public" static="no">
         <name>GPIO_PORTE_CR_R</name>
@@ -124,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="9" column="9" bodyfile="ports.h" bodystart="9" bodyend="-1"/>
+        <location file="src/ports.h" line="12" column="9" bodyfile="src/ports.h" bodystart="12" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a3da5ec11f639e4aa05b7306a6104cc7c" prot="public" static="no">
         <name>GPIO_PORTE_AMSEL_R</name>
@@ -135,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="10" column="9" bodyfile="ports.h" bodystart="10" bodyend="-1"/>
+        <location file="src/ports.h" line="13" column="9" bodyfile="src/ports.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1aa0f23f6b60cb39e1a89f6add5f812dbf" prot="public" static="no">
         <name>GPIO_PORTE_PCTL_R</name>
@@ -146,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="11" column="9" bodyfile="ports.h" bodystart="11" bodyend="-1"/>
+        <location file="src/ports.h" line="14" column="9" bodyfile="src/ports.h" bodystart="14" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1ad0d3399a138102ee061bca7015c266c1" prot="public" static="no">
         <name>GPIO_PORTD_DATA_R</name>
@@ -157,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="20" column="9" bodyfile="ports.h" bodystart="20" bodyend="-1"/>
+        <location file="src/ports.h" line="23" column="9" bodyfile="src/ports.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a6d6b3cdd74974a77f72f48b850350734" prot="public" static="no">
         <name>GPIO_PORTD_DIR_R</name>
@@ -168,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="21" column="9" bodyfile="ports.h" bodystart="21" bodyend="-1"/>
+        <location file="src/ports.h" line="24" column="9" bodyfile="src/ports.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a97eeedd60368782e6374a99071b00779" prot="public" static="no">
         <name>GPIO_PORTD_AFSEL_R</name>
@@ -179,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="22" column="9" bodyfile="ports.h" bodystart="22" bodyend="-1"/>
+        <location file="src/ports.h" line="25" column="9" bodyfile="src/ports.h" bodystart="25" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1acf4706f2b9ef14286e79c21ead4734c7" prot="public" static="no">
         <name>GPIO_PORTD_PUR_R</name>
@@ -190,7 +200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="23" column="9" bodyfile="ports.h" bodystart="23" bodyend="-1"/>
+        <location file="src/ports.h" line="26" column="9" bodyfile="src/ports.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a37a81aa284c08f621656d5a3375dd42e" prot="public" static="no">
         <name>GPIO_PORTD_DEN_R</name>
@@ -201,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="24" column="9" bodyfile="ports.h" bodystart="24" bodyend="-1"/>
+        <location file="src/ports.h" line="27" column="9" bodyfile="src/ports.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a7b56aac6d49c15704f5b9ebc8750a1a4" prot="public" static="no">
         <name>GPIO_PORTD_LOCK_R</name>
@@ -212,7 +222,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="25" column="9" bodyfile="ports.h" bodystart="25" bodyend="-1"/>
+        <location file="src/ports.h" line="28" column="9" bodyfile="src/ports.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a92b46ca3cdd353e4c93d2fdb364fa47c" prot="public" static="no">
         <name>GPIO_PORTD_CR_R</name>
@@ -223,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="26" column="9" bodyfile="ports.h" bodystart="26" bodyend="-1"/>
+        <location file="src/ports.h" line="29" column="9" bodyfile="src/ports.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a405d017e972db8371ab51129aa17c0b1" prot="public" static="no">
         <name>GPIO_PORTD_AMSEL_R</name>
@@ -234,7 +244,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="27" column="9" bodyfile="ports.h" bodystart="27" bodyend="-1"/>
+        <location file="src/ports.h" line="30" column="9" bodyfile="src/ports.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a9632c3e19b49afe8ce5f8d10c8a45e6e" prot="public" static="no">
         <name>GPIO_PORTD_PCTL_R</name>
@@ -245,7 +255,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="28" column="9" bodyfile="ports.h" bodystart="28" bodyend="-1"/>
+        <location file="src/ports.h" line="31" column="9" bodyfile="src/ports.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1aa8d764ef0ff488cb4d3aa5ebaed85c63" prot="public" static="no">
         <name>GPIO_PORTB_DATA_R</name>
@@ -256,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="37" column="9" bodyfile="ports.h" bodystart="37" bodyend="-1"/>
+        <location file="src/ports.h" line="40" column="9" bodyfile="src/ports.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a8a1bacf2a566d3044b8796425744fac4" prot="public" static="no">
         <name>GPIO_PORTB_DIR_R</name>
@@ -267,7 +277,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="38" column="9" bodyfile="ports.h" bodystart="38" bodyend="-1"/>
+        <location file="src/ports.h" line="41" column="9" bodyfile="src/ports.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a7022b70050a4f97658dce0aad02d0db1" prot="public" static="no">
         <name>GPIO_PORTB_AFSEL_R</name>
@@ -278,7 +288,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="39" column="9" bodyfile="ports.h" bodystart="39" bodyend="-1"/>
+        <location file="src/ports.h" line="42" column="9" bodyfile="src/ports.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1abfcd28903e52c694028b0359a00f22fb" prot="public" static="no">
         <name>GPIO_PORTB_PUR_R</name>
@@ -289,7 +299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="40" column="9" bodyfile="ports.h" bodystart="40" bodyend="-1"/>
+        <location file="src/ports.h" line="43" column="9" bodyfile="src/ports.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1abcfeaa888e77b65fe7d8f24151a8e54e" prot="public" static="no">
         <name>GPIO_PORTB_DEN_R</name>
@@ -300,7 +310,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="41" column="9" bodyfile="ports.h" bodystart="41" bodyend="-1"/>
+        <location file="src/ports.h" line="44" column="9" bodyfile="src/ports.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1afd3c385f1c3122e84bb1695e7bd492c6" prot="public" static="no">
         <name>GPIO_PORTB_LOCK_R</name>
@@ -311,7 +321,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="42" column="9" bodyfile="ports.h" bodystart="42" bodyend="-1"/>
+        <location file="src/ports.h" line="45" column="9" bodyfile="src/ports.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a34c7bab0210a3ba8128547736c727969" prot="public" static="no">
         <name>GPIO_PORTB_CR_R</name>
@@ -322,7 +332,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="43" column="9" bodyfile="ports.h" bodystart="43" bodyend="-1"/>
+        <location file="src/ports.h" line="46" column="9" bodyfile="src/ports.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a4a502a5576e3339072d2163a26ddbf47" prot="public" static="no">
         <name>GPIO_PORTB_AMSEL_R</name>
@@ -333,7 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="44" column="9" bodyfile="ports.h" bodystart="44" bodyend="-1"/>
+        <location file="src/ports.h" line="47" column="9" bodyfile="src/ports.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1ae3541a70b084dde10fc09023c35d0fb6" prot="public" static="no">
         <name>GPIO_PORTB_PCTL_R</name>
@@ -344,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="45" column="9" bodyfile="ports.h" bodystart="45" bodyend="-1"/>
+        <location file="src/ports.h" line="48" column="9" bodyfile="src/ports.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1aab6c9ecc299957bf3eba9696b940b3b9" prot="public" static="no">
         <name>GPIO_PORTA_DATA_R</name>
@@ -355,7 +365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="54" column="9" bodyfile="ports.h" bodystart="54" bodyend="-1"/>
+        <location file="src/ports.h" line="57" column="9" bodyfile="src/ports.h" bodystart="57" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a7bd88286093153428dc799f5431ecaa6" prot="public" static="no">
         <name>GPIO_PORTA_DIR_R</name>
@@ -366,7 +376,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="55" column="9" bodyfile="ports.h" bodystart="55" bodyend="-1"/>
+        <location file="src/ports.h" line="58" column="9" bodyfile="src/ports.h" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1af5b07acb4f1cc3ca489610f8c70f0e95" prot="public" static="no">
         <name>GPIO_PORTA_AFSEL_R</name>
@@ -377,7 +387,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="56" column="9" bodyfile="ports.h" bodystart="56" bodyend="-1"/>
+        <location file="src/ports.h" line="59" column="9" bodyfile="src/ports.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a29d38a6471dfec693f9ec4bd7f9550a0" prot="public" static="no">
         <name>GPIO_PORTA_PUR_R</name>
@@ -388,7 +398,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="57" column="9" bodyfile="ports.h" bodystart="57" bodyend="-1"/>
+        <location file="src/ports.h" line="60" column="9" bodyfile="src/ports.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a803f6958edee8ea0e1b655978e66b8e1" prot="public" static="no">
         <name>GPIO_PORTA_DEN_R</name>
@@ -399,7 +409,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="58" column="9" bodyfile="ports.h" bodystart="58" bodyend="-1"/>
+        <location file="src/ports.h" line="61" column="9" bodyfile="src/ports.h" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a6f0f5595c812747799cf9ad570b4169f" prot="public" static="no">
         <name>GPIO_PORTA_LOCK_R</name>
@@ -410,7 +420,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="59" column="9" bodyfile="ports.h" bodystart="59" bodyend="-1"/>
+        <location file="src/ports.h" line="62" column="9" bodyfile="src/ports.h" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a51a6914055b43c27be9a2bfceee00fc4" prot="public" static="no">
         <name>GPIO_PORTA_CR_R</name>
@@ -421,7 +431,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="60" column="9" bodyfile="ports.h" bodystart="60" bodyend="-1"/>
+        <location file="src/ports.h" line="63" column="9" bodyfile="src/ports.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a41377c72de4d7805cd2252d5bf29be1a" prot="public" static="no">
         <name>GPIO_PORTA_AMSEL_R</name>
@@ -432,7 +442,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="61" column="9" bodyfile="ports.h" bodystart="61" bodyend="-1"/>
+        <location file="src/ports.h" line="64" column="9" bodyfile="src/ports.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1ade9da9d2c5b929e1b256ea5100dfaf88" prot="public" static="no">
         <name>GPIO_PORTA_PCTL_R</name>
@@ -443,7 +453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="62" column="9" bodyfile="ports.h" bodystart="62" bodyend="-1"/>
+        <location file="src/ports.h" line="65" column="9" bodyfile="src/ports.h" bodystart="65" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a6faf63c7d3a41fd7aa67cb3f49112d58" prot="public" static="no">
         <name>GPIO_PORTF_DATA_R</name>
@@ -454,7 +464,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="72" column="9" bodyfile="ports.h" bodystart="72" bodyend="-1"/>
+        <location file="src/ports.h" line="75" column="9" bodyfile="src/ports.h" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a4af807e7c41e4e51a09ab6598280d09b" prot="public" static="no">
         <name>GPIO_PORTF_DIR_R</name>
@@ -465,7 +475,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="73" column="9" bodyfile="ports.h" bodystart="73" bodyend="-1"/>
+        <location file="src/ports.h" line="76" column="9" bodyfile="src/ports.h" bodystart="76" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a8f9c5b1caa2f2206e46d6e55033ba1df" prot="public" static="no">
         <name>GPIO_PORTF_AFSEL_R</name>
@@ -476,7 +486,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="74" column="9" bodyfile="ports.h" bodystart="74" bodyend="-1"/>
+        <location file="src/ports.h" line="77" column="9" bodyfile="src/ports.h" bodystart="77" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1ad61970840fbdec3b021a6cd4b176ceb5" prot="public" static="no">
         <name>GPIO_PORTF_PUR_R</name>
@@ -487,7 +497,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="75" column="9" bodyfile="ports.h" bodystart="75" bodyend="-1"/>
+        <location file="src/ports.h" line="78" column="9" bodyfile="src/ports.h" bodystart="78" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1ace684566ac3dee1c9230633165118a61" prot="public" static="no">
         <name>GPIO_PORTF_DEN_R</name>
@@ -498,7 +508,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="76" column="9" bodyfile="ports.h" bodystart="76" bodyend="-1"/>
+        <location file="src/ports.h" line="79" column="9" bodyfile="src/ports.h" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a905788cdfb00eea4f716d3ed280f1e20" prot="public" static="no">
         <name>GPIO_PORTF_LOCK_R</name>
@@ -509,7 +519,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="77" column="9" bodyfile="ports.h" bodystart="77" bodyend="-1"/>
+        <location file="src/ports.h" line="80" column="9" bodyfile="src/ports.h" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a5b37d58feb20c8629db10975b31b6dbc" prot="public" static="no">
         <name>GPIO_PORTF_CR_R</name>
@@ -520,7 +530,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="78" column="9" bodyfile="ports.h" bodystart="78" bodyend="-1"/>
+        <location file="src/ports.h" line="81" column="9" bodyfile="src/ports.h" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1a792408dc154a55fd9e0ad13cca3db4c3" prot="public" static="no">
         <name>GPIO_PORTF_AMSEL_R</name>
@@ -531,7 +541,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="79" column="9" bodyfile="ports.h" bodystart="79" bodyend="-1"/>
+        <location file="src/ports.h" line="82" column="9" bodyfile="src/ports.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="ports_8h_1abdf740d2017978b00975ad06bf38f1eb" prot="public" static="no">
         <name>GPIO_PORTF_PCTL_R</name>
@@ -542,7 +552,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="80" column="9" bodyfile="ports.h" bodystart="80" bodyend="-1"/>
+        <location file="src/ports.h" line="83" column="9" bodyfile="src/ports.h" bodystart="83" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -558,17 +568,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="17" column="6" bodyfile="ports.c" bodystart="4" bodyend="17" declfile="ports.h" declline="17" declcolumn="6"/>
-        <references refid="test_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="test_8c" startline="126" endline="135">delay</references>
-        <references refid="ports_8h_1af2e23e7556959fbbf0cd4c19aab7ebf3" compoundref="ports_8h" startline="4">GPIO_PORTE_AFSEL_R</references>
-        <references refid="ports_8h_1a3da5ec11f639e4aa05b7306a6104cc7c" compoundref="ports_8h" startline="10">GPIO_PORTE_AMSEL_R</references>
-        <references refid="ports_8h_1aab70b1d3f9ffa90dc0c70b4fd4479859" compoundref="ports_8h" startline="9">GPIO_PORTE_CR_R</references>
-        <references refid="ports_8h_1a4eb0814dc5e7e015bf1714dcb606f0b5" compoundref="ports_8h" startline="7">GPIO_PORTE_DEN_R</references>
-        <references refid="ports_8h_1aabac097a16539e9dc054b9ebb6bfe6c5" compoundref="ports_8h" startline="3">GPIO_PORTE_DIR_R</references>
-        <references refid="ports_8h_1aa0f23f6b60cb39e1a89f6add5f812dbf" compoundref="ports_8h" startline="11">GPIO_PORTE_PCTL_R</references>
-        <references refid="ports_8h_1aa1c99162bac922e30af2bb6960272e23" compoundref="ports_8h" startline="6">GPIO_PORTE_PDR_R</references>
-        <references refid="ports_8h_1a780d4382200cf49047f85429aeebfbdd" compoundref="ports_8h" startline="5">GPIO_PORTE_PUR_R</references>
-        <references refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" compoundref="clock_8h" startline="2">SYSCTL_RCGC2_R</references>
+        <location file="src/ports.h" line="20" column="6" bodyfile="src/ports.c" bodystart="4" bodyend="17" declfile="src/ports.h" declline="20" declcolumn="6"/>
+        <references refid="playground_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="playground_8c" startline="126" endline="135">delay</references>
+        <references refid="ports_8h_1af2e23e7556959fbbf0cd4c19aab7ebf3" compoundref="ports_8h" startline="7">GPIO_PORTE_AFSEL_R</references>
+        <references refid="ports_8h_1a3da5ec11f639e4aa05b7306a6104cc7c" compoundref="ports_8h" startline="13">GPIO_PORTE_AMSEL_R</references>
+        <references refid="ports_8h_1aab70b1d3f9ffa90dc0c70b4fd4479859" compoundref="ports_8h" startline="12">GPIO_PORTE_CR_R</references>
+        <references refid="ports_8h_1a4eb0814dc5e7e015bf1714dcb606f0b5" compoundref="ports_8h" startline="10">GPIO_PORTE_DEN_R</references>
+        <references refid="ports_8h_1aabac097a16539e9dc054b9ebb6bfe6c5" compoundref="ports_8h" startline="6">GPIO_PORTE_DIR_R</references>
+        <references refid="ports_8h_1aa0f23f6b60cb39e1a89f6add5f812dbf" compoundref="ports_8h" startline="14">GPIO_PORTE_PCTL_R</references>
+        <references refid="ports_8h_1aa1c99162bac922e30af2bb6960272e23" compoundref="ports_8h" startline="9">GPIO_PORTE_PDR_R</references>
+        <references refid="ports_8h_1a780d4382200cf49047f85429aeebfbdd" compoundref="ports_8h" startline="8">GPIO_PORTE_PUR_R</references>
+        <references refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" compoundref="clock_8h" startline="5">SYSCTL_RCGC2_R</references>
       </memberdef>
       <memberdef kind="function" id="ports_8h_1a21efc6fa081c0b9c85eafe9d7455b9b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -582,15 +592,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="34" column="6" bodyfile="ports.c" bodystart="19" bodyend="30" declfile="ports.h" declline="34" declcolumn="6"/>
-        <references refid="test_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="test_8c" startline="126" endline="135">delay</references>
-        <references refid="ports_8h_1a97eeedd60368782e6374a99071b00779" compoundref="ports_8h" startline="22">GPIO_PORTD_AFSEL_R</references>
-        <references refid="ports_8h_1a405d017e972db8371ab51129aa17c0b1" compoundref="ports_8h" startline="27">GPIO_PORTD_AMSEL_R</references>
-        <references refid="ports_8h_1a92b46ca3cdd353e4c93d2fdb364fa47c" compoundref="ports_8h" startline="26">GPIO_PORTD_CR_R</references>
-        <references refid="ports_8h_1a37a81aa284c08f621656d5a3375dd42e" compoundref="ports_8h" startline="24">GPIO_PORTD_DEN_R</references>
-        <references refid="ports_8h_1a6d6b3cdd74974a77f72f48b850350734" compoundref="ports_8h" startline="21">GPIO_PORTD_DIR_R</references>
-        <references refid="ports_8h_1a9632c3e19b49afe8ce5f8d10c8a45e6e" compoundref="ports_8h" startline="28">GPIO_PORTD_PCTL_R</references>
-        <references refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" compoundref="clock_8h" startline="2">SYSCTL_RCGC2_R</references>
+        <location file="src/ports.h" line="37" column="6" bodyfile="src/ports.c" bodystart="19" bodyend="30" declfile="src/ports.h" declline="37" declcolumn="6"/>
+        <references refid="playground_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="playground_8c" startline="126" endline="135">delay</references>
+        <references refid="ports_8h_1a97eeedd60368782e6374a99071b00779" compoundref="ports_8h" startline="25">GPIO_PORTD_AFSEL_R</references>
+        <references refid="ports_8h_1a405d017e972db8371ab51129aa17c0b1" compoundref="ports_8h" startline="30">GPIO_PORTD_AMSEL_R</references>
+        <references refid="ports_8h_1a92b46ca3cdd353e4c93d2fdb364fa47c" compoundref="ports_8h" startline="29">GPIO_PORTD_CR_R</references>
+        <references refid="ports_8h_1a37a81aa284c08f621656d5a3375dd42e" compoundref="ports_8h" startline="27">GPIO_PORTD_DEN_R</references>
+        <references refid="ports_8h_1a6d6b3cdd74974a77f72f48b850350734" compoundref="ports_8h" startline="24">GPIO_PORTD_DIR_R</references>
+        <references refid="ports_8h_1a9632c3e19b49afe8ce5f8d10c8a45e6e" compoundref="ports_8h" startline="31">GPIO_PORTD_PCTL_R</references>
+        <references refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" compoundref="clock_8h" startline="5">SYSCTL_RCGC2_R</references>
       </memberdef>
       <memberdef kind="function" id="ports_8h_1aaebad24f567e2e1f53e6252fd325371a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -604,11 +614,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="51" column="6" bodyfile="ports.c" bodystart="35" bodyend="48" declfile="ports.h" declline="51" declcolumn="6"/>
-        <references refid="test_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="test_8c" startline="126" endline="135">delay</references>
-        <references refid="ports_8h_1abcfeaa888e77b65fe7d8f24151a8e54e" compoundref="ports_8h" startline="41">GPIO_PORTB_DEN_R</references>
-        <references refid="ports_8h_1a8a1bacf2a566d3044b8796425744fac4" compoundref="ports_8h" startline="38">GPIO_PORTB_DIR_R</references>
-        <references refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" compoundref="clock_8h" startline="2">SYSCTL_RCGC2_R</references>
+        <location file="src/ports.h" line="54" column="6" bodyfile="src/ports.c" bodystart="35" bodyend="48" declfile="src/ports.h" declline="54" declcolumn="6"/>
+        <references refid="playground_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="playground_8c" startline="126" endline="135">delay</references>
+        <references refid="ports_8h_1abcfeaa888e77b65fe7d8f24151a8e54e" compoundref="ports_8h" startline="44">GPIO_PORTB_DEN_R</references>
+        <references refid="ports_8h_1a8a1bacf2a566d3044b8796425744fac4" compoundref="ports_8h" startline="41">GPIO_PORTB_DIR_R</references>
+        <references refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" compoundref="clock_8h" startline="5">SYSCTL_RCGC2_R</references>
         <referencedby refid="main_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="main_8c" startline="5" endline="11">InitAll</referencedby>
       </memberdef>
       <memberdef kind="function" id="ports_8h_1a03c4992f00f155be0425086ad67578f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -623,11 +633,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="68" column="6" bodyfile="ports.c" bodystart="50" bodyend="61" declfile="ports.h" declline="68" declcolumn="6"/>
-        <references refid="test_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="test_8c" startline="126" endline="135">delay</references>
-        <references refid="ports_8h_1a803f6958edee8ea0e1b655978e66b8e1" compoundref="ports_8h" startline="58">GPIO_PORTA_DEN_R</references>
-        <references refid="ports_8h_1a7bd88286093153428dc799f5431ecaa6" compoundref="ports_8h" startline="55">GPIO_PORTA_DIR_R</references>
-        <references refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" compoundref="clock_8h" startline="2">SYSCTL_RCGC2_R</references>
+        <location file="src/ports.h" line="71" column="6" bodyfile="src/ports.c" bodystart="50" bodyend="61" declfile="src/ports.h" declline="71" declcolumn="6"/>
+        <references refid="playground_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="playground_8c" startline="126" endline="135">delay</references>
+        <references refid="ports_8h_1a803f6958edee8ea0e1b655978e66b8e1" compoundref="ports_8h" startline="61">GPIO_PORTA_DEN_R</references>
+        <references refid="ports_8h_1a7bd88286093153428dc799f5431ecaa6" compoundref="ports_8h" startline="58">GPIO_PORTA_DIR_R</references>
+        <references refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" compoundref="clock_8h" startline="5">SYSCTL_RCGC2_R</references>
         <referencedby refid="main_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="main_8c" startline="5" endline="11">InitAll</referencedby>
       </memberdef>
       <memberdef kind="function" id="ports_8h_1af2e39e21502cda9b92080c1e650e3ca6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -642,16 +652,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ports.h" line="85" column="6" bodyfile="ports.c" bodystart="63" bodyend="74" declfile="ports.h" declline="85" declcolumn="6"/>
-        <references refid="test_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="test_8c" startline="126" endline="135">delay</references>
-        <references refid="ports_8h_1a8f9c5b1caa2f2206e46d6e55033ba1df" compoundref="ports_8h" startline="74">GPIO_PORTF_AFSEL_R</references>
-        <references refid="ports_8h_1a792408dc154a55fd9e0ad13cca3db4c3" compoundref="ports_8h" startline="79">GPIO_PORTF_AMSEL_R</references>
-        <references refid="ports_8h_1a5b37d58feb20c8629db10975b31b6dbc" compoundref="ports_8h" startline="78">GPIO_PORTF_CR_R</references>
-        <references refid="ports_8h_1ace684566ac3dee1c9230633165118a61" compoundref="ports_8h" startline="76">GPIO_PORTF_DEN_R</references>
-        <references refid="ports_8h_1a4af807e7c41e4e51a09ab6598280d09b" compoundref="ports_8h" startline="73">GPIO_PORTF_DIR_R</references>
-        <references refid="ports_8h_1a905788cdfb00eea4f716d3ed280f1e20" compoundref="ports_8h" startline="77">GPIO_PORTF_LOCK_R</references>
-        <references refid="ports_8h_1abdf740d2017978b00975ad06bf38f1eb" compoundref="ports_8h" startline="80">GPIO_PORTF_PCTL_R</references>
-        <references refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" compoundref="clock_8h" startline="2">SYSCTL_RCGC2_R</references>
+        <location file="src/ports.h" line="88" column="6" bodyfile="src/ports.c" bodystart="63" bodyend="74" declfile="src/ports.h" declline="88" declcolumn="6"/>
+        <references refid="playground_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="playground_8c" startline="126" endline="135">delay</references>
+        <references refid="playground_8c_1a8f9c5b1caa2f2206e46d6e55033ba1df" compoundref="playground_8c" startline="23">GPIO_PORTF_AFSEL_R</references>
+        <references refid="playground_8c_1a792408dc154a55fd9e0ad13cca3db4c3" compoundref="playground_8c" startline="28">GPIO_PORTF_AMSEL_R</references>
+        <references refid="playground_8c_1a5b37d58feb20c8629db10975b31b6dbc" compoundref="playground_8c" startline="27">GPIO_PORTF_CR_R</references>
+        <references refid="playground_8c_1ace684566ac3dee1c9230633165118a61" compoundref="playground_8c" startline="25">GPIO_PORTF_DEN_R</references>
+        <references refid="playground_8c_1a4af807e7c41e4e51a09ab6598280d09b" compoundref="playground_8c" startline="22">GPIO_PORTF_DIR_R</references>
+        <references refid="playground_8c_1a905788cdfb00eea4f716d3ed280f1e20" compoundref="playground_8c" startline="26">GPIO_PORTF_LOCK_R</references>
+        <references refid="playground_8c_1abdf740d2017978b00975ad06bf38f1eb" compoundref="playground_8c" startline="29">GPIO_PORTF_PCTL_R</references>
+        <references refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" compoundref="clock_8h" startline="5">SYSCTL_RCGC2_R</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -659,72 +669,77 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">//<sp/>GPIO<sp/>pins<sp/>E</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2" refid="ports_8h_1a7e8177f717264265e3fdea037f55d4bd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_DATA_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400243FC))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="ports_8h_1aabac097a16539e9dc054b9ebb6bfe6c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_DIR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40024400))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4" refid="ports_8h_1af2e23e7556959fbbf0cd4c19aab7ebf3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_AFSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40024420))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5" refid="ports_8h_1a780d4382200cf49047f85429aeebfbdd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_PUR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40024510))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6" refid="ports_8h_1aa1c99162bac922e30af2bb6960272e23" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_PDR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40024514))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7" refid="ports_8h_1a4eb0814dc5e7e015bf1714dcb606f0b5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_DEN_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4002451C))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8" refid="ports_8h_1a79449afe84506a94221893d7a712c39c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_LOCK_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40024520))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9" refid="ports_8h_1aab70b1d3f9ffa90dc0c70b4fd4479859" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_CR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40024524))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10" refid="ports_8h_1a3da5ec11f639e4aa05b7306a6104cc7c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_AMSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40024528))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11" refid="ports_8h_1aa0f23f6b60cb39e1a89f6add5f812dbf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_PCTL_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4002452C))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ports_8h_1a2c10edb046a08d0f0d72d288c9c64dfc" kindref="member">PortEInit</ref>();</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GPIO<sp/>pins<sp/>D</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="ports_8h_1ad0d3399a138102ee061bca7015c266c1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_DATA_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400073FC))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21" refid="ports_8h_1a6d6b3cdd74974a77f72f48b850350734" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_DIR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40007400))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="ports_8h_1a97eeedd60368782e6374a99071b00779" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_AFSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40007420))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23" refid="ports_8h_1acf4706f2b9ef14286e79c21ead4734c7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_PUR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40007510))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24" refid="ports_8h_1a37a81aa284c08f621656d5a3375dd42e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_DEN_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4000751C))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25" refid="ports_8h_1a7b56aac6d49c15704f5b9ebc8750a1a4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_LOCK_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40007520))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26" refid="ports_8h_1a92b46ca3cdd353e4c93d2fdb364fa47c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_CR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40007524))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27" refid="ports_8h_1a405d017e972db8371ab51129aa17c0b1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_AMSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40007528))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28" refid="ports_8h_1a9632c3e19b49afe8ce5f8d10c8a45e6e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_PCTL_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4000752C))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ports_8h_1a21efc6fa081c0b9c85eafe9d7455b9b6" kindref="member">PortDInit</ref>();</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GPIO<sp/>pins<sp/>B<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="ports_8h_1aa8d764ef0ff488cb4d3aa5ebaed85c63" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_DATA_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400053FC))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="ports_8h_1a8a1bacf2a566d3044b8796425744fac4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_DIR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40005400))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="ports_8h_1a7022b70050a4f97658dce0aad02d0db1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_AFSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40005420))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="ports_8h_1abfcd28903e52c694028b0359a00f22fb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_PUR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40005510))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41" refid="ports_8h_1abcfeaa888e77b65fe7d8f24151a8e54e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_DEN_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4000551C))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="ports_8h_1afd3c385f1c3122e84bb1695e7bd492c6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_LOCK_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40005520))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43" refid="ports_8h_1a34c7bab0210a3ba8128547736c727969" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_CR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40005524))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="ports_8h_1a4a502a5576e3339072d2163a26ddbf47" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_AMSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40005528))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="ports_8h_1ae3541a70b084dde10fc09023c35d0fb6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_PCTL_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4000552C))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ports_8h_1aaebad24f567e2e1f53e6252fd325371a" kindref="member">PortBInit</ref>();</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GPIO<sp/>pins<sp/>A<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54" refid="ports_8h_1aab6c9ecc299957bf3eba9696b940b3b9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_DATA_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400043FC))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55" refid="ports_8h_1a7bd88286093153428dc799f5431ecaa6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_DIR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40004400))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="ports_8h_1af5b07acb4f1cc3ca489610f8c70f0e95" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_AFSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40004420))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57" refid="ports_8h_1a29d38a6471dfec693f9ec4bd7f9550a0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_PUR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40004510))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="58" refid="ports_8h_1a803f6958edee8ea0e1b655978e66b8e1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_DEN_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4000451C))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59" refid="ports_8h_1a6f0f5595c812747799cf9ad570b4169f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_LOCK_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40004520))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60" refid="ports_8h_1a51a6914055b43c27be9a2bfceee00fc4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_CR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40004524))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="61" refid="ports_8h_1a41377c72de4d7805cd2252d5bf29be1a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_AMSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40004528))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="62" refid="ports_8h_1ade9da9d2c5b929e1b256ea5100dfaf88" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_PCTL_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4000452C))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ports_8h_1a03c4992f00f155be0425086ad67578f2" kindref="member">PortAInit</ref>();</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72" refid="ports_8h_1a6faf63c7d3a41fd7aa67cb3f49112d58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_DATA_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400253FC))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="73" refid="ports_8h_1a4af807e7c41e4e51a09ab6598280d09b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_DIR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025400))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74" refid="ports_8h_1a8f9c5b1caa2f2206e46d6e55033ba1df" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_AFSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025420))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="75" refid="ports_8h_1ad61970840fbdec3b021a6cd4b176ceb5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_PUR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025510))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="ports_8h_1ace684566ac3dee1c9230633165118a61" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_DEN_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4002551C))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="77" refid="ports_8h_1a905788cdfb00eea4f716d3ed280f1e20" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_LOCK_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025520))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78" refid="ports_8h_1a5b37d58feb20c8629db10975b31b6dbc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_CR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025524))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79" refid="ports_8h_1a792408dc154a55fd9e0ad13cca3db4c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_AMSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025528))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80" refid="ports_8h_1abdf740d2017978b00975ad06bf38f1eb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_PCTL_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4002552C))</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ports_8h_1af2e39e21502cda9b92080c1e650e3ca6" kindref="member">PortFInit</ref>();</highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>PORTS_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>not<sp/>defined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="ports_8h_1a45ea33ff2946109d424b7238be6a7775" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PORTS_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GPIO<sp/>pins<sp/>E</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="ports_8h_1a7e8177f717264265e3fdea037f55d4bd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_DATA_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400243FC))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="ports_8h_1aabac097a16539e9dc054b9ebb6bfe6c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_DIR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40024400))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="ports_8h_1af2e23e7556959fbbf0cd4c19aab7ebf3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_AFSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40024420))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="ports_8h_1a780d4382200cf49047f85429aeebfbdd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_PUR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40024510))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="ports_8h_1aa1c99162bac922e30af2bb6960272e23" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_PDR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40024514))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="ports_8h_1a4eb0814dc5e7e015bf1714dcb606f0b5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_DEN_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4002451C))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="ports_8h_1a79449afe84506a94221893d7a712c39c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_LOCK_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40024520))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="ports_8h_1aab70b1d3f9ffa90dc0c70b4fd4479859" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_CR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40024524))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="ports_8h_1a3da5ec11f639e4aa05b7306a6104cc7c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_AMSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40024528))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="ports_8h_1aa0f23f6b60cb39e1a89f6add5f812dbf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTE_PCTL_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4002452C))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ports_8h_1a2c10edb046a08d0f0d72d288c9c64dfc" kindref="member">PortEInit</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GPIO<sp/>pins<sp/>D</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="ports_8h_1ad0d3399a138102ee061bca7015c266c1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_DATA_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400073FC))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="ports_8h_1a6d6b3cdd74974a77f72f48b850350734" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_DIR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40007400))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="ports_8h_1a97eeedd60368782e6374a99071b00779" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_AFSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40007420))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="ports_8h_1acf4706f2b9ef14286e79c21ead4734c7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_PUR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40007510))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="ports_8h_1a37a81aa284c08f621656d5a3375dd42e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_DEN_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4000751C))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="ports_8h_1a7b56aac6d49c15704f5b9ebc8750a1a4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_LOCK_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40007520))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="ports_8h_1a92b46ca3cdd353e4c93d2fdb364fa47c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_CR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40007524))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="ports_8h_1a405d017e972db8371ab51129aa17c0b1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_AMSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40007528))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="ports_8h_1a9632c3e19b49afe8ce5f8d10c8a45e6e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTD_PCTL_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4000752C))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ports_8h_1a21efc6fa081c0b9c85eafe9d7455b9b6" kindref="member">PortDInit</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GPIO<sp/>pins<sp/>B<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="ports_8h_1aa8d764ef0ff488cb4d3aa5ebaed85c63" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_DATA_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400053FC))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="ports_8h_1a8a1bacf2a566d3044b8796425744fac4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_DIR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40005400))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="ports_8h_1a7022b70050a4f97658dce0aad02d0db1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_AFSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40005420))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="ports_8h_1abfcd28903e52c694028b0359a00f22fb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_PUR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40005510))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="ports_8h_1abcfeaa888e77b65fe7d8f24151a8e54e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_DEN_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4000551C))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="ports_8h_1afd3c385f1c3122e84bb1695e7bd492c6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_LOCK_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40005520))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="ports_8h_1a34c7bab0210a3ba8128547736c727969" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_CR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40005524))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="ports_8h_1a4a502a5576e3339072d2163a26ddbf47" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_AMSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40005528))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="ports_8h_1ae3541a70b084dde10fc09023c35d0fb6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTB_PCTL_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4000552C))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ports_8h_1aaebad24f567e2e1f53e6252fd325371a" kindref="member">PortBInit</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GPIO<sp/>pins<sp/>A<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="ports_8h_1aab6c9ecc299957bf3eba9696b940b3b9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_DATA_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400043FC))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="ports_8h_1a7bd88286093153428dc799f5431ecaa6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_DIR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40004400))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="ports_8h_1af5b07acb4f1cc3ca489610f8c70f0e95" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_AFSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40004420))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="ports_8h_1a29d38a6471dfec693f9ec4bd7f9550a0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_PUR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40004510))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="ports_8h_1a803f6958edee8ea0e1b655978e66b8e1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_DEN_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4000451C))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="ports_8h_1a6f0f5595c812747799cf9ad570b4169f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_LOCK_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40004520))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="ports_8h_1a51a6914055b43c27be9a2bfceee00fc4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_CR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40004524))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="ports_8h_1a41377c72de4d7805cd2252d5bf29be1a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_AMSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40004528))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="ports_8h_1ade9da9d2c5b929e1b256ea5100dfaf88" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTA_PCTL_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4000452C))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ports_8h_1a03c4992f00f155be0425086ad67578f2" kindref="member">PortAInit</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="ports_8h_1a6faf63c7d3a41fd7aa67cb3f49112d58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_DATA_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x400253FC))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="ports_8h_1a4af807e7c41e4e51a09ab6598280d09b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_DIR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025400))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="ports_8h_1a8f9c5b1caa2f2206e46d6e55033ba1df" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_AFSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025420))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="ports_8h_1ad61970840fbdec3b021a6cd4b176ceb5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_PUR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025510))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="ports_8h_1ace684566ac3dee1c9230633165118a61" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_DEN_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4002551C))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="ports_8h_1a905788cdfb00eea4f716d3ed280f1e20" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_LOCK_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025520))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="ports_8h_1a5b37d58feb20c8629db10975b31b6dbc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_CR_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025524))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="ports_8h_1a792408dc154a55fd9e0ad13cca3db4c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_AMSEL_R<sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x40025528))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="ports_8h_1abdf740d2017978b00975ad06bf38f1eb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PORTF_PCTL_R<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4002552C))</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ports_8h_1af2e39e21502cda9b92080c1e650e3ca6" kindref="member">PortFInit</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="ports.h"/>
+    <location file="src/ports.h"/>
   </compounddef>
 </doxygen>

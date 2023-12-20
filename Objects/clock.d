@@ -1,1 +1,1 @@
-./objects/clock.o: clock.c clock.h
+./objects/clock.o: src\clock.c src\clock.h

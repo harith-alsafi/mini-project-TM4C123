@@ -1,15 +1,17 @@
-\doxysection{clock.\+h File Reference}
-\hypertarget{clock_8h}{}\label{clock_8h}\index{clock.h@{clock.h}}
+\doxysection{src/clock.h File Reference}
+\hypertarget{clock_8h}{}\label{clock_8h}\index{src/clock.h@{src/clock.h}}
 This graph shows which files directly or indirectly include this file\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=310pt]{clock_8h__dep__incl}
+\includegraphics[width=350pt]{clock_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{clock_8h_a8d85d526f6d06f351f5ad915765de293}{CLOCK\+\_\+H}}
 \item 
 \#define \mbox{\hyperlink{clock_8h_a2fedfceccf18bd54a499e73d1b76e506}{SYSCTL\+\_\+\+RCGC2\+\_\+R}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x400\+FE108))
 \item 
@@ -32,17 +34,27 @@ void \mbox{\hyperlink{clock_8h_a58cf193ae5c1f330e4868e32afb9445d}{Sys\+Tick\+Ini
 \begin{DoxyCompactList}\small\item\em Initializes sys tick. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{clock_8h_a21cfe49b38d53efaf75df16d21ed882a}{PLLInit}} ()
 \begin{DoxyCompactList}\small\item\em Initalizes the PLL to 80 MHz. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{clock_8h_a9b776ea9ad4388518694b3c099238a74}{Sys\+Tick\+Wait}} (unsigned long \mbox{\hyperlink{test_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}})
+void \mbox{\hyperlink{clock_8h_a9b776ea9ad4388518694b3c099238a74}{Sys\+Tick\+Wait}} (unsigned long \mbox{\hyperlink{playground_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}})
 \begin{DoxyCompactList}\small\item\em Uses the 80 MHz PLL to create a delay in units of 12.\+5ns. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{clock_8h_a2b0d30a37314c42f7d52aeec96a6e3ac}{Delay\+Nano}} (unsigned long nanoseconds)
 \begin{DoxyCompactList}\small\item\em Uses. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{clock_8h_a44cfb49005f69fe95c0ce5f30b9a660e}{Delay\+Micro}} (unsigned long microseconds)
 \begin{DoxyCompactList}\small\item\em Uses. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{clock_8h_a38d766a6d881470e7e8edfe0a222141e}{Delay\+Milli}} (unsigned long millisecond)
+void \mbox{\hyperlink{clock_8h_a2e760c634cc89519ad0956fc258eab46}{Delay\+Milli}} (unsigned long milliseconds)
 \begin{DoxyCompactList}\small\item\em Uses. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
+\Hypertarget{clock_8h_a8d85d526f6d06f351f5ad915765de293}\label{clock_8h_a8d85d526f6d06f351f5ad915765de293} 
+\index{clock.h@{clock.h}!CLOCK\_H@{CLOCK\_H}}
+\index{CLOCK\_H@{CLOCK\_H}!clock.h@{clock.h}}
+\doxysubsubsection{\texorpdfstring{CLOCK\_H}{CLOCK\_H}}
+{\footnotesize\ttfamily \#define CLOCK\+\_\+H}
+
+
+
+Definition at line \mbox{\hyperlink{clock_8h_source_l00002}{2}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
+
 \Hypertarget{clock_8h_adcfc8530f81c2ebea5d6b229ba4f9d3f}\label{clock_8h_adcfc8530f81c2ebea5d6b229ba4f9d3f} 
 \index{clock.h@{clock.h}!NVIC\_ST\_CTRL\_R@{NVIC\_ST\_CTRL\_R}}
 \index{NVIC\_ST\_CTRL\_R@{NVIC\_ST\_CTRL\_R}!clock.h@{clock.h}}
@@ -51,7 +63,7 @@ void \mbox{\hyperlink{clock_8h_a38d766a6d881470e7e8edfe0a222141e}{Delay\+Milli}}
 
 
 
-Definition at line \mbox{\hyperlink{clock_8h_source_l00010}{10}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
+Definition at line \mbox{\hyperlink{clock_8h_source_l00013}{13}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
 
 \Hypertarget{clock_8h_a83b8a7cd422c2dde3c671c9255216cff}\label{clock_8h_a83b8a7cd422c2dde3c671c9255216cff} 
 \index{clock.h@{clock.h}!NVIC\_ST\_CURRENT\_R@{NVIC\_ST\_CURRENT\_R}}
@@ -61,7 +73,7 @@ Definition at line \mbox{\hyperlink{clock_8h_source_l00010}{10}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{clock_8h_source_l00012}{12}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
+Definition at line \mbox{\hyperlink{clock_8h_source_l00015}{15}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
 
 \Hypertarget{clock_8h_a1c404f068f1ba79d68c7cc4302112da3}\label{clock_8h_a1c404f068f1ba79d68c7cc4302112da3} 
 \index{clock.h@{clock.h}!NVIC\_ST\_RELOAD\_R@{NVIC\_ST\_RELOAD\_R}}
@@ -71,7 +83,7 @@ Definition at line \mbox{\hyperlink{clock_8h_source_l00012}{12}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{clock_8h_source_l00011}{11}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
+Definition at line \mbox{\hyperlink{clock_8h_source_l00014}{14}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
 
 \Hypertarget{clock_8h_a0dd31b093c1a83329f67d1df68df4d58}\label{clock_8h_a0dd31b093c1a83329f67d1df68df4d58} 
 \index{clock.h@{clock.h}!SYSCTL\_RCC2\_R@{SYSCTL\_RCC2\_R}}
@@ -81,7 +93,7 @@ Definition at line \mbox{\hyperlink{clock_8h_source_l00011}{11}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{clock_8h_source_l00007}{7}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
+Definition at line \mbox{\hyperlink{clock_8h_source_l00010}{10}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
 
 \Hypertarget{clock_8h_adaab842b86f022de9497dd36d1e35643}\label{clock_8h_adaab842b86f022de9497dd36d1e35643} 
 \index{clock.h@{clock.h}!SYSCTL\_RCC\_R@{SYSCTL\_RCC\_R}}
@@ -91,7 +103,7 @@ Definition at line \mbox{\hyperlink{clock_8h_source_l00007}{7}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{clock_8h_source_l00006}{6}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
+Definition at line \mbox{\hyperlink{clock_8h_source_l00009}{9}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
 
 \Hypertarget{clock_8h_a2fedfceccf18bd54a499e73d1b76e506}\label{clock_8h_a2fedfceccf18bd54a499e73d1b76e506} 
 \index{clock.h@{clock.h}!SYSCTL\_RCGC2\_R@{SYSCTL\_RCGC2\_R}}
@@ -101,7 +113,7 @@ Definition at line \mbox{\hyperlink{clock_8h_source_l00006}{6}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{clock_8h_source_l00002}{2}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
+Definition at line \mbox{\hyperlink{clock_8h_source_l00005}{5}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
 
 \Hypertarget{clock_8h_ac1e0e3bbc40315eaa5e3cad513d5dae8}\label{clock_8h_ac1e0e3bbc40315eaa5e3cad513d5dae8} 
 \index{clock.h@{clock.h}!SYSCTL\_RIS\_R@{SYSCTL\_RIS\_R}}
@@ -111,7 +123,7 @@ Definition at line \mbox{\hyperlink{clock_8h_source_l00002}{2}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{clock_8h_source_l00005}{5}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
+Definition at line \mbox{\hyperlink{clock_8h_source_l00008}{8}} of file \mbox{\hyperlink{clock_8h_source}{clock.\+h}}.
 
 
 
@@ -136,14 +148,14 @@ Delay\+Nano() to create a delay in units of microseconds
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{clock_8c_source_l00046}{46}} of file \mbox{\hyperlink{clock_8c_source}{clock.\+c}}.
+Definition at line \mbox{\hyperlink{clock_8c_source_l00047}{47}} of file \mbox{\hyperlink{clock_8c_source}{clock.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{clock_8h_a44cfb49005f69fe95c0ce5f30b9a660e_cgraph}
+\includegraphics[width=328pt]{clock_8h_a44cfb49005f69fe95c0ce5f30b9a660e_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -154,11 +166,11 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{clock_8h_a44cfb49005f69fe95c0ce5f30b9a660e_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{clock_8h_a38d766a6d881470e7e8edfe0a222141e}\label{clock_8h_a38d766a6d881470e7e8edfe0a222141e} 
+\Hypertarget{clock_8h_a2e760c634cc89519ad0956fc258eab46}\label{clock_8h_a2e760c634cc89519ad0956fc258eab46} 
 \index{clock.h@{clock.h}!DelayMilli@{DelayMilli}}
 \index{DelayMilli@{DelayMilli}!clock.h@{clock.h}}
 \doxysubsubsection{\texorpdfstring{DelayMilli()}{DelayMilli()}}
-{\footnotesize\ttfamily void Delay\+Milli (\begin{DoxyParamCaption}\item[{unsigned long}]{millisecond }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Delay\+Milli (\begin{DoxyParamCaption}\item[{unsigned long}]{milliseconds }\end{DoxyParamCaption})}
 
 
 
@@ -174,14 +186,14 @@ Delay\+Micro() to create a delay in units of milliseconds
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{clock_8c_source_l00050}{50}} of file \mbox{\hyperlink{clock_8c_source}{clock.\+c}}.
+Definition at line \mbox{\hyperlink{clock_8c_source_l00054}{54}} of file \mbox{\hyperlink{clock_8c_source}{clock.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{clock_8h_a38d766a6d881470e7e8edfe0a222141e_cgraph}
+\includegraphics[width=321pt]{clock_8h_a2e760c634cc89519ad0956fc258eab46_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -189,7 +201,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{clock_8h_a38d766a6d881470e7e8edfe0a222141e_icgraph}
+\includegraphics[width=350pt]{clock_8h_a2e760c634cc89519ad0956fc258eab46_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{clock_8h_a2b0d30a37314c42f7d52aeec96a6e3ac}\label{clock_8h_a2b0d30a37314c42f7d52aeec96a6e3ac} 
@@ -244,8 +256,7 @@ Initalizes the PLL to 80 MHz.
 
 Definition at line \mbox{\hyperlink{clock_8c_source_l00010}{10}} of file \mbox{\hyperlink{clock_8c_source}{clock.\+c}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -266,8 +277,7 @@ Initializes sys tick.
 
 Definition at line \mbox{\hyperlink{clock_8c_source_l00003}{3}} of file \mbox{\hyperlink{clock_8c_source}{clock.\+c}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

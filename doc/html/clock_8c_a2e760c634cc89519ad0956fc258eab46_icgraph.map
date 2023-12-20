@@ -1,0 +1,14 @@
+<map id="DelayMilli" name="DelayMilli">
+<area shape="rect" id="Node000001" title="Uses." alt="" coords="475,56,552,83"/>
+<area shape="rect" id="Node000002" href="$lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="311,56,427,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="459,72,427,72,427,67,459,67"/>
+<area shape="rect" id="Node000003" href="$lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="204,5,263,32"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="459,55,426,47,338,32,264,24,264,18,338,27,427,41,460,50"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="460,90,427,97,373,103,318,104,211,99,119,88,55,77,56,72,120,83,212,94,318,99,373,97,426,92,459,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="316,53,263,32,265,27,318,48"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="296,72,55,72,55,67,296,67"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="103,5,156,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="188,21,156,21,156,16,188,16"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="90,42,57,59,54,54,88,37"/>
+</map>

@@ -2,32 +2,79 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="keypad_8c" kind="file" language="C++">
     <compoundname>keypad.c</compoundname>
-    <sectiondef kind="func">
-      <memberdef kind="function" id="keypad_8c_1ae6ab35ff194b314a314a5054259ffa9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int IsPressed</definition>
-        <argsstring>()</argsstring>
-        <name>IsPressed</name>
+    <includes refid="keypad_8h" local="yes">keypad.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/keypad.c</label>
+        <link refid="keypad_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>keypad.h</label>
+        <link refid="keypad_8h"/>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="keypad_8c_1a7465f8ed0343f8e4044387a0429afb32" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char keypad[KEYPAD_N][KEYPAD_N]</definition>
+        <argsstring>[KEYPAD_N][KEYPAD_N]</argsstring>
+        <name>keypad</name>
+        <initializer>= {
+    {&apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;A&apos;},
+    {&apos;4&apos;, &apos;5&apos;, &apos;6&apos;, &apos;B&apos;},
+    {&apos;7&apos;, &apos;8&apos;, &apos;9&apos;, &apos;C&apos;},
+    {&apos;*&apos;, &apos;0&apos;, &apos;#&apos;, &apos;D&apos;}
+}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="keypad.c" line="1" column="5" declfile="keypad.c" declline="1" declcolumn="5"/>
+        <location file="src/keypad.c" line="3" column="12" bodyfile="src/keypad.c" bodystart="3" bodyend="8"/>
       </memberdef>
-      <memberdef kind="function" id="keypad_8c_1a2d42937c3f3d49c8958ce119e6b745fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>char</type>
-        <definition>char GetKey</definition>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="keypad_8c_1a02e5cd605c64773d944bc322b51222cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char KeypadGetRow</definition>
         <argsstring>()</argsstring>
-        <name>GetKey</name>
+        <name>KeypadGetRow</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="keypad.c" line="3" column="6" declfile="keypad.c" declline="3" declcolumn="6"/>
+        <location file="src/keypad.c" line="10" column="15" bodyfile="src/keypad.c" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="keypad_8c_1a7dba628d7c95a933378f3a008344a4d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char KeypadGetCol</definition>
+        <argsstring>()</argsstring>
+        <name>KeypadGetCol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/keypad.c" line="14" column="15" bodyfile="src/keypad.c" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="keypad_8c_1ab826b54bc6305f49d758d28173041ab7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char KeypadGetChar</definition>
+        <argsstring>()</argsstring>
+        <name>KeypadGetChar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/keypad.c" line="19" column="6" bodyfile="src/keypad.c" bodystart="19" bodyend="22"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -35,10 +82,29 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1" refid="keypad_8c_1ae6ab35ff194b314a314a5054259ffa9a" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="keypad_8c_1ae6ab35ff194b314a314a5054259ffa9a" kindref="member">IsPressed</ref>();</highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="keypad_8h" kindref="compound">keypad.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="keypad_8c_1a2d42937c3f3d49c8958ce119e6b745fd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="keypad_8c_1a2d42937c3f3d49c8958ce119e6b745fd" kindref="member">GetKey</ref>();</highlight></codeline>
+<codeline lineno="3" refid="keypad_8c_1a7465f8ed0343f8e4044387a0429afb32" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="keypad_8c_1a7465f8ed0343f8e4044387a0429afb32" kindref="member">keypad</ref>[<ref refid="keypad_8h_1acc73b1692bde87ce0a891af4dece22fc" kindref="member">KEYPAD_N</ref>][<ref refid="keypad_8h_1acc73b1692bde87ce0a891af4dece22fc" kindref="member">KEYPAD_N</ref>]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;2&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;3&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight><highlight class="charliteral">&apos;4&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;5&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;6&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;B&apos;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight><highlight class="charliteral">&apos;7&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;8&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;9&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;C&apos;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;#&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;D&apos;</highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="keypad_8c_1a02e5cd605c64773d944bc322b51222cd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="keypad_8c_1a02e5cd605c64773d944bc322b51222cd" kindref="member">KeypadGetRow</ref>(){</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="keypad_8c_1a7dba628d7c95a933378f3a008344a4d3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="keypad_8c_1a7dba628d7c95a933378f3a008344a4d3" kindref="member">KeypadGetCol</ref>(){</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="keypad_8c_1ab826b54bc6305f49d758d28173041ab7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="keypad_8c_1ab826b54bc6305f49d758d28173041ab7" kindref="member">KeypadGetChar</ref>(){</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="keypad.c"/>
+    <location file="src/keypad.c"/>
   </compounddef>
 </doxygen>

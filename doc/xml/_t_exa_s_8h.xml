@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="TExaS.h" line="25" column="1" bodyfile="TExaS.h" bodystart="25" bodyend="27"/>
+        <location file="src/TExaS.h" line="25" column="1" bodyfile="src/TExaS.h" bodystart="25" bodyend="27"/>
       </memberdef>
       <memberdef kind="enum" id="_t_exa_s_8h_1a3bc4dd15d49b553a283366165300d515" prot="public" static="no" strong="no">
         <type></type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="TExaS.h" line="29" column="1" bodyfile="TExaS.h" bodystart="29" bodyend="31"/>
+        <location file="src/TExaS.h" line="29" column="1" bodyfile="src/TExaS.h" bodystart="29" bodyend="31"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="TExaS.h" line="39" column="6" declfile="TExaS.h" declline="39" declcolumn="6"/>
+        <location file="src/TExaS.h" line="39" column="6" declfile="src/TExaS.h" declline="39" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="_t_exa_s_8h_1adeb7fccbbb1881b866ba3ad16712294c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="TExaS.h" line="45" column="6" declfile="TExaS.h" declline="45" declcolumn="6"/>
+        <location file="src/TExaS.h" line="45" column="6" declfile="src/TExaS.h" declline="45" declcolumn="6"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -132,6 +132,6 @@
 <codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Outputs:<sp/>none</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="45" refid="_t_exa_s_8h_1adeb7fccbbb1881b866ba3ad16712294c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_t_exa_s_8h_1adeb7fccbbb1881b866ba3ad16712294c" kindref="member">TExaS_Stop</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
     </programlisting>
-    <location file="TExaS.h"/>
+    <location file="src/TExaS.h"/>
   </compounddef>
 </doxygen>

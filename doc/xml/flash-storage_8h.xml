@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="flash-storage_8h" kind="file" language="C++">
+    <compoundname>flash-storage.h</compoundname>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="flash-storage_8h_1a52984b41e45a13e9f7e687e1c4a07a2d" prot="public" static="no">
+        <name>FLASH_STORAGE_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/flash-storage.h" line="2" column="9" bodyfile="src/flash-storage.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>FLASH_STORAGE_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>not<sp/>defined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="flash-storage_8h_1a52984b41e45a13e9f7e687e1c4a07a2d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_STORAGE_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/flash-storage.h"/>
+  </compounddef>
+</doxygen>

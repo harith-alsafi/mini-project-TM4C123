@@ -1,5 +1,31 @@
 \doxysection{keypad.\+h}
-\hypertarget{keypad_8h_source}{}\label{keypad_8h_source}\mbox{\hyperlink{keypad_8h}{Go to the documentation of this file.}}
+\hypertarget{keypad_8h_source}{}\label{keypad_8h_source}\index{src/keypad.h@{src/keypad.h}}
+\mbox{\hyperlink{keypad_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ KEYPAD\_H\ \ \ }\textcolor{comment}{//\ If\ not\ defined}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00002}\mbox{\hyperlink{keypad_8h_ae317b84750ff882cede31494435f459f}{00002}}\ \textcolor{preprocessor}{\#define\ KEYPAD\_H\ \ \ }\textcolor{comment}{//\ Define\ it}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00004}00004\ \textcolor{comment}{//\ COL\ 1\ -\/>\ PD0}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00005}00005\ \textcolor{comment}{//\ COL\ 2\ -\/>\ PD1}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00006}00006\ \textcolor{comment}{//\ COL\ 3\ -\/>\ PD2}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00007}00007\ \textcolor{comment}{//\ COL\ 3\ -\/>\ PD3}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00008}\mbox{\hyperlink{keypad_8h_a89c99b60305ab3808a34321cb3b6ba9f}{00008}}\ \textcolor{preprocessor}{\#define\ KEYPAD\_COL\ (*((volatile\ unsigned\ long\ *)0x4000703C))}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00010}00010\ \textcolor{comment}{//\ ROW\ 1\ -\/>\ PE0}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00011}00011\ \textcolor{comment}{//\ ROW\ 2\ -\/>\ PE1}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00012}00012\ \textcolor{comment}{//\ ROW\ 3\ -\/>\ PE2}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00013}00013\ \textcolor{comment}{//\ ROW\ 3\ -\/>\ PE3}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00014}\mbox{\hyperlink{keypad_8h_a2267a85aea25120c5c2df97e1b0ec34f}{00014}}\ \textcolor{preprocessor}{\#define\ KEYPAD\_ROW\ (*((volatile\ unsigned\ long\ *)0x4002403C))}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00015}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{00015}}\ \textcolor{preprocessor}{\#define\ KEYPAD\_N\ 4}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00017}00017\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8h_a7465f8ed0343f8e4044387a0429afb32}{keypad}}[\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\_N}}][\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\_N}}];}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00019}00019\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8h_a02e5cd605c64773d944bc322b51222cd}{KeypadGetRow}}();}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00021}00021\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8h_a7dba628d7c95a933378f3a008344a4d3}{KeypadGetCol}}();}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00023}00023\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8h_ab826b54bc6305f49d758d28173041ab7}{KeypadGetChar}}();}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00025}00025\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

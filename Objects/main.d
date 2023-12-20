@@ -1,1 +1,1 @@
-./objects/main.o: main.c clock.h lcd.h ports.h
+./objects/main.o: src\main.c src\clock.h src\lcd.h src\ports.h

@@ -1,2 +1,124 @@
-\doxysection{keypad.\+h File Reference}
-\hypertarget{keypad_8h}{}\label{keypad_8h}\index{keypad.h@{keypad.h}}
+\doxysection{src/keypad.h File Reference}
+\hypertarget{keypad_8h}{}\label{keypad_8h}\index{src/keypad.h@{src/keypad.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{keypad_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{keypad_8h_ae317b84750ff882cede31494435f459f}{KEYPAD\+\_\+H}}
+\item 
+\#define \mbox{\hyperlink{keypad_8h_a89c99b60305ab3808a34321cb3b6ba9f}{KEYPAD\+\_\+\+COL}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4000703C))
+\item 
+\#define \mbox{\hyperlink{keypad_8h_a2267a85aea25120c5c2df97e1b0ec34f}{KEYPAD\+\_\+\+ROW}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4002403C))
+\item 
+\#define \mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}~4
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \mbox{\hyperlink{keypad_8h_a02e5cd605c64773d944bc322b51222cd}{Keypad\+Get\+Row}} ()
+\item 
+unsigned char \mbox{\hyperlink{keypad_8h_a7dba628d7c95a933378f3a008344a4d3}{Keypad\+Get\+Col}} ()
+\item 
+char \mbox{\hyperlink{keypad_8h_ab826b54bc6305f49d758d28173041ab7}{Keypad\+Get\+Char}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \mbox{\hyperlink{keypad_8h_a7465f8ed0343f8e4044387a0429afb32}{keypad}} \mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}\mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{keypad_8h_a89c99b60305ab3808a34321cb3b6ba9f}\label{keypad_8h_a89c99b60305ab3808a34321cb3b6ba9f} 
+\index{keypad.h@{keypad.h}!KEYPAD\_COL@{KEYPAD\_COL}}
+\index{KEYPAD\_COL@{KEYPAD\_COL}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KEYPAD\_COL}{KEYPAD\_COL}}
+{\footnotesize\ttfamily \#define KEYPAD\+\_\+\+COL~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4000703C))}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8h_source_l00008}{8}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
+
+\Hypertarget{keypad_8h_ae317b84750ff882cede31494435f459f}\label{keypad_8h_ae317b84750ff882cede31494435f459f} 
+\index{keypad.h@{keypad.h}!KEYPAD\_H@{KEYPAD\_H}}
+\index{KEYPAD\_H@{KEYPAD\_H}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KEYPAD\_H}{KEYPAD\_H}}
+{\footnotesize\ttfamily \#define KEYPAD\+\_\+H}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8h_source_l00002}{2}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
+
+\Hypertarget{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}\label{keypad_8h_acc73b1692bde87ce0a891af4dece22fc} 
+\index{keypad.h@{keypad.h}!KEYPAD\_N@{KEYPAD\_N}}
+\index{KEYPAD\_N@{KEYPAD\_N}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KEYPAD\_N}{KEYPAD\_N}}
+{\footnotesize\ttfamily \#define KEYPAD\+\_\+N~4}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8h_source_l00015}{15}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
+
+\Hypertarget{keypad_8h_a2267a85aea25120c5c2df97e1b0ec34f}\label{keypad_8h_a2267a85aea25120c5c2df97e1b0ec34f} 
+\index{keypad.h@{keypad.h}!KEYPAD\_ROW@{KEYPAD\_ROW}}
+\index{KEYPAD\_ROW@{KEYPAD\_ROW}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KEYPAD\_ROW}{KEYPAD\_ROW}}
+{\footnotesize\ttfamily \#define KEYPAD\+\_\+\+ROW~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4002403C))}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8h_source_l00014}{14}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{keypad_8h_ab826b54bc6305f49d758d28173041ab7}\label{keypad_8h_ab826b54bc6305f49d758d28173041ab7} 
+\index{keypad.h@{keypad.h}!KeypadGetChar@{KeypadGetChar}}
+\index{KeypadGetChar@{KeypadGetChar}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KeypadGetChar()}{KeypadGetChar()}}
+{\footnotesize\ttfamily char Keypad\+Get\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00019}{19}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+
+\Hypertarget{keypad_8h_a7dba628d7c95a933378f3a008344a4d3}\label{keypad_8h_a7dba628d7c95a933378f3a008344a4d3} 
+\index{keypad.h@{keypad.h}!KeypadGetCol@{KeypadGetCol}}
+\index{KeypadGetCol@{KeypadGetCol}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KeypadGetCol()}{KeypadGetCol()}}
+{\footnotesize\ttfamily unsigned char Keypad\+Get\+Col (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00014}{14}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+
+\Hypertarget{keypad_8h_a02e5cd605c64773d944bc322b51222cd}\label{keypad_8h_a02e5cd605c64773d944bc322b51222cd} 
+\index{keypad.h@{keypad.h}!KeypadGetRow@{KeypadGetRow}}
+\index{KeypadGetRow@{KeypadGetRow}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KeypadGetRow()}{KeypadGetRow()}}
+{\footnotesize\ttfamily unsigned char Keypad\+Get\+Row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00010}{10}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{keypad_8h_a7465f8ed0343f8e4044387a0429afb32}\label{keypad_8h_a7465f8ed0343f8e4044387a0429afb32} 
+\index{keypad.h@{keypad.h}!keypad@{keypad}}
+\index{keypad@{keypad}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{keypad}{keypad}}
+{\footnotesize\ttfamily const char keypad\mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}\mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00003}{3}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+

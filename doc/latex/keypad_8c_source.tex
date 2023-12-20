@@ -1,8 +1,28 @@
 \doxysection{keypad.\+c}
-\hypertarget{keypad_8c_source}{}\label{keypad_8c_source}\mbox{\hyperlink{keypad_8c}{Go to the documentation of this file.}}
+\hypertarget{keypad_8c_source}{}\label{keypad_8c_source}\index{src/keypad.c@{src/keypad.c}}
+\mbox{\hyperlink{keypad_8c}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00001}\mbox{\hyperlink{keypad_8c_ae6ab35ff194b314a314a5054259ffa9a}{00001}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{keypad_8c_ae6ab35ff194b314a314a5054259ffa9a}{IsPressed}}();}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{keypad_8h}{keypad.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{keypad_8c_source_l00002}00002\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00003}\mbox{\hyperlink{keypad_8c_a2d42937c3f3d49c8958ce119e6b745fd}{00003}}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8c_a2d42937c3f3d49c8958ce119e6b745fd}{GetKey}}();}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00003}\mbox{\hyperlink{keypad_8c_a7465f8ed0343f8e4044387a0429afb32}{00003}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8c_a7465f8ed0343f8e4044387a0429afb32}{keypad}}[\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\_N}}][\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\_N}}]\ =\ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00004}00004\ \ \ \ \ \{\textcolor{charliteral}{'1'},\ \textcolor{charliteral}{'2'},\ \textcolor{charliteral}{'3'},\ \textcolor{charliteral}{'A'}\},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00005}00005\ \ \ \ \ \{\textcolor{charliteral}{'4'},\ \textcolor{charliteral}{'5'},\ \textcolor{charliteral}{'6'},\ \textcolor{charliteral}{'B'}\},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00006}00006\ \ \ \ \ \{\textcolor{charliteral}{'7'},\ \textcolor{charliteral}{'8'},\ \textcolor{charliteral}{'9'},\ \textcolor{charliteral}{'C'}\},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00007}00007\ \ \ \ \ \{\textcolor{charliteral}{'*'},\ \textcolor{charliteral}{'0'},\ \textcolor{charliteral}{'\#'},\ \textcolor{charliteral}{'D'}\}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00008}00008\ \};}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00010}\mbox{\hyperlink{keypad_8c_a02e5cd605c64773d944bc322b51222cd}{00010}}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8c_a02e5cd605c64773d944bc322b51222cd}{KeypadGetRow}}()\{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00012}00012\ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00014}\mbox{\hyperlink{keypad_8c_a7dba628d7c95a933378f3a008344a4d3}{00014}}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8c_a7dba628d7c95a933378f3a008344a4d3}{KeypadGetCol}}()\{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00017}00017\ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00019}\mbox{\hyperlink{keypad_8c_ab826b54bc6305f49d758d28173041ab7}{00019}}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8c_ab826b54bc6305f49d758d28173041ab7}{KeypadGetChar}}()\{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00022}00022\ \}}
 
 \end{DoxyCode}

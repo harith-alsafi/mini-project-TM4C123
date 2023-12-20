@@ -1,24 +1,81 @@
-\doxysection{keypad.\+c File Reference}
-\hypertarget{keypad_8c}{}\label{keypad_8c}\index{keypad.c@{keypad.c}}
+\doxysection{src/keypad.c File Reference}
+\hypertarget{keypad_8c}{}\label{keypad_8c}\index{src/keypad.c@{src/keypad.c}}
+{\ttfamily \#include "{}keypad.\+h"{}}\newline
+Include dependency graph for keypad.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{keypad_8c__incl}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{keypad_8c_ae6ab35ff194b314a314a5054259ffa9a}{Is\+Pressed}} ()
+unsigned char \mbox{\hyperlink{keypad_8c_a02e5cd605c64773d944bc322b51222cd}{Keypad\+Get\+Row}} ()
 \item 
-char \mbox{\hyperlink{keypad_8c_a2d42937c3f3d49c8958ce119e6b745fd}{Get\+Key}} ()
+unsigned char \mbox{\hyperlink{keypad_8c_a7dba628d7c95a933378f3a008344a4d3}{Keypad\+Get\+Col}} ()
+\item 
+char \mbox{\hyperlink{keypad_8c_ab826b54bc6305f49d758d28173041ab7}{Keypad\+Get\+Char}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \mbox{\hyperlink{keypad_8c_a7465f8ed0343f8e4044387a0429afb32}{keypad}} \mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}\mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{keypad_8c_a2d42937c3f3d49c8958ce119e6b745fd}\label{keypad_8c_a2d42937c3f3d49c8958ce119e6b745fd} 
-\index{keypad.c@{keypad.c}!GetKey@{GetKey}}
-\index{GetKey@{GetKey}!keypad.c@{keypad.c}}
-\doxysubsubsection{\texorpdfstring{GetKey()}{GetKey()}}
-{\footnotesize\ttfamily char Get\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\Hypertarget{keypad_8c_ab826b54bc6305f49d758d28173041ab7}\label{keypad_8c_ab826b54bc6305f49d758d28173041ab7} 
+\index{keypad.c@{keypad.c}!KeypadGetChar@{KeypadGetChar}}
+\index{KeypadGetChar@{KeypadGetChar}!keypad.c@{keypad.c}}
+\doxysubsubsection{\texorpdfstring{KeypadGetChar()}{KeypadGetChar()}}
+{\footnotesize\ttfamily char Keypad\+Get\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\Hypertarget{keypad_8c_ae6ab35ff194b314a314a5054259ffa9a}\label{keypad_8c_ae6ab35ff194b314a314a5054259ffa9a} 
-\index{keypad.c@{keypad.c}!IsPressed@{IsPressed}}
-\index{IsPressed@{IsPressed}!keypad.c@{keypad.c}}
-\doxysubsubsection{\texorpdfstring{IsPressed()}{IsPressed()}}
-{\footnotesize\ttfamily int Is\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00019}{19}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+
+\Hypertarget{keypad_8c_a7dba628d7c95a933378f3a008344a4d3}\label{keypad_8c_a7dba628d7c95a933378f3a008344a4d3} 
+\index{keypad.c@{keypad.c}!KeypadGetCol@{KeypadGetCol}}
+\index{KeypadGetCol@{KeypadGetCol}!keypad.c@{keypad.c}}
+\doxysubsubsection{\texorpdfstring{KeypadGetCol()}{KeypadGetCol()}}
+{\footnotesize\ttfamily unsigned char Keypad\+Get\+Col (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00014}{14}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+
+\Hypertarget{keypad_8c_a02e5cd605c64773d944bc322b51222cd}\label{keypad_8c_a02e5cd605c64773d944bc322b51222cd} 
+\index{keypad.c@{keypad.c}!KeypadGetRow@{KeypadGetRow}}
+\index{KeypadGetRow@{KeypadGetRow}!keypad.c@{keypad.c}}
+\doxysubsubsection{\texorpdfstring{KeypadGetRow()}{KeypadGetRow()}}
+{\footnotesize\ttfamily unsigned char Keypad\+Get\+Row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00010}{10}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{keypad_8c_a7465f8ed0343f8e4044387a0429afb32}\label{keypad_8c_a7465f8ed0343f8e4044387a0429afb32} 
+\index{keypad.c@{keypad.c}!keypad@{keypad}}
+\index{keypad@{keypad}!keypad.c@{keypad.c}}
+\doxysubsubsection{\texorpdfstring{keypad}{keypad}}
+{\footnotesize\ttfamily const char keypad\mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}\mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{charliteral}{'1'},\ \textcolor{charliteral}{'2'},\ \textcolor{charliteral}{'3'},\ \textcolor{charliteral}{'A'}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{charliteral}{'4'},\ \textcolor{charliteral}{'5'},\ \textcolor{charliteral}{'6'},\ \textcolor{charliteral}{'B'}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{charliteral}{'7'},\ \textcolor{charliteral}{'8'},\ \textcolor{charliteral}{'9'},\ \textcolor{charliteral}{'C'}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{charliteral}{'*'},\ \textcolor{charliteral}{'0'},\ \textcolor{charliteral}{'\#'},\ \textcolor{charliteral}{'D'}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00003}{3}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
 
