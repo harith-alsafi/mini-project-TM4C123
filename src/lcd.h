@@ -1,7 +1,8 @@
 #ifndef LCD_H   // If not defined
 #define LCD_H   // Define it
 
-#include "ports.h"
+#include "helpers.h"
+#include <stdbool.h>
 
 // DB4 -> PB0
 // DB5 -> PB1
@@ -21,7 +22,7 @@
  * 
  * @param rs rs == 1 -> data RS = HIGH, rs == 0 -> command RS = LOW
  */
-void LcdSetRs(unsigned char rs);
+void LcdSetRs(byte rs);
 
 /**
  * @brief Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns
@@ -34,14 +35,14 @@ void LcdPulseEn();
  * 
  * @param nibble RS | R/W | DB4 | DB5 | DB6 | DB7
  */
-void LcdSendNibble(unsigned char nibble);
+void LcdSendNibble(byte nibble);
 
 /**
  * @brief Sends a byte to the LCD
  * 
  * @param byte the byte to be sent
  */
-void LcdSendByte(unsigned char byte);
+void LcdSendByte(byte byte);
 
 /**
  * @brief Clears the display
@@ -55,7 +56,7 @@ void LcdClearDisplay();
  * @param sc Display shift sc = 1, Cursor move sc = 0
  * @param rl Right shift rl = 1, Left shift rl = 0
  */
-void LcdCursorShift(int sc, int rl);
+void LcdCursorShift(byte sc, byte rl);
 
 /**
  * @brief Sets the entry mode of the LCD
@@ -63,7 +64,7 @@ void LcdCursorShift(int sc, int rl);
  * @param id I / D = 1: Increment, I / D = 0: Decrement.
  * @param s S = 1: The display shift, S = 0: The display does not shift.
  */
-void LcdEntryModeSet(int id, int s);
+void LcdEntryModeSet(byte id, byte s);
 
 /**
  * @brief Controls the display, cursor, and blinking
@@ -72,7 +73,7 @@ void LcdEntryModeSet(int id, int s);
  * @param c C = 1: Cursor on, C = 0: Cursor off
  * @param b B = 1: Blinks on, B= 0: Blinks off
  */
-void LcdDisplayControl(int d, int c, int b);
+void LcdDisplayControl(byte d, byte c, byte b);
 
 /**
  * @brief Resets cursor to original position 
@@ -87,7 +88,7 @@ void LcdReturnHome();
  * @param n N = 0: One-line display. N = 1: Two-line display
  * @param f F = 0: 5 x 8 dots character font. F = 1: 5 x 10 dots character font.
  */
-void LcdFunctionSet(int dl, int n, int f);
+void LcdFunctionSet(byte dl, byte n, byte f);
 
 /**
  * @brief Initializes the LCD
@@ -100,7 +101,7 @@ void LcdInit();
  * 
  * @param addr 7-bit address to be set 
  */
-void LcdSetDdram(unsigned char addr);
+void LcdSetDdram(byte addr);
 
 /**
  * @brief Sets the cursor position
@@ -108,15 +109,15 @@ void LcdSetDdram(unsigned char addr);
  * @param row row to be set
  * @param col column to be set
  */
-void LcdSetCursor(unsigned char row, unsigned char col);
+void LcdSetCursor(byte row, byte col);
 
 /**
  * @brief Prints a character to the LCD
  * 
  * @param ch character to be printed
- * @param cursorShift 1 -> shift cursor, 0 -> don't shift cursor
+ * @param cursorTrack 1 -> Track cursor, 0 -> don't Track cursor
  */
-void LcdPrintChar(char ch, unsigned char cursorShift);
+void LcdPrintChar(char ch, bool cursorTrack);
 
 /**
  * @brief Prints a string to the LCD
@@ -132,14 +133,15 @@ void LcdPrintString(char str[]);
  * @param row row to be printed at
  * @param col column to be printed at
  */
-void LcdPrintCharAt(char ch, unsigned char row, unsigned char col);
+void LcdPrintCharAt(char ch, byte row, byte col);
 
-void LcdClearRow(unsigned char row);
+// void LcdClearRow(unsigned char row);
 
-void LcdClearCol(unsigned char col);
+// void LcdClearCol(unsigned char col);
 
-void LcdDrawLine(unsigned char row, unsigned char col, unsigned char length, unsigned char is_vertical);
+// void LcdDrawLine(unsigned char row, unsigned char col, unsigned char length, unsigned char is_vertical);
 
-void LcdDrawBox(unsigned char row, unsigned char col, unsigned char length, unsigned char width);
+// void LcdDrawBox(unsigned char row, unsigned char col, unsigned char length, unsigned char width);
+
 
 #endif

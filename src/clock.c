@@ -31,6 +31,11 @@ void PLLInit() {
   SYSCTL_RCC2_R &= ~0x00000800;
 }
 
+void ClockInit() {
+  PLLInit();
+  SysTickInit();
+}
+
 // The delay parameter is in units of the 80 MHz core clock. (12.5 ns)
 void SysTickWait(unsigned long delay) {
   NVIC_ST_RELOAD_R = delay - 1; // number of counts to wait

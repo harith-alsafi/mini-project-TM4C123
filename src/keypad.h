@@ -1,6 +1,8 @@
 #ifndef KEYPAD_H   // If not defined
 #define KEYPAD_H   // Define it
 
+#include <stdbool.h>
+
 // COL 1 -> PD0
 // COL 2 -> PD1
 // COL 3 -> PD2
@@ -14,12 +16,14 @@
 #define KEYPAD_ROW (*((volatile unsigned long *)0x4002403C))
 #define KEYPAD_N 4
 
-extern const char keypad[KEYPAD_N][KEYPAD_N];
+extern const char KEYPAD_KEYS[KEYPAD_N][KEYPAD_N];
 
-unsigned char KeypadGetRow();
-
-unsigned char KeypadGetCol();
+void KeypadInit();
 
 char KeypadGetChar();
+
+char KeypadWaitForInput();
+
+bool KeypadIsShiftOn();
 
 #endif

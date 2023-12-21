@@ -1,15 +1,15 @@
-#ifndef CLOCK_H   // If not defined
-#define CLOCK_H   // Define it
+#ifndef CLOCK_H   
+#define CLOCK_H   
 
-//GPIO clocks
+// GPIO clocks
 #define SYSCTL_RCGC2_R          (*((volatile unsigned long *)0x400FE108))
 
-//PLL related Defines
+// PLL related Defines 
 #define SYSCTL_RIS_R          (*((volatile unsigned long *)0x400FE050))	
 #define SYSCTL_RCC_R          (*((volatile unsigned long *)0x400FE060))
 #define SYSCTL_RCC2_R         (*((volatile unsigned long *)0x400FE070))	
 
-//SysTick related Defines	
+// SysTick related Defines 
 #define NVIC_ST_CTRL_R        (*((volatile unsigned long *)0xE000E010))
 #define NVIC_ST_RELOAD_R      (*((volatile unsigned long *)0xE000E014))
 #define NVIC_ST_CURRENT_R     (*((volatile unsigned long *)0xE000E018))
@@ -25,6 +25,12 @@ void SysTickInit();
  * 
  */
 void PLLInit();
+
+/**
+ * @brief Initializes the clock
+ * 
+ */
+void ClockInit();
 
 /**
  * @brief Uses the 80 MHz PLL to create a delay in units of 12.5ns

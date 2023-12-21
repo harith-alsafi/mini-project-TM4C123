@@ -6,100 +6,86 @@ Section Cross References
 
     clock.o(.ARM.exidx.text.SysTickInit) refers to clock.o(.text.SysTickInit) for [Anonymous Symbol]
     clock.o(.ARM.exidx.text.PLLInit) refers to clock.o(.text.PLLInit) for [Anonymous Symbol]
+    clock.o(.ARM.exidx.text.ClockInit) refers to clock.o(.text.ClockInit) for [Anonymous Symbol]
     clock.o(.ARM.exidx.text.SysTickWait) refers to clock.o(.text.SysTickWait) for [Anonymous Symbol]
-    clock.o(.text.DelayNano) refers to clock.o(.text.SysTickWait) for SysTickWait
     clock.o(.ARM.exidx.text.DelayNano) refers to clock.o(.text.DelayNano) for [Anonymous Symbol]
-    clock.o(.text.DelayMicro) refers to clock.o(.text.SysTickWait) for SysTickWait
     clock.o(.ARM.exidx.text.DelayMicro) refers to clock.o(.text.DelayMicro) for [Anonymous Symbol]
-    clock.o(.text.DelayMilli) refers to clock.o(.text.SysTickWait) for SysTickWait
     clock.o(.ARM.exidx.text.DelayMilli) refers to clock.o(.text.DelayMilli) for [Anonymous Symbol]
     helpers.o(.ARM.exidx.text.Strlen) refers to helpers.o(.text.Strlen) for [Anonymous Symbol]
+    keypad.o(.text.KeypadInit) refers to ports.o(.text.PortDInit) for PortDInit
+    keypad.o(.text.KeypadInit) refers to ports.o(.text.PortEInit) for PortEInit
+    keypad.o(.ARM.exidx.text.KeypadInit) refers to keypad.o(.text.KeypadInit) for [Anonymous Symbol]
     keypad.o(.ARM.exidx.text.KeypadGetRow) refers to keypad.o(.text.KeypadGetRow) for [Anonymous Symbol]
     keypad.o(.ARM.exidx.text.KeypadGetCol) refers to keypad.o(.text.KeypadGetCol) for [Anonymous Symbol]
     keypad.o(.ARM.exidx.text.KeypadGetChar) refers to keypad.o(.text.KeypadGetChar) for [Anonymous Symbol]
     lcd.o(.ARM.exidx.text.LcdSetRs) refers to lcd.o(.text.LcdSetRs) for [Anonymous Symbol]
     lcd.o(.text.LcdPulseEn) refers to clock.o(.text.DelayNano) for DelayNano
     lcd.o(.ARM.exidx.text.LcdPulseEn) refers to lcd.o(.text.LcdPulseEn) for [Anonymous Symbol]
-    lcd.o(.text.LcdSendNibble) refers to lcd.o(.text.LcdPulseEn) for LcdPulseEn
+    lcd.o(.text.LcdSendNibble) refers to clock.o(.text.DelayNano) for DelayNano
     lcd.o(.ARM.exidx.text.LcdSendNibble) refers to lcd.o(.text.LcdSendNibble) for [Anonymous Symbol]
-    lcd.o(.text.LcdSendByte) refers to lcd.o(.text.LcdSendNibble) for LcdSendNibble
+    lcd.o(.text.LcdSendByte) refers to clock.o(.text.DelayNano) for DelayNano
     lcd.o(.ARM.exidx.text.LcdSendByte) refers to lcd.o(.text.LcdSendByte) for [Anonymous Symbol]
     lcd.o(.text.LcdClearDisplay) refers to lcd.o(.bss.current_row) for current_row
     lcd.o(.text.LcdClearDisplay) refers to lcd.o(.bss.current_col) for current_col
-    lcd.o(.text.LcdClearDisplay) refers to lcd.o(.text.LcdSetRs) for LcdSetRs
-    lcd.o(.text.LcdClearDisplay) refers to lcd.o(.text.LcdSendByte) for LcdSendByte
+    lcd.o(.text.LcdClearDisplay) refers to clock.o(.text.DelayNano) for DelayNano
     lcd.o(.text.LcdClearDisplay) refers to clock.o(.text.DelayMilli) for DelayMilli
     lcd.o(.ARM.exidx.text.LcdClearDisplay) refers to lcd.o(.text.LcdClearDisplay) for [Anonymous Symbol]
-    lcd.o(.text.LcdCursorShift) refers to lcd.o(.text.LcdSetRs) for LcdSetRs
-    lcd.o(.text.LcdCursorShift) refers to lcd.o(.text.LcdSendByte) for LcdSendByte
+    lcd.o(.text.LcdCursorShift) refers to clock.o(.text.DelayNano) for DelayNano
     lcd.o(.text.LcdCursorShift) refers to clock.o(.text.DelayMicro) for DelayMicro
     lcd.o(.ARM.exidx.text.LcdCursorShift) refers to lcd.o(.text.LcdCursorShift) for [Anonymous Symbol]
-    lcd.o(.text.LcdEntryModeSet) refers to lcd.o(.text.LcdSetRs) for LcdSetRs
-    lcd.o(.text.LcdEntryModeSet) refers to lcd.o(.text.LcdSendByte) for LcdSendByte
+    lcd.o(.text.LcdEntryModeSet) refers to clock.o(.text.DelayNano) for DelayNano
     lcd.o(.text.LcdEntryModeSet) refers to clock.o(.text.DelayMicro) for DelayMicro
     lcd.o(.ARM.exidx.text.LcdEntryModeSet) refers to lcd.o(.text.LcdEntryModeSet) for [Anonymous Symbol]
-    lcd.o(.text.LcdDisplayControl) refers to lcd.o(.text.LcdSetRs) for LcdSetRs
-    lcd.o(.text.LcdDisplayControl) refers to lcd.o(.text.LcdSendByte) for LcdSendByte
+    lcd.o(.text.LcdDisplayControl) refers to clock.o(.text.DelayNano) for DelayNano
     lcd.o(.text.LcdDisplayControl) refers to clock.o(.text.DelayMicro) for DelayMicro
     lcd.o(.ARM.exidx.text.LcdDisplayControl) refers to lcd.o(.text.LcdDisplayControl) for [Anonymous Symbol]
-    lcd.o(.text.LcdReturnHome) refers to lcd.o(.text.LcdSetRs) for LcdSetRs
-    lcd.o(.text.LcdReturnHome) refers to lcd.o(.text.LcdSendByte) for LcdSendByte
+    lcd.o(.text.LcdReturnHome) refers to clock.o(.text.DelayNano) for DelayNano
     lcd.o(.text.LcdReturnHome) refers to clock.o(.text.DelayMicro) for DelayMicro
     lcd.o(.ARM.exidx.text.LcdReturnHome) refers to lcd.o(.text.LcdReturnHome) for [Anonymous Symbol]
-    lcd.o(.text.LcdFunctionSet) refers to lcd.o(.text.LcdSetRs) for LcdSetRs
-    lcd.o(.text.LcdFunctionSet) refers to lcd.o(.text.LcdSendByte) for LcdSendByte
+    lcd.o(.text.LcdFunctionSet) refers to clock.o(.text.DelayNano) for DelayNano
     lcd.o(.text.LcdFunctionSet) refers to clock.o(.text.DelayMicro) for DelayMicro
     lcd.o(.ARM.exidx.text.LcdFunctionSet) refers to lcd.o(.text.LcdFunctionSet) for [Anonymous Symbol]
+    lcd.o(.text.LcdInit) refers to ports.o(.text.PortAInit) for PortAInit
+    lcd.o(.text.LcdInit) refers to ports.o(.text.PortBInit) for PortBInit
     lcd.o(.text.LcdInit) refers to clock.o(.text.DelayMilli) for DelayMilli
-    lcd.o(.text.LcdInit) refers to lcd.o(.text.LcdSetRs) for LcdSetRs
-    lcd.o(.text.LcdInit) refers to lcd.o(.text.LcdSendNibble) for LcdSendNibble
+    lcd.o(.text.LcdInit) refers to clock.o(.text.DelayNano) for DelayNano
     lcd.o(.text.LcdInit) refers to clock.o(.text.DelayMicro) for DelayMicro
-    lcd.o(.text.LcdInit) refers to lcd.o(.text.LcdFunctionSet) for LcdFunctionSet
-    lcd.o(.text.LcdInit) refers to lcd.o(.text.LcdDisplayControl) for LcdDisplayControl
-    lcd.o(.text.LcdInit) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
-    lcd.o(.text.LcdInit) refers to lcd.o(.text.LcdEntryModeSet) for LcdEntryModeSet
+    lcd.o(.text.LcdInit) refers to lcd.o(.bss.current_row) for current_row
+    lcd.o(.text.LcdInit) refers to lcd.o(.bss.current_col) for current_col
     lcd.o(.ARM.exidx.text.LcdInit) refers to lcd.o(.text.LcdInit) for [Anonymous Symbol]
-    lcd.o(.text.LcdSetDdram) refers to lcd.o(.text.LcdSetRs) for LcdSetRs
-    lcd.o(.text.LcdSetDdram) refers to lcd.o(.text.LcdSendByte) for LcdSendByte
+    lcd.o(.text.LcdSetDdram) refers to clock.o(.text.DelayNano) for DelayNano
     lcd.o(.text.LcdSetDdram) refers to clock.o(.text.DelayMicro) for DelayMicro
     lcd.o(.ARM.exidx.text.LcdSetDdram) refers to lcd.o(.text.LcdSetDdram) for [Anonymous Symbol]
     lcd.o(.text.LcdSetCursor) refers to lcd.o(.bss.current_col) for current_col
     lcd.o(.text.LcdSetCursor) refers to lcd.o(.bss.current_row) for current_row
-    lcd.o(.text.LcdSetCursor) refers to lcd.o(.text.LcdSetDdram) for LcdSetDdram
+    lcd.o(.text.LcdSetCursor) refers to clock.o(.text.DelayNano) for DelayNano
+    lcd.o(.text.LcdSetCursor) refers to clock.o(.text.DelayMicro) for DelayMicro
     lcd.o(.ARM.exidx.text.LcdSetCursor) refers to lcd.o(.text.LcdSetCursor) for [Anonymous Symbol]
     lcd.o(.text.LcdIncrementCursorRow) refers to lcd.o(.bss.current_row) for current_row
     lcd.o(.text.LcdIncrementCursorRow) refers to lcd.o(.bss.current_col) for current_col
     lcd.o(.text.LcdIncrementCursorRow) refers to lcd.o(.text.LcdSetCursor) for LcdSetCursor
     lcd.o(.ARM.exidx.text.LcdIncrementCursorRow) refers to lcd.o(.text.LcdIncrementCursorRow) for [Anonymous Symbol]
     lcd.o(.text.LcdIncrementCursorCol) refers to lcd.o(.bss.current_col) for current_col
-    lcd.o(.text.LcdIncrementCursorCol) refers to lcd.o(.text.LcdIncrementCursorRow) for LcdIncrementCursorRow
+    lcd.o(.text.LcdIncrementCursorCol) refers to lcd.o(.bss.current_row) for current_row
+    lcd.o(.text.LcdIncrementCursorCol) refers to lcd.o(.text.LcdSetCursor) for LcdSetCursor
     lcd.o(.ARM.exidx.text.LcdIncrementCursorCol) refers to lcd.o(.text.LcdIncrementCursorCol) for [Anonymous Symbol]
-    lcd.o(.text.LcdPrintChar) refers to lcd.o(.text.LcdIncrementCursorRow) for LcdIncrementCursorRow
-    lcd.o(.text.LcdPrintChar) refers to lcd.o(.text.LcdIncrementCursorCol) for LcdIncrementCursorCol
-    lcd.o(.text.LcdPrintChar) refers to lcd.o(.text.LcdSetRs) for LcdSetRs
-    lcd.o(.text.LcdPrintChar) refers to lcd.o(.text.LcdSendByte) for LcdSendByte
+    lcd.o(.text.LcdPrintChar) refers to lcd.o(.bss.current_row) for current_row
+    lcd.o(.text.LcdPrintChar) refers to lcd.o(.bss.current_col) for current_col
+    lcd.o(.text.LcdPrintChar) refers to lcd.o(.text.LcdSetCursor) for LcdSetCursor
+    lcd.o(.text.LcdPrintChar) refers to clock.o(.text.DelayNano) for DelayNano
     lcd.o(.text.LcdPrintChar) refers to clock.o(.text.DelayMicro) for DelayMicro
     lcd.o(.ARM.exidx.text.LcdPrintChar) refers to lcd.o(.text.LcdPrintChar) for [Anonymous Symbol]
     lcd.o(.text.LcdPrintCharAt) refers to lcd.o(.text.LcdSetCursor) for LcdSetCursor
-    lcd.o(.text.LcdPrintCharAt) refers to lcd.o(.text.LcdPrintChar) for LcdPrintChar
+    lcd.o(.text.LcdPrintCharAt) refers to clock.o(.text.DelayNano) for DelayNano
+    lcd.o(.text.LcdPrintCharAt) refers to clock.o(.text.DelayMicro) for DelayMicro
     lcd.o(.ARM.exidx.text.LcdPrintCharAt) refers to lcd.o(.text.LcdPrintCharAt) for [Anonymous Symbol]
     lcd.o(.text.LcdPrintString) refers to helpers.o(.text.Strlen) for Strlen
     lcd.o(.text.LcdPrintString) refers to lcd.o(.text.LcdPrintChar) for LcdPrintChar
     lcd.o(.ARM.exidx.text.LcdPrintString) refers to lcd.o(.text.LcdPrintString) for [Anonymous Symbol]
-    main.o(.text.InitAll) refers to ports.o(.text.PortAInit) for PortAInit
-    main.o(.text.InitAll) refers to ports.o(.text.PortBInit) for PortBInit
-    main.o(.text.InitAll) refers to clock.o(.text.PLLInit) for PLLInit
-    main.o(.text.InitAll) refers to clock.o(.text.SysTickInit) for SysTickInit
-    main.o(.text.InitAll) refers to lcd.o(.text.LcdInit) for LcdInit
-    main.o(.ARM.exidx.text.InitAll) refers to main.o(.text.InitAll) for [Anonymous Symbol]
-    main.o(.text.main) refers to main.o(.text.InitAll) for InitAll
-    main.o(.text.main) refers to main.o(.rodata.str1.1) for .L.str
-    main.o(.text.main) refers to lcd.o(.text.LcdPrintString) for LcdPrintString
-    main.o(.text.main) refers to clock.o(.text.DelayMilli) for DelayMilli
-    main.o(.text.main) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
+    main.o(.text.main) refers to program-logic.o(.text.InitAll) for InitAll
+    main.o(.text.main) refers to unit-test.o(.text.RunAll) for RunAll
     main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
     playground.o(.ARM.exidx.text.PortF_Init) refers to playground.o(.text.PortF_Init) for [Anonymous Symbol]
-    playground.o(.text.FlashSOS) refers to playground.o(.text.delay) for delay
     playground.o(.ARM.exidx.text.FlashSOS) refers to playground.o(.text.FlashSOS) for [Anonymous Symbol]
     playground.o(.ARM.exidx.text.delay) refers to playground.o(.text.delay) for [Anonymous Symbol]
     ports.o(.ARM.exidx.text.PortEInit) refers to ports.o(.text.PortEInit) for [Anonymous Symbol]
@@ -107,6 +93,10 @@ Section Cross References
     ports.o(.ARM.exidx.text.PortBInit) refers to ports.o(.text.PortBInit) for [Anonymous Symbol]
     ports.o(.ARM.exidx.text.PortAInit) refers to ports.o(.text.PortAInit) for [Anonymous Symbol]
     ports.o(.ARM.exidx.text.PortFInit) refers to ports.o(.text.PortFInit) for [Anonymous Symbol]
+    program-logic.o(.text.InitAll) refers to clock.o(.text.ClockInit) for ClockInit
+    program-logic.o(.text.InitAll) refers to keypad.o(.text.KeypadInit) for KeypadInit
+    program-logic.o(.text.InitAll) refers to lcd.o(.text.LcdInit) for LcdInit
+    program-logic.o(.ARM.exidx.text.InitAll) refers to program-logic.o(.text.InitAll) for [Anonymous Symbol]
     texas.o(i.Decrypt) refers to texas.o(.bss) for EncriptedMagicCode
     texas.o(i.Decrypt) refers to texas.o(.constdata) for DeScramble
     texas.o(i.Encrypt) refers to texas.o(i.SetCode) for SetCode
@@ -129,17 +119,29 @@ Section Cross References
     texas.o(i.Timer5A_Handler) refers to texas.o(.data) for TExaS_Period
     texas.o(i.Timer5A_Handler) refers to texas.o(.bss) for TExaS
     texas.o(i.Timer5A_Handler) refers to texas.o(.constdata) for BlankMsg
-    retarget_io.o(.text._sys_open) refers to retarget_io.o(.rodata.str1.1) for .L.str
-    retarget_io.o(.text._sys_open) refers to strcmpv7em.o(.text) for strcmp
-    retarget_io.o(.ARM.exidx.text._sys_open) refers to retarget_io.o(.text._sys_open) for [Anonymous Symbol]
-    retarget_io.o(.ARM.exidx.text._sys_close) refers to retarget_io.o(.text._sys_close) for [Anonymous Symbol]
-    retarget_io.o(.text._sys_write) refers to retarget_io.o(.text.stdout_putchar) for stdout_putchar
-    retarget_io.o(.ARM.exidx.text._sys_write) refers to retarget_io.o(.text._sys_write) for [Anonymous Symbol]
-    retarget_io.o(.ARM.exidx.text.stdout_putchar) refers to retarget_io.o(.text.stdout_putchar) for [Anonymous Symbol]
-    retarget_io.o(.ARM.exidx.text._sys_read) refers to retarget_io.o(.text._sys_read) for [Anonymous Symbol]
-    retarget_io.o(.ARM.exidx.text._sys_istty) refers to retarget_io.o(.text._sys_istty) for [Anonymous Symbol]
-    retarget_io.o(.ARM.exidx.text._sys_seek) refers to retarget_io.o(.text._sys_seek) for [Anonymous Symbol]
-    retarget_io.o(.ARM.exidx.text._sys_flen) refers to retarget_io.o(.text._sys_flen) for [Anonymous Symbol]
+    unit-test.o(.text.AfterEach) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
+    unit-test.o(.text.AfterEach) refers to clock.o(.text.DelayMilli) for DelayMilli
+    unit-test.o(.ARM.exidx.text.AfterEach) refers to unit-test.o(.text.AfterEach) for [Anonymous Symbol]
+    unit-test.o(.text.TestLcdClear) refers to lcd.o(.text.LcdPrintChar) for LcdPrintChar
+    unit-test.o(.text.TestLcdClear) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
+    unit-test.o(.text.TestLcdClear) refers to clock.o(.text.DelayMilli) for DelayMilli
+    unit-test.o(.ARM.exidx.text.TestLcdClear) refers to unit-test.o(.text.TestLcdClear) for [Anonymous Symbol]
+    unit-test.o(.text.TestLcdCursor) refers to lcd.o(.text.LcdSetCursor) for LcdSetCursor
+    unit-test.o(.text.TestLcdCursor) refers to lcd.o(.text.LcdPrintString) for LcdPrintString
+    unit-test.o(.ARM.exidx.text.TestLcdCursor) refers to unit-test.o(.text.TestLcdCursor) for [Anonymous Symbol]
+    unit-test.o(.text.TestLcdMultiLine) refers to unit-test.o(.rodata.str1.1) for .L.str.3
+    unit-test.o(.text.TestLcdMultiLine) refers to lcd.o(.text.LcdPrintString) for LcdPrintString
+    unit-test.o(.text.TestLcdMultiLine) refers to clock.o(.text.DelayMilli) for DelayMilli
+    unit-test.o(.text.TestLcdMultiLine) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
+    unit-test.o(.ARM.exidx.text.TestLcdMultiLine) refers to unit-test.o(.text.TestLcdMultiLine) for [Anonymous Symbol]
+    unit-test.o(.text.RunAll) refers to unit-test.o(.rodata.str1.1) for .L.str.3
+    unit-test.o(.text.RunAll) refers to lcd.o(.text.LcdPrintString) for LcdPrintString
+    unit-test.o(.text.RunAll) refers to clock.o(.text.DelayMilli) for DelayMilli
+    unit-test.o(.text.RunAll) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
+    unit-test.o(.ARM.exidx.text.RunAll) refers to unit-test.o(.text.RunAll) for [Anonymous Symbol]
+    user-interaction.o(.text.KeypadIsShiftOn) refers to user-interaction.o(.bss.is_shift_on) for is_shift_on
+    user-interaction.o(.ARM.exidx.text.KeypadIsShiftOn) refers to user-interaction.o(.text.KeypadIsShiftOn) for [Anonymous Symbol]
+    user-interaction.o(.ARM.exidx.text.KeypadFindSpecialKey) refers to user-interaction.o(.text.KeypadFindSpecialKey) for [Anonymous Symbol]
     startup_tm4c123.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_tm4c123.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_tm4c123.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
@@ -150,10 +152,9 @@ Section Cross References
     startup_tm4c123.o(.text) refers to __main.o(!!!main) for __main
     startup_tm4c123.o(.text) refers to startup_tm4c123.o(HEAP) for Heap_Mem
     startup_tm4c123.o(.text) refers to startup_tm4c123.o(STACK) for Stack_Mem
-    system_tm4c123.o(.text.SystemCoreClockUpdate) refers to system_tm4c123.o(.text.getOscClk) for getOscClk
+    system_tm4c123.o(.text.SystemCoreClockUpdate) refers to system_tm4c123.o(.rodata..Lswitch.table.SystemCoreClockUpdate.1) for .Lswitch.table.SystemCoreClockUpdate.1
     system_tm4c123.o(.text.SystemCoreClockUpdate) refers to system_tm4c123.o(.data.SystemCoreClock) for SystemCoreClock
     system_tm4c123.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_tm4c123.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
-    system_tm4c123.o(.ARM.exidx.text.getOscClk) refers to system_tm4c123.o(.text.getOscClk) for [Anonymous Symbol]
     system_tm4c123.o(.ARM.exidx.text.SystemInit) refers to system_tm4c123.o(.text.SystemInit) for [Anonymous Symbol]
     __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
@@ -268,8 +269,12 @@ Section Cross References
 Removing Unused input sections from the image.
 
     Removing clock.o(.text), (0 bytes).
+    Removing clock.o(.text.SysTickInit), (26 bytes).
     Removing clock.o(.ARM.exidx.text.SysTickInit), (8 bytes).
+    Removing clock.o(.text.PLLInit), (90 bytes).
     Removing clock.o(.ARM.exidx.text.PLLInit), (8 bytes).
+    Removing clock.o(.ARM.exidx.text.ClockInit), (8 bytes).
+    Removing clock.o(.text.SysTickWait), (24 bytes).
     Removing clock.o(.ARM.exidx.text.SysTickWait), (8 bytes).
     Removing clock.o(.ARM.exidx.text.DelayNano), (8 bytes).
     Removing clock.o(.ARM.exidx.text.DelayMicro), (8 bytes).
@@ -278,58 +283,68 @@ Removing Unused input sections from the image.
     Removing helpers.o(.text), (0 bytes).
     Removing helpers.o(.ARM.exidx.text.Strlen), (8 bytes).
     Removing keypad.o(.text), (0 bytes).
+    Removing keypad.o(.ARM.exidx.text.KeypadInit), (8 bytes).
     Removing keypad.o(.text.KeypadGetRow), (4 bytes).
     Removing keypad.o(.ARM.exidx.text.KeypadGetRow), (8 bytes).
     Removing keypad.o(.text.KeypadGetCol), (4 bytes).
     Removing keypad.o(.ARM.exidx.text.KeypadGetCol), (8 bytes).
     Removing keypad.o(.text.KeypadGetChar), (4 bytes).
     Removing keypad.o(.ARM.exidx.text.KeypadGetChar), (8 bytes).
-    Removing keypad.o(.rodata.keypad), (16 bytes).
+    Removing keypad.o(.bss.shift_is_on), (1 bytes).
+    Removing keypad.o(.rodata.KEYPAD_KEYS), (16 bytes).
     Removing lcd.o(.text), (0 bytes).
+    Removing lcd.o(.text.LcdSetRs), (12 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdSetRs), (8 bytes).
+    Removing lcd.o(.text.LcdPulseEn), (38 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdPulseEn), (8 bytes).
+    Removing lcd.o(.text.LcdSendNibble), (52 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdSendNibble), (8 bytes).
+    Removing lcd.o(.text.LcdSendByte), (84 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdSendByte), (8 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdClearDisplay), (8 bytes).
-    Removing lcd.o(.text.LcdCursorShift), (94 bytes).
+    Removing lcd.o(.text.LcdCursorShift), (96 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdCursorShift), (8 bytes).
+    Removing lcd.o(.text.LcdEntryModeSet), (98 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdEntryModeSet), (8 bytes).
+    Removing lcd.o(.text.LcdDisplayControl), (112 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdDisplayControl), (8 bytes).
-    Removing lcd.o(.text.LcdReturnHome), (22 bytes).
+    Removing lcd.o(.text.LcdReturnHome), (84 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdReturnHome), (8 bytes).
+    Removing lcd.o(.text.LcdFunctionSet), (112 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdFunctionSet), (8 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdInit), (8 bytes).
+    Removing lcd.o(.text.LcdSetDdram), (96 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdSetDdram), (8 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdSetCursor), (8 bytes).
+    Removing lcd.o(.text.LcdIncrementCursorRow), (44 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdIncrementCursorRow), (8 bytes).
+    Removing lcd.o(.text.LcdIncrementCursorCol), (56 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdIncrementCursorCol), (8 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdPrintChar), (8 bytes).
-    Removing lcd.o(.text.LcdPrintCharAt), (42 bytes).
+    Removing lcd.o(.text.LcdPrintCharAt), (100 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdPrintCharAt), (8 bytes).
     Removing lcd.o(.ARM.exidx.text.LcdPrintString), (8 bytes).
     Removing main.o(.text), (0 bytes).
-    Removing main.o(.ARM.exidx.text.InitAll), (8 bytes).
     Removing main.o(.ARM.exidx.text.main), (8 bytes).
     Removing main.o(.ARM.use_no_argv), (4 bytes).
     Removing playground.o(.text), (0 bytes).
-    Removing playground.o(.text.PortF_Init), (146 bytes).
+    Removing playground.o(.text.PortF_Init), (112 bytes).
     Removing playground.o(.ARM.exidx.text.PortF_Init), (8 bytes).
-    Removing playground.o(.text.FlashSOS), (314 bytes).
+    Removing playground.o(.text.FlashSOS), (546 bytes).
     Removing playground.o(.ARM.exidx.text.FlashSOS), (8 bytes).
-    Removing playground.o(.text.delay), (50 bytes).
+    Removing playground.o(.text.delay), (42 bytes).
     Removing playground.o(.ARM.exidx.text.delay), (8 bytes).
     Removing playground.o(.bss.SW1), (4 bytes).
     Removing playground.o(.bss.SW2), (4 bytes).
     Removing ports.o(.text), (0 bytes).
-    Removing ports.o(.text.PortEInit), (136 bytes).
     Removing ports.o(.ARM.exidx.text.PortEInit), (8 bytes).
-    Removing ports.o(.text.PortDInit), (112 bytes).
     Removing ports.o(.ARM.exidx.text.PortDInit), (8 bytes).
     Removing ports.o(.ARM.exidx.text.PortBInit), (8 bytes).
     Removing ports.o(.ARM.exidx.text.PortAInit), (8 bytes).
-    Removing ports.o(.text.PortFInit), (130 bytes).
+    Removing ports.o(.text.PortFInit), (100 bytes).
     Removing ports.o(.ARM.exidx.text.PortFInit), (8 bytes).
     Removing program-logic.o(.text), (0 bytes).
+    Removing program-logic.o(.ARM.exidx.text.InitAll), (8 bytes).
     Removing texas.o(i.ADC1_In), (12 bytes).
     Removing texas.o(i.ADC1_Init), (192 bytes).
     Removing texas.o(i.Decrypt), (92 bytes).
@@ -348,37 +363,31 @@ Removing Unused input sections from the image.
     Removing texas.o(.constdata), (8956 bytes).
     Removing texas.o(.data), (56 bytes).
     Removing unit-test.o(.text), (0 bytes).
+    Removing unit-test.o(.text.AfterEach), (18 bytes).
+    Removing unit-test.o(.ARM.exidx.text.AfterEach), (8 bytes).
+    Removing unit-test.o(.text.TestLcdClear), (34 bytes).
+    Removing unit-test.o(.ARM.exidx.text.TestLcdClear), (8 bytes).
+    Removing unit-test.o(.text.TestLcdCursor), (92 bytes).
+    Removing unit-test.o(.ARM.exidx.text.TestLcdCursor), (8 bytes).
+    Removing unit-test.o(.text.TestLcdMultiLine), (88 bytes).
+    Removing unit-test.o(.ARM.exidx.text.TestLcdMultiLine), (8 bytes).
+    Removing unit-test.o(.ARM.exidx.text.RunAll), (8 bytes).
     Removing user-interface.o(.text), (0 bytes).
-    Removing retarget_io.o(.text), (0 bytes).
-    Removing retarget_io.o(.text._sys_open), (132 bytes).
-    Removing retarget_io.o(.ARM.exidx.text._sys_open), (8 bytes).
-    Removing retarget_io.o(.text._sys_close), (74 bytes).
-    Removing retarget_io.o(.ARM.exidx.text._sys_close), (8 bytes).
-    Removing retarget_io.o(.text._sys_write), (118 bytes).
-    Removing retarget_io.o(.ARM.exidx.text._sys_write), (8 bytes).
-    Removing retarget_io.o(.text.stdout_putchar), (12 bytes).
-    Removing retarget_io.o(.ARM.exidx.text.stdout_putchar), (8 bytes).
-    Removing retarget_io.o(.text._sys_read), (88 bytes).
-    Removing retarget_io.o(.ARM.exidx.text._sys_read), (8 bytes).
-    Removing retarget_io.o(.text._sys_istty), (72 bytes).
-    Removing retarget_io.o(.ARM.exidx.text._sys_istty), (8 bytes).
-    Removing retarget_io.o(.text._sys_seek), (82 bytes).
-    Removing retarget_io.o(.ARM.exidx.text._sys_seek), (8 bytes).
-    Removing retarget_io.o(.text._sys_flen), (72 bytes).
-    Removing retarget_io.o(.ARM.exidx.text._sys_flen), (8 bytes).
-    Removing retarget_io.o(.rodata.__stdin_name), (7 bytes).
-    Removing retarget_io.o(.rodata.__stdout_name), (8 bytes).
-    Removing retarget_io.o(.rodata.__stderr_name), (8 bytes).
-    Removing retarget_io.o(.rodata.str1.1), (23 bytes).
+    Removing user-interaction.o(.text), (0 bytes).
+    Removing user-interaction.o(.text.KeypadIsShiftOn), (12 bytes).
+    Removing user-interaction.o(.ARM.exidx.text.KeypadIsShiftOn), (8 bytes).
+    Removing user-interaction.o(.text.KeypadFindSpecialKey), (10 bytes).
+    Removing user-interaction.o(.ARM.exidx.text.KeypadFindSpecialKey), (8 bytes).
+    Removing user-interaction.o(.bss.is_shift_on), (1 bytes).
+    Removing user-interaction.o(.rodata.KEYPAD_SPECIAL_KEYS), (49 bytes).
     Removing system_tm4c123.o(.text), (0 bytes).
-    Removing system_tm4c123.o(.text.SystemCoreClockUpdate), (326 bytes).
+    Removing system_tm4c123.o(.text.SystemCoreClockUpdate), (280 bytes).
     Removing system_tm4c123.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
-    Removing system_tm4c123.o(.text.getOscClk), (360 bytes).
-    Removing system_tm4c123.o(.ARM.exidx.text.getOscClk), (8 bytes).
     Removing system_tm4c123.o(.ARM.exidx.text.SystemInit), (8 bytes).
     Removing system_tm4c123.o(.data.SystemCoreClock), (4 bytes).
+    Removing system_tm4c123.o(.rodata..Lswitch.table.SystemCoreClockUpdate.1), (92 bytes).
 
-110 unused section(s) (total 15284 bytes) removed from the image.
+118 unused section(s) (total 15457 bytes) removed from the image.
 
 ==============================================================================
 
@@ -421,7 +430,6 @@ Image Symbol Table
     ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  strcmpv7em.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
@@ -451,9 +459,9 @@ Image Symbol Table
     playground.c                             0x00000000   Number         0  playground.o ABSOLUTE
     ports.c                                  0x00000000   Number         0  ports.o ABSOLUTE
     program-logic.c                          0x00000000   Number         0  program-logic.o ABSOLUTE
-    retarget_io.c                            0x00000000   Number         0  retarget_io.o ABSOLUTE
     system_TM4C123.c                         0x00000000   Number         0  system_tm4c123.o ABSOLUTE
     unit-test.c                              0x00000000   Number         0  unit-test.o ABSOLUTE
+    user-interaction.c                       0x00000000   Number         0  user-interaction.o ABSOLUTE
     user-interface.c                         0x00000000   Number         0  user-interface.o ABSOLUTE
     RESET                                    0x00000000   Section      620  startup_tm4c123.o(RESET)
     !!!main                                  0x0000026c   Section        8  __main.o(!!!main)
@@ -510,40 +518,32 @@ Image Symbol Table
     .text                                    0x00000470   Section        0  sys_exit.o(.text)
     .text                                    0x0000047c   Section        2  use_no_semi.o(.text)
     .text                                    0x0000047e   Section        0  indicate_semi.o(.text)
-    [Anonymous Symbol]                       0x00000480   Section        0  clock.o(.text.DelayMicro)
-    [Anonymous Symbol]                       0x000004ac   Section        0  clock.o(.text.DelayMilli)
-    [Anonymous Symbol]                       0x000004dc   Section        0  clock.o(.text.DelayNano)
-    [Anonymous Symbol]                       0x00000500   Section        0  main.o(.text.InitAll)
-    [Anonymous Symbol]                       0x00000518   Section        0  lcd.o(.text.LcdClearDisplay)
-    [Anonymous Symbol]                       0x00000548   Section        0  lcd.o(.text.LcdDisplayControl)
-    [Anonymous Symbol]                       0x000005bc   Section        0  lcd.o(.text.LcdEntryModeSet)
-    [Anonymous Symbol]                       0x00000618   Section        0  lcd.o(.text.LcdFunctionSet)
-    [Anonymous Symbol]                       0x0000068c   Section        0  lcd.o(.text.LcdIncrementCursorCol)
-    [Anonymous Symbol]                       0x000006b8   Section        0  lcd.o(.text.LcdIncrementCursorRow)
-    [Anonymous Symbol]                       0x00000708   Section        0  lcd.o(.text.LcdInit)
-    [Anonymous Symbol]                       0x00000780   Section        0  lcd.o(.text.LcdPrintChar)
-    [Anonymous Symbol]                       0x000007c8   Section        0  lcd.o(.text.LcdPrintString)
-    [Anonymous Symbol]                       0x00000804   Section        0  lcd.o(.text.LcdPulseEn)
-    [Anonymous Symbol]                       0x00000830   Section        0  lcd.o(.text.LcdSendByte)
-    [Anonymous Symbol]                       0x00000854   Section        0  lcd.o(.text.LcdSendNibble)
-    [Anonymous Symbol]                       0x00000878   Section        0  lcd.o(.text.LcdSetCursor)
-    [Anonymous Symbol]                       0x0000090c   Section        0  lcd.o(.text.LcdSetDdram)
-    [Anonymous Symbol]                       0x00000944   Section        0  lcd.o(.text.LcdSetRs)
-    [Anonymous Symbol]                       0x00000964   Section        0  clock.o(.text.PLLInit)
-    [Anonymous Symbol]                       0x000009e0   Section        0  ports.o(.text.PortAInit)
-    [Anonymous Symbol]                       0x00000a1c   Section        0  ports.o(.text.PortBInit)
-    [Anonymous Symbol]                       0x00000a58   Section        0  helpers.o(.text.Strlen)
-    [Anonymous Symbol]                       0x00000a80   Section        0  clock.o(.text.SysTickInit)
-    [Anonymous Symbol]                       0x00000aac   Section        0  clock.o(.text.SysTickWait)
-    [Anonymous Symbol]                       0x00000ae4   Section        0  system_tm4c123.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x00000bf0   Section        0  main.o(.text.main)
-    $v0                                      0x00000c52   Number         0  fpinit.o(x$fpl$fpinit)
-    x$fpl$fpinit                             0x00000c52   Section       26  fpinit.o(x$fpl$fpinit)
-    .L.str.3                                 0x00000c6c   Data          41  main.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x00000c6c   Section        0  main.o(.rodata.str1.1)
-    .L.str.2                                 0x00000c95   Data          41  main.o(.rodata.str1.1)
-    .L.str                                   0x00000cbe   Data          41  main.o(.rodata.str1.1)
-    .L.str.1                                 0x00000ce7   Data          41  main.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00000480   Section        0  clock.o(.text.ClockInit)
+    [Anonymous Symbol]                       0x000004f4   Section        0  clock.o(.text.DelayMicro)
+    [Anonymous Symbol]                       0x00000528   Section        0  clock.o(.text.DelayMilli)
+    [Anonymous Symbol]                       0x00000560   Section        0  clock.o(.text.DelayNano)
+    [Anonymous Symbol]                       0x0000058c   Section        0  program-logic.o(.text.InitAll)
+    [Anonymous Symbol]                       0x000005a0   Section        0  keypad.o(.text.KeypadInit)
+    [Anonymous Symbol]                       0x000005b0   Section        0  lcd.o(.text.LcdClearDisplay)
+    [Anonymous Symbol]                       0x0000061c   Section        0  lcd.o(.text.LcdInit)
+    [Anonymous Symbol]                       0x00000804   Section        0  lcd.o(.text.LcdPrintChar)
+    [Anonymous Symbol]                       0x000008cc   Section        0  lcd.o(.text.LcdPrintString)
+    [Anonymous Symbol]                       0x000008f4   Section        0  lcd.o(.text.LcdSetCursor)
+    [Anonymous Symbol]                       0x00000980   Section        0  ports.o(.text.PortAInit)
+    [Anonymous Symbol]                       0x000009b8   Section        0  ports.o(.text.PortBInit)
+    [Anonymous Symbol]                       0x000009f0   Section        0  ports.o(.text.PortDInit)
+    [Anonymous Symbol]                       0x00000a48   Section        0  ports.o(.text.PortEInit)
+    [Anonymous Symbol]                       0x00000ab0   Section        0  unit-test.o(.text.RunAll)
+    [Anonymous Symbol]                       0x00000b08   Section        0  helpers.o(.text.Strlen)
+    [Anonymous Symbol]                       0x00000b24   Section        0  system_tm4c123.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x00000b94   Section        0  main.o(.text.main)
+    $v0                                      0x00000b9e   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$fpinit                             0x00000b9e   Section       26  fpinit.o(x$fpl$fpinit)
+    .L.str.6                                 0x00000bb8   Data          41  unit-test.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00000bb8   Section        0  unit-test.o(.rodata.str1.1)
+    .L.str.5                                 0x00000be1   Data          41  unit-test.o(.rodata.str1.1)
+    .L.str.3                                 0x00000c0a   Data          41  unit-test.o(.rodata.str1.1)
+    .L.str.4                                 0x00000c33   Data          41  unit-test.o(.rodata.str1.1)
     .bss                                     0x20000000   Section       96  libspace.o(.bss)
     Heap_Mem                                 0x20000068   Data           0  startup_tm4c123.o(HEAP)
     Stack_Mem                                0x20000068   Data         512  startup_tm4c123.o(STACK)
@@ -555,7 +555,7 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
     __Vectors                                0x00000000   Data           4  startup_tm4c123.o(RESET)
     __ARM_exceptions_init                     - Undefined Weak Reference
     __alloca_initialize                       - Undefined Weak Reference
@@ -767,38 +767,30 @@ Image Symbol Table
     __I$use$semihosting                      0x0000047d   Thumb Code     0  use_no_semi.o(.text)
     __use_no_semihosting_swi                 0x0000047d   Thumb Code     2  use_no_semi.o(.text)
     __semihosting_library_function           0x0000047f   Thumb Code     0  indicate_semi.o(.text)
-    DelayMicro                               0x00000481   Thumb Code    42  clock.o(.text.DelayMicro)
-    DelayMilli                               0x000004ad   Thumb Code    48  clock.o(.text.DelayMilli)
-    DelayNano                                0x000004dd   Thumb Code    36  clock.o(.text.DelayNano)
-    InitAll                                  0x00000501   Thumb Code    24  main.o(.text.InitAll)
-    LcdClearDisplay                          0x00000519   Thumb Code    46  lcd.o(.text.LcdClearDisplay)
-    LcdDisplayControl                        0x00000549   Thumb Code   114  lcd.o(.text.LcdDisplayControl)
-    LcdEntryModeSet                          0x000005bd   Thumb Code    90  lcd.o(.text.LcdEntryModeSet)
-    LcdFunctionSet                           0x00000619   Thumb Code   116  lcd.o(.text.LcdFunctionSet)
-    LcdIncrementCursorCol                    0x0000068d   Thumb Code    42  lcd.o(.text.LcdIncrementCursorCol)
-    LcdIncrementCursorRow                    0x000006b9   Thumb Code    78  lcd.o(.text.LcdIncrementCursorRow)
-    LcdInit                                  0x00000709   Thumb Code   118  lcd.o(.text.LcdInit)
-    LcdPrintChar                             0x00000781   Thumb Code    70  lcd.o(.text.LcdPrintChar)
-    LcdPrintString                           0x000007c9   Thumb Code    58  lcd.o(.text.LcdPrintString)
-    LcdPulseEn                               0x00000805   Thumb Code    44  lcd.o(.text.LcdPulseEn)
-    LcdSendByte                              0x00000831   Thumb Code    34  lcd.o(.text.LcdSendByte)
-    LcdSendNibble                            0x00000855   Thumb Code    34  lcd.o(.text.LcdSendNibble)
-    LcdSetCursor                             0x00000879   Thumb Code   148  lcd.o(.text.LcdSetCursor)
-    LcdSetDdram                              0x0000090d   Thumb Code    56  lcd.o(.text.LcdSetDdram)
-    LcdSetRs                                 0x00000945   Thumb Code    32  lcd.o(.text.LcdSetRs)
-    PLLInit                                  0x00000965   Thumb Code   122  clock.o(.text.PLLInit)
-    PortAInit                                0x000009e1   Thumb Code    58  ports.o(.text.PortAInit)
-    PortBInit                                0x00000a1d   Thumb Code    58  ports.o(.text.PortBInit)
-    Strlen                                   0x00000a59   Thumb Code    38  helpers.o(.text.Strlen)
-    SysTickInit                              0x00000a81   Thumb Code    42  clock.o(.text.SysTickInit)
-    SysTickWait                              0x00000aad   Thumb Code    56  clock.o(.text.SysTickWait)
-    SystemInit                               0x00000ae5   Thumb Code   268  system_tm4c123.o(.text.SystemInit)
-    main                                     0x00000bf1   Thumb Code    98  main.o(.text.main)
-    _fp_init                                 0x00000c53   Thumb Code    26  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x00000c6b   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x00000c6b   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    Region$$Table$$Base                      0x00000d10   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00000d20   Number         0  anon$$obj.o(Region$$Table)
+    ClockInit                                0x00000481   Thumb Code   114  clock.o(.text.ClockInit)
+    DelayMicro                               0x000004f5   Thumb Code    50  clock.o(.text.DelayMicro)
+    DelayMilli                               0x00000529   Thumb Code    54  clock.o(.text.DelayMilli)
+    DelayNano                                0x00000561   Thumb Code    44  clock.o(.text.DelayNano)
+    InitAll                                  0x0000058d   Thumb Code    18  program-logic.o(.text.InitAll)
+    KeypadInit                               0x000005a1   Thumb Code    14  keypad.o(.text.KeypadInit)
+    LcdClearDisplay                          0x000005b1   Thumb Code   108  lcd.o(.text.LcdClearDisplay)
+    LcdInit                                  0x0000061d   Thumb Code   486  lcd.o(.text.LcdInit)
+    LcdPrintChar                             0x00000805   Thumb Code   198  lcd.o(.text.LcdPrintChar)
+    LcdPrintString                           0x000008cd   Thumb Code    38  lcd.o(.text.LcdPrintString)
+    LcdSetCursor                             0x000008f5   Thumb Code   138  lcd.o(.text.LcdSetCursor)
+    PortAInit                                0x00000981   Thumb Code    54  ports.o(.text.PortAInit)
+    PortBInit                                0x000009b9   Thumb Code    54  ports.o(.text.PortBInit)
+    PortDInit                                0x000009f1   Thumb Code    88  ports.o(.text.PortDInit)
+    PortEInit                                0x00000a49   Thumb Code   104  ports.o(.text.PortEInit)
+    RunAll                                   0x00000ab1   Thumb Code    88  unit-test.o(.text.RunAll)
+    Strlen                                   0x00000b09   Thumb Code    28  helpers.o(.text.Strlen)
+    SystemInit                               0x00000b25   Thumb Code   112  system_tm4c123.o(.text.SystemInit)
+    main                                     0x00000b95   Thumb Code    10  main.o(.text.main)
+    _fp_init                                 0x00000b9f   Thumb Code    26  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x00000bb7   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x00000bb7   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    Region$$Table$$Base                      0x00000c5c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000c6c   Number         0  anon$$obj.o(Region$$Table)
     __libspace_start                         0x20000000   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000060   Data           0  libspace.o(.bss)
     current_col                              0x20000060   Data           4  lcd.o(.bss.current_col)
@@ -812,131 +804,118 @@ Memory Map of the image
 
   Image Entry point : 0x000002f1
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x00000d20, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00000c6c, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000d20, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000c6c, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000000   0x00000000   0x0000026c   Data   RO          263    RESET               startup_tm4c123.o
-    0x0000026c   0x0000026c   0x00000008   Code   RO          289  * !!!main             c_w.l(__main.o)
-    0x00000274   0x00000274   0x00000034   Code   RO          454    !!!scatter          c_w.l(__scatter.o)
-    0x000002a8   0x000002a8   0x0000001c   Code   RO          456    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x000002c4   0x000002c4   0x00000002   Code   RO          316    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x000002c6   0x000002c6   0x00000004   Code   RO          322    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          325    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          327    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          330    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          332    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          334    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          337    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          339    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          341    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          343    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          345    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          347    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          349    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          351    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          353    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          355    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          357    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          361    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          363    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          365    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          367    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000002   Code   RO          368    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
-    0x000002cc   0x000002cc   0x00000002   Code   RO          390    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x000002ce   0x000002ce   0x00000000   Code   RO          405    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x000002ce   0x000002ce   0x00000000   Code   RO          407    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x000002ce   0x000002ce   0x00000000   Code   RO          410    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
-    0x000002ce   0x000002ce   0x00000000   Code   RO          413    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
-    0x000002ce   0x000002ce   0x00000000   Code   RO          415    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x000002ce   0x000002ce   0x00000000   Code   RO          418    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x000002ce   0x000002ce   0x00000002   Code   RO          419    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
-    0x000002d0   0x000002d0   0x00000000   Code   RO          291    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x000002d0   0x000002d0   0x00000000   Code   RO          293    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x000002d0   0x000002d0   0x00000006   Code   RO          305    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x000002d6   0x000002d6   0x00000000   Code   RO          295    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x000002d6   0x000002d6   0x00000004   Code   RO          296    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x000002da   0x000002da   0x00000000   Code   RO          298    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x000002da   0x000002da   0x00000008   Code   RO          299    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x000002e2   0x000002e2   0x00000002   Code   RO          320    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x000002e4   0x000002e4   0x00000000   Code   RO          370    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x000002e4   0x000002e4   0x00000004   Code   RO          371    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x000002e8   0x000002e8   0x00000006   Code   RO          372    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x00000000   0x00000000   0x0000026c   Data   RO          279    RESET               startup_tm4c123.o
+    0x0000026c   0x0000026c   0x00000008   Code   RO          303  * !!!main             c_w.l(__main.o)
+    0x00000274   0x00000274   0x00000034   Code   RO          468    !!!scatter          c_w.l(__scatter.o)
+    0x000002a8   0x000002a8   0x0000001c   Code   RO          470    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x000002c4   0x000002c4   0x00000002   Code   RO          330    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x000002c6   0x000002c6   0x00000004   Code   RO          336    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          339    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          341    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          344    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          346    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          348    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          351    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          353    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          355    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          357    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          359    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          361    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          363    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          365    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          367    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          369    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          371    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          375    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          377    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          379    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          381    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000002   Code   RO          382    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
+    0x000002cc   0x000002cc   0x00000002   Code   RO          404    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x000002ce   0x000002ce   0x00000000   Code   RO          419    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x000002ce   0x000002ce   0x00000000   Code   RO          421    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x000002ce   0x000002ce   0x00000000   Code   RO          424    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x000002ce   0x000002ce   0x00000000   Code   RO          427    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x000002ce   0x000002ce   0x00000000   Code   RO          429    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x000002ce   0x000002ce   0x00000000   Code   RO          432    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x000002ce   0x000002ce   0x00000002   Code   RO          433    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x000002d0   0x000002d0   0x00000000   Code   RO          305    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x000002d0   0x000002d0   0x00000000   Code   RO          307    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x000002d0   0x000002d0   0x00000006   Code   RO          319    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x000002d6   0x000002d6   0x00000000   Code   RO          309    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x000002d6   0x000002d6   0x00000004   Code   RO          310    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x000002da   0x000002da   0x00000000   Code   RO          312    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x000002da   0x000002da   0x00000008   Code   RO          313    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x000002e2   0x000002e2   0x00000002   Code   RO          334    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x000002e4   0x000002e4   0x00000000   Code   RO          384    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x000002e4   0x000002e4   0x00000004   Code   RO          385    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x000002e8   0x000002e8   0x00000006   Code   RO          386    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x000002ee   0x000002ee   0x00000002   PAD
-    0x000002f0   0x000002f0   0x00000114   Code   RO          264  * .text               startup_tm4c123.o
-    0x00000404   0x00000404   0x00000006   Code   RO          287    .text               c_w.l(heapauxi.o)
-    0x0000040a   0x0000040a   0x0000004a   Code   RO          307    .text               c_w.l(sys_stackheap_outer.o)
-    0x00000454   0x00000454   0x00000012   Code   RO          309    .text               c_w.l(exit.o)
+    0x000002f0   0x000002f0   0x00000114   Code   RO          280  * .text               startup_tm4c123.o
+    0x00000404   0x00000404   0x00000006   Code   RO          301    .text               c_w.l(heapauxi.o)
+    0x0000040a   0x0000040a   0x0000004a   Code   RO          321    .text               c_w.l(sys_stackheap_outer.o)
+    0x00000454   0x00000454   0x00000012   Code   RO          323    .text               c_w.l(exit.o)
     0x00000466   0x00000466   0x00000002   PAD
-    0x00000468   0x00000468   0x00000008   Code   RO          317    .text               c_w.l(libspace.o)
-    0x00000470   0x00000470   0x0000000c   Code   RO          380    .text               c_w.l(sys_exit.o)
-    0x0000047c   0x0000047c   0x00000002   Code   RO          395    .text               c_w.l(use_no_semi.o)
-    0x0000047e   0x0000047e   0x00000000   Code   RO          397    .text               c_w.l(indicate_semi.o)
+    0x00000468   0x00000468   0x00000008   Code   RO          331    .text               c_w.l(libspace.o)
+    0x00000470   0x00000470   0x0000000c   Code   RO          394    .text               c_w.l(sys_exit.o)
+    0x0000047c   0x0000047c   0x00000002   Code   RO          409    .text               c_w.l(use_no_semi.o)
+    0x0000047e   0x0000047e   0x00000000   Code   RO          411    .text               c_w.l(indicate_semi.o)
     0x0000047e   0x0000047e   0x00000002   PAD
-    0x00000480   0x00000480   0x0000002a   Code   RO           10    .text.DelayMicro    clock.o
-    0x000004aa   0x000004aa   0x00000002   PAD
-    0x000004ac   0x000004ac   0x00000030   Code   RO           12    .text.DelayMilli    clock.o
-    0x000004dc   0x000004dc   0x00000024   Code   RO            8    .text.DelayNano     clock.o
-    0x00000500   0x00000500   0x00000018   Code   RO           89    .text.InitAll       main.o
-    0x00000518   0x00000518   0x0000002e   Code   RO           52    .text.LcdClearDisplay  lcd.o
-    0x00000546   0x00000546   0x00000002   PAD
-    0x00000548   0x00000548   0x00000072   Code   RO           58    .text.LcdDisplayControl  lcd.o
-    0x000005ba   0x000005ba   0x00000002   PAD
-    0x000005bc   0x000005bc   0x0000005a   Code   RO           56    .text.LcdEntryModeSet  lcd.o
-    0x00000616   0x00000616   0x00000002   PAD
-    0x00000618   0x00000618   0x00000074   Code   RO           62    .text.LcdFunctionSet  lcd.o
-    0x0000068c   0x0000068c   0x0000002a   Code   RO           72    .text.LcdIncrementCursorCol  lcd.o
-    0x000006b6   0x000006b6   0x00000002   PAD
-    0x000006b8   0x000006b8   0x0000004e   Code   RO           70    .text.LcdIncrementCursorRow  lcd.o
-    0x00000706   0x00000706   0x00000002   PAD
-    0x00000708   0x00000708   0x00000076   Code   RO           64    .text.LcdInit       lcd.o
-    0x0000077e   0x0000077e   0x00000002   PAD
-    0x00000780   0x00000780   0x00000046   Code   RO           74    .text.LcdPrintChar  lcd.o
-    0x000007c6   0x000007c6   0x00000002   PAD
-    0x000007c8   0x000007c8   0x0000003a   Code   RO           78    .text.LcdPrintString  lcd.o
+    0x00000480   0x00000480   0x00000072   Code   RO            6    .text.ClockInit     clock.o
+    0x000004f2   0x000004f2   0x00000002   PAD
+    0x000004f4   0x000004f4   0x00000032   Code   RO           12    .text.DelayMicro    clock.o
+    0x00000526   0x00000526   0x00000002   PAD
+    0x00000528   0x00000528   0x00000036   Code   RO           14    .text.DelayMilli    clock.o
+    0x0000055e   0x0000055e   0x00000002   PAD
+    0x00000560   0x00000560   0x0000002c   Code   RO           10    .text.DelayNano     clock.o
+    0x0000058c   0x0000058c   0x00000012   Code   RO          139    .text.InitAll       program-logic.o
+    0x0000059e   0x0000059e   0x00000002   PAD
+    0x000005a0   0x000005a0   0x0000000e   Code   RO           34    .text.KeypadInit    keypad.o
+    0x000005ae   0x000005ae   0x00000002   PAD
+    0x000005b0   0x000005b0   0x0000006c   Code   RO           59    .text.LcdClearDisplay  lcd.o
+    0x0000061c   0x0000061c   0x000001e6   Code   RO           71    .text.LcdInit       lcd.o
     0x00000802   0x00000802   0x00000002   PAD
-    0x00000804   0x00000804   0x0000002c   Code   RO           46    .text.LcdPulseEn    lcd.o
-    0x00000830   0x00000830   0x00000022   Code   RO           50    .text.LcdSendByte   lcd.o
-    0x00000852   0x00000852   0x00000002   PAD
-    0x00000854   0x00000854   0x00000022   Code   RO           48    .text.LcdSendNibble  lcd.o
-    0x00000876   0x00000876   0x00000002   PAD
-    0x00000878   0x00000878   0x00000094   Code   RO           68    .text.LcdSetCursor  lcd.o
-    0x0000090c   0x0000090c   0x00000038   Code   RO           66    .text.LcdSetDdram   lcd.o
-    0x00000944   0x00000944   0x00000020   Code   RO           44    .text.LcdSetRs      lcd.o
-    0x00000964   0x00000964   0x0000007a   Code   RO            4    .text.PLLInit       clock.o
-    0x000009de   0x000009de   0x00000002   PAD
-    0x000009e0   0x000009e0   0x0000003a   Code   RO          123    .text.PortAInit     ports.o
-    0x00000a1a   0x00000a1a   0x00000002   PAD
-    0x00000a1c   0x00000a1c   0x0000003a   Code   RO          121    .text.PortBInit     ports.o
-    0x00000a56   0x00000a56   0x00000002   PAD
-    0x00000a58   0x00000a58   0x00000026   Code   RO           22    .text.Strlen        helpers.o
-    0x00000a7e   0x00000a7e   0x00000002   PAD
-    0x00000a80   0x00000a80   0x0000002a   Code   RO            2    .text.SysTickInit   clock.o
-    0x00000aaa   0x00000aaa   0x00000002   PAD
-    0x00000aac   0x00000aac   0x00000038   Code   RO            6    .text.SysTickWait   clock.o
-    0x00000ae4   0x00000ae4   0x0000010c   Code   RO          274    .text.SystemInit    system_tm4c123.o
-    0x00000bf0   0x00000bf0   0x00000062   Code   RO           91    .text.main          main.o
-    0x00000c52   0x00000c52   0x0000001a   Code   RO          378    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x00000c6c   0x00000c6c   0x000000a4   Data   RO           93    .rodata.str1.1      main.o
-    0x00000d10   0x00000d10   0x00000010   Data   RO          453    Region$$Table       anon$$obj.o
+    0x00000804   0x00000804   0x000000c6   Code   RO           81    .text.LcdPrintChar  lcd.o
+    0x000008ca   0x000008ca   0x00000002   PAD
+    0x000008cc   0x000008cc   0x00000026   Code   RO           85    .text.LcdPrintString  lcd.o
+    0x000008f2   0x000008f2   0x00000002   PAD
+    0x000008f4   0x000008f4   0x0000008a   Code   RO           75    .text.LcdSetCursor  lcd.o
+    0x0000097e   0x0000097e   0x00000002   PAD
+    0x00000980   0x00000980   0x00000036   Code   RO          128    .text.PortAInit     ports.o
+    0x000009b6   0x000009b6   0x00000002   PAD
+    0x000009b8   0x000009b8   0x00000036   Code   RO          126    .text.PortBInit     ports.o
+    0x000009ee   0x000009ee   0x00000002   PAD
+    0x000009f0   0x000009f0   0x00000058   Code   RO          124    .text.PortDInit     ports.o
+    0x00000a48   0x00000a48   0x00000068   Code   RO          122    .text.PortEInit     ports.o
+    0x00000ab0   0x00000ab0   0x00000058   Code   RO          253    .text.RunAll        unit-test.o
+    0x00000b08   0x00000b08   0x0000001c   Code   RO           25    .text.Strlen        helpers.o
+    0x00000b24   0x00000b24   0x00000070   Code   RO          288    .text.SystemInit    system_tm4c123.o
+    0x00000b94   0x00000b94   0x0000000a   Code   RO           97    .text.main          main.o
+    0x00000b9e   0x00000b9e   0x0000001a   Code   RO          392    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x00000bb8   0x00000bb8   0x000000a4   Data   RO          255    .rodata.str1.1      unit-test.o
+    0x00000c5c   0x00000c5c   0x00000010   Data   RO          467    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00000d20, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00000c6c, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x00000d20, Size: 0x00000268, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x00000c6c, Size: 0x00000268, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000        -       0x00000060   Zero   RW          318    .bss                c_w.l(libspace.o)
-    0x20000060        -       0x00000004   Zero   RW           81    .bss.current_col    lcd.o
-    0x20000064        -       0x00000004   Zero   RW           80    .bss.current_row    lcd.o
-    0x20000068        -       0x00000000   Zero   RW          262    HEAP                startup_tm4c123.o
-    0x20000068        -       0x00000200   Zero   RW          261    STACK               startup_tm4c123.o
+    0x20000000        -       0x00000060   Zero   RW          332    .bss                c_w.l(libspace.o)
+    0x20000060        -       0x00000004   Zero   RW           88    .bss.current_col    lcd.o
+    0x20000064        -       0x00000004   Zero   RW           87    .bss.current_row    lcd.o
+    0x20000068        -       0x00000000   Zero   RW          278    HEAP                startup_tm4c123.o
+    0x20000068        -       0x00000200   Zero   RW          277    STACK               startup_tm4c123.o
 
 
 ==============================================================================
@@ -946,18 +925,21 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       346          0          0          0          0       1183   clock.o
-        38          0          0          0          0        502   helpers.o
-      1080          0          0          0          8       3073   lcd.o
-       122          0        164          0          0        636   main.o
-       116          0          0          0          0        918   ports.o
+       262          0          0          0          0       1720   clock.o
+        28          0          0          0          0        567   helpers.o
+        14          0          0          0          0        819   keypad.o
+       968          0          0          0          8       9722   lcd.o
+        10          0          0          0          0        353   main.o
+       300          0          0          0          0        920   ports.o
+        18          0          0          0          0        356   program-logic.o
        276         24        620          0        512       5472   startup_tm4c123.o
-       268          0          0          0          0       6734   system_tm4c123.o
+       112          0          0          0          0       6450   system_tm4c123.o
+        88          0        164          0          0       1242   unit-test.o
 
     ----------------------------------------------------------------------
-      2278         24        800          0        520      18518   Object Totals
+      2098         24        800          0        520      27621   Object Totals
          0          0         16          0          0          0   (incl. Generated)
-        32          0          0          0          0          0   (incl. Padding)
+        22          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1005,15 +987,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      2560         40        800          0        616      18894   Grand Totals
-      2560         40        800          0        616      18894   ELF Image Totals
-      2560         40        800          0          0          0   ROM Totals
+      2380         40        800          0        616      27937   Grand Totals
+      2380         40        800          0        616      27937   ELF Image Totals
+      2380         40        800          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 3360 (   3.28kB)
+    Total RO  Size (Code + RO Data)                 3180 (   3.11kB)
     Total RW  Size (RW Data + ZI Data)               616 (   0.60kB)
-    Total ROM Size (Code + RO Data + RW Data)       3360 (   3.28kB)
+    Total ROM Size (Code + RO Data + RW Data)       3180 (   3.11kB)
 
 ==============================================================================
 
