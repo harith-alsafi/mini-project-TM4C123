@@ -494,16 +494,6 @@
               <FileType>5</FileType>
               <FilePath>.\src\user-interface.h</FilePath>
             </File>
-            <File>
-              <FileName>user-interaction.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\user-interaction.c</FilePath>
-            </File>
-            <File>
-              <FileName>user-interaction.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\src\user-interaction.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>

@@ -1,6 +1,8 @@
 #include "unit-test.h"
 #include "clock.h"
 #include "lcd.h"
+#include "keypad.h"
+#include "stdbool.h"
 
 void AfterEach(){
     LcdClearDisplay();
@@ -43,11 +45,26 @@ void TestLcdMultiLine(){
 
 }
 
-void RunAll(){
+void TestLcdAll(){
     // TestLcdClear();
     // AfterEach();
     // TestLcdCursor();
     // AfterEach();
     TestLcdMultiLine();
     // AfterEach();
+}
+
+void TestKeypadLcd(){
+    LcdPrintString("Press any key");
+    KeyInfo keyInfo = KeypadWaitForInput();
+    LcdClearDisplay();
+    LcdPrintString("You pressed: ");
+    LcdPrintChar(keyInfo.key, true);
+    DelayMilli(3000);
+    LcdClearDisplay();
+}
+
+void RunAll(){
+    // TestLcdAll();
+    TestKeypadLcd();
 }
