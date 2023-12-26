@@ -2,11 +2,246 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="unit-test_8c" kind="file" language="C++">
     <compoundname>unit-test.c</compoundname>
+    <includes refid="unit-test_8h" local="yes">unit-test.h</includes>
+    <includes refid="clock_8h" local="yes">clock.h</includes>
+    <includes refid="lcd_8h" local="yes">lcd.h</includes>
+    <includes refid="keypad_8h" local="yes">keypad.h</includes>
+    <includes local="yes">stdbool.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>clock.h</label>
+        <link refid="clock_8h"/>
+      </node>
+      <node id="5">
+        <label>helpers.h</label>
+        <link refid="helpers_8h"/>
+      </node>
+      <node id="7">
+        <label>keypad.h</label>
+        <link refid="keypad_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lcd.h</label>
+        <link refid="lcd_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/unit-test.c</label>
+        <link refid="unit-test_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>unit-test.h</label>
+        <link refid="unit-test_8h"/>
+      </node>
+      <node id="6">
+        <label>stdbool.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="unit-test_8c_1a600f033d6f6a144fbd69976eab19e3ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AfterEach</definition>
+        <argsstring>()</argsstring>
+        <name>AfterEach</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/unit-test.c" line="7" column="6" bodyfile="src/unit-test.c" bodystart="7" bodyend="10"/>
+        <references refid="clock_8c_1a2e760c634cc89519ad0956fc258eab46" compoundref="clock_8c" startline="59" endline="64">DelayMilli</references>
+        <references refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" compoundref="lcd_8c" startline="31" endline="40">LcdClearDisplay</references>
+      </memberdef>
+      <memberdef kind="function" id="unit-test_8c_1ac8b99cb76697b9b78d1b364cf118342a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestLcdClear</definition>
+        <argsstring>()</argsstring>
+        <name>TestLcdClear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/unit-test.c" line="12" column="6" bodyfile="src/unit-test.c" bodystart="12" bodyend="17"/>
+        <references refid="clock_8c_1a2e760c634cc89519ad0956fc258eab46" compoundref="clock_8c" startline="59" endline="64">DelayMilli</references>
+        <references refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" compoundref="lcd_8c" startline="31" endline="40">LcdClearDisplay</references>
+        <references refid="lcd_8c_1a37450f91c7ae032252ea94d7c92efde2" compoundref="lcd_8c" startline="215" endline="228">LcdPrintChar</references>
+      </memberdef>
+      <memberdef kind="function" id="unit-test_8c_1a02e71048dc3a569b41b257dec3b00cf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestLcdCursor</definition>
+        <argsstring>()</argsstring>
+        <name>TestLcdCursor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/unit-test.c" line="19" column="6" bodyfile="src/unit-test.c" bodystart="19" bodyend="28"/>
+        <references refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" compoundref="lcd_8c" startline="235" endline="240">LcdPrintString</references>
+        <references refid="lcd_8c_1a8de82b22879092baf8383713ecc708e9" compoundref="lcd_8c" startline="179" endline="194">LcdSetCursor</references>
+      </memberdef>
+      <memberdef kind="function" id="unit-test_8c_1a6af1303d2e04cb5837731ad113c413bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestLcdMultiLine</definition>
+        <argsstring>()</argsstring>
+        <name>TestLcdMultiLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/unit-test.c" line="30" column="6" bodyfile="src/unit-test.c" bodystart="30" bodyend="46"/>
+        <references refid="clock_8c_1a2e760c634cc89519ad0956fc258eab46" compoundref="clock_8c" startline="59" endline="64">DelayMilli</references>
+        <references refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" compoundref="lcd_8c" startline="31" endline="40">LcdClearDisplay</references>
+        <references refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" compoundref="lcd_8c" startline="235" endline="240">LcdPrintString</references>
+        <referencedby refid="unit-test_8c_1aec3ab11b7409fd19efa26bed15100a3f" compoundref="unit-test_8c" startline="48" endline="55">TestLcdAll</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="unit-test_8c_1aec3ab11b7409fd19efa26bed15100a3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestLcdAll</definition>
+        <argsstring>()</argsstring>
+        <name>TestLcdAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/unit-test.c" line="48" column="6" bodyfile="src/unit-test.c" bodystart="48" bodyend="55"/>
+        <references refid="unit-test_8c_1a6af1303d2e04cb5837731ad113c413bc" compoundref="unit-test_8c" startline="30" endline="46">TestLcdMultiLine</references>
+      </memberdef>
+      <memberdef kind="function" id="unit-test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestKeypadLcd</definition>
+        <argsstring>()</argsstring>
+        <name>TestKeypadLcd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/unit-test.c" line="57" column="6" bodyfile="src/unit-test.c" bodystart="57" bodyend="65"/>
+        <references refid="clock_8c_1a2e760c634cc89519ad0956fc258eab46" compoundref="clock_8c" startline="59" endline="64">DelayMilli</references>
+        <references refid="struct_key_info_1a129a412e80d39b7257b677028c1acec0" compoundref="keypad_8h" startline="37">KeyInfo::key</references>
+        <references refid="keypad_8c_1a63a4bc1c3105f40dc85fe16092790f83" compoundref="keypad_8c" startline="106" endline="119">KeypadWaitForInput</references>
+        <references refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" compoundref="lcd_8c" startline="31" endline="40">LcdClearDisplay</references>
+        <references refid="lcd_8c_1a37450f91c7ae032252ea94d7c92efde2" compoundref="lcd_8c" startline="215" endline="228">LcdPrintChar</references>
+        <references refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" compoundref="lcd_8c" startline="235" endline="240">LcdPrintString</references>
+        <referencedby refid="unit-test_8c_1ac43be5887d2ddcce27989432c6415651" compoundref="unit-test_8c" startline="67" endline="70">RunAll</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="unit-test_8c_1ac43be5887d2ddcce27989432c6415651" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RunAll</definition>
+        <argsstring>()</argsstring>
+        <name>RunAll</name>
+        <briefdescription>
+<para>Runs all unit test functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/unit-test.c" line="67" column="6" bodyfile="src/unit-test.c" bodystart="67" bodyend="70"/>
+        <references refid="unit-test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" compoundref="unit-test_8c" startline="57" endline="65">TestKeypadLcd</references>
+        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="7" endline="17">main</referencedby>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="unit-test_8h" kindref="compound">unit-test.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="clock_8h" kindref="compound">clock.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lcd_8h" kindref="compound">lcd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="keypad_8h" kindref="compound">keypad.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stdbool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="unit-test_8c_1a600f033d6f6a144fbd69976eab19e3ee" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="unit-test_8c_1a600f033d6f6a144fbd69976eab19e3ee" kindref="member">AfterEach</ref>(){</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" kindref="member">LcdClearDisplay</ref>();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a2e760c634cc89519ad0956fc258eab46" kindref="member">DelayMilli</ref>(3000);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="unit-test_8c_1ac8b99cb76697b9b78d1b364cf118342a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="unit-test_8c_1ac8b99cb76697b9b78d1b364cf118342a" kindref="member">TestLcdClear</ref>(){</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a37450f91c7ae032252ea94d7c92efde2" kindref="member">LcdPrintChar</ref>(</highlight><highlight class="charliteral">&apos;S&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" kindref="member">LcdClearDisplay</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a2e760c634cc89519ad0956fc258eab46" kindref="member">DelayMilli</ref>(3000);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a37450f91c7ae032252ea94d7c92efde2" kindref="member">LcdPrintChar</ref>(</highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="unit-test_8c_1a02e71048dc3a569b41b257dec3b00cf0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="unit-test_8c_1a02e71048dc3a569b41b257dec3b00cf0" kindref="member">TestLcdCursor</ref>(){</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a8de82b22879092baf8383713ecc708e9" kindref="member">LcdSetCursor</ref>(0,<sp/>0);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;Harith<sp/>Al-Safi&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a8de82b22879092baf8383713ecc708e9" kindref="member">LcdSetCursor</ref>(1,<sp/>0);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;and<sp/>Thuraya<sp/>go&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a8de82b22879092baf8383713ecc708e9" kindref="member">LcdSetCursor</ref>(2,<sp/>3);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;Johnson<sp/>go&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="unit-test_8c_1a6af1303d2e04cb5837731ad113c413bc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="unit-test_8c_1a6af1303d2e04cb5837731ad113c413bc" kindref="member">TestLcdMultiLine</ref>(){</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;Karith<sp/>Al-Sadi<sp/>aNd<sp/>tHuraya<sp/>gO<sp/>everywhEre&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;Harith<sp/>Al-Safi<sp/>and<sp/>Thuraya<sp/>go<sp/>everywhere&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a2e760c634cc89519ad0956fc258eab46" kindref="member">DelayMilli</ref>(3000);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;Barith<sp/>Al-Nadi<sp/>aNd<sp/>thuRaya<sp/>GO<sp/>eveRywhEre&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;Harith<sp/>Al-Safi<sp/>and<sp/>Thuraya<sp/>go<sp/>everywhere&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a2e760c634cc89519ad0956fc258eab46" kindref="member">DelayMilli</ref>(3000);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" kindref="member">LcdClearDisplay</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;Jarith<sp/>Al-Qadi<sp/>ANd<sp/>thuRAya<sp/>Go<sp/>EveRywhEre&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;Harith<sp/>Al-Safi<sp/>and<sp/>Thuraya<sp/>go<sp/>everywhere&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="unit-test_8c_1aec3ab11b7409fd19efa26bed15100a3f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="unit-test_8c_1aec3ab11b7409fd19efa26bed15100a3f" kindref="member">TestLcdAll</ref>(){</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TestLcdClear();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>AfterEach();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TestLcdCursor();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>AfterEach();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unit-test_8c_1a6af1303d2e04cb5837731ad113c413bc" kindref="member">TestLcdMultiLine</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>AfterEach();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="unit-test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="unit-test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" kindref="member">TestKeypadLcd</ref>(){</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;Press<sp/>any<sp/>key&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_key_info" kindref="compound">KeyInfo</ref><sp/>keyInfo<sp/>=<sp/><ref refid="keypad_8c_1a63a4bc1c3105f40dc85fe16092790f83" kindref="member">KeypadWaitForInput</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" kindref="member">LcdClearDisplay</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;You<sp/>pressed:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a37450f91c7ae032252ea94d7c92efde2" kindref="member">LcdPrintChar</ref>(keyInfo.<ref refid="struct_key_info_1a129a412e80d39b7257b677028c1acec0" kindref="member">key</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a2e760c634cc89519ad0956fc258eab46" kindref="member">DelayMilli</ref>(3000);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" kindref="member">LcdClearDisplay</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="unit-test_8c_1ac43be5887d2ddcce27989432c6415651" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="unit-test_8c_1ac43be5887d2ddcce27989432c6415651" kindref="member">RunAll</ref>(){</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TestLcdAll();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unit-test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" kindref="member">TestKeypadLcd</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/unit-test.c"/>
   </compounddef>

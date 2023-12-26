@@ -2,11 +2,44 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="flash-storage_8c" kind="file" language="C++">
     <compoundname>flash-storage.c</compoundname>
+    <includes refid="flash-storage_8h" local="yes">flash-storage.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/flash-storage.c</label>
+        <link refid="flash-storage_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>flash-storage.h</label>
+        <link refid="flash-storage_8h"/>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="flash-storage_8c_1ab165861d9848019963be1f879fb38173" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FlashInit</definition>
+        <argsstring>()</argsstring>
+        <name>FlashInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/flash-storage.c" line="3" column="6" bodyfile="src/flash-storage.c" bodystart="3" bodyend="5"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="flash-storage_8h" kindref="compound">flash-storage.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="flash-storage_8c_1ab165861d9848019963be1f879fb38173" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="flash-storage_8c_1ab165861d9848019963be1f879fb38173" kindref="member">FlashInit</ref>(){</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/flash-storage.c"/>
   </compounddef>

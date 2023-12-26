@@ -1,0 +1,9 @@
+<map id="KeypadGetChar" name="KeypadGetChar">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,119,32"/>
+<area shape="rect" id="Node000002" href="$clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="167,5,253,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,16,151,16,151,21,119,21"/>
+<area shape="rect" id="Node000003" href="$clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="301,5,396,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="254,16,286,16,286,21,254,21"/>
+<area shape="rect" id="Node000004" href="$playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="444,5,497,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="397,16,429,16,429,21,397,21"/>
+</map>

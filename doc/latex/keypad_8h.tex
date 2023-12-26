@@ -1,50 +1,91 @@
 \doxysection{src/keypad.h File Reference}
 \hypertarget{keypad_8h}{}\label{keypad_8h}\index{src/keypad.h@{src/keypad.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for keypad.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{keypad_8h__incl}
+\end{center}
+\end{figure}
 This graph shows which files directly or indirectly include this file\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=152pt]{keypad_8h__dep__incl}
+\includegraphics[width=350pt]{keypad_8h__dep__incl}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_key_info}{Key\+Info}}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{keypad_8h_ae317b84750ff882cede31494435f459f}{KEYPAD\+\_\+H}}
 \item 
-\#define \mbox{\hyperlink{keypad_8h_a89c99b60305ab3808a34321cb3b6ba9f}{KEYPAD\+\_\+\+COL}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4000703C))
+\#define \mbox{\hyperlink{keypad_8h_a573e77c14d269b0b758af193d102d0b0}{KEYPAD\+\_\+\+COL\+\_\+\+PIN}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4000703C))
 \item 
-\#define \mbox{\hyperlink{keypad_8h_a2267a85aea25120c5c2df97e1b0ec34f}{KEYPAD\+\_\+\+ROW}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4002403C))
+\#define \mbox{\hyperlink{keypad_8h_ae41b948637d7857bd49ae3a6433fe975}{KEYPAD\+\_\+\+ROW\+\_\+\+PIN}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4002403C))
 \item 
 \#define \mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}~4
+\item 
+\#define \mbox{\hyperlink{keypad_8h_ae3dadba290780b744593a2bc45264e3f}{KEYPAD\+\_\+\+UNKOWN\+\_\+\+KEY}}~\textquotesingle{}\textbackslash{}0\textquotesingle{}
+\item 
+\#define \mbox{\hyperlink{keypad_8h_a9c722c424a8076bfe4ee4e9e2efa03e6}{KEYPAD\+\_\+\+MAX\+\_\+\+SPECIAL\+\_\+\+KEYS}}~7
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc}{Special\+Key\+Functions}} \{ \newline
+\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9}{PLUS}}
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3}{MULTIPLY}}
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225}{MINUS}}
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da}{DIVIDE}}
+, \newline
+\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2}{DECIMAL\+\_\+\+POINT}}
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e}{EXPONENTIAL}}
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f}{SHIFT\+\_\+\+ON}}
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284}{SHIFT\+\_\+\+OFF}}
+, \newline
+\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78}{END\+\_\+\+INPUT}}
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccad67d15054b1cf5d5d891decd24ec801f}{UNDO\+\_\+\+LAST}}
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca1e1a4aba20a5a009e616cbc8fad33ac7}{CLEAR}}
+ \}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-unsigned char \mbox{\hyperlink{keypad_8h_a02e5cd605c64773d944bc322b51222cd}{Keypad\+Get\+Row}} ()
+\mbox{\hyperlink{struct_key_info}{Key\+Info}} \mbox{\hyperlink{keypad_8h_a49ffa463b26cc47b7d9e3e2cda8d9168}{Keypad\+Find\+Special\+Key}} (char key)
 \item 
-unsigned char \mbox{\hyperlink{keypad_8h_a7dba628d7c95a933378f3a008344a4d3}{Keypad\+Get\+Col}} ()
+void \mbox{\hyperlink{keypad_8h_aa6981f604fdfbec491e21e90507ec0de}{Keypad\+Init}} ()
 \item 
-char \mbox{\hyperlink{keypad_8h_ab826b54bc6305f49d758d28173041ab7}{Keypad\+Get\+Char}} ()
+\mbox{\hyperlink{struct_key_info}{Key\+Info}} \mbox{\hyperlink{keypad_8h_a63a4bc1c3105f40dc85fe16092790f83}{Keypad\+Wait\+For\+Input}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-const char \mbox{\hyperlink{keypad_8h_a7465f8ed0343f8e4044387a0429afb32}{keypad}} \mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}\mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}
+const \mbox{\hyperlink{struct_key_info}{Key\+Info}} \mbox{\hyperlink{keypad_8h_aa67f7a9fae59d327c0fef030151be800}{KEYPAD\+\_\+\+SPECIAL\+\_\+\+KEYS}} \mbox{[}\mbox{\hyperlink{keypad_8h_a9c722c424a8076bfe4ee4e9e2efa03e6}{KEYPAD\+\_\+\+MAX\+\_\+\+SPECIAL\+\_\+\+KEYS}}\mbox{]}
+\item 
+const char \mbox{\hyperlink{keypad_8h_a4c1fef8314018fe3ce44affffbe10a72}{KEYPAD\+\_\+\+KEYS}} \mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}\mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}
+\item 
+bool \mbox{\hyperlink{keypad_8h_ab3f2ce14f970ec74192af9e2c69a3ef5}{shift\+Is\+On}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
-\Hypertarget{keypad_8h_a89c99b60305ab3808a34321cb3b6ba9f}\label{keypad_8h_a89c99b60305ab3808a34321cb3b6ba9f} 
-\index{keypad.h@{keypad.h}!KEYPAD\_COL@{KEYPAD\_COL}}
-\index{KEYPAD\_COL@{KEYPAD\_COL}!keypad.h@{keypad.h}}
-\doxysubsubsection{\texorpdfstring{KEYPAD\_COL}{KEYPAD\_COL}}
-{\footnotesize\ttfamily \#define KEYPAD\+\_\+\+COL~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4000703C))}
+\Hypertarget{keypad_8h_a573e77c14d269b0b758af193d102d0b0}\label{keypad_8h_a573e77c14d269b0b758af193d102d0b0} 
+\index{keypad.h@{keypad.h}!KEYPAD\_COL\_PIN@{KEYPAD\_COL\_PIN}}
+\index{KEYPAD\_COL\_PIN@{KEYPAD\_COL\_PIN}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KEYPAD\_COL\_PIN}{KEYPAD\_COL\_PIN}}
+{\footnotesize\ttfamily \#define KEYPAD\+\_\+\+COL\+\_\+\+PIN~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4000703C))}
 
 
 
-Definition at line \mbox{\hyperlink{keypad_8h_source_l00008}{8}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
+Definition at line \mbox{\hyperlink{keypad_8h_source_l00010}{10}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
 
 \Hypertarget{keypad_8h_ae317b84750ff882cede31494435f459f}\label{keypad_8h_ae317b84750ff882cede31494435f459f} 
 \index{keypad.h@{keypad.h}!KEYPAD\_H@{KEYPAD\_H}}
@@ -56,6 +97,16 @@ Definition at line \mbox{\hyperlink{keypad_8h_source_l00008}{8}} of file \mbox{\
 
 Definition at line \mbox{\hyperlink{keypad_8h_source_l00002}{2}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
 
+\Hypertarget{keypad_8h_a9c722c424a8076bfe4ee4e9e2efa03e6}\label{keypad_8h_a9c722c424a8076bfe4ee4e9e2efa03e6} 
+\index{keypad.h@{keypad.h}!KEYPAD\_MAX\_SPECIAL\_KEYS@{KEYPAD\_MAX\_SPECIAL\_KEYS}}
+\index{KEYPAD\_MAX\_SPECIAL\_KEYS@{KEYPAD\_MAX\_SPECIAL\_KEYS}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KEYPAD\_MAX\_SPECIAL\_KEYS}{KEYPAD\_MAX\_SPECIAL\_KEYS}}
+{\footnotesize\ttfamily \#define KEYPAD\+\_\+\+MAX\+\_\+\+SPECIAL\+\_\+\+KEYS~7}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8h_source_l00020}{20}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
+
 \Hypertarget{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}\label{keypad_8h_acc73b1692bde87ce0a891af4dece22fc} 
 \index{keypad.h@{keypad.h}!KEYPAD\_N@{KEYPAD\_N}}
 \index{KEYPAD\_N@{KEYPAD\_N}!keypad.h@{keypad.h}}
@@ -64,61 +115,190 @@ Definition at line \mbox{\hyperlink{keypad_8h_source_l00002}{2}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{keypad_8h_source_l00015}{15}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
+Definition at line \mbox{\hyperlink{keypad_8h_source_l00017}{17}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
 
-\Hypertarget{keypad_8h_a2267a85aea25120c5c2df97e1b0ec34f}\label{keypad_8h_a2267a85aea25120c5c2df97e1b0ec34f} 
-\index{keypad.h@{keypad.h}!KEYPAD\_ROW@{KEYPAD\_ROW}}
-\index{KEYPAD\_ROW@{KEYPAD\_ROW}!keypad.h@{keypad.h}}
-\doxysubsubsection{\texorpdfstring{KEYPAD\_ROW}{KEYPAD\_ROW}}
-{\footnotesize\ttfamily \#define KEYPAD\+\_\+\+ROW~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4002403C))}
+\Hypertarget{keypad_8h_ae41b948637d7857bd49ae3a6433fe975}\label{keypad_8h_ae41b948637d7857bd49ae3a6433fe975} 
+\index{keypad.h@{keypad.h}!KEYPAD\_ROW\_PIN@{KEYPAD\_ROW\_PIN}}
+\index{KEYPAD\_ROW\_PIN@{KEYPAD\_ROW\_PIN}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KEYPAD\_ROW\_PIN}{KEYPAD\_ROW\_PIN}}
+{\footnotesize\ttfamily \#define KEYPAD\+\_\+\+ROW\+\_\+\+PIN~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4002403C))}
 
 
 
-Definition at line \mbox{\hyperlink{keypad_8h_source_l00014}{14}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
+Definition at line \mbox{\hyperlink{keypad_8h_source_l00016}{16}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
+
+\Hypertarget{keypad_8h_ae3dadba290780b744593a2bc45264e3f}\label{keypad_8h_ae3dadba290780b744593a2bc45264e3f} 
+\index{keypad.h@{keypad.h}!KEYPAD\_UNKOWN\_KEY@{KEYPAD\_UNKOWN\_KEY}}
+\index{KEYPAD\_UNKOWN\_KEY@{KEYPAD\_UNKOWN\_KEY}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KEYPAD\_UNKOWN\_KEY}{KEYPAD\_UNKOWN\_KEY}}
+{\footnotesize\ttfamily \#define KEYPAD\+\_\+\+UNKOWN\+\_\+\+KEY~\textquotesingle{}\textbackslash{}0\textquotesingle{}}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8h_source_l00019}{19}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc} 
+\index{keypad.h@{keypad.h}!SpecialKeyFunctions@{SpecialKeyFunctions}}
+\index{SpecialKeyFunctions@{SpecialKeyFunctions}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{SpecialKeyFunctions}{SpecialKeyFunctions}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc}{Special\+Key\+Functions}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLUS@{PLUS}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!PLUS@{PLUS}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9} 
+PLUS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MULTIPLY@{MULTIPLY}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!MULTIPLY@{MULTIPLY}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3} 
+MULTIPLY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MINUS@{MINUS}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!MINUS@{MINUS}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225} 
+MINUS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIVIDE@{DIVIDE}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!DIVIDE@{DIVIDE}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da} 
+DIVIDE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DECIMAL\_POINT@{DECIMAL\_POINT}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!DECIMAL\_POINT@{DECIMAL\_POINT}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2} 
+DECIMAL\+\_\+\+POINT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXPONENTIAL@{EXPONENTIAL}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!EXPONENTIAL@{EXPONENTIAL}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e} 
+EXPONENTIAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHIFT\_ON@{SHIFT\_ON}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!SHIFT\_ON@{SHIFT\_ON}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f} 
+SHIFT\+\_\+\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHIFT\_OFF@{SHIFT\_OFF}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!SHIFT\_OFF@{SHIFT\_OFF}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284} 
+SHIFT\+\_\+\+OFF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{END\_INPUT@{END\_INPUT}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!END\_INPUT@{END\_INPUT}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78} 
+END\+\_\+\+INPUT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNDO\_LAST@{UNDO\_LAST}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!UNDO\_LAST@{UNDO\_LAST}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccad67d15054b1cf5d5d891decd24ec801f}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccad67d15054b1cf5d5d891decd24ec801f} 
+UNDO\+\_\+\+LAST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLEAR@{CLEAR}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!CLEAR@{CLEAR}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca1e1a4aba20a5a009e616cbc8fad33ac7}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca1e1a4aba20a5a009e616cbc8fad33ac7} 
+CLEAR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{keypad_8h_source_l00022}{22}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
 
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{keypad_8h_ab826b54bc6305f49d758d28173041ab7}\label{keypad_8h_ab826b54bc6305f49d758d28173041ab7} 
-\index{keypad.h@{keypad.h}!KeypadGetChar@{KeypadGetChar}}
-\index{KeypadGetChar@{KeypadGetChar}!keypad.h@{keypad.h}}
-\doxysubsubsection{\texorpdfstring{KeypadGetChar()}{KeypadGetChar()}}
-{\footnotesize\ttfamily char Keypad\+Get\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\Hypertarget{keypad_8h_a49ffa463b26cc47b7d9e3e2cda8d9168}\label{keypad_8h_a49ffa463b26cc47b7d9e3e2cda8d9168} 
+\index{keypad.h@{keypad.h}!KeypadFindSpecialKey@{KeypadFindSpecialKey}}
+\index{KeypadFindSpecialKey@{KeypadFindSpecialKey}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KeypadFindSpecialKey()}{KeypadFindSpecialKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_key_info}{Key\+Info}} Keypad\+Find\+Special\+Key (\begin{DoxyParamCaption}\item[{char}]{key }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00019}{19}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00071}{71}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
 
-\Hypertarget{keypad_8h_a7dba628d7c95a933378f3a008344a4d3}\label{keypad_8h_a7dba628d7c95a933378f3a008344a4d3} 
-\index{keypad.h@{keypad.h}!KeypadGetCol@{KeypadGetCol}}
-\index{KeypadGetCol@{KeypadGetCol}!keypad.h@{keypad.h}}
-\doxysubsubsection{\texorpdfstring{KeypadGetCol()}{KeypadGetCol()}}
-{\footnotesize\ttfamily unsigned char Keypad\+Get\+Col (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00014}{14}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
-
-\Hypertarget{keypad_8h_a02e5cd605c64773d944bc322b51222cd}\label{keypad_8h_a02e5cd605c64773d944bc322b51222cd} 
-\index{keypad.h@{keypad.h}!KeypadGetRow@{KeypadGetRow}}
-\index{KeypadGetRow@{KeypadGetRow}!keypad.h@{keypad.h}}
-\doxysubsubsection{\texorpdfstring{KeypadGetRow()}{KeypadGetRow()}}
-{\footnotesize\ttfamily unsigned char Keypad\+Get\+Row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keypad_8h_a49ffa463b26cc47b7d9e3e2cda8d9168_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{keypad_8h_aa6981f604fdfbec491e21e90507ec0de}\label{keypad_8h_aa6981f604fdfbec491e21e90507ec0de} 
+\index{keypad.h@{keypad.h}!KeypadInit@{KeypadInit}}
+\index{KeypadInit@{KeypadInit}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KeypadInit()}{KeypadInit()}}
+{\footnotesize\ttfamily void Keypad\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00010}{10}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00081}{81}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{keypad_8h_aa6981f604fdfbec491e21e90507ec0de_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{keypad_8h_aa6981f604fdfbec491e21e90507ec0de_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{keypad_8h_a63a4bc1c3105f40dc85fe16092790f83}\label{keypad_8h_a63a4bc1c3105f40dc85fe16092790f83} 
+\index{keypad.h@{keypad.h}!KeypadWaitForInput@{KeypadWaitForInput}}
+\index{KeypadWaitForInput@{KeypadWaitForInput}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KeypadWaitForInput()}{KeypadWaitForInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_key_info}{Key\+Info}} Keypad\+Wait\+For\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00106}{106}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keypad_8h_a63a4bc1c3105f40dc85fe16092790f83_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keypad_8h_a63a4bc1c3105f40dc85fe16092790f83_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Variable Documentation}
-\Hypertarget{keypad_8h_a7465f8ed0343f8e4044387a0429afb32}\label{keypad_8h_a7465f8ed0343f8e4044387a0429afb32} 
-\index{keypad.h@{keypad.h}!keypad@{keypad}}
-\index{keypad@{keypad}!keypad.h@{keypad.h}}
-\doxysubsubsection{\texorpdfstring{keypad}{keypad}}
-{\footnotesize\ttfamily const char keypad\mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}\mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+\Hypertarget{keypad_8h_a4c1fef8314018fe3ce44affffbe10a72}\label{keypad_8h_a4c1fef8314018fe3ce44affffbe10a72} 
+\index{keypad.h@{keypad.h}!KEYPAD\_KEYS@{KEYPAD\_KEYS}}
+\index{KEYPAD\_KEYS@{KEYPAD\_KEYS}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KEYPAD\_KEYS}{KEYPAD\_KEYS}}
+{\footnotesize\ttfamily const char KEYPAD\+\_\+\+KEYS\mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}\mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
 
 
 
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00003}{3}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00064}{64}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+
+\Hypertarget{keypad_8h_aa67f7a9fae59d327c0fef030151be800}\label{keypad_8h_aa67f7a9fae59d327c0fef030151be800} 
+\index{keypad.h@{keypad.h}!KEYPAD\_SPECIAL\_KEYS@{KEYPAD\_SPECIAL\_KEYS}}
+\index{KEYPAD\_SPECIAL\_KEYS@{KEYPAD\_SPECIAL\_KEYS}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KEYPAD\_SPECIAL\_KEYS}{KEYPAD\_SPECIAL\_KEYS}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_key_info}{Key\+Info}} KEYPAD\+\_\+\+SPECIAL\+\_\+\+KEYS\mbox{[}\mbox{\hyperlink{keypad_8h_a9c722c424a8076bfe4ee4e9e2efa03e6}{KEYPAD\+\_\+\+MAX\+\_\+\+SPECIAL\+\_\+\+KEYS}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00005}{5}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+
+\Hypertarget{keypad_8h_ab3f2ce14f970ec74192af9e2c69a3ef5}\label{keypad_8h_ab3f2ce14f970ec74192af9e2c69a3ef5} 
+\index{keypad.h@{keypad.h}!shiftIsOn@{shiftIsOn}}
+\index{shiftIsOn@{shiftIsOn}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{shiftIsOn}{shiftIsOn}}
+{\footnotesize\ttfamily bool shift\+Is\+On\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00062}{62}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
 

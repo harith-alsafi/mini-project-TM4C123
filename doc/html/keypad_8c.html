@@ -80,14 +80,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="keypad_8h_source.html">keypad.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ports_8h_source.html">ports.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="clock_8h_source.html">clock.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for keypad.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="keypad_8c__incl.png" border="0" usemap="#asrc_2keypad_8c" alt=""/></div>
 <map name="asrc_2keypad_8c" id="asrc_2keypad_8c">
-<area shape="rect" title=" " alt="" coords="5,5,102,32"/>
-<area shape="rect" href="keypad_8h.html" title=" " alt="" coords="16,80,91,107"/>
-<area shape="poly" title=" " alt="" coords="56,33,56,64,51,64,51,33"/>
+<area shape="rect" title=" " alt="" coords="86,5,183,32"/>
+<area shape="rect" href="keypad_8h.html" title=" " alt="" coords="5,80,80,107"/>
+<area shape="poly" title=" " alt="" coords="120,35,72,73,68,68,117,30"/>
+<area shape="rect" href="ports_8h.html" title=" " alt="" coords="104,80,165,107"/>
+<area shape="poly" title=" " alt="" coords="137,33,137,64,132,64,132,33"/>
+<area shape="rect" href="clock_8h.html" title=" " alt="" coords="190,80,253,107"/>
+<area shape="poly" title=" " alt="" coords="151,30,196,68,193,72,148,35"/>
+<area shape="rect" title=" " alt="" coords="5,155,80,181"/>
+<area shape="poly" title=" " alt="" coords="45,107,45,139,40,139,40,107"/>
 </map>
 </div>
 </div>
@@ -95,19 +103,61 @@ Include dependency graph for keypad.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a02e5cd605c64773d944bc322b51222cd" id="r_a02e5cd605c64773d944bc322b51222cd"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keypad_8c.html#a02e5cd605c64773d944bc322b51222cd">KeypadGetRow</a> ()</td></tr>
-<tr class="separator:a02e5cd605c64773d944bc322b51222cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dba628d7c95a933378f3a008344a4d3" id="r_a7dba628d7c95a933378f3a008344a4d3"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keypad_8c.html#a7dba628d7c95a933378f3a008344a4d3">KeypadGetCol</a> ()</td></tr>
-<tr class="separator:a7dba628d7c95a933378f3a008344a4d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ffa463b26cc47b7d9e3e2cda8d9168" id="r_a49ffa463b26cc47b7d9e3e2cda8d9168"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_key_info.html">KeyInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keypad_8c.html#a49ffa463b26cc47b7d9e3e2cda8d9168">KeypadFindSpecialKey</a> (char key)</td></tr>
+<tr class="separator:a49ffa463b26cc47b7d9e3e2cda8d9168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6981f604fdfbec491e21e90507ec0de" id="r_aa6981f604fdfbec491e21e90507ec0de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keypad_8c.html#aa6981f604fdfbec491e21e90507ec0de">KeypadInit</a> ()</td></tr>
+<tr class="separator:aa6981f604fdfbec491e21e90507ec0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab826b54bc6305f49d758d28173041ab7" id="r_ab826b54bc6305f49d758d28173041ab7"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keypad_8c.html#ab826b54bc6305f49d758d28173041ab7">KeypadGetChar</a> ()</td></tr>
 <tr class="separator:ab826b54bc6305f49d758d28173041ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63a4bc1c3105f40dc85fe16092790f83" id="r_a63a4bc1c3105f40dc85fe16092790f83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_key_info.html">KeyInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keypad_8c.html#a63a4bc1c3105f40dc85fe16092790f83">KeypadWaitForInput</a> ()</td></tr>
+<tr class="separator:a63a4bc1c3105f40dc85fe16092790f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a7465f8ed0343f8e4044387a0429afb32" id="r_a7465f8ed0343f8e4044387a0429afb32"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keypad_8c.html#a7465f8ed0343f8e4044387a0429afb32">keypad</a> [<a class="el" href="keypad_8h.html#acc73b1692bde87ce0a891af4dece22fc">KEYPAD_N</a>][<a class="el" href="keypad_8h.html#acc73b1692bde87ce0a891af4dece22fc">KEYPAD_N</a>]</td></tr>
-<tr class="separator:a7465f8ed0343f8e4044387a0429afb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa67f7a9fae59d327c0fef030151be800" id="r_aa67f7a9fae59d327c0fef030151be800"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_key_info.html">KeyInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keypad_8c.html#aa67f7a9fae59d327c0fef030151be800">KEYPAD_SPECIAL_KEYS</a> [<a class="el" href="keypad_8h.html#a9c722c424a8076bfe4ee4e9e2efa03e6">KEYPAD_MAX_SPECIAL_KEYS</a>]</td></tr>
+<tr class="separator:aa67f7a9fae59d327c0fef030151be800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3f2ce14f970ec74192af9e2c69a3ef5" id="r_ab3f2ce14f970ec74192af9e2c69a3ef5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keypad_8c.html#ab3f2ce14f970ec74192af9e2c69a3ef5">shiftIsOn</a> = false</td></tr>
+<tr class="separator:ab3f2ce14f970ec74192af9e2c69a3ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c1fef8314018fe3ce44affffbe10a72" id="r_a4c1fef8314018fe3ce44affffbe10a72"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keypad_8c.html#a4c1fef8314018fe3ce44affffbe10a72">KEYPAD_KEYS</a> [<a class="el" href="keypad_8h.html#acc73b1692bde87ce0a891af4dece22fc">KEYPAD_N</a>][<a class="el" href="keypad_8h.html#acc73b1692bde87ce0a891af4dece22fc">KEYPAD_N</a>]</td></tr>
+<tr class="separator:a4c1fef8314018fe3ce44affffbe10a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a49ffa463b26cc47b7d9e3e2cda8d9168" name="a49ffa463b26cc47b7d9e3e2cda8d9168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ffa463b26cc47b7d9e3e2cda8d9168">&#9670;&#160;</a></span>KeypadFindSpecialKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_key_info.html">KeyInfo</a> KeypadFindSpecialKey </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="keypad_8c_source.html#l00071">71</a> of file <a class="el" href="keypad_8c_source.html">keypad.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="keypad_8c_a49ffa463b26cc47b7d9e3e2cda8d9168_icgraph.png" border="0" usemap="#akeypad_8c_a49ffa463b26cc47b7d9e3e2cda8d9168_icgraph" alt=""/></div>
+<map name="akeypad_8c_a49ffa463b26cc47b7d9e3e2cda8d9168_icgraph" id="akeypad_8c_a49ffa463b26cc47b7d9e3e2cda8d9168_icgraph">
+<area shape="rect" title=" " alt="" coords="557,5,713,32"/>
+<area shape="rect" href="keypad_8c.html#a63a4bc1c3105f40dc85fe16092790f83" title=" " alt="" coords="369,5,509,32"/>
+<area shape="poly" title=" " alt="" coords="541,21,509,21,509,16,541,16"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="210,5,321,32"/>
+<area shape="poly" title=" " alt="" coords="353,21,321,21,321,16,353,16"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="103,5,162,32"/>
+<area shape="poly" title=" " alt="" coords="194,21,162,21,162,16,194,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ab826b54bc6305f49d758d28173041ab7" name="ab826b54bc6305f49d758d28173041ab7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab826b54bc6305f49d758d28173041ab7">&#9670;&#160;</a></span>KeypadGetChar()</h2>
 
@@ -123,18 +173,48 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="keypad_8c_source.html#l00019">19</a> of file <a class="el" href="keypad_8c_source.html">keypad.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="keypad_8c_source.html#l00087">87</a> of file <a class="el" href="keypad_8c_source.html">keypad.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="keypad_8c_ab826b54bc6305f49d758d28173041ab7_cgraph.png" border="0" usemap="#akeypad_8c_ab826b54bc6305f49d758d28173041ab7_cgraph" alt=""/></div>
+<map name="akeypad_8c_ab826b54bc6305f49d758d28173041ab7_cgraph" id="akeypad_8c_ab826b54bc6305f49d758d28173041ab7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,119,32"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="167,5,253,32"/>
+<area shape="poly" title=" " alt="" coords="119,16,151,16,151,21,119,21"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="301,5,396,32"/>
+<area shape="poly" title=" " alt="" coords="254,16,286,16,286,21,254,21"/>
+<area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="444,5,497,32"/>
+<area shape="poly" title=" " alt="" coords="397,16,429,16,429,21,397,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="keypad_8c_ab826b54bc6305f49d758d28173041ab7_icgraph.png" border="0" usemap="#akeypad_8c_ab826b54bc6305f49d758d28173041ab7_icgraph" alt=""/></div>
+<map name="akeypad_8c_ab826b54bc6305f49d758d28173041ab7_icgraph" id="akeypad_8c_ab826b54bc6305f49d758d28173041ab7_icgraph">
+<area shape="rect" title=" " alt="" coords="557,5,670,32"/>
+<area shape="rect" href="keypad_8c.html#a63a4bc1c3105f40dc85fe16092790f83" title=" " alt="" coords="369,5,509,32"/>
+<area shape="poly" title=" " alt="" coords="541,21,509,21,509,16,541,16"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="210,5,321,32"/>
+<area shape="poly" title=" " alt="" coords="353,21,321,21,321,16,353,16"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="103,5,162,32"/>
+<area shape="poly" title=" " alt="" coords="194,21,162,21,162,16,194,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a7dba628d7c95a933378f3a008344a4d3" name="a7dba628d7c95a933378f3a008344a4d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dba628d7c95a933378f3a008344a4d3">&#9670;&#160;</a></span>KeypadGetCol()</h2>
+<a id="aa6981f604fdfbec491e21e90507ec0de" name="aa6981f604fdfbec491e21e90507ec0de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6981f604fdfbec491e21e90507ec0de">&#9670;&#160;</a></span>KeypadInit()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char KeypadGetCol </td>
+          <td class="memname">void KeypadInit </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -142,18 +222,45 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="keypad_8c_source.html#l00014">14</a> of file <a class="el" href="keypad_8c_source.html">keypad.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="keypad_8c_source.html#l00081">81</a> of file <a class="el" href="keypad_8c_source.html">keypad.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="keypad_8c_aa6981f604fdfbec491e21e90507ec0de_cgraph.png" border="0" usemap="#akeypad_8c_aa6981f604fdfbec491e21e90507ec0de_cgraph" alt=""/></div>
+<map name="akeypad_8c_aa6981f604fdfbec491e21e90507ec0de_cgraph" id="akeypad_8c_aa6981f604fdfbec491e21e90507ec0de_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,88,57"/>
+<area shape="rect" href="ports_8c.html#a21efc6fa081c0b9c85eafe9d7455b9b6" title="Initiates Port D." alt="" coords="136,5,207,32"/>
+<area shape="poly" title=" " alt="" coords="88,33,120,26,121,32,89,38"/>
+<area shape="rect" href="ports_8c.html#a2c10edb046a08d0f0d72d288c9c64dfc" title="Initiates Port E." alt="" coords="136,56,207,83"/>
+<area shape="poly" title=" " alt="" coords="89,50,121,56,120,62,88,55"/>
+<area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="255,31,307,57"/>
+<area shape="poly" title=" " alt="" coords="208,24,240,32,239,37,207,29"/>
+<area shape="poly" title=" " alt="" coords="207,59,239,51,240,56,208,64"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="keypad_8c_aa6981f604fdfbec491e21e90507ec0de_icgraph.png" border="0" usemap="#akeypad_8c_aa6981f604fdfbec491e21e90507ec0de_icgraph" alt=""/></div>
+<map name="akeypad_8c_aa6981f604fdfbec491e21e90507ec0de_icgraph" id="akeypad_8c_aa6981f604fdfbec491e21e90507ec0de_icgraph">
+<area shape="rect" title=" " alt="" coords="204,5,286,32"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="103,5,156,32"/>
+<area shape="poly" title=" " alt="" coords="189,21,157,21,157,16,189,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a02e5cd605c64773d944bc322b51222cd" name="a02e5cd605c64773d944bc322b51222cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02e5cd605c64773d944bc322b51222cd">&#9670;&#160;</a></span>KeypadGetRow()</h2>
+<a id="a63a4bc1c3105f40dc85fe16092790f83" name="a63a4bc1c3105f40dc85fe16092790f83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63a4bc1c3105f40dc85fe16092790f83">&#9670;&#160;</a></span>KeypadWaitForInput()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char KeypadGetRow </td>
+          <td class="memname"><a class="el" href="struct_key_info.html">KeyInfo</a> KeypadWaitForInput </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -161,19 +268,51 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="keypad_8c_source.html#l00010">10</a> of file <a class="el" href="keypad_8c_source.html">keypad.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="keypad_8c_source.html#l00106">106</a> of file <a class="el" href="keypad_8c_source.html">keypad.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="keypad_8c_a63a4bc1c3105f40dc85fe16092790f83_cgraph.png" border="0" usemap="#akeypad_8c_a63a4bc1c3105f40dc85fe16092790f83_cgraph" alt=""/></div>
+<map name="akeypad_8c_a63a4bc1c3105f40dc85fe16092790f83_cgraph" id="akeypad_8c_a63a4bc1c3105f40dc85fe16092790f83_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,145,57"/>
+<area shape="rect" href="keypad_8c.html#a49ffa463b26cc47b7d9e3e2cda8d9168" title=" " alt="" coords="193,5,349,32"/>
+<area shape="poly" title=" " alt="" coords="145,32,177,28,178,33,145,38"/>
+<area shape="rect" href="keypad_8c.html#ab826b54bc6305f49d758d28173041ab7" title=" " alt="" coords="214,56,328,83"/>
+<area shape="poly" title=" " alt="" coords="145,50,199,57,198,63,145,56"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="397,56,483,83"/>
+<area shape="poly" title=" " alt="" coords="328,67,381,67,381,72,328,72"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="531,56,627,83"/>
+<area shape="poly" title=" " alt="" coords="484,67,516,67,516,72,484,72"/>
+<area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="675,56,727,83"/>
+<area shape="poly" title=" " alt="" coords="627,67,659,67,659,72,627,72"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="keypad_8c_a63a4bc1c3105f40dc85fe16092790f83_icgraph.png" border="0" usemap="#akeypad_8c_a63a4bc1c3105f40dc85fe16092790f83_icgraph" alt=""/></div>
+<map name="akeypad_8c_a63a4bc1c3105f40dc85fe16092790f83_icgraph" id="akeypad_8c_a63a4bc1c3105f40dc85fe16092790f83_icgraph">
+<area shape="rect" title=" " alt="" coords="369,5,509,32"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="210,5,321,32"/>
+<area shape="poly" title=" " alt="" coords="353,21,321,21,321,16,353,16"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="103,5,162,32"/>
+<area shape="poly" title=" " alt="" coords="194,21,162,21,162,16,194,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a7465f8ed0343f8e4044387a0429afb32" name="a7465f8ed0343f8e4044387a0429afb32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7465f8ed0343f8e4044387a0429afb32">&#9670;&#160;</a></span>keypad</h2>
+<a id="a4c1fef8314018fe3ce44affffbe10a72" name="a4c1fef8314018fe3ce44affffbe10a72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1fef8314018fe3ce44affffbe10a72">&#9670;&#160;</a></span>KEYPAD_KEYS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char keypad[<a class="el" href="keypad_8h.html#acc73b1692bde87ce0a891af4dece22fc">KEYPAD_N</a>][<a class="el" href="keypad_8h.html#acc73b1692bde87ce0a891af4dece22fc">KEYPAD_N</a>]</td>
+          <td class="memname">const char KEYPAD_KEYS[<a class="el" href="keypad_8h.html#acc73b1692bde87ce0a891af4dece22fc">KEYPAD_N</a>][<a class="el" href="keypad_8h.html#acc73b1692bde87ce0a891af4dece22fc">KEYPAD_N</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -184,7 +323,39 @@ Variables</h2></td></tr>
 <div class="line">    {<span class="charliteral">&#39;*&#39;</span>, <span class="charliteral">&#39;0&#39;</span>, <span class="charliteral">&#39;#&#39;</span>, <span class="charliteral">&#39;D&#39;</span>}</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="keypad_8c_source.html#l00003">3</a> of file <a class="el" href="keypad_8c_source.html">keypad.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="keypad_8c_source.html#l00064">64</a> of file <a class="el" href="keypad_8c_source.html">keypad.c</a>.</p>
+
+</div>
+</div>
+<a id="aa67f7a9fae59d327c0fef030151be800" name="aa67f7a9fae59d327c0fef030151be800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa67f7a9fae59d327c0fef030151be800">&#9670;&#160;</a></span>KEYPAD_SPECIAL_KEYS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_key_info.html">KeyInfo</a> KEYPAD_SPECIAL_KEYS[<a class="el" href="keypad_8h.html#a9c722c424a8076bfe4ee4e9e2efa03e6">KEYPAD_MAX_SPECIAL_KEYS</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="keypad_8c_source.html#l00005">5</a> of file <a class="el" href="keypad_8c_source.html">keypad.c</a>.</p>
+
+</div>
+</div>
+<a id="ab3f2ce14f970ec74192af9e2c69a3ef5" name="ab3f2ce14f970ec74192af9e2c69a3ef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3f2ce14f970ec74192af9e2c69a3ef5">&#9670;&#160;</a></span>shiftIsOn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool shiftIsOn = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="keypad_8c_source.html#l00062">62</a> of file <a class="el" href="keypad_8c_source.html">keypad.c</a>.</p>
 
 </div>
 </div>

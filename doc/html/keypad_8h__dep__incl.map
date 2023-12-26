@@ -1,5 +1,9 @@
 <map id="src/keypad.h" name="src/keypad.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,102,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="144,5,240,32"/>
 <area shape="rect" id="Node000002" href="$keypad_8c.html" title=" " alt="" coords="5,80,102,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,48,56,80,51,80,51,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,42,79,82,77,77,153,37"/>
+<area shape="rect" id="Node000003" href="$program-logic_8c.html" title=" " alt="" coords="126,80,258,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="195,48,195,80,190,80,190,48"/>
+<area shape="rect" id="Node000004" href="$unit-test_8c.html" title=" " alt="" coords="283,80,384,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="231,37,310,77,307,82,229,42"/>
 </map>

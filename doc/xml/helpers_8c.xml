@@ -46,7 +46,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/helpers.c" line="3" column="14" bodyfile="src/helpers.c" bodystart="3" bodyend="10"/>
-        <referencedby refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" compoundref="lcd_8c" startline="230" endline="235">LcdPrintString</referencedby>
+        <referencedby refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" compoundref="lcd_8c" startline="235" endline="240">LcdPrintString</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>

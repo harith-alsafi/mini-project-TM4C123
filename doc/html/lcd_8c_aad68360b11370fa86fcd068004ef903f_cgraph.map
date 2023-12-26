@@ -2,15 +2,15 @@
 <area shape="rect" id="Node000001" title="Resets cursor to original position." alt="" coords="5,56,120,83"/>
 <area shape="rect" id="Node000002" href="$clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="326,5,412,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,53,167,41,310,22,311,27,168,47,116,58"/>
-<area shape="rect" id="Node000005" href="$lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="168,56,267,83"/>
+<area shape="rect" id="Node000005" href="$lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="168,56,267,83"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="120,67,152,67,152,72,120,72"/>
-<area shape="rect" id="Node000009" href="$lcd_8c.html#aa2b64ca7fceac6ba52f4d3345acb5e69" title="Sets the rs flag to the given value." alt="" coords="178,107,257,133"/>
+<area shape="rect" id="Node000009" href="$lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="178,107,257,133"/>
 <area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="107,81,164,100,162,105,105,86"/>
 <area shape="rect" id="Node000003" href="$clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="743,5,838,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="413,16,728,16,728,21,413,21"/>
 <area shape="rect" id="Node000004" href="$playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="886,31,939,57"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="839,26,872,33,870,38,838,31"/>
-<area shape="rect" id="Node000006" href="$lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="315,56,423,83"/>
+<area shape="rect" id="Node000006" href="$lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="315,56,423,83"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="268,67,300,67,300,72,268,72"/>
 <area shape="rect" id="Node000007" href="$lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="471,56,563,83"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="424,67,456,67,456,72,424,72"/>

@@ -1,1 +1,1 @@
-./objects/flash-storage.o: src\flash-storage.c
+./objects/flash-storage.o: src\flash-storage.c src\flash-storage.h

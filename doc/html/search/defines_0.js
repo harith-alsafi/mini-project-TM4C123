@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['clock_5fh_0',['CLOCK_H',['../clock_8h.html#a8d85d526f6d06f351f5ad915765de293',1,'clock.h']]]
+  ['array_5flen_0',['ARRAY_LEN',['../helpers_8h.html#abad5e4191558987772c01a31c46b8997',1,'helpers.h']]]
 ];

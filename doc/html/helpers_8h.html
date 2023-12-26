@@ -75,6 +75,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">helpers.h File Reference</div></div>
 </div><!--header-->
@@ -84,11 +85,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="helpers_8h__dep__incl.png" border="0" usemap="#asrc_2helpers_8hdep" alt=""/></div>
 <map name="asrc_2helpers_8hdep" id="asrc_2helpers_8hdep">
-<area shape="rect" title=" " alt="" coords="59,5,155,32"/>
+<area shape="rect" title=" " alt="" coords="91,5,187,32"/>
 <area shape="rect" href="helpers_8c.html" title=" " alt="" coords="5,80,102,107"/>
-<area shape="poly" title=" " alt="" coords="91,46,65,81,61,78,86,43"/>
-<area shape="rect" href="lcd_8c.html" title=" " alt="" coords="126,80,197,107"/>
-<area shape="poly" title=" " alt="" coords="128,43,154,78,150,81,124,46"/>
+<area shape="poly" title=" " alt="" coords="114,44,70,82,66,78,111,40"/>
+<area shape="rect" href="lcd_8c.html" title=" " alt="" coords="90,155,161,181"/>
+<area shape="poly" title=" " alt="" coords="139,48,129,154,124,154,134,47"/>
+<area shape="rect" href="lcd_8h.html" title=" " alt="" coords="202,80,273,107"/>
+<area shape="poly" title=" " alt="" coords="170,39,222,77,219,82,167,44"/>
+<area shape="poly" title=" " alt="" coords="207,118,147,156,144,152,204,113"/>
+<area shape="rect" href="program-logic_8c.html" title=" " alt="" coords="185,155,317,181"/>
+<area shape="poly" title=" " alt="" coords="245,122,251,154,246,155,240,123"/>
+<area shape="rect" href="unit-test_8c.html" title=" " alt="" coords="342,155,443,181"/>
+<area shape="poly" title=" " alt="" coords="279,111,366,152,364,156,277,116"/>
 </map>
 </div>
 </div>
@@ -98,14 +106,17 @@ This graph shows which files directly or indirectly include this file:</div>
 Macros</h2></td></tr>
 <tr class="memitem:a4fd85cebb3a7e1a87f883886a1e43791" id="r_a4fd85cebb3a7e1a87f883886a1e43791"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helpers_8h.html#a4fd85cebb3a7e1a87f883886a1e43791">HELPERS_H</a></td></tr>
 <tr class="separator:a4fd85cebb3a7e1a87f883886a1e43791"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8cecfc5c5c054d2875c03e77b7be15d" id="r_aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helpers_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>&#160;&#160;&#160;1</td></tr>
-<tr class="separator:aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa93f0eb578d23995850d61f7d61c55c1" id="r_aa93f0eb578d23995850d61f7d61c55c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helpers_8h.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>&#160;&#160;&#160;0</td></tr>
-<tr class="separator:aa93f0eb578d23995850d61f7d61c55c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bb885982ff66a2e0a0a45a8ee9c35e2" id="r_a5bb885982ff66a2e0a0a45a8ee9c35e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helpers_8h.html#a5bb885982ff66a2e0a0a45a8ee9c35e2">HIGH</a>&#160;&#160;&#160;0xFF</td></tr>
 <tr class="separator:a5bb885982ff66a2e0a0a45a8ee9c35e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab811d8c6ff3a505312d3276590444289" id="r_ab811d8c6ff3a505312d3276590444289"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helpers_8h.html#ab811d8c6ff3a505312d3276590444289">LOW</a>&#160;&#160;&#160;0x00</td></tr>
 <tr class="separator:ab811d8c6ff3a505312d3276590444289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abad5e4191558987772c01a31c46b8997" id="r_abad5e4191558987772c01a31c46b8997"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helpers_8h.html#abad5e4191558987772c01a31c46b8997">ARRAY_LEN</a>(arr)&#160;&#160;&#160;(sizeof(arr) / sizeof(arr[0]))</td></tr>
+<tr class="separator:abad5e4191558987772c01a31c46b8997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a0c8186d9b9b7880309c27230bbb5e69d" id="r_a0c8186d9b9b7880309c27230bbb5e69d"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a></td></tr>
+<tr class="separator:a0c8186d9b9b7880309c27230bbb5e69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -114,19 +125,23 @@ Functions</h2></td></tr>
 <tr class="separator:ad7f3f83d057abbbc219fb761d2058708"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="aa93f0eb578d23995850d61f7d61c55c1" name="aa93f0eb578d23995850d61f7d61c55c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa93f0eb578d23995850d61f7d61c55c1">&#9670;&#160;</a></span>FALSE</h2>
+<a id="abad5e4191558987772c01a31c46b8997" name="abad5e4191558987772c01a31c46b8997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abad5e4191558987772c01a31c46b8997">&#9670;&#160;</a></span>ARRAY_LEN</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define FALSE&#160;&#160;&#160;0</td>
+          <td class="memname">#define ARRAY_LEN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arr</td><td>)</td>
+          <td>&#160;&#160;&#160;(sizeof(arr) / sizeof(arr[0]))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00005">5</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00006">6</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
 
 </div>
 </div>
@@ -158,7 +173,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00006">6</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00004">4</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
 
 </div>
 </div>
@@ -174,23 +189,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00007">7</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00005">5</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
 
 </div>
 </div>
-<a id="aa8cecfc5c5c054d2875c03e77b7be15d" name="aa8cecfc5c5c054d2875c03e77b7be15d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8cecfc5c5c054d2875c03e77b7be15d">&#9670;&#160;</a></span>TRUE</h2>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a0c8186d9b9b7880309c27230bbb5e69d" name="a0c8186d9b9b7880309c27230bbb5e69d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c8186d9b9b7880309c27230bbb5e69d">&#9670;&#160;</a></span>byte</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define TRUE&#160;&#160;&#160;1</td>
+          <td class="memname">typedef unsigned char <a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00004">4</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00008">8</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
 
 </div>
 </div>
@@ -227,11 +243,21 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="helpers_8h_ad7f3f83d057abbbc219fb761d2058708_icgraph.png" border="0" usemap="#ahelpers_8h_ad7f3f83d057abbbc219fb761d2058708_icgraph" alt=""/></div>
 <map name="ahelpers_8h_ad7f3f83d057abbbc219fb761d2058708_icgraph" id="ahelpers_8h_ad7f3f83d057abbbc219fb761d2058708_icgraph">
-<area shape="rect" title="Gets the length of a string." alt="" coords="254,5,309,32"/>
-<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="103,5,206,32"/>
-<area shape="poly" title=" " alt="" coords="239,21,206,21,206,16,239,16"/>
+<area shape="rect" title="Gets the length of a string." alt="" coords="552,56,607,83"/>
+<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="400,56,504,83"/>
+<area shape="poly" title=" " alt="" coords="537,72,504,72,504,67,537,67"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,5,348,32"/>
+<area shape="poly" title=" " alt="" coords="392,53,336,35,338,30,394,48"/>
+<area shape="rect" href="unit-test_8c.html#a02e71048dc3a569b41b257dec3b00cf0" title=" " alt="" coords="240,56,345,83"/>
+<area shape="poly" title=" " alt="" coords="385,72,346,72,346,67,385,67"/>
+<area shape="rect" href="unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,107,352,133"/>
+<area shape="poly" title=" " alt="" coords="394,91,338,109,336,104,392,85"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,5,174,32"/>
+<area shape="poly" title=" " alt="" coords="221,21,174,21,174,16,221,16"/>
 <area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="poly" title=" " alt="" coords="99,21,55,21,55,16,99,16"/>
+<area shape="rect" href="unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,107,185,133"/>
+<area shape="poly" title=" " alt="" coords="218,123,185,123,185,117,218,117"/>
 </map>
 </div>
 

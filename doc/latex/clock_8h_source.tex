@@ -2,18 +2,18 @@
 \hypertarget{clock_8h_source}{}\label{clock_8h_source}\index{src/clock.h@{src/clock.h}}
 \mbox{\hyperlink{clock_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{clock_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ CLOCK\_H\ \ \ }\textcolor{comment}{//\ If\ not\ defined}}
-\DoxyCodeLine{\Hypertarget{clock_8h_source_l00002}\mbox{\hyperlink{clock_8h_a8d85d526f6d06f351f5ad915765de293}{00002}}\ \textcolor{preprocessor}{\#define\ CLOCK\_H\ \ \ }\textcolor{comment}{//\ Define\ it}}
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ CLOCK\_H\ \ \ }}
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ CLOCK\_H\ \ \ }}
 \DoxyCodeLine{\Hypertarget{clock_8h_source_l00003}00003\ }
-\DoxyCodeLine{\Hypertarget{clock_8h_source_l00004}00004\ \textcolor{comment}{//GPIO\ clocks}}
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00004}00004\ \textcolor{comment}{//\ GPIO\ clocks}}
 \DoxyCodeLine{\Hypertarget{clock_8h_source_l00005}\mbox{\hyperlink{clock_8h_a2fedfceccf18bd54a499e73d1b76e506}{00005}}\ \textcolor{preprocessor}{\#define\ SYSCTL\_RCGC2\_R\ \ \ \ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x400FE108))}}
 \DoxyCodeLine{\Hypertarget{clock_8h_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{clock_8h_source_l00007}00007\ \textcolor{comment}{//PLL\ related\ Defines}}
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00007}00007\ \textcolor{comment}{//\ PLL\ related\ Defines\ }}
 \DoxyCodeLine{\Hypertarget{clock_8h_source_l00008}\mbox{\hyperlink{clock_8h_ac1e0e3bbc40315eaa5e3cad513d5dae8}{00008}}\ \textcolor{preprocessor}{\#define\ SYSCTL\_RIS\_R\ \ \ \ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x400FE050))\ }}
 \DoxyCodeLine{\Hypertarget{clock_8h_source_l00009}\mbox{\hyperlink{clock_8h_adaab842b86f022de9497dd36d1e35643}{00009}}\ \textcolor{preprocessor}{\#define\ SYSCTL\_RCC\_R\ \ \ \ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x400FE060))}}
 \DoxyCodeLine{\Hypertarget{clock_8h_source_l00010}\mbox{\hyperlink{clock_8h_a0dd31b093c1a83329f67d1df68df4d58}{00010}}\ \textcolor{preprocessor}{\#define\ SYSCTL\_RCC2\_R\ \ \ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x400FE070))\ }}
 \DoxyCodeLine{\Hypertarget{clock_8h_source_l00011}00011\ }
-\DoxyCodeLine{\Hypertarget{clock_8h_source_l00012}00012\ \textcolor{comment}{//SysTick\ related\ Defines\ \ \ }}
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00012}00012\ \textcolor{comment}{//\ SysTick\ related\ Defines\ }}
 \DoxyCodeLine{\Hypertarget{clock_8h_source_l00013}\mbox{\hyperlink{clock_8h_adcfc8530f81c2ebea5d6b229ba4f9d3f}{00013}}\ \textcolor{preprocessor}{\#define\ NVIC\_ST\_CTRL\_R\ \ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0xE000E010))}}
 \DoxyCodeLine{\Hypertarget{clock_8h_source_l00014}\mbox{\hyperlink{clock_8h_a1c404f068f1ba79d68c7cc4302112da3}{00014}}\ \textcolor{preprocessor}{\#define\ NVIC\_ST\_RELOAD\_R\ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0xE000E014))}}
 \DoxyCodeLine{\Hypertarget{clock_8h_source_l00015}\mbox{\hyperlink{clock_8h_a83b8a7cd422c2dde3c671c9255216cff}{00015}}\ \textcolor{preprocessor}{\#define\ NVIC\_ST\_CURRENT\_R\ \ \ \ \ (*((volatile\ unsigned\ long\ *)0xE000E018))}}
@@ -22,14 +22,16 @@
 \DoxyCodeLine{\Hypertarget{clock_8h_source_l00022}00022\ }
 \DoxyCodeLine{\Hypertarget{clock_8h_source_l00027}00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{clock_8h_a21cfe49b38d53efaf75df16d21ed882a}{PLLInit}}();}
 \DoxyCodeLine{\Hypertarget{clock_8h_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{clock_8h_source_l00034}00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{clock_8h_a9b776ea9ad4388518694b3c099238a74}{SysTickWait}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{playground_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}});}
-\DoxyCodeLine{\Hypertarget{clock_8h_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{clock_8h_source_l00041}00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{clock_8h_a2b0d30a37314c42f7d52aeec96a6e3ac}{DelayNano}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ nanoseconds);}
-\DoxyCodeLine{\Hypertarget{clock_8h_source_l00042}00042\ }
-\DoxyCodeLine{\Hypertarget{clock_8h_source_l00048}00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{clock_8h_a44cfb49005f69fe95c0ce5f30b9a660e}{DelayMicro}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ microseconds);}
-\DoxyCodeLine{\Hypertarget{clock_8h_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{clock_8h_source_l00055}00055\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{clock_8h_a2e760c634cc89519ad0956fc258eab46}{DelayMilli}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ milliseconds);}
-\DoxyCodeLine{\Hypertarget{clock_8h_source_l00056}00056\ }
-\DoxyCodeLine{\Hypertarget{clock_8h_source_l00057}00057\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00033}00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{clock_8h_ab89b66fae1f889e7a033bccd757a12de}{ClockInit}}();}
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00040}00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{clock_8h_a9b776ea9ad4388518694b3c099238a74}{SysTickWait}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{playground_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}});}
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00047}00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{clock_8h_a2b0d30a37314c42f7d52aeec96a6e3ac}{DelayNano}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ nanoseconds);}
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00054}00054\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{clock_8h_a44cfb49005f69fe95c0ce5f30b9a660e}{DelayMicro}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ microseconds);}
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00061}00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{clock_8h_a2e760c634cc89519ad0956fc258eab46}{DelayMilli}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ milliseconds);}
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{clock_8h_source_l00063}00063\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

@@ -5,27 +5,61 @@
 \DoxyCodeLine{\Hypertarget{keypad_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ KEYPAD\_H\ \ \ }\textcolor{comment}{//\ If\ not\ defined}}
 \DoxyCodeLine{\Hypertarget{keypad_8h_source_l00002}\mbox{\hyperlink{keypad_8h_ae317b84750ff882cede31494435f459f}{00002}}\ \textcolor{preprocessor}{\#define\ KEYPAD\_H\ \ \ }\textcolor{comment}{//\ Define\ it}}
 \DoxyCodeLine{\Hypertarget{keypad_8h_source_l00003}00003\ }
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00004}00004\ \textcolor{comment}{//\ COL\ 1\ -\/>\ PD0}}
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00005}00005\ \textcolor{comment}{//\ COL\ 2\ -\/>\ PD1}}
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00006}00006\ \textcolor{comment}{//\ COL\ 3\ -\/>\ PD2}}
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00007}00007\ \textcolor{comment}{//\ COL\ 3\ -\/>\ PD3}}
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00008}\mbox{\hyperlink{keypad_8h_a89c99b60305ab3808a34321cb3b6ba9f}{00008}}\ \textcolor{preprocessor}{\#define\ KEYPAD\_COL\ (*((volatile\ unsigned\ long\ *)0x4000703C))}}
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00010}00010\ \textcolor{comment}{//\ ROW\ 1\ -\/>\ PE0}}
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00011}00011\ \textcolor{comment}{//\ ROW\ 2\ -\/>\ PE1}}
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00012}00012\ \textcolor{comment}{//\ ROW\ 3\ -\/>\ PE2}}
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00013}00013\ \textcolor{comment}{//\ ROW\ 3\ -\/>\ PE3}}
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00014}\mbox{\hyperlink{keypad_8h_a2267a85aea25120c5c2df97e1b0ec34f}{00014}}\ \textcolor{preprocessor}{\#define\ KEYPAD\_ROW\ (*((volatile\ unsigned\ long\ *)0x4002403C))}}
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00015}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{00015}}\ \textcolor{preprocessor}{\#define\ KEYPAD\_N\ 4}}
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00017}00017\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8h_a7465f8ed0343f8e4044387a0429afb32}{keypad}}[\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\_N}}][\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\_N}}];}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00006}00006\ \textcolor{comment}{//\ COL\ 1\ -\/>\ PD0}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00007}00007\ \textcolor{comment}{//\ COL\ 2\ -\/>\ PD1}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00008}00008\ \textcolor{comment}{//\ COL\ 3\ -\/>\ PD2}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00009}00009\ \textcolor{comment}{//\ COL\ 3\ -\/>\ PD3}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00010}\mbox{\hyperlink{keypad_8h_a573e77c14d269b0b758af193d102d0b0}{00010}}\ \textcolor{preprocessor}{\#define\ KEYPAD\_COL\_PIN\ (*((volatile\ unsigned\ long\ *)0x4000703C))}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00012}00012\ \textcolor{comment}{//\ ROW\ 1\ -\/>\ PE0}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00013}00013\ \textcolor{comment}{//\ ROW\ 2\ -\/>\ PE1}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00014}00014\ \textcolor{comment}{//\ ROW\ 3\ -\/>\ PE2}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00015}00015\ \textcolor{comment}{//\ ROW\ 3\ -\/>\ PE3}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00016}\mbox{\hyperlink{keypad_8h_ae41b948637d7857bd49ae3a6433fe975}{00016}}\ \textcolor{preprocessor}{\#define\ KEYPAD\_ROW\_PIN\ (*((volatile\ unsigned\ long\ *)0x4002403C))}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00017}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{00017}}\ \textcolor{preprocessor}{\#define\ KEYPAD\_N\ 4}}
 \DoxyCodeLine{\Hypertarget{keypad_8h_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00019}00019\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8h_a02e5cd605c64773d944bc322b51222cd}{KeypadGetRow}}();}
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00021}00021\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8h_a7dba628d7c95a933378f3a008344a4d3}{KeypadGetCol}}();}
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00023}00023\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8h_ab826b54bc6305f49d758d28173041ab7}{KeypadGetChar}}();}
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00025}00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00019}\mbox{\hyperlink{keypad_8h_ae3dadba290780b744593a2bc45264e3f}{00019}}\ \textcolor{preprocessor}{\#define\ KEYPAD\_UNKOWN\_KEY\ '\(\backslash\)0'}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00020}\mbox{\hyperlink{keypad_8h_a9c722c424a8076bfe4ee4e9e2efa03e6}{00020}}\ \textcolor{preprocessor}{\#define\ KEYPAD\_MAX\_SPECIAL\_KEYS\ 7}}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00022}\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc}{00022}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00023}\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9}{00023}}\ \ \ \ \ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9}{PLUS}},}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00024}\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3}{00024}}\ \ \ \ \ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3}{MULTIPLY}},}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00025}\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225}{00025}}\ \ \ \ \ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225}{MINUS}},}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00026}\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da}{00026}}\ \ \ \ \ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da}{DIVIDE}},}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00027}\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2}{00027}}\ \ \ \ \ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2}{DECIMAL\_POINT}},}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00028}\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e}{00028}}\ \ \ \ \ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e}{EXPONENTIAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00029}\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f}{00029}}\ \ \ \ \ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f}{SHIFT\_ON}},}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00030}\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284}{00030}}\ \ \ \ \ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284}{SHIFT\_OFF}},}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00031}\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78}{00031}}\ \ \ \ \ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78}{END\_INPUT}},}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00032}\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccad67d15054b1cf5d5d891decd24ec801f}{00032}}\ \ \ \ \ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccad67d15054b1cf5d5d891decd24ec801f}{UNDO\_LAST}},}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00033}\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca1e1a4aba20a5a009e616cbc8fad33ac7}{00033}}\ \ \ \ \ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca1e1a4aba20a5a009e616cbc8fad33ac7}{CLEAR}},}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00034}00034\ \}\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc}{SpecialKeyFunctions}};}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00036}\mbox{\hyperlink{struct_key_info}{00036}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00037}\mbox{\hyperlink{struct_key_info_a129a412e80d39b7257b677028c1acec0}{00037}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_key_info_a129a412e80d39b7257b677028c1acec0}{key}};}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00038}\mbox{\hyperlink{struct_key_info_aad793e7d0881eafc1dd46649bb2780be}{00038}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_key_info_aad793e7d0881eafc1dd46649bb2780be}{isSpecial}};}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00039}\mbox{\hyperlink{struct_key_info_a24f8b1511f5bb082d8594059be9411b8}{00039}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_key_info_a24f8b1511f5bb082d8594059be9411b8}{hasDisplay}};}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00040}\mbox{\hyperlink{struct_key_info_a1e9efebed338a7a750ed8206fa7caebc}{00040}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_key_info_a1e9efebed338a7a750ed8206fa7caebc}{hasShiftFunction}};}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00041}\mbox{\hyperlink{struct_key_info_a608d6ef74598363d1753588fd73c2aef}{00041}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_key_info_a608d6ef74598363d1753588fd73c2aef}{normalDisplay}};}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00042}\mbox{\hyperlink{struct_key_info_a44c82d8b5620cb791276feba579ff337}{00042}}\ \ \ \ \ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc}{SpecialKeyFunctions}}\ \mbox{\hyperlink{struct_key_info_a44c82d8b5620cb791276feba579ff337}{normalFunction}};}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00043}\mbox{\hyperlink{struct_key_info_ad4e8166e71feacf01a45a0346818aa39}{00043}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_key_info_ad4e8166e71feacf01a45a0346818aa39}{shiftDisplay}};}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00044}\mbox{\hyperlink{struct_key_info_ae84e8c2103cde405fc762cafb1727015}{00044}}\ \ \ \ \ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc}{SpecialKeyFunctions}}\ \mbox{\hyperlink{struct_key_info_ae84e8c2103cde405fc762cafb1727015}{shiftFunction}};}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00045}00045\ \}\ \mbox{\hyperlink{struct_key_info}{KeyInfo}};}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00047}00047\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_key_info}{KeyInfo}}\ \mbox{\hyperlink{keypad_8h_aa67f7a9fae59d327c0fef030151be800}{KEYPAD\_SPECIAL\_KEYS}}[\mbox{\hyperlink{keypad_8h_a9c722c424a8076bfe4ee4e9e2efa03e6}{KEYPAD\_MAX\_SPECIAL\_KEYS}}];}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00049}00049\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8h_a4c1fef8314018fe3ce44affffbe10a72}{KEYPAD\_KEYS}}[\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\_N}}][\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\_N}}];}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00051}00051\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{keypad_8h_ab3f2ce14f970ec74192af9e2c69a3ef5}{shiftIsOn}};}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00053}00053\ \mbox{\hyperlink{struct_key_info}{KeyInfo}}\ \mbox{\hyperlink{keypad_8h_a49ffa463b26cc47b7d9e3e2cda8d9168}{KeypadFindSpecialKey}}(\textcolor{keywordtype}{char}\ key);}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00055}00055\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{keypad_8h_aa6981f604fdfbec491e21e90507ec0de}{KeypadInit}}();}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00057}00057\ \mbox{\hyperlink{struct_key_info}{KeyInfo}}\ \mbox{\hyperlink{keypad_8h_a63a4bc1c3105f40dc85fe16092790f83}{KeypadWaitForInput}}();}
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{keypad_8h_source_l00059}00059\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

@@ -84,9 +84,32 @@ $(document).ready(function() { init_codefold(0); });
 <a href="flash-storage_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef FLASH_STORAGE_H   </span><span class="comment">// If not defined</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno"><a class="line" href="flash-storage_8h.html#a52984b41e45a13e9f7e687e1c4a07a2d">    2</a></span><span class="preprocessor">#define FLASH_STORAGE_H   </span><span class="comment">// Define it</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="flash-storage_8h.html#a89c6418eced607811aec6c584f004215">    4</a></span><span class="preprocessor">#define FLASH_FMC</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="flash-storage_8h.html#ae9963cd83d3234139fea43d97385a234">    5</a></span><span class="preprocessor">#define FLASH_FMD</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="flash-storage_8h.html#acec37e62cb88a0d40af83c466d03151f">    6</a></span><span class="preprocessor">#define FLASH_FMA</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="struct_flash_data.html">    8</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="struct_flash_data.html#a098d99b6a0f1ab85c7a16b5eb154f4d6">    9</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_flash_data.html#a098d99b6a0f1ab85c7a16b5eb154f4d6">passwordLength</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="struct_flash_data.html#ab7969b05d81fd851e3238236b94bf1e4">   10</a></span>    <span class="keywordtype">char</span> password[];</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>} <a class="code hl_struct" href="struct_flash_data.html">FlashData</a>;</div>
+</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">void</span> <a class="code hl_function" href="flash-storage_8h.html#ab165861d9848019963be1f879fb38173">FlashInit</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="flash-storage_8h.html#ac9ce33144c1ff6b3253343e1f635bf73">   15</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="flash-storage_8h.html#ac9ce33144c1ff6b3253343e1f635bf73">FlashWrite</a>(<a class="code hl_struct" href="struct_flash_data.html">FlashData</a> data);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="flash-storage_8h.html#a43a3c0a9d8a7396326169b74b694cce2">   17</a></span><a class="code hl_struct" href="struct_flash_data.html">FlashData</a> <a class="code hl_function" href="flash-storage_8h.html#a43a3c0a9d8a7396326169b74b694cce2">FlashRead</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="flash-storage_8h.html#ac64d149b1fb48e07560205f5a454d7df">   19</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="flash-storage_8h.html#ac64d149b1fb48e07560205f5a454d7df">FlashErase</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aflash-storage_8h_html_a43a3c0a9d8a7396326169b74b694cce2"><div class="ttname"><a href="flash-storage_8h.html#a43a3c0a9d8a7396326169b74b694cce2">FlashRead</a></div><div class="ttdeci">FlashData FlashRead()</div></div>
+<div class="ttc" id="aflash-storage_8h_html_ab165861d9848019963be1f879fb38173"><div class="ttname"><a href="flash-storage_8h.html#ab165861d9848019963be1f879fb38173">FlashInit</a></div><div class="ttdeci">void FlashInit()</div><div class="ttdef"><b>Definition</b> <a href="flash-storage_8c_source.html#l00003">flash-storage.c:3</a></div></div>
+<div class="ttc" id="aflash-storage_8h_html_ac64d149b1fb48e07560205f5a454d7df"><div class="ttname"><a href="flash-storage_8h.html#ac64d149b1fb48e07560205f5a454d7df">FlashErase</a></div><div class="ttdeci">void FlashErase()</div></div>
+<div class="ttc" id="aflash-storage_8h_html_ac9ce33144c1ff6b3253343e1f635bf73"><div class="ttname"><a href="flash-storage_8h.html#ac9ce33144c1ff6b3253343e1f635bf73">FlashWrite</a></div><div class="ttdeci">void FlashWrite(FlashData data)</div></div>
+<div class="ttc" id="astruct_flash_data_html"><div class="ttname"><a href="struct_flash_data.html">FlashData</a></div><div class="ttdef"><b>Definition</b> <a href="flash-storage_8h_source.html#l00008">flash-storage.h:8</a></div></div>
+<div class="ttc" id="astruct_flash_data_html_a098d99b6a0f1ab85c7a16b5eb154f4d6"><div class="ttname"><a href="struct_flash_data.html#a098d99b6a0f1ab85c7a16b5eb154f4d6">FlashData::passwordLength</a></div><div class="ttdeci">int passwordLength</div><div class="ttdef"><b>Definition</b> <a href="flash-storage_8h_source.html#l00009">flash-storage.h:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

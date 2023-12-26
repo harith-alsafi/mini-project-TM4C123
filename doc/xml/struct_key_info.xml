@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="struct_key_info" kind="struct" language="C++" prot="public">
+    <compoundname>KeyInfo</compoundname>
+    <includes refid="keypad_8h" local="yes">keypad.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_key_info_1a129a412e80d39b7257b677028c1acec0" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char KeyInfo::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <qualifiedname>KeyInfo::key</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/keypad.h" line="37" column="10" bodyfile="src/keypad.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="keypad_8c_1a49ffa463b26cc47b7d9e3e2cda8d9168" compoundref="keypad_8c" startline="71" endline="79">KeypadFindSpecialKey</referencedby>
+        <referencedby refid="keypad_8c_1a63a4bc1c3105f40dc85fe16092790f83" compoundref="keypad_8c" startline="106" endline="119">KeypadWaitForInput</referencedby>
+        <referencedby refid="unit-test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" compoundref="unit-test_8c" startline="57" endline="65">TestKeypadLcd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_key_info_1aad793e7d0881eafc1dd46649bb2780be" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool KeyInfo::isSpecial</definition>
+        <argsstring></argsstring>
+        <name>isSpecial</name>
+        <qualifiedname>KeyInfo::isSpecial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/keypad.h" line="38" column="10" bodyfile="src/keypad.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_key_info_1a24f8b1511f5bb082d8594059be9411b8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool KeyInfo::hasDisplay</definition>
+        <argsstring></argsstring>
+        <name>hasDisplay</name>
+        <qualifiedname>KeyInfo::hasDisplay</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/keypad.h" line="39" column="10" bodyfile="src/keypad.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_key_info_1a1e9efebed338a7a750ed8206fa7caebc" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool KeyInfo::hasShiftFunction</definition>
+        <argsstring></argsstring>
+        <name>hasShiftFunction</name>
+        <qualifiedname>KeyInfo::hasShiftFunction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/keypad.h" line="40" column="10" bodyfile="src/keypad.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_key_info_1a608d6ef74598363d1753588fd73c2aef" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char KeyInfo::normalDisplay</definition>
+        <argsstring></argsstring>
+        <name>normalDisplay</name>
+        <qualifiedname>KeyInfo::normalDisplay</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/keypad.h" line="41" column="10" bodyfile="src/keypad.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_key_info_1a44c82d8b5620cb791276feba579ff337" prot="public" static="no" mutable="no">
+        <type><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" kindref="member">SpecialKeyFunctions</ref></type>
+        <definition>SpecialKeyFunctions KeyInfo::normalFunction</definition>
+        <argsstring></argsstring>
+        <name>normalFunction</name>
+        <qualifiedname>KeyInfo::normalFunction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/keypad.h" line="42" column="25" bodyfile="src/keypad.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_key_info_1ad4e8166e71feacf01a45a0346818aa39" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char KeyInfo::shiftDisplay</definition>
+        <argsstring></argsstring>
+        <name>shiftDisplay</name>
+        <qualifiedname>KeyInfo::shiftDisplay</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/keypad.h" line="43" column="10" bodyfile="src/keypad.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_key_info_1ae84e8c2103cde405fc762cafb1727015" prot="public" static="no" mutable="no">
+        <type><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" kindref="member">SpecialKeyFunctions</ref></type>
+        <definition>SpecialKeyFunctions KeyInfo::shiftFunction</definition>
+        <argsstring></argsstring>
+        <name>shiftFunction</name>
+        <qualifiedname>KeyInfo::shiftFunction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/keypad.h" line="44" column="25" bodyfile="src/keypad.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>KeyInfo</label>
+        <link refid="struct_key_info"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/keypad.h" line="36" column="1" bodyfile="src/keypad.h" bodystart="36" bodyend="45"/>
+    <listofallmembers>
+      <member refid="struct_key_info_1a24f8b1511f5bb082d8594059be9411b8" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>hasDisplay</name></member>
+      <member refid="struct_key_info_1a1e9efebed338a7a750ed8206fa7caebc" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>hasShiftFunction</name></member>
+      <member refid="struct_key_info_1aad793e7d0881eafc1dd46649bb2780be" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>isSpecial</name></member>
+      <member refid="struct_key_info_1a129a412e80d39b7257b677028c1acec0" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>key</name></member>
+      <member refid="struct_key_info_1a608d6ef74598363d1753588fd73c2aef" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>normalDisplay</name></member>
+      <member refid="struct_key_info_1a44c82d8b5620cb791276feba579ff337" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>normalFunction</name></member>
+      <member refid="struct_key_info_1ad4e8166e71feacf01a45a0346818aa39" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>shiftDisplay</name></member>
+      <member refid="struct_key_info_1ae84e8c2103cde405fc762cafb1727015" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>shiftFunction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

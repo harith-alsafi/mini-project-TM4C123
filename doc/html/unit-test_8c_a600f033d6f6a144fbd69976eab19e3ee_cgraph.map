@@ -1,0 +1,24 @@
+<map id="AfterEach" name="AfterEach">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,84,57"/>
+<area shape="rect" id="Node000002" href="$clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="306,5,383,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,38,290,20,291,26,84,43"/>
+<area shape="rect" id="Node000005" href="$lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="132,56,247,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="85,48,117,54,116,59,84,53"/>
+<area shape="rect" id="Node000003" href="$clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="870,5,966,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="384,16,855,16,855,21,384,21"/>
+<area shape="rect" id="Node000004" href="$playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="1014,31,1066,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="967,26,999,33,998,38,966,31"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="232,53,291,33,292,38,234,58"/>
+<area shape="rect" id="Node000006" href="$lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="295,56,394,83"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="248,67,279,67,279,72,248,72"/>
+<area shape="rect" id="Node000010" href="$lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="306,107,384,133"/>
+<area shape="poly" id="edge12_Node000005_Node000010" title=" " alt="" coords="234,81,291,100,290,105,232,86"/>
+<area shape="rect" id="Node000007" href="$lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="442,56,551,83"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="395,67,427,67,427,72,395,72"/>
+<area shape="rect" id="Node000008" href="$lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="599,56,690,83"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="551,67,583,67,583,72,551,72"/>
+<area shape="rect" id="Node000009" href="$clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="738,56,822,83"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="690,67,722,67,722,72,690,72"/>
+<area shape="poly" id="edge11_Node000009_Node000003" title=" " alt="" coords="818,53,864,35,866,40,820,58"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="823,63,998,45,999,51,823,68"/>
+</map>

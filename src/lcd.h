@@ -108,8 +108,9 @@ void LcdSetDdram(byte addr);
  * 
  * @param row row to be set
  * @param col column to be set
+ * @param cursorTrack 1 -> Track cursor, 0 -> don't Track cursor
  */
-void LcdSetCursor(byte row, byte col);
+void LcdSetCursor(byte row, byte col, bool cursorTrack);
 
 /**
  * @brief Prints a character to the LCD
@@ -124,7 +125,7 @@ void LcdPrintChar(char ch, bool cursorTrack);
  * 
  * @param str string to be printed
  */
-void LcdPrintString(char str[]);
+void LcdPrintString(char str[], bool cursorTrack);
 
 /**
  * @brief Prints a character to the LCD at a given position
@@ -135,13 +136,13 @@ void LcdPrintString(char str[]);
  */
 void LcdPrintCharAt(char ch, byte row, byte col);
 
-// void LcdClearRow(unsigned char row);
+void LcdClearRow(unsigned char row);
 
-// void LcdClearCol(unsigned char col);
+void LcdClearCol(unsigned char col);
 
-// void LcdDrawLine(unsigned char row, unsigned char col, unsigned char length, unsigned char is_vertical);
+void LcdDrawLine(unsigned char row, unsigned char col, unsigned char length, unsigned char is_vertical);
 
-// void LcdDrawBox(unsigned char row, unsigned char col, unsigned char length, unsigned char width);
+void LcdDrawBox(unsigned char row, unsigned char col, unsigned char length, unsigned char width);
 
 
 #endif

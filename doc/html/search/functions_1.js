@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['flashsos_0',['FlashSOS',['../playground_8c.html#a7a3a2d8021a1d89fd58583318c4ae560',1,'playground.c']]]
+  ['clockinit_0',['clockinit',['../clock_8c.html#ab89b66fae1f889e7a033bccd757a12de',1,'ClockInit():&#160;clock.c'],['../clock_8h.html#ab89b66fae1f889e7a033bccd757a12de',1,'ClockInit():&#160;clock.c']]]
 ];

@@ -1,17 +1,31 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="struct_flash_data" kind="struct"><name>FlashData</name>
+    <member refid="struct_flash_data_1a098d99b6a0f1ab85c7a16b5eb154f4d6" kind="variable"><name>passwordLength</name></member>
+    <member refid="struct_flash_data_1ab7969b05d81fd851e3238236b94bf1e4" kind="variable"><name>password</name></member>
+  </compound>
+  <compound refid="struct_key_info" kind="struct"><name>KeyInfo</name>
+    <member refid="struct_key_info_1a129a412e80d39b7257b677028c1acec0" kind="variable"><name>key</name></member>
+    <member refid="struct_key_info_1aad793e7d0881eafc1dd46649bb2780be" kind="variable"><name>isSpecial</name></member>
+    <member refid="struct_key_info_1a24f8b1511f5bb082d8594059be9411b8" kind="variable"><name>hasDisplay</name></member>
+    <member refid="struct_key_info_1a1e9efebed338a7a750ed8206fa7caebc" kind="variable"><name>hasShiftFunction</name></member>
+    <member refid="struct_key_info_1a608d6ef74598363d1753588fd73c2aef" kind="variable"><name>normalDisplay</name></member>
+    <member refid="struct_key_info_1a44c82d8b5620cb791276feba579ff337" kind="variable"><name>normalFunction</name></member>
+    <member refid="struct_key_info_1ad4e8166e71feacf01a45a0346818aa39" kind="variable"><name>shiftDisplay</name></member>
+    <member refid="struct_key_info_1ae84e8c2103cde405fc762cafb1727015" kind="variable"><name>shiftFunction</name></member>
+  </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
   <compound refid="clock_8c" kind="file"><name>clock.c</name>
     <member refid="clock_8c_1a58cf193ae5c1f330e4868e32afb9445d" kind="function"><name>SysTickInit</name></member>
     <member refid="clock_8c_1a21cfe49b38d53efaf75df16d21ed882a" kind="function"><name>PLLInit</name></member>
+    <member refid="clock_8c_1ab89b66fae1f889e7a033bccd757a12de" kind="function"><name>ClockInit</name></member>
     <member refid="clock_8c_1a9b776ea9ad4388518694b3c099238a74" kind="function"><name>SysTickWait</name></member>
     <member refid="clock_8c_1a2b0d30a37314c42f7d52aeec96a6e3ac" kind="function"><name>DelayNano</name></member>
     <member refid="clock_8c_1a44cfb49005f69fe95c0ce5f30b9a660e" kind="function"><name>DelayMicro</name></member>
     <member refid="clock_8c_1a2e760c634cc89519ad0956fc258eab46" kind="function"><name>DelayMilli</name></member>
   </compound>
   <compound refid="clock_8h" kind="file"><name>clock.h</name>
-    <member refid="clock_8h_1a8d85d526f6d06f351f5ad915765de293" kind="define"><name>CLOCK_H</name></member>
     <member refid="clock_8h_1a2fedfceccf18bd54a499e73d1b76e506" kind="define"><name>SYSCTL_RCGC2_R</name></member>
     <member refid="clock_8h_1ac1e0e3bbc40315eaa5e3cad513d5dae8" kind="define"><name>SYSCTL_RIS_R</name></member>
     <member refid="clock_8h_1adaab842b86f022de9497dd36d1e35643" kind="define"><name>SYSCTL_RCC_R</name></member>
@@ -21,63 +35,91 @@
     <member refid="clock_8h_1a83b8a7cd422c2dde3c671c9255216cff" kind="define"><name>NVIC_ST_CURRENT_R</name></member>
     <member refid="clock_8h_1a58cf193ae5c1f330e4868e32afb9445d" kind="function"><name>SysTickInit</name></member>
     <member refid="clock_8h_1a21cfe49b38d53efaf75df16d21ed882a" kind="function"><name>PLLInit</name></member>
+    <member refid="clock_8h_1ab89b66fae1f889e7a033bccd757a12de" kind="function"><name>ClockInit</name></member>
     <member refid="clock_8h_1a9b776ea9ad4388518694b3c099238a74" kind="function"><name>SysTickWait</name></member>
     <member refid="clock_8h_1a2b0d30a37314c42f7d52aeec96a6e3ac" kind="function"><name>DelayNano</name></member>
     <member refid="clock_8h_1a44cfb49005f69fe95c0ce5f30b9a660e" kind="function"><name>DelayMicro</name></member>
     <member refid="clock_8h_1a2e760c634cc89519ad0956fc258eab46" kind="function"><name>DelayMilli</name></member>
   </compound>
   <compound refid="flash-storage_8c" kind="file"><name>flash-storage.c</name>
+    <member refid="flash-storage_8c_1ab165861d9848019963be1f879fb38173" kind="function"><name>FlashInit</name></member>
   </compound>
   <compound refid="flash-storage_8h" kind="file"><name>flash-storage.h</name>
     <member refid="flash-storage_8h_1a52984b41e45a13e9f7e687e1c4a07a2d" kind="define"><name>FLASH_STORAGE_H</name></member>
+    <member refid="flash-storage_8h_1a89c6418eced607811aec6c584f004215" kind="define"><name>FLASH_FMC</name></member>
+    <member refid="flash-storage_8h_1ae9963cd83d3234139fea43d97385a234" kind="define"><name>FLASH_FMD</name></member>
+    <member refid="flash-storage_8h_1acec37e62cb88a0d40af83c466d03151f" kind="define"><name>FLASH_FMA</name></member>
+    <member refid="flash-storage_8h_1ab165861d9848019963be1f879fb38173" kind="function"><name>FlashInit</name></member>
+    <member refid="flash-storage_8h_1ac9ce33144c1ff6b3253343e1f635bf73" kind="function"><name>FlashWrite</name></member>
+    <member refid="flash-storage_8h_1a43a3c0a9d8a7396326169b74b694cce2" kind="function"><name>FlashRead</name></member>
+    <member refid="flash-storage_8h_1ac64d149b1fb48e07560205f5a454d7df" kind="function"><name>FlashErase</name></member>
   </compound>
   <compound refid="helpers_8c" kind="file"><name>helpers.c</name>
     <member refid="helpers_8c_1ad7f3f83d057abbbc219fb761d2058708" kind="function"><name>Strlen</name></member>
   </compound>
   <compound refid="helpers_8h" kind="file"><name>helpers.h</name>
     <member refid="helpers_8h_1a4fd85cebb3a7e1a87f883886a1e43791" kind="define"><name>HELPERS_H</name></member>
-    <member refid="helpers_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kind="define"><name>TRUE</name></member>
-    <member refid="helpers_8h_1aa93f0eb578d23995850d61f7d61c55c1" kind="define"><name>FALSE</name></member>
     <member refid="helpers_8h_1a5bb885982ff66a2e0a0a45a8ee9c35e2" kind="define"><name>HIGH</name></member>
     <member refid="helpers_8h_1ab811d8c6ff3a505312d3276590444289" kind="define"><name>LOW</name></member>
+    <member refid="helpers_8h_1abad5e4191558987772c01a31c46b8997" kind="define"><name>ARRAY_LEN</name></member>
+    <member refid="helpers_8h_1a0c8186d9b9b7880309c27230bbb5e69d" kind="typedef"><name>byte</name></member>
     <member refid="helpers_8h_1ad7f3f83d057abbbc219fb761d2058708" kind="function"><name>Strlen</name></member>
   </compound>
   <compound refid="keypad_8c" kind="file"><name>keypad.c</name>
-    <member refid="keypad_8c_1a7465f8ed0343f8e4044387a0429afb32" kind="variable"><name>keypad</name></member>
-    <member refid="keypad_8c_1a02e5cd605c64773d944bc322b51222cd" kind="function"><name>KeypadGetRow</name></member>
-    <member refid="keypad_8c_1a7dba628d7c95a933378f3a008344a4d3" kind="function"><name>KeypadGetCol</name></member>
+    <member refid="keypad_8c_1aa67f7a9fae59d327c0fef030151be800" kind="variable"><name>KEYPAD_SPECIAL_KEYS</name></member>
+    <member refid="keypad_8c_1ab3f2ce14f970ec74192af9e2c69a3ef5" kind="variable"><name>shiftIsOn</name></member>
+    <member refid="keypad_8c_1a4c1fef8314018fe3ce44affffbe10a72" kind="variable"><name>KEYPAD_KEYS</name></member>
+    <member refid="keypad_8c_1a49ffa463b26cc47b7d9e3e2cda8d9168" kind="function"><name>KeypadFindSpecialKey</name></member>
+    <member refid="keypad_8c_1aa6981f604fdfbec491e21e90507ec0de" kind="function"><name>KeypadInit</name></member>
     <member refid="keypad_8c_1ab826b54bc6305f49d758d28173041ab7" kind="function"><name>KeypadGetChar</name></member>
+    <member refid="keypad_8c_1a63a4bc1c3105f40dc85fe16092790f83" kind="function"><name>KeypadWaitForInput</name></member>
   </compound>
   <compound refid="keypad_8h" kind="file"><name>keypad.h</name>
     <member refid="keypad_8h_1ae317b84750ff882cede31494435f459f" kind="define"><name>KEYPAD_H</name></member>
-    <member refid="keypad_8h_1a89c99b60305ab3808a34321cb3b6ba9f" kind="define"><name>KEYPAD_COL</name></member>
-    <member refid="keypad_8h_1a2267a85aea25120c5c2df97e1b0ec34f" kind="define"><name>KEYPAD_ROW</name></member>
+    <member refid="keypad_8h_1a573e77c14d269b0b758af193d102d0b0" kind="define"><name>KEYPAD_COL_PIN</name></member>
+    <member refid="keypad_8h_1ae41b948637d7857bd49ae3a6433fe975" kind="define"><name>KEYPAD_ROW_PIN</name></member>
     <member refid="keypad_8h_1acc73b1692bde87ce0a891af4dece22fc" kind="define"><name>KEYPAD_N</name></member>
-    <member refid="keypad_8h_1a7465f8ed0343f8e4044387a0429afb32" kind="variable"><name>keypad</name></member>
-    <member refid="keypad_8h_1a02e5cd605c64773d944bc322b51222cd" kind="function"><name>KeypadGetRow</name></member>
-    <member refid="keypad_8h_1a7dba628d7c95a933378f3a008344a4d3" kind="function"><name>KeypadGetCol</name></member>
-    <member refid="keypad_8h_1ab826b54bc6305f49d758d28173041ab7" kind="function"><name>KeypadGetChar</name></member>
+    <member refid="keypad_8h_1ae3dadba290780b744593a2bc45264e3f" kind="define"><name>KEYPAD_UNKOWN_KEY</name></member>
+    <member refid="keypad_8h_1a9c722c424a8076bfe4ee4e9e2efa03e6" kind="define"><name>KEYPAD_MAX_SPECIAL_KEYS</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" kind="enum"><name>SpecialKeyFunctions</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9" kind="enumvalue"><name>PLUS</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3" kind="enumvalue"><name>MULTIPLY</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225" kind="enumvalue"><name>MINUS</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da" kind="enumvalue"><name>DIVIDE</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2" kind="enumvalue"><name>DECIMAL_POINT</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e" kind="enumvalue"><name>EXPONENTIAL</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f" kind="enumvalue"><name>SHIFT_ON</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284" kind="enumvalue"><name>SHIFT_OFF</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78" kind="enumvalue"><name>END_INPUT</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccad67d15054b1cf5d5d891decd24ec801f" kind="enumvalue"><name>UNDO_LAST</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca1e1a4aba20a5a009e616cbc8fad33ac7" kind="enumvalue"><name>CLEAR</name></member>
+    <member refid="keypad_8h_1aa67f7a9fae59d327c0fef030151be800" kind="variable"><name>KEYPAD_SPECIAL_KEYS</name></member>
+    <member refid="keypad_8h_1a4c1fef8314018fe3ce44affffbe10a72" kind="variable"><name>KEYPAD_KEYS</name></member>
+    <member refid="keypad_8h_1ab3f2ce14f970ec74192af9e2c69a3ef5" kind="variable"><name>shiftIsOn</name></member>
+    <member refid="keypad_8h_1a49ffa463b26cc47b7d9e3e2cda8d9168" kind="function"><name>KeypadFindSpecialKey</name></member>
+    <member refid="keypad_8h_1aa6981f604fdfbec491e21e90507ec0de" kind="function"><name>KeypadInit</name></member>
+    <member refid="keypad_8h_1a63a4bc1c3105f40dc85fe16092790f83" kind="function"><name>KeypadWaitForInput</name></member>
   </compound>
   <compound refid="lcd_8c" kind="file"><name>lcd.c</name>
-    <member refid="lcd_8c_1a40ba377d6a3a574ff03b859bc7cdd4b0" kind="variable"><name>current_row</name></member>
-    <member refid="lcd_8c_1a5f839b3ac61c0771c9f8fbef974afe76" kind="variable"><name>current_col</name></member>
-    <member refid="lcd_8c_1aa2b64ca7fceac6ba52f4d3345acb5e69" kind="function"><name>LcdSetRs</name></member>
+    <member refid="lcd_8c_1a789bfe83cfe007cc723e4fd58bb6b112" kind="variable"><name>currentRow</name></member>
+    <member refid="lcd_8c_1a5c92777341dd0851fe17e1bd05b885dd" kind="variable"><name>currentCol</name></member>
+    <member refid="lcd_8c_1a20f0fe593368605d1bd6a28ad1a0a43f" kind="function"><name>LcdSetRs</name></member>
     <member refid="lcd_8c_1a07e30a245315510382ca9d5e1b508de3" kind="function"><name>LcdPulseEn</name></member>
-    <member refid="lcd_8c_1a0d25295265e475f1fdab816f24759206" kind="function"><name>LcdSendNibble</name></member>
-    <member refid="lcd_8c_1a9fd93d4ece7b9d019ffebf10e290f4ea" kind="function"><name>LcdSendByte</name></member>
+    <member refid="lcd_8c_1a93ae42864f782da4a4e0515d7faa449f" kind="function"><name>LcdSendNibble</name></member>
+    <member refid="lcd_8c_1a40d081728cfd391fce0ec51b3c055169" kind="function"><name>LcdSendByte</name></member>
     <member refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" kind="function"><name>LcdClearDisplay</name></member>
-    <member refid="lcd_8c_1a09b8fcddedb13ac22fa8cfc4dca9c78f" kind="function"><name>LcdCursorShift</name></member>
-    <member refid="lcd_8c_1a1e86a9c9a89725780eb464f5c42eb784" kind="function"><name>LcdEntryModeSet</name></member>
-    <member refid="lcd_8c_1ab933996c707c767ce7c6933227bc5bd0" kind="function"><name>LcdDisplayControl</name></member>
+    <member refid="lcd_8c_1a27164e4aa24d46318deab3dd42658978" kind="function"><name>LcdCursorShift</name></member>
+    <member refid="lcd_8c_1adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" kind="function"><name>LcdEntryModeSet</name></member>
+    <member refid="lcd_8c_1aca04f0c025afbc86a0fedc553f3a8ba4" kind="function"><name>LcdDisplayControl</name></member>
     <member refid="lcd_8c_1aad68360b11370fa86fcd068004ef903f" kind="function"><name>LcdReturnHome</name></member>
-    <member refid="lcd_8c_1a6d3f15072d85ed9eecadf4223f0bac1b" kind="function"><name>LcdFunctionSet</name></member>
+    <member refid="lcd_8c_1a9b451fe57dbdfef32faf1d96b9d7dce4" kind="function"><name>LcdFunctionSet</name></member>
     <member refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" kind="function"><name>LcdInit</name></member>
-    <member refid="lcd_8c_1ae368e9d14a294f0c32c7028b377f84e6" kind="function"><name>LcdSetDdram</name></member>
-    <member refid="lcd_8c_1a1560ddb5bbf01143c0afe47bbc914b0e" kind="function"><name>LcdSetCursor</name></member>
+    <member refid="lcd_8c_1a588b278d12ac539ff4f7787f03176dcb" kind="function"><name>LcdSetDdram</name></member>
+    <member refid="lcd_8c_1a8de82b22879092baf8383713ecc708e9" kind="function"><name>LcdSetCursor</name></member>
     <member refid="lcd_8c_1a60854aad97ec6bbdb5a001eea7c6b3b8" kind="function"><name>LcdIncrementCursorRow</name></member>
     <member refid="lcd_8c_1a16d925f7b9140ef9283fcae38a45b7f4" kind="function"><name>LcdIncrementCursorCol</name></member>
-    <member refid="lcd_8c_1ab1c2efe3f6552fcef08eeba3904d9376" kind="function"><name>LcdPrintChar</name></member>
-    <member refid="lcd_8c_1a3dbe526a93440b9586f3f5f270c335b1" kind="function"><name>LcdPrintCharAt</name></member>
+    <member refid="lcd_8c_1a37450f91c7ae032252ea94d7c92efde2" kind="function"><name>LcdPrintChar</name></member>
+    <member refid="lcd_8c_1a85868d62c8073baad86aa03e88ac1001" kind="function"><name>LcdPrintCharAt</name></member>
     <member refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kind="function"><name>LcdPrintString</name></member>
   </compound>
   <compound refid="lcd_8h" kind="file"><name>lcd.h</name>
@@ -87,29 +129,24 @@
     <member refid="lcd_8h_1a4781e073871c6f27f89b9463ad3a4ed1" kind="define"><name>LCD_RS</name></member>
     <member refid="lcd_8h_1a09aa49f7f7c7173b0ad1fbdefb0e2280" kind="define"><name>LCD_N_COL</name></member>
     <member refid="lcd_8h_1aece2016b9a1e98b3b6543062a452c847" kind="define"><name>LCD_N_ROW</name></member>
-    <member refid="lcd_8h_1aa2b64ca7fceac6ba52f4d3345acb5e69" kind="function"><name>LcdSetRs</name></member>
+    <member refid="lcd_8h_1a20f0fe593368605d1bd6a28ad1a0a43f" kind="function"><name>LcdSetRs</name></member>
     <member refid="lcd_8h_1a07e30a245315510382ca9d5e1b508de3" kind="function"><name>LcdPulseEn</name></member>
-    <member refid="lcd_8h_1a0d25295265e475f1fdab816f24759206" kind="function"><name>LcdSendNibble</name></member>
-    <member refid="lcd_8h_1a9fd93d4ece7b9d019ffebf10e290f4ea" kind="function"><name>LcdSendByte</name></member>
+    <member refid="lcd_8h_1a93ae42864f782da4a4e0515d7faa449f" kind="function"><name>LcdSendNibble</name></member>
+    <member refid="lcd_8h_1a40d081728cfd391fce0ec51b3c055169" kind="function"><name>LcdSendByte</name></member>
     <member refid="lcd_8h_1abcfdb05f65f66ac2f004c865d8d34933" kind="function"><name>LcdClearDisplay</name></member>
-    <member refid="lcd_8h_1a09b8fcddedb13ac22fa8cfc4dca9c78f" kind="function"><name>LcdCursorShift</name></member>
-    <member refid="lcd_8h_1a1e86a9c9a89725780eb464f5c42eb784" kind="function"><name>LcdEntryModeSet</name></member>
-    <member refid="lcd_8h_1ab933996c707c767ce7c6933227bc5bd0" kind="function"><name>LcdDisplayControl</name></member>
+    <member refid="lcd_8h_1a27164e4aa24d46318deab3dd42658978" kind="function"><name>LcdCursorShift</name></member>
+    <member refid="lcd_8h_1adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" kind="function"><name>LcdEntryModeSet</name></member>
+    <member refid="lcd_8h_1aca04f0c025afbc86a0fedc553f3a8ba4" kind="function"><name>LcdDisplayControl</name></member>
     <member refid="lcd_8h_1aad68360b11370fa86fcd068004ef903f" kind="function"><name>LcdReturnHome</name></member>
-    <member refid="lcd_8h_1a6d3f15072d85ed9eecadf4223f0bac1b" kind="function"><name>LcdFunctionSet</name></member>
+    <member refid="lcd_8h_1a9b451fe57dbdfef32faf1d96b9d7dce4" kind="function"><name>LcdFunctionSet</name></member>
     <member refid="lcd_8h_1a61b541c799955fc6b4e6cf28628de9a1" kind="function"><name>LcdInit</name></member>
-    <member refid="lcd_8h_1ae368e9d14a294f0c32c7028b377f84e6" kind="function"><name>LcdSetDdram</name></member>
-    <member refid="lcd_8h_1a1560ddb5bbf01143c0afe47bbc914b0e" kind="function"><name>LcdSetCursor</name></member>
-    <member refid="lcd_8h_1ab1c2efe3f6552fcef08eeba3904d9376" kind="function"><name>LcdPrintChar</name></member>
+    <member refid="lcd_8h_1a588b278d12ac539ff4f7787f03176dcb" kind="function"><name>LcdSetDdram</name></member>
+    <member refid="lcd_8h_1a8de82b22879092baf8383713ecc708e9" kind="function"><name>LcdSetCursor</name></member>
+    <member refid="lcd_8h_1a37450f91c7ae032252ea94d7c92efde2" kind="function"><name>LcdPrintChar</name></member>
     <member refid="lcd_8h_1a6ba64316f53c5a71031db621b3fe435e" kind="function"><name>LcdPrintString</name></member>
-    <member refid="lcd_8h_1a3dbe526a93440b9586f3f5f270c335b1" kind="function"><name>LcdPrintCharAt</name></member>
-    <member refid="lcd_8h_1ae0edd9926fb8c39106fa76493af49d91" kind="function"><name>LcdClearRow</name></member>
-    <member refid="lcd_8h_1ad2abde3bb9d35adad03395d02371fffe" kind="function"><name>LcdClearCol</name></member>
-    <member refid="lcd_8h_1a826fd004d4d84fe5388e2fbcb241237d" kind="function"><name>LcdDrawLine</name></member>
-    <member refid="lcd_8h_1a24b941ff0a9f08c3ae9f17b31e3d99c1" kind="function"><name>LcdDrawBox</name></member>
+    <member refid="lcd_8h_1a85868d62c8073baad86aa03e88ac1001" kind="function"><name>LcdPrintCharAt</name></member>
   </compound>
   <compound refid="main_8c" kind="file"><name>main.c</name>
-    <member refid="main_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" kind="function"><name>InitAll</name></member>
     <member refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>
   <compound refid="playground_8c" kind="file"><name>playground.c</name>
@@ -191,8 +228,11 @@
     <member refid="ports_8h_1af2e39e21502cda9b92080c1e650e3ca6" kind="function"><name>PortFInit</name></member>
   </compound>
   <compound refid="program-logic_8c" kind="file"><name>program-logic.c</name>
+    <member refid="program-logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" kind="function"><name>InitAll</name></member>
   </compound>
   <compound refid="program-logic_8h" kind="file"><name>program-logic.h</name>
+    <member refid="program-logic_8h_1a4aedb44dda7e02ceb062810c557f8994" kind="define"><name>PROGRAM_LOGIC_H</name></member>
+    <member refid="program-logic_8h_1a8468ead6b76c5ff5eb578a79fd591aa8" kind="function"><name>InitAll</name></member>
   </compound>
   <compound refid="_t_exa_s_8h" kind="file"><name>TExaS.h</name>
     <member refid="_t_exa_s_8h_1a53ea182d5a09a410df69fca268877072" kind="enum"><name>InputPorts</name></member>
@@ -203,6 +243,13 @@
     <member refid="_t_exa_s_8h_1adeb7fccbbb1881b866ba3ad16712294c" kind="function"><name>TExaS_Stop</name></member>
   </compound>
   <compound refid="unit-test_8c" kind="file"><name>unit-test.c</name>
+    <member refid="unit-test_8c_1a600f033d6f6a144fbd69976eab19e3ee" kind="function"><name>AfterEach</name></member>
+    <member refid="unit-test_8c_1ac8b99cb76697b9b78d1b364cf118342a" kind="function"><name>TestLcdClear</name></member>
+    <member refid="unit-test_8c_1a02e71048dc3a569b41b257dec3b00cf0" kind="function"><name>TestLcdCursor</name></member>
+    <member refid="unit-test_8c_1a6af1303d2e04cb5837731ad113c413bc" kind="function"><name>TestLcdMultiLine</name></member>
+    <member refid="unit-test_8c_1aec3ab11b7409fd19efa26bed15100a3f" kind="function"><name>TestLcdAll</name></member>
+    <member refid="unit-test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" kind="function"><name>TestKeypadLcd</name></member>
+    <member refid="unit-test_8c_1ac43be5887d2ddcce27989432c6415651" kind="function"><name>RunAll</name></member>
   </compound>
   <compound refid="unit-test_8h" kind="file"><name>unit-test.h</name>
     <member refid="unit-test_8h_1aaca9bad4dfe82f439fda079b604ea29d" kind="define"><name>UNIT_TEST_H</name></member>
@@ -211,6 +258,7 @@
   <compound refid="user-interface_8c" kind="file"><name>user-interface.c</name>
   </compound>
   <compound refid="user-interface_8h" kind="file"><name>user-interface.h</name>
+    <member refid="user-interface_8h_1a8608c8eb776842681d315eb77899f737" kind="define"><name>USER_INTERFACE_H</name></member>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
   </compound>

@@ -1,0 +1,7 @@
+<map id="ClockInit" name="ClockInit">
+<area shape="rect" id="Node000001" title="Initializes the clock." alt="" coords="5,31,77,57"/>
+<area shape="rect" id="Node000002" href="$clock_8c.html#a21cfe49b38d53efaf75df16d21ed882a" title="Initalizes the PLL to 80 MHz." alt="" coords="137,5,198,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,34,121,25,122,30,77,40"/>
+<area shape="rect" id="Node000003" href="$clock_8c.html#a58cf193ae5c1f330e4868e32afb9445d" title="Initializes sys tick." alt="" coords="125,56,210,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="77,48,110,55,109,60,76,54"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="KeypadWaitForInput" name="KeypadWaitForInput">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,145,57"/>
+<area shape="rect" id="Node000002" href="$keypad_8c.html#a49ffa463b26cc47b7d9e3e2cda8d9168" title=" " alt="" coords="193,5,349,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,32,177,28,178,33,145,38"/>
+<area shape="rect" id="Node000003" href="$keypad_8c.html#ab826b54bc6305f49d758d28173041ab7" title=" " alt="" coords="214,56,328,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,50,199,57,198,63,145,56"/>
+<area shape="rect" id="Node000004" href="$clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="397,56,483,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="328,67,381,67,381,72,328,72"/>
+<area shape="rect" id="Node000005" href="$clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="531,56,627,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="484,67,516,67,516,72,484,72"/>
+<area shape="rect" id="Node000006" href="$playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="675,56,727,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="627,67,659,67,659,72,627,72"/>
+</map>

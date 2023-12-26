@@ -176,9 +176,11 @@ void LcdSetDdram(byte addr){
     DelayMicro(40);
 }
 
-void LcdSetCursor(byte row, byte col){
-    currentCol = col;
-    currentRow = row;
+void LcdSetCursor(byte row, byte col, bool cursorTrack){
+    if(cursorTrack){
+        currentCol = col;
+        currentRow = row;
+    }
     byte addr = 0;
     if(row == 0){
         addr = 0x00;
@@ -201,7 +203,7 @@ void LcdIncrementCursorRow(){
 
     }
     currentCol = 0;
-    LcdSetCursor(currentRow, currentCol);
+    LcdSetCursor(currentRow, currentCol, true);
 }
 
 void LcdIncrementCursorCol(){
@@ -228,13 +230,13 @@ void LcdPrintChar(char ch, bool cursorTrack){
 }
 
 void LcdPrintCharAt(char ch, byte row, byte col){
-    LcdSetCursor(row, col);
+    LcdSetCursor(row, col, false);
     LcdPrintChar(ch, false);
 }
 
-void LcdPrintString(char str[]){
+void LcdPrintString(char str[], bool cursorTrack){
     int i; 
     for(i = 0; i < Strlen(str); i++){
-        LcdPrintChar(str[i], true);
+        LcdPrintChar(str[i], cursorTrack);
     }
 }

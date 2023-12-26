@@ -2,11 +2,29 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="user-interface_8h" kind="file" language="C++">
     <compoundname>user-interface.h</compoundname>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="user-interface_8h_1a8608c8eb776842681d315eb77899f737" prot="public" static="no">
+        <name>USER_INTERFACE_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/user-interface.h" line="2" column="9" bodyfile="src/user-interface.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>USER_INTERFACE_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>not<sp/>defined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="user-interface_8h_1a8608c8eb776842681d315eb77899f737" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USER_INTERFACE_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/user-interface.h"/>
   </compounddef>

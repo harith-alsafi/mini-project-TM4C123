@@ -4,6 +4,7 @@
     <compoundname>helpers.h</compoundname>
     <includedby refid="helpers_8c" local="yes">src/helpers.c</includedby>
     <includedby refid="lcd_8c" local="yes">src/lcd.c</includedby>
+    <includedby refid="lcd_8h" local="yes">src/lcd.h</includedby>
     <invincdepgraph>
       <node id="2">
         <label>src/helpers.c</label>
@@ -16,10 +17,30 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="3">
         <label>src/lcd.c</label>
         <link refid="lcd_8c"/>
+      </node>
+      <node id="4">
+        <label>src/lcd.h</label>
+        <link refid="lcd_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/program-logic.c</label>
+        <link refid="program-logic_8c"/>
+      </node>
+      <node id="6">
+        <label>src/unit-test.c</label>
+        <link refid="unit-test_8c"/>
       </node>
     </invincdepgraph>
     <sectiondef kind="define">
@@ -33,28 +54,6 @@
         </inbodydescription>
         <location file="src/helpers.h" line="2" column="9" bodyfile="src/helpers.h" bodystart="2" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="helpers_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" prot="public" static="no">
-        <name>TRUE</name>
-        <initializer>1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/helpers.h" line="4" column="9" bodyfile="src/helpers.h" bodystart="4" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="helpers_8h_1aa93f0eb578d23995850d61f7d61c55c1" prot="public" static="no">
-        <name>FALSE</name>
-        <initializer>0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/helpers.h" line="5" column="9" bodyfile="src/helpers.h" bodystart="5" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="define" id="helpers_8h_1a5bb885982ff66a2e0a0a45a8ee9c35e2" prot="public" static="no">
         <name>HIGH</name>
         <initializer>0xFF</initializer>
@@ -64,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/helpers.h" line="6" column="9" bodyfile="src/helpers.h" bodystart="6" bodyend="-1"/>
+        <location file="src/helpers.h" line="4" column="9" bodyfile="src/helpers.h" bodystart="4" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="helpers_8h_1ab811d8c6ff3a505312d3276590444289" prot="public" static="no">
         <name>LOW</name>
@@ -75,7 +74,34 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/helpers.h" line="7" column="9" bodyfile="src/helpers.h" bodystart="7" bodyend="-1"/>
+        <location file="src/helpers.h" line="5" column="9" bodyfile="src/helpers.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="helpers_8h_1abad5e4191558987772c01a31c46b8997" prot="public" static="no">
+        <name>ARRAY_LEN</name>
+        <param><defname>arr</defname></param>
+        <initializer>(sizeof(arr) / sizeof(arr[0]))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/helpers.h" line="6" column="9" bodyfile="src/helpers.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="helpers_8h_1a0c8186d9b9b7880309c27230bbb5e69d" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char byte</definition>
+        <argsstring></argsstring>
+        <name>byte</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/helpers.h" line="8" column="23" bodyfile="src/helpers.h" bodystart="8" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -108,8 +134,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/helpers.h" line="15" column="14" bodyfile="src/helpers.c" bodystart="3" bodyend="10" declfile="src/helpers.h" declline="15" declcolumn="14"/>
-        <referencedby refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" compoundref="lcd_8c" startline="230" endline="235">LcdPrintString</referencedby>
+        <location file="src/helpers.h" line="16" column="14" bodyfile="src/helpers.c" bodystart="3" bodyend="10" declfile="src/helpers.h" declline="16" declcolumn="14"/>
+        <referencedby refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" compoundref="lcd_8c" startline="235" endline="240">LcdPrintString</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -120,14 +146,15 @@
 <codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>HELPERS_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>not<sp/>defined</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2" refid="helpers_8h_1a4fd85cebb3a7e1a87f883886a1e43791" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HELPERS_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>it</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4" refid="helpers_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRUE<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5" refid="helpers_8h_1aa93f0eb578d23995850d61f7d61c55c1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FALSE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6" refid="helpers_8h_1a5bb885982ff66a2e0a0a45a8ee9c35e2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HIGH<sp/>0xFF</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7" refid="helpers_8h_1ab811d8c6ff3a505312d3276590444289" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOW<sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="helpers_8h_1ad7f3f83d057abbbc219fb761d2058708" kindref="member">Strlen</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str);</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="4" refid="helpers_8h_1a5bb885982ff66a2e0a0a45a8ee9c35e2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HIGH<sp/>0xFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="helpers_8h_1ab811d8c6ff3a505312d3276590444289" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOW<sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="helpers_8h_1abad5e4191558987772c01a31c46b8997" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ARRAY_LEN(arr)<sp/>(sizeof(arr)<sp/>/<sp/>sizeof(arr[0]))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="helpers_8h_1a0c8186d9b9b7880309c27230bbb5e69d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="helpers_8h_1a0c8186d9b9b7880309c27230bbb5e69d" kindref="member">byte</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="helpers_8h_1ad7f3f83d057abbbc219fb761d2058708" kindref="member">Strlen</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/helpers.h"/>
   </compounddef>

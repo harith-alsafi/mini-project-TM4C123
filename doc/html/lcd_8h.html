@@ -79,15 +79,18 @@ $(function() {
   <div class="headertitle"><div class="title">lcd.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="ports_8h_source.html">ports.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="helpers_8h_source.html">helpers.h</a>&quot;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for lcd.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="lcd_8h__incl.png" border="0" usemap="#asrc_2lcd_8h" alt=""/></div>
 <map name="asrc_2lcd_8h" id="asrc_2lcd_8h">
-<area shape="rect" title=" " alt="" coords="5,5,77,32"/>
-<area shape="rect" href="ports_8h.html" title=" " alt="" coords="10,80,72,107"/>
-<area shape="poly" title=" " alt="" coords="44,33,44,64,38,64,38,33"/>
+<area shape="rect" title=" " alt="" coords="56,5,128,32"/>
+<area shape="rect" href="helpers_8h.html" title=" " alt="" coords="5,80,80,107"/>
+<area shape="poly" title=" " alt="" coords="85,34,62,69,57,66,81,31"/>
+<area shape="rect" title=" " alt="" coords="104,80,178,107"/>
+<area shape="poly" title=" " alt="" coords="103,31,126,66,122,69,98,34"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -95,11 +98,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="lcd_8h__dep__incl.png" border="0" usemap="#asrc_2lcd_8hdep" alt=""/></div>
 <map name="asrc_2lcd_8hdep" id="asrc_2lcd_8hdep">
-<area shape="rect" title=" " alt="" coords="56,5,127,32"/>
+<area shape="rect" title=" " alt="" coords="131,5,202,32"/>
 <area shape="rect" href="lcd_8c.html" title=" " alt="" coords="5,80,77,107"/>
-<area shape="poly" title=" " alt="" coords="76,46,52,81,48,78,72,43"/>
-<area shape="rect" href="main_8c.html" title=" " alt="" coords="101,80,184,107"/>
-<area shape="poly" title=" " alt="" coords="111,43,136,78,131,81,107,46"/>
+<area shape="poly" title=" " alt="" coords="133,42,64,82,62,77,130,38"/>
+<area shape="rect" href="program-logic_8c.html" title=" " alt="" coords="100,80,233,107"/>
+<area shape="poly" title=" " alt="" coords="169,48,169,80,164,80,164,48"/>
+<area shape="rect" href="unit-test_8c.html" title=" " alt="" coords="257,80,358,107"/>
+<area shape="poly" title=" " alt="" coords="206,37,284,77,282,82,203,42"/>
 </map>
 </div>
 </div>
@@ -122,61 +127,53 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa2b64ca7fceac6ba52f4d3345acb5e69" id="r_aa2b64ca7fceac6ba52f4d3345acb5e69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#aa2b64ca7fceac6ba52f4d3345acb5e69">LcdSetRs</a> (unsigned char rs)</td></tr>
-<tr class="memdesc:aa2b64ca7fceac6ba52f4d3345acb5e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the rs flag to the given value.  <br /></td></tr>
-<tr class="separator:aa2b64ca7fceac6ba52f4d3345acb5e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20f0fe593368605d1bd6a28ad1a0a43f" id="r_a20f0fe593368605d1bd6a28ad1a0a43f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a20f0fe593368605d1bd6a28ad1a0a43f">LcdSetRs</a> (<a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> rs)</td></tr>
+<tr class="memdesc:a20f0fe593368605d1bd6a28ad1a0a43f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the rs flag to the given value.  <br /></td></tr>
+<tr class="separator:a20f0fe593368605d1bd6a28ad1a0a43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07e30a245315510382ca9d5e1b508de3" id="r_a07e30a245315510382ca9d5e1b508de3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a07e30a245315510382ca9d5e1b508de3">LcdPulseEn</a> ()</td></tr>
 <tr class="memdesc:a07e30a245315510382ca9d5e1b508de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns.  <br /></td></tr>
 <tr class="separator:a07e30a245315510382ca9d5e1b508de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d25295265e475f1fdab816f24759206" id="r_a0d25295265e475f1fdab816f24759206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a0d25295265e475f1fdab816f24759206">LcdSendNibble</a> (unsigned char nibble)</td></tr>
-<tr class="memdesc:a0d25295265e475f1fdab816f24759206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a nibble to the LCD.  <br /></td></tr>
-<tr class="separator:a0d25295265e475f1fdab816f24759206"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fd93d4ece7b9d019ffebf10e290f4ea" id="r_a9fd93d4ece7b9d019ffebf10e290f4ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a9fd93d4ece7b9d019ffebf10e290f4ea">LcdSendByte</a> (unsigned char byte)</td></tr>
-<tr class="memdesc:a9fd93d4ece7b9d019ffebf10e290f4ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a byte to the LCD.  <br /></td></tr>
-<tr class="separator:a9fd93d4ece7b9d019ffebf10e290f4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93ae42864f782da4a4e0515d7faa449f" id="r_a93ae42864f782da4a4e0515d7faa449f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a93ae42864f782da4a4e0515d7faa449f">LcdSendNibble</a> (<a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> nibble)</td></tr>
+<tr class="memdesc:a93ae42864f782da4a4e0515d7faa449f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a nibble to the LCD.  <br /></td></tr>
+<tr class="separator:a93ae42864f782da4a4e0515d7faa449f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40d081728cfd391fce0ec51b3c055169" id="r_a40d081728cfd391fce0ec51b3c055169"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a40d081728cfd391fce0ec51b3c055169">LcdSendByte</a> (<a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> <a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>)</td></tr>
+<tr class="memdesc:a40d081728cfd391fce0ec51b3c055169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a byte to the LCD.  <br /></td></tr>
+<tr class="separator:a40d081728cfd391fce0ec51b3c055169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcfdb05f65f66ac2f004c865d8d34933" id="r_abcfdb05f65f66ac2f004c865d8d34933"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#abcfdb05f65f66ac2f004c865d8d34933">LcdClearDisplay</a> ()</td></tr>
 <tr class="memdesc:abcfdb05f65f66ac2f004c865d8d34933"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the display.  <br /></td></tr>
 <tr class="separator:abcfdb05f65f66ac2f004c865d8d34933"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09b8fcddedb13ac22fa8cfc4dca9c78f" id="r_a09b8fcddedb13ac22fa8cfc4dca9c78f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a09b8fcddedb13ac22fa8cfc4dca9c78f">LcdCursorShift</a> (int sc, int rl)</td></tr>
-<tr class="memdesc:a09b8fcddedb13ac22fa8cfc4dca9c78f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the LCD cursor position.  <br /></td></tr>
-<tr class="separator:a09b8fcddedb13ac22fa8cfc4dca9c78f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e86a9c9a89725780eb464f5c42eb784" id="r_a1e86a9c9a89725780eb464f5c42eb784"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a1e86a9c9a89725780eb464f5c42eb784">LcdEntryModeSet</a> (int id, int s)</td></tr>
-<tr class="memdesc:a1e86a9c9a89725780eb464f5c42eb784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the entry mode of the LCD.  <br /></td></tr>
-<tr class="separator:a1e86a9c9a89725780eb464f5c42eb784"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab933996c707c767ce7c6933227bc5bd0" id="r_ab933996c707c767ce7c6933227bc5bd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#ab933996c707c767ce7c6933227bc5bd0">LcdDisplayControl</a> (int d, int c, int b)</td></tr>
-<tr class="memdesc:ab933996c707c767ce7c6933227bc5bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls the display, cursor, and blinking.  <br /></td></tr>
-<tr class="separator:ab933996c707c767ce7c6933227bc5bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27164e4aa24d46318deab3dd42658978" id="r_a27164e4aa24d46318deab3dd42658978"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a27164e4aa24d46318deab3dd42658978">LcdCursorShift</a> (<a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> sc, <a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> rl)</td></tr>
+<tr class="memdesc:a27164e4aa24d46318deab3dd42658978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the LCD cursor position.  <br /></td></tr>
+<tr class="separator:a27164e4aa24d46318deab3dd42658978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" id="r_adbaeb94dbb0cd5ee4efa5a4a6a06f0c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2">LcdEntryModeSet</a> (<a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> id, <a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> s)</td></tr>
+<tr class="memdesc:adbaeb94dbb0cd5ee4efa5a4a6a06f0c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the entry mode of the LCD.  <br /></td></tr>
+<tr class="separator:adbaeb94dbb0cd5ee4efa5a4a6a06f0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca04f0c025afbc86a0fedc553f3a8ba4" id="r_aca04f0c025afbc86a0fedc553f3a8ba4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#aca04f0c025afbc86a0fedc553f3a8ba4">LcdDisplayControl</a> (<a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> d, <a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> c, <a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> b)</td></tr>
+<tr class="memdesc:aca04f0c025afbc86a0fedc553f3a8ba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls the display, cursor, and blinking.  <br /></td></tr>
+<tr class="separator:aca04f0c025afbc86a0fedc553f3a8ba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad68360b11370fa86fcd068004ef903f" id="r_aad68360b11370fa86fcd068004ef903f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#aad68360b11370fa86fcd068004ef903f">LcdReturnHome</a> ()</td></tr>
 <tr class="memdesc:aad68360b11370fa86fcd068004ef903f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets cursor to original position.  <br /></td></tr>
 <tr class="separator:aad68360b11370fa86fcd068004ef903f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d3f15072d85ed9eecadf4223f0bac1b" id="r_a6d3f15072d85ed9eecadf4223f0bac1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a6d3f15072d85ed9eecadf4223f0bac1b">LcdFunctionSet</a> (int dl, int n, int f)</td></tr>
-<tr class="separator:a6d3f15072d85ed9eecadf4223f0bac1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b451fe57dbdfef32faf1d96b9d7dce4" id="r_a9b451fe57dbdfef32faf1d96b9d7dce4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a9b451fe57dbdfef32faf1d96b9d7dce4">LcdFunctionSet</a> (<a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> dl, <a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> n, <a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> f)</td></tr>
+<tr class="separator:a9b451fe57dbdfef32faf1d96b9d7dce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61b541c799955fc6b4e6cf28628de9a1" id="r_a61b541c799955fc6b4e6cf28628de9a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a61b541c799955fc6b4e6cf28628de9a1">LcdInit</a> ()</td></tr>
 <tr class="memdesc:a61b541c799955fc6b4e6cf28628de9a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the LCD.  <br /></td></tr>
 <tr class="separator:a61b541c799955fc6b4e6cf28628de9a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae368e9d14a294f0c32c7028b377f84e6" id="r_ae368e9d14a294f0c32c7028b377f84e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#ae368e9d14a294f0c32c7028b377f84e6">LcdSetDdram</a> (unsigned char addr)</td></tr>
-<tr class="memdesc:ae368e9d14a294f0c32c7028b377f84e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the DDRAM address (cursor position)  <br /></td></tr>
-<tr class="separator:ae368e9d14a294f0c32c7028b377f84e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1560ddb5bbf01143c0afe47bbc914b0e" id="r_a1560ddb5bbf01143c0afe47bbc914b0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a1560ddb5bbf01143c0afe47bbc914b0e">LcdSetCursor</a> (unsigned char row, unsigned char col)</td></tr>
-<tr class="memdesc:a1560ddb5bbf01143c0afe47bbc914b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the cursor position.  <br /></td></tr>
-<tr class="separator:a1560ddb5bbf01143c0afe47bbc914b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1c2efe3f6552fcef08eeba3904d9376" id="r_ab1c2efe3f6552fcef08eeba3904d9376"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#ab1c2efe3f6552fcef08eeba3904d9376">LcdPrintChar</a> (char ch, unsigned char cursorShift)</td></tr>
-<tr class="memdesc:ab1c2efe3f6552fcef08eeba3904d9376"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a character to the LCD.  <br /></td></tr>
-<tr class="separator:ab1c2efe3f6552fcef08eeba3904d9376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a588b278d12ac539ff4f7787f03176dcb" id="r_a588b278d12ac539ff4f7787f03176dcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a588b278d12ac539ff4f7787f03176dcb">LcdSetDdram</a> (<a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> addr)</td></tr>
+<tr class="memdesc:a588b278d12ac539ff4f7787f03176dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the DDRAM address (cursor position)  <br /></td></tr>
+<tr class="separator:a588b278d12ac539ff4f7787f03176dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de82b22879092baf8383713ecc708e9" id="r_a8de82b22879092baf8383713ecc708e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a8de82b22879092baf8383713ecc708e9">LcdSetCursor</a> (<a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> row, <a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> col)</td></tr>
+<tr class="memdesc:a8de82b22879092baf8383713ecc708e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the cursor position.  <br /></td></tr>
+<tr class="separator:a8de82b22879092baf8383713ecc708e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37450f91c7ae032252ea94d7c92efde2" id="r_a37450f91c7ae032252ea94d7c92efde2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a37450f91c7ae032252ea94d7c92efde2">LcdPrintChar</a> (char ch, bool cursorTrack)</td></tr>
+<tr class="memdesc:a37450f91c7ae032252ea94d7c92efde2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a character to the LCD.  <br /></td></tr>
+<tr class="separator:a37450f91c7ae032252ea94d7c92efde2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ba64316f53c5a71031db621b3fe435e" id="r_a6ba64316f53c5a71031db621b3fe435e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a6ba64316f53c5a71031db621b3fe435e">LcdPrintString</a> (char str[])</td></tr>
 <tr class="memdesc:a6ba64316f53c5a71031db621b3fe435e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a string to the LCD.  <br /></td></tr>
 <tr class="separator:a6ba64316f53c5a71031db621b3fe435e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dbe526a93440b9586f3f5f270c335b1" id="r_a3dbe526a93440b9586f3f5f270c335b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a3dbe526a93440b9586f3f5f270c335b1">LcdPrintCharAt</a> (char ch, unsigned char row, unsigned char col)</td></tr>
-<tr class="memdesc:a3dbe526a93440b9586f3f5f270c335b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a character to the LCD at a given position.  <br /></td></tr>
-<tr class="separator:a3dbe526a93440b9586f3f5f270c335b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0edd9926fb8c39106fa76493af49d91" id="r_ae0edd9926fb8c39106fa76493af49d91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#ae0edd9926fb8c39106fa76493af49d91">LcdClearRow</a> (unsigned char row)</td></tr>
-<tr class="separator:ae0edd9926fb8c39106fa76493af49d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2abde3bb9d35adad03395d02371fffe" id="r_ad2abde3bb9d35adad03395d02371fffe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#ad2abde3bb9d35adad03395d02371fffe">LcdClearCol</a> (unsigned char col)</td></tr>
-<tr class="separator:ad2abde3bb9d35adad03395d02371fffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a826fd004d4d84fe5388e2fbcb241237d" id="r_a826fd004d4d84fe5388e2fbcb241237d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a826fd004d4d84fe5388e2fbcb241237d">LcdDrawLine</a> (unsigned char row, unsigned char col, unsigned char length, unsigned char is_vertical)</td></tr>
-<tr class="separator:a826fd004d4d84fe5388e2fbcb241237d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24b941ff0a9f08c3ae9f17b31e3d99c1" id="r_a24b941ff0a9f08c3ae9f17b31e3d99c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a24b941ff0a9f08c3ae9f17b31e3d99c1">LcdDrawBox</a> (unsigned char row, unsigned char col, unsigned char length, unsigned char width)</td></tr>
-<tr class="separator:a24b941ff0a9f08c3ae9f17b31e3d99c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85868d62c8073baad86aa03e88ac1001" id="r_a85868d62c8073baad86aa03e88ac1001"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a85868d62c8073baad86aa03e88ac1001">LcdPrintCharAt</a> (char ch, <a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> row, <a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> col)</td></tr>
+<tr class="memdesc:a85868d62c8073baad86aa03e88ac1001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a character to the LCD at a given position.  <br /></td></tr>
+<tr class="separator:a85868d62c8073baad86aa03e88ac1001"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a0526693165bd140bdaaa0f27b240db1c" name="a0526693165bd140bdaaa0f27b240db1c"></a>
@@ -191,7 +188,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lcd_8h_source.html#l00010">10</a> of file <a class="el" href="lcd_8h_source.html">lcd.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8h_source.html#l00011">11</a> of file <a class="el" href="lcd_8h_source.html">lcd.h</a>.</p>
 
 </div>
 </div>
@@ -207,7 +204,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lcd_8h_source.html#l00012">12</a> of file <a class="el" href="lcd_8h_source.html">lcd.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8h_source.html#l00013">13</a> of file <a class="el" href="lcd_8h_source.html">lcd.h</a>.</p>
 
 </div>
 </div>
@@ -239,7 +236,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lcd_8h_source.html#l00016">16</a> of file <a class="el" href="lcd_8h_source.html">lcd.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8h_source.html#l00017">17</a> of file <a class="el" href="lcd_8h_source.html">lcd.h</a>.</p>
 
 </div>
 </div>
@@ -255,7 +252,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lcd_8h_source.html#l00017">17</a> of file <a class="el" href="lcd_8h_source.html">lcd.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8h_source.html#l00018">18</a> of file <a class="el" href="lcd_8h_source.html">lcd.h</a>.</p>
 
 </div>
 </div>
@@ -271,29 +268,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lcd_8h_source.html#l00014">14</a> of file <a class="el" href="lcd_8h_source.html">lcd.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8h_source.html#l00015">15</a> of file <a class="el" href="lcd_8h_source.html">lcd.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ad2abde3bb9d35adad03395d02371fffe" name="ad2abde3bb9d35adad03395d02371fffe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2abde3bb9d35adad03395d02371fffe">&#9670;&#160;</a></span>LcdClearCol()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LcdClearCol </td>
-          <td>(</td>
-          <td class="paramtype">unsigned char&#160;</td>
-          <td class="paramname"><em>col</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="abcfdb05f65f66ac2f004c865d8d34933" name="abcfdb05f65f66ac2f004c865d8d34933"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abcfdb05f65f66ac2f004c865d8d34933">&#9670;&#160;</a></span>LcdClearDisplay()</h2>
 
@@ -311,7 +290,7 @@ Functions</h2></td></tr>
 
 <p>Clears the display. </p>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00029">29</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00031">31</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -320,15 +299,15 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Clears the display." alt="" coords="5,56,121,83"/>
 <area shape="rect" href="clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="332,5,409,32"/>
 <area shape="poly" title=" " alt="" coords="116,53,168,41,315,21,316,26,169,47,117,58"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="169,56,268,83"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="169,56,268,83"/>
 <area shape="poly" title=" " alt="" coords="121,67,153,67,153,72,121,72"/>
-<area shape="rect" href="lcd_8c.html#aa2b64ca7fceac6ba52f4d3345acb5e69" title="Sets the rs flag to the given value." alt="" coords="179,107,258,133"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="179,107,258,133"/>
 <area shape="poly" title=" " alt="" coords="107,81,165,100,163,105,106,86"/>
 <area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="744,5,839,32"/>
 <area shape="poly" title=" " alt="" coords="409,16,728,16,728,21,409,21"/>
 <area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="887,31,940,57"/>
 <area shape="poly" title=" " alt="" coords="840,26,873,33,871,38,839,31"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="316,56,424,83"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="316,56,424,83"/>
 <area shape="poly" title=" " alt="" coords="269,67,301,67,301,72,269,72"/>
 <area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="472,56,564,83"/>
 <area shape="poly" title=" " alt="" coords="425,67,457,67,457,72,425,72"/>
@@ -343,39 +322,33 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lcd_8h_abcfdb05f65f66ac2f004c865d8d34933_icgraph.png" border="0" usemap="#alcd_8h_abcfdb05f65f66ac2f004c865d8d34933_icgraph" alt=""/></div>
 <map name="alcd_8h_abcfdb05f65f66ac2f004c865d8d34933_icgraph" id="alcd_8h_abcfdb05f65f66ac2f004c865d8d34933_icgraph">
-<area shape="rect" title="Clears the display." alt="" coords="311,31,427,57"/>
-<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="204,5,263,32"/>
-<area shape="poly" title=" " alt="" coords="295,33,263,27,264,22,296,28"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
-<area shape="poly" title=" " alt="" coords="296,47,55,47,55,41,296,41"/>
-<area shape="rect" href="main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="103,5,156,32"/>
-<area shape="poly" title=" " alt="" coords="188,21,156,21,156,16,188,16"/>
-<area shape="poly" title=" " alt="" coords="88,32,56,40,55,35,87,27"/>
+<area shape="rect" title="Clears the display." alt="" coords="400,107,516,133"/>
+<area shape="rect" href="unit-test_8c.html#a600f033d6f6a144fbd69976eab19e3ee" title=" " alt="" coords="254,5,332,32"/>
+<area shape="poly" title=" " alt="" coords="427,99,391,72,351,46,328,35,330,30,354,42,395,68,430,95"/>
+<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="263,56,322,83"/>
+<area shape="poly" title=" " alt="" coords="396,104,322,81,324,76,398,99"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,107,348,133"/>
+<area shape="poly" title=" " alt="" coords="385,123,349,123,349,117,385,117"/>
+<area shape="rect" href="unit-test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="244,157,341,184"/>
+<area shape="poly" title=" " alt="" coords="398,141,340,159,338,154,397,136"/>
+<area shape="rect" href="unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,208,352,235"/>
+<area shape="poly" title=" " alt="" coords="430,145,395,172,354,198,330,210,328,205,351,194,391,168,427,141"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="117,56,171,83"/>
+<area shape="poly" title=" " alt="" coords="247,72,171,72,171,67,247,67"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,81,55,108"/>
+<area shape="poly" title=" " alt="" coords="102,81,56,92,54,87,101,76"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,107,174,133"/>
+<area shape="poly" title=" " alt="" coords="221,123,174,123,174,117,221,117"/>
+<area shape="poly" title=" " alt="" coords="98,113,54,103,56,97,100,107"/>
+<area shape="rect" href="unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,208,185,235"/>
+<area shape="poly" title=" " alt="" coords="218,224,185,224,185,219,218,219"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ae0edd9926fb8c39106fa76493af49d91" name="ae0edd9926fb8c39106fa76493af49d91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0edd9926fb8c39106fa76493af49d91">&#9670;&#160;</a></span>LcdClearRow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LcdClearRow </td>
-          <td>(</td>
-          <td class="paramtype">unsigned char&#160;</td>
-          <td class="paramname"><em>row</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a09b8fcddedb13ac22fa8cfc4dca9c78f" name="a09b8fcddedb13ac22fa8cfc4dca9c78f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09b8fcddedb13ac22fa8cfc4dca9c78f">&#9670;&#160;</a></span>LcdCursorShift()</h2>
+<a id="a27164e4aa24d46318deab3dd42658978" name="a27164e4aa24d46318deab3dd42658978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27164e4aa24d46318deab3dd42658978">&#9670;&#160;</a></span>LcdCursorShift()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -383,13 +356,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void LcdCursorShift </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>sc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>rl</em>&#160;</td>
         </tr>
         <tr>
@@ -409,24 +382,24 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00041">41</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00043">43</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_a09b8fcddedb13ac22fa8cfc4dca9c78f_cgraph.png" border="0" usemap="#alcd_8h_a09b8fcddedb13ac22fa8cfc4dca9c78f_cgraph" alt=""/></div>
-<map name="alcd_8h_a09b8fcddedb13ac22fa8cfc4dca9c78f_cgraph" id="alcd_8h_a09b8fcddedb13ac22fa8cfc4dca9c78f_cgraph">
+<div class="center"><img src="lcd_8h_a27164e4aa24d46318deab3dd42658978_cgraph.png" border="0" usemap="#alcd_8h_a27164e4aa24d46318deab3dd42658978_cgraph" alt=""/></div>
+<map name="alcd_8h_a27164e4aa24d46318deab3dd42658978_cgraph" id="alcd_8h_a27164e4aa24d46318deab3dd42658978_cgraph">
 <area shape="rect" title="Sets the LCD cursor position." alt="" coords="5,56,112,83"/>
 <area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="318,5,404,32"/>
 <area shape="poly" title=" " alt="" coords="109,53,159,41,302,21,303,27,160,47,110,58"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="160,56,259,83"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="160,56,259,83"/>
 <area shape="poly" title=" " alt="" coords="112,67,144,67,144,72,112,72"/>
-<area shape="rect" href="lcd_8c.html#aa2b64ca7fceac6ba52f4d3345acb5e69" title="Sets the rs flag to the given value." alt="" coords="170,107,249,133"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="170,107,249,133"/>
 <area shape="poly" title=" " alt="" coords="102,81,157,100,155,105,100,86"/>
 <area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="735,5,830,32"/>
 <area shape="poly" title=" " alt="" coords="405,16,720,16,720,21,405,21"/>
 <area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="878,31,931,57"/>
 <area shape="poly" title=" " alt="" coords="831,26,864,33,862,38,830,31"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="307,56,415,83"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="307,56,415,83"/>
 <area shape="poly" title=" " alt="" coords="260,67,292,67,292,72,260,72"/>
 <area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="463,56,555,83"/>
 <area shape="poly" title=" " alt="" coords="416,67,448,67,448,72,416,72"/>
@@ -439,8 +412,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ab933996c707c767ce7c6933227bc5bd0" name="ab933996c707c767ce7c6933227bc5bd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab933996c707c767ce7c6933227bc5bd0">&#9670;&#160;</a></span>LcdDisplayControl()</h2>
+<a id="aca04f0c025afbc86a0fedc553f3a8ba4" name="aca04f0c025afbc86a0fedc553f3a8ba4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca04f0c025afbc86a0fedc553f3a8ba4">&#9670;&#160;</a></span>LcdDisplayControl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -448,19 +421,19 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void LcdDisplayControl </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>d</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>c</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>b</em>&#160;</td>
         </tr>
         <tr>
@@ -481,24 +454,24 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00073">73</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00075">75</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_ab933996c707c767ce7c6933227bc5bd0_cgraph.png" border="0" usemap="#alcd_8h_ab933996c707c767ce7c6933227bc5bd0_cgraph" alt=""/></div>
-<map name="alcd_8h_ab933996c707c767ce7c6933227bc5bd0_cgraph" id="alcd_8h_ab933996c707c767ce7c6933227bc5bd0_cgraph">
+<div class="center"><img src="lcd_8h_aca04f0c025afbc86a0fedc553f3a8ba4_cgraph.png" border="0" usemap="#alcd_8h_aca04f0c025afbc86a0fedc553f3a8ba4_cgraph" alt=""/></div>
+<map name="alcd_8h_aca04f0c025afbc86a0fedc553f3a8ba4_cgraph" id="alcd_8h_aca04f0c025afbc86a0fedc553f3a8ba4_cgraph">
 <area shape="rect" title="Controls the display, cursor, and blinking." alt="" coords="5,56,132,83"/>
 <area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="338,5,424,32"/>
 <area shape="poly" title=" " alt="" coords="125,53,179,41,322,22,323,27,180,47,126,58"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="180,56,279,83"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="180,56,279,83"/>
 <area shape="poly" title=" " alt="" coords="132,67,164,67,164,72,132,72"/>
-<area shape="rect" href="lcd_8c.html#aa2b64ca7fceac6ba52f4d3345acb5e69" title="Sets the rs flag to the given value." alt="" coords="190,107,269,133"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="190,107,269,133"/>
 <area shape="poly" title=" " alt="" coords="114,81,177,101,175,106,113,86"/>
 <area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="755,5,850,32"/>
 <area shape="poly" title=" " alt="" coords="425,16,740,16,740,21,425,21"/>
 <area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="898,31,951,57"/>
 <area shape="poly" title=" " alt="" coords="851,26,884,33,882,38,850,31"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="327,56,435,83"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="327,56,435,83"/>
 <area shape="poly" title=" " alt="" coords="280,67,312,67,312,72,280,72"/>
 <area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="483,56,575,83"/>
 <area shape="poly" title=" " alt="" coords="436,67,468,67,468,72,436,72"/>
@@ -511,12 +484,12 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_ab933996c707c767ce7c6933227bc5bd0_icgraph.png" border="0" usemap="#alcd_8h_ab933996c707c767ce7c6933227bc5bd0_icgraph" alt=""/></div>
-<map name="alcd_8h_ab933996c707c767ce7c6933227bc5bd0_icgraph" id="alcd_8h_ab933996c707c767ce7c6933227bc5bd0_icgraph">
+<div class="center"><img src="lcd_8h_aca04f0c025afbc86a0fedc553f3a8ba4_icgraph.png" border="0" usemap="#alcd_8h_aca04f0c025afbc86a0fedc553f3a8ba4_icgraph" alt=""/></div>
+<map name="alcd_8h_aca04f0c025afbc86a0fedc553f3a8ba4_icgraph" id="alcd_8h_aca04f0c025afbc86a0fedc553f3a8ba4_icgraph">
 <area shape="rect" title="Controls the display, cursor, and blinking." alt="" coords="311,5,438,32"/>
 <area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="204,5,263,32"/>
 <area shape="poly" title=" " alt="" coords="296,21,264,21,264,16,296,16"/>
-<area shape="rect" href="main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="103,5,156,32"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="103,5,156,32"/>
 <area shape="poly" title=" " alt="" coords="188,21,156,21,156,16,188,16"/>
 <area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
@@ -525,88 +498,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a24b941ff0a9f08c3ae9f17b31e3d99c1" name="a24b941ff0a9f08c3ae9f17b31e3d99c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24b941ff0a9f08c3ae9f17b31e3d99c1">&#9670;&#160;</a></span>LcdDrawBox()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LcdDrawBox </td>
-          <td>(</td>
-          <td class="paramtype">unsigned char&#160;</td>
-          <td class="paramname"><em>row</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned char&#160;</td>
-          <td class="paramname"><em>col</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned char&#160;</td>
-          <td class="paramname"><em>length</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned char&#160;</td>
-          <td class="paramname"><em>width</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a826fd004d4d84fe5388e2fbcb241237d" name="a826fd004d4d84fe5388e2fbcb241237d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a826fd004d4d84fe5388e2fbcb241237d">&#9670;&#160;</a></span>LcdDrawLine()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LcdDrawLine </td>
-          <td>(</td>
-          <td class="paramtype">unsigned char&#160;</td>
-          <td class="paramname"><em>row</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned char&#160;</td>
-          <td class="paramname"><em>col</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned char&#160;</td>
-          <td class="paramname"><em>length</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned char&#160;</td>
-          <td class="paramname"><em>is_vertical</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1e86a9c9a89725780eb464f5c42eb784" name="a1e86a9c9a89725780eb464f5c42eb784"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e86a9c9a89725780eb464f5c42eb784">&#9670;&#160;</a></span>LcdEntryModeSet()</h2>
+<a id="adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" name="adbaeb94dbb0cd5ee4efa5a4a6a06f0c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2">&#9670;&#160;</a></span>LcdEntryModeSet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -614,13 +507,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void LcdEntryModeSet </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>s</em>&#160;</td>
         </tr>
         <tr>
@@ -640,24 +533,24 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00058">58</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00060">60</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_a1e86a9c9a89725780eb464f5c42eb784_cgraph.png" border="0" usemap="#alcd_8h_a1e86a9c9a89725780eb464f5c42eb784_cgraph" alt=""/></div>
-<map name="alcd_8h_a1e86a9c9a89725780eb464f5c42eb784_cgraph" id="alcd_8h_a1e86a9c9a89725780eb464f5c42eb784_cgraph">
+<div class="center"><img src="lcd_8h_adbaeb94dbb0cd5ee4efa5a4a6a06f0c2_cgraph.png" border="0" usemap="#alcd_8h_adbaeb94dbb0cd5ee4efa5a4a6a06f0c2_cgraph" alt=""/></div>
+<map name="alcd_8h_adbaeb94dbb0cd5ee4efa5a4a6a06f0c2_cgraph" id="alcd_8h_adbaeb94dbb0cd5ee4efa5a4a6a06f0c2_cgraph">
 <area shape="rect" title="Sets the entry mode of the LCD." alt="" coords="5,56,131,83"/>
 <area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="337,5,423,32"/>
 <area shape="poly" title=" " alt="" coords="124,53,178,41,321,22,322,27,179,47,125,58"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="179,56,278,83"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="179,56,278,83"/>
 <area shape="poly" title=" " alt="" coords="131,67,163,67,163,72,131,72"/>
-<area shape="rect" href="lcd_8c.html#aa2b64ca7fceac6ba52f4d3345acb5e69" title="Sets the rs flag to the given value." alt="" coords="189,107,268,133"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="189,107,268,133"/>
 <area shape="poly" title=" " alt="" coords="114,81,176,101,174,106,112,86"/>
 <area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="754,5,849,32"/>
 <area shape="poly" title=" " alt="" coords="424,16,739,16,739,21,424,21"/>
 <area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="897,31,950,57"/>
 <area shape="poly" title=" " alt="" coords="850,26,883,33,881,38,849,31"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="326,56,434,83"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="326,56,434,83"/>
 <area shape="poly" title=" " alt="" coords="279,67,311,67,311,72,279,72"/>
 <area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="482,56,574,83"/>
 <area shape="poly" title=" " alt="" coords="435,67,467,67,467,72,435,72"/>
@@ -670,12 +563,12 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_a1e86a9c9a89725780eb464f5c42eb784_icgraph.png" border="0" usemap="#alcd_8h_a1e86a9c9a89725780eb464f5c42eb784_icgraph" alt=""/></div>
-<map name="alcd_8h_a1e86a9c9a89725780eb464f5c42eb784_icgraph" id="alcd_8h_a1e86a9c9a89725780eb464f5c42eb784_icgraph">
+<div class="center"><img src="lcd_8h_adbaeb94dbb0cd5ee4efa5a4a6a06f0c2_icgraph.png" border="0" usemap="#alcd_8h_adbaeb94dbb0cd5ee4efa5a4a6a06f0c2_icgraph" alt=""/></div>
+<map name="alcd_8h_adbaeb94dbb0cd5ee4efa5a4a6a06f0c2_icgraph" id="alcd_8h_adbaeb94dbb0cd5ee4efa5a4a6a06f0c2_icgraph">
 <area shape="rect" title="Sets the entry mode of the LCD." alt="" coords="311,5,437,32"/>
 <area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="204,5,263,32"/>
 <area shape="poly" title=" " alt="" coords="296,21,264,21,264,16,296,16"/>
-<area shape="rect" href="main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="103,5,156,32"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="103,5,156,32"/>
 <area shape="poly" title=" " alt="" coords="188,21,156,21,156,16,188,16"/>
 <area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
@@ -684,8 +577,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a6d3f15072d85ed9eecadf4223f0bac1b" name="a6d3f15072d85ed9eecadf4223f0bac1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d3f15072d85ed9eecadf4223f0bac1b">&#9670;&#160;</a></span>LcdFunctionSet()</h2>
+<a id="a9b451fe57dbdfef32faf1d96b9d7dce4" name="a9b451fe57dbdfef32faf1d96b9d7dce4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b451fe57dbdfef32faf1d96b9d7dce4">&#9670;&#160;</a></span>LcdFunctionSet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -693,19 +586,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void LcdFunctionSet </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>dl</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>n</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>f</em>&#160;</td>
         </tr>
         <tr>
@@ -724,24 +617,24 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00096">96</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00098">98</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_a6d3f15072d85ed9eecadf4223f0bac1b_cgraph.png" border="0" usemap="#alcd_8h_a6d3f15072d85ed9eecadf4223f0bac1b_cgraph" alt=""/></div>
-<map name="alcd_8h_a6d3f15072d85ed9eecadf4223f0bac1b_cgraph" id="alcd_8h_a6d3f15072d85ed9eecadf4223f0bac1b_cgraph">
+<div class="center"><img src="lcd_8h_a9b451fe57dbdfef32faf1d96b9d7dce4_cgraph.png" border="0" usemap="#alcd_8h_a9b451fe57dbdfef32faf1d96b9d7dce4_cgraph" alt=""/></div>
+<map name="alcd_8h_a9b451fe57dbdfef32faf1d96b9d7dce4_cgraph" id="alcd_8h_a9b451fe57dbdfef32faf1d96b9d7dce4_cgraph">
 <area shape="rect" title=" " alt="" coords="5,56,118,83"/>
 <area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="324,5,410,32"/>
 <area shape="poly" title=" " alt="" coords="114,53,165,41,308,22,309,27,166,47,115,58"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="166,56,265,83"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="166,56,265,83"/>
 <area shape="poly" title=" " alt="" coords="118,67,150,67,150,72,118,72"/>
-<area shape="rect" href="lcd_8c.html#aa2b64ca7fceac6ba52f4d3345acb5e69" title="Sets the rs flag to the given value." alt="" coords="176,107,255,133"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="176,107,255,133"/>
 <area shape="poly" title=" " alt="" coords="105,81,162,100,160,105,104,86"/>
 <area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="741,5,836,32"/>
 <area shape="poly" title=" " alt="" coords="411,16,726,16,726,21,411,21"/>
 <area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="884,31,937,57"/>
 <area shape="poly" title=" " alt="" coords="837,26,870,33,868,38,836,31"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="313,56,421,83"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="313,56,421,83"/>
 <area shape="poly" title=" " alt="" coords="266,67,298,67,298,72,266,72"/>
 <area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="469,56,561,83"/>
 <area shape="poly" title=" " alt="" coords="422,67,454,67,454,72,422,72"/>
@@ -754,12 +647,12 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_a6d3f15072d85ed9eecadf4223f0bac1b_icgraph.png" border="0" usemap="#alcd_8h_a6d3f15072d85ed9eecadf4223f0bac1b_icgraph" alt=""/></div>
-<map name="alcd_8h_a6d3f15072d85ed9eecadf4223f0bac1b_icgraph" id="alcd_8h_a6d3f15072d85ed9eecadf4223f0bac1b_icgraph">
+<div class="center"><img src="lcd_8h_a9b451fe57dbdfef32faf1d96b9d7dce4_icgraph.png" border="0" usemap="#alcd_8h_a9b451fe57dbdfef32faf1d96b9d7dce4_icgraph" alt=""/></div>
+<map name="alcd_8h_a9b451fe57dbdfef32faf1d96b9d7dce4_icgraph" id="alcd_8h_a9b451fe57dbdfef32faf1d96b9d7dce4_icgraph">
 <area shape="rect" title=" " alt="" coords="311,5,424,32"/>
 <area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="204,5,263,32"/>
 <area shape="poly" title=" " alt="" coords="296,21,264,21,264,16,296,16"/>
-<area shape="rect" href="main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="103,5,156,32"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="103,5,156,32"/>
 <area shape="poly" title=" " alt="" coords="188,21,156,21,156,16,188,16"/>
 <area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
@@ -785,54 +678,60 @@ Here is the caller graph for this function:</div>
 
 <p>Initializes the LCD. </p>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00114">114</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00116">116</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lcd_8h_a61b541c799955fc6b4e6cf28628de9a1_cgraph.png" border="0" usemap="#alcd_8h_a61b541c799955fc6b4e6cf28628de9a1_cgraph" alt=""/></div>
 <map name="alcd_8h_a61b541c799955fc6b4e6cf28628de9a1_cgraph" id="alcd_8h_a61b541c799955fc6b4e6cf28628de9a1_cgraph">
-<area shape="rect" title="Initializes the LCD." alt="" coords="5,133,65,159"/>
-<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="294,209,380,235"/>
-<area shape="poly" title=" " alt="" coords="41,159,48,189,61,228,83,266,97,282,114,296,146,310,174,313,203,307,238,296,279,273,312,244,315,248,282,277,240,300,204,312,174,319,144,316,111,300,93,286,78,269,56,230,43,191,36,160"/>
-<area shape="rect" href="clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="298,57,375,83"/>
-<area shape="poly" title=" " alt="" coords="39,131,65,85,86,61,111,42,134,34,157,29,205,28,251,36,290,48,289,53,250,41,204,34,158,34,135,39,114,47,89,65,69,88,44,134"/>
-<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="118,57,234,83"/>
-<area shape="poly" title=" " alt="" coords="59,130,111,100,133,88,135,93,114,104,61,134"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="434,133,543,159"/>
-<area shape="poly" title=" " alt="" coords="37,131,46,105,60,73,82,42,111,17,145,4,173,5,203,11,239,17,316,20,349,26,388,42,413,59,436,78,471,119,467,122,432,82,410,63,385,47,347,31,315,25,239,22,202,16,173,10,146,10,114,22,86,45,65,76,51,107,42,133"/>
-<area shape="rect" href="lcd_8c.html#aa2b64ca7fceac6ba52f4d3345acb5e69" title="Sets the rs flag to the given value." alt="" coords="298,107,376,134"/>
-<area shape="poly" title=" " alt="" coords="65,141,282,123,282,128,65,146"/>
-<area shape="rect" href="lcd_8c.html#ab933996c707c767ce7c6933227bc5bd0" title="Controls the display, cursor, and blinking." alt="" coords="113,209,239,235"/>
-<area shape="poly" title=" " alt="" coords="56,157,114,194,125,200,122,205,111,199,53,162"/>
-<area shape="rect" href="lcd_8c.html#a1e86a9c9a89725780eb464f5c42eb784" title="Sets the entry mode of the LCD." alt="" coords="113,259,239,286"/>
-<area shape="poly" title=" " alt="" coords="46,158,73,201,92,224,114,245,121,250,117,254,111,249,88,228,68,204,41,161"/>
-<area shape="rect" href="lcd_8c.html#a6d3f15072d85ed9eecadf4223f0bac1b" title=" " alt="" coords="120,158,232,185"/>
-<area shape="poly" title=" " alt="" coords="66,149,105,156,104,161,65,154"/>
-<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="862,183,958,210"/>
-<area shape="poly" title=" " alt="" coords="380,217,847,197,847,202,381,223"/>
-<area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="1006,158,1058,185"/>
-<area shape="poly" title=" " alt="" coords="958,184,990,177,991,182,959,189"/>
-<area shape="poly" title=" " alt="" coords="375,64,458,62,569,66,630,72,693,82,756,97,815,118,856,142,888,171,885,175,853,147,813,123,754,103,692,87,630,77,568,71,458,67,376,70"/>
-<area shape="poly" title=" " alt="" coords="234,67,282,67,282,73,234,73"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="287,158,386,185"/>
-<area shape="poly" title=" " alt="" coords="197,82,288,144,296,148,293,153,286,148,194,86"/>
-<area shape="poly" title=" " alt="" coords="222,81,284,101,282,106,220,87"/>
-<area shape="poly" title=" " alt="" coords="386,160,419,155,419,160,387,166"/>
-<area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="591,133,682,159"/>
-<area shape="poly" title=" " alt="" coords="543,143,575,143,575,149,543,149"/>
-<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="730,133,814,159"/>
-<area shape="poly" title=" " alt="" coords="682,143,714,143,714,149,682,149"/>
-<area shape="poly" title=" " alt="" coords="812,157,858,175,856,180,810,162"/>
-<area shape="poly" title=" " alt="" coords="815,147,991,165,990,170,815,153"/>
-<area shape="poly" title=" " alt="" coords="239,219,278,219,278,225,239,225"/>
-<area shape="poly" title=" " alt="" coords="220,205,276,187,278,192,222,211"/>
-<area shape="poly" title=" " alt="" coords="217,206,237,194,252,182,261,170,271,158,285,144,291,140,294,144,289,148,275,161,265,173,256,186,241,199,220,210"/>
-<area shape="poly" title=" " alt="" coords="220,256,278,238,280,243,222,261"/>
-<area shape="poly" title=" " alt="" coords="217,256,237,245,252,233,261,221,271,208,285,195,291,191,294,195,289,199,275,212,265,224,256,236,241,250,220,261"/>
-<area shape="poly" title=" " alt="" coords="221,257,237,245,254,221,261,197,268,171,285,144,288,142,291,146,289,148,272,173,266,198,259,223,241,249,224,261"/>
-<area shape="poly" title=" " alt="" coords="222,183,280,201,278,206,220,188"/>
-<area shape="poly" title=" " alt="" coords="232,169,271,169,271,174,232,174"/>
-<area shape="poly" title=" " alt="" coords="220,155,282,135,284,140,222,160"/>
+<area shape="rect" title="Initializes the LCD." alt="" coords="5,214,65,241"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="294,88,380,114"/>
+<area shape="poly" title=" " alt="" coords="34,214,37,175,48,122,58,94,71,67,89,43,111,23,144,6,173,4,204,10,240,23,282,46,315,75,312,79,279,50,238,28,203,15,173,9,145,12,114,27,93,46,76,70,63,96,54,123,43,175,39,214"/>
+<area shape="rect" href="clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="298,290,375,317"/>
+<area shape="poly" title=" " alt="" coords="66,232,283,288,282,293,64,238"/>
+<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="118,189,234,216"/>
+<area shape="poly" title=" " alt="" coords="65,220,102,213,103,218,66,225"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="434,341,543,368"/>
+<area shape="poly" title=" " alt="" coords="53,239,80,262,114,283,192,312,275,332,353,344,419,350,419,355,352,349,274,337,191,318,111,287,77,266,49,244"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="298,189,376,216"/>
+<area shape="poly" title=" " alt="" coords="65,227,143,230,239,225,282,216,283,222,239,230,143,236,65,233"/>
+<area shape="rect" href="lcd_8c.html#aca04f0c025afbc86a0fedc553f3a8ba4" title="Controls the display, cursor, and blinking." alt="" coords="113,88,239,114"/>
+<area shape="poly" title=" " alt="" coords="41,213,68,170,88,146,111,124,117,120,121,124,114,128,92,149,73,173,46,215"/>
+<area shape="rect" href="lcd_8c.html#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" title="Sets the entry mode of the LCD." alt="" coords="113,138,239,165"/>
+<area shape="poly" title=" " alt="" coords="53,212,111,175,122,169,125,174,114,179,56,216"/>
+<area shape="rect" href="lcd_8c.html#a9b451fe57dbdfef32faf1d96b9d7dce4" title=" " alt="" coords="120,37,232,64"/>
+<area shape="poly" title=" " alt="" coords="37,213,61,148,82,108,111,74,115,70,119,74,115,78,86,111,65,150,42,215"/>
+<area shape="rect" href="ports_8c.html#a03c4992f00f155be0425086ad67578f2" title="Initiates Port A." alt="" coords="453,392,524,418"/>
+<area shape="poly" title=" " alt="" coords="45,240,70,285,90,309,114,330,154,351,197,368,285,391,369,401,438,404,437,409,369,406,284,396,195,373,152,356,111,334,86,313,66,288,40,243"/>
+<area shape="rect" href="ports_8c.html#aaebad24f567e2e1f53e6252fd325371a" title="Initiates Port B." alt="" coords="601,442,672,469"/>
+<area shape="poly" title=" " alt="" coords="41,241,48,272,61,312,83,353,97,372,114,387,172,421,234,444,300,460,366,468,430,471,490,470,585,461,586,467,490,475,430,477,366,474,299,465,233,450,169,425,111,391,93,375,78,356,56,314,43,273,36,242"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="862,290,958,317"/>
+<area shape="poly" title=" " alt="" coords="378,112,856,282,854,287,376,118"/>
+<area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="1006,366,1058,393"/>
+<area shape="poly" title=" " alt="" coords="935,315,998,356,995,360,932,320"/>
+<area shape="poly" title=" " alt="" coords="376,301,847,301,847,306,376,306"/>
+<area shape="poly" title=" " alt="" coords="200,214,302,279,300,284,197,218"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="287,138,386,165"/>
+<area shape="poly" title=" " alt="" coords="220,186,276,168,278,173,222,191"/>
+<area shape="poly" title=" " alt="" coords="234,200,282,200,282,205,234,205"/>
+<area shape="poly" title=" " alt="" coords="373,164,388,175,420,212,445,253,480,325,475,328,441,255,415,215,385,179,369,168"/>
+<area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="591,341,682,368"/>
+<area shape="poly" title=" " alt="" coords="543,352,575,352,575,357,543,357"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="730,341,814,368"/>
+<area shape="poly" title=" " alt="" coords="682,352,714,352,714,357,682,357"/>
+<area shape="poly" title=" " alt="" coords="810,338,856,321,858,326,812,343"/>
+<area shape="poly" title=" " alt="" coords="815,356,991,373,990,378,815,361"/>
+<area shape="poly" title=" " alt="" coords="239,98,278,98,278,104,239,104"/>
+<area shape="poly" title=" " alt="" coords="222,113,278,131,276,136,220,118"/>
+<area shape="poly" title=" " alt="" coords="220,113,241,124,256,137,265,150,275,162,289,175,294,179,291,183,285,179,271,166,261,153,252,141,237,129,217,117"/>
+<area shape="poly" title=" " alt="" coords="220,135,278,117,280,122,222,140"/>
+<area shape="poly" title=" " alt="" coords="239,149,271,149,271,154,239,154"/>
+<area shape="poly" title=" " alt="" coords="222,163,284,183,282,188,220,168"/>
+<area shape="poly" title=" " alt="" coords="222,62,280,80,278,85,220,67"/>
+<area shape="poly" title=" " alt="" coords="220,62,241,74,256,87,265,99,275,111,289,124,294,128,291,132,285,128,271,115,261,102,252,90,237,78,217,67"/>
+<area shape="poly" title=" " alt="" coords="224,62,241,74,259,100,266,125,272,150,289,175,291,178,288,181,285,179,268,152,261,126,254,102,237,78,221,66"/>
+<area shape="poly" title=" " alt="" coords="524,401,990,379,991,384,525,406"/>
+<area shape="poly" title=" " alt="" coords="672,455,728,455,800,451,879,441,957,421,999,400,1002,404,959,426,880,446,800,456,728,460,672,460"/>
 </map>
 </div>
 <div class="dynheader">
@@ -841,7 +740,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="lcd_8h_a61b541c799955fc6b4e6cf28628de9a1_icgraph.png" border="0" usemap="#alcd_8h_a61b541c799955fc6b4e6cf28628de9a1_icgraph" alt=""/></div>
 <map name="alcd_8h_a61b541c799955fc6b4e6cf28628de9a1_icgraph" id="alcd_8h_a61b541c799955fc6b4e6cf28628de9a1_icgraph">
 <area shape="rect" title="Initializes the LCD." alt="" coords="204,5,263,32"/>
-<area shape="rect" href="main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="103,5,156,32"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="103,5,156,32"/>
 <area shape="poly" title=" " alt="" coords="188,21,156,21,156,16,188,16"/>
 <area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
@@ -850,8 +749,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ab1c2efe3f6552fcef08eeba3904d9376" name="ab1c2efe3f6552fcef08eeba3904d9376"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1c2efe3f6552fcef08eeba3904d9376">&#9670;&#160;</a></span>LcdPrintChar()</h2>
+<a id="a37450f91c7ae032252ea94d7c92efde2" name="a37450f91c7ae032252ea94d7c92efde2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37450f91c7ae032252ea94d7c92efde2">&#9670;&#160;</a></span>LcdPrintChar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -865,8 +764,8 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned char&#160;</td>
-          <td class="paramname"><em>cursorShift</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>cursorTrack</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -880,17 +779,17 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ch</td><td>character to be printed </td></tr>
-    <tr><td class="paramname">cursorShift</td><td>1 -&gt; shift cursor, 0 -&gt; don't shift cursor </td></tr>
+    <tr><td class="paramname">cursorTrack</td><td>1 -&gt; Track cursor, 0 -&gt; don't Track cursor </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00210">210</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00215">215</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_ab1c2efe3f6552fcef08eeba3904d9376_cgraph.png" border="0" usemap="#alcd_8h_ab1c2efe3f6552fcef08eeba3904d9376_cgraph" alt=""/></div>
-<map name="alcd_8h_ab1c2efe3f6552fcef08eeba3904d9376_cgraph" id="alcd_8h_ab1c2efe3f6552fcef08eeba3904d9376_cgraph">
+<div class="center"><img src="lcd_8h_a37450f91c7ae032252ea94d7c92efde2_cgraph.png" border="0" usemap="#alcd_8h_a37450f91c7ae032252ea94d7c92efde2_cgraph" alt=""/></div>
+<map name="alcd_8h_a37450f91c7ae032252ea94d7c92efde2_cgraph" id="alcd_8h_a37450f91c7ae032252ea94d7c92efde2_cgraph">
 <area shape="rect" title="Prints a character to the LCD." alt="" coords="5,99,102,125"/>
 <area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="868,73,954,100"/>
 <area shape="poly" title=" " alt="" coords="65,97,100,64,123,47,149,34,225,10,288,3,434,8,616,8,685,14,753,28,814,46,864,65,862,70,812,51,751,33,684,19,616,13,434,13,288,8,226,15,151,39,126,52,103,68,69,101"/>
@@ -898,23 +797,23 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="101,96,164,77,165,82,103,101"/>
 <area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="354,99,516,125"/>
 <area shape="poly" title=" " alt="" coords="102,109,338,109,338,115,102,115"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="861,124,960,151"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="861,124,960,151"/>
 <area shape="poly" title=" " alt="" coords="102,120,250,146,341,156,434,160,616,160,738,155,845,144,846,149,738,160,616,165,434,165,341,161,249,151,101,125"/>
-<area shape="rect" href="lcd_8c.html#aa2b64ca7fceac6ba52f4d3345acb5e69" title="Sets the rs flag to the given value." alt="" coords="872,175,950,201"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="872,175,950,201"/>
 <area shape="poly" title=" " alt="" coords="79,124,112,142,151,158,228,183,290,200,353,208,434,211,616,211,745,205,856,193,856,198,746,210,616,216,434,216,352,214,289,205,227,188,149,163,110,146,77,128"/>
 <area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1436,73,1532,100"/>
 <area shape="poly" title=" " alt="" coords="954,84,1421,84,1421,89,954,89"/>
 <area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="1580,99,1632,125"/>
 <area shape="poly" title=" " alt="" coords="1533,94,1565,101,1564,106,1532,99"/>
 <area shape="poly" title=" " alt="" coords="286,73,363,92,362,97,285,78"/>
-<area shape="rect" href="lcd_8c.html#a1560ddb5bbf01143c0afe47bbc914b0e" title="Sets the cursor position." alt="" coords="564,99,665,125"/>
+<area shape="rect" href="lcd_8c.html#a8de82b22879092baf8383713ecc708e9" title="Sets the cursor position." alt="" coords="564,99,665,125"/>
 <area shape="poly" title=" " alt="" coords="517,109,548,109,548,115,517,115"/>
-<area shape="rect" href="lcd_8c.html#ae368e9d14a294f0c32c7028b377f84e6" title="Sets the DDRAM address (cursor position)" alt="" coords="713,99,813,125"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="713,99,813,125"/>
 <area shape="poly" title=" " alt="" coords="665,109,697,109,697,115,665,115"/>
 <area shape="poly" title=" " alt="" coords="813,101,852,94,853,99,814,106"/>
 <area shape="poly" title=" " alt="" coords="814,118,846,124,845,129,813,123"/>
 <area shape="poly" title=" " alt="" coords="792,124,871,165,868,170,790,128"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="1008,124,1117,151"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1008,124,1117,151"/>
 <area shape="poly" title=" " alt="" coords="961,135,993,135,993,140,961,140"/>
 <area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="1165,124,1256,151"/>
 <area shape="poly" title=" " alt="" coords="1117,135,1149,135,1149,140,1117,140"/>
@@ -927,22 +826,35 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_ab1c2efe3f6552fcef08eeba3904d9376_icgraph.png" border="0" usemap="#alcd_8h_ab1c2efe3f6552fcef08eeba3904d9376_icgraph" alt=""/></div>
-<map name="alcd_8h_ab1c2efe3f6552fcef08eeba3904d9376_icgraph" id="alcd_8h_ab1c2efe3f6552fcef08eeba3904d9376_icgraph">
-<area shape="rect" title="Prints a character to the LCD." alt="" coords="260,31,356,57"/>
-<area shape="rect" href="lcd_8c.html#a3dbe526a93440b9586f3f5f270c335b1" title="Prints a character to the LCD at a given position." alt="" coords="103,5,212,32"/>
-<area shape="poly" title=" " alt="" coords="244,36,212,30,213,25,245,31"/>
-<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="106,56,209,83"/>
-<area shape="poly" title=" " alt="" coords="245,57,210,63,209,58,244,52"/>
+<div class="center"><img src="lcd_8h_a37450f91c7ae032252ea94d7c92efde2_icgraph.png" border="0" usemap="#alcd_8h_a37450f91c7ae032252ea94d7c92efde2_icgraph" alt=""/></div>
+<map name="alcd_8h_a37450f91c7ae032252ea94d7c92efde2_icgraph" id="alcd_8h_a37450f91c7ae032252ea94d7c92efde2_icgraph">
+<area shape="rect" title="Prints a character to the LCD." alt="" coords="558,81,654,108"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="400,5,510,32"/>
+<area shape="poly" title=" " alt="" coords="563,76,482,35,485,30,565,71"/>
+<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="403,107,507,133"/>
+<area shape="poly" title=" " alt="" coords="543,108,508,114,507,109,542,103"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,56,348,83"/>
+<area shape="poly" title=" " alt="" coords="542,92,349,76,349,71,542,87"/>
+<area shape="rect" href="unit-test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="406,157,504,184"/>
+<area shape="poly" title=" " alt="" coords="567,118,511,148,488,159,485,154,508,143,565,113"/>
+<area shape="poly" title=" " alt="" coords="395,104,337,86,339,81,396,99"/>
+<area shape="rect" href="unit-test_8c.html#a02e71048dc3a569b41b257dec3b00cf0" title=" " alt="" coords="240,107,345,133"/>
+<area shape="poly" title=" " alt="" coords="388,123,346,123,346,117,388,117"/>
+<area shape="rect" href="unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,157,352,184"/>
+<area shape="poly" title=" " alt="" coords="396,141,339,159,337,154,395,136"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,56,174,83"/>
+<area shape="poly" title=" " alt="" coords="221,72,174,72,174,67,221,67"/>
 <area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
-<area shape="poly" title=" " alt="" coords="90,72,55,72,55,67,90,67"/>
+<area shape="poly" title=" " alt="" coords="99,72,55,72,55,67,99,67"/>
+<area shape="rect" href="unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,157,185,184"/>
+<area shape="poly" title=" " alt="" coords="218,173,185,173,185,168,218,168"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a3dbe526a93440b9586f3f5f270c335b1" name="a3dbe526a93440b9586f3f5f270c335b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3dbe526a93440b9586f3f5f270c335b1">&#9670;&#160;</a></span>LcdPrintCharAt()</h2>
+<a id="a85868d62c8073baad86aa03e88ac1001" name="a85868d62c8073baad86aa03e88ac1001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85868d62c8073baad86aa03e88ac1001">&#9670;&#160;</a></span>LcdPrintCharAt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -956,13 +868,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>row</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>col</em>&#160;</td>
         </tr>
         <tr>
@@ -983,16 +895,16 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00225">225</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00230">230</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_a3dbe526a93440b9586f3f5f270c335b1_cgraph.png" border="0" usemap="#alcd_8h_a3dbe526a93440b9586f3f5f270c335b1_cgraph" alt=""/></div>
-<map name="alcd_8h_a3dbe526a93440b9586f3f5f270c335b1_cgraph" id="alcd_8h_a3dbe526a93440b9586f3f5f270c335b1_cgraph">
+<div class="center"><img src="lcd_8h_a85868d62c8073baad86aa03e88ac1001_cgraph.png" border="0" usemap="#alcd_8h_a85868d62c8073baad86aa03e88ac1001_cgraph" alt=""/></div>
+<map name="alcd_8h_a85868d62c8073baad86aa03e88ac1001_cgraph" id="alcd_8h_a85868d62c8073baad86aa03e88ac1001_cgraph">
 <area shape="rect" title="Prints a character to the LCD at a given position." alt="" coords="5,17,115,44"/>
-<area shape="rect" href="lcd_8c.html#ab1c2efe3f6552fcef08eeba3904d9376" title="Prints a character to the LCD." alt="" coords="163,68,259,95"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="163,68,259,95"/>
 <area shape="poly" title=" " alt="" coords="103,42,155,60,154,65,101,47"/>
-<area shape="rect" href="lcd_8c.html#a1560ddb5bbf01143c0afe47bbc914b0e" title="Sets the cursor position." alt="" coords="722,61,822,88"/>
+<area shape="rect" href="lcd_8c.html#a8de82b22879092baf8383713ecc708e9" title="Sets the cursor position." alt="" coords="722,61,822,88"/>
 <area shape="poly" title=" " alt="" coords="115,26,219,23,358,24,515,30,674,47,712,54,711,59,673,52,515,36,358,29,219,28,115,31"/>
 <area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1025,169,1111,196"/>
 <area shape="poly" title=" " alt="" coords="225,93,259,129,282,148,308,163,383,192,445,204,509,206,591,205,773,205,900,199,1009,188,1010,193,900,205,773,211,591,211,509,212,444,210,382,197,306,168,279,152,256,133,221,97"/>
@@ -1000,9 +912,9 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="260,86,293,90,292,96,259,91"/>
 <area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="511,61,674,88"/>
 <area shape="poly" title=" " alt="" coords="259,78,496,74,496,79,259,83"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="1018,119,1118,145"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1018,119,1118,145"/>
 <area shape="poly" title=" " alt="" coords="234,93,267,113,308,129,385,149,447,156,591,155,773,155,895,149,1003,138,1003,143,896,154,773,160,591,160,447,161,384,154,306,135,265,117,231,97"/>
-<area shape="rect" href="lcd_8c.html#aa2b64ca7fceac6ba52f4d3345acb5e69" title="Sets the rs flag to the given value." alt="" coords="1029,43,1107,69"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1029,43,1107,69"/>
 <area shape="poly" title=" " alt="" coords="253,65,317,46,401,26,495,9,591,3,773,3,839,6,904,15,1014,39,1013,44,903,20,838,12,773,8,591,8,496,15,402,31,319,51,254,70"/>
 <area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1594,169,1689,196"/>
 <area shape="poly" title=" " alt="" coords="1112,180,1578,180,1578,185,1112,185"/>
@@ -1010,12 +922,12 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="1689,170,1721,163,1722,168,1690,175"/>
 <area shape="poly" title=" " alt="" coords="463,92,495,87,496,92,464,97"/>
 <area shape="poly" title=" " alt="" coords="674,72,706,72,706,77,674,77"/>
-<area shape="rect" href="lcd_8c.html#ae368e9d14a294f0c32c7028b377f84e6" title="Sets the DDRAM address (cursor position)" alt="" coords="870,73,970,100"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="870,73,970,100"/>
 <area shape="poly" title=" " alt="" coords="823,76,855,79,854,84,822,81"/>
 <area shape="poly" title=" " alt="" coords="940,98,1020,155,1027,160,1024,164,1017,160,937,103"/>
 <area shape="poly" title=" " alt="" coords="967,98,1008,111,1007,116,965,103"/>
 <area shape="poly" title=" " alt="" coords="970,74,1013,65,1014,70,971,79"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="1166,119,1274,145"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1166,119,1274,145"/>
 <area shape="poly" title=" " alt="" coords="1118,129,1150,129,1150,135,1118,135"/>
 <area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="1322,119,1413,145"/>
 <area shape="poly" title=" " alt="" coords="1274,129,1306,129,1306,135,1274,135"/>
@@ -1052,14 +964,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00230">230</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00235">235</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lcd_8h_a6ba64316f53c5a71031db621b3fe435e_cgraph.png" border="0" usemap="#alcd_8h_a6ba64316f53c5a71031db621b3fe435e_cgraph" alt=""/></div>
 <map name="alcd_8h_a6ba64316f53c5a71031db621b3fe435e_cgraph" id="alcd_8h_a6ba64316f53c5a71031db621b3fe435e_cgraph">
 <area shape="rect" title="Prints a string to the LCD." alt="" coords="5,124,109,151"/>
-<area shape="rect" href="lcd_8c.html#ab1c2efe3f6552fcef08eeba3904d9376" title="Prints a character to the LCD." alt="" coords="157,99,253,125"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="157,99,253,125"/>
 <area shape="poly" title=" " alt="" coords="109,126,141,120,142,126,110,131"/>
 <area shape="rect" href="helpers_8c.html#ad7f3f83d057abbbc219fb761d2058708" title="Gets the length of a string." alt="" coords="177,149,233,176"/>
 <area shape="poly" title=" " alt="" coords="110,144,162,153,161,158,109,149"/>
@@ -1069,23 +981,23 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="253,96,315,77,317,82,254,101"/>
 <area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="505,99,668,125"/>
 <area shape="poly" title=" " alt="" coords="253,109,490,109,490,115,253,115"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="1012,124,1112,151"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1012,124,1112,151"/>
 <area shape="poly" title=" " alt="" coords="254,120,401,146,493,156,585,160,767,160,889,155,997,144,997,149,890,160,767,165,585,165,492,161,400,151,253,125"/>
-<area shape="rect" href="lcd_8c.html#aa2b64ca7fceac6ba52f4d3345acb5e69" title="Sets the rs flag to the given value." alt="" coords="1023,175,1101,201"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1023,175,1101,201"/>
 <area shape="poly" title=" " alt="" coords="233,124,302,158,379,183,441,200,504,208,585,211,767,211,896,205,1007,193,1007,198,897,210,767,216,585,216,503,214,440,205,378,188,300,163,230,128"/>
 <area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1588,73,1683,100"/>
 <area shape="poly" title=" " alt="" coords="1106,84,1572,84,1572,89,1106,89"/>
 <area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="1731,99,1783,125"/>
 <area shape="poly" title=" " alt="" coords="1684,94,1716,101,1715,106,1683,99"/>
 <area shape="poly" title=" " alt="" coords="438,73,515,92,513,97,436,78"/>
-<area shape="rect" href="lcd_8c.html#a1560ddb5bbf01143c0afe47bbc914b0e" title="Sets the cursor position." alt="" coords="716,99,816,125"/>
+<area shape="rect" href="lcd_8c.html#a8de82b22879092baf8383713ecc708e9" title="Sets the cursor position." alt="" coords="716,99,816,125"/>
 <area shape="poly" title=" " alt="" coords="668,109,700,109,700,115,668,115"/>
-<area shape="rect" href="lcd_8c.html#ae368e9d14a294f0c32c7028b377f84e6" title="Sets the DDRAM address (cursor position)" alt="" coords="864,99,964,125"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="864,99,964,125"/>
 <area shape="poly" title=" " alt="" coords="816,109,848,109,848,115,816,115"/>
 <area shape="poly" title=" " alt="" coords="964,101,1003,94,1004,99,965,106"/>
 <area shape="poly" title=" " alt="" coords="965,118,997,124,997,129,964,123"/>
 <area shape="poly" title=" " alt="" coords="943,124,1022,165,1019,170,941,128"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="1160,124,1268,151"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1160,124,1268,151"/>
 <area shape="poly" title=" " alt="" coords="1112,135,1144,135,1144,140,1112,140"/>
 <area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="1316,124,1407,151"/>
 <area shape="poly" title=" " alt="" coords="1268,135,1300,135,1300,140,1268,140"/>
@@ -1100,9 +1012,19 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lcd_8h_a6ba64316f53c5a71031db621b3fe435e_icgraph.png" border="0" usemap="#alcd_8h_a6ba64316f53c5a71031db621b3fe435e_icgraph" alt=""/></div>
 <map name="alcd_8h_a6ba64316f53c5a71031db621b3fe435e_icgraph" id="alcd_8h_a6ba64316f53c5a71031db621b3fe435e_icgraph">
-<area shape="rect" title="Prints a string to the LCD." alt="" coords="103,5,206,32"/>
+<area shape="rect" title="Prints a string to the LCD." alt="" coords="400,56,504,83"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,5,348,32"/>
+<area shape="poly" title=" " alt="" coords="392,53,336,35,338,30,394,48"/>
+<area shape="rect" href="unit-test_8c.html#a02e71048dc3a569b41b257dec3b00cf0" title=" " alt="" coords="240,56,345,83"/>
+<area shape="poly" title=" " alt="" coords="385,72,346,72,346,67,385,67"/>
+<area shape="rect" href="unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,107,352,133"/>
+<area shape="poly" title=" " alt="" coords="394,91,338,109,336,104,392,85"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,5,174,32"/>
+<area shape="poly" title=" " alt="" coords="221,21,174,21,174,16,221,16"/>
 <area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="poly" title=" " alt="" coords="99,21,55,21,55,16,99,16"/>
+<area shape="rect" href="unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,107,185,133"/>
+<area shape="poly" title=" " alt="" coords="218,123,185,123,185,117,218,117"/>
 </map>
 </div>
 
@@ -1125,7 +1047,7 @@ Here is the caller graph for this function:</div>
 
 <p>Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns. </p>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00012">12</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00014">14</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1146,52 +1068,70 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lcd_8h_a07e30a245315510382ca9d5e1b508de3_icgraph.png" border="0" usemap="#alcd_8h_a07e30a245315510382ca9d5e1b508de3_icgraph" alt=""/></div>
 <map name="alcd_8h_a07e30a245315510382ca9d5e1b508de3_icgraph" id="alcd_8h_a07e30a245315510382ca9d5e1b508de3_icgraph">
-<area shape="rect" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="1445,83,1537,109"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="1289,83,1397,109"/>
-<area shape="poly" title=" " alt="" coords="1430,99,1398,99,1398,93,1430,93"/>
-<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="840,87,899,113"/>
-<area shape="poly" title=" " alt="" coords="1303,78,1238,48,1154,21,1108,12,1060,8,1014,11,968,22,942,35,918,53,883,88,879,85,915,49,939,31,966,17,1013,6,1060,3,1108,7,1155,16,1240,43,1305,73"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="1142,184,1241,211"/>
-<area shape="poly" title=" " alt="" coords="1311,120,1214,186,1211,181,1308,116"/>
-<area shape="rect" href="main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="456,115,509,141"/>
-<area shape="poly" title=" " alt="" coords="824,106,510,129,509,123,824,100"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,184,55,211"/>
-<area shape="poly" title=" " alt="" coords="440,134,291,151,103,181,56,193,54,188,102,176,290,146,440,129"/>
-<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="973,184,1088,211"/>
-<area shape="poly" title=" " alt="" coords="1126,200,1088,200,1088,195,1126,195"/>
-<area shape="rect" href="lcd_8c.html#a09b8fcddedb13ac22fa8cfc4dca9c78f" title="Sets the LCD cursor position." alt="" coords="977,336,1084,363"/>
-<area shape="poly" title=" " alt="" coords="1178,226,1144,276,1121,303,1095,326,1075,338,1073,333,1092,322,1117,299,1140,273,1173,223"/>
-<area shape="rect" href="lcd_8c.html#ab933996c707c767ce7c6933227bc5bd0" title="Controls the display, cursor, and blinking." alt="" coords="967,32,1094,59"/>
-<area shape="poly" title=" " alt="" coords="1173,172,1140,122,1117,96,1092,73,1073,61,1075,57,1095,68,1121,92,1144,119,1178,169"/>
-<area shape="rect" href="lcd_8c.html#a1e86a9c9a89725780eb464f5c42eb784" title="Sets the entry mode of the LCD." alt="" coords="968,83,1093,109"/>
-<area shape="poly" title=" " alt="" coords="1163,176,1130,149,1092,124,1069,112,1072,107,1095,119,1133,145,1166,172"/>
-<area shape="rect" href="lcd_8c.html#a6d3f15072d85ed9eecadf4223f0bac1b" title=" " alt="" coords="974,133,1087,160"/>
-<area shape="poly" title=" " alt="" coords="1131,181,1075,163,1076,158,1133,176"/>
-<area shape="rect" href="lcd_8c.html#ab1c2efe3f6552fcef08eeba3904d9376" title="Prints a character to the LCD." alt="" coords="260,285,356,312"/>
-<area shape="poly" title=" " alt="" coords="1129,217,1094,225,983,245,871,251,689,251,596,255,504,265,357,291,356,286,504,260,596,249,688,245,870,245,982,239,1093,220,1128,212"/>
-<area shape="rect" href="lcd_8c.html#aad68360b11370fa86fcd068004ef903f" title="Resets cursor to original position." alt="" coords="973,387,1088,413"/>
-<area shape="poly" title=" " alt="" coords="1184,226,1152,300,1127,341,1095,377,1078,388,1075,384,1092,373,1123,338,1148,298,1179,224"/>
-<area shape="rect" href="lcd_8c.html#ae368e9d14a294f0c32c7028b377f84e6" title="Sets the DDRAM address (cursor position)" alt="" coords="980,285,1081,312"/>
-<area shape="poly" title=" " alt="" coords="1162,222,1095,269,1062,287,1059,282,1092,264,1159,218"/>
-<area shape="poly" title=" " alt="" coords="976,180,966,174,921,144,885,116,888,112,924,140,969,170,979,175"/>
-<area shape="poly" title=" " alt="" coords="957,200,691,200,307,200,55,200,55,195,307,195,691,195,957,195"/>
-<area shape="poly" title=" " alt="" coords="975,67,900,92,898,87,974,62"/>
-<area shape="poly" title=" " alt="" coords="952,100,899,102,899,97,952,95"/>
-<area shape="poly" title=" " alt="" coords="967,131,899,111,900,106,968,126"/>
-<area shape="rect" href="lcd_8c.html#a3dbe526a93440b9586f3f5f270c335b1" title="Prints a character to the LCD at a given position." alt="" coords="103,336,212,363"/>
-<area shape="poly" title=" " alt="" coords="253,320,200,338,199,333,251,315"/>
-<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="106,260,209,287"/>
-<area shape="poly" title=" " alt="" coords="244,291,209,285,210,279,245,285"/>
-<area shape="poly" title=" " alt="" coords="119,254,53,213,55,209,122,249"/>
-<area shape="rect" href="lcd_8c.html#a1560ddb5bbf01143c0afe47bbc914b0e" title="Sets the cursor position." alt="" coords="819,311,919,337"/>
-<area shape="poly" title=" " alt="" coords="966,311,920,319,919,313,965,306"/>
-<area shape="poly" title=" " alt="" coords="806,344,772,352,669,370,589,379,508,381,404,377,302,369,212,359,213,354,302,364,404,372,508,376,588,374,669,365,770,347,805,339"/>
-<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="609,311,771,337"/>
-<area shape="poly" title=" " alt="" coords="803,327,772,327,772,321,803,321"/>
-<area shape="poly" title=" " alt="" coords="593,320,357,304,357,299,593,315"/>
-<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="404,336,561,363"/>
-<area shape="poly" title=" " alt="" coords="594,338,562,342,561,337,593,333"/>
-<area shape="poly" title=" " alt="" coords="418,334,356,315,357,310,420,328"/>
+<area shape="rect" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="1743,82,1834,109"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1587,82,1695,109"/>
+<area shape="poly" title=" " alt="" coords="1727,98,1695,98,1695,93,1727,93"/>
+<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="1137,82,1197,109"/>
+<area shape="poly" title=" " alt="" coords="1600,77,1536,48,1451,21,1405,12,1358,8,1311,11,1266,22,1240,34,1217,50,1181,84,1178,80,1213,46,1237,29,1264,17,1310,6,1358,3,1406,7,1453,16,1538,43,1602,72"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1439,183,1539,210"/>
+<area shape="poly" title=" " alt="" coords="1608,120,1512,185,1509,181,1605,115"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="754,82,807,109"/>
+<area shape="poly" title=" " alt="" coords="1122,98,807,98,807,93,1122,93"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,143,55,170"/>
+<area shape="poly" title=" " alt="" coords="738,98,456,98,291,98,224,104,158,117,56,150,54,144,156,112,223,98,291,93,456,93,738,93"/>
+<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="1271,411,1386,438"/>
+<area shape="poly" title=" " alt="" coords="1478,225,1443,293,1393,369,1349,413,1345,409,1389,366,1439,290,1473,223"/>
+<area shape="rect" href="lcd_8c.html#a27164e4aa24d46318deab3dd42658978" title="Sets the LCD cursor position." alt="" coords="1275,133,1381,159"/>
+<area shape="poly" title=" " alt="" coords="1429,180,1372,162,1374,157,1430,175"/>
+<area shape="rect" href="lcd_8c.html#aca04f0c025afbc86a0fedc553f3a8ba4" title="Controls the display, cursor, and blinking." alt="" coords="1265,82,1391,109"/>
+<area shape="poly" title=" " alt="" coords="1460,175,1428,148,1390,123,1367,112,1369,107,1393,118,1431,144,1464,171"/>
+<area shape="rect" href="lcd_8c.html#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" title="Sets the entry mode of the LCD." alt="" coords="1266,234,1391,261"/>
+<area shape="poly" title=" " alt="" coords="1430,218,1374,236,1372,231,1429,213"/>
+<area shape="rect" href="lcd_8c.html#a9b451fe57dbdfef32faf1d96b9d7dce4" title=" " alt="" coords="1272,31,1384,58"/>
+<area shape="poly" title=" " alt="" coords="1471,171,1437,121,1415,95,1390,72,1370,61,1373,56,1393,68,1419,91,1442,118,1475,168"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="558,285,654,311"/>
+<area shape="poly" title=" " alt="" coords="1478,225,1445,278,1421,304,1393,325,1362,341,1335,351,1285,357,1168,351,986,351,843,347,702,326,653,314,654,309,702,321,844,341,986,346,1168,346,1285,352,1333,345,1360,336,1390,321,1417,300,1441,275,1473,222"/>
+<area shape="rect" href="lcd_8c.html#aad68360b11370fa86fcd068004ef903f" title="Resets cursor to original position." alt="" coords="1271,183,1385,210"/>
+<area shape="poly" title=" " alt="" coords="1424,199,1386,199,1386,194,1424,194"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1278,285,1378,311"/>
+<area shape="poly" title=" " alt="" coords="1464,222,1431,249,1393,275,1369,286,1367,282,1390,270,1428,245,1460,218"/>
+<area shape="poly" title=" " alt="" coords="1307,400,1263,324,1237,261,1215,198,1173,110,1178,108,1219,196,1242,259,1267,322,1311,397"/>
+<area shape="rect" href="unit-test_8c.html#a600f033d6f6a144fbd69976eab19e3ee" title=" " alt="" coords="1128,487,1206,514"/>
+<area shape="poly" title=" " alt="" coords="1285,447,1198,489,1196,484,1283,443"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,278,348,305"/>
+<area shape="poly" title=" " alt="" coords="1256,436,1131,447,989,453,605,453,498,453,452,444,399,420,365,394,336,363,299,307,303,304,340,360,368,390,402,416,454,439,498,448,604,447,989,447,1131,442,1255,430"/>
+<area shape="rect" href="unit-test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="406,379,504,406"/>
+<area shape="poly" title=" " alt="" coords="1255,419,1131,408,989,402,779,402,504,397,504,391,779,397,989,397,1131,402,1256,413"/>
+<area shape="rect" href="unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,455,352,482"/>
+<area shape="poly" title=" " alt="" coords="1310,452,1271,492,1246,512,1218,528,1157,550,1107,557,989,554,604,554,523,546,445,528,376,506,324,485,326,480,378,501,446,523,524,541,605,549,989,549,1106,552,1156,545,1216,523,1243,508,1267,488,1306,448"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,205,174,231"/>
+<area shape="poly" title=" " alt="" coords="249,273,172,234,174,229,251,268"/>
+<area shape="poly" title=" " alt="" coords="103,199,54,172,57,167,106,194"/>
+<area shape="rect" href="unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,455,185,482"/>
+<area shape="poly" title=" " alt="" coords="218,471,185,471,185,466,218,466"/>
+<area shape="poly" title=" " alt="" coords="1250,98,1197,98,1197,93,1250,93"/>
+<area shape="poly" title=" " alt="" coords="1270,228,1263,224,1233,196,1207,164,1173,110,1178,108,1212,161,1237,192,1267,220,1273,224"/>
+<area shape="poly" title=" " alt="" coords="1269,66,1198,89,1196,84,1268,61"/>
+<area shape="poly" title=" " alt="" coords="542,299,349,295,349,290,542,294"/>
+<area shape="poly" title=" " alt="" coords="571,322,479,381,476,377,569,318"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="400,195,510,222"/>
+<area shape="poly" title=" " alt="" coords="567,279,508,243,478,225,481,220,511,238,570,274"/>
+<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="403,253,507,279"/>
+<area shape="poly" title=" " alt="" coords="542,287,507,279,508,274,543,282"/>
+<area shape="poly" title=" " alt="" coords="388,279,349,285,348,280,387,274"/>
+<area shape="poly" title=" " alt="" coords="435,294,307,457,303,453,431,290"/>
+<area shape="rect" href="unit-test_8c.html#a02e71048dc3a569b41b257dec3b00cf0" title=" " alt="" coords="240,179,345,206"/>
+<area shape="poly" title=" " alt="" coords="408,248,323,209,325,204,411,243"/>
+<area shape="rect" href="lcd_8c.html#a8de82b22879092baf8383713ecc708e9" title="Sets the cursor position." alt="" coords="1117,209,1217,235"/>
+<area shape="poly" title=" " alt="" coords="1276,280,1264,275,1192,238,1195,233,1266,270,1278,276"/>
+<area shape="poly" title=" " alt="" coords="1101,223,510,212,510,207,1101,218"/>
+<area shape="poly" title=" " alt="" coords="1108,206,1042,188,961,169,872,154,781,149,605,149,534,152,464,160,346,183,345,177,463,155,534,147,604,143,782,143,872,149,962,164,1044,182,1110,201"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="906,234,1069,261"/>
+<area shape="poly" title=" " alt="" coords="1102,234,1070,238,1069,233,1101,228"/>
+<area shape="poly" title=" " alt="" coords="891,254,799,262,702,275,654,286,653,281,702,270,799,257,891,249"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="702,285,858,311"/>
+<area shape="poly" title=" " alt="" coords="915,267,838,287,837,281,914,262"/>
+<area shape="poly" title=" " alt="" coords="686,301,655,301,655,295,686,295"/>
 </map>
 </div>
 
@@ -1214,7 +1154,7 @@ Here is the caller graph for this function:</div>
 
 <p>Resets cursor to original position. </p>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00090">90</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00092">92</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1223,15 +1163,15 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Resets cursor to original position." alt="" coords="5,56,120,83"/>
 <area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="326,5,412,32"/>
 <area shape="poly" title=" " alt="" coords="115,53,167,41,310,22,311,27,168,47,116,58"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="168,56,267,83"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="168,56,267,83"/>
 <area shape="poly" title=" " alt="" coords="120,67,152,67,152,72,120,72"/>
-<area shape="rect" href="lcd_8c.html#aa2b64ca7fceac6ba52f4d3345acb5e69" title="Sets the rs flag to the given value." alt="" coords="178,107,257,133"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="178,107,257,133"/>
 <area shape="poly" title=" " alt="" coords="107,81,164,100,162,105,105,86"/>
 <area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="743,5,838,32"/>
 <area shape="poly" title=" " alt="" coords="413,16,728,16,728,21,413,21"/>
 <area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="886,31,939,57"/>
 <area shape="poly" title=" " alt="" coords="839,26,872,33,870,38,838,31"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="315,56,423,83"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="315,56,423,83"/>
 <area shape="poly" title=" " alt="" coords="268,67,300,67,300,72,268,72"/>
 <area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="471,56,563,83"/>
 <area shape="poly" title=" " alt="" coords="424,67,456,67,456,72,424,72"/>
@@ -1244,8 +1184,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a9fd93d4ece7b9d019ffebf10e290f4ea" name="a9fd93d4ece7b9d019ffebf10e290f4ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fd93d4ece7b9d019ffebf10e290f4ea">&#9670;&#160;</a></span>LcdSendByte()</h2>
+<a id="a40d081728cfd391fce0ec51b3c055169" name="a40d081728cfd391fce0ec51b3c055169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40d081728cfd391fce0ec51b3c055169">&#9670;&#160;</a></span>LcdSendByte()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1253,7 +1193,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void LcdSendByte </td>
           <td>(</td>
-          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>byte</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1268,14 +1208,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00024">24</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00026">26</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_a9fd93d4ece7b9d019ffebf10e290f4ea_cgraph.png" border="0" usemap="#alcd_8h_a9fd93d4ece7b9d019ffebf10e290f4ea_cgraph" alt=""/></div>
-<map name="alcd_8h_a9fd93d4ece7b9d019ffebf10e290f4ea_cgraph" id="alcd_8h_a9fd93d4ece7b9d019ffebf10e290f4ea_cgraph">
+<div class="center"><img src="lcd_8h_a40d081728cfd391fce0ec51b3c055169_cgraph.png" border="0" usemap="#alcd_8h_a40d081728cfd391fce0ec51b3c055169_cgraph" alt=""/></div>
+<map name="alcd_8h_a40d081728cfd391fce0ec51b3c055169_cgraph" id="alcd_8h_a40d081728cfd391fce0ec51b3c055169_cgraph">
 <area shape="rect" title="Sends a byte to the LCD." alt="" coords="5,5,105,32"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="153,5,261,32"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="153,5,261,32"/>
 <area shape="poly" title=" " alt="" coords="105,16,137,16,137,21,105,21"/>
 <area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="309,5,400,32"/>
 <area shape="poly" title=" " alt="" coords="261,16,293,16,293,21,261,21"/>
@@ -1291,56 +1231,74 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_a9fd93d4ece7b9d019ffebf10e290f4ea_icgraph.png" border="0" usemap="#alcd_8h_a9fd93d4ece7b9d019ffebf10e290f4ea_icgraph" alt=""/></div>
-<map name="alcd_8h_a9fd93d4ece7b9d019ffebf10e290f4ea_icgraph" id="alcd_8h_a9fd93d4ece7b9d019ffebf10e290f4ea_icgraph">
-<area shape="rect" title="Sends a byte to the LCD." alt="" coords="1142,183,1241,209"/>
-<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="973,5,1088,32"/>
-<area shape="poly" title=" " alt="" coords="1176,169,1144,108,1120,75,1092,46,1074,35,1077,30,1095,42,1124,71,1148,105,1181,167"/>
-<area shape="rect" href="lcd_8c.html#a09b8fcddedb13ac22fa8cfc4dca9c78f" title="Sets the LCD cursor position." alt="" coords="977,56,1084,83"/>
-<area shape="poly" title=" " alt="" coords="1169,172,1135,134,1092,97,1071,85,1074,81,1095,92,1139,130,1173,168"/>
-<area shape="rect" href="lcd_8c.html#ab933996c707c767ce7c6933227bc5bd0" title="Controls the display, cursor, and blinking." alt="" coords="967,107,1094,133"/>
-<area shape="poly" title=" " alt="" coords="1151,177,1093,148,1066,136,1068,131,1095,143,1153,173"/>
-<area shape="rect" href="lcd_8c.html#a1e86a9c9a89725780eb464f5c42eb784" title="Sets the entry mode of the LCD." alt="" coords="968,157,1093,184"/>
-<area shape="poly" title=" " alt="" coords="1126,188,1093,183,1094,178,1127,183"/>
-<area shape="rect" href="lcd_8c.html#a6d3f15072d85ed9eecadf4223f0bac1b" title=" " alt="" coords="974,208,1087,235"/>
-<area shape="poly" title=" " alt="" coords="1127,209,1088,215,1087,210,1126,204"/>
-<area shape="rect" href="lcd_8c.html#ab1c2efe3f6552fcef08eeba3904d9376" title="Prints a character to the LCD." alt="" coords="260,309,356,336"/>
-<area shape="poly" title=" " alt="" coords="1158,220,1128,236,1095,249,1033,266,984,273,871,275,689,275,596,279,504,289,357,315,356,310,504,284,596,274,688,269,870,269,984,268,1032,260,1093,244,1126,231,1155,215"/>
-<area shape="rect" href="lcd_8c.html#aad68360b11370fa86fcd068004ef903f" title="Resets cursor to original position." alt="" coords="973,309,1088,336"/>
-<area shape="poly" title=" " alt="" coords="1170,223,1137,258,1095,293,1064,311,1062,306,1092,288,1133,254,1167,219"/>
-<area shape="rect" href="lcd_8c.html#ae368e9d14a294f0c32c7028b377f84e6" title="Sets the DDRAM address (cursor position)" alt="" coords="980,360,1081,387"/>
-<area shape="poly" title=" " alt="" coords="1181,225,1148,287,1124,321,1095,350,1077,362,1074,357,1092,346,1120,317,1144,284,1176,223"/>
-<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="840,132,899,159"/>
-<area shape="poly" title=" " alt="" coords="976,42,969,46,942,67,918,91,883,133,879,130,914,87,939,63,966,42,974,37"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,132,55,159"/>
-<area shape="poly" title=" " alt="" coords="958,30,834,41,691,47,307,47,269,49,232,56,160,80,99,108,54,134,52,129,96,104,158,75,231,51,269,44,307,41,691,41,833,36,957,24"/>
-<area shape="rect" href="main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="456,132,509,159"/>
-<area shape="poly" title=" " alt="" coords="824,148,509,148,509,143,824,143"/>
-<area shape="poly" title=" " alt="" coords="441,148,55,148,55,143,441,143"/>
-<area shape="poly" title=" " alt="" coords="952,135,900,143,899,138,952,130"/>
-<area shape="poly" title=" " alt="" coords="952,161,899,153,900,147,953,156"/>
-<area shape="poly" title=" " alt="" coords="978,204,966,198,894,162,897,157,968,194,981,199"/>
-<area shape="rect" href="lcd_8c.html#a3dbe526a93440b9586f3f5f270c335b1" title="Prints a character to the LCD at a given position." alt="" coords="103,360,212,387"/>
-<area shape="poly" title=" " alt="" coords="253,344,200,362,199,357,251,339"/>
-<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="106,208,209,235"/>
-<area shape="poly" title=" " alt="" coords="273,303,177,237,180,233,276,298"/>
-<area shape="poly" title=" " alt="" coords="119,202,53,161,55,157,122,197"/>
-<area shape="rect" href="lcd_8c.html#a1560ddb5bbf01143c0afe47bbc914b0e" title="Sets the cursor position." alt="" coords="819,360,919,387"/>
-<area shape="poly" title=" " alt="" coords="965,376,920,376,920,371,965,371"/>
-<area shape="poly" title=" " alt="" coords="810,394,771,401,693,409,612,412,455,408,316,397,212,384,213,379,316,392,455,403,612,407,692,403,771,396,809,388"/>
-<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="609,360,771,387"/>
-<area shape="poly" title=" " alt="" coords="803,376,772,376,772,371,803,371"/>
-<area shape="poly" title=" " alt="" coords="609,359,560,351,451,337,357,329,357,323,452,332,561,345,610,354"/>
-<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="404,360,561,387"/>
-<area shape="poly" title=" " alt="" coords="593,376,561,376,561,371,593,371"/>
-<area shape="poly" title=" " alt="" coords="418,358,356,339,357,334,420,352"/>
+<div class="center"><img src="lcd_8h_a40d081728cfd391fce0ec51b3c055169_icgraph.png" border="0" usemap="#alcd_8h_a40d081728cfd391fce0ec51b3c055169_icgraph" alt=""/></div>
+<map name="alcd_8h_a40d081728cfd391fce0ec51b3c055169_icgraph" id="alcd_8h_a40d081728cfd391fce0ec51b3c055169_icgraph">
+<area shape="rect" title="Sends a byte to the LCD." alt="" coords="1439,208,1539,235"/>
+<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="1271,157,1386,184"/>
+<area shape="poly" title=" " alt="" coords="1429,205,1372,187,1374,182,1430,200"/>
+<area shape="rect" href="lcd_8c.html#a27164e4aa24d46318deab3dd42658978" title="Sets the LCD cursor position." alt="" coords="1275,360,1381,387"/>
+<area shape="poly" title=" " alt="" coords="1475,250,1442,300,1419,327,1393,350,1373,362,1370,357,1390,346,1415,323,1437,297,1471,247"/>
+<area shape="rect" href="lcd_8c.html#aca04f0c025afbc86a0fedc553f3a8ba4" title="Controls the display, cursor, and blinking." alt="" coords="1265,5,1391,32"/>
+<area shape="poly" title=" " alt="" coords="1477,194,1445,121,1421,81,1390,46,1373,35,1376,30,1393,42,1425,78,1450,119,1482,192"/>
+<area shape="rect" href="lcd_8c.html#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" title="Sets the entry mode of the LCD." alt="" coords="1266,56,1391,83"/>
+<area shape="poly" title=" " alt="" coords="1471,196,1437,146,1415,120,1390,97,1370,85,1373,81,1393,93,1419,116,1442,143,1475,193"/>
+<area shape="rect" href="lcd_8c.html#a9b451fe57dbdfef32faf1d96b9d7dce4" title=" " alt="" coords="1272,107,1384,133"/>
+<area shape="poly" title=" " alt="" coords="1460,200,1428,173,1390,148,1367,136,1369,132,1393,143,1431,169,1464,196"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="558,360,654,387"/>
+<area shape="poly" title=" " alt="" coords="1425,240,1306,263,1237,271,1168,275,986,275,936,277,885,284,786,308,701,337,638,362,636,357,699,332,785,303,884,279,935,272,986,269,1168,269,1237,266,1305,258,1424,235"/>
+<area shape="rect" href="lcd_8c.html#aad68360b11370fa86fcd068004ef903f" title="Resets cursor to original position." alt="" coords="1271,411,1385,437"/>
+<area shape="poly" title=" " alt="" coords="1482,250,1450,324,1425,365,1393,401,1376,412,1373,408,1390,397,1421,362,1445,322,1477,248"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1278,309,1378,336"/>
+<area shape="poly" title=" " alt="" coords="1460,246,1393,293,1360,311,1357,307,1390,288,1457,242"/>
+<area shape="rect" href="unit-test_8c.html#a600f033d6f6a144fbd69976eab19e3ee" title=" " alt="" coords="1128,107,1206,133"/>
+<area shape="poly" title=" " alt="" coords="1268,155,1206,135,1207,130,1269,149"/>
+<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="1137,5,1197,32"/>
+<area shape="poly" title=" " alt="" coords="1268,151,1263,147,1245,123,1237,100,1230,77,1215,52,1193,34,1196,30,1219,49,1235,75,1242,98,1250,121,1267,143,1271,147"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,296,348,323"/>
+<area shape="poly" title=" " alt="" coords="1255,173,989,173,605,173,545,175,499,183,455,198,402,224,374,241,348,261,308,298,305,294,344,257,371,236,399,219,453,193,498,178,545,170,604,168,989,168,1255,168"/>
+<area shape="rect" href="unit-test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="406,233,504,260"/>
+<area shape="poly" title=" " alt="" coords="1256,190,1132,213,1060,221,989,224,779,224,629,231,505,243,504,238,628,225,779,219,989,219,1060,215,1131,207,1255,185"/>
+<area shape="rect" href="unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,157,352,184"/>
+<area shape="poly" title=" " alt="" coords="1271,152,1263,147,1249,134,1240,120,1231,108,1216,97,1156,74,1107,68,989,72,605,72,563,75,521,82,440,105,370,134,320,159,317,154,368,129,438,100,519,76,562,69,604,67,989,67,1107,62,1158,69,1218,92,1235,104,1244,117,1253,130,1267,143,1274,148"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="754,5,807,32"/>
+<area shape="poly" title=" " alt="" coords="1122,21,807,21,807,16,1122,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,107,55,133"/>
+<area shape="poly" title=" " alt="" coords="738,21,456,21,291,21,256,24,220,31,152,55,94,83,53,109,50,104,92,79,150,50,219,26,255,19,291,16,456,16,738,16"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,252,174,279"/>
+<area shape="poly" title=" " alt="" coords="230,294,173,277,175,271,231,288"/>
+<area shape="poly" title=" " alt="" coords="121,241,40,135,44,132,125,238"/>
+<area shape="rect" href="unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,157,185,184"/>
+<area shape="poly" title=" " alt="" coords="218,173,185,173,185,168,218,168"/>
+<area shape="poly" title=" " alt="" coords="1250,21,1197,21,1197,16,1250,16"/>
+<area shape="poly" title=" " alt="" coords="1268,53,1196,30,1198,25,1269,48"/>
+<area shape="poly" title=" " alt="" coords="1272,102,1263,97,1239,75,1215,53,1190,35,1193,30,1219,49,1242,72,1267,92,1275,97"/>
+<area shape="poly" title=" " alt="" coords="543,391,473,398,436,396,400,388,371,375,345,358,305,325,309,321,348,354,373,371,401,383,437,390,473,393,542,386"/>
+<area shape="poly" title=" " alt="" coords="579,351,508,286,476,263,479,258,511,282,582,347"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="400,296,510,323"/>
+<area shape="poly" title=" " alt="" coords="558,356,487,326,489,321,560,351"/>
+<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="403,347,507,373"/>
+<area shape="poly" title=" " alt="" coords="542,370,507,367,508,362,542,365"/>
+<area shape="poly" title=" " alt="" coords="395,344,337,326,339,321,396,339"/>
+<area shape="poly" title=" " alt="" coords="403,340,399,337,363,298,334,256,297,186,302,183,338,253,367,295,402,333,406,336"/>
+<area shape="rect" href="unit-test_8c.html#a02e71048dc3a569b41b257dec3b00cf0" title=" " alt="" coords="240,397,345,424"/>
+<area shape="poly" title=" " alt="" coords="396,381,339,399,337,394,395,376"/>
+<area shape="rect" href="lcd_8c.html#a8de82b22879092baf8383713ecc708e9" title="Sets the cursor position." alt="" coords="1117,335,1217,361"/>
+<area shape="poly" title=" " alt="" coords="1263,336,1218,343,1217,337,1262,330"/>
+<area shape="poly" title=" " alt="" coords="1101,347,510,315,510,310,1101,342"/>
+<area shape="poly" title=" " alt="" coords="1129,372,1066,403,980,438,883,466,832,474,782,477,604,477,529,472,454,459,334,427,335,422,455,454,529,467,605,472,781,472,832,469,882,461,979,433,1063,398,1127,367"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="906,360,1069,387"/>
+<area shape="poly" title=" " alt="" coords="1102,360,1070,364,1069,359,1101,355"/>
+<area shape="poly" title=" " alt="" coords="914,393,859,401,780,407,702,401,649,390,650,385,702,396,780,402,858,396,913,388"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="702,360,858,387"/>
+<area shape="poly" title=" " alt="" coords="891,376,859,376,859,371,891,371"/>
+<area shape="poly" title=" " alt="" coords="686,376,655,376,655,371,686,371"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a0d25295265e475f1fdab816f24759206" name="a0d25295265e475f1fdab816f24759206"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d25295265e475f1fdab816f24759206">&#9670;&#160;</a></span>LcdSendNibble()</h2>
+<a id="a93ae42864f782da4a4e0515d7faa449f" name="a93ae42864f782da4a4e0515d7faa449f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93ae42864f782da4a4e0515d7faa449f">&#9670;&#160;</a></span>LcdSendNibble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1348,7 +1306,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void LcdSendNibble </td>
           <td>(</td>
-          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>nibble</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1363,12 +1321,12 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00019">19</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00021">21</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_a0d25295265e475f1fdab816f24759206_cgraph.png" border="0" usemap="#alcd_8h_a0d25295265e475f1fdab816f24759206_cgraph" alt=""/></div>
-<map name="alcd_8h_a0d25295265e475f1fdab816f24759206_cgraph" id="alcd_8h_a0d25295265e475f1fdab816f24759206_cgraph">
+<div class="center"><img src="lcd_8h_a93ae42864f782da4a4e0515d7faa449f_cgraph.png" border="0" usemap="#alcd_8h_a93ae42864f782da4a4e0515d7faa449f_cgraph" alt=""/></div>
+<map name="alcd_8h_a93ae42864f782da4a4e0515d7faa449f_cgraph" id="alcd_8h_a93ae42864f782da4a4e0515d7faa449f_cgraph">
 <area shape="rect" title="Sends a nibble to the LCD." alt="" coords="5,5,114,32"/>
 <area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="162,5,253,32"/>
 <area shape="poly" title=" " alt="" coords="114,16,146,16,146,21,114,21"/>
@@ -1384,59 +1342,77 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_a0d25295265e475f1fdab816f24759206_icgraph.png" border="0" usemap="#alcd_8h_a0d25295265e475f1fdab816f24759206_icgraph" alt=""/></div>
-<map name="alcd_8h_a0d25295265e475f1fdab816f24759206_icgraph" id="alcd_8h_a0d25295265e475f1fdab816f24759206_icgraph">
-<area shape="rect" title="Sends a nibble to the LCD." alt="" coords="1289,83,1397,109"/>
-<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="840,87,899,113"/>
-<area shape="poly" title=" " alt="" coords="1303,78,1238,48,1154,21,1108,12,1060,8,1014,11,968,22,942,35,918,53,883,88,879,85,915,49,939,31,966,17,1013,6,1060,3,1108,7,1155,16,1240,43,1305,73"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="1142,184,1241,211"/>
-<area shape="poly" title=" " alt="" coords="1311,120,1214,186,1211,181,1308,116"/>
-<area shape="rect" href="main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="456,115,509,141"/>
-<area shape="poly" title=" " alt="" coords="824,106,510,129,509,123,824,100"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,184,55,211"/>
-<area shape="poly" title=" " alt="" coords="440,134,291,151,103,181,56,193,54,188,102,176,290,146,440,129"/>
-<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="973,184,1088,211"/>
-<area shape="poly" title=" " alt="" coords="1126,200,1088,200,1088,195,1126,195"/>
-<area shape="rect" href="lcd_8c.html#a09b8fcddedb13ac22fa8cfc4dca9c78f" title="Sets the LCD cursor position." alt="" coords="977,336,1084,363"/>
-<area shape="poly" title=" " alt="" coords="1178,226,1144,276,1121,303,1095,326,1075,338,1073,333,1092,322,1117,299,1140,273,1173,223"/>
-<area shape="rect" href="lcd_8c.html#ab933996c707c767ce7c6933227bc5bd0" title="Controls the display, cursor, and blinking." alt="" coords="967,32,1094,59"/>
-<area shape="poly" title=" " alt="" coords="1173,172,1140,122,1117,96,1092,73,1073,61,1075,57,1095,68,1121,92,1144,119,1178,169"/>
-<area shape="rect" href="lcd_8c.html#a1e86a9c9a89725780eb464f5c42eb784" title="Sets the entry mode of the LCD." alt="" coords="968,83,1093,109"/>
-<area shape="poly" title=" " alt="" coords="1163,176,1130,149,1092,124,1069,112,1072,107,1095,119,1133,145,1166,172"/>
-<area shape="rect" href="lcd_8c.html#a6d3f15072d85ed9eecadf4223f0bac1b" title=" " alt="" coords="974,133,1087,160"/>
-<area shape="poly" title=" " alt="" coords="1131,181,1075,163,1076,158,1133,176"/>
-<area shape="rect" href="lcd_8c.html#ab1c2efe3f6552fcef08eeba3904d9376" title="Prints a character to the LCD." alt="" coords="260,285,356,312"/>
-<area shape="poly" title=" " alt="" coords="1129,217,1094,225,983,245,871,251,689,251,596,255,504,265,357,291,356,286,504,260,596,249,688,245,870,245,982,239,1093,220,1128,212"/>
-<area shape="rect" href="lcd_8c.html#aad68360b11370fa86fcd068004ef903f" title="Resets cursor to original position." alt="" coords="973,387,1088,413"/>
-<area shape="poly" title=" " alt="" coords="1184,226,1152,300,1127,341,1095,377,1078,388,1075,384,1092,373,1123,338,1148,298,1179,224"/>
-<area shape="rect" href="lcd_8c.html#ae368e9d14a294f0c32c7028b377f84e6" title="Sets the DDRAM address (cursor position)" alt="" coords="980,285,1081,312"/>
-<area shape="poly" title=" " alt="" coords="1162,222,1095,269,1062,287,1059,282,1092,264,1159,218"/>
-<area shape="poly" title=" " alt="" coords="976,180,966,174,921,144,885,116,888,112,924,140,969,170,979,175"/>
-<area shape="poly" title=" " alt="" coords="957,200,691,200,307,200,55,200,55,195,307,195,691,195,957,195"/>
-<area shape="poly" title=" " alt="" coords="975,67,900,92,898,87,974,62"/>
-<area shape="poly" title=" " alt="" coords="952,100,899,102,899,97,952,95"/>
-<area shape="poly" title=" " alt="" coords="967,131,899,111,900,106,968,126"/>
-<area shape="rect" href="lcd_8c.html#a3dbe526a93440b9586f3f5f270c335b1" title="Prints a character to the LCD at a given position." alt="" coords="103,336,212,363"/>
-<area shape="poly" title=" " alt="" coords="253,320,200,338,199,333,251,315"/>
-<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="106,260,209,287"/>
-<area shape="poly" title=" " alt="" coords="244,291,209,285,210,279,245,285"/>
-<area shape="poly" title=" " alt="" coords="119,254,53,213,55,209,122,249"/>
-<area shape="rect" href="lcd_8c.html#a1560ddb5bbf01143c0afe47bbc914b0e" title="Sets the cursor position." alt="" coords="819,311,919,337"/>
-<area shape="poly" title=" " alt="" coords="966,311,920,319,919,313,965,306"/>
-<area shape="poly" title=" " alt="" coords="806,344,772,352,669,370,589,379,508,381,404,377,302,369,212,359,213,354,302,364,404,372,508,376,588,374,669,365,770,347,805,339"/>
-<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="609,311,771,337"/>
-<area shape="poly" title=" " alt="" coords="803,327,772,327,772,321,803,321"/>
-<area shape="poly" title=" " alt="" coords="593,320,357,304,357,299,593,315"/>
-<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="404,336,561,363"/>
-<area shape="poly" title=" " alt="" coords="594,338,562,342,561,337,593,333"/>
-<area shape="poly" title=" " alt="" coords="418,334,356,315,357,310,420,328"/>
+<div class="center"><img src="lcd_8h_a93ae42864f782da4a4e0515d7faa449f_icgraph.png" border="0" usemap="#alcd_8h_a93ae42864f782da4a4e0515d7faa449f_icgraph" alt=""/></div>
+<map name="alcd_8h_a93ae42864f782da4a4e0515d7faa449f_icgraph" id="alcd_8h_a93ae42864f782da4a4e0515d7faa449f_icgraph">
+<area shape="rect" title="Sends a nibble to the LCD." alt="" coords="1587,82,1695,109"/>
+<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="1137,82,1197,109"/>
+<area shape="poly" title=" " alt="" coords="1600,77,1536,48,1451,21,1405,12,1358,8,1311,11,1266,22,1240,34,1217,50,1181,84,1178,80,1213,46,1237,29,1264,17,1310,6,1358,3,1406,7,1453,16,1538,43,1602,72"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1439,183,1539,210"/>
+<area shape="poly" title=" " alt="" coords="1608,120,1512,185,1509,181,1605,115"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="754,82,807,109"/>
+<area shape="poly" title=" " alt="" coords="1122,98,807,98,807,93,1122,93"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,143,55,170"/>
+<area shape="poly" title=" " alt="" coords="738,98,456,98,291,98,224,104,158,117,56,150,54,144,156,112,223,98,291,93,456,93,738,93"/>
+<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="1271,411,1386,438"/>
+<area shape="poly" title=" " alt="" coords="1478,225,1443,293,1393,369,1349,413,1345,409,1389,366,1439,290,1473,223"/>
+<area shape="rect" href="lcd_8c.html#a27164e4aa24d46318deab3dd42658978" title="Sets the LCD cursor position." alt="" coords="1275,133,1381,159"/>
+<area shape="poly" title=" " alt="" coords="1429,180,1372,162,1374,157,1430,175"/>
+<area shape="rect" href="lcd_8c.html#aca04f0c025afbc86a0fedc553f3a8ba4" title="Controls the display, cursor, and blinking." alt="" coords="1265,82,1391,109"/>
+<area shape="poly" title=" " alt="" coords="1460,175,1428,148,1390,123,1367,112,1369,107,1393,118,1431,144,1464,171"/>
+<area shape="rect" href="lcd_8c.html#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" title="Sets the entry mode of the LCD." alt="" coords="1266,234,1391,261"/>
+<area shape="poly" title=" " alt="" coords="1430,218,1374,236,1372,231,1429,213"/>
+<area shape="rect" href="lcd_8c.html#a9b451fe57dbdfef32faf1d96b9d7dce4" title=" " alt="" coords="1272,31,1384,58"/>
+<area shape="poly" title=" " alt="" coords="1471,171,1437,121,1415,95,1390,72,1370,61,1373,56,1393,68,1419,91,1442,118,1475,168"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="558,285,654,311"/>
+<area shape="poly" title=" " alt="" coords="1478,225,1445,278,1421,304,1393,325,1362,341,1335,351,1285,357,1168,351,986,351,843,347,702,326,653,314,654,309,702,321,844,341,986,346,1168,346,1285,352,1333,345,1360,336,1390,321,1417,300,1441,275,1473,222"/>
+<area shape="rect" href="lcd_8c.html#aad68360b11370fa86fcd068004ef903f" title="Resets cursor to original position." alt="" coords="1271,183,1385,210"/>
+<area shape="poly" title=" " alt="" coords="1424,199,1386,199,1386,194,1424,194"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1278,285,1378,311"/>
+<area shape="poly" title=" " alt="" coords="1464,222,1431,249,1393,275,1369,286,1367,282,1390,270,1428,245,1460,218"/>
+<area shape="poly" title=" " alt="" coords="1307,400,1263,324,1237,261,1215,198,1173,110,1178,108,1219,196,1242,259,1267,322,1311,397"/>
+<area shape="rect" href="unit-test_8c.html#a600f033d6f6a144fbd69976eab19e3ee" title=" " alt="" coords="1128,487,1206,514"/>
+<area shape="poly" title=" " alt="" coords="1285,447,1198,489,1196,484,1283,443"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,278,348,305"/>
+<area shape="poly" title=" " alt="" coords="1256,436,1131,447,989,453,605,453,498,453,452,444,399,420,365,394,336,363,299,307,303,304,340,360,368,390,402,416,454,439,498,448,604,447,989,447,1131,442,1255,430"/>
+<area shape="rect" href="unit-test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="406,379,504,406"/>
+<area shape="poly" title=" " alt="" coords="1255,419,1131,408,989,402,779,402,504,397,504,391,779,397,989,397,1131,402,1256,413"/>
+<area shape="rect" href="unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,455,352,482"/>
+<area shape="poly" title=" " alt="" coords="1310,452,1271,492,1246,512,1218,528,1157,550,1107,557,989,554,604,554,523,546,445,528,376,506,324,485,326,480,378,501,446,523,524,541,605,549,989,549,1106,552,1156,545,1216,523,1243,508,1267,488,1306,448"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,205,174,231"/>
+<area shape="poly" title=" " alt="" coords="249,273,172,234,174,229,251,268"/>
+<area shape="poly" title=" " alt="" coords="103,199,54,172,57,167,106,194"/>
+<area shape="rect" href="unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,455,185,482"/>
+<area shape="poly" title=" " alt="" coords="218,471,185,471,185,466,218,466"/>
+<area shape="poly" title=" " alt="" coords="1250,98,1197,98,1197,93,1250,93"/>
+<area shape="poly" title=" " alt="" coords="1270,228,1263,224,1233,196,1207,164,1173,110,1178,108,1212,161,1237,192,1267,220,1273,224"/>
+<area shape="poly" title=" " alt="" coords="1269,66,1198,89,1196,84,1268,61"/>
+<area shape="poly" title=" " alt="" coords="542,299,349,295,349,290,542,294"/>
+<area shape="poly" title=" " alt="" coords="571,322,479,381,476,377,569,318"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="400,195,510,222"/>
+<area shape="poly" title=" " alt="" coords="567,279,508,243,478,225,481,220,511,238,570,274"/>
+<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="403,253,507,279"/>
+<area shape="poly" title=" " alt="" coords="542,287,507,279,508,274,543,282"/>
+<area shape="poly" title=" " alt="" coords="388,279,349,285,348,280,387,274"/>
+<area shape="poly" title=" " alt="" coords="435,294,307,457,303,453,431,290"/>
+<area shape="rect" href="unit-test_8c.html#a02e71048dc3a569b41b257dec3b00cf0" title=" " alt="" coords="240,179,345,206"/>
+<area shape="poly" title=" " alt="" coords="408,248,323,209,325,204,411,243"/>
+<area shape="rect" href="lcd_8c.html#a8de82b22879092baf8383713ecc708e9" title="Sets the cursor position." alt="" coords="1117,209,1217,235"/>
+<area shape="poly" title=" " alt="" coords="1276,280,1264,275,1192,238,1195,233,1266,270,1278,276"/>
+<area shape="poly" title=" " alt="" coords="1101,223,510,212,510,207,1101,218"/>
+<area shape="poly" title=" " alt="" coords="1108,206,1042,188,961,169,872,154,781,149,605,149,534,152,464,160,346,183,345,177,463,155,534,147,604,143,782,143,872,149,962,164,1044,182,1110,201"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="906,234,1069,261"/>
+<area shape="poly" title=" " alt="" coords="1102,234,1070,238,1069,233,1101,228"/>
+<area shape="poly" title=" " alt="" coords="891,254,799,262,702,275,654,286,653,281,702,270,799,257,891,249"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="702,285,858,311"/>
+<area shape="poly" title=" " alt="" coords="915,267,838,287,837,281,914,262"/>
+<area shape="poly" title=" " alt="" coords="686,301,655,301,655,295,686,295"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a1560ddb5bbf01143c0afe47bbc914b0e" name="a1560ddb5bbf01143c0afe47bbc914b0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1560ddb5bbf01143c0afe47bbc914b0e">&#9670;&#160;</a></span>LcdSetCursor()</h2>
+<a id="a8de82b22879092baf8383713ecc708e9" name="a8de82b22879092baf8383713ecc708e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de82b22879092baf8383713ecc708e9">&#9670;&#160;</a></span>LcdSetCursor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1444,13 +1420,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void LcdSetCursor </td>
           <td>(</td>
-          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>row</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>col</em>&#160;</td>
         </tr>
         <tr>
@@ -1470,26 +1446,26 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00174">174</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00179">179</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_a1560ddb5bbf01143c0afe47bbc914b0e_cgraph.png" border="0" usemap="#alcd_8h_a1560ddb5bbf01143c0afe47bbc914b0e_cgraph" alt=""/></div>
-<map name="alcd_8h_a1560ddb5bbf01143c0afe47bbc914b0e_cgraph" id="alcd_8h_a1560ddb5bbf01143c0afe47bbc914b0e_cgraph">
+<div class="center"><img src="lcd_8h_a8de82b22879092baf8383713ecc708e9_cgraph.png" border="0" usemap="#alcd_8h_a8de82b22879092baf8383713ecc708e9_cgraph" alt=""/></div>
+<map name="alcd_8h_a8de82b22879092baf8383713ecc708e9_cgraph" id="alcd_8h_a8de82b22879092baf8383713ecc708e9_cgraph">
 <area shape="rect" title="Sets the cursor position." alt="" coords="5,56,106,83"/>
-<area shape="rect" href="lcd_8c.html#ae368e9d14a294f0c32c7028b377f84e6" title="Sets the DDRAM address (cursor position)" alt="" coords="154,56,254,83"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="154,56,254,83"/>
 <area shape="poly" title=" " alt="" coords="106,67,138,67,138,72,106,72"/>
 <area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="460,5,547,32"/>
 <area shape="poly" title=" " alt="" coords="253,53,302,41,444,21,445,27,302,47,254,58"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="302,56,401,83"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="302,56,401,83"/>
 <area shape="poly" title=" " alt="" coords="254,67,287,67,287,72,254,72"/>
-<area shape="rect" href="lcd_8c.html#aa2b64ca7fceac6ba52f4d3345acb5e69" title="Sets the rs flag to the given value." alt="" coords="313,107,391,133"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="313,107,391,133"/>
 <area shape="poly" title=" " alt="" coords="246,81,299,99,297,104,244,86"/>
 <area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="877,5,973,32"/>
 <area shape="poly" title=" " alt="" coords="547,16,862,16,862,21,547,21"/>
 <area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="1021,31,1073,57"/>
 <area shape="poly" title=" " alt="" coords="974,26,1006,33,1005,38,973,31"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="449,56,558,83"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="449,56,558,83"/>
 <area shape="poly" title=" " alt="" coords="402,67,434,67,434,72,402,72"/>
 <area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="606,56,697,83"/>
 <area shape="poly" title=" " alt="" coords="558,67,590,67,590,72,558,72"/>
@@ -1502,30 +1478,44 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_a1560ddb5bbf01143c0afe47bbc914b0e_icgraph.png" border="0" usemap="#alcd_8h_a1560ddb5bbf01143c0afe47bbc914b0e_icgraph" alt=""/></div>
-<map name="alcd_8h_a1560ddb5bbf01143c0afe47bbc914b0e_icgraph" id="alcd_8h_a1560ddb5bbf01143c0afe47bbc914b0e_icgraph">
-<area shape="rect" title="Sets the cursor position." alt="" coords="819,81,919,108"/>
-<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="609,56,771,83"/>
-<area shape="poly" title=" " alt="" coords="803,88,771,84,772,78,804,83"/>
-<area shape="rect" href="lcd_8c.html#a3dbe526a93440b9586f3f5f270c335b1" title="Prints a character to the LCD at a given position." alt="" coords="103,107,212,133"/>
-<area shape="poly" title=" " alt="" coords="803,100,213,121,212,115,803,94"/>
-<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="404,5,561,32"/>
-<area shape="poly" title=" " alt="" coords="617,54,539,35,541,30,618,49"/>
-<area shape="rect" href="lcd_8c.html#ab1c2efe3f6552fcef08eeba3904d9376" title="Prints a character to the LCD." alt="" coords="260,56,356,83"/>
-<area shape="poly" title=" " alt="" coords="593,72,357,72,357,67,593,67"/>
-<area shape="poly" title=" " alt="" coords="420,40,357,58,356,53,418,34"/>
-<area shape="poly" title=" " alt="" coords="253,91,200,109,199,104,251,86"/>
-<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="106,56,209,83"/>
-<area shape="poly" title=" " alt="" coords="245,72,210,72,210,67,245,67"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
-<area shape="poly" title=" " alt="" coords="90,72,55,72,55,67,90,67"/>
+<div class="center"><img src="lcd_8h_a8de82b22879092baf8383713ecc708e9_icgraph.png" border="0" usemap="#alcd_8h_a8de82b22879092baf8383713ecc708e9_icgraph" alt=""/></div>
+<map name="alcd_8h_a8de82b22879092baf8383713ecc708e9_icgraph" id="alcd_8h_a8de82b22879092baf8383713ecc708e9_icgraph">
+<area shape="rect" title="Sets the cursor position." alt="" coords="1117,132,1217,159"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="906,81,1069,108"/>
+<area shape="poly" title=" " alt="" coords="1102,130,1037,111,1038,106,1103,125"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="400,132,510,159"/>
+<area shape="poly" title=" " alt="" coords="1101,148,510,148,510,143,1101,143"/>
+<area shape="rect" href="unit-test_8c.html#a02e71048dc3a569b41b257dec3b00cf0" title=" " alt="" coords="240,157,345,184"/>
+<area shape="poly" title=" " alt="" coords="1102,162,956,186,869,195,782,199,604,199,464,192,345,180,346,175,464,187,605,193,781,193,868,190,955,181,1101,156"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="702,31,858,57"/>
+<area shape="poly" title=" " alt="" coords="914,80,837,61,838,55,915,74"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="558,56,654,83"/>
+<area shape="poly" title=" " alt="" coords="890,91,654,75,655,70,891,86"/>
+<area shape="poly" title=" " alt="" coords="687,60,655,65,654,60,686,55"/>
+<area shape="poly" title=" " alt="" coords="567,93,511,122,488,134,485,129,508,118,565,88"/>
+<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="403,81,507,108"/>
+<area shape="poly" title=" " alt="" coords="543,83,508,89,507,83,542,77"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,5,348,32"/>
+<area shape="poly" title=" " alt="" coords="572,50,542,33,509,21,468,14,426,11,349,14,349,9,426,6,469,9,510,16,544,29,574,45"/>
+<area shape="rect" href="unit-test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="406,31,504,57"/>
+<area shape="poly" title=" " alt="" coords="542,61,504,55,505,50,543,56"/>
+<area shape="poly" title=" " alt="" coords="410,77,399,72,322,35,324,30,401,67,412,72"/>
+<area shape="poly" title=" " alt="" coords="412,117,401,122,324,159,322,154,399,118,410,113"/>
+<area shape="rect" href="unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,81,352,108"/>
+<area shape="poly" title=" " alt="" coords="387,97,353,97,353,92,387,92"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,5,174,32"/>
+<area shape="poly" title=" " alt="" coords="221,21,174,21,174,16,221,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="99,21,55,21,55,16,99,16"/>
+<area shape="rect" href="unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,81,185,108"/>
+<area shape="poly" title=" " alt="" coords="218,97,185,97,185,92,218,92"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ae368e9d14a294f0c32c7028b377f84e6" name="ae368e9d14a294f0c32c7028b377f84e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae368e9d14a294f0c32c7028b377f84e6">&#9670;&#160;</a></span>LcdSetDdram()</h2>
+<a id="a588b278d12ac539ff4f7787f03176dcb" name="a588b278d12ac539ff4f7787f03176dcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a588b278d12ac539ff4f7787f03176dcb">&#9670;&#160;</a></span>LcdSetDdram()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1533,7 +1523,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void LcdSetDdram </td>
           <td>(</td>
-          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>addr</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1548,24 +1538,24 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00166">166</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00171">171</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_ae368e9d14a294f0c32c7028b377f84e6_cgraph.png" border="0" usemap="#alcd_8h_ae368e9d14a294f0c32c7028b377f84e6_cgraph" alt=""/></div>
-<map name="alcd_8h_ae368e9d14a294f0c32c7028b377f84e6_cgraph" id="alcd_8h_ae368e9d14a294f0c32c7028b377f84e6_cgraph">
+<div class="center"><img src="lcd_8h_a588b278d12ac539ff4f7787f03176dcb_cgraph.png" border="0" usemap="#alcd_8h_a588b278d12ac539ff4f7787f03176dcb_cgraph" alt=""/></div>
+<map name="alcd_8h_a588b278d12ac539ff4f7787f03176dcb_cgraph" id="alcd_8h_a588b278d12ac539ff4f7787f03176dcb_cgraph">
 <area shape="rect" title="Sets the DDRAM address (cursor position)" alt="" coords="5,56,106,83"/>
 <area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="312,5,398,32"/>
 <area shape="poly" title=" " alt="" coords="104,53,153,41,296,21,297,27,154,47,105,58"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="154,56,253,83"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="154,56,253,83"/>
 <area shape="poly" title=" " alt="" coords="106,67,138,67,138,72,106,72"/>
-<area shape="rect" href="lcd_8c.html#aa2b64ca7fceac6ba52f4d3345acb5e69" title="Sets the rs flag to the given value." alt="" coords="164,107,243,133"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="164,107,243,133"/>
 <area shape="poly" title=" " alt="" coords="98,81,150,99,149,104,96,86"/>
 <area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="729,5,824,32"/>
 <area shape="poly" title=" " alt="" coords="399,16,714,16,714,21,399,21"/>
 <area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="872,31,925,57"/>
 <area shape="poly" title=" " alt="" coords="825,26,858,33,856,38,824,31"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="301,56,409,83"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="301,56,409,83"/>
 <area shape="poly" title=" " alt="" coords="254,67,286,67,286,72,254,72"/>
 <area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="457,56,549,83"/>
 <area shape="poly" title=" " alt="" coords="410,67,442,67,442,72,410,72"/>
@@ -1578,32 +1568,46 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_ae368e9d14a294f0c32c7028b377f84e6_icgraph.png" border="0" usemap="#alcd_8h_ae368e9d14a294f0c32c7028b377f84e6_icgraph" alt=""/></div>
-<map name="alcd_8h_ae368e9d14a294f0c32c7028b377f84e6_icgraph" id="alcd_8h_ae368e9d14a294f0c32c7028b377f84e6_icgraph">
-<area shape="rect" title="Sets the DDRAM address (cursor position)" alt="" coords="967,81,1068,108"/>
-<area shape="rect" href="lcd_8c.html#a1560ddb5bbf01143c0afe47bbc914b0e" title="Sets the cursor position." alt="" coords="819,81,919,108"/>
-<area shape="poly" title=" " alt="" coords="952,97,920,97,920,92,952,92"/>
-<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="609,56,771,83"/>
-<area shape="poly" title=" " alt="" coords="803,88,771,84,772,78,804,83"/>
-<area shape="rect" href="lcd_8c.html#a3dbe526a93440b9586f3f5f270c335b1" title="Prints a character to the LCD at a given position." alt="" coords="103,107,212,133"/>
-<area shape="poly" title=" " alt="" coords="803,100,213,121,212,115,803,94"/>
-<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="404,5,561,32"/>
-<area shape="poly" title=" " alt="" coords="617,54,539,35,541,30,618,49"/>
-<area shape="rect" href="lcd_8c.html#ab1c2efe3f6552fcef08eeba3904d9376" title="Prints a character to the LCD." alt="" coords="260,56,356,83"/>
-<area shape="poly" title=" " alt="" coords="593,72,357,72,357,67,593,67"/>
-<area shape="poly" title=" " alt="" coords="420,40,357,58,356,53,418,34"/>
-<area shape="poly" title=" " alt="" coords="253,91,200,109,199,104,251,86"/>
-<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="106,56,209,83"/>
-<area shape="poly" title=" " alt="" coords="245,72,210,72,210,67,245,67"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
-<area shape="poly" title=" " alt="" coords="90,72,55,72,55,67,90,67"/>
+<div class="center"><img src="lcd_8h_a588b278d12ac539ff4f7787f03176dcb_icgraph.png" border="0" usemap="#alcd_8h_a588b278d12ac539ff4f7787f03176dcb_icgraph" alt=""/></div>
+<map name="alcd_8h_a588b278d12ac539ff4f7787f03176dcb_icgraph" id="alcd_8h_a588b278d12ac539ff4f7787f03176dcb_icgraph">
+<area shape="rect" title="Sets the DDRAM address (cursor position)" alt="" coords="1265,132,1365,159"/>
+<area shape="rect" href="lcd_8c.html#a8de82b22879092baf8383713ecc708e9" title="Sets the cursor position." alt="" coords="1117,132,1217,159"/>
+<area shape="poly" title=" " alt="" coords="1249,148,1217,148,1217,143,1249,143"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="906,81,1069,108"/>
+<area shape="poly" title=" " alt="" coords="1102,130,1037,111,1038,106,1103,125"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="400,132,510,159"/>
+<area shape="poly" title=" " alt="" coords="1101,148,510,148,510,143,1101,143"/>
+<area shape="rect" href="unit-test_8c.html#a02e71048dc3a569b41b257dec3b00cf0" title=" " alt="" coords="240,157,345,184"/>
+<area shape="poly" title=" " alt="" coords="1102,162,956,186,869,195,782,199,604,199,464,192,345,180,346,175,464,187,605,193,781,193,868,190,955,181,1101,156"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="702,31,858,57"/>
+<area shape="poly" title=" " alt="" coords="914,80,837,61,838,55,915,74"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="558,56,654,83"/>
+<area shape="poly" title=" " alt="" coords="890,91,654,75,655,70,891,86"/>
+<area shape="poly" title=" " alt="" coords="687,60,655,65,654,60,686,55"/>
+<area shape="poly" title=" " alt="" coords="567,93,511,122,488,134,485,129,508,118,565,88"/>
+<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="403,81,507,108"/>
+<area shape="poly" title=" " alt="" coords="543,83,508,89,507,83,542,77"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,5,348,32"/>
+<area shape="poly" title=" " alt="" coords="572,50,542,33,509,21,468,14,426,11,349,14,349,9,426,6,469,9,510,16,544,29,574,45"/>
+<area shape="rect" href="unit-test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="406,31,504,57"/>
+<area shape="poly" title=" " alt="" coords="542,61,504,55,505,50,543,56"/>
+<area shape="poly" title=" " alt="" coords="410,77,399,72,322,35,324,30,401,67,412,72"/>
+<area shape="poly" title=" " alt="" coords="412,117,401,122,324,159,322,154,399,118,410,113"/>
+<area shape="rect" href="unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,81,352,108"/>
+<area shape="poly" title=" " alt="" coords="387,97,353,97,353,92,387,92"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,5,174,32"/>
+<area shape="poly" title=" " alt="" coords="221,21,174,21,174,16,221,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="99,21,55,21,55,16,99,16"/>
+<area shape="rect" href="unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,81,185,108"/>
+<area shape="poly" title=" " alt="" coords="218,97,185,97,185,92,218,92"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="aa2b64ca7fceac6ba52f4d3345acb5e69" name="aa2b64ca7fceac6ba52f4d3345acb5e69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2b64ca7fceac6ba52f4d3345acb5e69">&#9670;&#160;</a></span>LcdSetRs()</h2>
+<a id="a20f0fe593368605d1bd6a28ad1a0a43f" name="a20f0fe593368605d1bd6a28ad1a0a43f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20f0fe593368605d1bd6a28ad1a0a43f">&#9670;&#160;</a></span>LcdSetRs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1611,7 +1615,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void LcdSetRs </td>
           <td>(</td>
-          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramtype"><a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
           <td class="paramname"><em>rs</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1626,54 +1630,72 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00008">8</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00010">10</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="lcd_8h_aa2b64ca7fceac6ba52f4d3345acb5e69_icgraph.png" border="0" usemap="#alcd_8h_aa2b64ca7fceac6ba52f4d3345acb5e69_icgraph" alt=""/></div>
-<map name="alcd_8h_aa2b64ca7fceac6ba52f4d3345acb5e69_icgraph" id="alcd_8h_aa2b64ca7fceac6ba52f4d3345acb5e69_icgraph">
-<area shape="rect" title="Sets the rs flag to the given value." alt="" coords="1142,208,1220,235"/>
-<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="973,5,1088,32"/>
-<area shape="poly" title=" " alt="" coords="1169,194,1141,125,1119,87,1092,53,1066,35,1069,30,1095,49,1124,84,1146,123,1174,192"/>
-<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="840,157,899,184"/>
-<area shape="poly" title=" " alt="" coords="1167,195,1140,142,1119,117,1092,97,1060,84,1032,81,1003,86,968,97,943,109,919,126,884,159,880,155,916,122,940,105,966,92,1002,81,1032,75,1061,78,1095,92,1122,113,1144,139,1172,192"/>
-<area shape="rect" href="lcd_8c.html#a09b8fcddedb13ac22fa8cfc4dca9c78f" title="Sets the LCD cursor position." alt="" coords="977,107,1084,133"/>
-<area shape="poly" title=" " alt="" coords="1154,199,1126,172,1092,148,1070,136,1073,132,1095,143,1129,168,1158,195"/>
-<area shape="rect" href="lcd_8c.html#ab933996c707c767ce7c6933227bc5bd0" title="Controls the display, cursor, and blinking." alt="" coords="967,157,1094,184"/>
-<area shape="poly" title=" " alt="" coords="1126,206,1071,187,1073,182,1128,201"/>
-<area shape="rect" href="lcd_8c.html#a1e86a9c9a89725780eb464f5c42eb784" title="Sets the entry mode of the LCD." alt="" coords="968,208,1093,235"/>
-<area shape="poly" title=" " alt="" coords="1126,224,1094,224,1094,219,1126,219"/>
-<area shape="rect" href="lcd_8c.html#a6d3f15072d85ed9eecadf4223f0bac1b" title=" " alt="" coords="974,259,1087,285"/>
-<area shape="poly" title=" " alt="" coords="1128,242,1073,261,1071,256,1126,237"/>
-<area shape="rect" href="lcd_8c.html#ab1c2efe3f6552fcef08eeba3904d9376" title="Prints a character to the LCD." alt="" coords="260,360,356,387"/>
-<area shape="poly" title=" " alt="" coords="1161,248,1132,276,1095,300,1035,321,985,328,870,325,689,325,596,330,504,340,357,366,356,360,504,335,596,324,688,320,871,320,985,323,1034,316,1092,295,1129,272,1157,244"/>
-<area shape="rect" href="lcd_8c.html#aad68360b11370fa86fcd068004ef903f" title="Resets cursor to original position." alt="" coords="973,360,1088,387"/>
-<area shape="poly" title=" " alt="" coords="1167,250,1137,296,1095,343,1067,362,1064,357,1092,339,1133,293,1163,247"/>
-<area shape="rect" href="lcd_8c.html#ae368e9d14a294f0c32c7028b377f84e6" title="Sets the DDRAM address (cursor position)" alt="" coords="980,411,1081,437"/>
-<area shape="poly" title=" " alt="" coords="1175,250,1165,284,1148,324,1125,365,1095,401,1078,412,1075,408,1092,397,1121,362,1143,322,1160,282,1170,249"/>
-<area shape="poly" title=" " alt="" coords="985,42,969,53,941,79,916,108,881,158,877,155,912,105,937,76,966,49,982,38"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,157,55,184"/>
-<area shape="poly" title=" " alt="" coords="958,38,834,61,763,69,691,72,307,72,269,75,232,82,160,105,99,134,54,159,52,154,96,129,158,100,231,77,269,69,307,67,691,67,762,63,834,55,957,33"/>
-<area shape="rect" href="main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="456,157,509,184"/>
-<area shape="poly" title=" " alt="" coords="824,173,509,173,509,168,824,168"/>
-<area shape="poly" title=" " alt="" coords="441,173,55,173,55,168,441,168"/>
-<area shape="poly" title=" " alt="" coords="952,173,899,173,899,168,952,168"/>
-<area shape="poly" title=" " alt="" coords="970,205,898,182,900,177,972,200"/>
-<area shape="poly" title=" " alt="" coords="976,254,966,249,920,217,884,186,887,182,923,213,969,244,978,249"/>
-<area shape="rect" href="lcd_8c.html#a3dbe526a93440b9586f3f5f270c335b1" title="Prints a character to the LCD at a given position." alt="" coords="103,411,212,437"/>
-<area shape="poly" title=" " alt="" coords="253,395,200,413,199,408,251,390"/>
-<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="106,259,209,285"/>
-<area shape="poly" title=" " alt="" coords="273,353,177,288,180,284,276,349"/>
-<area shape="poly" title=" " alt="" coords="126,251,47,187,50,182,129,247"/>
-<area shape="rect" href="lcd_8c.html#a1560ddb5bbf01143c0afe47bbc914b0e" title="Sets the cursor position." alt="" coords="819,411,919,437"/>
-<area shape="poly" title=" " alt="" coords="965,427,920,427,920,421,965,421"/>
-<area shape="poly" title=" " alt="" coords="810,444,771,452,693,459,612,463,455,459,316,448,212,435,213,430,316,442,455,454,612,457,692,454,771,447,809,439"/>
-<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="609,411,771,437"/>
-<area shape="poly" title=" " alt="" coords="803,427,772,427,772,421,803,421"/>
-<area shape="poly" title=" " alt="" coords="609,410,560,401,451,388,357,379,357,374,452,383,561,396,610,405"/>
-<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="404,411,561,437"/>
-<area shape="poly" title=" " alt="" coords="593,427,561,427,561,421,593,421"/>
-<area shape="poly" title=" " alt="" coords="418,408,356,390,357,385,420,403"/>
+<div class="center"><img src="lcd_8h_a20f0fe593368605d1bd6a28ad1a0a43f_icgraph.png" border="0" usemap="#alcd_8h_a20f0fe593368605d1bd6a28ad1a0a43f_icgraph" alt=""/></div>
+<map name="alcd_8h_a20f0fe593368605d1bd6a28ad1a0a43f_icgraph" id="alcd_8h_a20f0fe593368605d1bd6a28ad1a0a43f_icgraph">
+<area shape="rect" title="Sets the rs flag to the given value." alt="" coords="1439,189,1518,215"/>
+<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="1271,189,1386,215"/>
+<area shape="poly" title=" " alt="" coords="1424,205,1386,205,1386,199,1424,199"/>
+<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="1137,37,1197,63"/>
+<area shape="poly" title=" " alt="" coords="1470,174,1461,138,1446,97,1423,57,1408,41,1390,27,1367,16,1341,10,1288,11,1238,23,1198,39,1196,34,1237,18,1288,6,1342,5,1368,11,1393,22,1411,37,1427,54,1451,95,1467,136,1475,173"/>
+<area shape="rect" href="lcd_8c.html#a27164e4aa24d46318deab3dd42658978" title="Sets the LCD cursor position." alt="" coords="1275,391,1381,418"/>
+<area shape="poly" title=" " alt="" coords="1473,231,1462,265,1446,305,1423,345,1393,381,1376,393,1373,389,1390,377,1419,342,1441,302,1457,263,1468,229"/>
+<area shape="rect" href="lcd_8c.html#aca04f0c025afbc86a0fedc553f3a8ba4" title="Controls the display, cursor, and blinking." alt="" coords="1265,37,1391,63"/>
+<area shape="poly" title=" " alt="" coords="1462,176,1433,126,1413,100,1390,77,1371,66,1374,62,1393,73,1417,97,1437,123,1467,173"/>
+<area shape="rect" href="lcd_8c.html#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" title="Sets the entry mode of the LCD." alt="" coords="1266,87,1391,114"/>
+<area shape="poly" title=" " alt="" coords="1452,179,1423,153,1390,128,1368,117,1370,112,1393,124,1427,149,1456,175"/>
+<area shape="rect" href="lcd_8c.html#a9b451fe57dbdfef32faf1d96b9d7dce4" title=" " alt="" coords="1272,138,1384,165"/>
+<area shape="poly" title=" " alt="" coords="1424,187,1369,168,1371,163,1426,181"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="558,341,654,367"/>
+<area shape="poly" title=" " alt="" coords="1441,225,1389,250,1322,277,1246,298,1207,304,1168,306,986,306,844,310,702,331,654,343,653,337,702,326,843,305,986,301,1168,301,1207,298,1245,292,1320,272,1386,246,1438,221"/>
+<area shape="rect" href="lcd_8c.html#aad68360b11370fa86fcd068004ef903f" title="Resets cursor to original position." alt="" coords="1271,442,1385,469"/>
+<area shape="poly" title=" " alt="" coords="1476,231,1468,274,1453,328,1429,383,1413,409,1393,432,1377,444,1374,439,1390,428,1408,406,1424,380,1448,326,1463,273,1471,230"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1278,341,1378,367"/>
+<area shape="poly" title=" " alt="" coords="1465,231,1435,277,1393,324,1365,342,1362,338,1390,320,1431,274,1460,228"/>
+<area shape="rect" href="unit-test_8c.html#a600f033d6f6a144fbd69976eab19e3ee" title=" " alt="" coords="1128,189,1206,215"/>
+<area shape="poly" title=" " alt="" coords="1255,205,1206,205,1206,199,1255,199"/>
+<area shape="poly" title=" " alt="" coords="1268,182,1263,179,1245,155,1237,131,1230,108,1215,84,1193,66,1196,62,1219,80,1235,106,1242,130,1250,152,1267,175,1271,178"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,189,348,215"/>
+<area shape="poly" title=" " alt="" coords="1257,187,1217,179,1103,160,1053,156,989,154,605,154,535,158,465,167,347,191,346,185,464,161,534,152,604,149,989,149,1054,150,1104,155,1217,174,1258,182"/>
+<area shape="rect" href="unit-test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="406,239,504,266"/>
+<area shape="poly" title=" " alt="" coords="1258,222,1217,230,1104,249,1054,254,989,255,779,255,504,255,504,250,779,250,989,250,1053,248,1103,244,1217,225,1257,217"/>
+<area shape="rect" href="unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,99,352,126"/>
+<area shape="poly" title=" " alt="" coords="1276,185,1264,179,1240,165,1216,152,1154,129,1105,114,1054,106,989,103,605,103,469,106,353,112,353,106,469,101,604,98,989,98,1055,101,1106,109,1156,124,1218,148,1243,160,1266,174,1278,180"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="754,37,807,63"/>
+<area shape="poly" title=" " alt="" coords="1122,53,807,53,807,47,1122,47"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,87,55,114"/>
+<area shape="poly" title=" " alt="" coords="738,53,456,53,291,53,224,57,158,69,56,95,54,90,156,63,223,52,291,47,456,47,738,47"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,163,174,190"/>
+<area shape="poly" title=" " alt="" coords="221,193,174,184,174,179,222,187"/>
+<area shape="poly" title=" " alt="" coords="108,157,50,117,53,112,111,152"/>
+<area shape="rect" href="unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,99,185,126"/>
+<area shape="poly" title=" " alt="" coords="218,115,185,115,185,110,218,110"/>
+<area shape="poly" title=" " alt="" coords="1250,53,1197,53,1197,47,1250,47"/>
+<area shape="poly" title=" " alt="" coords="1268,85,1196,62,1198,57,1269,80"/>
+<area shape="poly" title=" " alt="" coords="1272,133,1263,128,1239,107,1215,84,1190,66,1193,62,1219,80,1242,103,1267,124,1275,129"/>
+<area shape="poly" title=" " alt="" coords="542,360,471,355,434,346,399,331,364,305,335,274,299,217,303,214,340,271,368,302,402,326,436,341,472,349,543,355"/>
+<area shape="poly" title=" " alt="" coords="577,332,508,280,487,269,490,264,511,276,580,328"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="400,417,510,443"/>
+<area shape="poly" title=" " alt="" coords="565,377,485,419,482,414,563,372"/>
+<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="403,290,507,317"/>
+<area shape="poly" title=" " alt="" coords="549,338,496,320,498,315,550,333"/>
+<area shape="poly" title=" " alt="" coords="407,285,399,280,350,248,310,218,313,214,353,244,402,276,410,280"/>
+<area shape="poly" title=" " alt="" coords="402,283,398,280,380,254,371,230,364,206,350,178,329,151,307,128,311,125,333,147,355,175,369,204,376,229,384,252,402,276,405,279"/>
+<area shape="rect" href="unit-test_8c.html#a02e71048dc3a569b41b257dec3b00cf0" title=" " alt="" coords="240,391,345,418"/>
+<area shape="poly" title=" " alt="" coords="421,327,317,393,314,389,418,323"/>
+<area shape="rect" href="lcd_8c.html#a8de82b22879092baf8383713ecc708e9" title="Sets the cursor position." alt="" coords="1117,417,1217,443"/>
+<area shape="poly" title=" " alt="" coords="1278,376,1266,382,1195,418,1192,414,1264,377,1276,371"/>
+<area shape="poly" title=" " alt="" coords="1101,433,510,433,510,427,1101,427"/>
+<area shape="poly" title=" " alt="" coords="1110,451,1044,469,962,488,872,503,782,509,604,509,562,506,519,499,438,475,368,446,317,421,320,416,370,441,440,470,521,494,563,501,605,503,781,503,872,498,961,483,1042,464,1108,446"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="906,391,1069,418"/>
+<area shape="poly" title=" " alt="" coords="1101,423,1069,419,1070,414,1102,418"/>
+<area shape="poly" title=" " alt="" coords="891,403,799,395,702,382,653,371,654,365,702,377,799,390,891,398"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="702,341,858,367"/>
+<area shape="poly" title=" " alt="" coords="914,390,837,371,838,365,915,384"/>
+<area shape="poly" title=" " alt="" coords="686,357,655,357,655,351,686,351"/>
 </map>
 </div>
 

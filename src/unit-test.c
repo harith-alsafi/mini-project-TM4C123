@@ -17,31 +17,31 @@ void TestLcdClear(){
 }
 
 void TestLcdCursor(){
-    LcdSetCursor(0, 0);
-    LcdPrintString("Harith Al-Safi");
+    LcdSetCursor(0, 0, false);
+    LcdPrintString("Harith Al-Safi", false);
 
-    LcdSetCursor(1, 0);
-    LcdPrintString("and Thuraya go");
+    LcdSetCursor(1, 0, false);
+    LcdPrintString("and Thuraya go", false);
 
-    LcdSetCursor(2, 3);
-    LcdPrintString("Johnson go");
+    LcdSetCursor(2, 3, false);
+    LcdPrintString("Johnson go", false);
 }
 
 void TestLcdMultiLine(){
-    LcdPrintString("Karith Al-Sadi aNd tHuraya gO everywhEre");
-    LcdPrintString("Harith Al-Safi and Thuraya go everywhere");
+    LcdPrintString("Karith Al-Sadi aNd tHuraya gO everywhEre", true);
+    LcdPrintString("Harith Al-Safi and Thuraya go everywhere", true);
 
     DelayMilli(3000);
 
-    LcdPrintString("Barith Al-Nadi aNd thuRaya GO eveRywhEre");
-    LcdPrintString("Harith Al-Safi and Thuraya go everywhere");
+    LcdPrintString("Barith Al-Nadi aNd thuRaya GO eveRywhEre", true);
+    LcdPrintString("Harith Al-Safi and Thuraya go everywhere", true);
 
     DelayMilli(3000);
 
     LcdClearDisplay();
 
-    LcdPrintString("Jarith Al-Qadi ANd thuRAya Go EveRywhEre");
-    LcdPrintString("Harith Al-Safi and Thuraya go everywhere");
+    LcdPrintString("Jarith Al-Qadi ANd thuRAya Go EveRywhEre", true);
+    LcdPrintString("Harith Al-Safi and Thuraya go everywhere", true);
 
 }
 
@@ -55,10 +55,10 @@ void TestLcdAll(){
 }
 
 void TestKeypadLcd(){
-    LcdPrintString("Press any key");
+    LcdPrintString("Press any key", true);
     KeyInfo keyInfo = KeypadWaitForInput();
     LcdClearDisplay();
-    LcdPrintString("You pressed: ");
+    LcdPrintString("You pressed: ", true);
     LcdPrintChar(keyInfo.key, true);
     DelayMilli(3000);
     LcdClearDisplay();

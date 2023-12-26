@@ -84,15 +84,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="clock_8h__dep__incl.png" border="0" usemap="#asrc_2clock_8hdep" alt=""/></div>
 <map name="asrc_2clock_8hdep" id="asrc_2clock_8hdep">
-<area shape="rect" title=" " alt="" coords="159,5,244,32"/>
+<area shape="rect" title=" " alt="" coords="279,5,364,32"/>
 <area shape="rect" href="clock_8c.html" title=" " alt="" coords="5,80,91,107"/>
-<area shape="poly" title=" " alt="" coords="162,41,76,82,74,77,160,37"/>
-<area shape="rect" href="lcd_8c.html" title=" " alt="" coords="115,80,186,107"/>
-<area shape="poly" title=" " alt="" coords="186,46,162,81,157,78,182,43"/>
-<area shape="rect" href="main_8c.html" title=" " alt="" coords="211,80,293,107"/>
-<area shape="poly" title=" " alt="" coords="221,43,245,78,241,81,217,46"/>
-<area shape="rect" href="ports_8c.html" title=" " alt="" coords="317,80,400,107"/>
-<area shape="poly" title=" " alt="" coords="244,36,332,77,330,82,241,41"/>
+<area shape="poly" title=" " alt="" coords="264,38,92,83,90,78,263,33"/>
+<area shape="rect" href="keypad_8c.html" title=" " alt="" coords="115,80,211,107"/>
+<area shape="poly" title=" " alt="" coords="281,41,192,82,189,77,279,36"/>
+<area shape="rect" href="lcd_8c.html" title=" " alt="" coords="235,80,306,107"/>
+<area shape="poly" title=" " alt="" coords="306,46,282,81,277,78,302,43"/>
+<area shape="rect" href="ports_8c.html" title=" " alt="" coords="330,80,414,107"/>
+<area shape="poly" title=" " alt="" coords="341,43,365,78,361,81,337,46"/>
+<area shape="rect" href="program-logic_8c.html" title=" " alt="" coords="438,80,570,107"/>
+<area shape="poly" title=" " alt="" coords="368,36,473,77,471,82,366,41"/>
+<area shape="rect" href="unit-test_8c.html" title=" " alt="" coords="595,80,696,107"/>
+<area shape="poly" title=" " alt="" coords="380,30,595,78,594,83,379,35"/>
 </map>
 </div>
 </div>
@@ -100,8 +104,6 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a8d85d526f6d06f351f5ad915765de293" id="r_a8d85d526f6d06f351f5ad915765de293"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clock_8h.html#a8d85d526f6d06f351f5ad915765de293">CLOCK_H</a></td></tr>
-<tr class="separator:a8d85d526f6d06f351f5ad915765de293"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fedfceccf18bd54a499e73d1b76e506" id="r_a2fedfceccf18bd54a499e73d1b76e506"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clock_8h.html#a2fedfceccf18bd54a499e73d1b76e506">SYSCTL_RCGC2_R</a>&#160;&#160;&#160;(*((volatile unsigned long *)0x400FE108))</td></tr>
 <tr class="separator:a2fedfceccf18bd54a499e73d1b76e506"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1e0e3bbc40315eaa5e3cad513d5dae8" id="r_ac1e0e3bbc40315eaa5e3cad513d5dae8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clock_8h.html#ac1e0e3bbc40315eaa5e3cad513d5dae8">SYSCTL_RIS_R</a>&#160;&#160;&#160;(*((volatile unsigned long *)0x400FE050))</td></tr>
@@ -125,6 +127,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a21cfe49b38d53efaf75df16d21ed882a" id="r_a21cfe49b38d53efaf75df16d21ed882a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clock_8h.html#a21cfe49b38d53efaf75df16d21ed882a">PLLInit</a> ()</td></tr>
 <tr class="memdesc:a21cfe49b38d53efaf75df16d21ed882a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalizes the PLL to 80 MHz.  <br /></td></tr>
 <tr class="separator:a21cfe49b38d53efaf75df16d21ed882a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab89b66fae1f889e7a033bccd757a12de" id="r_ab89b66fae1f889e7a033bccd757a12de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clock_8h.html#ab89b66fae1f889e7a033bccd757a12de">ClockInit</a> ()</td></tr>
+<tr class="memdesc:ab89b66fae1f889e7a033bccd757a12de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the clock.  <br /></td></tr>
+<tr class="separator:ab89b66fae1f889e7a033bccd757a12de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b776ea9ad4388518694b3c099238a74" id="r_a9b776ea9ad4388518694b3c099238a74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clock_8h.html#a9b776ea9ad4388518694b3c099238a74">SysTickWait</a> (unsigned long <a class="el" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403">delay</a>)</td></tr>
 <tr class="memdesc:a9b776ea9ad4388518694b3c099238a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses the 80 MHz PLL to create a delay in units of 12.5ns.  <br /></td></tr>
 <tr class="separator:a9b776ea9ad4388518694b3c099238a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,22 +144,6 @@ Functions</h2></td></tr>
 <tr class="separator:a2e760c634cc89519ad0956fc258eab46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a8d85d526f6d06f351f5ad915765de293" name="a8d85d526f6d06f351f5ad915765de293"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d85d526f6d06f351f5ad915765de293">&#9670;&#160;</a></span>CLOCK_H</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CLOCK_H</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="clock_8h_source.html#l00002">2</a> of file <a class="el" href="clock_8h_source.html">clock.h</a>.</p>
-
-</div>
-</div>
 <a id="adcfc8530f81c2ebea5d6b229ba4f9d3f" name="adcfc8530f81c2ebea5d6b229ba4f9d3f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adcfc8530f81c2ebea5d6b229ba4f9d3f">&#9670;&#160;</a></span>NVIC_ST_CTRL_R</h2>
 
@@ -268,6 +257,51 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ab89b66fae1f889e7a033bccd757a12de" name="ab89b66fae1f889e7a033bccd757a12de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab89b66fae1f889e7a033bccd757a12de">&#9670;&#160;</a></span>ClockInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClockInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the clock. </p>
+
+<p class="definition">Definition at line <a class="el" href="clock_8c_source.html#l00034">34</a> of file <a class="el" href="clock_8c_source.html">clock.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="clock_8h_ab89b66fae1f889e7a033bccd757a12de_cgraph.png" border="0" usemap="#aclock_8h_ab89b66fae1f889e7a033bccd757a12de_cgraph" alt=""/></div>
+<map name="aclock_8h_ab89b66fae1f889e7a033bccd757a12de_cgraph" id="aclock_8h_ab89b66fae1f889e7a033bccd757a12de_cgraph">
+<area shape="rect" title="Initializes the clock." alt="" coords="5,31,77,57"/>
+<area shape="rect" href="clock_8c.html#a21cfe49b38d53efaf75df16d21ed882a" title="Initalizes the PLL to 80 MHz." alt="" coords="137,5,198,32"/>
+<area shape="poly" title=" " alt="" coords="76,34,121,25,122,30,77,40"/>
+<area shape="rect" href="clock_8c.html#a58cf193ae5c1f330e4868e32afb9445d" title="Initializes sys tick." alt="" coords="125,56,210,83"/>
+<area shape="poly" title=" " alt="" coords="77,48,110,55,109,60,76,54"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="clock_8h_ab89b66fae1f889e7a033bccd757a12de_icgraph.png" border="0" usemap="#aclock_8h_ab89b66fae1f889e7a033bccd757a12de_icgraph" alt=""/></div>
+<map name="aclock_8h_ab89b66fae1f889e7a033bccd757a12de_icgraph" id="aclock_8h_ab89b66fae1f889e7a033bccd757a12de_icgraph">
+<area shape="rect" title="Initializes the clock." alt="" coords="204,5,275,32"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="103,5,156,32"/>
+<area shape="poly" title=" " alt="" coords="188,21,156,21,156,16,188,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a44cfb49005f69fe95c0ce5f30b9a660e" name="a44cfb49005f69fe95c0ce5f30b9a660e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44cfb49005f69fe95c0ce5f30b9a660e">&#9670;&#160;</a></span>DelayMicro()</h2>
 
@@ -293,7 +327,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="clock_8c_source.html#l00047">47</a> of file <a class="el" href="clock_8c_source.html">clock.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="clock_8c_source.html#l00052">52</a> of file <a class="el" href="clock_8c_source.html">clock.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -311,44 +345,63 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="clock_8h_a44cfb49005f69fe95c0ce5f30b9a660e_icgraph.png" border="0" usemap="#aclock_8h_a44cfb49005f69fe95c0ce5f30b9a660e_icgraph" alt=""/></div>
 <map name="aclock_8h_a44cfb49005f69fe95c0ce5f30b9a660e_icgraph" id="aclock_8h_a44cfb49005f69fe95c0ce5f30b9a660e_icgraph">
-<area shape="rect" title="Uses." alt="" coords="1142,183,1228,209"/>
-<area shape="rect" href="lcd_8c.html#a09b8fcddedb13ac22fa8cfc4dca9c78f" title="Sets the LCD cursor position." alt="" coords="977,5,1084,32"/>
-<area shape="poly" title=" " alt="" coords="1170,170,1139,112,1117,81,1092,53,1065,35,1068,30,1095,49,1121,77,1143,109,1174,167"/>
-<area shape="rect" href="lcd_8c.html#ab933996c707c767ce7c6933227bc5bd0" title="Controls the display, cursor, and blinking." alt="" coords="967,107,1094,133"/>
-<area shape="poly" title=" " alt="" coords="1147,177,1092,148,1067,136,1069,132,1095,143,1149,172"/>
-<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="840,157,899,184"/>
-<area shape="poly" title=" " alt="" coords="1167,171,1136,130,1116,111,1093,97,1059,85,1031,82,1003,86,968,97,943,109,919,126,884,159,880,155,916,122,940,105,966,92,1002,81,1031,76,1060,80,1095,92,1119,107,1140,127,1171,168"/>
-<area shape="rect" href="lcd_8c.html#a1e86a9c9a89725780eb464f5c42eb784" title="Sets the entry mode of the LCD." alt="" coords="968,157,1093,184"/>
-<area shape="poly" title=" " alt="" coords="1126,189,1093,184,1094,178,1127,184"/>
-<area shape="rect" href="lcd_8c.html#a6d3f15072d85ed9eecadf4223f0bac1b" title=" " alt="" coords="974,208,1087,235"/>
-<area shape="poly" title=" " alt="" coords="1127,208,1087,215,1086,210,1126,203"/>
-<area shape="rect" href="lcd_8c.html#ab1c2efe3f6552fcef08eeba3904d9376" title="Prints a character to the LCD." alt="" coords="260,309,356,336"/>
-<area shape="poly" title=" " alt="" coords="1153,221,1125,236,1095,249,1033,266,984,274,871,275,689,275,596,279,504,289,357,315,356,310,504,284,596,274,688,269,870,269,984,268,1032,261,1093,244,1123,231,1150,216"/>
-<area shape="rect" href="lcd_8c.html#aad68360b11370fa86fcd068004ef903f" title="Resets cursor to original position." alt="" coords="973,360,1088,387"/>
-<area shape="poly" title=" " alt="" coords="1176,225,1146,287,1123,321,1095,350,1077,362,1074,357,1092,346,1119,317,1141,284,1171,223"/>
-<area shape="rect" href="lcd_8c.html#ae368e9d14a294f0c32c7028b377f84e6" title="Sets the DDRAM address (cursor position)" alt="" coords="980,309,1081,336"/>
-<area shape="poly" title=" " alt="" coords="1166,223,1134,258,1095,293,1065,311,1062,307,1092,289,1131,254,1162,219"/>
-<area shape="poly" title=" " alt="" coords="972,141,900,164,898,159,970,136"/>
-<area shape="rect" href="main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="456,183,509,209"/>
-<area shape="poly" title=" " alt="" coords="824,176,510,197,509,192,824,171"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,265,55,292"/>
-<area shape="poly" title=" " alt="" coords="441,206,55,277,54,272,440,201"/>
-<area shape="poly" title=" " alt="" coords="952,173,899,173,899,168,952,168"/>
-<area shape="poly" title=" " alt="" coords="970,205,898,182,900,177,972,200"/>
-<area shape="rect" href="lcd_8c.html#a3dbe526a93440b9586f3f5f270c335b1" title="Prints a character to the LCD at a given position." alt="" coords="103,385,212,412"/>
-<area shape="poly" title=" " alt="" coords="267,346,187,387,184,382,265,341"/>
-<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="106,309,209,336"/>
-<area shape="poly" title=" " alt="" coords="245,325,210,325,210,320,245,320"/>
-<area shape="poly" title=" " alt="" coords="102,306,54,290,56,285,103,301"/>
-<area shape="rect" href="lcd_8c.html#a1560ddb5bbf01143c0afe47bbc914b0e" title="Sets the cursor position." alt="" coords="819,335,919,361"/>
-<area shape="poly" title=" " alt="" coords="966,336,920,343,919,337,965,330"/>
-<area shape="poly" title=" " alt="" coords="806,368,772,376,693,388,613,397,456,406,316,407,212,404,213,399,316,402,456,401,613,392,693,383,770,371,805,363"/>
-<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="609,335,771,361"/>
-<area shape="poly" title=" " alt="" coords="803,351,772,351,772,345,803,345"/>
-<area shape="poly" title=" " alt="" coords="593,344,357,328,357,323,593,339"/>
-<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="404,360,561,387"/>
-<area shape="poly" title=" " alt="" coords="594,362,562,366,561,361,593,357"/>
-<area shape="poly" title=" " alt="" coords="418,358,356,339,357,334,420,352"/>
+<area shape="rect" title="Uses." alt="" coords="1439,220,1526,247"/>
+<area shape="rect" href="keypad_8c.html#ab826b54bc6305f49d758d28173041ab7" title=" " alt="" coords="1272,5,1385,32"/>
+<area shape="poly" title=" " alt="" coords="1471,206,1442,131,1419,90,1390,53,1364,35,1367,30,1393,49,1423,87,1447,129,1476,204"/>
+<area shape="rect" href="lcd_8c.html#a27164e4aa24d46318deab3dd42658978" title="Sets the LCD cursor position." alt="" coords="1275,372,1381,399"/>
+<area shape="poly" title=" " alt="" coords="1470,262,1439,312,1418,339,1393,362,1374,374,1371,369,1390,358,1414,335,1435,309,1465,259"/>
+<area shape="rect" href="lcd_8c.html#aca04f0c025afbc86a0fedc553f3a8ba4" title="Controls the display, cursor, and blinking." alt="" coords="1265,220,1391,247"/>
+<area shape="poly" title=" " alt="" coords="1424,236,1392,236,1392,231,1424,231"/>
+<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="1137,271,1197,297"/>
+<area shape="poly" title=" " alt="" coords="1430,218,1393,208,1351,202,1308,202,1266,211,1240,223,1217,239,1181,273,1178,269,1213,235,1237,218,1264,205,1307,197,1351,197,1394,203,1431,212"/>
+<area shape="rect" href="lcd_8c.html#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" title="Sets the entry mode of the LCD." alt="" coords="1266,271,1391,297"/>
+<area shape="poly" title=" " alt="" coords="1426,255,1372,273,1370,268,1424,250"/>
+<area shape="rect" href="lcd_8c.html#a9b451fe57dbdfef32faf1d96b9d7dce4" title=" " alt="" coords="1272,321,1384,348"/>
+<area shape="poly" title=" " alt="" coords="1459,260,1428,286,1393,312,1370,323,1367,319,1390,307,1425,282,1455,256"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="558,107,654,133"/>
+<area shape="poly" title=" " alt="" coords="1467,207,1437,156,1416,130,1390,109,1334,81,1285,71,1234,70,1168,72,986,72,844,76,702,97,654,109,653,103,702,92,843,71,986,67,1168,67,1233,65,1286,65,1336,76,1393,104,1419,126,1442,152,1472,204"/>
+<area shape="rect" href="lcd_8c.html#aad68360b11370fa86fcd068004ef903f" title="Resets cursor to original position." alt="" coords="1271,423,1385,449"/>
+<area shape="poly" title=" " alt="" coords="1476,262,1465,296,1447,336,1424,377,1393,413,1376,424,1373,420,1390,409,1419,374,1443,334,1460,294,1471,260"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1278,119,1378,145"/>
+<area shape="poly" title=" " alt="" coords="1452,212,1390,166,1358,148,1360,144,1393,162,1455,208"/>
+<area shape="rect" href="keypad_8c.html#a63a4bc1c3105f40dc85fe16092790f83" title=" " alt="" coords="711,5,850,32"/>
+<area shape="poly" title=" " alt="" coords="1256,21,850,21,850,16,1256,16"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,107,348,133"/>
+<area shape="poly" title=" " alt="" coords="695,14,629,13,555,16,477,26,401,47,374,59,349,76,309,108,306,104,345,71,371,55,399,41,476,21,554,11,629,7,695,9"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,107,174,133"/>
+<area shape="poly" title=" " alt="" coords="221,123,174,123,174,117,221,117"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,208,55,235"/>
+<area shape="poly" title=" " alt="" coords="108,144,104,147,71,179,45,209,41,206,67,176,101,143,105,140"/>
+<area shape="poly" title=" " alt="" coords="1269,254,1198,277,1196,272,1268,249"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="579,309,633,336"/>
+<area shape="poly" title=" " alt="" coords="1122,290,633,324,633,318,1121,284"/>
+<area shape="poly" title=" " alt="" coords="563,321,417,304,232,275,133,252,54,231,55,226,134,247,234,269,418,299,564,316"/>
+<area shape="poly" title=" " alt="" coords="1250,287,1197,287,1197,281,1250,281"/>
+<area shape="poly" title=" " alt="" coords="1268,319,1196,296,1198,291,1269,314"/>
+<area shape="poly" title=" " alt="" coords="542,123,349,123,349,117,542,117"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="400,208,510,235"/>
+<area shape="poly" title=" " alt="" coords="580,146,511,198,490,210,487,205,508,194,577,142"/>
+<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="403,157,507,184"/>
+<area shape="poly" title=" " alt="" coords="550,141,498,159,496,154,549,136"/>
+<area shape="rect" href="unit-test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="406,56,504,83"/>
+<area shape="poly" title=" " alt="" coords="549,104,496,86,498,81,550,99"/>
+<area shape="poly" title=" " alt="" coords="395,155,337,136,339,131,396,150"/>
+<area shape="rect" href="unit-test_8c.html#a02e71048dc3a569b41b257dec3b00cf0" title=" " alt="" coords="240,233,345,260"/>
+<area shape="poly" title=" " alt="" coords="412,193,401,198,324,235,322,230,399,194,410,189"/>
+<area shape="rect" href="unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,157,352,184"/>
+<area shape="poly" title=" " alt="" coords="387,173,353,173,353,168,387,168"/>
+<area shape="rect" href="unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,157,185,184"/>
+<area shape="poly" title=" " alt="" coords="218,173,185,173,185,168,218,168"/>
+<area shape="rect" href="lcd_8c.html#a8de82b22879092baf8383713ecc708e9" title="Sets the cursor position." alt="" coords="1117,195,1217,221"/>
+<area shape="poly" title=" " alt="" coords="1285,155,1198,197,1196,192,1283,150"/>
+<area shape="poly" title=" " alt="" coords="1101,212,510,223,510,218,1101,207"/>
+<area shape="poly" title=" " alt="" coords="1102,228,956,258,869,270,782,275,604,275,464,268,345,256,346,251,464,263,605,269,781,269,869,265,955,253,1101,223"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="906,157,1069,184"/>
+<area shape="poly" title=" " alt="" coords="1101,197,1054,187,1056,182,1102,192"/>
+<area shape="poly" title=" " alt="" coords="891,169,799,161,702,148,653,137,654,131,702,143,799,156,891,164"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="702,107,858,133"/>
+<area shape="poly" title=" " alt="" coords="914,156,837,137,838,131,915,150"/>
+<area shape="poly" title=" " alt="" coords="686,123,655,123,655,117,686,117"/>
 </map>
 </div>
 
@@ -379,7 +432,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="clock_8c_source.html#l00054">54</a> of file <a class="el" href="clock_8c_source.html">clock.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="clock_8c_source.html#l00059">59</a> of file <a class="el" href="clock_8c_source.html">clock.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -397,18 +450,33 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="clock_8h_a2e760c634cc89519ad0956fc258eab46_icgraph.png" border="0" usemap="#aclock_8h_a2e760c634cc89519ad0956fc258eab46_icgraph" alt=""/></div>
 <map name="aclock_8h_a2e760c634cc89519ad0956fc258eab46_icgraph" id="aclock_8h_a2e760c634cc89519ad0956fc258eab46_icgraph">
-<area shape="rect" title="Uses." alt="" coords="475,56,552,83"/>
-<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="311,56,427,83"/>
-<area shape="poly" title=" " alt="" coords="459,72,427,72,427,67,459,67"/>
-<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="204,5,263,32"/>
-<area shape="poly" title=" " alt="" coords="459,55,426,47,338,32,264,24,264,18,338,27,427,41,460,50"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
-<area shape="poly" title=" " alt="" coords="460,90,427,97,373,103,318,104,211,99,119,88,55,77,56,72,120,83,212,94,318,99,373,97,426,92,459,85"/>
-<area shape="poly" title=" " alt="" coords="316,53,263,32,265,27,318,48"/>
-<area shape="poly" title=" " alt="" coords="296,72,55,72,55,67,296,67"/>
-<area shape="rect" href="main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="103,5,156,32"/>
-<area shape="poly" title=" " alt="" coords="188,21,156,21,156,16,188,16"/>
-<area shape="poly" title=" " alt="" coords="90,42,57,59,54,54,88,37"/>
+<area shape="rect" title="Uses." alt="" coords="564,125,641,152"/>
+<area shape="rect" href="unit-test_8c.html#a600f033d6f6a144fbd69976eab19e3ee" title=" " alt="" coords="254,5,332,32"/>
+<area shape="poly" title=" " alt="" coords="578,116,550,88,514,64,468,45,418,33,332,22,333,17,419,28,469,40,517,59,553,84,582,112"/>
+<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="400,100,516,127"/>
+<area shape="poly" title=" " alt="" coords="548,132,516,126,517,121,549,127"/>
+<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="263,113,322,140"/>
+<area shape="poly" title=" " alt="" coords="548,143,400,141,323,133,323,128,400,136,548,138"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,63,348,89"/>
+<area shape="poly" title=" " alt="" coords="570,119,544,103,515,91,472,81,428,76,349,74,349,69,429,70,473,76,516,85,547,98,573,114"/>
+<area shape="rect" href="unit-test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="244,176,341,203"/>
+<area shape="poly" title=" " alt="" coords="549,150,342,184,341,179,548,145"/>
+<area shape="rect" href="unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,239,352,265"/>
+<area shape="poly" title=" " alt="" coords="559,162,517,180,423,214,341,241,339,235,421,209,515,175,557,157"/>
+<area shape="poly" title=" " alt="" coords="420,94,351,53,318,35,321,30,354,48,422,89"/>
+<area shape="poly" title=" " alt="" coords="385,122,323,127,323,122,385,117"/>
+<area shape="poly" title=" " alt="" coords="385,100,348,91,350,86,386,94"/>
+<area shape="poly" title=" " alt="" coords="414,136,325,178,323,173,412,131"/>
+<area shape="poly" title=" " alt="" coords="436,140,399,177,354,217,320,240,317,236,351,213,395,173,432,136"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="117,113,171,140"/>
+<area shape="poly" title=" " alt="" coords="247,129,171,129,171,124,247,124"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,88,55,115"/>
+<area shape="poly" title=" " alt="" coords="101,120,54,109,56,104,102,115"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,63,174,89"/>
+<area shape="poly" title=" " alt="" coords="221,79,174,79,174,73,221,73"/>
+<area shape="poly" title=" " alt="" coords="100,89,56,99,54,93,98,83"/>
+<area shape="rect" href="unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,239,185,265"/>
+<area shape="poly" title=" " alt="" coords="218,255,185,255,185,249,218,249"/>
 </map>
 </div>
 
@@ -439,7 +507,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="clock_8c_source.html#l00042">42</a> of file <a class="el" href="clock_8c_source.html">clock.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="clock_8c_source.html#l00047">47</a> of file <a class="el" href="clock_8c_source.html">clock.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -458,54 +526,72 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="clock_8h_a2b0d30a37314c42f7d52aeec96a6e3ac_icgraph.png" border="0" usemap="#aclock_8h_a2b0d30a37314c42f7d52aeec96a6e3ac_icgraph" alt=""/></div>
 <map name="aclock_8h_a2b0d30a37314c42f7d52aeec96a6e3ac_icgraph" id="aclock_8h_a2b0d30a37314c42f7d52aeec96a6e3ac_icgraph">
-<area shape="rect" title="Uses." alt="" coords="1585,83,1669,109"/>
-<area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="1445,83,1537,109"/>
-<area shape="poly" title=" " alt="" coords="1569,99,1537,99,1537,93,1569,93"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="1289,83,1397,109"/>
-<area shape="poly" title=" " alt="" coords="1430,99,1398,99,1398,93,1430,93"/>
-<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="840,87,899,113"/>
-<area shape="poly" title=" " alt="" coords="1303,78,1238,48,1154,21,1108,12,1060,8,1014,11,968,22,942,35,918,53,883,88,879,85,915,49,939,31,966,17,1013,6,1060,3,1108,7,1155,16,1240,43,1305,73"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="1142,184,1241,211"/>
-<area shape="poly" title=" " alt="" coords="1311,120,1214,186,1211,181,1308,116"/>
-<area shape="rect" href="main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="456,115,509,141"/>
-<area shape="poly" title=" " alt="" coords="824,106,510,129,509,123,824,100"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,184,55,211"/>
-<area shape="poly" title=" " alt="" coords="440,134,291,151,103,181,56,193,54,188,102,176,290,146,440,129"/>
-<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="973,184,1088,211"/>
-<area shape="poly" title=" " alt="" coords="1126,200,1088,200,1088,195,1126,195"/>
-<area shape="rect" href="lcd_8c.html#a09b8fcddedb13ac22fa8cfc4dca9c78f" title="Sets the LCD cursor position." alt="" coords="977,336,1084,363"/>
-<area shape="poly" title=" " alt="" coords="1178,226,1144,276,1121,303,1095,326,1075,338,1073,333,1092,322,1117,299,1140,273,1173,223"/>
-<area shape="rect" href="lcd_8c.html#ab933996c707c767ce7c6933227bc5bd0" title="Controls the display, cursor, and blinking." alt="" coords="967,32,1094,59"/>
-<area shape="poly" title=" " alt="" coords="1173,172,1140,122,1117,96,1092,73,1073,61,1075,57,1095,68,1121,92,1144,119,1178,169"/>
-<area shape="rect" href="lcd_8c.html#a1e86a9c9a89725780eb464f5c42eb784" title="Sets the entry mode of the LCD." alt="" coords="968,83,1093,109"/>
-<area shape="poly" title=" " alt="" coords="1163,176,1130,149,1092,124,1069,112,1072,107,1095,119,1133,145,1166,172"/>
-<area shape="rect" href="lcd_8c.html#a6d3f15072d85ed9eecadf4223f0bac1b" title=" " alt="" coords="974,133,1087,160"/>
-<area shape="poly" title=" " alt="" coords="1131,181,1075,163,1076,158,1133,176"/>
-<area shape="rect" href="lcd_8c.html#ab1c2efe3f6552fcef08eeba3904d9376" title="Prints a character to the LCD." alt="" coords="260,285,356,312"/>
-<area shape="poly" title=" " alt="" coords="1129,217,1094,225,983,245,871,251,689,251,596,255,504,265,357,291,356,286,504,260,596,249,688,245,870,245,982,239,1093,220,1128,212"/>
-<area shape="rect" href="lcd_8c.html#aad68360b11370fa86fcd068004ef903f" title="Resets cursor to original position." alt="" coords="973,387,1088,413"/>
-<area shape="poly" title=" " alt="" coords="1184,226,1152,300,1127,341,1095,377,1078,388,1075,384,1092,373,1123,338,1148,298,1179,224"/>
-<area shape="rect" href="lcd_8c.html#ae368e9d14a294f0c32c7028b377f84e6" title="Sets the DDRAM address (cursor position)" alt="" coords="980,285,1081,312"/>
-<area shape="poly" title=" " alt="" coords="1162,222,1095,269,1062,287,1059,282,1092,264,1159,218"/>
-<area shape="poly" title=" " alt="" coords="976,180,966,174,921,144,885,116,888,112,924,140,969,170,979,175"/>
-<area shape="poly" title=" " alt="" coords="957,200,691,200,307,200,55,200,55,195,307,195,691,195,957,195"/>
-<area shape="poly" title=" " alt="" coords="975,67,900,92,898,87,974,62"/>
-<area shape="poly" title=" " alt="" coords="952,100,899,102,899,97,952,95"/>
-<area shape="poly" title=" " alt="" coords="967,131,899,111,900,106,968,126"/>
-<area shape="rect" href="lcd_8c.html#a3dbe526a93440b9586f3f5f270c335b1" title="Prints a character to the LCD at a given position." alt="" coords="103,336,212,363"/>
-<area shape="poly" title=" " alt="" coords="253,320,200,338,199,333,251,315"/>
-<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="106,260,209,287"/>
-<area shape="poly" title=" " alt="" coords="244,291,209,285,210,279,245,285"/>
-<area shape="poly" title=" " alt="" coords="119,254,53,213,55,209,122,249"/>
-<area shape="rect" href="lcd_8c.html#a1560ddb5bbf01143c0afe47bbc914b0e" title="Sets the cursor position." alt="" coords="819,311,919,337"/>
-<area shape="poly" title=" " alt="" coords="966,311,920,319,919,313,965,306"/>
-<area shape="poly" title=" " alt="" coords="806,344,772,352,669,370,589,379,508,381,404,377,302,369,212,359,213,354,302,364,404,372,508,376,588,374,669,365,770,347,805,339"/>
-<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="609,311,771,337"/>
-<area shape="poly" title=" " alt="" coords="803,327,772,327,772,321,803,321"/>
-<area shape="poly" title=" " alt="" coords="593,320,357,304,357,299,593,315"/>
-<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="404,336,561,363"/>
-<area shape="poly" title=" " alt="" coords="594,338,562,342,561,337,593,333"/>
-<area shape="poly" title=" " alt="" coords="418,334,356,315,357,310,420,328"/>
+<area shape="rect" title="Uses." alt="" coords="1882,82,1967,109"/>
+<area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="1743,82,1834,109"/>
+<area shape="poly" title=" " alt="" coords="1867,98,1835,98,1835,93,1867,93"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1587,82,1695,109"/>
+<area shape="poly" title=" " alt="" coords="1727,98,1695,98,1695,93,1727,93"/>
+<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="1137,82,1197,109"/>
+<area shape="poly" title=" " alt="" coords="1600,77,1536,48,1451,21,1405,12,1358,8,1311,11,1266,22,1240,34,1217,50,1181,84,1178,80,1213,46,1237,29,1264,17,1310,6,1358,3,1406,7,1453,16,1538,43,1602,72"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1439,183,1539,210"/>
+<area shape="poly" title=" " alt="" coords="1608,120,1512,185,1509,181,1605,115"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="754,82,807,109"/>
+<area shape="poly" title=" " alt="" coords="1122,98,807,98,807,93,1122,93"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,143,55,170"/>
+<area shape="poly" title=" " alt="" coords="738,98,456,98,291,98,224,104,158,117,56,150,54,144,156,112,223,98,291,93,456,93,738,93"/>
+<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="1271,411,1386,438"/>
+<area shape="poly" title=" " alt="" coords="1478,225,1443,293,1393,369,1349,413,1345,409,1389,366,1439,290,1473,223"/>
+<area shape="rect" href="lcd_8c.html#a27164e4aa24d46318deab3dd42658978" title="Sets the LCD cursor position." alt="" coords="1275,133,1381,159"/>
+<area shape="poly" title=" " alt="" coords="1429,180,1372,162,1374,157,1430,175"/>
+<area shape="rect" href="lcd_8c.html#aca04f0c025afbc86a0fedc553f3a8ba4" title="Controls the display, cursor, and blinking." alt="" coords="1265,82,1391,109"/>
+<area shape="poly" title=" " alt="" coords="1460,175,1428,148,1390,123,1367,112,1369,107,1393,118,1431,144,1464,171"/>
+<area shape="rect" href="lcd_8c.html#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" title="Sets the entry mode of the LCD." alt="" coords="1266,234,1391,261"/>
+<area shape="poly" title=" " alt="" coords="1430,218,1374,236,1372,231,1429,213"/>
+<area shape="rect" href="lcd_8c.html#a9b451fe57dbdfef32faf1d96b9d7dce4" title=" " alt="" coords="1272,31,1384,58"/>
+<area shape="poly" title=" " alt="" coords="1471,171,1437,121,1415,95,1390,72,1370,61,1373,56,1393,68,1419,91,1442,118,1475,168"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="558,285,654,311"/>
+<area shape="poly" title=" " alt="" coords="1478,225,1445,278,1421,304,1393,325,1362,341,1335,351,1285,357,1168,351,986,351,843,347,702,326,653,314,654,309,702,321,844,341,986,346,1168,346,1285,352,1333,345,1360,336,1390,321,1417,300,1441,275,1473,222"/>
+<area shape="rect" href="lcd_8c.html#aad68360b11370fa86fcd068004ef903f" title="Resets cursor to original position." alt="" coords="1271,183,1385,210"/>
+<area shape="poly" title=" " alt="" coords="1424,199,1386,199,1386,194,1424,194"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1278,285,1378,311"/>
+<area shape="poly" title=" " alt="" coords="1464,222,1431,249,1393,275,1369,286,1367,282,1390,270,1428,245,1460,218"/>
+<area shape="poly" title=" " alt="" coords="1307,400,1263,324,1237,261,1215,198,1173,110,1178,108,1219,196,1242,259,1267,322,1311,397"/>
+<area shape="rect" href="unit-test_8c.html#a600f033d6f6a144fbd69976eab19e3ee" title=" " alt="" coords="1128,487,1206,514"/>
+<area shape="poly" title=" " alt="" coords="1285,447,1198,489,1196,484,1283,443"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,278,348,305"/>
+<area shape="poly" title=" " alt="" coords="1256,436,1131,447,989,453,605,453,498,453,452,444,399,420,365,394,336,363,299,307,303,304,340,360,368,390,402,416,454,439,498,448,604,447,989,447,1131,442,1255,430"/>
+<area shape="rect" href="unit-test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="406,379,504,406"/>
+<area shape="poly" title=" " alt="" coords="1255,419,1131,408,989,402,779,402,504,397,504,391,779,397,989,397,1131,402,1256,413"/>
+<area shape="rect" href="unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,455,352,482"/>
+<area shape="poly" title=" " alt="" coords="1310,452,1271,492,1246,512,1218,528,1157,550,1107,557,989,554,604,554,523,546,445,528,376,506,324,485,326,480,378,501,446,523,524,541,605,549,989,549,1106,552,1156,545,1216,523,1243,508,1267,488,1306,448"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,205,174,231"/>
+<area shape="poly" title=" " alt="" coords="249,273,172,234,174,229,251,268"/>
+<area shape="poly" title=" " alt="" coords="103,199,54,172,57,167,106,194"/>
+<area shape="rect" href="unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,455,185,482"/>
+<area shape="poly" title=" " alt="" coords="218,471,185,471,185,466,218,466"/>
+<area shape="poly" title=" " alt="" coords="1250,98,1197,98,1197,93,1250,93"/>
+<area shape="poly" title=" " alt="" coords="1270,228,1263,224,1233,196,1207,164,1173,110,1178,108,1212,161,1237,192,1267,220,1273,224"/>
+<area shape="poly" title=" " alt="" coords="1269,66,1198,89,1196,84,1268,61"/>
+<area shape="poly" title=" " alt="" coords="542,299,349,295,349,290,542,294"/>
+<area shape="poly" title=" " alt="" coords="571,322,479,381,476,377,569,318"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="400,195,510,222"/>
+<area shape="poly" title=" " alt="" coords="567,279,508,243,478,225,481,220,511,238,570,274"/>
+<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="403,253,507,279"/>
+<area shape="poly" title=" " alt="" coords="542,287,507,279,508,274,543,282"/>
+<area shape="poly" title=" " alt="" coords="388,279,349,285,348,280,387,274"/>
+<area shape="poly" title=" " alt="" coords="435,294,307,457,303,453,431,290"/>
+<area shape="rect" href="unit-test_8c.html#a02e71048dc3a569b41b257dec3b00cf0" title=" " alt="" coords="240,179,345,206"/>
+<area shape="poly" title=" " alt="" coords="408,248,323,209,325,204,411,243"/>
+<area shape="rect" href="lcd_8c.html#a8de82b22879092baf8383713ecc708e9" title="Sets the cursor position." alt="" coords="1117,209,1217,235"/>
+<area shape="poly" title=" " alt="" coords="1276,280,1264,275,1192,238,1195,233,1266,270,1278,276"/>
+<area shape="poly" title=" " alt="" coords="1101,223,510,212,510,207,1101,218"/>
+<area shape="poly" title=" " alt="" coords="1108,206,1042,188,961,169,872,154,781,149,605,149,534,152,464,160,346,183,345,177,463,155,534,147,604,143,782,143,872,149,962,164,1044,182,1110,201"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="906,234,1069,261"/>
+<area shape="poly" title=" " alt="" coords="1102,234,1070,238,1069,233,1101,228"/>
+<area shape="poly" title=" " alt="" coords="891,254,799,262,702,275,654,286,653,281,702,270,799,257,891,249"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="702,285,858,311"/>
+<area shape="poly" title=" " alt="" coords="915,267,838,287,837,281,914,262"/>
+<area shape="poly" title=" " alt="" coords="686,301,655,301,655,295,686,295"/>
 </map>
 </div>
 
@@ -534,9 +620,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="clock_8h_a21cfe49b38d53efaf75df16d21ed882a_icgraph.png" border="0" usemap="#aclock_8h_a21cfe49b38d53efaf75df16d21ed882a_icgraph" alt=""/></div>
 <map name="aclock_8h_a21cfe49b38d53efaf75df16d21ed882a_icgraph" id="aclock_8h_a21cfe49b38d53efaf75df16d21ed882a_icgraph">
-<area shape="rect" title="Initalizes the PLL to 80 MHz." alt="" coords="204,5,265,32"/>
-<area shape="rect" href="main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="103,5,156,32"/>
-<area shape="poly" title=" " alt="" coords="189,21,156,21,156,16,189,16"/>
+<area shape="rect" title="Initalizes the PLL to 80 MHz." alt="" coords="323,5,385,32"/>
+<area shape="rect" href="clock_8c.html#ab89b66fae1f889e7a033bccd757a12de" title="Initializes the clock." alt="" coords="204,5,275,32"/>
+<area shape="poly" title=" " alt="" coords="308,21,276,21,276,16,308,16"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="103,5,156,32"/>
+<area shape="poly" title=" " alt="" coords="188,21,156,21,156,16,188,16"/>
 <area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
@@ -567,9 +655,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="clock_8h_a58cf193ae5c1f330e4868e32afb9445d_icgraph.png" border="0" usemap="#aclock_8h_a58cf193ae5c1f330e4868e32afb9445d_icgraph" alt=""/></div>
 <map name="aclock_8h_a58cf193ae5c1f330e4868e32afb9445d_icgraph" id="aclock_8h_a58cf193ae5c1f330e4868e32afb9445d_icgraph">
-<area shape="rect" title="Initializes sys tick." alt="" coords="204,5,289,32"/>
-<area shape="rect" href="main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="103,5,156,32"/>
-<area shape="poly" title=" " alt="" coords="189,21,156,21,156,16,189,16"/>
+<area shape="rect" title="Initializes sys tick." alt="" coords="323,5,409,32"/>
+<area shape="rect" href="clock_8c.html#ab89b66fae1f889e7a033bccd757a12de" title="Initializes the clock." alt="" coords="204,5,275,32"/>
+<area shape="poly" title=" " alt="" coords="308,21,276,21,276,16,308,16"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="103,5,156,32"/>
+<area shape="poly" title=" " alt="" coords="188,21,156,21,156,16,188,16"/>
 <area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
@@ -601,7 +691,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="clock_8c_source.html#l00035">35</a> of file <a class="el" href="clock_8c_source.html">clock.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="clock_8c_source.html#l00040">40</a> of file <a class="el" href="clock_8c_source.html">clock.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -617,71 +707,97 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="clock_8h_a9b776ea9ad4388518694b3c099238a74_icgraph.png" border="0" usemap="#aclock_8h_a9b776ea9ad4388518694b3c099238a74_icgraph" alt=""/></div>
 <map name="aclock_8h_a9b776ea9ad4388518694b3c099238a74_icgraph" id="aclock_8h_a9b776ea9ad4388518694b3c099238a74_icgraph">
-<area shape="rect" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1717,373,1812,400"/>
-<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1148,196,1235,222"/>
-<area shape="poly" title=" " alt="" coords="1703,371,1234,225,1236,220,1705,365"/>
-<area shape="rect" href="clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="1153,538,1230,565"/>
-<area shape="poly" title=" " alt="" coords="1703,407,1231,543,1230,538,1702,402"/>
-<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1585,373,1669,400"/>
-<area shape="poly" title=" " alt="" coords="1701,389,1670,389,1670,384,1701,384"/>
-<area shape="rect" href="lcd_8c.html#a09b8fcddedb13ac22fa8cfc4dca9c78f" title="Sets the LCD cursor position." alt="" coords="977,246,1084,273"/>
-<area shape="poly" title=" " alt="" coords="1134,230,1076,248,1075,243,1133,225"/>
-<area shape="rect" href="lcd_8c.html#ab933996c707c767ce7c6933227bc5bd0" title="Controls the display, cursor, and blinking." alt="" coords="967,297,1094,324"/>
-<area shape="poly" title=" " alt="" coords="1166,235,1133,261,1095,287,1072,299,1069,294,1092,283,1130,257,1163,231"/>
-<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="840,348,899,374"/>
-<area shape="poly" title=" " alt="" coords="1176,183,1144,130,1121,104,1092,85,1058,70,1029,64,1000,68,969,85,939,112,917,145,900,183,888,222,875,295,873,347,868,347,870,295,882,221,895,181,912,143,935,108,966,80,998,63,1029,58,1060,65,1095,80,1124,100,1148,127,1181,180"/>
-<area shape="rect" href="lcd_8c.html#a1e86a9c9a89725780eb464f5c42eb784" title="Sets the entry mode of the LCD." alt="" coords="968,348,1093,374"/>
-<area shape="poly" title=" " alt="" coords="1174,237,1134,294,1095,338,1075,350,1073,345,1092,334,1130,291,1170,234"/>
-<area shape="rect" href="lcd_8c.html#a6d3f15072d85ed9eecadf4223f0bac1b" title=" " alt="" coords="974,196,1087,222"/>
-<area shape="poly" title=" " alt="" coords="1133,212,1087,212,1087,206,1133,206"/>
-<area shape="rect" href="lcd_8c.html#ab1c2efe3f6552fcef08eeba3904d9376" title="Prints a character to the LCD." alt="" coords="260,120,356,146"/>
-<area shape="poly" title=" " alt="" coords="1178,182,1165,151,1147,117,1122,83,1092,55,1037,24,989,11,936,8,871,9,689,9,607,10,543,14,481,29,406,59,359,89,324,121,320,117,355,85,403,55,479,24,542,9,606,4,688,4,870,4,936,3,989,5,1039,19,1095,51,1126,80,1151,114,1170,149,1183,180"/>
-<area shape="rect" href="lcd_8c.html#aad68360b11370fa86fcd068004ef903f" title="Resets cursor to original position." alt="" coords="973,145,1088,172"/>
-<area shape="poly" title=" " alt="" coords="1133,193,1075,175,1076,170,1134,188"/>
-<area shape="rect" href="lcd_8c.html#ae368e9d14a294f0c32c7028b377f84e6" title="Sets the DDRAM address (cursor position)" alt="" coords="980,94,1081,121"/>
-<area shape="poly" title=" " alt="" coords="1163,188,1130,161,1092,135,1069,124,1072,119,1095,131,1133,157,1166,183"/>
-<area shape="poly" title=" " alt="" coords="972,332,900,354,898,349,970,326"/>
-<area shape="rect" href="main_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title=" " alt="" coords="456,348,509,374"/>
-<area shape="poly" title=" " alt="" coords="824,364,509,364,509,358,824,358"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,424,55,450"/>
-<area shape="poly" title=" " alt="" coords="441,371,55,436,54,430,440,365"/>
-<area shape="poly" title=" " alt="" coords="952,364,899,364,899,358,952,358"/>
-<area shape="poly" title=" " alt="" coords="975,232,969,236,939,264,914,295,880,349,875,346,910,292,936,260,966,232,972,228"/>
-<area shape="rect" href="lcd_8c.html#a3dbe526a93440b9586f3f5f270c335b1" title="Prints a character to the LCD at a given position." alt="" coords="103,170,212,197"/>
-<area shape="poly" title=" " alt="" coords="253,154,200,172,199,167,251,149"/>
-<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="106,120,209,146"/>
-<area shape="poly" title=" " alt="" coords="245,136,210,136,210,130,245,130"/>
-<area shape="poly" title=" " alt="" coords="107,158,105,160,82,193,65,229,53,267,44,305,35,375,34,423,28,423,30,374,39,304,48,266,60,227,78,190,101,157,103,155"/>
-<area shape="rect" href="lcd_8c.html#a1560ddb5bbf01143c0afe47bbc914b0e" title="Sets the cursor position." alt="" coords="819,94,919,121"/>
-<area shape="poly" title=" " alt="" coords="965,110,920,110,920,105,965,105"/>
-<area shape="poly" title=" " alt="" coords="807,128,771,136,613,158,455,172,212,185,212,180,455,167,612,152,771,130,806,123"/>
-<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="609,94,771,121"/>
-<area shape="poly" title=" " alt="" coords="803,110,772,110,772,105,803,105"/>
-<area shape="poly" title=" " alt="" coords="593,117,357,133,357,127,593,111"/>
-<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="404,69,561,96"/>
-<area shape="poly" title=" " alt="" coords="593,99,561,95,562,89,594,93"/>
-<area shape="poly" title=" " alt="" coords="420,103,357,122,356,117,418,98"/>
-<area shape="poly" title=" " alt="" coords="1138,565,1098,568,1053,567,1008,559,966,541,944,524,926,503,898,456,880,410,871,375,876,374,885,409,903,454,930,500,948,520,969,536,1009,554,1054,562,1098,563,1137,559"/>
-<area shape="poly" title=" " alt="" coords="1138,571,1017,601,944,612,871,617,307,617,262,612,218,597,178,576,141,550,79,496,40,453,44,449,83,492,144,546,181,571,220,592,263,606,307,612,870,612,943,607,1016,596,1137,566"/>
-<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="973,500,1088,526"/>
-<area shape="poly" title=" " alt="" coords="1137,542,1088,530,1089,524,1138,536"/>
-<area shape="poly" title=" " alt="" coords="982,494,966,483,937,456,912,427,877,376,881,373,916,423,941,453,969,479,985,490"/>
-<area shape="poly" title=" " alt="" coords="957,507,833,496,691,490,307,490,234,486,163,474,54,447,56,442,164,469,235,480,307,485,691,485,834,491,958,502"/>
-<area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="1445,373,1537,400"/>
-<area shape="poly" title=" " alt="" coords="1569,389,1537,389,1537,384,1569,384"/>
-<area shape="rect" href="lcd_8c.html#a0d25295265e475f1fdab816f24759206" title="Sends a nibble to the LCD." alt="" coords="1289,373,1397,400"/>
-<area shape="poly" title=" " alt="" coords="1430,389,1398,389,1398,384,1430,384"/>
-<area shape="poly" title=" " alt="" coords="1274,394,1132,398,1049,396,967,389,899,373,900,368,968,384,1050,391,1132,393,1273,389"/>
-<area shape="rect" href="lcd_8c.html#a9fd93d4ece7b9d019ffebf10e290f4ea" title="Sends a byte to the LCD." alt="" coords="1142,297,1241,324"/>
-<area shape="poly" title=" " alt="" coords="1300,368,1219,327,1221,322,1302,363"/>
-<area shape="poly" title=" " alt="" coords="1131,294,1075,276,1076,271,1133,289"/>
-<area shape="poly" title=" " alt="" coords="1126,313,1094,313,1094,308,1126,308"/>
-<area shape="poly" title=" " alt="" coords="1133,332,1076,350,1075,345,1131,326"/>
-<area shape="poly" title=" " alt="" coords="1163,289,1130,262,1092,237,1069,225,1072,221,1095,232,1133,258,1166,285"/>
-<area shape="poly" title=" " alt="" coords="1169,336,1136,365,1095,389,1035,409,985,416,870,414,689,414,605,421,537,431,505,431,473,425,439,412,403,388,375,362,354,331,338,297,325,261,312,195,307,147,313,147,317,194,331,260,342,295,359,328,380,359,406,384,442,407,474,420,505,426,537,425,605,416,688,409,871,409,985,411,1033,404,1093,384,1133,360,1166,332"/>
-<area shape="poly" title=" " alt="" coords="1170,285,1130,229,1092,186,1073,174,1075,170,1095,182,1134,225,1174,282"/>
-<area shape="poly" title=" " alt="" coords="1170,286,1139,236,1127,206,1120,181,1111,159,1092,135,1075,124,1078,119,1095,131,1115,156,1125,179,1132,204,1144,233,1175,283"/>
-<area shape="poly" title=" " alt="" coords="1172,338,1044,501,1040,498,1168,335"/>
+<area shape="rect" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="2015,432,2110,459"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1446,229,1532,256"/>
+<area shape="poly" title=" " alt="" coords="2006,429,1529,259,1530,254,2008,424"/>
+<area shape="rect" href="clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="1450,660,1528,687"/>
+<area shape="poly" title=" " alt="" coords="2013,467,1526,662,1524,657,2011,462"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1882,432,1967,459"/>
+<area shape="poly" title=" " alt="" coords="1999,448,1967,448,1967,443,1999,443"/>
+<area shape="rect" href="keypad_8c.html#ab826b54bc6305f49d758d28173041ab7" title=" " alt="" coords="1272,52,1385,79"/>
+<area shape="poly" title=" " alt="" coords="1473,217,1439,159,1416,127,1390,99,1362,81,1365,77,1393,95,1420,124,1444,156,1477,214"/>
+<area shape="rect" href="lcd_8c.html#a27164e4aa24d46318deab3dd42658978" title="Sets the LCD cursor position." alt="" coords="1275,153,1381,180"/>
+<area shape="poly" title=" " alt="" coords="1449,224,1390,194,1364,183,1366,178,1392,190,1451,219"/>
+<area shape="rect" href="lcd_8c.html#aca04f0c025afbc86a0fedc553f3a8ba4" title="Controls the display, cursor, and blinking." alt="" coords="1265,204,1391,231"/>
+<area shape="poly" title=" " alt="" coords="1430,236,1391,230,1392,225,1431,231"/>
+<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="1137,280,1197,307"/>
+<area shape="poly" title=" " alt="" coords="1470,218,1437,177,1415,158,1390,144,1356,131,1327,126,1299,129,1266,144,1247,157,1231,173,1204,211,1185,250,1175,280,1170,279,1180,248,1199,209,1227,170,1244,153,1264,139,1298,124,1327,120,1357,126,1392,139,1418,154,1440,173,1474,214"/>
+<area shape="rect" href="lcd_8c.html#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" title="Sets the entry mode of the LCD." alt="" coords="1266,255,1391,281"/>
+<area shape="poly" title=" " alt="" coords="1431,254,1391,261,1391,255,1430,249"/>
+<area shape="rect" href="lcd_8c.html#a9b451fe57dbdfef32faf1d96b9d7dce4" title=" " alt="" coords="1272,305,1384,332"/>
+<area shape="poly" title=" " alt="" coords="1451,266,1392,296,1366,307,1364,302,1390,291,1449,261"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="558,356,654,383"/>
+<area shape="poly" title=" " alt="" coords="1481,215,1471,175,1453,127,1427,80,1410,60,1390,42,1361,25,1335,14,1311,9,1287,8,1234,13,1168,17,986,17,899,18,831,27,800,38,769,53,738,76,704,106,680,137,671,168,667,202,657,243,615,357,610,355,651,242,662,201,666,167,675,135,700,102,734,72,766,49,798,33,829,22,899,13,986,12,1168,12,1234,8,1287,3,1312,4,1337,9,1364,20,1393,38,1414,56,1431,77,1458,125,1476,173,1486,214"/>
+<area shape="rect" href="lcd_8c.html#aad68360b11370fa86fcd068004ef903f" title="Resets cursor to original position." alt="" coords="1271,407,1385,433"/>
+<area shape="poly" title=" " alt="" coords="1479,272,1446,334,1422,367,1393,397,1375,408,1372,404,1390,393,1418,364,1441,331,1474,269"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1278,356,1378,383"/>
+<area shape="poly" title=" " alt="" coords="1470,270,1436,309,1393,346,1371,358,1369,353,1390,342,1433,305,1466,267"/>
+<area shape="rect" href="keypad_8c.html#a63a4bc1c3105f40dc85fe16092790f83" title=" " alt="" coords="711,116,850,143"/>
+<area shape="poly" title=" " alt="" coords="1257,76,851,124,850,119,1256,71"/>
+<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,331,348,357"/>
+<area shape="poly" title=" " alt="" coords="700,149,630,169,559,194,440,259,318,332,315,328,438,254,557,190,629,164,699,144"/>
+<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,292,174,319"/>
+<area shape="poly" title=" " alt="" coords="223,329,173,316,175,310,225,324"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,248,55,275"/>
+<area shape="poly" title=" " alt="" coords="99,291,54,273,56,268,101,286"/>
+<area shape="poly" title=" " alt="" coords="1278,240,1266,245,1195,282,1192,277,1264,240,1276,235"/>
+<area shape="rect" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="579,204,633,231"/>
+<area shape="poly" title=" " alt="" coords="1127,275,1068,252,1006,239,942,229,816,219,708,217,633,219,633,213,708,211,817,213,942,224,1007,233,1069,247,1129,270"/>
+<area shape="poly" title=" " alt="" coords="564,223,55,262,55,257,564,218"/>
+<area shape="poly" title=" " alt="" coords="1250,283,1197,291,1196,286,1250,278"/>
+<area shape="poly" title=" " alt="" coords="1256,310,1197,301,1198,295,1257,305"/>
+<area shape="poly" title=" " alt="" coords="547,354,509,347,425,341,349,343,349,337,425,336,510,341,548,349"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="400,407,510,433"/>
+<area shape="poly" title=" " alt="" coords="550,391,498,409,496,404,549,386"/>
+<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="403,356,507,383"/>
+<area shape="poly" title=" " alt="" coords="542,372,507,372,507,367,542,367"/>
+<area shape="rect" href="unit-test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="406,559,504,585"/>
+<area shape="poly" title=" " alt="" coords="588,397,468,560,464,557,583,394"/>
+<area shape="poly" title=" " alt="" coords="387,362,348,355,349,350,388,356"/>
+<area shape="rect" href="unit-test_8c.html#a02e71048dc3a569b41b257dec3b00cf0" title=" " alt="" coords="240,267,345,293"/>
+<area shape="poly" title=" " alt="" coords="414,350,317,296,320,292,417,346"/>
+<area shape="rect" href="unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,609,352,636"/>
+<area shape="poly" title=" " alt="" coords="405,394,402,396,380,422,361,451,330,513,310,569,300,610,294,608,305,568,325,511,356,449,376,419,398,393,402,390"/>
+<area shape="rect" href="unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,609,185,636"/>
+<area shape="poly" title=" " alt="" coords="218,625,185,625,185,620,218,620"/>
+<area shape="rect" href="lcd_8c.html#a8de82b22879092baf8383713ecc708e9" title="Sets the cursor position." alt="" coords="1117,356,1217,383"/>
+<area shape="poly" title=" " alt="" coords="1262,372,1217,372,1217,367,1262,367"/>
+<area shape="poly" title=" " alt="" coords="1107,390,1069,397,910,415,753,423,614,425,510,424,510,419,614,420,753,418,910,409,1068,392,1106,384"/>
+<area shape="poly" title=" " alt="" coords="1120,352,1055,327,971,300,878,279,829,273,781,271,605,271,464,274,346,279,345,274,464,268,604,265,782,265,830,268,878,274,973,295,1057,322,1122,347"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="906,356,1069,383"/>
+<area shape="poly" title=" " alt="" coords="1101,372,1069,372,1069,367,1101,367"/>
+<area shape="poly" title=" " alt="" coords="891,372,655,372,655,367,891,367"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="702,305,858,332"/>
+<area shape="poly" title=" " alt="" coords="914,354,837,335,838,330,915,349"/>
+<area shape="poly" title=" " alt="" coords="718,339,655,358,654,353,716,334"/>
+<area shape="poly" title=" " alt="" coords="1471,701,1437,739,1393,773,1334,803,1285,819,1234,827,1168,828,604,828,563,824,525,811,491,791,460,765,432,734,407,700,366,622,336,541,314,465,293,358,298,357,319,464,341,540,371,620,412,697,436,731,463,761,494,787,527,806,564,818,605,823,1168,823,1233,821,1284,814,1332,798,1390,768,1434,735,1467,697"/>
+<area shape="poly" title=" " alt="" coords="1460,652,1427,626,1390,600,1354,584,1322,577,1293,567,1278,557,1263,542,1246,516,1237,492,1233,446,1232,398,1227,373,1215,345,1200,325,1184,309,1187,305,1204,322,1219,343,1232,371,1237,398,1238,445,1242,491,1251,514,1267,538,1281,553,1295,562,1324,572,1356,579,1393,595,1431,621,1463,648"/>
+<area shape="poly" title=" " alt="" coords="1453,697,1392,725,1283,764,1233,774,1168,777,604,777,557,773,511,761,466,743,424,722,354,676,307,638,311,634,357,671,427,717,468,738,512,756,558,768,605,772,1168,772,1232,769,1281,759,1390,720,1450,692"/>
+<area shape="poly" title=" " alt="" coords="1436,689,1314,714,1241,723,1168,727,779,727,730,722,682,710,636,692,592,671,519,625,470,588,473,583,522,621,595,666,638,688,683,705,731,717,779,721,1168,721,1241,718,1314,708,1435,684"/>
+<area shape="rect" href="unit-test_8c.html#a600f033d6f6a144fbd69976eab19e3ee" title=" " alt="" coords="1128,660,1206,687"/>
+<area shape="poly" title=" " alt="" coords="1435,676,1207,676,1207,671,1435,671"/>
+<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="1271,609,1386,636"/>
+<area shape="poly" title=" " alt="" coords="1435,659,1372,639,1373,634,1436,654"/>
+<area shape="poly" title=" " alt="" coords="1264,604,1238,587,1216,573,1155,548,1105,533,1055,526,989,524,604,524,543,519,496,505,452,481,399,448,370,426,343,402,303,360,307,356,347,399,373,422,402,443,455,477,498,500,544,514,605,519,989,519,1055,521,1107,528,1157,543,1218,568,1241,582,1267,600"/>
+<area shape="poly" title=" " alt="" coords="1272,602,1263,592,1243,560,1234,529,1231,499,1233,471,1234,412,1229,380,1215,345,1201,325,1184,309,1188,305,1205,322,1219,343,1234,379,1239,412,1238,471,1237,499,1239,528,1248,557,1267,589,1276,598"/>
+<area shape="poly" title=" " alt="" coords="1255,625,989,625,605,625,353,625,353,620,605,620,989,620,1255,620"/>
+<area shape="poly" title=" " alt="" coords="1255,608,1131,586,1060,578,989,575,779,575,504,575,504,569,779,569,989,569,1060,573,1132,581,1256,603"/>
+<area shape="poly" title=" " alt="" coords="1269,644,1207,664,1206,659,1268,639"/>
+<area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="1743,432,1834,459"/>
+<area shape="poly" title=" " alt="" coords="1867,448,1835,448,1835,443,1867,443"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1587,432,1695,459"/>
+<area shape="poly" title=" " alt="" coords="1727,448,1695,448,1695,443,1727,443"/>
+<area shape="poly" title=" " alt="" coords="1582,466,1513,480,1430,488,1387,486,1344,479,1302,467,1264,448,1250,437,1241,425,1233,401,1228,374,1215,345,1182,309,1186,305,1219,343,1233,373,1238,399,1246,423,1254,433,1266,443,1304,462,1345,474,1387,481,1430,482,1512,475,1581,460"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1439,356,1539,383"/>
+<area shape="poly" title=" " alt="" coords="1597,427,1516,386,1519,381,1600,422"/>
+<area shape="poly" title=" " alt="" coords="1472,343,1426,255,1389,194,1373,183,1376,178,1393,190,1431,252,1476,341"/>
+<area shape="poly" title=" " alt="" coords="1471,344,1437,294,1415,268,1390,245,1370,233,1373,229,1393,241,1419,264,1442,291,1475,341"/>
+<area shape="poly" title=" " alt="" coords="1460,348,1428,321,1390,296,1367,284,1369,280,1393,291,1431,317,1464,344"/>
+<area shape="poly" title=" " alt="" coords="1429,353,1372,335,1374,330,1430,348"/>
+<area shape="poly" title=" " alt="" coords="1467,395,1434,424,1392,448,1332,468,1283,475,1168,473,986,473,935,471,884,464,785,440,699,411,636,386,638,381,701,406,786,435,885,458,936,465,986,468,1168,468,1282,470,1331,463,1390,443,1430,419,1463,391"/>
+<area shape="poly" title=" " alt="" coords="1430,390,1374,409,1372,404,1429,385"/>
+<area shape="poly" title=" " alt="" coords="1424,372,1379,372,1379,367,1424,367"/>
+<area shape="poly" title=" " alt="" coords="1473,397,1340,610,1336,608,1469,395"/>
 </map>
 </div>
 

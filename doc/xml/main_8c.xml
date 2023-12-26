@@ -2,20 +2,10 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="main_8c" kind="file" language="C++">
     <compoundname>main.c</compoundname>
-    <includes refid="clock_8h" local="yes">clock.h</includes>
-    <includes refid="lcd_8h" local="yes">lcd.h</includes>
+    <includes refid="program-logic_8h" local="yes">program-logic.h</includes>
+    <includes refid="unit-test_8h" local="yes">unit-test.h</includes>
     <includes refid="ports_8h" local="yes">ports.h</includes>
     <incdepgraph>
-      <node id="2">
-        <label>clock.h</label>
-        <link refid="clock_8h"/>
-      </node>
-      <node id="3">
-        <label>lcd.h</label>
-        <link refid="lcd_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
       <node id="1">
         <label>src/main.c</label>
         <link refid="main_8c"/>
@@ -30,27 +20,16 @@
         <label>ports.h</label>
         <link refid="ports_8h"/>
       </node>
+      <node id="2">
+        <label>program-logic.h</label>
+        <link refid="program-logic_8h"/>
+      </node>
+      <node id="3">
+        <label>unit-test.h</label>
+        <link refid="unit-test_8h"/>
+      </node>
     </incdepgraph>
     <sectiondef kind="func">
-      <memberdef kind="function" id="main_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void InitAll</definition>
-        <argsstring>()</argsstring>
-        <name>InitAll</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/main.c" line="5" column="6" bodyfile="src/main.c" bodystart="5" bodyend="11"/>
-        <references refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" compoundref="lcd_8c" startline="114" endline="164">LcdInit</references>
-        <references refid="clock_8c_1a21cfe49b38d53efaf75df16d21ed882a" compoundref="clock_8c" startline="10" endline="32">PLLInit</references>
-        <references refid="ports_8c_1a03c4992f00f155be0425086ad67578f2" compoundref="ports_8c" startline="50" endline="61">PortAInit</references>
-        <references refid="ports_8c_1aaebad24f567e2e1f53e6252fd325371a" compoundref="ports_8c" startline="35" endline="48">PortBInit</references>
-        <references refid="clock_8c_1a58cf193ae5c1f330e4868e32afb9445d" compoundref="clock_8c" startline="3" endline="8">SysTickInit</references>
-        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="13" endline="52">main</referencedby>
-      </memberdef>
       <memberdef kind="function" id="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int main</definition>
@@ -62,11 +41,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/main.c" line="13" column="5" bodyfile="src/main.c" bodystart="13" bodyend="52"/>
-        <references refid="clock_8c_1a2e760c634cc89519ad0956fc258eab46" compoundref="clock_8c" startline="54" endline="59">DelayMilli</references>
-        <references refid="main_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="main_8c" startline="5" endline="11">InitAll</references>
-        <references refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" compoundref="lcd_8c" startline="29" endline="38">LcdClearDisplay</references>
-        <references refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" compoundref="lcd_8c" startline="230" endline="235">LcdPrintString</references>
+        <location file="src/main.c" line="7" column="5" bodyfile="src/main.c" bodystart="7" bodyend="17"/>
+        <references refid="program-logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="program-logic_8c" startline="6" endline="10">InitAll</references>
+        <references refid="unit-test_8c_1ac43be5887d2ddcce27989432c6415651" compoundref="unit-test_8c" startline="67" endline="70">RunAll</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -74,58 +51,23 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="clock_8h" kindref="compound">clock.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lcd_8h" kindref="compound">lcd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ports_8h" kindref="compound">ports.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5" refid="main_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" kindref="member">InitAll</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ports_8c_1a03c4992f00f155be0425086ad67578f2" kindref="member">PortAInit</ref>();</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ports_8c_1aaebad24f567e2e1f53e6252fd325371a" kindref="member">PortBInit</ref>();</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a21cfe49b38d53efaf75df16d21ed882a" kindref="member">PLLInit</ref>();</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a58cf193ae5c1f330e4868e32afb9445d" kindref="member">SysTickInit</ref>();</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" kindref="member">LcdInit</ref>();</highlight></codeline>
-<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13" refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" kindref="member">InitAll</ref>();</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DelayMilli(5000);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DelayMilli(100);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LcdPrintChar(&apos;S&apos;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LcdPrintChar(&apos;A&apos;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;Karith<sp/>Al-Sadi<sp/>aNd<sp/>tHuraya<sp/>gO<sp/>everywhEre&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;Harith<sp/>Al-Safi<sp/>and<sp/>Thuraya<sp/>go<sp/>everywhere&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a2e760c634cc89519ad0956fc258eab46" kindref="member">DelayMilli</ref>(3000);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;Barith<sp/>Al-Nadi<sp/>aNd<sp/>thuRaya<sp/>GO<sp/>eveRywhEre&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;Harith<sp/>Al-Safi<sp/>and<sp/>Thuraya<sp/>go<sp/>everywhere&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1a2e760c634cc89519ad0956fc258eab46" kindref="member">DelayMilli</ref>(3000);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" kindref="member">LcdClearDisplay</ref>();</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;Jarith<sp/>Al-Qadi<sp/>ANd<sp/>thuRAya<sp/>Go<sp/>EveRywhEre&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" kindref="member">LcdPrintString</ref>(</highlight><highlight class="stringliteral">&quot;Harith<sp/>Al-Safi<sp/>and<sp/>Thuraya<sp/>go<sp/>everywhere&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LcdSetCursor(0,<sp/>0);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LcdPrintString(&quot;Harith<sp/>Al-Safi&quot;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LcdSetCursor(1,<sp/>0);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LcdPrintString(&quot;and<sp/>Thuraya<sp/>go&quot;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LcdSetCursor(2,<sp/>3);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LcdPrintString(&quot;Johnson<sp/>go&quot;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LcdCursorShift(0,<sp/>1);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DelayMilli(3000);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LcdSetCursor(3,<sp/>10);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LcdPrintString(&quot;Khajo&quot;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="program-logic_8h" kindref="compound">program-logic.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="unit-test_8h" kindref="compound">unit-test.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ports_8h" kindref="compound">ports.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="program-logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" kindref="member">InitAll</ref>();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1){</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unit-test_8c_1ac43be5887d2ddcce27989432c6415651" kindref="member">RunAll</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;%ld\n&quot;,<sp/>GPIO_PORTE_DATA_R);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/main.c"/>
   </compounddef>
