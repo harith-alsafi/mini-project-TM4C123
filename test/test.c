@@ -1,8 +1,10 @@
 #include "../src/expression-parser.h"
 #include <stdio.h>
+#include "../lib/minunit/minunit.h"
 
-int main() {
-    InitPasrser();
+
+MU_TEST(TestNumberParser){
+   InitPasrser();
     PushToken((Token){
         .type = NEGATIVE, 
         .value = '-'
@@ -40,8 +42,17 @@ int main() {
         .value = ' '
     });
     NumberDefinition number = ParseNumber();
-    printf("String: %s\n", number.string->value);
-    printf("Number: %f\n", number.value);
     StopParser();
+    mu_assert_double_eq(-1235.24, number.value);
+}
+
+MU_TEST_SUITE(test_suite) {
+	MU_RUN_TEST(TestNumberParser);
+}
+
+
+int main() {
+	MU_RUN_SUITE(test_suite);
+	MU_REPORT();
     return 0;
 }
