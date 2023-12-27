@@ -1,4 +1,4 @@
-#include "unit-test.h"
+#include "hardware-test.h"
 #include "clock.h"
 #include "lcd.h"
 #include "keypad.h"

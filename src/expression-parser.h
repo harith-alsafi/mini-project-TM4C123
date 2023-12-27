@@ -2,12 +2,24 @@
 #define EXPRESSION_PARSER_H // Define it
 #include "keypad.h"
 #include <stdbool.h>
+#include "helpers.h"
+
+typedef enum {
+    SYNTAX_ERROR,
+    NO_ERROR,
+    INVALID_MATH_EXPRESSION,
+    MULTIPLE_DECIMAL_POINT,
+    MISSING_NUMBER
+} ParseError;
 
 typedef enum {
     NUMBER,
     OPERATOR,
+    NEGATIVE,
     PARENTHESIS,
-    POINT,
+    DECIMAL,
+    EOL,
+    PREVIOUS_ANSWER,
 } TokenType;
 
 typedef struct {
@@ -15,53 +27,48 @@ typedef struct {
     TokenType type;
 } Token;
 
-typedef struct {
-    int currentIndex;
-    size_t size;
-    Token value[];
-} TokenList;
+DEFINE_LIST_PROTOTYPE(Token);
 
 typedef struct {
-    size_t size;
-    KeyInfo value[];
-} KeyInfoList;
-
+    Token token;
+    ParseError error;
+} ParserInfo;
 
 // 1.234E3.4*1+2/4-5^3+2*(5+1)
-
+typedef struct {
+    bool isNegative;
+    bool isDecimal;
+    double value;
+    ParseError error;
+    charList* string;
+} NumberDefinition;
 
 // (sign?) number Operation (sign?) number
 // number => number.number
 
-typedef struct {
-    bool isNegative;
-    bool isDecimal;
-    char *number;
-} NumberDefinition;
+void PushToken(Token token);
 
-typedef struct {
-    NumberDefinition leftSide;
-    NumberDefinition rightSide;
-    SpecialKeyFunctions operation;
-} TermDefinition;
+void InitPasrser();
 
-typedef struct {
-    TermDefinition leftSide;
-    TermDefinition rightSide;
-    SpecialKeyFunctions operation;
-} ExpressionDefinition;
-
-int PushBackKey(KeyInfoList **list, KeyInfo value);
-
-int PushBackToken(TokenList **list, Token value);
-
-Token GetToken(KeyInfo key);
+void StopParser();
 
 Token PeekNextToken();
 
 Token GetNextToken();
 
-KeyInfo PopBackKey(KeyInfoList **list);
+double GetCurrentResult();
+
+ParserInfo Parse();
+
+void PushNewKey(KeyInfo key);
+
+NumberDefinition ParseNumber();
+
+ParserInfo ParseFactor();
+
+ParserInfo ParseTerm();
+
+ParserInfo ParseExpression();
 
 
 #endif

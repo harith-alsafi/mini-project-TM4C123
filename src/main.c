@@ -1,5 +1,5 @@
 #include "program-logic.h"
-#include "unit-test.h"
+#include "hardware-test.h"
 // #include <stdio.h>
 #include "ports.h"
 

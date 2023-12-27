@@ -440,11 +440,6 @@
               <FilePath>.\src\main.c</FilePath>
             </File>
             <File>
-              <FileName>playground.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\playground.c</FilePath>
-            </File>
-            <File>
               <FileName>ports.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\ports.c</FilePath>
@@ -475,16 +470,6 @@
               <FilePath>.\src\texas.o</FilePath>
             </File>
             <File>
-              <FileName>unit-test.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\unit-test.c</FilePath>
-            </File>
-            <File>
-              <FileName>unit-test.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\src\unit-test.h</FilePath>
-            </File>
-            <File>
               <FileName>user-interface.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\user-interface.c</FilePath>
@@ -493,6 +478,16 @@
               <FileName>user-interface.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\src\user-interface.h</FilePath>
+            </File>
+            <File>
+              <FileName>hardware-test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\hardware-test.c</FilePath>
+            </File>
+            <File>
+              <FileName>hardware-test.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\hardware-test.h</FilePath>
             </File>
           </Files>
         </Group>

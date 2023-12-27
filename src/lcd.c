@@ -3,6 +3,7 @@
 #include "helpers.h"
 #include "ports.h"
 #include "stdbool.h"
+#include <string.h>
 
 int currentRow = 0;
 int currentCol = 0;
@@ -236,7 +237,7 @@ void LcdPrintCharAt(char ch, byte row, byte col){
 
 void LcdPrintString(char str[], bool cursorTrack){
     int i; 
-    for(i = 0; i < Strlen(str); i++){
+    for(i = 0; i < (int) strlen(str); i++){
         LcdPrintChar(str[i], cursorTrack);
     }
 }
