@@ -32,6 +32,7 @@ DEFINE_LIST_PROTOTYPE(Token);
 typedef struct {
     Token token;
     ParseError error;
+    double currentReuslt;
 } ParserInfo;
 
 // 1.234E3.4*1+2/4-5^3+2*(5+1)
@@ -50,6 +51,8 @@ void PushToken(Token token);
 
 void InitPasrser();
 
+void InitPasrserWith(Token items[], int length);
+
 void StopParser();
 
 Token PeekNextToken();
@@ -62,7 +65,7 @@ ParserInfo Parse();
 
 void PushNewKey(KeyInfo key);
 
-NumberDefinition ParseNumber();
+ParserInfo ParseNumber();
 
 ParserInfo ParseFactor();
 

@@ -2,7 +2,7 @@
 
 # Compiler and flags
 CC = gcc
-CFLAGS = -Wall -Wextra -Isrc
+CFLAGS = -Wall -Wextra -Isrc 
 
 # Directories
 SRC_DIR = src
@@ -23,11 +23,11 @@ all: $(TARGET)
 
 # Rule to build object files
 $(OUT_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@ -lm
 
 # Rule to build the executable
 $(TARGET): $(OBJ_FILES) $(TEST_DIR)/test.c
-	$(CC) $(CFLAGS) $^ -o $@
+	$(CC) $(CFLAGS) $^ -o $@ -lm
 
 # Clean rule
 clean:

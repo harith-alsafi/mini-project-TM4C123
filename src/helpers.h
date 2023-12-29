@@ -18,7 +18,9 @@
     \
     void Type##ListDestroy(Type##List* list); \
     \
-    int Type##ListPushBack(Type##List** list, Type item) ;
+    int Type##ListPushBack(Type##List** list, Type item) ;\
+    \
+    int Type##ListAddRange(Type##List** list, Type items[], int length); 
 
 #define DEFINE_LIST_IMPLEMENTATION(Type) \
     Type##List* Type##ListCreate() { \
@@ -46,10 +48,22 @@
         list[0]->value[x] = item; \
         list[0]->length = y; \
         return 1; \
+    }\
+    \
+    int Type##ListAddRange(Type##List** list, Type items[], int length) { \
+        for(int i = 0; i < length; i++){ \
+            if(!Type##ListPushBack(list, items[i])){\
+                return 0;\
+            }\
+        }\
+        return 1; \
     }
+
+
 
 typedef unsigned char byte;
 
 DEFINE_LIST_PROTOTYPE(char);
+
 
 #endif

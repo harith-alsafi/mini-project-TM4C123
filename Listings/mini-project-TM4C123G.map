@@ -16,8 +16,10 @@ Section Cross References
     helpers.o(.ARM.exidx.text.charListCreate) refers to helpers.o(.text.charListCreate) for [Anonymous Symbol]
     helpers.o(.text.charListDestroy) refers to h1_free.o(.text) for free
     helpers.o(.ARM.exidx.text.charListDestroy) refers to helpers.o(.text.charListDestroy) for [Anonymous Symbol]
-    helpers.o(.text.PushBackchar) refers to h1_realloc.o(.text) for realloc
-    helpers.o(.ARM.exidx.text.PushBackchar) refers to helpers.o(.text.PushBackchar) for [Anonymous Symbol]
+    helpers.o(.text.charListPushBack) refers to h1_realloc.o(.text) for realloc
+    helpers.o(.ARM.exidx.text.charListPushBack) refers to helpers.o(.text.charListPushBack) for [Anonymous Symbol]
+    helpers.o(.text.charListAddRange) refers to h1_realloc.o(.text) for realloc
+    helpers.o(.ARM.exidx.text.charListAddRange) refers to helpers.o(.text.charListAddRange) for [Anonymous Symbol]
     keypad.o(.ARM.exidx.text.KeyIsValid) refers to keypad.o(.text.KeyIsValid) for [Anonymous Symbol]
     keypad.o(.text.KeypadFindSpecialKey) refers to keypad.o(.rodata.KEYPAD_SPECIAL_KEYS) for KEYPAD_SPECIAL_KEYS
     keypad.o(.ARM.exidx.text.KeypadFindSpecialKey) refers to keypad.o(.text.KeypadFindSpecialKey) for [Anonymous Symbol]
@@ -92,15 +94,12 @@ Section Cross References
     lcd.o(.text.LcdPrintCharAt) refers to clock.o(.text.DelayNano) for DelayNano
     lcd.o(.text.LcdPrintCharAt) refers to clock.o(.text.DelayMicro) for DelayMicro
     lcd.o(.ARM.exidx.text.LcdPrintCharAt) refers to lcd.o(.text.LcdPrintCharAt) for [Anonymous Symbol]
-    lcd.o(.text.LcdPrintString) refers to lcd.o(.text.LcdPrintChar) for LcdPrintChar
     lcd.o(.text.LcdPrintString) refers to strlen.o(.text) for strlen
+    lcd.o(.text.LcdPrintString) refers to lcd.o(.text.LcdPrintChar) for LcdPrintChar
     lcd.o(.ARM.exidx.text.LcdPrintString) refers to lcd.o(.text.LcdPrintString) for [Anonymous Symbol]
     main.o(.text.main) refers to program-logic.o(.text.InitAll) for InitAll
-    main.o(.text.main) refers to unit-test.o(.text.RunAll) for RunAll
+    main.o(.text.main) refers to hardware-test.o(.text.RunAll) for RunAll
     main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
-    playground.o(.ARM.exidx.text.PortF_Init) refers to playground.o(.text.PortF_Init) for [Anonymous Symbol]
-    playground.o(.ARM.exidx.text.FlashSOS) refers to playground.o(.text.FlashSOS) for [Anonymous Symbol]
-    playground.o(.ARM.exidx.text.delay) refers to playground.o(.text.delay) for [Anonymous Symbol]
     ports.o(.ARM.exidx.text.PortEInit) refers to ports.o(.text.PortEInit) for [Anonymous Symbol]
     ports.o(.ARM.exidx.text.PortDInit) refers to ports.o(.text.PortDInit) for [Anonymous Symbol]
     ports.o(.ARM.exidx.text.PortBInit) refers to ports.o(.text.PortBInit) for [Anonymous Symbol]
@@ -132,40 +131,40 @@ Section Cross References
     texas.o(i.Timer5A_Handler) refers to texas.o(.data) for TExaS_Period
     texas.o(i.Timer5A_Handler) refers to texas.o(.bss) for TExaS
     texas.o(i.Timer5A_Handler) refers to texas.o(.constdata) for BlankMsg
-    unit-test.o(.text.AfterEach) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
-    unit-test.o(.text.AfterEach) refers to clock.o(.text.DelayMilli) for DelayMilli
-    unit-test.o(.ARM.exidx.text.AfterEach) refers to unit-test.o(.text.AfterEach) for [Anonymous Symbol]
-    unit-test.o(.text.TestLcdClear) refers to lcd.o(.text.LcdPrintChar) for LcdPrintChar
-    unit-test.o(.text.TestLcdClear) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
-    unit-test.o(.text.TestLcdClear) refers to clock.o(.text.DelayMilli) for DelayMilli
-    unit-test.o(.ARM.exidx.text.TestLcdClear) refers to unit-test.o(.text.TestLcdClear) for [Anonymous Symbol]
-    unit-test.o(.text.TestLcdCursor) refers to lcd.o(.text.LcdSetCursor) for LcdSetCursor
-    unit-test.o(.text.TestLcdCursor) refers to lcd.o(.text.LcdPrintString) for LcdPrintString
-    unit-test.o(.ARM.exidx.text.TestLcdCursor) refers to unit-test.o(.text.TestLcdCursor) for [Anonymous Symbol]
-    unit-test.o(.text.TestLcdMultiLine) refers to unit-test.o(.rodata.str1.1) for .L.str.3
-    unit-test.o(.text.TestLcdMultiLine) refers to lcd.o(.text.LcdPrintString) for LcdPrintString
-    unit-test.o(.text.TestLcdMultiLine) refers to clock.o(.text.DelayMilli) for DelayMilli
-    unit-test.o(.text.TestLcdMultiLine) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
-    unit-test.o(.ARM.exidx.text.TestLcdMultiLine) refers to unit-test.o(.text.TestLcdMultiLine) for [Anonymous Symbol]
-    unit-test.o(.text.TestLcdAll) refers to unit-test.o(.rodata.str1.1) for .L.str.3
-    unit-test.o(.text.TestLcdAll) refers to lcd.o(.text.LcdPrintString) for LcdPrintString
-    unit-test.o(.text.TestLcdAll) refers to clock.o(.text.DelayMilli) for DelayMilli
-    unit-test.o(.text.TestLcdAll) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
-    unit-test.o(.ARM.exidx.text.TestLcdAll) refers to unit-test.o(.text.TestLcdAll) for [Anonymous Symbol]
-    unit-test.o(.text.TestKeypadLcd) refers to unit-test.o(.rodata.str1.1) for .L.str.7
-    unit-test.o(.text.TestKeypadLcd) refers to lcd.o(.text.LcdPrintString) for LcdPrintString
-    unit-test.o(.text.TestKeypadLcd) refers to keypad.o(.text.KeypadWaitForInput) for KeypadWaitForInput
-    unit-test.o(.text.TestKeypadLcd) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
-    unit-test.o(.text.TestKeypadLcd) refers to lcd.o(.text.LcdPrintChar) for LcdPrintChar
-    unit-test.o(.text.TestKeypadLcd) refers to clock.o(.text.DelayMilli) for DelayMilli
-    unit-test.o(.ARM.exidx.text.TestKeypadLcd) refers to unit-test.o(.text.TestKeypadLcd) for [Anonymous Symbol]
-    unit-test.o(.text.RunAll) refers to unit-test.o(.rodata.str1.1) for .L.str.7
-    unit-test.o(.text.RunAll) refers to lcd.o(.text.LcdPrintString) for LcdPrintString
-    unit-test.o(.text.RunAll) refers to keypad.o(.text.KeypadWaitForInput) for KeypadWaitForInput
-    unit-test.o(.text.RunAll) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
-    unit-test.o(.text.RunAll) refers to lcd.o(.text.LcdPrintChar) for LcdPrintChar
-    unit-test.o(.text.RunAll) refers to clock.o(.text.DelayMilli) for DelayMilli
-    unit-test.o(.ARM.exidx.text.RunAll) refers to unit-test.o(.text.RunAll) for [Anonymous Symbol]
+    hardware-test.o(.text.AfterEach) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
+    hardware-test.o(.text.AfterEach) refers to clock.o(.text.DelayMilli) for DelayMilli
+    hardware-test.o(.ARM.exidx.text.AfterEach) refers to hardware-test.o(.text.AfterEach) for [Anonymous Symbol]
+    hardware-test.o(.text.TestLcdClear) refers to lcd.o(.text.LcdPrintChar) for LcdPrintChar
+    hardware-test.o(.text.TestLcdClear) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
+    hardware-test.o(.text.TestLcdClear) refers to clock.o(.text.DelayMilli) for DelayMilli
+    hardware-test.o(.ARM.exidx.text.TestLcdClear) refers to hardware-test.o(.text.TestLcdClear) for [Anonymous Symbol]
+    hardware-test.o(.text.TestLcdCursor) refers to lcd.o(.text.LcdSetCursor) for LcdSetCursor
+    hardware-test.o(.text.TestLcdCursor) refers to lcd.o(.text.LcdPrintString) for LcdPrintString
+    hardware-test.o(.ARM.exidx.text.TestLcdCursor) refers to hardware-test.o(.text.TestLcdCursor) for [Anonymous Symbol]
+    hardware-test.o(.text.TestLcdMultiLine) refers to hardware-test.o(.rodata.str1.1) for .L.str.3
+    hardware-test.o(.text.TestLcdMultiLine) refers to lcd.o(.text.LcdPrintString) for LcdPrintString
+    hardware-test.o(.text.TestLcdMultiLine) refers to clock.o(.text.DelayMilli) for DelayMilli
+    hardware-test.o(.text.TestLcdMultiLine) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
+    hardware-test.o(.ARM.exidx.text.TestLcdMultiLine) refers to hardware-test.o(.text.TestLcdMultiLine) for [Anonymous Symbol]
+    hardware-test.o(.text.TestLcdAll) refers to hardware-test.o(.rodata.str1.1) for .L.str.3
+    hardware-test.o(.text.TestLcdAll) refers to lcd.o(.text.LcdPrintString) for LcdPrintString
+    hardware-test.o(.text.TestLcdAll) refers to clock.o(.text.DelayMilli) for DelayMilli
+    hardware-test.o(.text.TestLcdAll) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
+    hardware-test.o(.ARM.exidx.text.TestLcdAll) refers to hardware-test.o(.text.TestLcdAll) for [Anonymous Symbol]
+    hardware-test.o(.text.TestKeypadLcd) refers to hardware-test.o(.rodata.str1.1) for .L.str.7
+    hardware-test.o(.text.TestKeypadLcd) refers to lcd.o(.text.LcdPrintString) for LcdPrintString
+    hardware-test.o(.text.TestKeypadLcd) refers to keypad.o(.text.KeypadWaitForInput) for KeypadWaitForInput
+    hardware-test.o(.text.TestKeypadLcd) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
+    hardware-test.o(.text.TestKeypadLcd) refers to lcd.o(.text.LcdPrintChar) for LcdPrintChar
+    hardware-test.o(.text.TestKeypadLcd) refers to clock.o(.text.DelayMilli) for DelayMilli
+    hardware-test.o(.ARM.exidx.text.TestKeypadLcd) refers to hardware-test.o(.text.TestKeypadLcd) for [Anonymous Symbol]
+    hardware-test.o(.text.RunAll) refers to hardware-test.o(.rodata.str1.1) for .L.str.7
+    hardware-test.o(.text.RunAll) refers to lcd.o(.text.LcdPrintString) for LcdPrintString
+    hardware-test.o(.text.RunAll) refers to keypad.o(.text.KeypadWaitForInput) for KeypadWaitForInput
+    hardware-test.o(.text.RunAll) refers to lcd.o(.text.LcdClearDisplay) for LcdClearDisplay
+    hardware-test.o(.text.RunAll) refers to lcd.o(.text.LcdPrintChar) for LcdPrintChar
+    hardware-test.o(.text.RunAll) refers to clock.o(.text.DelayMilli) for DelayMilli
+    hardware-test.o(.ARM.exidx.text.RunAll) refers to hardware-test.o(.text.RunAll) for [Anonymous Symbol]
     startup_tm4c123.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_tm4c123.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_tm4c123.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
@@ -415,8 +414,10 @@ Removing Unused input sections from the image.
     Removing helpers.o(.ARM.exidx.text.charListCreate), (8 bytes).
     Removing helpers.o(.text.charListDestroy), (4 bytes).
     Removing helpers.o(.ARM.exidx.text.charListDestroy), (8 bytes).
-    Removing helpers.o(.text.PushBackchar), (58 bytes).
-    Removing helpers.o(.ARM.exidx.text.PushBackchar), (8 bytes).
+    Removing helpers.o(.text.charListPushBack), (58 bytes).
+    Removing helpers.o(.ARM.exidx.text.charListPushBack), (8 bytes).
+    Removing helpers.o(.text.charListAddRange), (96 bytes).
+    Removing helpers.o(.ARM.exidx.text.charListAddRange), (8 bytes).
     Removing keypad.o(.text), (0 bytes).
     Removing keypad.o(.text.KeyIsValid), (10 bytes).
     Removing keypad.o(.ARM.exidx.text.KeyIsValid), (8 bytes).
@@ -462,15 +463,6 @@ Removing Unused input sections from the image.
     Removing main.o(.text), (0 bytes).
     Removing main.o(.ARM.exidx.text.main), (8 bytes).
     Removing main.o(.ARM.use_no_argv), (4 bytes).
-    Removing playground.o(.text), (0 bytes).
-    Removing playground.o(.text.PortF_Init), (112 bytes).
-    Removing playground.o(.ARM.exidx.text.PortF_Init), (8 bytes).
-    Removing playground.o(.text.FlashSOS), (546 bytes).
-    Removing playground.o(.ARM.exidx.text.FlashSOS), (8 bytes).
-    Removing playground.o(.text.delay), (42 bytes).
-    Removing playground.o(.ARM.exidx.text.delay), (8 bytes).
-    Removing playground.o(.bss.SW1), (4 bytes).
-    Removing playground.o(.bss.SW2), (4 bytes).
     Removing ports.o(.text), (0 bytes).
     Removing ports.o(.ARM.exidx.text.PortEInit), (8 bytes).
     Removing ports.o(.ARM.exidx.text.PortDInit), (8 bytes).
@@ -497,21 +489,21 @@ Removing Unused input sections from the image.
     Removing texas.o(.bss), (628 bytes).
     Removing texas.o(.constdata), (8956 bytes).
     Removing texas.o(.data), (56 bytes).
-    Removing unit-test.o(.text), (0 bytes).
-    Removing unit-test.o(.text.AfterEach), (18 bytes).
-    Removing unit-test.o(.ARM.exidx.text.AfterEach), (8 bytes).
-    Removing unit-test.o(.text.TestLcdClear), (34 bytes).
-    Removing unit-test.o(.ARM.exidx.text.TestLcdClear), (8 bytes).
-    Removing unit-test.o(.text.TestLcdCursor), (104 bytes).
-    Removing unit-test.o(.ARM.exidx.text.TestLcdCursor), (8 bytes).
-    Removing unit-test.o(.text.TestLcdMultiLine), (100 bytes).
-    Removing unit-test.o(.ARM.exidx.text.TestLcdMultiLine), (8 bytes).
-    Removing unit-test.o(.text.TestLcdAll), (100 bytes).
-    Removing unit-test.o(.ARM.exidx.text.TestLcdAll), (8 bytes).
-    Removing unit-test.o(.text.TestKeypadLcd), (68 bytes).
-    Removing unit-test.o(.ARM.exidx.text.TestKeypadLcd), (8 bytes).
-    Removing unit-test.o(.ARM.exidx.text.RunAll), (8 bytes).
     Removing user-interface.o(.text), (0 bytes).
+    Removing hardware-test.o(.text), (0 bytes).
+    Removing hardware-test.o(.text.AfterEach), (18 bytes).
+    Removing hardware-test.o(.ARM.exidx.text.AfterEach), (8 bytes).
+    Removing hardware-test.o(.text.TestLcdClear), (34 bytes).
+    Removing hardware-test.o(.ARM.exidx.text.TestLcdClear), (8 bytes).
+    Removing hardware-test.o(.text.TestLcdCursor), (104 bytes).
+    Removing hardware-test.o(.ARM.exidx.text.TestLcdCursor), (8 bytes).
+    Removing hardware-test.o(.text.TestLcdMultiLine), (100 bytes).
+    Removing hardware-test.o(.ARM.exidx.text.TestLcdMultiLine), (8 bytes).
+    Removing hardware-test.o(.text.TestLcdAll), (100 bytes).
+    Removing hardware-test.o(.ARM.exidx.text.TestLcdAll), (8 bytes).
+    Removing hardware-test.o(.text.TestKeypadLcd), (68 bytes).
+    Removing hardware-test.o(.ARM.exidx.text.TestKeypadLcd), (8 bytes).
+    Removing hardware-test.o(.ARM.exidx.text.RunAll), (8 bytes).
     Removing system_tm4c123.o(.text), (0 bytes).
     Removing system_tm4c123.o(.text.SystemCoreClockUpdate), (280 bytes).
     Removing system_tm4c123.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
@@ -519,7 +511,7 @@ Removing Unused input sections from the image.
     Removing system_tm4c123.o(.data.SystemCoreClock), (4 bytes).
     Removing system_tm4c123.o(.rodata..Lswitch.table.SystemCoreClockUpdate.1), (92 bytes).
 
-122 unused section(s) (total 15945 bytes) removed from the image.
+115 unused section(s) (total 15317 bytes) removed from the image.
 
 ==============================================================================
 
@@ -615,15 +607,14 @@ Image Symbol Table
     clock.c                                  0x00000000   Number         0  clock.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     flash-storage.c                          0x00000000   Number         0  flash-storage.o ABSOLUTE
+    hardware-test.c                          0x00000000   Number         0  hardware-test.o ABSOLUTE
     helpers.c                                0x00000000   Number         0  helpers.o ABSOLUTE
     keypad.c                                 0x00000000   Number         0  keypad.o ABSOLUTE
     lcd.c                                    0x00000000   Number         0  lcd.o ABSOLUTE
     main.c                                   0x00000000   Number         0  main.o ABSOLUTE
-    playground.c                             0x00000000   Number         0  playground.o ABSOLUTE
     ports.c                                  0x00000000   Number         0  ports.o ABSOLUTE
     program-logic.c                          0x00000000   Number         0  program-logic.o ABSOLUTE
     system_TM4C123.c                         0x00000000   Number         0  system_tm4c123.o ABSOLUTE
-    unit-test.c                              0x00000000   Number         0  unit-test.o ABSOLUTE
     user-interface.c                         0x00000000   Number         0  user-interface.o ABSOLUTE
     RESET                                    0x00000000   Section      620  startup_tm4c123.o(RESET)
     !!!main                                  0x0000026c   Section        8  __main.o(!!!main)
@@ -692,23 +683,23 @@ Image Symbol Table
     [Anonymous Symbol]                       0x0000075c   Section        0  lcd.o(.text.LcdInit)
     [Anonymous Symbol]                       0x00000944   Section        0  lcd.o(.text.LcdPrintChar)
     [Anonymous Symbol]                       0x00000a10   Section        0  lcd.o(.text.LcdPrintString)
-    [Anonymous Symbol]                       0x00000a38   Section        0  lcd.o(.text.LcdSetCursor)
-    [Anonymous Symbol]                       0x00000ac4   Section        0  ports.o(.text.PortAInit)
-    [Anonymous Symbol]                       0x00000afc   Section        0  ports.o(.text.PortBInit)
-    [Anonymous Symbol]                       0x00000b34   Section        0  ports.o(.text.PortDInit)
-    [Anonymous Symbol]                       0x00000b78   Section        0  ports.o(.text.PortEInit)
-    [Anonymous Symbol]                       0x00000bc4   Section        0  unit-test.o(.text.RunAll)
-    [Anonymous Symbol]                       0x00000c08   Section        0  system_tm4c123.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x00000c78   Section        0  main.o(.text.main)
-    $v0                                      0x00000c82   Number         0  fpinit.o(x$fpl$fpinit)
-    x$fpl$fpinit                             0x00000c82   Section       26  fpinit.o(x$fpl$fpinit)
-    .L.str.3                                 0x00000d06   Data          41  unit-test.o(.rodata.str1.1)
-    .L.str.8                                 0x00000d06   Data          14  unit-test.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x00000d06   Section        0  unit-test.o(.rodata.str1.1)
-    .L.str.7                                 0x00000d14   Data          14  unit-test.o(.rodata.str1.1)
-    .L.str.4                                 0x00000d2f   Data          41  unit-test.o(.rodata.str1.1)
-    .L.str.5                                 0x00000d58   Data          41  unit-test.o(.rodata.str1.1)
-    .L.str.6                                 0x00000d81   Data          41  unit-test.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00000a3c   Section        0  lcd.o(.text.LcdSetCursor)
+    [Anonymous Symbol]                       0x00000ac8   Section        0  ports.o(.text.PortAInit)
+    [Anonymous Symbol]                       0x00000b00   Section        0  ports.o(.text.PortBInit)
+    [Anonymous Symbol]                       0x00000b38   Section        0  ports.o(.text.PortDInit)
+    [Anonymous Symbol]                       0x00000b7c   Section        0  ports.o(.text.PortEInit)
+    [Anonymous Symbol]                       0x00000bc8   Section        0  hardware-test.o(.text.RunAll)
+    [Anonymous Symbol]                       0x00000c0c   Section        0  system_tm4c123.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x00000c7c   Section        0  main.o(.text.main)
+    $v0                                      0x00000c86   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$fpinit                             0x00000c86   Section       26  fpinit.o(x$fpl$fpinit)
+    .L.str.3                                 0x00000d0a   Data          41  hardware-test.o(.rodata.str1.1)
+    .L.str.8                                 0x00000d0a   Data          14  hardware-test.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00000d0a   Section        0  hardware-test.o(.rodata.str1.1)
+    .L.str.7                                 0x00000d18   Data          14  hardware-test.o(.rodata.str1.1)
+    .L.str.4                                 0x00000d33   Data          41  hardware-test.o(.rodata.str1.1)
+    .L.str.5                                 0x00000d5c   Data          41  hardware-test.o(.rodata.str1.1)
+    .L.str.6                                 0x00000d85   Data          41  hardware-test.o(.rodata.str1.1)
     .bss                                     0x20000000   Section       96  libspace.o(.bss)
     Heap_Mem                                 0x20000068   Data           0  startup_tm4c123.o(HEAP)
     Stack_Mem                                0x20000068   Data         512  startup_tm4c123.o(STACK)
@@ -943,22 +934,22 @@ Image Symbol Table
     LcdClearDisplay                          0x000006f1   Thumb Code   108  lcd.o(.text.LcdClearDisplay)
     LcdInit                                  0x0000075d   Thumb Code   486  lcd.o(.text.LcdInit)
     LcdPrintChar                             0x00000945   Thumb Code   202  lcd.o(.text.LcdPrintChar)
-    LcdPrintString                           0x00000a11   Thumb Code    38  lcd.o(.text.LcdPrintString)
-    LcdSetCursor                             0x00000a39   Thumb Code   140  lcd.o(.text.LcdSetCursor)
-    PortAInit                                0x00000ac5   Thumb Code    54  ports.o(.text.PortAInit)
-    PortBInit                                0x00000afd   Thumb Code    54  ports.o(.text.PortBInit)
-    PortDInit                                0x00000b35   Thumb Code    66  ports.o(.text.PortDInit)
-    PortEInit                                0x00000b79   Thumb Code    74  ports.o(.text.PortEInit)
-    RunAll                                   0x00000bc5   Thumb Code    68  unit-test.o(.text.RunAll)
-    SystemInit                               0x00000c09   Thumb Code   112  system_tm4c123.o(.text.SystemInit)
-    main                                     0x00000c79   Thumb Code    10  main.o(.text.main)
-    _fp_init                                 0x00000c83   Thumb Code    26  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x00000c9b   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x00000c9b   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    KEYPAD_KEYS                              0x00000c9c   Data          16  keypad.o(.rodata.KEYPAD_KEYS)
-    KEYPAD_SPECIAL_KEYS                      0x00000cac   Data          90  keypad.o(.rodata.KEYPAD_SPECIAL_KEYS)
-    Region$$Table$$Base                      0x00000d24   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00000d34   Number         0  anon$$obj.o(Region$$Table)
+    LcdPrintString                           0x00000a11   Thumb Code    42  lcd.o(.text.LcdPrintString)
+    LcdSetCursor                             0x00000a3d   Thumb Code   140  lcd.o(.text.LcdSetCursor)
+    PortAInit                                0x00000ac9   Thumb Code    54  ports.o(.text.PortAInit)
+    PortBInit                                0x00000b01   Thumb Code    54  ports.o(.text.PortBInit)
+    PortDInit                                0x00000b39   Thumb Code    66  ports.o(.text.PortDInit)
+    PortEInit                                0x00000b7d   Thumb Code    74  ports.o(.text.PortEInit)
+    RunAll                                   0x00000bc9   Thumb Code    68  hardware-test.o(.text.RunAll)
+    SystemInit                               0x00000c0d   Thumb Code   112  system_tm4c123.o(.text.SystemInit)
+    main                                     0x00000c7d   Thumb Code    10  main.o(.text.main)
+    _fp_init                                 0x00000c87   Thumb Code    26  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x00000c9f   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x00000c9f   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    KEYPAD_KEYS                              0x00000ca0   Data          16  keypad.o(.rodata.KEYPAD_KEYS)
+    KEYPAD_SPECIAL_KEYS                      0x00000cb0   Data          90  keypad.o(.rodata.KEYPAD_SPECIAL_KEYS)
+    Region$$Table$$Base                      0x00000d28   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000d38   Number         0  anon$$obj.o(Region$$Table)
     __libspace_start                         0x20000000   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000060   Data           0  libspace.o(.bss)
     currentCol                               0x20000060   Data           4  lcd.o(.bss.currentCol)
@@ -972,69 +963,69 @@ Memory Map of the image
 
   Image Entry point : 0x000002f1
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x00000d34, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00000d38, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000d34, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000d38, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000000   0x00000000   0x0000026c   Data   RO          285    RESET               startup_tm4c123.o
-    0x0000026c   0x0000026c   0x00000008   Code   RO          379  * !!!main             c_w.l(__main.o)
-    0x00000274   0x00000274   0x00000034   Code   RO          588    !!!scatter          c_w.l(__scatter.o)
-    0x000002a8   0x000002a8   0x0000001c   Code   RO          590    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x000002c4   0x000002c4   0x00000002   Code   RO          523    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x000002c6   0x000002c6   0x00000004   Code   RO          411    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          414    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          416    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          419    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          421    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          423    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          426    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          428    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          430    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          432    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          434    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          436    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          438    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          440    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          442    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          444    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          446    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          450    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          452    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          454    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000000   Code   RO          456    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
-    0x000002ca   0x000002ca   0x00000002   Code   RO          457    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
-    0x000002cc   0x000002cc   0x00000002   Code   RO          585    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x000002ce   0x000002ce   0x00000000   Code   RO          539    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x000002ce   0x000002ce   0x00000000   Code   RO          541    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x000002ce   0x000002ce   0x00000000   Code   RO          544    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
-    0x000002ce   0x000002ce   0x00000000   Code   RO          547    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
-    0x000002ce   0x000002ce   0x00000000   Code   RO          549    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x000002ce   0x000002ce   0x00000000   Code   RO          552    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x000002ce   0x000002ce   0x00000002   Code   RO          553    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
-    0x000002d0   0x000002d0   0x00000000   Code   RO          383    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x000002d0   0x000002d0   0x00000000   Code   RO          466    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x000002d0   0x000002d0   0x00000006   Code   RO          478    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x000002d6   0x000002d6   0x00000000   Code   RO          468    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x000002d6   0x000002d6   0x00000004   Code   RO          469    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x000002da   0x000002da   0x00000000   Code   RO          471    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x000002da   0x000002da   0x00000008   Code   RO          472    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x000002e2   0x000002e2   0x00000002   Code   RO          528    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x000002e4   0x000002e4   0x00000000   Code   RO          559    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x000002e4   0x000002e4   0x00000004   Code   RO          560    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x000002e8   0x000002e8   0x00000006   Code   RO          561    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x00000000   0x00000000   0x0000026c   Data   RO          271    RESET               startup_tm4c123.o
+    0x0000026c   0x0000026c   0x00000008   Code   RO          365  * !!!main             c_w.l(__main.o)
+    0x00000274   0x00000274   0x00000034   Code   RO          574    !!!scatter          c_w.l(__scatter.o)
+    0x000002a8   0x000002a8   0x0000001c   Code   RO          576    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x000002c4   0x000002c4   0x00000002   Code   RO          509    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x000002c6   0x000002c6   0x00000004   Code   RO          397    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          400    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          402    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          405    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          407    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          409    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          412    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          414    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          416    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          418    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          420    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          422    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          424    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          426    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          428    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          430    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          432    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          436    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          438    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          440    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000000   Code   RO          442    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
+    0x000002ca   0x000002ca   0x00000002   Code   RO          443    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
+    0x000002cc   0x000002cc   0x00000002   Code   RO          571    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x000002ce   0x000002ce   0x00000000   Code   RO          525    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x000002ce   0x000002ce   0x00000000   Code   RO          527    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x000002ce   0x000002ce   0x00000000   Code   RO          530    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x000002ce   0x000002ce   0x00000000   Code   RO          533    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x000002ce   0x000002ce   0x00000000   Code   RO          535    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x000002ce   0x000002ce   0x00000000   Code   RO          538    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x000002ce   0x000002ce   0x00000002   Code   RO          539    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x000002d0   0x000002d0   0x00000000   Code   RO          369    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x000002d0   0x000002d0   0x00000000   Code   RO          452    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x000002d0   0x000002d0   0x00000006   Code   RO          464    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x000002d6   0x000002d6   0x00000000   Code   RO          454    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x000002d6   0x000002d6   0x00000004   Code   RO          455    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x000002da   0x000002da   0x00000000   Code   RO          457    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x000002da   0x000002da   0x00000008   Code   RO          458    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x000002e2   0x000002e2   0x00000002   Code   RO          514    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x000002e4   0x000002e4   0x00000000   Code   RO          545    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x000002e4   0x000002e4   0x00000004   Code   RO          546    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x000002e8   0x000002e8   0x00000006   Code   RO          547    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x000002ee   0x000002ee   0x00000002   PAD
-    0x000002f0   0x000002f0   0x00000114   Code   RO          286  * .text               startup_tm4c123.o
-    0x00000404   0x00000404   0x0000003e   Code   RO          375    .text               c_w.l(strlen.o)
-    0x00000442   0x00000442   0x00000006   Code   RO          377    .text               c_w.l(heapauxi.o)
-    0x00000448   0x00000448   0x00000008   Code   RO          462    .text               c_w.l(libspace.o)
-    0x00000450   0x00000450   0x00000002   Code   RO          499    .text               c_w.l(use_no_semi.o)
-    0x00000452   0x00000452   0x00000000   Code   RO          501    .text               c_w.l(indicate_semi.o)
-    0x00000452   0x00000452   0x0000004a   Code   RO          502    .text               c_w.l(sys_stackheap_outer.o)
-    0x0000049c   0x0000049c   0x00000012   Code   RO          508    .text               c_w.l(exit.o)
+    0x000002f0   0x000002f0   0x00000114   Code   RO          272  * .text               startup_tm4c123.o
+    0x00000404   0x00000404   0x0000003e   Code   RO          361    .text               c_w.l(strlen.o)
+    0x00000442   0x00000442   0x00000006   Code   RO          363    .text               c_w.l(heapauxi.o)
+    0x00000448   0x00000448   0x00000008   Code   RO          448    .text               c_w.l(libspace.o)
+    0x00000450   0x00000450   0x00000002   Code   RO          485    .text               c_w.l(use_no_semi.o)
+    0x00000452   0x00000452   0x00000000   Code   RO          487    .text               c_w.l(indicate_semi.o)
+    0x00000452   0x00000452   0x0000004a   Code   RO          488    .text               c_w.l(sys_stackheap_outer.o)
+    0x0000049c   0x0000049c   0x00000012   Code   RO          494    .text               c_w.l(exit.o)
     0x000004ae   0x000004ae   0x00000002   PAD
-    0x000004b0   0x000004b0   0x0000000c   Code   RO          524    .text               c_w.l(sys_exit.o)
+    0x000004b0   0x000004b0   0x0000000c   Code   RO          510    .text               c_w.l(sys_exit.o)
     0x000004bc   0x000004bc   0x00000072   Code   RO            6    .text.ClockInit     clock.o
     0x0000052e   0x0000052e   0x00000002   PAD
     0x00000530   0x00000530   0x00000032   Code   RO           12    .text.DelayMicro    clock.o
@@ -1042,53 +1033,53 @@ Memory Map of the image
     0x00000564   0x00000564   0x00000036   Code   RO           14    .text.DelayMilli    clock.o
     0x0000059a   0x0000059a   0x00000002   PAD
     0x0000059c   0x0000059c   0x0000002c   Code   RO           10    .text.DelayNano     clock.o
-    0x000005c8   0x000005c8   0x00000012   Code   RO          155    .text.InitAll       program-logic.o
+    0x000005c8   0x000005c8   0x00000012   Code   RO          141    .text.InitAll       program-logic.o
     0x000005da   0x000005da   0x00000002   PAD
-    0x000005dc   0x000005dc   0x0000000e   Code   RO           50    .text.KeypadInit    keypad.o
+    0x000005dc   0x000005dc   0x0000000e   Code   RO           52    .text.KeypadInit    keypad.o
     0x000005ea   0x000005ea   0x00000002   PAD
-    0x000005ec   0x000005ec   0x00000102   Code   RO           54    .text.KeypadWaitForInput  keypad.o
+    0x000005ec   0x000005ec   0x00000102   Code   RO           56    .text.KeypadWaitForInput  keypad.o
     0x000006ee   0x000006ee   0x00000002   PAD
-    0x000006f0   0x000006f0   0x0000006c   Code   RO           75    .text.LcdClearDisplay  lcd.o
-    0x0000075c   0x0000075c   0x000001e6   Code   RO           87    .text.LcdInit       lcd.o
+    0x000006f0   0x000006f0   0x0000006c   Code   RO           77    .text.LcdClearDisplay  lcd.o
+    0x0000075c   0x0000075c   0x000001e6   Code   RO           89    .text.LcdInit       lcd.o
     0x00000942   0x00000942   0x00000002   PAD
-    0x00000944   0x00000944   0x000000ca   Code   RO           97    .text.LcdPrintChar  lcd.o
+    0x00000944   0x00000944   0x000000ca   Code   RO           99    .text.LcdPrintChar  lcd.o
     0x00000a0e   0x00000a0e   0x00000002   PAD
-    0x00000a10   0x00000a10   0x00000026   Code   RO          101    .text.LcdPrintString  lcd.o
-    0x00000a36   0x00000a36   0x00000002   PAD
-    0x00000a38   0x00000a38   0x0000008c   Code   RO           91    .text.LcdSetCursor  lcd.o
-    0x00000ac4   0x00000ac4   0x00000036   Code   RO          144    .text.PortAInit     ports.o
-    0x00000afa   0x00000afa   0x00000002   PAD
-    0x00000afc   0x00000afc   0x00000036   Code   RO          142    .text.PortBInit     ports.o
-    0x00000b32   0x00000b32   0x00000002   PAD
-    0x00000b34   0x00000b34   0x00000042   Code   RO          140    .text.PortDInit     ports.o
-    0x00000b76   0x00000b76   0x00000002   PAD
-    0x00000b78   0x00000b78   0x0000004a   Code   RO          138    .text.PortEInit     ports.o
-    0x00000bc2   0x00000bc2   0x00000002   PAD
-    0x00000bc4   0x00000bc4   0x00000044   Code   RO          273    .text.RunAll        unit-test.o
-    0x00000c08   0x00000c08   0x00000070   Code   RO          294    .text.SystemInit    system_tm4c123.o
-    0x00000c78   0x00000c78   0x0000000a   Code   RO          113    .text.main          main.o
-    0x00000c82   0x00000c82   0x0000001a   Code   RO          497    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x00000c9c   0x00000c9c   0x00000010   Data   RO           56    .rodata.KEYPAD_KEYS  keypad.o
-    0x00000cac   0x00000cac   0x0000005a   Data   RO           57    .rodata.KEYPAD_SPECIAL_KEYS  keypad.o
-    0x00000d06   0x00000d06   0x0000001c   Data   RO          275    .rodata.str1.1      unit-test.o
-    0x00000d22   0x00000d22   0x00000002   PAD
-    0x00000d24   0x00000d24   0x00000010   Data   RO          587    Region$$Table       anon$$obj.o
+    0x00000a10   0x00000a10   0x0000002a   Code   RO          103    .text.LcdPrintString  lcd.o
+    0x00000a3a   0x00000a3a   0x00000002   PAD
+    0x00000a3c   0x00000a3c   0x0000008c   Code   RO           93    .text.LcdSetCursor  lcd.o
+    0x00000ac8   0x00000ac8   0x00000036   Code   RO          130    .text.PortAInit     ports.o
+    0x00000afe   0x00000afe   0x00000002   PAD
+    0x00000b00   0x00000b00   0x00000036   Code   RO          128    .text.PortBInit     ports.o
+    0x00000b36   0x00000b36   0x00000002   PAD
+    0x00000b38   0x00000b38   0x00000042   Code   RO          126    .text.PortDInit     ports.o
+    0x00000b7a   0x00000b7a   0x00000002   PAD
+    0x00000b7c   0x00000b7c   0x0000004a   Code   RO          124    .text.PortEInit     ports.o
+    0x00000bc6   0x00000bc6   0x00000002   PAD
+    0x00000bc8   0x00000bc8   0x00000044   Code   RO          260    .text.RunAll        hardware-test.o
+    0x00000c0c   0x00000c0c   0x00000070   Code   RO          280    .text.SystemInit    system_tm4c123.o
+    0x00000c7c   0x00000c7c   0x0000000a   Code   RO          115    .text.main          main.o
+    0x00000c86   0x00000c86   0x0000001a   Code   RO          483    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x00000ca0   0x00000ca0   0x00000010   Data   RO           58    .rodata.KEYPAD_KEYS  keypad.o
+    0x00000cb0   0x00000cb0   0x0000005a   Data   RO           59    .rodata.KEYPAD_SPECIAL_KEYS  keypad.o
+    0x00000d0a   0x00000d0a   0x0000001c   Data   RO          262    .rodata.str1.1      hardware-test.o
+    0x00000d26   0x00000d26   0x00000002   PAD
+    0x00000d28   0x00000d28   0x00000010   Data   RO          573    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00000d34, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00000d38, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x00000d34, Size: 0x00000268, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x00000d38, Size: 0x00000268, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000        -       0x00000060   Zero   RW          463    .bss                c_w.l(libspace.o)
-    0x20000060        -       0x00000004   Zero   RW          104    .bss.currentCol     lcd.o
-    0x20000064        -       0x00000004   Zero   RW          103    .bss.currentRow     lcd.o
-    0x20000068        -       0x00000000   Zero   RW          284    HEAP                startup_tm4c123.o
-    0x20000068        -       0x00000200   Zero   RW          283    STACK               startup_tm4c123.o
+    0x20000000        -       0x00000060   Zero   RW          449    .bss                c_w.l(libspace.o)
+    0x20000060        -       0x00000004   Zero   RW          106    .bss.currentCol     lcd.o
+    0x20000064        -       0x00000004   Zero   RW          105    .bss.currentRow     lcd.o
+    0x20000068        -       0x00000000   Zero   RW          270    HEAP                startup_tm4c123.o
+    0x20000068        -       0x00000200   Zero   RW          269    STACK               startup_tm4c123.o
 
 
 ==============================================================================
@@ -1099,17 +1090,17 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
        262          0          0          0          0       1720   clock.o
+        68          0         28          0          0       2376   hardware-test.o
        272          0        106          0          0       3094   keypad.o
-       974          0          0          0          8       9816   lcd.o
+       978          0          0          0          8       9800   lcd.o
         10          0          0          0          0        357   main.o
        248          0          0          0          0        897   ports.o
         18          0          0          0          0        356   program-logic.o
        276         24        620          0        512       5472   startup_tm4c123.o
        112          0          0          0          0       6450   system_tm4c123.o
-        68          0         28          0          0       2368   unit-test.o
 
     ----------------------------------------------------------------------
-      2266         24        772          0        520      30530   Object Totals
+      2270         24        772          0        520      30522   Object Totals
          0          0         16          0          0          0   (incl. Generated)
         26          0          2          0          0          0   (incl. Padding)
 
@@ -1160,15 +1151,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      2608         40        772          0        616      30890   Grand Totals
-      2608         40        772          0        616      30890   ELF Image Totals
-      2608         40        772          0          0          0   ROM Totals
+      2612         40        772          0        616      30882   Grand Totals
+      2612         40        772          0        616      30882   ELF Image Totals
+      2612         40        772          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 3380 (   3.30kB)
+    Total RO  Size (Code + RO Data)                 3384 (   3.30kB)
     Total RW  Size (RW Data + ZI Data)               616 (   0.60kB)
-    Total ROM Size (Code + RO Data + RW Data)       3380 (   3.30kB)
+    Total ROM Size (Code + RO Data + RW Data)       3384 (   3.30kB)
 
 ==============================================================================
 

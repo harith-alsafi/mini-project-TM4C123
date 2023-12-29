@@ -1,6 +1,7 @@
 #include "expression-parser.h"
 #include <stdlib.h>
 #include <math.h>
+#include <stdio.h>
 
 DEFINE_LIST_IMPLEMENTATION(Token);
 
@@ -20,6 +21,13 @@ void InitPasrser(){
     previousResult = currentResult;
     currentResult = 0.0;
     tokens = TokenListCreate();
+}
+
+void InitPasrserWith(Token items[], int length){
+    previousResult = currentResult;
+    currentResult = 0.0;
+    tokens = TokenListCreate();
+    TokenListAddRange(&tokens, items, length);
 }
 
 void StopParser(){
@@ -49,52 +57,158 @@ double GetCurrentResult(){
 }
 
 ParserInfo Parse(){
-    ParserInfo info;
+    ParserInfo pi = {
+        .error = NO_ERROR,
+        .currentReuslt = 0.0 
+    };
+    Token next_token;
 
-    return info;
+    next_token = PeekNextToken();
+    while(next_token.type != EOL && pi.token.type != EOL){
+        pi = ParseExpression();
+        printf("Result: %f\n", pi.currentReuslt);
+        if(pi.error != NO_ERROR){
+            return pi;
+        } 
+
+        next_token = GetNextToken();
+    }
+
+    return pi;
 }
 
-NumberDefinition ParseNumber(){
-    NumberDefinition number = {
-        .isNegative = false,
-        .isDecimal = false,
+ParserInfo ParseExpression(){
+    ParserInfo pi = {
         .error = NO_ERROR,
-        .string = charListCreate()
+        .currentReuslt = 0.0
     };
+    Token next_token;
 
-    Token token = PeekNextToken();
-    if(token.type == NEGATIVE){
-        number.isNegative = true;
-        charListPushBack(&number.string, token.value);
+    pi = ParseTerm();
+    if(pi.error != NO_ERROR){
+        return pi;
+    }
+    double tempResult = pi.currentReuslt;
+
+    next_token = PeekNextToken();
+    while(next_token.value == '+' || next_token.value == '-'){
+        GetNextToken();
+
+        pi = ParseTerm();
+        if(pi.error != NO_ERROR){
+            return pi;
+        }  
+        if(next_token.value == '+'){
+            tempResult += pi.currentReuslt;
+        }
+        else if (next_token.value == '-'){
+            tempResult -= pi.currentReuslt;
+        }
+
+        next_token = PeekNextToken();
+    }
+    pi.currentReuslt = tempResult;
+    
+    return pi;
+}
+
+ParserInfo ParseTerm(){
+    ParserInfo pi = {
+        .error = NO_ERROR,
+        .currentReuslt = 0.0
+    };
+    Token next_token;
+
+    pi = ParseNumber();
+    if(pi.error != NO_ERROR){
+        return pi;
+    }
+    double tempResult = pi.currentReuslt;
+ 
+    next_token = PeekNextToken();
+    while(next_token.value == '*' || next_token.value == '/' || next_token.value == 'E' || next_token.value == '^'){
+        GetNextToken();
+
+        pi = ParseNumber();
+        if(pi.error != NO_ERROR){
+            return pi;
+        }  
+
+        if(next_token.value == '*'){
+            tempResult *= pi.currentReuslt;
+        }
+        else if (next_token.value == '/'){
+            tempResult /= pi.currentReuslt;
+        }
+        else if (next_token.value == 'E'){
+            tempResult *= pow(10, pi.currentReuslt);
+        }
+        else if (next_token.value == '^'){
+            tempResult = pow(tempResult, pi.currentReuslt);
+        }
+
+        next_token = PeekNextToken();
+    }
+    pi.currentReuslt = tempResult;
+    return pi;
+}
+
+ParserInfo ParseFactor(){
+    ParserInfo pi = {
+        .error = NO_ERROR,
+        .currentReuslt = 0.0
+    };
+    Token next_token;
+
+    return pi;
+}
+
+ParserInfo ParseNumber(){
+    ParserInfo pi = {
+        .error = NO_ERROR,
+        .currentReuslt = 0.0
+    };
+    Token next_token;
+
+    charList* str = charListCreate();
+
+    next_token = PeekNextToken();
+    if(next_token.type == NEGATIVE){
+        charListPushBack(&str, next_token.value);
         GetNextToken(); // eats the token 
     }
 
-    token = PeekNextToken();
+    next_token = PeekNextToken();
     int decimalPointCount = 0;
-    while(token.type == NUMBER || token.type == DECIMAL){
-        if(token.type == EOL){
-            break;
+    while(next_token.type == NUMBER || next_token.type == DECIMAL){
+
+        GetNextToken();
+        if(next_token.type == EOL){
+            pi.token =  next_token;
+            return pi;
         }
-        if(token.type == DECIMAL){
+        if(next_token.type == DECIMAL){
             if(decimalPointCount > 1){
-                number.error = MULTIPLE_DECIMAL_POINT;
-                return number;
+                pi.error = MULTIPLE_DECIMAL_POINT;
+                pi.token = next_token;
+                return pi;
             }
-            number.isDecimal = true;
             decimalPointCount++;
         }
-        charListPushBack(&number.string, token.value);
-        GetNextToken();
-        token = PeekNextToken();
+        charListPushBack(&str, next_token.value);
+        next_token = PeekNextToken();
     }
 
-    if (number.string->length == 0){
-        number.error = MISSING_NUMBER;
-        return number;
+    if (str->length == 0){
+        pi.error = MISSING_NUMBER;
+        pi.token = next_token;
+        return pi;
     }
 
-    number.value = atof(number.string->value);
+    pi.token = next_token;
+    pi.currentReuslt = atof(str->value);
+    printf("Result: %f\n", pi.currentReuslt);
 
-    return number;
+    return pi;
 }
 
