@@ -143,13 +143,13 @@ MU_TEST(TestNumberParser){
         .type = EOL, 
         .value = ' '
     });
-    ParserInfo number = ParseNumber();
+    ParserInfo number = Parse();
     StopParser();
     mu_assert_double_eq(-1235.24, number.currentReuslt);
 }
 
 MU_TEST_SUITE(TestSuite) {
-	// MU_RUN_TEST(TestNumberParser);
+	MU_RUN_TEST(TestNumberParser);
     MU_RUN_TEST(TestParse);
 }
 

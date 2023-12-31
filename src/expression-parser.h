@@ -9,7 +9,8 @@ typedef enum {
     NO_ERROR,
     INVALID_MATH_EXPRESSION,
     MULTIPLE_DECIMAL_POINT,
-    MISSING_NUMBER
+    MISSING_NUMBER,
+    MISSING_BRACKET,
 } ParseError;
 
 typedef enum {
@@ -55,23 +56,10 @@ void InitPasrserWith(Token items[], int length);
 
 void StopParser();
 
-Token PeekNextToken();
-
-Token GetNextToken();
-
-double GetCurrentResult();
 
 ParserInfo Parse();
 
-void PushNewKey(KeyInfo key);
 
-ParserInfo ParseNumber();
-
-ParserInfo ParseFactor();
-
-ParserInfo ParseTerm();
-
-ParserInfo ParseExpression();
 
 
 #endif

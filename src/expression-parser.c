@@ -1,7 +1,6 @@
 #include "expression-parser.h"
 #include <stdlib.h>
 #include <math.h>
-#include <stdio.h>
 
 DEFINE_LIST_IMPLEMENTATION(Token);
 
@@ -9,6 +8,18 @@ TokenList* tokens;
 
 double currentResult = 0.0;
 double previousResult = 0.0;
+
+ParserInfo ParseNumber();
+
+ParserInfo ParseTerm();
+
+ParserInfo ParseExpression();
+
+ParserInfo ParseBracket();
+
+Token PeekNextToken();
+
+Token GetNextToken();
 
 void PushToken(Token token){
     if(tokens == NULL){
@@ -52,10 +63,6 @@ Token PeekNextToken ()
 	return tokens->value[tokens->currentIndex];
 }
 
-double GetCurrentResult(){
-    return currentResult;
-}
-
 ParserInfo Parse(){
     ParserInfo pi = {
         .error = NO_ERROR,
@@ -66,12 +73,41 @@ ParserInfo Parse(){
     next_token = PeekNextToken();
     while(next_token.type != EOL && pi.token.type != EOL){
         pi = ParseExpression();
-        printf("Result: %f\n", pi.currentReuslt);
         if(pi.error != NO_ERROR){
             return pi;
         } 
 
         next_token = GetNextToken();
+    }
+    currentResult = pi.currentReuslt;
+
+    return pi;
+}
+
+ParserInfo ParseBracket(){
+    ParserInfo pi = {
+        .error = NO_ERROR,
+        .currentReuslt = 0.0
+    };
+    Token next_token;
+
+    next_token = PeekNextToken();
+    if(next_token.value != '('){
+        pi.error = MISSING_BRACKET;
+        return pi;
+    }
+
+    GetNextToken(); // eat the '('
+
+    pi = ParseExpression();
+    if(pi.error != NO_ERROR){
+        return pi;
+    }
+
+    next_token = GetNextToken(); // eat the ')'
+    if(next_token.value != ')'){
+        pi.error = MISSING_BRACKET;
+        return pi;
     }
 
     return pi;
@@ -91,13 +127,21 @@ ParserInfo ParseExpression(){
     double tempResult = pi.currentReuslt;
 
     next_token = PeekNextToken();
-    while(next_token.value == '+' || next_token.value == '-'){
+    while(next_token.value == '+' || next_token.value == '-' || next_token.value == '(' || next_token.value == ')'){
         GetNextToken();
+        
+        if(next_token.value == '('){
+            pi = ParseBracket();
+            if(pi.error != NO_ERROR){
+                return pi;
+            }
+        } else {
+            pi = ParseTerm();
+            if(pi.error != NO_ERROR){
+                return pi;
+            }
+        }
 
-        pi = ParseTerm();
-        if(pi.error != NO_ERROR){
-            return pi;
-        }  
         if(next_token.value == '+'){
             tempResult += pi.currentReuslt;
         }
@@ -126,13 +170,20 @@ ParserInfo ParseTerm(){
     double tempResult = pi.currentReuslt;
  
     next_token = PeekNextToken();
-    while(next_token.value == '*' || next_token.value == '/' || next_token.value == 'E' || next_token.value == '^'){
+    while(next_token.value == '*' || next_token.value == '/' || next_token.value == 'E' || next_token.value == '^' || next_token.value == '('){
         GetNextToken();
 
-        pi = ParseNumber();
-        if(pi.error != NO_ERROR){
-            return pi;
-        }  
+        if (next_token.value == '('){
+            pi = ParseBracket();
+            if(pi.error != NO_ERROR){
+                return pi;
+            }
+        } else {
+            pi = ParseNumber();
+            if(pi.error != NO_ERROR){
+                return pi;
+            }  
+        }
 
         if(next_token.value == '*'){
             tempResult *= pi.currentReuslt;
@@ -150,16 +201,6 @@ ParserInfo ParseTerm(){
         next_token = PeekNextToken();
     }
     pi.currentReuslt = tempResult;
-    return pi;
-}
-
-ParserInfo ParseFactor(){
-    ParserInfo pi = {
-        .error = NO_ERROR,
-        .currentReuslt = 0.0
-    };
-    Token next_token;
-
     return pi;
 }
 
@@ -207,7 +248,6 @@ ParserInfo ParseNumber(){
 
     pi.token = next_token;
     pi.currentReuslt = atof(str->value);
-    printf("Result: %f\n", pi.currentReuslt);
 
     return pi;
 }
