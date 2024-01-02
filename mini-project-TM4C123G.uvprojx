@@ -489,6 +489,16 @@
               <FileType>5</FileType>
               <FilePath>.\src\hardware-test.h</FilePath>
             </File>
+            <File>
+              <FileName>parser.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\parser.c</FilePath>
+            </File>
+            <File>
+              <FileName>parser.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\parser.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

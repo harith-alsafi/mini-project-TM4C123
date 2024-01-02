@@ -1,4 +1,4 @@
-#include "expression-parser.h"
+#include "parser.h"
 #include <stdlib.h>
 #include <math.h>
 
@@ -127,7 +127,7 @@ ParserInfo ParseExpression(){
     double tempResult = pi.currentReuslt;
 
     next_token = PeekNextToken();
-    while(next_token.value == '+' || next_token.value == '-' || next_token.value == '(' || next_token.value == ')'){
+    while(next_token.value == '+' || next_token.value == '-' || next_token.value == '('){
         GetNextToken();
         
         if(next_token.value == '('){
@@ -170,20 +170,13 @@ ParserInfo ParseTerm(){
     double tempResult = pi.currentReuslt;
  
     next_token = PeekNextToken();
-    while(next_token.value == '*' || next_token.value == '/' || next_token.value == 'E' || next_token.value == '^' || next_token.value == '('){
+    while(next_token.value == '*' || next_token.value == '/' || next_token.value == 'E' || next_token.value == '^' ){
         GetNextToken();
-
-        if (next_token.value == '('){
-            pi = ParseBracket();
-            if(pi.error != NO_ERROR){
-                return pi;
-            }
-        } else {
-            pi = ParseNumber();
-            if(pi.error != NO_ERROR){
-                return pi;
-            }  
-        }
+    
+        pi = ParseNumber();
+        if(pi.error != NO_ERROR){
+            return pi;
+        }  
 
         if(next_token.value == '*'){
             tempResult *= pi.currentReuslt;
@@ -214,9 +207,16 @@ ParserInfo ParseNumber(){
     charList* str = charListCreate();
 
     next_token = PeekNextToken();
-    if(next_token.type == NEGATIVE){
-        charListPushBack(&str, next_token.value);
-        GetNextToken(); // eats the token 
+    if(next_token.type == NEGATIVE || next_token.value == '('){
+        if(next_token.value == '('){
+            pi = ParseBracket();
+            if(pi.error != NO_ERROR){
+                return pi;
+            }
+        } else {
+            charListPushBack(&str, next_token.value);
+            GetNextToken(); // eats the token 
+        }
     }
 
     next_token = PeekNextToken();

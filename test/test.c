@@ -2,6 +2,76 @@
 #include <stdio.h>
 #include "../lib/minunit/minunit.h"
 
+MU_TEST(TestBracket){
+    // (2^(2+1)-2)*0.5 = 3
+    Token tokens[] = {
+        {
+            .type = OPERATOR, 
+            .value = '('
+        },
+        {
+            .type = NUMBER, 
+            .value = '2'
+        },
+        {
+            .type = OPERATOR, 
+            .value = '^'
+        },
+        {
+            .type = OPERATOR, 
+            .value = '('
+        },
+        {
+            .type = NUMBER,
+            .value = '2'
+        },
+        {
+            .type = OPERATOR,
+            .value = '+'
+        },
+        {
+            .type = NUMBER,
+            .value = '1'
+        },
+        {
+            .type = OPERATOR,
+            .value = ')'
+        },
+        {
+            .type = OPERATOR,
+            .value = '-'
+        },
+        {
+            .type = NUMBER,
+            .value = '2'
+        },
+        {
+            .type = OPERATOR,
+            .value = ')'
+        },
+        {
+            .type = OPERATOR,
+            .value = '*'
+        },
+        {
+            .type = NUMBER,
+            .value = '0'
+        },
+        {
+            .type = DECIMAL,
+            .value = '.'
+        },
+        {
+            .type = NUMBER,
+            .value = '5'
+        }
+    };
+    InitPasrserWith(tokens, 15);
+    ParserInfo pi = Parse();
+    StopParser();
+    mu_assert_double_eq(3.0, pi.currentReuslt);
+}
+
 MU_TEST(TestParse){
     // 15.2E-3.4+2/4-5^3+2*5+1
     Token tokens[] = {
@@ -102,7 +172,6 @@ MU_TEST(TestParse){
     ParserInfo pi = Parse();
     StopParser();
     mu_assert_double_eq(-113.5, pi.currentReuslt);
-    printf("Result: %f\n", pi.currentReuslt);
 }
 
 MU_TEST(TestNumberParser){
@@ -151,6 +220,7 @@ MU_TEST(TestNumberParser){
 MU_TEST_SUITE(TestSuite) {
 	MU_RUN_TEST(TestNumberParser);
     MU_RUN_TEST(TestParse);
+    MU_RUN_TEST(TestBracket);
 }
 
 

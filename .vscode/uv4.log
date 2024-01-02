@@ -1,41 +1,4 @@
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target'
-compiling program-logic.c...
-compiling user-interface.c...
-compiling main.c...
-compiling hardware-test.c...
-src/helpers.c(3): warning: sizeof on array function parameter will return size of 'char *' instead of 'char[]' [-Wsizeof-array-argument]
-DEFINE_LIST_IMPLEMENTATION(char)
-^
-src/helpers.h(54): note: expanded from macro 'DEFINE_LIST_IMPLEMENTATION'
-        for(int i = 0; i < ARRAY_LEN(items); i++){ \
-                           ^
-src/helpers.h(8): note: expanded from macro 'ARRAY_LEN'
-#define ARRAY_LEN(arr) (sizeof(arr) / sizeof(arr[0]))
-                              ^
-src/helpers.c(3): note: declared here
-src/helpers.h(53): note: expanded from macro 'DEFINE_LIST_IMPLEMENTATION'
-    int Type##ListAddRange(Type##List** list, Type items[]) { \
-                                                   ^
-src/helpers.c(3): warning: 'sizeof (items)' will return the size of the pointer, not the array itself [-Wsizeof-pointer-div]
-DEFINE_LIST_IMPLEMENTATION(char)
-^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-src/helpers.h(54): note: expanded from macro 'DEFINE_LIST_IMPLEMENTATION'
-        for(int i = 0; i < ARRAY_LEN(items); i++){ \
-                           ^~~~~~~~~~~~~~~~
-src/helpers.h(8): note: expanded from macro 'ARRAY_LEN'
-#define ARRAY_LEN(arr) (sizeof(arr) / sizeof(arr[0]))
-                        ~~~~~~~~~~~ ^
-src/helpers.c(3): note: pointer 'items' declared here
-src/helpers.h(53): note: expanded from macro 'DEFINE_LIST_IMPLEMENTATION'
-    int Type##ListAddRange(Type##List** list, Type items[]) { \
-                                                   ^
-2 warnings generated.
-compiling helpers.c...
-compiling ports.c...
-compiling lcd.c...
-compiling system_TM4C123.c...
-linking...
-Program Size: Code=2612 RO-data=772 RW-data=0 ZI-data=616  
-".\Objects\mini-project-TM4C123G.axf" - 0 Error(s), 2 Warning(s).
-Build Time Elapsed:  00:00:02
+".\Objects\mini-project-TM4C123G.axf" - 0 Error(s), 0 Warning(s).
+Build Time Elapsed:  00:00:00
