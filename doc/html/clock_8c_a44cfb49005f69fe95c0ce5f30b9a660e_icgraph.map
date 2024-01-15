@@ -1,6 +1,6 @@
 <map id="DelayMicro" name="DelayMicro">
 <area shape="rect" id="Node000001" title="Uses." alt="" coords="1439,220,1526,247"/>
-<area shape="rect" id="Node000002" href="$keypad_8c.html#ab826b54bc6305f49d758d28173041ab7" title=" " alt="" coords="1272,5,1385,32"/>
+<area shape="rect" id="Node000002" href="$keypad_8c.html#ab826b54bc6305f49d758d28173041ab7" title="Gets the character from the keypad." alt="" coords="1272,5,1385,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1471,206,1442,131,1419,90,1390,53,1364,35,1367,30,1393,49,1423,87,1447,129,1476,204"/>
 <area shape="rect" id="Node000007" href="$lcd_8c.html#a27164e4aa24d46318deab3dd42658978" title="Sets the LCD cursor position." alt="" coords="1275,372,1381,399"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1470,262,1439,312,1418,339,1393,362,1374,374,1371,369,1390,358,1414,335,1435,309,1465,259"/>
@@ -18,16 +18,16 @@
 <area shape="poly" id="edge25_Node000001_Node000020" title=" " alt="" coords="1476,262,1465,296,1447,336,1424,377,1393,413,1376,424,1373,420,1390,409,1419,374,1443,334,1460,294,1471,260"/>
 <area shape="rect" id="Node000021" href="$lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1278,119,1378,145"/>
 <area shape="poly" id="edge26_Node000001_Node000021" title=" " alt="" coords="1452,212,1390,166,1358,148,1360,144,1393,162,1455,208"/>
-<area shape="rect" id="Node000003" href="$keypad_8c.html#a63a4bc1c3105f40dc85fe16092790f83" title=" " alt="" coords="711,5,850,32"/>
+<area shape="rect" id="Node000003" href="$keypad_8c.html#a63a4bc1c3105f40dc85fe16092790f83" title="Waits for a key to be pressed." alt="" coords="711,5,850,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1256,21,850,21,850,16,1256,16"/>
-<area shape="rect" id="Node000004" href="$unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,107,348,133"/>
+<area shape="rect" id="Node000004" href="$hardware-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,107,348,133"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="695,14,629,13,555,16,477,26,401,47,374,59,349,76,309,108,306,104,345,71,371,55,399,41,476,21,554,11,629,7,695,9"/>
-<area shape="rect" id="Node000005" href="$unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,107,174,133"/>
+<area shape="rect" id="Node000005" href="$hardware-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,107,174,133"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="221,123,174,123,174,117,221,117"/>
 <area shape="rect" id="Node000006" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,208,55,235"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="108,144,104,147,71,179,45,209,41,206,67,176,101,143,105,140"/>
 <area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="1269,254,1198,277,1196,272,1268,249"/>
-<area shape="rect" id="Node000010" href="$program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="579,309,633,336"/>
+<area shape="rect" id="Node000010" href="$logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="579,309,633,336"/>
 <area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="1122,290,633,324,633,318,1121,284"/>
 <area shape="poly" id="edge10_Node000010_Node000006" title=" " alt="" coords="563,321,417,304,232,275,133,252,54,231,55,226,134,247,234,269,418,299,564,316"/>
 <area shape="poly" id="edge12_Node000011_Node000009" title=" " alt="" coords="1250,287,1197,287,1197,281,1250,281"/>
@@ -35,25 +35,25 @@
 <area shape="poly" id="edge23_Node000013_Node000004" title=" " alt="" coords="542,123,349,123,349,117,542,117"/>
 <area shape="rect" id="Node000014" href="$lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="400,208,510,235"/>
 <area shape="poly" id="edge17_Node000013_Node000014" title=" " alt="" coords="580,146,511,198,490,210,487,205,508,194,577,142"/>
-<area shape="rect" id="Node000015" href="$lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="403,157,507,184"/>
+<area shape="rect" id="Node000015" href="$lcd_8c.html#afb88b9aba1a1db09a517c5a1ffc07299" title="Prints a string to the LCD." alt="" coords="403,157,507,184"/>
 <area shape="poly" id="edge18_Node000013_Node000015" title=" " alt="" coords="550,141,498,159,496,154,549,136"/>
-<area shape="rect" id="Node000019" href="$unit-test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="406,56,504,83"/>
+<area shape="rect" id="Node000019" href="$hardware-test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="406,56,504,83"/>
 <area shape="poly" id="edge24_Node000013_Node000019" title=" " alt="" coords="549,104,496,86,498,81,550,99"/>
 <area shape="poly" id="edge19_Node000015_Node000004" title=" " alt="" coords="395,155,337,136,339,131,396,150"/>
-<area shape="rect" id="Node000016" href="$unit-test_8c.html#a02e71048dc3a569b41b257dec3b00cf0" title=" " alt="" coords="240,233,345,260"/>
+<area shape="rect" id="Node000016" href="$hardware-test_8c.html#a02e71048dc3a569b41b257dec3b00cf0" title=" " alt="" coords="240,233,345,260"/>
 <area shape="poly" id="edge20_Node000015_Node000016" title=" " alt="" coords="412,193,401,198,324,235,322,230,399,194,410,189"/>
-<area shape="rect" id="Node000017" href="$unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,157,352,184"/>
+<area shape="rect" id="Node000017" href="$hardware-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,157,352,184"/>
 <area shape="poly" id="edge21_Node000015_Node000017" title=" " alt="" coords="387,173,353,173,353,168,387,168"/>
-<area shape="rect" id="Node000018" href="$unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,157,185,184"/>
+<area shape="rect" id="Node000018" href="$hardware-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,157,185,184"/>
 <area shape="poly" id="edge22_Node000017_Node000018" title=" " alt="" coords="218,173,185,173,185,168,218,168"/>
-<area shape="rect" id="Node000022" href="$lcd_8c.html#a8de82b22879092baf8383713ecc708e9" title="Sets the cursor position." alt="" coords="1117,195,1217,221"/>
+<area shape="rect" id="Node000022" href="$lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="1117,195,1217,221"/>
 <area shape="poly" id="edge27_Node000021_Node000022" title=" " alt="" coords="1285,155,1198,197,1196,192,1283,150"/>
 <area shape="poly" id="edge32_Node000022_Node000014" title=" " alt="" coords="1101,212,510,223,510,218,1101,207"/>
 <area shape="poly" id="edge33_Node000022_Node000016" title=" " alt="" coords="1102,228,956,258,869,270,782,275,604,275,464,268,345,256,346,251,464,263,605,269,781,269,869,265,955,253,1101,223"/>
-<area shape="rect" id="Node000023" href="$lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="906,157,1069,184"/>
+<area shape="rect" id="Node000023" href="$lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="906,157,1069,184"/>
 <area shape="poly" id="edge28_Node000022_Node000023" title=" " alt="" coords="1101,197,1054,187,1056,182,1102,192"/>
 <area shape="poly" id="edge31_Node000023_Node000013" title=" " alt="" coords="891,169,799,161,702,148,653,137,654,131,702,143,799,156,891,164"/>
-<area shape="rect" id="Node000024" href="$lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="702,107,858,133"/>
+<area shape="rect" id="Node000024" href="$lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="702,107,858,133"/>
 <area shape="poly" id="edge29_Node000023_Node000024" title=" " alt="" coords="914,156,837,137,838,131,915,150"/>
 <area shape="poly" id="edge30_Node000024_Node000013" title=" " alt="" coords="686,123,655,123,655,117,686,117"/>
 </map>

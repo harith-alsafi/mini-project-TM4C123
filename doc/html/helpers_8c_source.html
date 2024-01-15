@@ -83,18 +83,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="contents">
 <a href="helpers_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="helpers_8h.html">helpers.h</a>&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="foldopen" id="foldopen00003" data-start="{" data-end="}">
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="helpers_8c.html#ad7f3f83d057abbbc219fb761d2058708">    3</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="helpers_8c.html#ad7f3f83d057abbbc219fb761d2058708">Strlen</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str) {</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> len = 0;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="keywordflow">while</span> (*str != <span class="charliteral">&#39;\0&#39;</span>) {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        len++;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        str++;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    }</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordflow">return</span> len;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>}</div>
-</div>
-<div class="ttc" id="ahelpers_8c_html_ad7f3f83d057abbbc219fb761d2058708"><div class="ttname"><a href="helpers_8c.html#ad7f3f83d057abbbc219fb761d2058708">Strlen</a></div><div class="ttdeci">unsigned int Strlen(const char *str)</div><div class="ttdoc">Gets the length of a string.</div><div class="ttdef"><b>Definition</b> <a href="helpers_8c_source.html#l00003">helpers.c:3</a></div></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><a class="code hl_define" href="helpers_8h.html#af81ac8e504dd921417ba754f655999f5">DEFINE_LIST_IMPLEMENTATION</a>(<span class="keywordtype">char</span>)</div>
 <div class="ttc" id="ahelpers_8h_html"><div class="ttname"><a href="helpers_8h.html">helpers.h</a></div></div>
+<div class="ttc" id="ahelpers_8h_html_af81ac8e504dd921417ba754f655999f5"><div class="ttname"><a href="helpers_8h.html#af81ac8e504dd921417ba754f655999f5">DEFINE_LIST_IMPLEMENTATION</a></div><div class="ttdeci">#define DEFINE_LIST_IMPLEMENTATION(Type)</div><div class="ttdef"><b>Definition</b> <a href="helpers_8h_source.html#l00025">helpers.h:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

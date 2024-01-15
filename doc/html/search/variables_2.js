@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['isspecial_0',['isSpecial',['../struct_key_info.html#aad793e7d0881eafc1dd46649bb2780be',1,'KeyInfo']]]
+  ['error_0',['error',['../struct_parser_info.html#aab78007585df1e7b289ba34601e58409',1,'ParserInfo']]]
 ];

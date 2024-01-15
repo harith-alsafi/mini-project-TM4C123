@@ -1,9 +1,9 @@
 <map id="src/main.c" name="src/main.c">
-<area shape="rect" id="Node000001" title=" " alt="" coords="138,5,220,32"/>
-<area shape="rect" id="Node000002" href="$program-logic_8h.html" title=" " alt="" coords="5,80,116,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,35,95,74,93,69,157,30"/>
-<area shape="rect" id="Node000003" href="$unit-test_8h.html" title=" " alt="" coords="140,80,219,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,33,182,64,177,64,177,33"/>
-<area shape="rect" id="Node000004" href="$ports_8h.html" title=" " alt="" coords="243,80,305,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="197,30,247,68,244,73,194,35"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="154,5,236,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,116,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,35,99,75,96,70,170,30"/>
+<area shape="rect" id="Node000003" href="$hardware-test_8h.html" title=" " alt="" coords="140,80,250,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,33,198,64,193,64,193,33"/>
+<area shape="rect" id="Node000004" href="$ports_8h.html" title=" " alt="" coords="274,80,335,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="216,30,274,69,272,74,213,35"/>
 </map>

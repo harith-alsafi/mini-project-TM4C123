@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['unit_5ftest_5fh_0',['UNIT_TEST_H',['../unit-test_8h.html#aaca9bad4dfe82f439fda079b604ea29d',1,'unit-test.h']]],
-  ['user_5finterface_5fh_1',['USER_INTERFACE_H',['../user-interface_8h.html#a8608c8eb776842681d315eb77899f737',1,'user-interface.h']]]
+  ['ports_5fh_0',['PORTS_H',['../ports_8h.html#a45ea33ff2946109d424b7238be6a7775',1,'ports.h']]],
+  ['program_5flogic_5fh_1',['PROGRAM_LOGIC_H',['../logic_8h.html#a4aedb44dda7e02ceb062810c557f8994',1,'logic.h']]]
 ];

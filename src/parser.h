@@ -4,6 +4,8 @@
 #include <stdbool.h>
 #include "helpers.h"
 
+#define SCB_CPACR (*((volatile unsigned long *)0xE000ED88))
+
 typedef enum {
     SYNTAX_ERROR,
     NO_ERROR,
@@ -15,11 +17,9 @@ typedef enum {
 
 typedef enum {
     NUMBER,
-    OPERATOR,
-    NEGATIVE,
-    PARENTHESIS,
-    DECIMAL,
     EOL,
+    OPERATOR,
+    DECIMAL,
     PREVIOUS_ANSWER,
 } TokenType;
 
@@ -28,38 +28,64 @@ typedef struct {
     TokenType type;
 } Token;
 
-DEFINE_LIST_PROTOTYPE(Token);
-
 typedef struct {
     Token token;
     ParseError error;
-    double currentReuslt;
+    float currentResult;
 } ParserInfo;
 
-// 1.234E3.4*1+2/4-5^3+2*(5+1)
-typedef struct {
-    bool isNegative;
-    bool isDecimal;
-    double value;
-    ParseError error;
-    charList* string;
-} NumberDefinition;
+DEFINE_LIST_PROTOTYPE(Token);
 
-// (sign?) number Operation (sign?) number
-// number => number.number
+/**
+ * @brief Pushes new token to the parser can be used after calling @see ParserInit and @see ParserInitWith
+ * 
+ * @param token 
+ */
+void ParserPushToken(Token token);
 
-void PushToken(Token token);
+/**
+ * @brief Removes last pushed token 
+ * 
+ */
+void ParserPopToken();
 
-void InitPasrser();
+/**
+ * @brief Initializes the parser
+ * 
+ */
+void ParserInit();
 
-void InitPasrserWith(Token items[], int length);
+/**
+ * @brief Initializes the parser with initial token list 
+ * 
+ * @param items token list
+ * @param length length of the tokens 
+ */
+void ParserInitWith(Token items[], int length);
 
-void StopParser();
+/**
+ * @brief Stops the parser and clears all tokens 
+ * 
+ */
+void ParserStop();
 
+/**
+ * @brief Calls @see ParserInit then @see ParserStop 
+ * 
+ */
+void ParserReset();
 
-ParserInfo Parse();
+/**
+ * @brief Compiles the tokens and returns the result
+ * 
+ * @return `ParserInfo`  <br>
+ */
+ParserInfo ParserCompile();
 
-
-
+/**
+ * @brief Ends the input 
+ * 
+ */
+void ParserEndInput();
 
 #endif

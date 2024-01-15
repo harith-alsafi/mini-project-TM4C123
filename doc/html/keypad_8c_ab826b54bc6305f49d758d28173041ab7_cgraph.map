@@ -1,5 +1,5 @@
 <map id="KeypadGetChar" name="KeypadGetChar">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,119,32"/>
+<area shape="rect" id="Node000001" title="Gets the character from the keypad." alt="" coords="5,5,119,32"/>
 <area shape="rect" id="Node000002" href="$clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="167,5,253,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,16,151,16,151,21,119,21"/>
 <area shape="rect" id="Node000003" href="$clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="301,5,396,32"/>

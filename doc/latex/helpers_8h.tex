@@ -1,5 +1,14 @@
 \doxysection{src/helpers.h File Reference}
 \hypertarget{helpers_8h}{}\label{helpers_8h}\index{src/helpers.h@{src/helpers.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for helpers.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{helpers_8h__incl}
+\end{center}
+\end{figure}
 This graph shows which files directly or indirectly include this file\+:
 \nopagebreak
 \begin{figure}[H]
@@ -18,6 +27,10 @@ This graph shows which files directly or indirectly include this file\+:
 \#define \mbox{\hyperlink{helpers_8h_ab811d8c6ff3a505312d3276590444289}{LOW}}~0x00
 \item 
 \#define \mbox{\hyperlink{helpers_8h_abad5e4191558987772c01a31c46b8997}{ARRAY\+\_\+\+LEN}}(arr)~(sizeof(arr) / sizeof(arr\mbox{[}0\mbox{]}))
+\item 
+\#define \mbox{\hyperlink{helpers_8h_ab9b5864bb7f364790006596ce97eb4ea}{DEFINE\+\_\+\+LIST\+\_\+\+PROTOTYPE}}(Type)
+\item 
+\#define \mbox{\hyperlink{helpers_8h_af81ac8e504dd921417ba754f655999f5}{DEFINE\+\_\+\+LIST\+\_\+\+IMPLEMENTATION}}(Type)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -27,8 +40,8 @@ typedef unsigned char \mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-unsigned int \mbox{\hyperlink{helpers_8h_ad7f3f83d057abbbc219fb761d2058708}{Strlen}} (const char \texorpdfstring{$\ast$}{*}str)
-\begin{DoxyCompactList}\small\item\em Gets the length of a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{helpers_8h_a20ff7803fa076e4c75b49d77ed58b681}{DEFINE\+\_\+\+LIST\+\_\+\+PROTOTYPE}} (char)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -40,7 +53,44 @@ unsigned int \mbox{\hyperlink{helpers_8h_ad7f3f83d057abbbc219fb761d2058708}{Strl
 
 
 
-Definition at line \mbox{\hyperlink{helpers_8h_source_l00006}{6}} of file \mbox{\hyperlink{helpers_8h_source}{helpers.\+h}}.
+Definition at line \mbox{\hyperlink{helpers_8h_source_l00008}{8}} of file \mbox{\hyperlink{helpers_8h_source}{helpers.\+h}}.
+
+\Hypertarget{helpers_8h_af81ac8e504dd921417ba754f655999f5}\label{helpers_8h_af81ac8e504dd921417ba754f655999f5} 
+\index{helpers.h@{helpers.h}!DEFINE\_LIST\_IMPLEMENTATION@{DEFINE\_LIST\_IMPLEMENTATION}}
+\index{DEFINE\_LIST\_IMPLEMENTATION@{DEFINE\_LIST\_IMPLEMENTATION}!helpers.h@{helpers.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_LIST\_IMPLEMENTATION}{DEFINE\_LIST\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \#define DEFINE\+\_\+\+LIST\+\_\+\+IMPLEMENTATION(\begin{DoxyParamCaption}\item[{}]{Type }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{helpers_8h_source_l00025}{25}} of file \mbox{\hyperlink{helpers_8h_source}{helpers.\+h}}.
+
+\Hypertarget{helpers_8h_ab9b5864bb7f364790006596ce97eb4ea}\label{helpers_8h_ab9b5864bb7f364790006596ce97eb4ea} 
+\index{helpers.h@{helpers.h}!DEFINE\_LIST\_PROTOTYPE@{DEFINE\_LIST\_PROTOTYPE}}
+\index{DEFINE\_LIST\_PROTOTYPE@{DEFINE\_LIST\_PROTOTYPE}!helpers.h@{helpers.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_LIST\_PROTOTYPE}{DEFINE\_LIST\_PROTOTYPE}}
+{\footnotesize\ttfamily \#define DEFINE\+\_\+\+LIST\+\_\+\+PROTOTYPE(\begin{DoxyParamCaption}\item[{}]{Type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ length;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentIndex;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Type\ value[];\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ Type\#\#List;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ Type\#\#List*\ Type\#\#ListCreate();\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ Type\#\#ListDestroy(Type\#\#List*\ list);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ Type\#\#ListPushBack(Type\#\#List**\ list,\ Type\ item)\ ;\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ Type\#\#ListAddRange(Type\#\#List**\ list,\ Type\ items[],\ \textcolor{keywordtype}{int}\ length);}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{helpers_8h_source_l00010}{10}} of file \mbox{\hyperlink{helpers_8h_source}{helpers.\+h}}.
 
 \Hypertarget{helpers_8h_a4fd85cebb3a7e1a87f883886a1e43791}\label{helpers_8h_a4fd85cebb3a7e1a87f883886a1e43791} 
 \index{helpers.h@{helpers.h}!HELPERS\_H@{HELPERS\_H}}
@@ -60,7 +110,7 @@ Definition at line \mbox{\hyperlink{helpers_8h_source_l00002}{2}} of file \mbox{
 
 
 
-Definition at line \mbox{\hyperlink{helpers_8h_source_l00004}{4}} of file \mbox{\hyperlink{helpers_8h_source}{helpers.\+h}}.
+Definition at line \mbox{\hyperlink{helpers_8h_source_l00006}{6}} of file \mbox{\hyperlink{helpers_8h_source}{helpers.\+h}}.
 
 \Hypertarget{helpers_8h_ab811d8c6ff3a505312d3276590444289}\label{helpers_8h_ab811d8c6ff3a505312d3276590444289} 
 \index{helpers.h@{helpers.h}!LOW@{LOW}}
@@ -70,7 +120,7 @@ Definition at line \mbox{\hyperlink{helpers_8h_source_l00004}{4}} of file \mbox{
 
 
 
-Definition at line \mbox{\hyperlink{helpers_8h_source_l00005}{5}} of file \mbox{\hyperlink{helpers_8h_source}{helpers.\+h}}.
+Definition at line \mbox{\hyperlink{helpers_8h_source_l00007}{7}} of file \mbox{\hyperlink{helpers_8h_source}{helpers.\+h}}.
 
 
 
@@ -83,39 +133,14 @@ Definition at line \mbox{\hyperlink{helpers_8h_source_l00005}{5}} of file \mbox{
 
 
 
-Definition at line \mbox{\hyperlink{helpers_8h_source_l00008}{8}} of file \mbox{\hyperlink{helpers_8h_source}{helpers.\+h}}.
+Definition at line \mbox{\hyperlink{helpers_8h_source_l00062}{62}} of file \mbox{\hyperlink{helpers_8h_source}{helpers.\+h}}.
 
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{helpers_8h_ad7f3f83d057abbbc219fb761d2058708}\label{helpers_8h_ad7f3f83d057abbbc219fb761d2058708} 
-\index{helpers.h@{helpers.h}!Strlen@{Strlen}}
-\index{Strlen@{Strlen}!helpers.h@{helpers.h}}
-\doxysubsubsection{\texorpdfstring{Strlen()}{Strlen()}}
-{\footnotesize\ttfamily unsigned int Strlen (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str }\end{DoxyParamCaption})}
+\Hypertarget{helpers_8h_a20ff7803fa076e4c75b49d77ed58b681}\label{helpers_8h_a20ff7803fa076e4c75b49d77ed58b681} 
+\index{helpers.h@{helpers.h}!DEFINE\_LIST\_PROTOTYPE@{DEFINE\_LIST\_PROTOTYPE}}
+\index{DEFINE\_LIST\_PROTOTYPE@{DEFINE\_LIST\_PROTOTYPE}!helpers.h@{helpers.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_LIST\_PROTOTYPE()}{DEFINE\_LIST\_PROTOTYPE()}}
+{\footnotesize\ttfamily DEFINE\+\_\+\+LIST\+\_\+\+PROTOTYPE (\begin{DoxyParamCaption}\item[{char}]{ }\end{DoxyParamCaption})}
 
-
-
-Gets the length of a string. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em str} & given string \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-{\ttfamily unsigned int} Length of given string ~\newline
- 
-\end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{helpers_8c_source_l00003}{3}} of file \mbox{\hyperlink{helpers_8c_source}{helpers.\+c}}.
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{helpers_8h_ad7f3f83d057abbbc219fb761d2058708_icgraph}
-\end{center}
-\end{figure}

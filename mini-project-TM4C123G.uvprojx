@@ -395,16 +395,6 @@
               <FilePath>.\src\clock.h</FilePath>
             </File>
             <File>
-              <FileName>flash-storage.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\flash-storage.c</FilePath>
-            </File>
-            <File>
-              <FileName>flash-storage.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\src\flash-storage.h</FilePath>
-            </File>
-            <File>
               <FileName>helpers.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\helpers.c</FilePath>
@@ -450,16 +440,6 @@
               <FilePath>.\src\ports.h</FilePath>
             </File>
             <File>
-              <FileName>program-logic.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\program-logic.c</FilePath>
-            </File>
-            <File>
-              <FileName>program-logic.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\src\program-logic.h</FilePath>
-            </File>
-            <File>
               <FileName>TExaS.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\src\TExaS.h</FilePath>
@@ -470,26 +450,6 @@
               <FilePath>.\src\texas.o</FilePath>
             </File>
             <File>
-              <FileName>user-interface.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\user-interface.c</FilePath>
-            </File>
-            <File>
-              <FileName>user-interface.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\src\user-interface.h</FilePath>
-            </File>
-            <File>
-              <FileName>hardware-test.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\hardware-test.c</FilePath>
-            </File>
-            <File>
-              <FileName>hardware-test.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\src\hardware-test.h</FilePath>
-            </File>
-            <File>
               <FileName>parser.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\parser.c</FilePath>
@@ -498,6 +458,36 @@
               <FileName>parser.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\src\parser.h</FilePath>
+            </File>
+            <File>
+              <FileName>flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>flash.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\flash.h</FilePath>
+            </File>
+            <File>
+              <FileName>logic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\logic.c</FilePath>
+            </File>
+            <File>
+              <FileName>logic.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\logic.h</FilePath>
+            </File>
+            <File>
+              <FileName>test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\test.c</FilePath>
+            </File>
+            <File>
+              <FileName>test.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\test.h</FilePath>
             </File>
           </Files>
         </Group>

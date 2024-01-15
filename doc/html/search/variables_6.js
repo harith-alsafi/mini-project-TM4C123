@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['shiftdisplay_0',['shiftDisplay',['../struct_key_info.html#ad4e8166e71feacf01a45a0346818aa39',1,'KeyInfo']]],
-  ['shiftfunction_1',['shiftFunction',['../struct_key_info.html#ae84e8c2103cde405fc762cafb1727015',1,'KeyInfo']]],
-  ['shiftison_2',['shiftison',['../keypad_8c.html#ab3f2ce14f970ec74192af9e2c69a3ef5',1,'shiftIsOn:&#160;keypad.c'],['../keypad_8h.html#ab3f2ce14f970ec74192af9e2c69a3ef5',1,'shiftIsOn:&#160;keypad.c']]],
-  ['sw1_3',['SW1',['../playground_8c.html#aaffcb829b17f75f5e57ae7d810e18def',1,'playground.c']]],
-  ['sw2_4',['SW2',['../playground_8c.html#a17bc02cea6c2d2bb1322a102153fca04',1,'playground.c']]]
+  ['password_0',['password',['../struct_flash_data.html#ab7969b05d81fd851e3238236b94bf1e4',1,'FlashData']]],
+  ['passwordlength_1',['passwordLength',['../struct_flash_data.html#a098d99b6a0f1ab85c7a16b5eb154f4d6',1,'FlashData']]],
+  ['previousresult_2',['previousResult',['../parser_8c.html#ad6e5391dcd7235b6d8a37fb24dc64eec',1,'parser.c']]]
 ];

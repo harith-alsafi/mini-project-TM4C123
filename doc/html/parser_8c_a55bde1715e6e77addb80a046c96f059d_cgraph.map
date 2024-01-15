@@ -1,0 +1,21 @@
+<map id="ParseNumber" name="ParseNumber">
+<area shape="rect" id="Node000001" title="Parses only number tokens." alt="" coords="5,132,106,159"/>
+<area shape="rect" id="Node000002" href="$parser_8c.html#a7f8aeab74e49ee2b275a7575e8d7b5e8" title="Eats the next token." alt="" coords="607,5,712,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,130,104,98,152,67,209,45,269,28,329,17,389,10,501,6,592,9,591,15,501,11,390,15,330,22,270,34,211,50,155,72,107,102,72,134"/>
+<area shape="rect" id="Node000003" href="$parser_8c.html#ab942fe3a63fed3190c76e55ebc76e5aa" title="Parses bracket expression." alt="" coords="154,81,254,108"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="96,129,147,111,149,116,98,134"/>
+<area shape="rect" id="Node000006" href="$parser_8c.html#a73bf16a41122c7751670f74fd415a36c" title="Peeks next token." alt="" coords="603,157,716,184"/>
+<area shape="poly" id="edge13_Node000001_Node000006" title=" " alt="" coords="107,150,303,173,428,180,555,179,587,176,587,182,555,184,428,185,302,178,106,156"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="254,79,301,67,385,49,470,35,592,21,592,26,471,40,386,54,303,72,255,84"/>
+<area shape="rect" id="Node000004" href="$parser_8c.html#ab427a20c59c9ca0b11c82660752df62a" title="Parses arithematic expression." alt="" coords="302,81,422,108"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="254,100,286,101,286,106,254,106"/>
+<area shape="poly" id="edge12_Node000003_Node000006" title=" " alt="" coords="242,106,344,140,407,156,471,168,530,173,587,173,587,178,530,178,470,173,406,161,343,145,241,111"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="417,78,592,33,593,38,418,83"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="302,89,270,88,270,83,302,83"/>
+<area shape="rect" id="Node000005" href="$parser_8c.html#a5656fb9995d62b96c08bfef4789ee4db" title="Parses term tokens." alt="" coords="470,132,555,159"/>
+<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="405,106,457,124,456,129,403,111"/>
+<area shape="poly" id="edge11_Node000004_Node000006" title=" " alt="" coords="423,95,487,102,555,117,591,131,623,147,621,152,589,136,554,123,486,108,422,100"/>
+<area shape="poly" id="edge9_Node000005_Node000001" title=" " alt="" coords="470,148,121,148,121,143,470,143"/>
+<area shape="poly" id="edge8_Node000005_Node000002" title=" " alt="" coords="528,130,629,40,633,44,531,134"/>
+<area shape="poly" id="edge10_Node000005_Node000006" title=" " alt="" coords="556,150,588,156,587,161,555,155"/>
+</map>

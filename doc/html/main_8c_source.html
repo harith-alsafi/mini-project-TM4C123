@@ -81,31 +81,30 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">main.c</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="main_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="program-logic_8h.html">program-logic.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="unit-test_8h.html">unit-test.h</a>&quot;</span></div>
+<a href="main_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;program-logic.h&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="hardware-test_8h.html">hardware-test.h</a>&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// #include &lt;stdio.h&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="ports_8h.html">ports.h</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">    7</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_function" href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8">InitAll</a>();</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_function" href="logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8">InitAll</a>();</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordflow">while</span> (1){</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <a class="code hl_function" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651">RunAll</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <a class="code hl_function" href="hardware-test_8c.html#ac43be5887d2ddcce27989432c6415651">RunAll</a>();</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="comment">// printf(&quot;%ld\n&quot;, GPIO_PORTE_DATA_R);</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
 </div>
+<div class="ttc" id="ahardware-test_8c_html_ac43be5887d2ddcce27989432c6415651"><div class="ttname"><a href="hardware-test_8c.html#ac43be5887d2ddcce27989432c6415651">RunAll</a></div><div class="ttdeci">void RunAll()</div><div class="ttdoc">Runs all unit test functions.</div><div class="ttdef"><b>Definition</b> <a href="hardware-test_8c_source.html#l00067">hardware-test.c:67</a></div></div>
+<div class="ttc" id="ahardware-test_8h_html"><div class="ttname"><a href="hardware-test_8h.html">hardware-test.h</a></div></div>
+<div class="ttc" id="alogic_8c_html_a8468ead6b76c5ff5eb578a79fd591aa8"><div class="ttname"><a href="logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8">InitAll</a></div><div class="ttdeci">void InitAll()</div><div class="ttdoc">Initializes all components.</div><div class="ttdef"><b>Definition</b> <a href="logic_8c_source.html#l00006">logic.c:6</a></div></div>
 <div class="ttc" id="amain_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="main_8c_source.html#l00007">main.c:7</a></div></div>
 <div class="ttc" id="aports_8h_html"><div class="ttname"><a href="ports_8h.html">ports.h</a></div></div>
-<div class="ttc" id="aprogram-logic_8c_html_a8468ead6b76c5ff5eb578a79fd591aa8"><div class="ttname"><a href="program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8">InitAll</a></div><div class="ttdeci">void InitAll()</div><div class="ttdoc">Initializes all components.</div><div class="ttdef"><b>Definition</b> <a href="program-logic_8c_source.html#l00006">program-logic.c:6</a></div></div>
-<div class="ttc" id="aprogram-logic_8h_html"><div class="ttname"><a href="program-logic_8h.html">program-logic.h</a></div></div>
-<div class="ttc" id="aunit-test_8c_html_ac43be5887d2ddcce27989432c6415651"><div class="ttname"><a href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651">RunAll</a></div><div class="ttdeci">void RunAll()</div><div class="ttdoc">Runs all unit test functions.</div><div class="ttdef"><b>Definition</b> <a href="unit-test_8c_source.html#l00067">unit-test.c:67</a></div></div>
-<div class="ttc" id="aunit-test_8h_html"><div class="ttname"><a href="unit-test_8h.html">unit-test.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

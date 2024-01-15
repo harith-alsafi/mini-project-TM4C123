@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['sysctl_5frcc2_5fr_0',['SYSCTL_RCC2_R',['../clock_8h.html#a0dd31b093c1a83329f67d1df68df4d58',1,'clock.h']]],
-  ['sysctl_5frcc_5fr_1',['SYSCTL_RCC_R',['../clock_8h.html#adaab842b86f022de9497dd36d1e35643',1,'clock.h']]],
-  ['sysctl_5frcgc2_5fr_2',['sysctl_rcgc2_r',['../clock_8h.html#a2fedfceccf18bd54a499e73d1b76e506',1,'SYSCTL_RCGC2_R:&#160;clock.h'],['../playground_8c.html#a2fedfceccf18bd54a499e73d1b76e506',1,'SYSCTL_RCGC2_R:&#160;playground.c']]],
-  ['sysctl_5fris_5fr_3',['SYSCTL_RIS_R',['../clock_8h.html#ac1e0e3bbc40315eaa5e3cad513d5dae8',1,'clock.h']]]
+  ['nvic_5fst_5fctrl_5fr_0',['NVIC_ST_CTRL_R',['../clock_8h.html#adcfc8530f81c2ebea5d6b229ba4f9d3f',1,'clock.h']]],
+  ['nvic_5fst_5fcurrent_5fr_1',['NVIC_ST_CURRENT_R',['../clock_8h.html#a83b8a7cd422c2dde3c671c9255216cff',1,'clock.h']]],
+  ['nvic_5fst_5freload_5fr_2',['NVIC_ST_RELOAD_R',['../clock_8h.html#a1c404f068f1ba79d68c7cc4302112da3',1,'clock.h']]]
 ];

@@ -2,9 +2,9 @@
 <area shape="rect" id="Node000001" title="Prints a character to the LCD." alt="" coords="5,99,102,125"/>
 <area shape="rect" id="Node000002" href="$clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="868,73,954,100"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,97,100,64,123,47,149,34,225,10,288,3,434,8,616,8,685,14,753,28,814,46,864,65,862,70,812,51,751,33,684,19,616,13,434,13,288,8,226,15,151,39,126,52,103,68,69,101"/>
-<area shape="rect" id="Node000005" href="$lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="150,48,306,75"/>
+<area shape="rect" id="Node000005" href="$lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="150,48,306,75"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="101,96,164,77,165,82,103,101"/>
-<area shape="rect" id="Node000006" href="$lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="354,99,516,125"/>
+<area shape="rect" id="Node000006" href="$lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="354,99,516,125"/>
 <area shape="poly" id="edge16_Node000001_Node000006" title=" " alt="" coords="102,109,338,109,338,115,102,115"/>
 <area shape="rect" id="Node000009" href="$lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="861,124,960,151"/>
 <area shape="poly" id="edge17_Node000001_Node000009" title=" " alt="" coords="102,120,250,146,341,156,434,160,616,160,738,155,845,144,846,149,738,160,616,165,434,165,341,161,249,151,101,125"/>
@@ -15,7 +15,7 @@
 <area shape="rect" id="Node000004" href="$playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="1580,99,1632,125"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1533,94,1565,101,1564,106,1532,99"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="286,73,363,92,362,97,285,78"/>
-<area shape="rect" id="Node000007" href="$lcd_8c.html#a8de82b22879092baf8383713ecc708e9" title="Sets the cursor position." alt="" coords="564,99,665,125"/>
+<area shape="rect" id="Node000007" href="$lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="564,99,665,125"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="517,109,548,109,548,115,517,115"/>
 <area shape="rect" id="Node000008" href="$lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="713,99,813,125"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="665,109,697,109,697,115,665,115"/>

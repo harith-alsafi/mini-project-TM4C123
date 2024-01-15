@@ -13,42 +13,13 @@
       <node id="2">
         <label>helpers.h</label>
         <link refid="helpers_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
       </node>
     </incdepgraph>
-    <sectiondef kind="func">
-      <memberdef kind="function" id="helpers_8c_1ad7f3f83d057abbbc219fb761d2058708" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>unsigned int</type>
-        <definition>unsigned int Strlen</definition>
-        <argsstring>(const char *str)</argsstring>
-        <name>Strlen</name>
-        <param>
-          <type>const char *</type>
-          <declname>str</declname>
-        </param>
-        <briefdescription>
-<para>Gets the length of a string. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>str</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>given string </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para><computeroutput>unsigned int</computeroutput> Length of given string <linebreak/>
- </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/helpers.c" line="3" column="14" bodyfile="src/helpers.c" bodystart="3" bodyend="10"/>
-        <referencedby refid="lcd_8c_1a6ba64316f53c5a71031db621b3fe435e" compoundref="lcd_8c" startline="235" endline="240">LcdPrintString</referencedby>
-      </memberdef>
-    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -56,14 +27,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="helpers_8h" kindref="compound">helpers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="helpers_8c_1ad7f3f83d057abbbc219fb761d2058708" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="helpers_8c_1ad7f3f83d057abbbc219fb761d2058708" kindref="member">Strlen</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str)<sp/>{</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(*str<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len++;</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str++;</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>len;</highlight></codeline>
-<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="helpers_8h_1af81ac8e504dd921417ba754f655999f5" kindref="member">DEFINE_LIST_IMPLEMENTATION</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)</highlight></codeline>
     </programlisting>
     <location file="src/helpers.c"/>
   </compounddef>

@@ -1,0 +1,307 @@
+\doxysection{src/parser.h File Reference}
+\hypertarget{parser_8h}{}\label{parser_8h}\index{src/parser.h@{src/parser.h}}
+{\ttfamily \#include "{}keypad.\+h"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include "{}helpers.\+h"{}}\newline
+Include dependency graph for parser.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{parser_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{parser_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_token}{Token}}
+\item 
+struct \mbox{\hyperlink{struct_parser_info}{Parser\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{parser_8h_a5eacb3f8d827ae299ee42b9e0e99fa13}{EXPRESSION\+\_\+\+PARSER\+\_\+H}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09f}{Parse\+Error}} \{ \newline
+\mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa5d594af14177857fc7661d03eda0baea}{SYNTAX\+\_\+\+ERROR}}
+, \mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94}{NO\+\_\+\+ERROR}}
+, \mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fae340a9bc4389c62faef96782ebbdfc43}{INVALID\+\_\+\+MATH\+\_\+\+EXPRESSION}}
+, \mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa67f5d4d700401c98e49d7a68c35c9272}{MULTIPLE\+\_\+\+DECIMAL\+\_\+\+POINT}}
+, \newline
+\mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa1744590ec2b010dcd5774db413f87f56}{MISSING\+\_\+\+NUMBER}}
+, \mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa2759d6055f211c659299d46ab05a7618}{MISSING\+\_\+\+BRACKET}}
+ \}
+\item 
+enum \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921}{Token\+Type}} \{ \newline
+\mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a12a90dfe20486bbe3e075afcd19ef2d0}{NUMBER}}
+, \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a6411d9d6073252e4d316493506bbb979}{OPERATOR}}
+, \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921af08a543d5a1549321682e12569d0fbd6}{DECIMAL}}
+, \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2}{EOL}}
+, \newline
+\mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a834f3e0777521aa22ca5b50e816970d9}{PREVIOUS\+\_\+\+ANSWER}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{parser_8h_a4f9090efc910ceda64fee9b0bc305428}{DEFINE\+\_\+\+LIST\+\_\+\+PROTOTYPE}} (\mbox{\hyperlink{struct_token}{Token}})
+\item 
+void \mbox{\hyperlink{parser_8h_aa19b910e23df23ebe5f189f93c97afdd}{Parser\+Push\+Token}} (\mbox{\hyperlink{struct_token}{Token}} token)
+\begin{DoxyCompactList}\small\item\em Pushes new token to the parser can be used after calling. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{parser_8h_ae23a18474f4d84e20fdcc9869d67b363}{Parser\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the parser. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{parser_8h_a1034bedc0b6b8bdb22f67b0e72a101d0}{Parser\+Init\+With}} (\mbox{\hyperlink{struct_token}{Token}} items\mbox{[}$\,$\mbox{]}, int length)
+\begin{DoxyCompactList}\small\item\em Initializes the parser with initial token list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{parser_8h_a9264a889771bffb6e9bb7215c8402eda}{Parser\+Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the parser and clears all tokens. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{parser_8h_a1715c490f05c2ddcb8d526684468f885}{Parser\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Calls. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_parser_info}{Parser\+Info}} \mbox{\hyperlink{parser_8h_a19203c96ed6922e7092af10b63e6d298}{Parser\+Compile}} ()
+\begin{DoxyCompactList}\small\item\em Compiles the tokens and returns the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{parser_8h_a5eacb3f8d827ae299ee42b9e0e99fa13}\label{parser_8h_a5eacb3f8d827ae299ee42b9e0e99fa13} 
+\index{parser.h@{parser.h}!EXPRESSION\_PARSER\_H@{EXPRESSION\_PARSER\_H}}
+\index{EXPRESSION\_PARSER\_H@{EXPRESSION\_PARSER\_H}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{EXPRESSION\_PARSER\_H}{EXPRESSION\_PARSER\_H}}
+{\footnotesize\ttfamily \#define EXPRESSION\+\_\+\+PARSER\+\_\+H}
+
+
+
+Definition at line \mbox{\hyperlink{parser_8h_source_l00002}{2}} of file \mbox{\hyperlink{parser_8h_source}{parser.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09f}\label{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09f} 
+\index{parser.h@{parser.h}!ParseError@{ParseError}}
+\index{ParseError@{ParseError}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{ParseError}{ParseError}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09f}{Parse\+Error}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYNTAX\_ERROR@{SYNTAX\_ERROR}!parser.h@{parser.h}}\index{parser.h@{parser.h}!SYNTAX\_ERROR@{SYNTAX\_ERROR}}}\Hypertarget{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa5d594af14177857fc7661d03eda0baea}\label{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa5d594af14177857fc7661d03eda0baea} 
+SYNTAX\+\_\+\+ERROR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NO\_ERROR@{NO\_ERROR}!parser.h@{parser.h}}\index{parser.h@{parser.h}!NO\_ERROR@{NO\_ERROR}}}\Hypertarget{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94}\label{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94} 
+NO\+\_\+\+ERROR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INVALID\_MATH\_EXPRESSION@{INVALID\_MATH\_EXPRESSION}!parser.h@{parser.h}}\index{parser.h@{parser.h}!INVALID\_MATH\_EXPRESSION@{INVALID\_MATH\_EXPRESSION}}}\Hypertarget{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fae340a9bc4389c62faef96782ebbdfc43}\label{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fae340a9bc4389c62faef96782ebbdfc43} 
+INVALID\+\_\+\+MATH\+\_\+\+EXPRESSION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MULTIPLE\_DECIMAL\_POINT@{MULTIPLE\_DECIMAL\_POINT}!parser.h@{parser.h}}\index{parser.h@{parser.h}!MULTIPLE\_DECIMAL\_POINT@{MULTIPLE\_DECIMAL\_POINT}}}\Hypertarget{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa67f5d4d700401c98e49d7a68c35c9272}\label{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa67f5d4d700401c98e49d7a68c35c9272} 
+MULTIPLE\+\_\+\+DECIMAL\+\_\+\+POINT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MISSING\_NUMBER@{MISSING\_NUMBER}!parser.h@{parser.h}}\index{parser.h@{parser.h}!MISSING\_NUMBER@{MISSING\_NUMBER}}}\Hypertarget{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa1744590ec2b010dcd5774db413f87f56}\label{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa1744590ec2b010dcd5774db413f87f56} 
+MISSING\+\_\+\+NUMBER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MISSING\_BRACKET@{MISSING\_BRACKET}!parser.h@{parser.h}}\index{parser.h@{parser.h}!MISSING\_BRACKET@{MISSING\_BRACKET}}}\Hypertarget{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa2759d6055f211c659299d46ab05a7618}\label{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa2759d6055f211c659299d46ab05a7618} 
+MISSING\+\_\+\+BRACKET&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{parser_8h_source_l00007}{7}} of file \mbox{\hyperlink{parser_8h_source}{parser.\+h}}.
+
+\Hypertarget{parser_8h_aa520fbf142ba1e7e659590c07da31921}\label{parser_8h_aa520fbf142ba1e7e659590c07da31921} 
+\index{parser.h@{parser.h}!TokenType@{TokenType}}
+\index{TokenType@{TokenType}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{TokenType}{TokenType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921}{Token\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUMBER@{NUMBER}!parser.h@{parser.h}}\index{parser.h@{parser.h}!NUMBER@{NUMBER}}}\Hypertarget{parser_8h_aa520fbf142ba1e7e659590c07da31921a12a90dfe20486bbe3e075afcd19ef2d0}\label{parser_8h_aa520fbf142ba1e7e659590c07da31921a12a90dfe20486bbe3e075afcd19ef2d0} 
+NUMBER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OPERATOR@{OPERATOR}!parser.h@{parser.h}}\index{parser.h@{parser.h}!OPERATOR@{OPERATOR}}}\Hypertarget{parser_8h_aa520fbf142ba1e7e659590c07da31921a6411d9d6073252e4d316493506bbb979}\label{parser_8h_aa520fbf142ba1e7e659590c07da31921a6411d9d6073252e4d316493506bbb979} 
+OPERATOR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DECIMAL@{DECIMAL}!parser.h@{parser.h}}\index{parser.h@{parser.h}!DECIMAL@{DECIMAL}}}\Hypertarget{parser_8h_aa520fbf142ba1e7e659590c07da31921af08a543d5a1549321682e12569d0fbd6}\label{parser_8h_aa520fbf142ba1e7e659590c07da31921af08a543d5a1549321682e12569d0fbd6} 
+DECIMAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EOL@{EOL}!parser.h@{parser.h}}\index{parser.h@{parser.h}!EOL@{EOL}}}\Hypertarget{parser_8h_aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2}\label{parser_8h_aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2} 
+EOL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PREVIOUS\_ANSWER@{PREVIOUS\_ANSWER}!parser.h@{parser.h}}\index{parser.h@{parser.h}!PREVIOUS\_ANSWER@{PREVIOUS\_ANSWER}}}\Hypertarget{parser_8h_aa520fbf142ba1e7e659590c07da31921a834f3e0777521aa22ca5b50e816970d9}\label{parser_8h_aa520fbf142ba1e7e659590c07da31921a834f3e0777521aa22ca5b50e816970d9} 
+PREVIOUS\+\_\+\+ANSWER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{parser_8h_source_l00016}{16}} of file \mbox{\hyperlink{parser_8h_source}{parser.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{parser_8h_a4f9090efc910ceda64fee9b0bc305428}\label{parser_8h_a4f9090efc910ceda64fee9b0bc305428} 
+\index{parser.h@{parser.h}!DEFINE\_LIST\_PROTOTYPE@{DEFINE\_LIST\_PROTOTYPE}}
+\index{DEFINE\_LIST\_PROTOTYPE@{DEFINE\_LIST\_PROTOTYPE}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_LIST\_PROTOTYPE()}{DEFINE\_LIST\_PROTOTYPE()}}
+{\footnotesize\ttfamily DEFINE\+\_\+\+LIST\+\_\+\+PROTOTYPE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_token}{Token}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{parser_8h_a19203c96ed6922e7092af10b63e6d298}\label{parser_8h_a19203c96ed6922e7092af10b63e6d298} 
+\index{parser.h@{parser.h}!ParserCompile@{ParserCompile}}
+\index{ParserCompile@{ParserCompile}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{ParserCompile()}{ParserCompile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_parser_info}{Parser\+Info}} Parser\+Compile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Compiles the tokens and returns the result. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily Parser\+Info} ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{parser_8c_source_l00102}{102}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{parser_8h_a19203c96ed6922e7092af10b63e6d298_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{parser_8h_ae23a18474f4d84e20fdcc9869d67b363}\label{parser_8h_ae23a18474f4d84e20fdcc9869d67b363} 
+\index{parser.h@{parser.h}!ParserInit@{ParserInit}}
+\index{ParserInit@{ParserInit}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{ParserInit()}{ParserInit()}}
+{\footnotesize\ttfamily void Parser\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the parser. 
+
+
+
+Definition at line \mbox{\hyperlink{parser_8c_source_l00080}{80}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{parser_8h_ae23a18474f4d84e20fdcc9869d67b363_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{parser_8h_a1034bedc0b6b8bdb22f67b0e72a101d0}\label{parser_8h_a1034bedc0b6b8bdb22f67b0e72a101d0} 
+\index{parser.h@{parser.h}!ParserInitWith@{ParserInitWith}}
+\index{ParserInitWith@{ParserInitWith}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{ParserInitWith()}{ParserInitWith()}}
+{\footnotesize\ttfamily void Parser\+Init\+With (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_token}{Token}}}]{items\mbox{[}$\,$\mbox{]},  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Initializes the parser with initial token list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em items} & token list \\
+\hline
+{\em length} & length of the tokens \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{parser_8c_source_l00086}{86}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
+
+\Hypertarget{parser_8h_aa19b910e23df23ebe5f189f93c97afdd}\label{parser_8h_aa19b910e23df23ebe5f189f93c97afdd} 
+\index{parser.h@{parser.h}!ParserPushToken@{ParserPushToken}}
+\index{ParserPushToken@{ParserPushToken}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{ParserPushToken()}{ParserPushToken()}}
+{\footnotesize\ttfamily void Parser\+Push\+Token (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_token}{Token}}}]{token }\end{DoxyParamCaption})}
+
+
+
+Pushes new token to the parser can be used after calling. 
+
+\begin{DoxySeeAlso}{See also}
+Parser\+Init and 
+
+Parser\+Init\+With
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em token} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{parser_8c_source_l00073}{73}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
+
+\Hypertarget{parser_8h_a1715c490f05c2ddcb8d526684468f885}\label{parser_8h_a1715c490f05c2ddcb8d526684468f885} 
+\index{parser.h@{parser.h}!ParserReset@{ParserReset}}
+\index{ParserReset@{ParserReset}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{ParserReset()}{ParserReset()}}
+{\footnotesize\ttfamily void Parser\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls. 
+
+\begin{DoxySeeAlso}{See also}
+Parser\+Init then 
+
+Parser\+Stop 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{parser_8c_source_l00097}{97}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{parser_8h_a1715c490f05c2ddcb8d526684468f885_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{parser_8h_a9264a889771bffb6e9bb7215c8402eda}\label{parser_8h_a9264a889771bffb6e9bb7215c8402eda} 
+\index{parser.h@{parser.h}!ParserStop@{ParserStop}}
+\index{ParserStop@{ParserStop}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{ParserStop()}{ParserStop()}}
+{\footnotesize\ttfamily void Parser\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stops the parser and clears all tokens. 
+
+
+
+Definition at line \mbox{\hyperlink{parser_8c_source_l00093}{93}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{parser_8h_a9264a889771bffb6e9bb7215c8402eda_icgraph}
+\end{center}
+\end{figure}

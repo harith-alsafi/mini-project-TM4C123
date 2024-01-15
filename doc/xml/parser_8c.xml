@@ -1,0 +1,714 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="parser_8c" kind="file" language="C++">
+    <compoundname>parser.c</compoundname>
+    <includes refid="parser_8h" local="yes">parser.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">math.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>helpers.h</label>
+        <link refid="helpers_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>keypad.h</label>
+        <link refid="keypad_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/parser.c</label>
+        <link refid="parser_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>parser.h</label>
+        <link refid="parser_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>math.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="parser_8c_1a2875192a853252042ae25ea84bd66155" prot="public" static="no" mutable="no">
+        <type>TokenList *</type>
+        <definition>TokenList* tokens</definition>
+        <argsstring></argsstring>
+        <name>tokens</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="53" column="11" bodyfile="src/parser.c" bodystart="53" bodyend="-1"/>
+        <referencedby refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" compoundref="parser_8c" startline="58" endline="66">GetNextToken</referencedby>
+        <referencedby refid="parser_8c_1ae23a18474f4d84e20fdcc9869d67b363" compoundref="parser_8c" startline="80" endline="84">ParserInit</referencedby>
+        <referencedby refid="parser_8c_1a1034bedc0b6b8bdb22f67b0e72a101d0" compoundref="parser_8c" startline="86" endline="91">ParserInitWith</referencedby>
+        <referencedby refid="parser_8c_1aa19b910e23df23ebe5f189f93c97afdd" compoundref="parser_8c" startline="73" endline="78">ParserPushToken</referencedby>
+        <referencedby refid="parser_8c_1a9264a889771bffb6e9bb7215c8402eda" compoundref="parser_8c" startline="93" endline="95">ParserStop</referencedby>
+        <referencedby refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" compoundref="parser_8c" startline="68" endline="71">PeekNextToken</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="parser_8c_1a90c1a51331d7017d5acffc8f102af658" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double currentResult</definition>
+        <argsstring></argsstring>
+        <name>currentResult</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="55" column="8" bodyfile="src/parser.c" bodystart="55" bodyend="-1"/>
+        <referencedby refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" compoundref="parser_8c" startline="102" endline="121">ParserCompile</referencedby>
+        <referencedby refid="parser_8c_1ae23a18474f4d84e20fdcc9869d67b363" compoundref="parser_8c" startline="80" endline="84">ParserInit</referencedby>
+        <referencedby refid="parser_8c_1a1034bedc0b6b8bdb22f67b0e72a101d0" compoundref="parser_8c" startline="86" endline="91">ParserInitWith</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="parser_8c_1ad6e5391dcd7235b6d8a37fb24dc64eec" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double previousResult</definition>
+        <argsstring></argsstring>
+        <name>previousResult</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="56" column="8" bodyfile="src/parser.c" bodystart="56" bodyend="-1"/>
+        <referencedby refid="parser_8c_1ae23a18474f4d84e20fdcc9869d67b363" compoundref="parser_8c" startline="80" endline="84">ParserInit</referencedby>
+        <referencedby refid="parser_8c_1a1034bedc0b6b8bdb22f67b0e72a101d0" compoundref="parser_8c" startline="86" endline="91">ParserInitWith</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="parser_8c_1a55bde1715e6e77addb80a046c96f059d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref></type>
+        <definition>ParserInfo ParseNumber</definition>
+        <argsstring>()</argsstring>
+        <name>ParseNumber</name>
+        <briefdescription>
+<para>Parses only number tokens. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>ParserInfo</computeroutput> <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="236" column="12" bodyfile="src/parser.c" bodystart="236" bodyend="289" declfile="src/parser.c" declline="12" declcolumn="12"/>
+        <references refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" compoundref="parser_8h" startline="32">ParserInfo::currentReuslt</references>
+        <references refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921af08a543d5a1549321682e12569d0fbd6" compoundref="parser_8h" startline="19">DECIMAL</references>
+        <references refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2" compoundref="parser_8h" startline="20">EOL</references>
+        <references refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" compoundref="parser_8h" startline="31">ParserInfo::error</references>
+        <references refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" compoundref="parser_8c" startline="58" endline="66">GetNextToken</references>
+        <references refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fa1744590ec2b010dcd5774db413f87f56" compoundref="parser_8h" startline="12">MISSING_NUMBER</references>
+        <references refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fa67f5d4d700401c98e49d7a68c35c9272" compoundref="parser_8h" startline="11">MULTIPLE_DECIMAL_POINT</references>
+        <references refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" compoundref="parser_8h" startline="9">NO_ERROR</references>
+        <references refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921a12a90dfe20486bbe3e075afcd19ef2d0" compoundref="parser_8h" startline="17">NUMBER</references>
+        <references refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" compoundref="parser_8c" startline="123" endline="150">ParseBracket</references>
+        <references refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" compoundref="parser_8c" startline="68" endline="71">PeekNextToken</references>
+        <references refid="struct_parser_info_1abfc67a8c3f2b9d94335e175d14a67d9b" compoundref="parser_8h" startline="30">ParserInfo::token</references>
+        <references refid="struct_token_1a67919af9f3a80dc0b28a0ab1e6d5bf8a" compoundref="parser_8h" startline="26">Token::type</references>
+        <references refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" compoundref="parser_8h" startline="25">Token::value</references>
+        <referencedby refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" compoundref="parser_8c" startline="195" endline="234">ParseTerm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref></type>
+        <definition>ParserInfo ParseTerm</definition>
+        <argsstring>()</argsstring>
+        <name>ParseTerm</name>
+        <briefdescription>
+<para>Parses term tokens. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>ParserInfo</computeroutput> <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="195" column="12" bodyfile="src/parser.c" bodystart="195" bodyend="234" declfile="src/parser.c" declline="19" declcolumn="12"/>
+        <references refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" compoundref="parser_8h" startline="32">ParserInfo::currentReuslt</references>
+        <references refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" compoundref="parser_8h" startline="31">ParserInfo::error</references>
+        <references refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" compoundref="parser_8c" startline="58" endline="66">GetNextToken</references>
+        <references refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" compoundref="parser_8h" startline="9">NO_ERROR</references>
+        <references refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="236" endline="289">ParseNumber</references>
+        <references refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" compoundref="parser_8c" startline="68" endline="71">PeekNextToken</references>
+        <references refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" compoundref="parser_8h" startline="25">Token::value</references>
+        <referencedby refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" compoundref="parser_8c" startline="152" endline="193">ParseExpression</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref></type>
+        <definition>ParserInfo ParseBracket</definition>
+        <argsstring>()</argsstring>
+        <name>ParseBracket</name>
+        <briefdescription>
+<para>Parses bracket expression. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>ParserInfo</computeroutput> <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="123" column="12" bodyfile="src/parser.c" bodystart="123" bodyend="150" declfile="src/parser.c" declline="26" declcolumn="12"/>
+        <references refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" compoundref="parser_8h" startline="31">ParserInfo::error</references>
+        <references refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" compoundref="parser_8c" startline="58" endline="66">GetNextToken</references>
+        <references refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fa2759d6055f211c659299d46ab05a7618" compoundref="parser_8h" startline="13">MISSING_BRACKET</references>
+        <references refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" compoundref="parser_8h" startline="9">NO_ERROR</references>
+        <references refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" compoundref="parser_8c" startline="152" endline="193">ParseExpression</references>
+        <references refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" compoundref="parser_8c" startline="68" endline="71">PeekNextToken</references>
+        <references refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" compoundref="parser_8h" startline="25">Token::value</references>
+        <referencedby refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" compoundref="parser_8c" startline="152" endline="193">ParseExpression</referencedby>
+        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="236" endline="289">ParseNumber</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref></type>
+        <definition>ParserInfo ParseExpression</definition>
+        <argsstring>()</argsstring>
+        <name>ParseExpression</name>
+        <briefdescription>
+<para>Parses arithematic expression. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>ParserInfo</computeroutput> <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="152" column="12" bodyfile="src/parser.c" bodystart="152" bodyend="193" declfile="src/parser.c" declline="33" declcolumn="12"/>
+        <references refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" compoundref="parser_8h" startline="32">ParserInfo::currentReuslt</references>
+        <references refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" compoundref="parser_8h" startline="31">ParserInfo::error</references>
+        <references refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" compoundref="parser_8c" startline="58" endline="66">GetNextToken</references>
+        <references refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" compoundref="parser_8h" startline="9">NO_ERROR</references>
+        <references refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" compoundref="parser_8c" startline="123" endline="150">ParseBracket</references>
+        <references refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" compoundref="parser_8c" startline="195" endline="234">ParseTerm</references>
+        <references refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" compoundref="parser_8c" startline="68" endline="71">PeekNextToken</references>
+        <references refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" compoundref="parser_8h" startline="25">Token::value</references>
+        <referencedby refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" compoundref="parser_8c" startline="123" endline="150">ParseBracket</referencedby>
+        <referencedby refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" compoundref="parser_8c" startline="102" endline="121">ParserCompile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="parser_8c_1a73bf16a41122c7751670f74fd415a36c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_token" kindref="compound">Token</ref></type>
+        <definition>Token PeekNextToken</definition>
+        <argsstring>()</argsstring>
+        <name>PeekNextToken</name>
+        <briefdescription>
+<para>Peeks next token. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>Token</computeroutput> <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="68" column="7" bodyfile="src/parser.c" bodystart="68" bodyend="71" declfile="src/parser.c" declline="40" declcolumn="7"/>
+        <references refid="parser_8c_1a2875192a853252042ae25ea84bd66155" compoundref="parser_8c" startline="53">tokens</references>
+        <references refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" compoundref="parser_8h" startline="25">Token::value</references>
+        <referencedby refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" compoundref="parser_8c" startline="123" endline="150">ParseBracket</referencedby>
+        <referencedby refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" compoundref="parser_8c" startline="152" endline="193">ParseExpression</referencedby>
+        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="236" endline="289">ParseNumber</referencedby>
+        <referencedby refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" compoundref="parser_8c" startline="102" endline="121">ParserCompile</referencedby>
+        <referencedby refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" compoundref="parser_8c" startline="195" endline="234">ParseTerm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_token" kindref="compound">Token</ref></type>
+        <definition>Token GetNextToken</definition>
+        <argsstring>()</argsstring>
+        <name>GetNextToken</name>
+        <briefdescription>
+<para>Eats the next token. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>Token</computeroutput> <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="58" column="7" bodyfile="src/parser.c" bodystart="58" bodyend="66" declfile="src/parser.c" declline="47" declcolumn="7"/>
+        <references refid="parser_8c_1a2875192a853252042ae25ea84bd66155" compoundref="parser_8c" startline="53">tokens</references>
+        <references refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" compoundref="parser_8h" startline="25">Token::value</references>
+        <referencedby refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" compoundref="parser_8c" startline="123" endline="150">ParseBracket</referencedby>
+        <referencedby refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" compoundref="parser_8c" startline="152" endline="193">ParseExpression</referencedby>
+        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="236" endline="289">ParseNumber</referencedby>
+        <referencedby refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" compoundref="parser_8c" startline="102" endline="121">ParserCompile</referencedby>
+        <referencedby refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" compoundref="parser_8c" startline="195" endline="234">ParseTerm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="parser_8c_1a5f9f8254464237d9eb81ee4abc0fc70b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DEFINE_LIST_IMPLEMENTATION</definition>
+        <argsstring>(Token)</argsstring>
+        <name>DEFINE_LIST_IMPLEMENTATION</name>
+        <param>
+          <type><ref refid="struct_token" kindref="compound">Token</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="51" column="1" declfile="src/parser.c" declline="51" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="parser_8c_1aa19b910e23df23ebe5f189f93c97afdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParserPushToken</definition>
+        <argsstring>(Token token)</argsstring>
+        <name>ParserPushToken</name>
+        <param>
+          <type><ref refid="struct_token" kindref="compound">Token</ref></type>
+          <declname>token</declname>
+        </param>
+        <briefdescription>
+<para>Pushes new token to the parser can be used after calling. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>ParserInit and </para>
+</simplesect>
+<simplesect kind="see"><para>ParserInitWith</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>token</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="73" column="6" bodyfile="src/parser.c" bodystart="73" bodyend="78"/>
+        <references refid="parser_8c_1a2875192a853252042ae25ea84bd66155" compoundref="parser_8c" startline="53">tokens</references>
+      </memberdef>
+      <memberdef kind="function" id="parser_8c_1ae23a18474f4d84e20fdcc9869d67b363" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParserInit</definition>
+        <argsstring>()</argsstring>
+        <name>ParserInit</name>
+        <briefdescription>
+<para>Initializes the parser. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="80" column="6" bodyfile="src/parser.c" bodystart="80" bodyend="84"/>
+        <references refid="parser_8c_1a90c1a51331d7017d5acffc8f102af658" compoundref="parser_8c" startline="55">currentResult</references>
+        <references refid="parser_8c_1ad6e5391dcd7235b6d8a37fb24dc64eec" compoundref="parser_8c" startline="56">previousResult</references>
+        <references refid="parser_8c_1a2875192a853252042ae25ea84bd66155" compoundref="parser_8c" startline="53">tokens</references>
+        <referencedby refid="parser_8c_1a1715c490f05c2ddcb8d526684468f885" compoundref="parser_8c" startline="97" endline="100">ParserReset</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="parser_8c_1a1034bedc0b6b8bdb22f67b0e72a101d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParserInitWith</definition>
+        <argsstring>(Token items[], int length)</argsstring>
+        <name>ParserInitWith</name>
+        <param>
+          <type><ref refid="struct_token" kindref="compound">Token</ref></type>
+          <declname>items</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the parser with initial token list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>token list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the tokens </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="86" column="6" bodyfile="src/parser.c" bodystart="86" bodyend="91"/>
+        <references refid="parser_8c_1a90c1a51331d7017d5acffc8f102af658" compoundref="parser_8c" startline="55">currentResult</references>
+        <references refid="parser_8c_1ad6e5391dcd7235b6d8a37fb24dc64eec" compoundref="parser_8c" startline="56">previousResult</references>
+        <references refid="parser_8c_1a2875192a853252042ae25ea84bd66155" compoundref="parser_8c" startline="53">tokens</references>
+      </memberdef>
+      <memberdef kind="function" id="parser_8c_1a9264a889771bffb6e9bb7215c8402eda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParserStop</definition>
+        <argsstring>()</argsstring>
+        <name>ParserStop</name>
+        <briefdescription>
+<para>Stops the parser and clears all tokens. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="93" column="6" bodyfile="src/parser.c" bodystart="93" bodyend="95"/>
+        <references refid="parser_8c_1a2875192a853252042ae25ea84bd66155" compoundref="parser_8c" startline="53">tokens</references>
+        <referencedby refid="parser_8c_1a1715c490f05c2ddcb8d526684468f885" compoundref="parser_8c" startline="97" endline="100">ParserReset</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="parser_8c_1a1715c490f05c2ddcb8d526684468f885" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParserReset</definition>
+        <argsstring>()</argsstring>
+        <name>ParserReset</name>
+        <briefdescription>
+<para>Calls. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>ParserInit then </para>
+</simplesect>
+<simplesect kind="see"><para>ParserStop </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="97" column="6" bodyfile="src/parser.c" bodystart="97" bodyend="100"/>
+        <references refid="parser_8c_1ae23a18474f4d84e20fdcc9869d67b363" compoundref="parser_8c" startline="80" endline="84">ParserInit</references>
+        <references refid="parser_8c_1a9264a889771bffb6e9bb7215c8402eda" compoundref="parser_8c" startline="93" endline="95">ParserStop</references>
+      </memberdef>
+      <memberdef kind="function" id="parser_8c_1a19203c96ed6922e7092af10b63e6d298" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref></type>
+        <definition>ParserInfo ParserCompile</definition>
+        <argsstring>()</argsstring>
+        <name>ParserCompile</name>
+        <briefdescription>
+<para>Compiles the tokens and returns the result. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>ParserInfo</computeroutput> <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.c" line="102" column="12" bodyfile="src/parser.c" bodystart="102" bodyend="121"/>
+        <references refid="parser_8c_1a90c1a51331d7017d5acffc8f102af658" compoundref="parser_8c" startline="55">currentResult</references>
+        <references refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" compoundref="parser_8h" startline="32">ParserInfo::currentReuslt</references>
+        <references refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2" compoundref="parser_8h" startline="20">EOL</references>
+        <references refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" compoundref="parser_8h" startline="31">ParserInfo::error</references>
+        <references refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" compoundref="parser_8c" startline="58" endline="66">GetNextToken</references>
+        <references refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" compoundref="parser_8h" startline="9">NO_ERROR</references>
+        <references refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" compoundref="parser_8c" startline="152" endline="193">ParseExpression</references>
+        <references refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" compoundref="parser_8c" startline="68" endline="71">PeekNextToken</references>
+        <references refid="struct_parser_info_1abfc67a8c3f2b9d94335e175d14a67d9b" compoundref="parser_8h" startline="30">ParserInfo::token</references>
+        <references refid="struct_token_1a67919af9f3a80dc0b28a0ab1e6d5bf8a" compoundref="parser_8h" startline="26">Token::type</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="parser_8h" kindref="compound">parser.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//********************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref><sp/><ref refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" kindref="member">ParseNumber</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref><sp/><ref refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" kindref="member">ParseTerm</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref><sp/><ref refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" kindref="member">ParseBracket</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref><sp/><ref refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" kindref="member">ParseExpression</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="struct_token" kindref="compound">Token</ref><sp/><ref refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" kindref="member">PeekNextToken</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><ref refid="struct_token" kindref="compound">Token</ref><sp/><ref refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" kindref="member">GetNextToken</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//********************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="parser_8c_1a5f9f8254464237d9eb81ee4abc0fc70b" refkind="member"><highlight class="normal"><ref refid="helpers_8h_1af81ac8e504dd921417ba754f655999f5" kindref="member">DEFINE_LIST_IMPLEMENTATION</ref>(<ref refid="struct_token" kindref="compound">Token</ref>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="parser_8c_1a2875192a853252042ae25ea84bd66155" refkind="member"><highlight class="normal">TokenList*<sp/><ref refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kindref="member">tokens</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="parser_8c_1a90c1a51331d7017d5acffc8f102af658" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="parser_8c_1a90c1a51331d7017d5acffc8f102af658" kindref="member">currentResult</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="56" refid="parser_8c_1ad6e5391dcd7235b6d8a37fb24dc64eec" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="parser_8c_1ad6e5391dcd7235b6d8a37fb24dc64eec" kindref="member">previousResult</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" refkind="member"><highlight class="normal"><ref refid="struct_token" kindref="compound">Token</ref><sp/><ref refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" kindref="member">GetNextToken</ref><sp/>()</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_token" kindref="compound">Token</ref><sp/>t;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>t<sp/>=<sp/><ref refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kindref="member">tokens</ref>-&gt;<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref>[<ref refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kindref="member">tokens</ref>-&gt;currentIndex];</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kindref="member">tokens</ref>-&gt;currentIndex<sp/>&lt;<sp/><ref refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kindref="member">tokens</ref>-&gt;length-1){</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kindref="member">tokens</ref>-&gt;currentIndex++;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>t;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" refkind="member"><highlight class="normal"><ref refid="struct_token" kindref="compound">Token</ref><sp/><ref refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" kindref="member">PeekNextToken</ref><sp/>()</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kindref="member">tokens</ref>-&gt;<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref>[<ref refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kindref="member">tokens</ref>-&gt;currentIndex];</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="parser_8c_1aa19b910e23df23ebe5f189f93c97afdd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="parser_8c_1aa19b910e23df23ebe5f189f93c97afdd" kindref="member">ParserPushToken</ref>(<ref refid="struct_token" kindref="compound">Token</ref><sp/>token){</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kindref="member">tokens</ref><sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kindref="member">tokens</ref><sp/>=<sp/>TokenListCreate();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>TokenListPushBack(&amp;<ref refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kindref="member">tokens</ref>,<sp/>token);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="parser_8c_1ae23a18474f4d84e20fdcc9869d67b363" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="parser_8c_1ae23a18474f4d84e20fdcc9869d67b363" kindref="member">ParserInit</ref>(){</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="parser_8c_1ad6e5391dcd7235b6d8a37fb24dc64eec" kindref="member">previousResult</ref><sp/>=<sp/><ref refid="parser_8c_1a90c1a51331d7017d5acffc8f102af658" kindref="member">currentResult</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="parser_8c_1a90c1a51331d7017d5acffc8f102af658" kindref="member">currentResult</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kindref="member">tokens</ref><sp/>=<sp/>TokenListCreate();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="parser_8c_1a1034bedc0b6b8bdb22f67b0e72a101d0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="parser_8c_1a1034bedc0b6b8bdb22f67b0e72a101d0" kindref="member">ParserInitWith</ref>(<ref refid="struct_token" kindref="compound">Token</ref><sp/>items[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length){</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="parser_8c_1ad6e5391dcd7235b6d8a37fb24dc64eec" kindref="member">previousResult</ref><sp/>=<sp/><ref refid="parser_8c_1a90c1a51331d7017d5acffc8f102af658" kindref="member">currentResult</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="parser_8c_1a90c1a51331d7017d5acffc8f102af658" kindref="member">currentResult</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kindref="member">tokens</ref><sp/>=<sp/>TokenListCreate();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>TokenListAddRange(&amp;<ref refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kindref="member">tokens</ref>,<sp/>items,<sp/>length);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="parser_8c_1a9264a889771bffb6e9bb7215c8402eda" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="parser_8c_1a9264a889771bffb6e9bb7215c8402eda" kindref="member">ParserStop</ref>(){</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>TokenListDestroy(<ref refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kindref="member">tokens</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="parser_8c_1a1715c490f05c2ddcb8d526684468f885" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="parser_8c_1a1715c490f05c2ddcb8d526684468f885" kindref="member">ParserReset</ref>(){</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="parser_8c_1ae23a18474f4d84e20fdcc9869d67b363" kindref="member">ParserInit</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="parser_8c_1a9264a889771bffb6e9bb7215c8402eda" kindref="member">ParserStop</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" refkind="member"><highlight class="normal"><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref><sp/><ref refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" kindref="member">ParserCompile</ref>(){</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref><sp/>pi<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" kindref="member">NO_ERROR</ref>,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.currentReuslt<sp/>=<sp/>0.0<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_token" kindref="compound">Token</ref><sp/>next_token;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>next_token<sp/>=<sp/><ref refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" kindref="member">PeekNextToken</ref>();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(next_token.<ref refid="struct_token_1a67919af9f3a80dc0b28a0ab1e6d5bf8a" kindref="member">type</ref><sp/>!=<sp/><ref refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2" kindref="member">EOL</ref><sp/>&amp;&amp;<sp/>pi.<ref refid="struct_parser_info_1abfc67a8c3f2b9d94335e175d14a67d9b" kindref="member">token</ref>.<ref refid="struct_token_1a67919af9f3a80dc0b28a0ab1e6d5bf8a" kindref="member">type</ref><sp/>!=<sp/><ref refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2" kindref="member">EOL</ref>){</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pi<sp/>=<sp/><ref refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" kindref="member">ParseExpression</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pi.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>!=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" kindref="member">NO_ERROR</ref>){</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_token<sp/>=<sp/><ref refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" kindref="member">GetNextToken</ref>();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="parser_8c_1a90c1a51331d7017d5acffc8f102af658" kindref="member">currentResult</ref><sp/>=<sp/>pi.<ref refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" kindref="member">currentReuslt</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" refkind="member"><highlight class="normal"><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref><sp/><ref refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" kindref="member">ParseBracket</ref>(){</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref><sp/>pi<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" kindref="member">NO_ERROR</ref>,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.currentReuslt<sp/>=<sp/>0.0</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_token" kindref="compound">Token</ref><sp/>next_token;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>next_token<sp/>=<sp/><ref refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" kindref="member">PeekNextToken</ref>();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>!=<sp/></highlight><highlight class="charliteral">&apos;(&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pi.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fa2759d6055f211c659299d46ab05a7618" kindref="member">MISSING_BRACKET</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" kindref="member">GetNextToken</ref>();<sp/></highlight><highlight class="comment">//<sp/>eat<sp/>the<sp/>&apos;(&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>pi<sp/>=<sp/><ref refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" kindref="member">ParseExpression</ref>();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pi.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>!=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" kindref="member">NO_ERROR</ref>){</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>next_token<sp/>=<sp/><ref refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" kindref="member">GetNextToken</ref>();<sp/></highlight><highlight class="comment">//<sp/>eat<sp/>the<sp/>&apos;)&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>!=<sp/></highlight><highlight class="charliteral">&apos;)&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pi.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fa2759d6055f211c659299d46ab05a7618" kindref="member">MISSING_BRACKET</ref>;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" refkind="member"><highlight class="normal"><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref><sp/><ref refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" kindref="member">ParseExpression</ref>(){</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref><sp/>pi<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" kindref="member">NO_ERROR</ref>,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.currentReuslt<sp/>=<sp/>0.0</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_token" kindref="compound">Token</ref><sp/>next_token;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>pi<sp/>=<sp/><ref refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" kindref="member">ParseTerm</ref>();</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pi.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>!=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" kindref="member">NO_ERROR</ref>){</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tempResult<sp/>=<sp/>pi.<ref refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" kindref="member">currentReuslt</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>next_token<sp/>=<sp/><ref refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" kindref="member">PeekNextToken</ref>();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;+&apos;</highlight><highlight class="normal"><sp/>||<sp/>next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;-&apos;</highlight><highlight class="normal"><sp/>||<sp/>next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;(&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" kindref="member">GetNextToken</ref>();</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;(&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pi<sp/>=<sp/><ref refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" kindref="member">ParseBracket</ref>();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pi.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>!=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" kindref="member">NO_ERROR</ref>){</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pi<sp/>=<sp/><ref refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" kindref="member">ParseTerm</ref>();</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pi.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>!=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" kindref="member">NO_ERROR</ref>){</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;+&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempResult<sp/>+=<sp/>pi.<ref refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" kindref="member">currentReuslt</ref>;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;-&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempResult<sp/>-=<sp/>pi.<ref refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" kindref="member">currentReuslt</ref>;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_token<sp/>=<sp/><ref refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" kindref="member">PeekNextToken</ref>();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>pi.<ref refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" kindref="member">currentReuslt</ref><sp/>=<sp/>tempResult;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" refkind="member"><highlight class="normal"><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref><sp/><ref refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" kindref="member">ParseTerm</ref>(){</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref><sp/>pi<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" kindref="member">NO_ERROR</ref>,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.currentReuslt<sp/>=<sp/>0.0</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_token" kindref="compound">Token</ref><sp/>next_token;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>pi<sp/>=<sp/><ref refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" kindref="member">ParseNumber</ref>();</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pi.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>!=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" kindref="member">NO_ERROR</ref>){</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tempResult<sp/>=<sp/>pi.<ref refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" kindref="member">currentReuslt</ref>;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>next_token<sp/>=<sp/><ref refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" kindref="member">PeekNextToken</ref>();</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal"><sp/>||<sp/>next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal"><sp/>||<sp/>next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;E&apos;</highlight><highlight class="normal"><sp/>||<sp/>next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;^&apos;</highlight><highlight class="normal"><sp/>){</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" kindref="member">GetNextToken</ref>();</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pi<sp/>=<sp/><ref refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" kindref="member">ParseNumber</ref>();</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pi.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>!=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" kindref="member">NO_ERROR</ref>){</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempResult<sp/>*=<sp/>pi.<ref refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" kindref="member">currentReuslt</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempResult<sp/>/=<sp/>pi.<ref refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" kindref="member">currentReuslt</ref>;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;E&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempResult<sp/>*=<sp/>pow(10,<sp/>pi.<ref refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" kindref="member">currentReuslt</ref>);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;^&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempResult<sp/>=<sp/>pow(tempResult,<sp/>pi.<ref refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" kindref="member">currentReuslt</ref>);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_token<sp/>=<sp/><ref refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" kindref="member">PeekNextToken</ref>();</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>pi.<ref refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" kindref="member">currentReuslt</ref><sp/>=<sp/>tempResult;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236" refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" refkind="member"><highlight class="normal"><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref><sp/><ref refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" kindref="member">ParseNumber</ref>(){</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_parser_info" kindref="compound">ParserInfo</ref><sp/>pi<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" kindref="member">NO_ERROR</ref>,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.currentReuslt<sp/>=<sp/>0.0</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_token" kindref="compound">Token</ref><sp/>next_token;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>charList*<sp/>str<sp/>=<sp/>charListCreate();</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>next_token<sp/>=<sp/><ref refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" kindref="member">PeekNextToken</ref>();</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;-&apos;</highlight><highlight class="normal"><sp/>||<sp/>next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;(&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;(&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pi<sp/>=<sp/><ref refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" kindref="member">ParseBracket</ref>();</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pi.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>!=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" kindref="member">NO_ERROR</ref>){</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>charListPushBack(&amp;str,<sp/>next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" kindref="member">GetNextToken</ref>();<sp/></highlight><highlight class="comment">//<sp/>eats<sp/>the<sp/>token<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>next_token<sp/>=<sp/><ref refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" kindref="member">PeekNextToken</ref>();</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>decimalPointCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(next_token.<ref refid="struct_token_1a67919af9f3a80dc0b28a0ab1e6d5bf8a" kindref="member">type</ref><sp/>==<sp/><ref refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921a12a90dfe20486bbe3e075afcd19ef2d0" kindref="member">NUMBER</ref><sp/>||<sp/>next_token.<ref refid="struct_token_1a67919af9f3a80dc0b28a0ab1e6d5bf8a" kindref="member">type</ref><sp/>==<sp/><ref refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921af08a543d5a1549321682e12569d0fbd6" kindref="member">DECIMAL</ref>){</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" kindref="member">GetNextToken</ref>();</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(next_token.<ref refid="struct_token_1a67919af9f3a80dc0b28a0ab1e6d5bf8a" kindref="member">type</ref><sp/>==<sp/><ref refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2" kindref="member">EOL</ref>){</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pi.<ref refid="struct_parser_info_1abfc67a8c3f2b9d94335e175d14a67d9b" kindref="member">token</ref><sp/>=<sp/><sp/>next_token;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(next_token.<ref refid="struct_token_1a67919af9f3a80dc0b28a0ab1e6d5bf8a" kindref="member">type</ref><sp/>==<sp/><ref refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921af08a543d5a1549321682e12569d0fbd6" kindref="member">DECIMAL</ref>){</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(decimalPointCount<sp/>&gt;<sp/>1){</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pi.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fa67f5d4d700401c98e49d7a68c35c9272" kindref="member">MULTIPLE_DECIMAL_POINT</ref>;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pi.<ref refid="struct_parser_info_1abfc67a8c3f2b9d94335e175d14a67d9b" kindref="member">token</ref><sp/>=<sp/>next_token;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decimalPointCount++;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>charListPushBack(&amp;str,<sp/>next_token.<ref refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_token<sp/>=<sp/><ref refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" kindref="member">PeekNextToken</ref>();</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(str-&gt;length<sp/>==<sp/>0){</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pi.<ref refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kindref="member">error</ref><sp/>=<sp/><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fa1744590ec2b010dcd5774db413f87f56" kindref="member">MISSING_NUMBER</ref>;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pi.<ref refid="struct_parser_info_1abfc67a8c3f2b9d94335e175d14a67d9b" kindref="member">token</ref><sp/>=<sp/>next_token;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>pi.<ref refid="struct_parser_info_1abfc67a8c3f2b9d94335e175d14a67d9b" kindref="member">token</ref><sp/>=<sp/>next_token;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>pi.<ref refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" kindref="member">currentReuslt</ref><sp/>=<sp/>atof(str-&gt;value);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/parser.c"/>
+  </compounddef>
+</doxygen>

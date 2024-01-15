@@ -3,9 +3,10 @@
   <compounddef id="keypad_8h" kind="file" language="C++">
     <compoundname>keypad.h</compoundname>
     <includes local="no">stdbool.h</includes>
+    <includedby refid="hardware-test_8c" local="yes">src/hardware-test.c</includedby>
     <includedby refid="keypad_8c" local="yes">src/keypad.c</includedby>
-    <includedby refid="program-logic_8c" local="yes">src/program-logic.c</includedby>
-    <includedby refid="unit-test_8c" local="yes">src/unit-test.c</includedby>
+    <includedby refid="logic_8c" local="yes">src/logic.c</includedby>
+    <includedby refid="parser_8h" local="yes">src/parser.h</includedby>
     <incdepgraph>
       <node id="1">
         <label>src/keypad.h</label>
@@ -19,6 +20,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
+        <label>src/hardware-test.c</label>
+        <link refid="hardware-test_8c"/>
+      </node>
+      <node id="3">
         <label>src/keypad.c</label>
         <link refid="keypad_8c"/>
       </node>
@@ -31,14 +36,22 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>src/program-logic.c</label>
-        <link refid="program-logic_8c"/>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
       <node id="4">
-        <label>src/unit-test.c</label>
-        <link refid="unit-test_8c"/>
+        <label>src/logic.c</label>
+        <link refid="logic_8c"/>
+      </node>
+      <node id="6">
+        <label>src/parser.c</label>
+        <link refid="parser_8c"/>
+      </node>
+      <node id="5">
+        <label>src/parser.h</label>
+        <link refid="parser_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="struct_key_info" prot="public">KeyInfo</innerclass>
@@ -86,6 +99,17 @@
         </inbodydescription>
         <location file="src/keypad.h" line="17" column="9" bodyfile="src/keypad.h" bodystart="17" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="define" id="keypad_8h_1ab5e2164bb5d04f144ceb4740b4154c79" prot="public" static="no">
+        <name>SHIFT_CHAR</name>
+        <initializer>0xEF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/keypad.h" line="18" column="9" bodyfile="src/keypad.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="define" id="keypad_8h_1ae3dadba290780b744593a2bc45264e3f" prot="public" static="no">
         <name>KEYPAD_UNKOWN_KEY</name>
         <initializer>&apos;\0&apos;</initializer>
@@ -95,47 +119,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="19" column="9" bodyfile="src/keypad.h" bodystart="19" bodyend="-1"/>
+        <location file="src/keypad.h" line="20" column="9" bodyfile="src/keypad.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="keypad_8h_1a9c722c424a8076bfe4ee4e9e2efa03e6" prot="public" static="no">
         <name>KEYPAD_MAX_SPECIAL_KEYS</name>
-        <initializer>7</initializer>
+        <initializer>10</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="20" column="9" bodyfile="src/keypad.h" bodystart="20" bodyend="-1"/>
+        <location file="src/keypad.h" line="21" column="9" bodyfile="src/keypad.h" bodystart="21" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="enum">
       <memberdef kind="enum" id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" prot="public" static="no" strong="no">
         <type></type>
         <name>SpecialKeyFunctions</name>
-        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9" prot="public">
-          <name>PLUS</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3" prot="public">
-          <name>MULTIPLY</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225" prot="public">
-          <name>MINUS</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da" prot="public">
-          <name>DIVIDE</name>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea" prot="public">
+          <name>NORMAL_NUMBER</name>
+          <initializer>= 0</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -143,6 +147,7 @@
         </enumvalue>
         <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2" prot="public">
           <name>DECIMAL_POINT</name>
+          <initializer>= 1</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -150,6 +155,47 @@
         </enumvalue>
         <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e" prot="public">
           <name>EXPONENTIAL</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca03ee4db3d1e17f8bbd6d9addebd8367b" prot="public">
+          <name>POWER_TO</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3" prot="public">
+          <name>MULTIPLY</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da" prot="public">
+          <name>DIVIDE</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9" prot="public">
+          <name>PLUS</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225" prot="public">
+          <name>MINUS</name>
+          <initializer>= 7</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -157,6 +203,7 @@
         </enumvalue>
         <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f" prot="public">
           <name>SHIFT_ON</name>
+          <initializer>= 8</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -164,6 +211,7 @@
         </enumvalue>
         <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284" prot="public">
           <name>SHIFT_OFF</name>
+          <initializer>= 9</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -171,20 +219,87 @@
         </enumvalue>
         <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78" prot="public">
           <name>END_INPUT</name>
+          <initializer>= 10</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccad67d15054b1cf5d5d891decd24ec801f" prot="public">
-          <name>UNDO_LAST</name>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca2b52d5d24f0e5d58e6c88403eb9e19c8" prot="public">
+          <name>CLEAR_LAST</name>
+          <initializer>= 11</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca1e1a4aba20a5a009e616cbc8fad33ac7" prot="public">
-          <name>CLEAR</name>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca4c016f5ee446f379aa869bbccb6fb5c0" prot="public">
+          <name>CLEAR_ALL</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca3f243a70f3fda6cfeeada41e2407c650" prot="public">
+          <name>LAST_ANSWER</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca2fa6ac17699d67a0b42605fd1269eb35" prot="public">
+          <name>OPEN_PARENTHESIS</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab90a7579c3517af01b71289905e4b84a" prot="public">
+          <name>CLOSE_PARENTHESIS</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccafa80cde56ec760dde1bf913ee6d2ba50" prot="public">
+          <name>OPEN_SETTINGS</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca804f54479240e4585b64a57aa53df58b" prot="public">
+          <name>CURSOR_LEFT</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca9b5cea0b81e6ba5016df73182861ec86" prot="public">
+          <name>CURSOR_RIGHT</name>
+          <initializer>= 18</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab0c4058c3097d23fce049b33970cd564" prot="public">
+          <name>CURSOR_UP</name>
+          <initializer>= 19</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca9bd2c7c2e70700c98eb7ed895ce47f82" prot="public">
+          <name>CURSOR_DOWN</name>
+          <initializer>= 20</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -196,7 +311,39 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="22" column="1" bodyfile="src/keypad.h" bodystart="22" bodyend="34"/>
+        <location file="src/keypad.h" line="23" column="1" bodyfile="src/keypad.h" bodystart="23" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="enum" id="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536" prot="public" static="no" strong="no">
+        <type></type>
+        <name>KeyDisplayType</name>
+        <enumvalue id="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536a22bfa961006c196ebfbf6a2973c6d14f" prot="public">
+          <name>DISPLAY_STATUS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536ae1804614a1f20fe485d37f0bcaf05906" prot="public">
+          <name>DISPLAY_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce" prot="public">
+          <name>DISPLAY_NORMAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/keypad.h" line="47" column="1" bodyfile="src/keypad.h" bodystart="47" bodyend="51"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="var">
@@ -211,8 +358,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="47" column="22" bodyfile="src/keypad.c" bodystart="5" bodyend="60" declfile="src/keypad.h" declline="47" declcolumn="22"/>
-        <referencedby refid="keypad_8c_1a49ffa463b26cc47b7d9e3e2cda8d9168" compoundref="keypad_8c" startline="71" endline="79">KeypadFindSpecialKey</referencedby>
+        <location file="src/keypad.h" line="63" column="22" bodyfile="src/keypad.c" bodystart="24" bodyend="146" declfile="src/keypad.h" declline="63" declcolumn="22"/>
+        <referencedby refid="keypad_8c_1a49ffa463b26cc47b7d9e3e2cda8d9168" compoundref="keypad_8c" startline="152" endline="160">KeypadFindSpecialKey</referencedby>
       </memberdef>
       <memberdef kind="variable" id="keypad_8h_1a4c1fef8314018fe3ce44affffbe10a72" prot="public" static="no" extern="yes" mutable="no">
         <type>const char</type>
@@ -225,24 +372,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="49" column="19" bodyfile="src/keypad.c" bodystart="64" bodyend="69" declfile="src/keypad.h" declline="49" declcolumn="19"/>
-        <referencedby refid="keypad_8c_1ab826b54bc6305f49d758d28173041ab7" compoundref="keypad_8c" startline="87" endline="104">KeypadGetChar</referencedby>
+        <location file="src/keypad.h" line="65" column="19" bodyfile="src/keypad.c" bodystart="17" bodyend="22" declfile="src/keypad.h" declline="65" declcolumn="19"/>
+        <referencedby refid="keypad_8c_1ab826b54bc6305f49d758d28173041ab7" compoundref="keypad_8c" startline="168" endline="185">KeypadGetChar</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="keypad_8h_1ab3f2ce14f970ec74192af9e2c69a3ef5" prot="public" static="no" extern="yes" mutable="no">
-        <type>bool</type>
-        <definition>bool shiftIsOn</definition>
-        <argsstring></argsstring>
-        <name>shiftIsOn</name>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="keypad_8h_1aa6981f604fdfbec491e21e90507ec0de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KeypadInit</definition>
+        <argsstring>()</argsstring>
+        <name>KeypadInit</name>
         <briefdescription>
+<para>Initializes the keypad. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="51" column="13" bodyfile="src/keypad.c" bodystart="62" bodyend="-1" declfile="src/keypad.h" declline="51" declcolumn="13"/>
+        <location file="src/keypad.h" line="71" column="6" bodyfile="src/keypad.c" bodystart="162" bodyend="165" declfile="src/keypad.h" declline="71" declcolumn="6"/>
+        <references refid="ports_8c_1a21efc6fa081c0b9c85eafe9d7455b9b6" compoundref="ports_8c" startline="19" endline="30">PortDInit</references>
+        <references refid="ports_8c_1a2c10edb046a08d0f0d72d288c9c64dfc" compoundref="ports_8c" startline="4" endline="17">PortEInit</references>
+        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="6" endline="10">InitAll</referencedby>
       </memberdef>
-    </sectiondef>
-    <sectiondef kind="func">
       <memberdef kind="function" id="keypad_8h_1a49ffa463b26cc47b7d9e3e2cda8d9168" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_key_info" kindref="compound">KeyInfo</ref></type>
         <definition>KeyInfo KeypadFindSpecialKey</definition>
@@ -253,33 +404,68 @@
           <declname>key</declname>
         </param>
         <briefdescription>
+<para>Finds the KeyInfo of a given key. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>KeyInfo</computeroutput> <linebreak/>
+ </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="53" column="9" bodyfile="src/keypad.c" bodystart="71" bodyend="79" declfile="src/keypad.h" declline="53" declcolumn="9"/>
-        <references refid="struct_key_info_1a129a412e80d39b7257b677028c1acec0" compoundref="keypad_8h" startline="37">KeyInfo::key</references>
-        <references refid="keypad_8h_1a9c722c424a8076bfe4ee4e9e2efa03e6" compoundref="keypad_8h" startline="20">KEYPAD_MAX_SPECIAL_KEYS</references>
-        <references refid="keypad_8c_1aa67f7a9fae59d327c0fef030151be800" compoundref="keypad_8c" startline="5" endline="60">KEYPAD_SPECIAL_KEYS</references>
-        <references refid="keypad_8h_1ae3dadba290780b744593a2bc45264e3f" compoundref="keypad_8h" startline="19">KEYPAD_UNKOWN_KEY</references>
-        <referencedby refid="keypad_8c_1a63a4bc1c3105f40dc85fe16092790f83" compoundref="keypad_8c" startline="106" endline="119">KeypadWaitForInput</referencedby>
+        <location file="src/keypad.h" line="79" column="9" bodyfile="src/keypad.c" bodystart="152" bodyend="160" declfile="src/keypad.h" declline="79" declcolumn="9"/>
+        <references refid="struct_key_info_1a129a412e80d39b7257b677028c1acec0" compoundref="keypad_8h" startline="54">KeyInfo::key</references>
+        <references refid="keypad_8h_1a9c722c424a8076bfe4ee4e9e2efa03e6" compoundref="keypad_8h" startline="21">KEYPAD_MAX_SPECIAL_KEYS</references>
+        <references refid="keypad_8c_1aa67f7a9fae59d327c0fef030151be800" compoundref="keypad_8c" startline="24" endline="146">KEYPAD_SPECIAL_KEYS</references>
+        <references refid="keypad_8h_1ae3dadba290780b744593a2bc45264e3f" compoundref="keypad_8h" startline="20">KEYPAD_UNKOWN_KEY</references>
+        <referencedby refid="keypad_8c_1a63a4bc1c3105f40dc85fe16092790f83" compoundref="keypad_8c" startline="187" endline="205">KeypadWaitForInput</referencedby>
       </memberdef>
-      <memberdef kind="function" id="keypad_8h_1aa6981f604fdfbec491e21e90507ec0de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void KeypadInit</definition>
-        <argsstring>()</argsstring>
-        <name>KeypadInit</name>
+      <memberdef kind="function" id="keypad_8h_1a9b1fc55f525fe49144daf21ffe978141" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool KeyIsValid</definition>
+        <argsstring>(KeyInfo key)</argsstring>
+        <name>KeyIsValid</name>
+        <param>
+          <type><ref refid="struct_key_info" kindref="compound">KeyInfo</ref></type>
+          <declname>key</declname>
+        </param>
         <briefdescription>
+<para>Checks if a given key is valid. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> <linebreak/>
+ </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>false</computeroutput> <linebreak/>
+ </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="55" column="6" bodyfile="src/keypad.c" bodystart="81" bodyend="84" declfile="src/keypad.h" declline="55" declcolumn="6"/>
-        <references refid="ports_8c_1a21efc6fa081c0b9c85eafe9d7455b9b6" compoundref="ports_8c" startline="19" endline="30">PortDInit</references>
-        <references refid="ports_8c_1a2c10edb046a08d0f0d72d288c9c64dfc" compoundref="ports_8c" startline="4" endline="17">PortEInit</references>
-        <referencedby refid="program-logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="program-logic_8c" startline="6" endline="10">InitAll</referencedby>
+        <location file="src/keypad.h" line="88" column="6" bodyfile="src/keypad.c" bodystart="148" bodyend="150" declfile="src/keypad.h" declline="88" declcolumn="6"/>
+        <references refid="struct_key_info_1a129a412e80d39b7257b677028c1acec0" compoundref="keypad_8h" startline="54">KeyInfo::key</references>
+        <references refid="keypad_8h_1ae3dadba290780b744593a2bc45264e3f" compoundref="keypad_8h" startline="20">KEYPAD_UNKOWN_KEY</references>
+        <referencedby refid="keypad_8c_1a63a4bc1c3105f40dc85fe16092790f83" compoundref="keypad_8c" startline="187" endline="205">KeypadWaitForInput</referencedby>
       </memberdef>
       <memberdef kind="function" id="keypad_8h_1a63a4bc1c3105f40dc85fe16092790f83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_key_info" kindref="compound">KeyInfo</ref></type>
@@ -287,17 +473,24 @@
         <argsstring>()</argsstring>
         <name>KeypadWaitForInput</name>
         <briefdescription>
+<para>Waits for a key to be pressed. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>KeyInfo</computeroutput> <linebreak/>
+ </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="57" column="9" bodyfile="src/keypad.c" bodystart="106" bodyend="119" declfile="src/keypad.h" declline="57" declcolumn="9"/>
-        <references refid="struct_key_info_1a129a412e80d39b7257b677028c1acec0" compoundref="keypad_8h" startline="37">KeyInfo::key</references>
-        <references refid="keypad_8h_1ae3dadba290780b744593a2bc45264e3f" compoundref="keypad_8h" startline="19">KEYPAD_UNKOWN_KEY</references>
-        <references refid="keypad_8c_1a49ffa463b26cc47b7d9e3e2cda8d9168" compoundref="keypad_8c" startline="71" endline="79">KeypadFindSpecialKey</references>
-        <references refid="keypad_8c_1ab826b54bc6305f49d758d28173041ab7" compoundref="keypad_8c" startline="87" endline="104">KeypadGetChar</references>
-        <referencedby refid="unit-test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" compoundref="unit-test_8c" startline="57" endline="65">TestKeypadLcd</referencedby>
+        <location file="src/keypad.h" line="95" column="9" bodyfile="src/keypad.c" bodystart="187" bodyend="205" declfile="src/keypad.h" declline="95" declcolumn="9"/>
+        <references refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce" compoundref="keypad_8h" startline="50">DISPLAY_NORMAL</references>
+        <references refid="struct_key_info_1aad793e7d0881eafc1dd46649bb2780be" compoundref="keypad_8h" startline="56">KeyInfo::isSpecial</references>
+        <references refid="keypad_8c_1a9b1fc55f525fe49144daf21ffe978141" compoundref="keypad_8c" startline="148" endline="150">KeyIsValid</references>
+        <references refid="keypad_8c_1a49ffa463b26cc47b7d9e3e2cda8d9168" compoundref="keypad_8c" startline="152" endline="160">KeypadFindSpecialKey</references>
+        <references refid="keypad_8c_1ab826b54bc6305f49d758d28173041ab7" compoundref="keypad_8c" startline="168" endline="185">KeypadGetChar</references>
+        <references refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea" compoundref="keypad_8h" startline="24">NORMAL_NUMBER</references>
+        <referencedby refid="hardware-test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" compoundref="hardware-test_8c" startline="57" endline="65">TestKeypadLcd</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -322,48 +515,64 @@
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ROW<sp/>3<sp/>-&gt;<sp/>PE3</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16" refid="keypad_8h_1ae41b948637d7857bd49ae3a6433fe975" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KEYPAD_ROW_PIN<sp/>(*((volatile<sp/>unsigned<sp/>long<sp/>*)0x4002403C))</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17" refid="keypad_8h_1acc73b1692bde87ce0a891af4dece22fc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KEYPAD_N<sp/>4</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="keypad_8h_1ae3dadba290780b744593a2bc45264e3f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KEYPAD_UNKOWN_KEY<sp/>&apos;\0&apos;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="keypad_8h_1a9c722c424a8076bfe4ee4e9e2efa03e6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KEYPAD_MAX_SPECIAL_KEYS<sp/>7</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="23" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9" kindref="member">PLUS</ref>,</highlight></codeline>
-<codeline lineno="24" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3" kindref="member">MULTIPLY</ref>,</highlight></codeline>
-<codeline lineno="25" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225" kindref="member">MINUS</ref>,</highlight></codeline>
-<codeline lineno="26" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da" kindref="member">DIVIDE</ref>,</highlight></codeline>
-<codeline lineno="27" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2" kindref="member">DECIMAL_POINT</ref>,</highlight></codeline>
-<codeline lineno="28" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e" kindref="member">EXPONENTIAL</ref>,</highlight></codeline>
-<codeline lineno="29" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f" kindref="member">SHIFT_ON</ref>,</highlight></codeline>
-<codeline lineno="30" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284" kindref="member">SHIFT_OFF</ref>,</highlight></codeline>
-<codeline lineno="31" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78" kindref="member">END_INPUT</ref>,</highlight></codeline>
-<codeline lineno="32" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccad67d15054b1cf5d5d891decd24ec801f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccad67d15054b1cf5d5d891decd24ec801f" kindref="member">UNDO_LAST</ref>,</highlight></codeline>
-<codeline lineno="33" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca1e1a4aba20a5a009e616cbc8fad33ac7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca1e1a4aba20a5a009e616cbc8fad33ac7" kindref="member">CLEAR</ref>,</highlight></codeline>
-<codeline lineno="34"><highlight class="normal">}<sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" kindref="member">SpecialKeyFunctions</ref>;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="struct_key_info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="37" refid="struct_key_info_1a129a412e80d39b7257b677028c1acec0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_key_info_1a129a412e80d39b7257b677028c1acec0" kindref="member">key</ref>;</highlight></codeline>
-<codeline lineno="38" refid="struct_key_info_1aad793e7d0881eafc1dd46649bb2780be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_key_info_1aad793e7d0881eafc1dd46649bb2780be" kindref="member">isSpecial</ref>;</highlight></codeline>
-<codeline lineno="39" refid="struct_key_info_1a24f8b1511f5bb082d8594059be9411b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_key_info_1a24f8b1511f5bb082d8594059be9411b8" kindref="member">hasDisplay</ref>;</highlight></codeline>
-<codeline lineno="40" refid="struct_key_info_1a1e9efebed338a7a750ed8206fa7caebc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_key_info_1a1e9efebed338a7a750ed8206fa7caebc" kindref="member">hasShiftFunction</ref>;</highlight></codeline>
-<codeline lineno="41" refid="struct_key_info_1a608d6ef74598363d1753588fd73c2aef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_key_info_1a608d6ef74598363d1753588fd73c2aef" kindref="member">normalDisplay</ref>;</highlight></codeline>
-<codeline lineno="42" refid="struct_key_info_1a44c82d8b5620cb791276feba579ff337" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" kindref="member">SpecialKeyFunctions</ref><sp/><ref refid="struct_key_info_1a44c82d8b5620cb791276feba579ff337" kindref="member">normalFunction</ref>;</highlight></codeline>
-<codeline lineno="43" refid="struct_key_info_1ad4e8166e71feacf01a45a0346818aa39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_key_info_1ad4e8166e71feacf01a45a0346818aa39" kindref="member">shiftDisplay</ref>;</highlight></codeline>
-<codeline lineno="44" refid="struct_key_info_1ae84e8c2103cde405fc762cafb1727015" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" kindref="member">SpecialKeyFunctions</ref><sp/><ref refid="struct_key_info_1ae84e8c2103cde405fc762cafb1727015" kindref="member">shiftFunction</ref>;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal">}<sp/><ref refid="struct_key_info" kindref="compound">KeyInfo</ref>;</highlight></codeline>
+<codeline lineno="18" refid="keypad_8h_1ab5e2164bb5d04f144ceb4740b4154c79" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHIFT_CHAR<sp/>0xEF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="keypad_8h_1ae3dadba290780b744593a2bc45264e3f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KEYPAD_UNKOWN_KEY<sp/>&apos;\0&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="keypad_8h_1a9c722c424a8076bfe4ee4e9e2efa03e6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KEYPAD_MAX_SPECIAL_KEYS<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="24" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea" kindref="member">NORMAL_NUMBER</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="25" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2" kindref="member">DECIMAL_POINT</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="26" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e" kindref="member">EXPONENTIAL</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="27" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca03ee4db3d1e17f8bbd6d9addebd8367b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca03ee4db3d1e17f8bbd6d9addebd8367b" kindref="member">POWER_TO</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="28" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3" kindref="member">MULTIPLY</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="29" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da" kindref="member">DIVIDE</ref><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="30" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9" kindref="member">PLUS</ref><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="31" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225" kindref="member">MINUS</ref><sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="32" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f" kindref="member">SHIFT_ON</ref><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="33" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284" kindref="member">SHIFT_OFF</ref><sp/>=<sp/>9,</highlight></codeline>
+<codeline lineno="34" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78" kindref="member">END_INPUT</ref><sp/>=<sp/>10,</highlight></codeline>
+<codeline lineno="35" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca2b52d5d24f0e5d58e6c88403eb9e19c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca2b52d5d24f0e5d58e6c88403eb9e19c8" kindref="member">CLEAR_LAST</ref><sp/>=<sp/>11,</highlight></codeline>
+<codeline lineno="36" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca4c016f5ee446f379aa869bbccb6fb5c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca4c016f5ee446f379aa869bbccb6fb5c0" kindref="member">CLEAR_ALL</ref><sp/>=<sp/>12,</highlight></codeline>
+<codeline lineno="37" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca3f243a70f3fda6cfeeada41e2407c650" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca3f243a70f3fda6cfeeada41e2407c650" kindref="member">LAST_ANSWER</ref><sp/>=<sp/>13,</highlight></codeline>
+<codeline lineno="38" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca2fa6ac17699d67a0b42605fd1269eb35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca2fa6ac17699d67a0b42605fd1269eb35" kindref="member">OPEN_PARENTHESIS</ref><sp/>=<sp/>14,</highlight></codeline>
+<codeline lineno="39" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab90a7579c3517af01b71289905e4b84a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab90a7579c3517af01b71289905e4b84a" kindref="member">CLOSE_PARENTHESIS</ref><sp/>=<sp/>15,</highlight></codeline>
+<codeline lineno="40" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccafa80cde56ec760dde1bf913ee6d2ba50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccafa80cde56ec760dde1bf913ee6d2ba50" kindref="member">OPEN_SETTINGS</ref><sp/>=<sp/>16,</highlight></codeline>
+<codeline lineno="41" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca804f54479240e4585b64a57aa53df58b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca804f54479240e4585b64a57aa53df58b" kindref="member">CURSOR_LEFT</ref><sp/>=<sp/>17,</highlight></codeline>
+<codeline lineno="42" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca9b5cea0b81e6ba5016df73182861ec86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca9b5cea0b81e6ba5016df73182861ec86" kindref="member">CURSOR_RIGHT</ref><sp/>=<sp/>18,</highlight></codeline>
+<codeline lineno="43" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab0c4058c3097d23fce049b33970cd564" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab0c4058c3097d23fce049b33970cd564" kindref="member">CURSOR_UP</ref><sp/>=<sp/>19,</highlight></codeline>
+<codeline lineno="44" refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca9bd2c7c2e70700c98eb7ed895ce47f82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca9bd2c7c2e70700c98eb7ed895ce47f82" kindref="member">CURSOR_DOWN</ref><sp/>=<sp/>20,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}<sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" kindref="member">SpecialKeyFunctions</ref>;</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_key_info" kindref="compound">KeyInfo</ref><sp/><ref refid="keypad_8h_1aa67f7a9fae59d327c0fef030151be800" kindref="member">KEYPAD_SPECIAL_KEYS</ref>[<ref refid="keypad_8h_1a9c722c424a8076bfe4ee4e9e2efa03e6" kindref="member">KEYPAD_MAX_SPECIAL_KEYS</ref>];</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="keypad_8h_1a4c1fef8314018fe3ce44affffbe10a72" kindref="member">KEYPAD_KEYS</ref>[<ref refid="keypad_8h_1acc73b1692bde87ce0a891af4dece22fc" kindref="member">KEYPAD_N</ref>][<ref refid="keypad_8h_1acc73b1692bde87ce0a891af4dece22fc" kindref="member">KEYPAD_N</ref>];</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="keypad_8h_1ab3f2ce14f970ec74192af9e2c69a3ef5" kindref="member">shiftIsOn</ref>;</highlight></codeline>
+<codeline lineno="47" refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="48" refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536a22bfa961006c196ebfbf6a2973c6d14f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536a22bfa961006c196ebfbf6a2973c6d14f" kindref="member">DISPLAY_STATUS</ref>,</highlight></codeline>
+<codeline lineno="49" refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536ae1804614a1f20fe485d37f0bcaf05906" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536ae1804614a1f20fe485d37f0bcaf05906" kindref="member">DISPLAY_NONE</ref>,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce" kindref="member">DISPLAY_NORMAL</ref></highlight></codeline>
+<codeline lineno="51" refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce" refkind="member"><highlight class="normal">}<sp/><ref refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536" kindref="member">KeyDisplayType</ref>;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><ref refid="struct_key_info" kindref="compound">KeyInfo</ref><sp/><ref refid="keypad_8h_1a49ffa463b26cc47b7d9e3e2cda8d9168" kindref="member">KeypadFindSpecialKey</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="keypad_8h_1aa6981f604fdfbec491e21e90507ec0de" kindref="member">KeypadInit</ref>();</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><ref refid="struct_key_info" kindref="compound">KeyInfo</ref><sp/><ref refid="keypad_8h_1a63a4bc1c3105f40dc85fe16092790f83" kindref="member">KeypadWaitForInput</ref>();</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="53" refid="struct_key_info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54" refid="struct_key_info_1a129a412e80d39b7257b677028c1acec0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_key_info_1a129a412e80d39b7257b677028c1acec0" kindref="member">key</ref>;</highlight></codeline>
+<codeline lineno="55" refid="struct_key_info_1a1e801a0e9f9c1d289b3b50535701d282" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536" kindref="member">KeyDisplayType</ref><sp/><ref refid="struct_key_info_1a1e801a0e9f9c1d289b3b50535701d282" kindref="member">displayType</ref>;</highlight></codeline>
+<codeline lineno="56" refid="struct_key_info_1aad793e7d0881eafc1dd46649bb2780be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_key_info_1aad793e7d0881eafc1dd46649bb2780be" kindref="member">isSpecial</ref>;</highlight></codeline>
+<codeline lineno="57" refid="struct_key_info_1a608d6ef74598363d1753588fd73c2aef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_key_info_1a608d6ef74598363d1753588fd73c2aef" kindref="member">normalDisplay</ref>;<sp/></highlight><highlight class="comment">//<sp/>display<sp/>character</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="struct_key_info_1a44c82d8b5620cb791276feba579ff337" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" kindref="member">SpecialKeyFunctions</ref><sp/><ref refid="struct_key_info_1a44c82d8b5620cb791276feba579ff337" kindref="member">normalFunction</ref>;<sp/></highlight><highlight class="comment">//<sp/>function<sp/>when<sp/>shift<sp/>is<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="struct_key_info_1ad4e8166e71feacf01a45a0346818aa39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_key_info_1ad4e8166e71feacf01a45a0346818aa39" kindref="member">shiftDisplay</ref>;<sp/></highlight><highlight class="comment">//<sp/>display<sp/>character<sp/>when<sp/>shift<sp/>is<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="struct_key_info_1ae84e8c2103cde405fc762cafb1727015" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" kindref="member">SpecialKeyFunctions</ref><sp/><ref refid="struct_key_info_1ae84e8c2103cde405fc762cafb1727015" kindref="member">shiftFunction</ref>;<sp/></highlight><highlight class="comment">//<sp/>function<sp/>when<sp/>shift<sp/>is<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}<sp/><ref refid="struct_key_info" kindref="compound">KeyInfo</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_key_info" kindref="compound">KeyInfo</ref><sp/><ref refid="keypad_8h_1aa67f7a9fae59d327c0fef030151be800" kindref="member">KEYPAD_SPECIAL_KEYS</ref>[<ref refid="keypad_8h_1a9c722c424a8076bfe4ee4e9e2efa03e6" kindref="member">KEYPAD_MAX_SPECIAL_KEYS</ref>];</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="keypad_8h_1a4c1fef8314018fe3ce44affffbe10a72" kindref="member">KEYPAD_KEYS</ref>[<ref refid="keypad_8h_1acc73b1692bde87ce0a891af4dece22fc" kindref="member">KEYPAD_N</ref>][<ref refid="keypad_8h_1acc73b1692bde87ce0a891af4dece22fc" kindref="member">KEYPAD_N</ref>];</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="keypad_8h_1aa6981f604fdfbec491e21e90507ec0de" kindref="member">KeypadInit</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><ref refid="struct_key_info" kindref="compound">KeyInfo</ref><sp/><ref refid="keypad_8h_1a49ffa463b26cc47b7d9e3e2cda8d9168" kindref="member">KeypadFindSpecialKey</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="keypad_8h_1a9b1fc55f525fe49144daf21ffe978141" kindref="member">KeyIsValid</ref>(<ref refid="struct_key_info" kindref="compound">KeyInfo</ref><sp/>key);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><ref refid="struct_key_info" kindref="compound">KeyInfo</ref><sp/><ref refid="keypad_8h_1a63a4bc1c3105f40dc85fe16092790f83" kindref="member">KeypadWaitForInput</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/keypad.h"/>
   </compounddef>

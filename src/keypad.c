@@ -14,48 +14,48 @@ const KeyInfo KEYPAD_SPECIAL_KEYS[KEYPAD_MAX_SPECIAL_KEYS] = {
     {
         .key = 'A',
         .isSpecial = true,
-        .displayOnInput = true,
-        .hasAnyDisplay = true,
+        .normalDisplayType = DISPLAY_NORMAL,
+        .shiftDisplayType = DISPLAY_NORMAL,
         // .isSpecial = true,
         // .hasDisplay = true,
         // .hasShiftFunction = true,
         .normalDisplay = '+',
-        .normalFunction = PLUS,
+        .normalFunction = OPERATION,
         .shiftDisplay = 'x',
-        .shiftFunction = MULTIPLY
+        .shiftFunction = OPERATION
     },
     {
         .key = 'B',
         .isSpecial = true,
-        .displayOnInput = true,
-        .hasAnyDisplay = true,
+        .normalDisplayType = DISPLAY_NORMAL,
+        .shiftDisplayType = DISPLAY_NORMAL,
         // .isSpecial = true,
         // .hasDisplay = true,
         // .hasShiftFunction = true,
         .normalDisplay = '-',
-        .normalFunction = MINUS,
+        .normalFunction = OPERATION,
         .shiftDisplay = '/',
-        .shiftFunction = DIVIDE
+        .shiftFunction = OPERATION
     },
     {
         .key = 'C',
         .isSpecial = true,
-        .displayOnInput = true,
-        .hasAnyDisplay = true,
+        .normalDisplayType = DISPLAY_NORMAL,
+        .shiftDisplayType = DISPLAY_NORMAL,
         // .isSpecial = true,
         // .hasDisplay = true,
         // .hasShiftFunction = true,
         .normalDisplay = '.',
         .normalFunction = DECIMAL_POINT,
         .shiftDisplay = 'E',
-        .shiftFunction = EXPONENTIAL
+        .shiftFunction = OPERATION
 
     },
     {
         .key = 'D',
         .isSpecial = true,
-        .displayOnInput = false,
-        .hasAnyDisplay = true,
+        .normalDisplayType = DISPLAY_STATUS,
+        .shiftDisplayType = DISPLAY_STATUS,
         // .isSpecial = true,
         // .hasDisplay = false,
         // .hasShiftFunction = true,
@@ -67,21 +67,21 @@ const KeyInfo KEYPAD_SPECIAL_KEYS[KEYPAD_MAX_SPECIAL_KEYS] = {
     {
         .key = '*',
         .isSpecial = true,
-        .displayOnInput = false,
-        .hasAnyDisplay = false,
+        .normalDisplayType = DISPLAY_NONE,
+        .shiftDisplayType = DISPLAY_NONE,
         // .isSpecial = true,
         // .hasDisplay = false,
         // .hasShiftFunction = true,
         .normalDisplay = KEYPAD_UNKOWN_KEY,
         .normalFunction = END_INPUT,
         .shiftDisplay = KEYPAD_UNKOWN_KEY,
-        .shiftFunction = OPEN_SETTINGS
+        .shiftFunction = OPEN_CHANGE_PASSWORD
     },
     {
         .key = '#',
         .isSpecial = true,
-        .displayOnInput = false,
-        .hasAnyDisplay = false,
+        .normalDisplayType = DISPLAY_NONE,
+        .shiftDisplayType = DISPLAY_NONE,
         // .isSpecial = true,
         // .hasDisplay = false,
         // .hasShiftFunction = true,
@@ -93,58 +93,68 @@ const KeyInfo KEYPAD_SPECIAL_KEYS[KEYPAD_MAX_SPECIAL_KEYS] = {
     {
         .key = '0',
         .isSpecial = true,
-        .displayOnInput = true,
-        .hasAnyDisplay = true,
+        .normalDisplayType = DISPLAY_NORMAL,
+        .shiftDisplayType = DISPLAY_NORMAL,
         // .isSpecial = true,
         // .hasDisplay = true,
         // .hasShiftFunction = true,
         .normalDisplay = '0',
         .normalFunction = NORMAL_NUMBER,
         .shiftDisplay = 'A',
-        .shiftFunction = LAST_ANSWER
+        .shiftFunction = PAST_ANSWER
     },
     {
         .key = '7',
         .isSpecial = true,
-        .displayOnInput = true,
-        .hasAnyDisplay = true,
+        .normalDisplayType = DISPLAY_NORMAL,
+        .shiftDisplayType = DISPLAY_NORMAL,
         // .isSpecial = true,
         // .hasDisplay = true,
         // .hasShiftFunction = true,
         .normalDisplay = '7',
         .normalFunction = NORMAL_NUMBER,
         .shiftDisplay = '(',
-        .shiftFunction = OPEN_PARENTHESIS
+        .shiftFunction = OPERATION
     },
         {
         .key = '5',
         .isSpecial = true,
-        .displayOnInput = true,
-        .hasAnyDisplay = true,
+        .normalDisplayType = DISPLAY_NORMAL,
+        .shiftDisplayType = DISPLAY_NORMAL,
         // .isSpecial = true,
         // .hasDisplay = true,
         // .hasShiftFunction = true,
         .normalDisplay = '5',
         .normalFunction = NORMAL_NUMBER,
         .shiftDisplay = '^',
-        .shiftFunction = POWER_TO
+        .shiftFunction = OPERATION
     },
         {
         .key = '9',
         .isSpecial = true,
-        .displayOnInput = true,
-        .hasAnyDisplay = true,
+        .normalDisplayType = DISPLAY_NORMAL,
+        .shiftDisplayType = DISPLAY_NORMAL,
         // .isSpecial = true,
         // .hasDisplay = true,
         // .hasShiftFunction = true,
         .normalDisplay = '9',
         .normalFunction = NORMAL_NUMBER,
         .shiftDisplay = ')',
-        .shiftFunction = CLOSE_PARENTHESIS
+        .shiftFunction = OPERATION
+    },
+            {
+        .key = '1',
+        .isSpecial = true,
+        .normalDisplayType = DISPLAY_NORMAL,
+        .shiftDisplayType = DISPLAY_NONE,
+        // .isSpecial = true,
+        // .hasDisplay = true,
+        // .hasShiftFunction = true,
+        .normalDisplay = '1',
+        .normalFunction = NORMAL_NUMBER,
+        .shiftFunction = GO_BACK
     }
 };
-
-bool shiftIsOn = false;
 
 bool KeyIsValid(KeyInfo key){
     return key.key != KEYPAD_UNKOWN_KEY;
@@ -166,7 +176,7 @@ void KeypadInit(){
 }
 
 // Function to read the pressed key's position
-char KeypadGetChar() {
+char KeypadWaitForChar() {
     while (1) {
         for (int col = 0; col < 4; col++) {
             // Set the current column to HIGH
@@ -185,8 +195,21 @@ char KeypadGetChar() {
     }
 }
 
-KeyInfo KeypadWaitForInput(){
-    char key = KeypadGetChar();
+KeyInfo KeypadCreateDefaulteKey(char key){
+    return (KeyInfo) { 
+        .isSpecial = false, 
+        .normalDisplayType = DISPLAY_NORMAL, 
+        .shiftDisplayType = DISPLAY_NORMAL, 
+        .key = key, 
+        .normalDisplay = key, 
+        .normalFunction = NORMAL_NUMBER, 
+        .shiftDisplay = key, 
+        .shiftFunction = NORMAL_NUMBER, 
+    };
+}
+
+KeyInfo KeypadWaitForKeyInfo(){
+    char key = KeypadWaitForChar();
 
     KeyInfo specialKey = KeypadFindSpecialKey(key);
 
@@ -194,14 +217,5 @@ KeyInfo KeypadWaitForInput(){
         return specialKey;
     }
 
-    return (KeyInfo) {
-        .isSpecial = false,
-        .displayOnInput = true,
-        .hasAnyDisplay = true,
-        .key = key,
-        .normalDisplay = key,
-        .normalFunction = NORMAL_NUMBER,
-        .shiftDisplay = key,
-        .shiftFunction = NORMAL_NUMBER,
-    };
+    return KeypadCreateDefaulteKey(key);
 }

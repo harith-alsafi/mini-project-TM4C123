@@ -1,9 +1,11 @@
-#include "../src/expression-parser.h"
+#include "../src/parser.h"
+#include <math.h>
 #include <stdio.h>
 #include "../lib/minunit/minunit.h"
 
 MU_TEST(TestBracket){
-    // (2^(2+1)-2)*0.5 = 3
+    printf("TestBracket \n");
+    // (2^(2+1)-2)x0.5 = 3
     Token tokens[] = {
         {
             .type = OPERATOR, 
@@ -51,7 +53,7 @@ MU_TEST(TestBracket){
         },
         {
             .type = OPERATOR,
-            .value = '*'
+            .value = 'x'
         },
         {
             .type = NUMBER,
@@ -66,14 +68,15 @@ MU_TEST(TestBracket){
             .value = '5'
         }
     };
-    InitPasrserWith(tokens, 15);
-    ParserInfo pi = Parse();
-    StopParser();
-    mu_assert_double_eq(3.0, pi.currentReuslt);
+    ParserInitWith(tokens, 15);
+    ParserInfo pi = ParserCompile();
+    ParserStop();
+    mu_assert_double_eq(3.0, pi.currentResult);
 }
 
 MU_TEST(TestParse){
-    // 15.2E-3.4+2/4-5^3+2*5+1
+    printf("TestParse \n");
+    // 15.2E-3.4+2/4-5^3+2x5+1
     Token tokens[] = {
         {
             .type = NUMBER, 
@@ -96,7 +99,7 @@ MU_TEST(TestParse){
             .value = 'E'
         },
         {
-            .type = NEGATIVE,
+            .type = OPERATOR,
             .value = '-'
         },
         {
@@ -149,7 +152,7 @@ MU_TEST(TestParse){
         },
         {
             .type = OPERATOR,
-            .value = '*'
+            .value = 'x'
         },
         {
             .type = NUMBER,
@@ -168,61 +171,135 @@ MU_TEST(TestParse){
             .value = ' '
         }
     };
-    InitPasrserWith(tokens, 23);
-    ParserInfo pi = Parse();
-    StopParser();
-    mu_assert_double_eq(-113.5, pi.currentReuslt);
+    ParserInitWith(tokens, 23);
+    ParserInfo pi = ParserCompile();
+    ParserStop();
+    mu_assert_double_eq(-113.5, pi.currentResult);
 }
 
 MU_TEST(TestNumberParser){
-   InitPasrser();
-    PushToken((Token){
-        .type = NEGATIVE, 
+    printf("TestNumberParser \n");
+   ParserInit();
+    ParserPushToken((Token){
+        .type = OPERATOR, 
         .value = '-'
     });
-    PushToken((Token){
+    ParserPushToken((Token){
         .type = NUMBER, 
         .value = '1'
     });
-    PushToken((Token){
+    ParserPushToken((Token){
         .type = NUMBER, 
         .value = '2'
     });
-    PushToken((Token){
+    ParserPushToken((Token){
         .type = NUMBER, 
         .value = '3'
     });
-    PushToken((Token){
+    ParserPushToken((Token){
         .type = NUMBER, 
         .value = '5'
     });
-    PushToken((Token){
+    ParserPushToken((Token){
         .type = DECIMAL, 
         .value = '.'
     });
-    PushToken((Token){
+    ParserPushToken((Token){
         .type = DECIMAL, 
         .value = '2'
     });
-    PushToken((Token){
+    ParserPushToken((Token){
         .type = NUMBER, 
         .value = '4'
     });
-    PushToken((Token){
+    ParserPushToken((Token){
         .type = EOL, 
         .value = ' '
     });
-    ParserInfo number = Parse();
-    StopParser();
-    mu_assert_double_eq(-1235.24, number.currentReuslt);
+    ParserInfo number = ParserCompile();
+    ParserStop();
+    mu_assert_double_eq((float)-1235.24, number.currentResult);
+}
+
+MU_TEST(TestSimple){
+printf("TestSimple \n");
+   ParserInit();
+    ParserPushToken((Token){
+        .type = NUMBER, 
+        .value = '5'
+    });
+    ParserPushToken((Token){
+        .type = OPERATOR, 
+        .value = '+'
+    });
+    ParserPushToken((Token){
+        .type = NUMBER, 
+        .value = '2'
+    });
+    ParserEndInput();
+    ParserInfo number = ParserCompile();
+    ParserReset();
+    mu_assert_double_eq(7.0, number.currentResult);
+
+    ParserPushToken((Token){
+        .type = NUMBER, 
+        .value = '2'
+    });
+    ParserPushToken((Token){
+        .type = OPERATOR, 
+        .value = 'x'
+    });
+    ParserPushToken((Token){
+        .type = NUMBER, 
+        .value = '5'
+    });
+    ParserEndInput();
+    number = ParserCompile();
+    ParserReset();
+    mu_assert_double_eq(10.0, number.currentResult);
+}
+
+MU_TEST(TestNegativePower){
+    printf("TestNegativePower \n");
+   ParserInit();
+    ParserPushToken((Token){
+        .type = NUMBER, 
+        .value = '5'
+    });
+    ParserPushToken((Token){
+        .type = OPERATOR, 
+        .value = '^'
+    });
+    ParserPushToken((Token){
+        .type = OPERATOR, 
+        .value = '('
+    });
+    ParserPushToken((Token){
+        .type = OPERATOR, 
+        .value = '-'
+    });
+    ParserPushToken((Token){
+        .type = NUMBER, 
+        .value = '2'
+    });
+    ParserPushToken((Token){
+        .type = OPERATOR, 
+        .value = ')'
+    });
+    ParserEndInput();
+    ParserInfo number = ParserCompile();
+    ParserStop();
+    printf("E:%i \n", number.error);
+    mu_assert_double_eq((float)0.04, number.currentResult);
 }
 
 MU_TEST_SUITE(TestSuite) {
 	MU_RUN_TEST(TestNumberParser);
     MU_RUN_TEST(TestParse);
     MU_RUN_TEST(TestBracket);
+    MU_RUN_TEST(TestSimple);
+    MU_RUN_TEST(TestNegativePower);
 }
-
 
 int main() {
 	MU_RUN_SUITE(TestSuite);

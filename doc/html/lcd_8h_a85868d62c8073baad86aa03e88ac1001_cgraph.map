@@ -2,13 +2,13 @@
 <area shape="rect" id="Node000001" title="Prints a character to the LCD at a given position." alt="" coords="5,17,115,44"/>
 <area shape="rect" id="Node000002" href="$lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="163,68,259,95"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,42,155,60,154,65,101,47"/>
-<area shape="rect" id="Node000008" href="$lcd_8c.html#a8de82b22879092baf8383713ecc708e9" title="Sets the cursor position." alt="" coords="722,61,822,88"/>
+<area shape="rect" id="Node000008" href="$lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="722,61,822,88"/>
 <area shape="poly" id="edge20_Node000001_Node000008" title=" " alt="" coords="115,26,219,23,358,24,515,30,674,47,712,54,711,59,673,52,515,36,358,29,219,28,115,31"/>
 <area shape="rect" id="Node000003" href="$clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1025,169,1111,196"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="225,93,259,129,282,148,308,163,383,192,445,204,509,206,591,205,773,205,900,199,1009,188,1010,193,900,205,773,211,591,211,509,212,444,210,382,197,306,168,279,152,256,133,221,97"/>
-<area shape="rect" id="Node000006" href="$lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title=" " alt="" coords="307,93,463,120"/>
+<area shape="rect" id="Node000006" href="$lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="307,93,463,120"/>
 <area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="260,86,293,90,292,96,259,91"/>
-<area shape="rect" id="Node000007" href="$lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="511,61,674,88"/>
+<area shape="rect" id="Node000007" href="$lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="511,61,674,88"/>
 <area shape="poly" id="edge17_Node000002_Node000007" title=" " alt="" coords="259,78,496,74,496,79,259,83"/>
 <area shape="rect" id="Node000010" href="$lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1018,119,1118,145"/>
 <area shape="poly" id="edge18_Node000002_Node000010" title=" " alt="" coords="234,93,267,113,308,129,385,149,447,156,591,155,773,155,895,149,1003,138,1003,143,896,154,773,160,591,160,447,161,384,154,306,135,265,117,231,97"/>

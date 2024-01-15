@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['xtal30k_0',['XTAL30K',['../system___t_m4_c123_8c.html#aae873e6b41dc2b7665b1a312cb062b4a',1,'system_TM4C123.c']]],
-  ['xtal32k_1',['XTAL32K',['../system___t_m4_c123_8c.html#a7981be1ae1f32cdfc7b1681860d440be',1,'system_TM4C123.c']]],
-  ['xtali_2',['XTALI',['../system___t_m4_c123_8c.html#aed5b0da9b247340ab65170e44a0e079f',1,'system_TM4C123.c']]],
-  ['xtalm_3',['XTALM',['../system___t_m4_c123_8c.html#a2257a737607a717c24541af4e55abf03',1,'system_TM4C123.c']]]
+  ['unit_5ftest_5fh_0',['UNIT_TEST_H',['../hardware-test_8h.html#aaca9bad4dfe82f439fda079b604ea29d',1,'hardware-test.h']]],
+  ['user_5finterface_5fh_1',['USER_INTERFACE_H',['../user-interface_8h.html#a8608c8eb776842681d315eb77899f737',1,'user-interface.h']]]
 ];

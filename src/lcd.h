@@ -17,18 +17,22 @@
 #define LCD_N_COL 20
 #define LCD_N_ROW 4
 
+#define CHAR_P 0xFF
+#define LCD_CHAR_S 0xFE
+#define CHAR_LOCKED 0xBF
+#define CHAR_V_LINE '│'
+#define CHAR_H_LINE '─'
+#define CHAR_CROSS '┼'
+
+extern int currentRow;
+extern int currentCol;
+
 /**
  * @brief Sets the rs flag to the given value
  * 
  * @param rs rs == 1 -> data RS = HIGH, rs == 0 -> command RS = LOW
  */
 void LcdSetRs(byte rs);
-
-/**
- * @brief Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns
- * 
- */
-void LcdPulseEn();
 
 /**
  * @brief Sends a nibble to the LCD 
@@ -136,13 +140,18 @@ void LcdPrintString(char str[], bool cursorTrack);
  */
 void LcdPrintCharAt(char ch, byte row, byte col);
 
-void LcdClearRow(unsigned char row);
+/**
+ * @brief Clears a row
+ * 
+ * @param row 
+ */
+void LcdClearRow(byte row);
 
-void LcdClearCol(unsigned char col);
-
-void LcdDrawLine(unsigned char row, unsigned char col, unsigned char length, unsigned char is_vertical);
-
-void LcdDrawBox(unsigned char row, unsigned char col, unsigned char length, unsigned char width);
-
+/**
+ * @brief Clears the last character of a row
+ * 
+ * @param rowLimit wont go to that row when clearing the last character
+ */
+void LcdClearLastChar(int rowLimit);
 
 #endif

@@ -5,17 +5,22 @@
 {\ttfamily \#include "{}helpers.\+h"{}}\newline
 {\ttfamily \#include "{}ports.\+h"{}}\newline
 {\ttfamily \#include "{}stdbool.\+h"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
 Include dependency graph for lcd.\+c\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=332pt]{lcd_8c__incl}
+\includegraphics[width=350pt]{lcd_8c__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{lcd_8c_a60854aad97ec6bbdb5a001eea7c6b3b8}{Lcd\+Increment\+Cursor\+Row}} ()
+\begin{DoxyCompactList}\small\item\em Increments the cursor row. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd_8c_a16d925f7b9140ef9283fcae38a45b7f4}{Lcd\+Increment\+Cursor\+Col}} ()
+\begin{DoxyCompactList}\small\item\em Increments the cursor column. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{lcd_8c_a20f0fe593368605d1bd6a28ad1a0a43f}{Lcd\+Set\+Rs}} (\mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} rs)
 \begin{DoxyCompactList}\small\item\em Sets the rs flag to the given value. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{lcd_8c_a07e30a245315510382ca9d5e1b508de3}{Lcd\+Pulse\+En}} ()
@@ -40,17 +45,13 @@ void \mbox{\hyperlink{lcd_8c_a61b541c799955fc6b4e6cf28628de9a1}{Lcd\+Init}} ()
 \begin{DoxyCompactList}\small\item\em Initializes the LCD. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{lcd_8c_a588b278d12ac539ff4f7787f03176dcb}{Lcd\+Set\+Ddram}} (\mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} addr)
 \begin{DoxyCompactList}\small\item\em Sets the DDRAM address (cursor position) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{lcd_8c_a8de82b22879092baf8383713ecc708e9}{Lcd\+Set\+Cursor}} (\mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} row, \mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} col)
+void \mbox{\hyperlink{lcd_8c_ab336d65567699c41886446b710e9d859}{Lcd\+Set\+Cursor}} (\mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} row, \mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} col, bool cursor\+Track)
 \begin{DoxyCompactList}\small\item\em Sets the cursor position. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{lcd_8c_a60854aad97ec6bbdb5a001eea7c6b3b8}{Lcd\+Increment\+Cursor\+Row}} ()
-\item 
-void \mbox{\hyperlink{lcd_8c_a16d925f7b9140ef9283fcae38a45b7f4}{Lcd\+Increment\+Cursor\+Col}} ()
-\item 
 void \mbox{\hyperlink{lcd_8c_a37450f91c7ae032252ea94d7c92efde2}{Lcd\+Print\+Char}} (char ch, bool cursor\+Track)
 \begin{DoxyCompactList}\small\item\em Prints a character to the LCD. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{lcd_8c_a85868d62c8073baad86aa03e88ac1001}{Lcd\+Print\+Char\+At}} (char ch, \mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} row, \mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} col)
 \begin{DoxyCompactList}\small\item\em Prints a character to the LCD at a given position. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{lcd_8c_a6ba64316f53c5a71031db621b3fe435e}{Lcd\+Print\+String}} (char str\mbox{[}$\,$\mbox{]})
+void \mbox{\hyperlink{lcd_8c_afb88b9aba1a1db09a517c5a1ffc07299}{Lcd\+Print\+String}} (char str\mbox{[}$\,$\mbox{]}, bool cursor\+Track)
 \begin{DoxyCompactList}\small\item\em Prints a string to the LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -74,10 +75,9 @@ Clears the display.
 
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00031}{31}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00048}{48}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -111,10 +111,9 @@ Sets the LCD cursor position.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00043}{43}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00060}{60}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -142,10 +141,9 @@ Controls the display, cursor, and blinking.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00075}{75}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00092}{92}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -179,10 +177,9 @@ Sets the entry mode of the LCD.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00060}{60}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00077}{77}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -214,10 +211,9 @@ Here is the caller graph for this function\+:
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00098}{98}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00115}{115}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -240,7 +236,11 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00207}{207}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Increments the cursor column. 
+
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00226}{226}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -266,7 +266,11 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00196}{196}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Increments the cursor row. 
+
+
+
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00215}{215}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -296,10 +300,9 @@ Initializes the LCD.
 
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00116}{116}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00133}{133}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -333,7 +336,7 @@ Prints a character to the LCD.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00215}{215}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00234}{234}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -372,7 +375,7 @@ Prints a character to the LCD at a given position.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00230}{230}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00249}{249}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -382,11 +385,11 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{lcd_8c_a85868d62c8073baad86aa03e88ac1001_cgraph}
 \end{center}
 \end{figure}
-\Hypertarget{lcd_8c_a6ba64316f53c5a71031db621b3fe435e}\label{lcd_8c_a6ba64316f53c5a71031db621b3fe435e} 
+\Hypertarget{lcd_8c_afb88b9aba1a1db09a517c5a1ffc07299}\label{lcd_8c_afb88b9aba1a1db09a517c5a1ffc07299} 
 \index{lcd.c@{lcd.c}!LcdPrintString@{LcdPrintString}}
 \index{LcdPrintString@{LcdPrintString}!lcd.c@{lcd.c}}
 \doxysubsubsection{\texorpdfstring{LcdPrintString()}{LcdPrintString()}}
-{\footnotesize\ttfamily void Lcd\+Print\+String (\begin{DoxyParamCaption}\item[{char}]{str\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Lcd\+Print\+String (\begin{DoxyParamCaption}\item[{char}]{str\mbox{[}$\,$\mbox{]},  }\item[{bool}]{cursor\+Track }\end{DoxyParamCaption})}
 
 
 
@@ -399,14 +402,14 @@ Prints a string to the LCD.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00235}{235}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00254}{254}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{lcd_8c_a6ba64316f53c5a71031db621b3fe435e_cgraph}
+\includegraphics[width=350pt]{lcd_8c_afb88b9aba1a1db09a517c5a1ffc07299_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -414,7 +417,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{lcd_8c_a6ba64316f53c5a71031db621b3fe435e_icgraph}
+\includegraphics[width=350pt]{lcd_8c_afb88b9aba1a1db09a517c5a1ffc07299_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{lcd_8c_a07e30a245315510382ca9d5e1b508de3}\label{lcd_8c_a07e30a245315510382ca9d5e1b508de3} 
@@ -429,7 +432,7 @@ Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns.
 
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00014}{14}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00031}{31}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -458,10 +461,9 @@ Resets cursor to original position.
 
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00092}{92}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00109}{109}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -485,10 +487,9 @@ Sends a byte to the LCD.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00026}{26}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00043}{43}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -520,10 +521,9 @@ Sends a nibble to the LCD.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00021}{21}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00038}{38}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -538,11 +538,11 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{lcd_8c_a93ae42864f782da4a4e0515d7faa449f_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{lcd_8c_a8de82b22879092baf8383713ecc708e9}\label{lcd_8c_a8de82b22879092baf8383713ecc708e9} 
+\Hypertarget{lcd_8c_ab336d65567699c41886446b710e9d859}\label{lcd_8c_ab336d65567699c41886446b710e9d859} 
 \index{lcd.c@{lcd.c}!LcdSetCursor@{LcdSetCursor}}
 \index{LcdSetCursor@{LcdSetCursor}!lcd.c@{lcd.c}}
 \doxysubsubsection{\texorpdfstring{LcdSetCursor()}{LcdSetCursor()}}
-{\footnotesize\ttfamily void Lcd\+Set\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}}}]{row,  }\item[{\mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}}}]{col }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Lcd\+Set\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}}}]{row,  }\item[{\mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}}}]{col,  }\item[{bool}]{cursor\+Track }\end{DoxyParamCaption})}
 
 
 
@@ -554,17 +554,19 @@ Sets the cursor position.
 \hline
 {\em col} & column to be set \\
 \hline
+{\em cursor\+Track} & 1 -\/\texorpdfstring{$>$}{>} Track cursor, 0 -\/\texorpdfstring{$>$}{>} don\textquotesingle{}t Track cursor \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00179}{179}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00196}{196}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{lcd_8c_a8de82b22879092baf8383713ecc708e9_cgraph}
+\includegraphics[width=350pt]{lcd_8c_ab336d65567699c41886446b710e9d859_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -572,7 +574,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{lcd_8c_a8de82b22879092baf8383713ecc708e9_icgraph}
+\includegraphics[width=350pt]{lcd_8c_ab336d65567699c41886446b710e9d859_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{lcd_8c_a588b278d12ac539ff4f7787f03176dcb}\label{lcd_8c_a588b278d12ac539ff4f7787f03176dcb} 
@@ -592,10 +594,9 @@ Sets the DDRAM address (cursor position)
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00171}{171}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00188}{188}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -627,7 +628,7 @@ Sets the rs flag to the given value.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00010}{10}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00027}{27}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -648,7 +649,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00008}{8}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00025}{25}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 
 \Hypertarget{lcd_8c_a789bfe83cfe007cc723e4fd58bb6b112}\label{lcd_8c_a789bfe83cfe007cc723e4fd58bb6b112} 
 \index{lcd.c@{lcd.c}!currentRow@{currentRow}}
@@ -658,5 +659,5 @@ Definition at line \mbox{\hyperlink{lcd_8c_source_l00008}{8}} of file \mbox{\hyp
 
 
 
-Definition at line \mbox{\hyperlink{lcd_8c_source_l00007}{7}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
+Definition at line \mbox{\hyperlink{lcd_8c_source_l00024}{24}} of file \mbox{\hyperlink{lcd_8c_source}{lcd.\+c}}.
 

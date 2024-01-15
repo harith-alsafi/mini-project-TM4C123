@@ -1,0 +1,13 @@
+<map id="ParseBracket" name="ParseBracket">
+<area shape="rect" id="Node000001" title="Parses bracket expression." alt="" coords="609,5,709,32"/>
+<area shape="rect" id="Node000002" href="$parser_8c.html#ab427a20c59c9ca0b11c82660752df62a" title="Parses arithematic expression." alt="" coords="160,5,280,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="593,28,436,30,281,28,281,22,436,25,593,23"/>
+<area shape="rect" id="Node000004" href="$parser_8c.html#a55bde1715e6e77addb80a046c96f059d" title="Parses only number tokens." alt="" coords="460,68,561,95"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="612,41,545,70,543,65,610,36"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="295,9,457,7,608,10,608,15,457,12,296,14"/>
+<area shape="rect" id="Node000003" href="$parser_8c.html#a19203c96ed6922e7092af10b63e6d298" title="Compiles the tokens and returns the result." alt="" coords="5,5,112,32"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="144,21,112,21,112,16,144,16"/>
+<area shape="rect" id="Node000005" href="$parser_8c.html#a5656fb9995d62b96c08bfef4789ee4db" title="Parses term tokens." alt="" coords="328,68,412,95"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="445,84,413,84,413,79,445,79"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="321,64,253,35,255,30,323,59"/>
+</map>

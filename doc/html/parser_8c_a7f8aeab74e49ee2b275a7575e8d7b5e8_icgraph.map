@@ -1,0 +1,19 @@
+<map id="GetNextToken" name="GetNextToken">
+<area shape="rect" id="Node000001" title="Eats the next token." alt="" coords="757,87,861,114"/>
+<area shape="rect" id="Node000002" href="$parser_8c.html#ab942fe3a63fed3190c76e55ebc76e5aa" title="Parses bracket expression." alt="" coords="609,87,709,114"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="742,103,709,103,709,98,742,98"/>
+<area shape="rect" id="Node000003" href="$parser_8c.html#ab427a20c59c9ca0b11c82660752df62a" title="Parses arithematic expression." alt="" coords="160,87,280,114"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="749,121,709,129,590,136,471,133,364,124,280,113,281,108,365,119,472,128,590,131,709,123,748,116"/>
+<area shape="rect" id="Node000004" href="$parser_8c.html#a19203c96ed6922e7092af10b63e6d298" title="Compiles the tokens and returns the result." alt="" coords="5,145,112,171"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="776,125,726,153,662,183,589,207,550,214,512,217,369,217,296,212,225,202,106,174,108,169,226,196,297,207,369,211,512,211,550,209,587,202,660,178,724,148,773,120"/>
+<area shape="rect" id="Node000005" href="$parser_8c.html#a55bde1715e6e77addb80a046c96f059d" title="Parses only number tokens." alt="" coords="460,25,561,51"/>
+<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="741,86,708,78,561,49,562,44,710,73,743,80"/>
+<area shape="rect" id="Node000006" href="$parser_8c.html#a5656fb9995d62b96c08bfef4789ee4db" title="Parses term tokens." alt="" coords="328,25,412,51"/>
+<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="772,81,708,50,641,26,587,12,531,9,461,15,412,27,411,21,460,10,531,3,587,7,642,20,710,45,774,77"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="593,110,436,112,281,110,281,104,436,107,593,104"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="610,83,543,54,545,49,612,78"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="295,91,457,89,608,92,608,97,457,94,296,96"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="167,122,99,146,98,141,165,117"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="445,41,413,41,413,35,445,35"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="323,60,255,89,253,84,321,55"/>
+</map>

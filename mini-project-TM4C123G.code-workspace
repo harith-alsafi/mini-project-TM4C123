@@ -4,5 +4,13 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"makefile.launchConfigurations": [
+			{
+				"cwd": "/mnt/a/Work/Projects/mbed/mini-project-TM4C123G/out",
+				"binaryPath": "/mnt/a/Work/Projects/mbed/mini-project-TM4C123G/out/test_executable",
+				"binaryArgs": []
+			}
+		]
+	}
 }

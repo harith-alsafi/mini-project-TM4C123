@@ -2,8 +2,24 @@
 #include "clock.h"
 #include "helpers.h"
 #include "ports.h"
-#include "stdbool.h"
+#include <stdbool.h>
 #include <string.h>
+
+//********************************************
+
+/**
+ * @brief Increments the cursor row
+ * 
+ */
+void LcdIncrementCursorRow();
+
+/**
+ * @brief Increments the cursor column
+ * 
+ */
+void LcdIncrementCursorCol();
+
+//********************************************
 
 int currentRow = 0;
 int currentCol = 0;
@@ -12,16 +28,12 @@ void LcdSetRs(byte rs){
     LCD_RS = rs;
 }
 
-void LcdPulseEn(){
+void LcdSendNibble(byte nibble) {
+    LCD_DB = nibble&0xF;
     LCD_EN = HIGH;
     DelayNano(450);
     LCD_EN = LOW;
     DelayNano(450);
-}
-
-void LcdSendNibble(byte nibble) {
-    LCD_DB = nibble&0xF;
-    LcdPulseEn();
 }
 
 void LcdSendByte(byte byte){
@@ -233,11 +245,34 @@ void LcdPrintChar(char ch, bool cursorTrack){
 void LcdPrintCharAt(char ch, byte row, byte col){
     LcdSetCursor(row, col, false);
     LcdPrintChar(ch, false);
+    LcdSetCursor(currentRow, currentCol, false);
 }
 
 void LcdPrintString(char str[], bool cursorTrack){
-    int i; 
-    for(i = 0; i < (int) strlen(str); i++){
+    for(int i = 0; i < (int) strlen(str); i++){
         LcdPrintChar(str[i], cursorTrack);
     }
+}
+
+void LcdClearRow(byte row){
+    LcdSetCursor(row, 0, false);
+    for(int i = 0; i < LCD_N_COL; i++){
+        LcdPrintChar(' ', false);
+    }
+    LcdSetCursor(row, 0, true);
+}
+
+
+// TODO: fix 
+void LcdClearLastChar(int rowLimit){
+    int _currentRow = currentRow-1 == rowLimit? currentRow: currentRow-1;
+    int _currentCol = currentCol-1 < 0 && _currentRow != rowLimit+1 ? LCD_N_COL-1 : currentCol-1;
+    LcdSetCursor(_currentRow, _currentCol, true);
+    LcdPrintCharAt(' ', currentRow, currentCol);
+}
+
+void LcdClearCol(byte col){
+   for(int j = 0; j < LCD_N_COL; j++){
+    
+   }
 }

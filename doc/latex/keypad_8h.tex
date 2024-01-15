@@ -1,8 +1,7 @@
 \doxysection{src/keypad.h File Reference}
 \hypertarget{keypad_8h}{}\label{keypad_8h}\index{src/keypad.h@{src/keypad.h}}
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
-Include dependency graph for keypad.\+h\+:
-\nopagebreak
+Include dependency graph for keypad.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -33,46 +32,66 @@ struct \mbox{\hyperlink{struct_key_info}{Key\+Info}}
 \item 
 \#define \mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}~4
 \item 
+\#define \mbox{\hyperlink{keypad_8h_ab5e2164bb5d04f144ceb4740b4154c79}{SHIFT\+\_\+\+CHAR}}~0x\+EF
+\item 
 \#define \mbox{\hyperlink{keypad_8h_ae3dadba290780b744593a2bc45264e3f}{KEYPAD\+\_\+\+UNKOWN\+\_\+\+KEY}}~\textquotesingle{}\textbackslash{}0\textquotesingle{}
 \item 
-\#define \mbox{\hyperlink{keypad_8h_a9c722c424a8076bfe4ee4e9e2efa03e6}{KEYPAD\+\_\+\+MAX\+\_\+\+SPECIAL\+\_\+\+KEYS}}~7
+\#define \mbox{\hyperlink{keypad_8h_a9c722c424a8076bfe4ee4e9e2efa03e6}{KEYPAD\+\_\+\+MAX\+\_\+\+SPECIAL\+\_\+\+KEYS}}~10
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc}{Special\+Key\+Functions}} \{ \newline
-\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9}{PLUS}}
-, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3}{MULTIPLY}}
-, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225}{MINUS}}
-, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da}{DIVIDE}}
+\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea}{NORMAL\+\_\+\+NUMBER}} = 0
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2}{DECIMAL\+\_\+\+POINT}} = 1
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e}{EXPONENTIAL}} = 2
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca03ee4db3d1e17f8bbd6d9addebd8367b}{POWER\+\_\+\+TO}} = 3
 , \newline
-\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2}{DECIMAL\+\_\+\+POINT}}
-, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e}{EXPONENTIAL}}
-, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f}{SHIFT\+\_\+\+ON}}
-, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284}{SHIFT\+\_\+\+OFF}}
+\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3}{MULTIPLY}} = 4
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da}{DIVIDE}} = 5
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9}{PLUS}} = 6
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225}{MINUS}} = 7
 , \newline
-\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78}{END\+\_\+\+INPUT}}
-, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccad67d15054b1cf5d5d891decd24ec801f}{UNDO\+\_\+\+LAST}}
-, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca1e1a4aba20a5a009e616cbc8fad33ac7}{CLEAR}}
+\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f}{SHIFT\+\_\+\+ON}} = 8
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284}{SHIFT\+\_\+\+OFF}} = 9
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78}{END\+\_\+\+INPUT}} = 10
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca2b52d5d24f0e5d58e6c88403eb9e19c8}{CLEAR\+\_\+\+LAST}} = 11
+, \newline
+\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4c016f5ee446f379aa869bbccb6fb5c0}{CLEAR\+\_\+\+ALL}} = 12
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca3f243a70f3fda6cfeeada41e2407c650}{LAST\+\_\+\+ANSWER}} = 13
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca2fa6ac17699d67a0b42605fd1269eb35}{OPEN\+\_\+\+PARENTHESIS}} = 14
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab90a7579c3517af01b71289905e4b84a}{CLOSE\+\_\+\+PARENTHESIS}} = 15
+, \newline
+\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccafa80cde56ec760dde1bf913ee6d2ba50}{OPEN\+\_\+\+SETTINGS}} = 16
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca804f54479240e4585b64a57aa53df58b}{CURSOR\+\_\+\+LEFT}} = 17
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca9b5cea0b81e6ba5016df73182861ec86}{CURSOR\+\_\+\+RIGHT}} = 18
+, \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab0c4058c3097d23fce049b33970cd564}{CURSOR\+\_\+\+UP}} = 19
+, \newline
+\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca9bd2c7c2e70700c98eb7ed895ce47f82}{CURSOR\+\_\+\+DOWN}} = 20
+ \}
+\item 
+enum \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536}{Key\+Display\+Type}} \{ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536a22bfa961006c196ebfbf6a2973c6d14f}{DISPLAY\+\_\+\+STATUS}}
+, \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae1804614a1f20fe485d37f0bcaf05906}{DISPLAY\+\_\+\+NONE}}
+, \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\+\_\+\+NORMAL}}
  \}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{struct_key_info}{Key\+Info}} \mbox{\hyperlink{keypad_8h_a49ffa463b26cc47b7d9e3e2cda8d9168}{Keypad\+Find\+Special\+Key}} (char key)
-\item 
 void \mbox{\hyperlink{keypad_8h_aa6981f604fdfbec491e21e90507ec0de}{Keypad\+Init}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes the keypad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_key_info}{Key\+Info}} \mbox{\hyperlink{keypad_8h_a49ffa463b26cc47b7d9e3e2cda8d9168}{Keypad\+Find\+Special\+Key}} (char key)
+\begin{DoxyCompactList}\small\item\em Finds the Key\+Info of a given key. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{keypad_8h_a9b1fc55f525fe49144daf21ffe978141}{Key\+Is\+Valid}} (\mbox{\hyperlink{struct_key_info}{Key\+Info}} key)
+\begin{DoxyCompactList}\small\item\em Checks if a given key is valid. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_key_info}{Key\+Info}} \mbox{\hyperlink{keypad_8h_a63a4bc1c3105f40dc85fe16092790f83}{Keypad\+Wait\+For\+Input}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Waits for a key to be pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 const \mbox{\hyperlink{struct_key_info}{Key\+Info}} \mbox{\hyperlink{keypad_8h_aa67f7a9fae59d327c0fef030151be800}{KEYPAD\+\_\+\+SPECIAL\+\_\+\+KEYS}} \mbox{[}\mbox{\hyperlink{keypad_8h_a9c722c424a8076bfe4ee4e9e2efa03e6}{KEYPAD\+\_\+\+MAX\+\_\+\+SPECIAL\+\_\+\+KEYS}}\mbox{]}
 \item 
 const char \mbox{\hyperlink{keypad_8h_a4c1fef8314018fe3ce44affffbe10a72}{KEYPAD\+\_\+\+KEYS}} \mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}\mbox{[}\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\+\_\+N}}\mbox{]}
-\item 
-bool \mbox{\hyperlink{keypad_8h_ab3f2ce14f970ec74192af9e2c69a3ef5}{shift\+Is\+On}}
 \end{DoxyCompactItemize}
 
 
@@ -101,11 +120,11 @@ Definition at line \mbox{\hyperlink{keypad_8h_source_l00002}{2}} of file \mbox{\
 \index{keypad.h@{keypad.h}!KEYPAD\_MAX\_SPECIAL\_KEYS@{KEYPAD\_MAX\_SPECIAL\_KEYS}}
 \index{KEYPAD\_MAX\_SPECIAL\_KEYS@{KEYPAD\_MAX\_SPECIAL\_KEYS}!keypad.h@{keypad.h}}
 \doxysubsubsection{\texorpdfstring{KEYPAD\_MAX\_SPECIAL\_KEYS}{KEYPAD\_MAX\_SPECIAL\_KEYS}}
-{\footnotesize\ttfamily \#define KEYPAD\+\_\+\+MAX\+\_\+\+SPECIAL\+\_\+\+KEYS~7}
+{\footnotesize\ttfamily \#define KEYPAD\+\_\+\+MAX\+\_\+\+SPECIAL\+\_\+\+KEYS~10}
 
 
 
-Definition at line \mbox{\hyperlink{keypad_8h_source_l00020}{20}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
+Definition at line \mbox{\hyperlink{keypad_8h_source_l00021}{21}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
 
 \Hypertarget{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}\label{keypad_8h_acc73b1692bde87ce0a891af4dece22fc} 
 \index{keypad.h@{keypad.h}!KEYPAD\_N@{KEYPAD\_N}}
@@ -135,11 +154,45 @@ Definition at line \mbox{\hyperlink{keypad_8h_source_l00016}{16}} of file \mbox{
 
 
 
-Definition at line \mbox{\hyperlink{keypad_8h_source_l00019}{19}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
+Definition at line \mbox{\hyperlink{keypad_8h_source_l00020}{20}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
+
+\Hypertarget{keypad_8h_ab5e2164bb5d04f144ceb4740b4154c79}\label{keypad_8h_ab5e2164bb5d04f144ceb4740b4154c79} 
+\index{keypad.h@{keypad.h}!SHIFT\_CHAR@{SHIFT\_CHAR}}
+\index{SHIFT\_CHAR@{SHIFT\_CHAR}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{SHIFT\_CHAR}{SHIFT\_CHAR}}
+{\footnotesize\ttfamily \#define SHIFT\+\_\+\+CHAR~0x\+EF}
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8h_source_l00018}{18}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
 
 
 
 \doxysubsection{Enumeration Type Documentation}
+\Hypertarget{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536}\label{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536} 
+\index{keypad.h@{keypad.h}!KeyDisplayType@{KeyDisplayType}}
+\index{KeyDisplayType@{KeyDisplayType}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KeyDisplayType}{KeyDisplayType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536}{Key\+Display\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DISPLAY\_STATUS@{DISPLAY\_STATUS}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!DISPLAY\_STATUS@{DISPLAY\_STATUS}}}\Hypertarget{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536a22bfa961006c196ebfbf6a2973c6d14f}\label{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536a22bfa961006c196ebfbf6a2973c6d14f} 
+DISPLAY\+\_\+\+STATUS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DISPLAY\_NONE@{DISPLAY\_NONE}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!DISPLAY\_NONE@{DISPLAY\_NONE}}}\Hypertarget{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae1804614a1f20fe485d37f0bcaf05906}\label{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae1804614a1f20fe485d37f0bcaf05906} 
+DISPLAY\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DISPLAY\_NORMAL@{DISPLAY\_NORMAL}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!DISPLAY\_NORMAL@{DISPLAY\_NORMAL}}}\Hypertarget{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}\label{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce} 
+DISPLAY\+\_\+\+NORMAL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{keypad_8h_source_l00047}{47}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
+
 \Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc} 
 \index{keypad.h@{keypad.h}!SpecialKeyFunctions@{SpecialKeyFunctions}}
 \index{SpecialKeyFunctions@{SpecialKeyFunctions}!keypad.h@{keypad.h}}
@@ -147,20 +200,8 @@ Definition at line \mbox{\hyperlink{keypad_8h_source_l00019}{19}} of file \mbox{
 {\footnotesize\ttfamily enum \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc}{Special\+Key\+Functions}}}
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{PLUS@{PLUS}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!PLUS@{PLUS}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9} 
-PLUS&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{MULTIPLY@{MULTIPLY}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!MULTIPLY@{MULTIPLY}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3} 
-MULTIPLY&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{MINUS@{MINUS}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!MINUS@{MINUS}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225} 
-MINUS&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{DIVIDE@{DIVIDE}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!DIVIDE@{DIVIDE}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da} 
-DIVIDE&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NORMAL\_NUMBER@{NORMAL\_NUMBER}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!NORMAL\_NUMBER@{NORMAL\_NUMBER}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea} 
+NORMAL\+\_\+\+NUMBER&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{DECIMAL\_POINT@{DECIMAL\_POINT}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!DECIMAL\_POINT@{DECIMAL\_POINT}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2} 
@@ -169,6 +210,26 @@ DECIMAL\+\_\+\+POINT&\\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{EXPONENTIAL@{EXPONENTIAL}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!EXPONENTIAL@{EXPONENTIAL}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e} 
 EXPONENTIAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POWER\_TO@{POWER\_TO}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!POWER\_TO@{POWER\_TO}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca03ee4db3d1e17f8bbd6d9addebd8367b}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca03ee4db3d1e17f8bbd6d9addebd8367b} 
+POWER\+\_\+\+TO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MULTIPLY@{MULTIPLY}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!MULTIPLY@{MULTIPLY}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3} 
+MULTIPLY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIVIDE@{DIVIDE}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!DIVIDE@{DIVIDE}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da} 
+DIVIDE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLUS@{PLUS}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!PLUS@{PLUS}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9} 
+PLUS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MINUS@{MINUS}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!MINUS@{MINUS}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225} 
+MINUS&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SHIFT\_ON@{SHIFT\_ON}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!SHIFT\_ON@{SHIFT\_ON}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f} 
@@ -183,22 +244,88 @@ SHIFT\+\_\+\+OFF&\\
 END\+\_\+\+INPUT&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{UNDO\_LAST@{UNDO\_LAST}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!UNDO\_LAST@{UNDO\_LAST}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccad67d15054b1cf5d5d891decd24ec801f}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccad67d15054b1cf5d5d891decd24ec801f} 
-UNDO\+\_\+\+LAST&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLEAR\_LAST@{CLEAR\_LAST}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!CLEAR\_LAST@{CLEAR\_LAST}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca2b52d5d24f0e5d58e6c88403eb9e19c8}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca2b52d5d24f0e5d58e6c88403eb9e19c8} 
+CLEAR\+\_\+\+LAST&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CLEAR@{CLEAR}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!CLEAR@{CLEAR}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca1e1a4aba20a5a009e616cbc8fad33ac7}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca1e1a4aba20a5a009e616cbc8fad33ac7} 
-CLEAR&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLEAR\_ALL@{CLEAR\_ALL}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!CLEAR\_ALL@{CLEAR\_ALL}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4c016f5ee446f379aa869bbccb6fb5c0}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4c016f5ee446f379aa869bbccb6fb5c0} 
+CLEAR\+\_\+\+ALL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LAST\_ANSWER@{LAST\_ANSWER}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!LAST\_ANSWER@{LAST\_ANSWER}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca3f243a70f3fda6cfeeada41e2407c650}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca3f243a70f3fda6cfeeada41e2407c650} 
+LAST\+\_\+\+ANSWER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OPEN\_PARENTHESIS@{OPEN\_PARENTHESIS}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!OPEN\_PARENTHESIS@{OPEN\_PARENTHESIS}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca2fa6ac17699d67a0b42605fd1269eb35}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca2fa6ac17699d67a0b42605fd1269eb35} 
+OPEN\+\_\+\+PARENTHESIS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLOSE\_PARENTHESIS@{CLOSE\_PARENTHESIS}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!CLOSE\_PARENTHESIS@{CLOSE\_PARENTHESIS}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab90a7579c3517af01b71289905e4b84a}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab90a7579c3517af01b71289905e4b84a} 
+CLOSE\+\_\+\+PARENTHESIS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OPEN\_SETTINGS@{OPEN\_SETTINGS}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!OPEN\_SETTINGS@{OPEN\_SETTINGS}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccafa80cde56ec760dde1bf913ee6d2ba50}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccafa80cde56ec760dde1bf913ee6d2ba50} 
+OPEN\+\_\+\+SETTINGS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CURSOR\_LEFT@{CURSOR\_LEFT}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!CURSOR\_LEFT@{CURSOR\_LEFT}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca804f54479240e4585b64a57aa53df58b}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca804f54479240e4585b64a57aa53df58b} 
+CURSOR\+\_\+\+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CURSOR\_RIGHT@{CURSOR\_RIGHT}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!CURSOR\_RIGHT@{CURSOR\_RIGHT}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca9b5cea0b81e6ba5016df73182861ec86}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca9b5cea0b81e6ba5016df73182861ec86} 
+CURSOR\+\_\+\+RIGHT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CURSOR\_UP@{CURSOR\_UP}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!CURSOR\_UP@{CURSOR\_UP}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab0c4058c3097d23fce049b33970cd564}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab0c4058c3097d23fce049b33970cd564} 
+CURSOR\+\_\+\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CURSOR\_DOWN@{CURSOR\_DOWN}!keypad.h@{keypad.h}}\index{keypad.h@{keypad.h}!CURSOR\_DOWN@{CURSOR\_DOWN}}}\Hypertarget{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca9bd2c7c2e70700c98eb7ed895ce47f82}\label{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca9bd2c7c2e70700c98eb7ed895ce47f82} 
+CURSOR\+\_\+\+DOWN&\\
 \hline
 
 \end{DoxyEnumFields}
 
 
-Definition at line \mbox{\hyperlink{keypad_8h_source_l00022}{22}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
+Definition at line \mbox{\hyperlink{keypad_8h_source_l00023}{23}} of file \mbox{\hyperlink{keypad_8h_source}{keypad.\+h}}.
 
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{keypad_8h_a9b1fc55f525fe49144daf21ffe978141}\label{keypad_8h_a9b1fc55f525fe49144daf21ffe978141} 
+\index{keypad.h@{keypad.h}!KeyIsValid@{KeyIsValid}}
+\index{KeyIsValid@{KeyIsValid}!keypad.h@{keypad.h}}
+\doxysubsubsection{\texorpdfstring{KeyIsValid()}{KeyIsValid()}}
+{\footnotesize\ttfamily bool Key\+Is\+Valid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_key_info}{Key\+Info}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Checks if a given key is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} ~\newline
+ 
+
+{\ttfamily false} ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00148}{148}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keypad_8h_a9b1fc55f525fe49144daf21ffe978141_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{keypad_8h_a49ffa463b26cc47b7d9e3e2cda8d9168}\label{keypad_8h_a49ffa463b26cc47b7d9e3e2cda8d9168} 
 \index{keypad.h@{keypad.h}!KeypadFindSpecialKey@{KeypadFindSpecialKey}}
 \index{KeypadFindSpecialKey@{KeypadFindSpecialKey}!keypad.h@{keypad.h}}
@@ -207,7 +334,20 @@ Definition at line \mbox{\hyperlink{keypad_8h_source_l00022}{22}} of file \mbox{
 
 
 
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00071}{71}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+Finds the Key\+Info of a given key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Key\+Info} ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00152}{152}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -225,7 +365,11 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00081}{81}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+Initializes the keypad. 
+
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00162}{162}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -251,7 +395,15 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00106}{106}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+Waits for a key to be pressed. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily Key\+Info} ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00187}{187}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -280,7 +432,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00064}{64}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00017}{17}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
 
 \Hypertarget{keypad_8h_aa67f7a9fae59d327c0fef030151be800}\label{keypad_8h_aa67f7a9fae59d327c0fef030151be800} 
 \index{keypad.h@{keypad.h}!KEYPAD\_SPECIAL\_KEYS@{KEYPAD\_SPECIAL\_KEYS}}
@@ -290,15 +442,5 @@ Definition at line \mbox{\hyperlink{keypad_8c_source_l00064}{64}} of file \mbox{
 
 
 
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00005}{5}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
-
-\Hypertarget{keypad_8h_ab3f2ce14f970ec74192af9e2c69a3ef5}\label{keypad_8h_ab3f2ce14f970ec74192af9e2c69a3ef5} 
-\index{keypad.h@{keypad.h}!shiftIsOn@{shiftIsOn}}
-\index{shiftIsOn@{shiftIsOn}!keypad.h@{keypad.h}}
-\doxysubsubsection{\texorpdfstring{shiftIsOn}{shiftIsOn}}
-{\footnotesize\ttfamily bool shift\+Is\+On\hspace{0.3cm}{\ttfamily [extern]}}
-
-
-
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00062}{62}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00024}{24}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
 

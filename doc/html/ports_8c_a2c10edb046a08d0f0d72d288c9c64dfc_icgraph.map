@@ -1,8 +1,8 @@
 <map id="PortEInit" name="PortEInit">
 <area shape="rect" id="Node000001" title="Initiates Port E." alt="" coords="334,5,406,32"/>
-<area shape="rect" id="Node000002" href="$keypad_8c.html#aa6981f604fdfbec491e21e90507ec0de" title=" " alt="" coords="204,5,286,32"/>
+<area shape="rect" id="Node000002" href="$keypad_8c.html#aa6981f604fdfbec491e21e90507ec0de" title="Initializes the keypad." alt="" coords="204,5,286,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="319,21,287,21,287,16,319,16"/>
-<area shape="rect" id="Node000003" href="$program-logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="103,5,156,32"/>
+<area shape="rect" id="Node000003" href="$logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="103,5,156,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="189,21,157,21,157,16,189,16"/>
 <area shape="rect" id="Node000004" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>

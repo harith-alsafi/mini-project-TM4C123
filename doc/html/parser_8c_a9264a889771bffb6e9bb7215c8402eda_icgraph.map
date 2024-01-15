@@ -1,0 +1,5 @@
+<map id="ParserStop" name="ParserStop">
+<area shape="rect" id="Node000001" title="Stops the parser and clears all tokens." alt="" coords="147,5,233,32"/>
+<area shape="rect" id="Node000002" href="$parser_8c.html#a1715c490f05c2ddcb8d526684468f885" title="Calls." alt="" coords="5,5,99,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,21,99,21,99,16,131,16"/>
+</map>

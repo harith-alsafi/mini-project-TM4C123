@@ -1,0 +1,55 @@
+\doxysection{parser.\+h}
+\hypertarget{parser_8h_source}{}\label{parser_8h_source}\index{src/parser.h@{src/parser.h}}
+\mbox{\hyperlink{parser_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ EXPRESSION\_PARSER\_H\ }\textcolor{comment}{//\ If\ not\ defined}}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00002}\mbox{\hyperlink{parser_8h_a5eacb3f8d827ae299ee42b9e0e99fa13}{00002}}\ \textcolor{preprocessor}{\#define\ EXPRESSION\_PARSER\_H\ }\textcolor{comment}{//\ Define\ it}}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{keypad_8h}{keypad.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{helpers_8h}{helpers.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00007}\mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09f}{00007}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00008}\mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa5d594af14177857fc7661d03eda0baea}{00008}}\ \ \ \ \ \mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa5d594af14177857fc7661d03eda0baea}{SYNTAX\_ERROR}},}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00009}\mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94}{00009}}\ \ \ \ \ \mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94}{NO\_ERROR}},}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00010}\mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fae340a9bc4389c62faef96782ebbdfc43}{00010}}\ \ \ \ \ \mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fae340a9bc4389c62faef96782ebbdfc43}{INVALID\_MATH\_EXPRESSION}},}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00011}\mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa67f5d4d700401c98e49d7a68c35c9272}{00011}}\ \ \ \ \ \mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa67f5d4d700401c98e49d7a68c35c9272}{MULTIPLE\_DECIMAL\_POINT}},}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00012}\mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa1744590ec2b010dcd5774db413f87f56}{00012}}\ \ \ \ \ \mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa1744590ec2b010dcd5774db413f87f56}{MISSING\_NUMBER}},}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00013}\mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa2759d6055f211c659299d46ab05a7618}{00013}}\ \ \ \ \ \mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09fa2759d6055f211c659299d46ab05a7618}{MISSING\_BRACKET}},}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00014}00014\ \}\ \mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09f}{ParseError}};}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00016}\mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921}{00016}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00017}\mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a12a90dfe20486bbe3e075afcd19ef2d0}{00017}}\ \ \ \ \ \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a12a90dfe20486bbe3e075afcd19ef2d0}{NUMBER}},}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00018}\mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a6411d9d6073252e4d316493506bbb979}{00018}}\ \ \ \ \ \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a6411d9d6073252e4d316493506bbb979}{OPERATOR}},}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00019}\mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921af08a543d5a1549321682e12569d0fbd6}{00019}}\ \ \ \ \ \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921af08a543d5a1549321682e12569d0fbd6}{DECIMAL}},}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00020}\mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2}{00020}}\ \ \ \ \ \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2}{EOL}},}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00021}\mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a834f3e0777521aa22ca5b50e816970d9}{00021}}\ \ \ \ \ \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a834f3e0777521aa22ca5b50e816970d9}{PREVIOUS\_ANSWER}},}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00022}00022\ \}\ \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921}{TokenType}};}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00024}\mbox{\hyperlink{struct_token}{00024}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00025}\mbox{\hyperlink{struct_token_a4bb9bb3a9dcd67c9fe73b95fadea96e6}{00025}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_token_a4bb9bb3a9dcd67c9fe73b95fadea96e6}{value}};}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00026}\mbox{\hyperlink{struct_token_a67919af9f3a80dc0b28a0ab1e6d5bf8a}{00026}}\ \ \ \ \ \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921}{TokenType}}\ \mbox{\hyperlink{struct_token_a67919af9f3a80dc0b28a0ab1e6d5bf8a}{type}};}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00027}00027\ \}\ \mbox{\hyperlink{struct_token}{Token}};}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00029}\mbox{\hyperlink{struct_parser_info}{00029}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00030}\mbox{\hyperlink{struct_parser_info_abfc67a8c3f2b9d94335e175d14a67d9b}{00030}}\ \ \ \ \ \mbox{\hyperlink{struct_token}{Token}}\ \mbox{\hyperlink{struct_parser_info_abfc67a8c3f2b9d94335e175d14a67d9b}{token}};}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00031}\mbox{\hyperlink{struct_parser_info_aab78007585df1e7b289ba34601e58409}{00031}}\ \ \ \ \ \mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09f}{ParseError}}\ \mbox{\hyperlink{struct_parser_info_aab78007585df1e7b289ba34601e58409}{error}};}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00032}\mbox{\hyperlink{struct_parser_info_a4e78625adfd58d83ac140b5f237a2aef}{00032}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_parser_info_a4e78625adfd58d83ac140b5f237a2aef}{currentReuslt}};}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00033}00033\ \}\ \mbox{\hyperlink{struct_parser_info}{ParserInfo}};}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00035}\mbox{\hyperlink{parser_8h_a4f9090efc910ceda64fee9b0bc305428}{00035}}\ \mbox{\hyperlink{helpers_8h_ab9b5864bb7f364790006596ce97eb4ea}{DEFINE\_LIST\_PROTOTYPE}}(\mbox{\hyperlink{struct_token}{Token}});}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00042}00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{parser_8h_aa19b910e23df23ebe5f189f93c97afdd}{ParserPushToken}}(\mbox{\hyperlink{struct_token}{Token}}\ token);}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00048}00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{parser_8h_ae23a18474f4d84e20fdcc9869d67b363}{ParserInit}}();}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00056}00056\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{parser_8h_a1034bedc0b6b8bdb22f67b0e72a101d0}{ParserInitWith}}(\mbox{\hyperlink{struct_token}{Token}}\ items[],\ \textcolor{keywordtype}{int}\ length);}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00062}00062\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{parser_8h_a9264a889771bffb6e9bb7215c8402eda}{ParserStop}}();}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00068}00068\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{parser_8h_a1715c490f05c2ddcb8d526684468f885}{ParserReset}}();}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00075}00075\ \mbox{\hyperlink{struct_parser_info}{ParserInfo}}\ \mbox{\hyperlink{parser_8h_a19203c96ed6922e7092af10b63e6d298}{ParserCompile}}();}
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{parser_8h_source_l00077}00077\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

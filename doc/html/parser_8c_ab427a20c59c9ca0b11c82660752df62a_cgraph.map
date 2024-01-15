@@ -1,0 +1,21 @@
+<map id="ParseExpression" name="ParseExpression">
+<area shape="rect" id="Node000001" title="Parses arithematic expression." alt="" coords="5,130,126,156"/>
+<area shape="rect" id="Node000002" href="$parser_8c.html#a7f8aeab74e49ee2b275a7575e8d7b5e8" title="Eats the next token." alt="" coords="607,15,712,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,127,117,90,144,69,173,53,226,32,283,17,340,9,398,4,505,6,592,14,591,20,505,11,398,10,341,14,284,23,228,37,175,58,146,74,120,94,81,131"/>
+<area shape="rect" id="Node000003" href="$parser_8c.html#ab942fe3a63fed3190c76e55ebc76e5aa" title="Parses bracket expression." alt="" coords="454,142,555,168"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="126,148,282,155,439,157,439,163,282,161,126,154"/>
+<area shape="rect" id="Node000004" href="$parser_8c.html#a73bf16a41122c7751670f74fd415a36c" title="Peeks next token." alt="" coords="603,167,716,194"/>
+<area shape="poly" id="edge13_Node000001_Node000004" title=" " alt="" coords="126,153,210,168,317,183,435,192,555,191,587,188,587,193,555,196,435,197,316,188,209,173,126,158"/>
+<area shape="rect" id="Node000005" href="$parser_8c.html#a5656fb9995d62b96c08bfef4789ee4db" title="Parses term tokens." alt="" coords="174,67,258,94"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="99,127,167,98,169,103,101,132"/>
+<area shape="poly" id="edge4_Node000003_Node000001" title=" " alt="" coords="454,150,302,143,141,141,141,136,303,138,454,145"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="520,140,628,50,632,54,524,144"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="556,161,588,166,587,171,555,166"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="258,65,305,53,382,40,459,32,592,26,592,31,459,38,382,46,307,58,259,70"/>
+<area shape="poly" id="edge12_Node000005_Node000004" title=" " alt="" coords="242,92,334,137,393,161,455,178,522,185,587,185,587,190,522,191,454,183,391,166,331,142,240,97"/>
+<area shape="rect" id="Node000006" href="$parser_8c.html#a55bde1715e6e77addb80a046c96f059d" title="Parses only number tokens." alt="" coords="306,67,406,94"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="258,78,291,78,291,83,258,83"/>
+<area shape="poly" id="edge9_Node000006_Node000002" title=" " alt="" coords="406,69,591,37,592,43,407,75"/>
+<area shape="poly" id="edge10_Node000006_Node000003" title=" " alt="" coords="386,92,464,132,462,137,383,97"/>
+<area shape="poly" id="edge11_Node000006_Node000004" title=" " alt="" coords="408,87,478,104,556,127,622,157,619,162,554,132,477,109,406,92"/>
+</map>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="struct_token" kind="struct" language="C++" prot="public">
+    <compoundname>Token</compoundname>
+    <includes refid="parser_8h" local="yes">parser.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Token::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>Token::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.h" line="25" column="10" bodyfile="src/parser.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" compoundref="parser_8c" startline="58" endline="66">GetNextToken</referencedby>
+        <referencedby refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" compoundref="parser_8c" startline="123" endline="150">ParseBracket</referencedby>
+        <referencedby refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" compoundref="parser_8c" startline="152" endline="193">ParseExpression</referencedby>
+        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="236" endline="289">ParseNumber</referencedby>
+        <referencedby refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" compoundref="parser_8c" startline="195" endline="234">ParseTerm</referencedby>
+        <referencedby refid="parser_8c_1a73bf16a41122c7751670f74fd415a36c" compoundref="parser_8c" startline="68" endline="71">PeekNextToken</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_token_1a67919af9f3a80dc0b28a0ab1e6d5bf8a" prot="public" static="no" mutable="no">
+        <type><ref refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921" kindref="member">TokenType</ref></type>
+        <definition>TokenType Token::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>Token::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.h" line="26" column="15" bodyfile="src/parser.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="236" endline="289">ParseNumber</referencedby>
+        <referencedby refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" compoundref="parser_8c" startline="102" endline="121">ParserCompile</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Token</label>
+        <link refid="struct_token"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/parser.h" line="24" column="1" bodyfile="src/parser.h" bodystart="24" bodyend="27"/>
+    <listofallmembers>
+      <member refid="struct_token_1a67919af9f3a80dc0b28a0ab1e6d5bf8a" prot="public" virt="non-virtual"><scope>Token</scope><name>type</name></member>
+      <member refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" prot="public" virt="non-virtual"><scope>Token</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

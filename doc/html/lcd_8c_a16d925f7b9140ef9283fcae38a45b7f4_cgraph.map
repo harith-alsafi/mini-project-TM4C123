@@ -1,8 +1,8 @@
 <map id="LcdIncrementCursorCol" name="LcdIncrementCursorCol">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,162,83"/>
-<area shape="rect" id="Node000002" href="$lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title=" " alt="" coords="210,56,372,83"/>
+<area shape="rect" id="Node000001" title="Increments the cursor column." alt="" coords="5,56,162,83"/>
+<area shape="rect" id="Node000002" href="$lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="210,56,372,83"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,67,194,67,194,72,162,72"/>
-<area shape="rect" id="Node000003" href="$lcd_8c.html#a8de82b22879092baf8383713ecc708e9" title="Sets the cursor position." alt="" coords="420,56,520,83"/>
+<area shape="rect" id="Node000003" href="$lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="420,56,520,83"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="372,67,404,67,404,72,372,72"/>
 <area shape="rect" id="Node000004" href="$lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="568,56,669,83"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="521,67,553,67,553,72,521,72"/>

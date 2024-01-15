@@ -80,23 +80,38 @@ $(function() {
   <div class="headertitle"><div class="title">helpers.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for helpers.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="helpers_8h__incl.png" border="0" usemap="#asrc_2helpers_8h" alt=""/></div>
+<map name="asrc_2helpers_8h" id="asrc_2helpers_8h">
+<area shape="rect" title=" " alt="" coords="5,5,102,32"/>
+<area shape="rect" title=" " alt="" coords="22,80,85,107"/>
+<area shape="poly" title=" " alt="" coords="56,33,56,64,51,64,51,33"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="helpers_8h__dep__incl.png" border="0" usemap="#asrc_2helpers_8hdep" alt=""/></div>
 <map name="asrc_2helpers_8hdep" id="asrc_2helpers_8hdep">
-<area shape="rect" title=" " alt="" coords="91,5,187,32"/>
+<area shape="rect" title=" " alt="" coords="127,5,223,32"/>
 <area shape="rect" href="helpers_8c.html" title=" " alt="" coords="5,80,102,107"/>
-<area shape="poly" title=" " alt="" coords="114,44,70,82,66,78,111,40"/>
-<area shape="rect" href="lcd_8c.html" title=" " alt="" coords="90,155,161,181"/>
-<area shape="poly" title=" " alt="" coords="139,48,129,154,124,154,134,47"/>
-<area shape="rect" href="lcd_8h.html" title=" " alt="" coords="202,80,273,107"/>
-<area shape="poly" title=" " alt="" coords="170,39,222,77,219,82,167,44"/>
-<area shape="poly" title=" " alt="" coords="207,118,147,156,144,152,204,113"/>
-<area shape="rect" href="program-logic_8c.html" title=" " alt="" coords="185,155,317,181"/>
-<area shape="poly" title=" " alt="" coords="245,122,251,154,246,155,240,123"/>
-<area shape="rect" href="unit-test_8c.html" title=" " alt="" coords="342,155,443,181"/>
-<area shape="poly" title=" " alt="" coords="279,111,366,152,364,156,277,116"/>
+<area shape="poly" title=" " alt="" coords="142,43,76,82,73,77,139,38"/>
+<area shape="rect" href="lcd_8c.html" title=" " alt="" coords="51,155,123,181"/>
+<area shape="poly" title=" " alt="" coords="162,47,97,156,92,153,157,44"/>
+<area shape="rect" href="lcd_8h.html" title=" " alt="" coords="177,80,248,107"/>
+<area shape="poly" title=" " alt="" coords="191,45,208,78,203,81,186,47"/>
+<area shape="rect" href="parser_8h.html" title=" " alt="" coords="339,80,429,107"/>
+<area shape="poly" title=" " alt="" coords="226,35,348,77,347,82,225,40"/>
+<area shape="poly" title=" " alt="" coords="179,117,110,156,108,152,176,112"/>
+<area shape="rect" href="hardware-test_8c.html" title=" " alt="" coords="146,155,278,181"/>
+<area shape="poly" title=" " alt="" coords="215,122,215,154,210,154,210,122"/>
+<area shape="rect" href="logic_8c.html" title=" " alt="" coords="302,155,384,181"/>
+<area shape="poly" title=" " alt="" coords="250,112,321,152,319,156,247,117"/>
+<area shape="rect" href="parser_8c.html" title=" " alt="" coords="407,155,497,181"/>
+<area shape="poly" title=" " alt="" coords="408,116,442,152,439,156,405,120"/>
 </map>
 </div>
 </div>
@@ -112,6 +127,10 @@ Macros</h2></td></tr>
 <tr class="separator:ab811d8c6ff3a505312d3276590444289"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abad5e4191558987772c01a31c46b8997" id="r_abad5e4191558987772c01a31c46b8997"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helpers_8h.html#abad5e4191558987772c01a31c46b8997">ARRAY_LEN</a>(arr)&#160;&#160;&#160;(sizeof(arr) / sizeof(arr[0]))</td></tr>
 <tr class="separator:abad5e4191558987772c01a31c46b8997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b5864bb7f364790006596ce97eb4ea" id="r_ab9b5864bb7f364790006596ce97eb4ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helpers_8h.html#ab9b5864bb7f364790006596ce97eb4ea">DEFINE_LIST_PROTOTYPE</a>(Type)</td></tr>
+<tr class="separator:ab9b5864bb7f364790006596ce97eb4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81ac8e504dd921417ba754f655999f5" id="r_af81ac8e504dd921417ba754f655999f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helpers_8h.html#af81ac8e504dd921417ba754f655999f5">DEFINE_LIST_IMPLEMENTATION</a>(Type)</td></tr>
+<tr class="separator:af81ac8e504dd921417ba754f655999f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -120,9 +139,8 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad7f3f83d057abbbc219fb761d2058708" id="r_ad7f3f83d057abbbc219fb761d2058708"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helpers_8h.html#ad7f3f83d057abbbc219fb761d2058708">Strlen</a> (const char *str)</td></tr>
-<tr class="memdesc:ad7f3f83d057abbbc219fb761d2058708"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the length of a string.  <br /></td></tr>
-<tr class="separator:ad7f3f83d057abbbc219fb761d2058708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20ff7803fa076e4c75b49d77ed58b681" id="r_a20ff7803fa076e4c75b49d77ed58b681"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helpers_8h.html#a20ff7803fa076e4c75b49d77ed58b681">DEFINE_LIST_PROTOTYPE</a> (char)</td></tr>
+<tr class="separator:a20ff7803fa076e4c75b49d77ed58b681"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="abad5e4191558987772c01a31c46b8997" name="abad5e4191558987772c01a31c46b8997"></a>
@@ -141,7 +159,60 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00006">6</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00008">8</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
+
+</div>
+</div>
+<a id="af81ac8e504dd921417ba754f655999f5" name="af81ac8e504dd921417ba754f655999f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af81ac8e504dd921417ba754f655999f5">&#9670;&#160;</a></span>DEFINE_LIST_IMPLEMENTATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEFINE_LIST_IMPLEMENTATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Type</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00025">25</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
+
+</div>
+</div>
+<a id="ab9b5864bb7f364790006596ce97eb4ea" name="ab9b5864bb7f364790006596ce97eb4ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9b5864bb7f364790006596ce97eb4ea">&#9670;&#160;</a></span>DEFINE_LIST_PROTOTYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEFINE_LIST_PROTOTYPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Type</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">typedef</span> <span class="keyword">struct </span>{ \</div>
+<div class="line">        <span class="keywordtype">int</span> length; \</div>
+<div class="line">        <span class="keywordtype">int</span> currentIndex; \</div>
+<div class="line">        Type value[]; \</div>
+<div class="line">    } Type##List; \</div>
+<div class="line">    \</div>
+<div class="line">    Type##List* Type##ListCreate(); \</div>
+<div class="line">    \</div>
+<div class="line">    <span class="keywordtype">void</span> Type##ListDestroy(Type##List* list); \</div>
+<div class="line">    \</div>
+<div class="line">    <span class="keywordtype">int</span> Type##ListPushBack(Type##List** list, Type item) ;\</div>
+<div class="line">    \</div>
+<div class="line">    <span class="keywordtype">int</span> Type##ListAddRange(Type##List** list, Type items[], <span class="keywordtype">int</span> length);</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00010">10</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
 
 </div>
 </div>
@@ -173,7 +244,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00004">4</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00006">6</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
 
 </div>
 </div>
@@ -189,7 +260,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00005">5</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00007">7</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
 
 </div>
 </div>
@@ -206,60 +277,26 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00008">8</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00062">62</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ad7f3f83d057abbbc219fb761d2058708" name="ad7f3f83d057abbbc219fb761d2058708"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7f3f83d057abbbc219fb761d2058708">&#9670;&#160;</a></span>Strlen()</h2>
+<a id="a20ff7803fa076e4c75b49d77ed58b681" name="a20ff7803fa076e4c75b49d77ed58b681"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20ff7803fa076e4c75b49d77ed58b681">&#9670;&#160;</a></span>DEFINE_LIST_PROTOTYPE()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int Strlen </td>
+          <td class="memname">DEFINE_LIST_PROTOTYPE </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Gets the length of a string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">str</td><td>given string </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>unsigned int</code> Length of given string <br  />
- </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="helpers_8c_source.html#l00003">3</a> of file <a class="el" href="helpers_8c_source.html">helpers.c</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="helpers_8h_ad7f3f83d057abbbc219fb761d2058708_icgraph.png" border="0" usemap="#ahelpers_8h_ad7f3f83d057abbbc219fb761d2058708_icgraph" alt=""/></div>
-<map name="ahelpers_8h_ad7f3f83d057abbbc219fb761d2058708_icgraph" id="ahelpers_8h_ad7f3f83d057abbbc219fb761d2058708_icgraph">
-<area shape="rect" title="Gets the length of a string." alt="" coords="552,56,607,83"/>
-<area shape="rect" href="lcd_8c.html#a6ba64316f53c5a71031db621b3fe435e" title="Prints a string to the LCD." alt="" coords="400,56,504,83"/>
-<area shape="poly" title=" " alt="" coords="537,72,504,72,504,67,537,67"/>
-<area shape="rect" href="unit-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="237,5,348,32"/>
-<area shape="poly" title=" " alt="" coords="392,53,336,35,338,30,394,48"/>
-<area shape="rect" href="unit-test_8c.html#a02e71048dc3a569b41b257dec3b00cf0" title=" " alt="" coords="240,56,345,83"/>
-<area shape="poly" title=" " alt="" coords="385,72,346,72,346,67,385,67"/>
-<area shape="rect" href="unit-test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="233,107,352,133"/>
-<area shape="poly" title=" " alt="" coords="394,91,338,109,336,104,392,85"/>
-<area shape="rect" href="unit-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="114,5,174,32"/>
-<area shape="poly" title=" " alt="" coords="221,21,174,21,174,16,221,16"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="99,21,55,21,55,16,99,16"/>
-<area shape="rect" href="unit-test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="103,107,185,133"/>
-<area shape="poly" title=" " alt="" coords="218,123,185,123,185,117,218,117"/>
-</map>
-</div>
 
 </div>
 </div>

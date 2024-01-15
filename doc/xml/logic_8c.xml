@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="logic_8c" kind="file" language="C++">
+    <compoundname>logic.c</compoundname>
+    <includes refid="logic_8h" local="yes">logic.h</includes>
+    <includes refid="clock_8h" local="yes">clock.h</includes>
+    <includes refid="lcd_8h" local="yes">lcd.h</includes>
+    <includes refid="keypad_8h" local="yes">keypad.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>clock.h</label>
+        <link refid="clock_8h"/>
+      </node>
+      <node id="5">
+        <label>helpers.h</label>
+        <link refid="helpers_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>keypad.h</label>
+        <link refid="keypad_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lcd.h</label>
+        <link refid="lcd_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/logic.c</label>
+        <link refid="logic_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>logic.h</label>
+        <link refid="logic_8h"/>
+      </node>
+      <node id="7">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitAll</definition>
+        <argsstring>()</argsstring>
+        <name>InitAll</name>
+        <briefdescription>
+<para>Initializes all components. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logic.c" line="6" column="6" bodyfile="src/logic.c" bodystart="6" bodyend="10"/>
+        <references refid="clock_8c_1ab89b66fae1f889e7a033bccd757a12de" compoundref="clock_8c" startline="34" endline="37">ClockInit</references>
+        <references refid="keypad_8c_1aa6981f604fdfbec491e21e90507ec0de" compoundref="keypad_8c" startline="162" endline="165">KeypadInit</references>
+        <references refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" compoundref="lcd_8c" startline="133" endline="186">LcdInit</references>
+        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="7" endline="17">main</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="logic_8h" kindref="compound">logic.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="clock_8h" kindref="compound">clock.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lcd_8h" kindref="compound">lcd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="keypad_8h" kindref="compound">keypad.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" kindref="member">InitAll</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock_8c_1ab89b66fae1f889e7a033bccd757a12de" kindref="member">ClockInit</ref>();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="keypad_8c_1aa6981f604fdfbec491e21e90507ec0de" kindref="member">KeypadInit</ref>();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" kindref="member">LcdInit</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/logic.c"/>
+  </compounddef>
+</doxygen>

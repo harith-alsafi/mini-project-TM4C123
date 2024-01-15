@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="flash_8h" kind="file" language="C++">
+    <compoundname>flash.h</compoundname>
+    <includedby refid="flash_8c" local="yes">src/flash.c</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/flash.c</label>
+        <link refid="flash_8c"/>
+      </node>
+      <node id="1">
+        <label>src/flash.h</label>
+        <link refid="flash_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_flash_data" prot="public">FlashData</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="flash_8h_1a52984b41e45a13e9f7e687e1c4a07a2d" prot="public" static="no">
+        <name>FLASH_STORAGE_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/flash.h" line="2" column="9" bodyfile="src/flash.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="flash_8h_1a89c6418eced607811aec6c584f004215" prot="public" static="no">
+        <name>FLASH_FMC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/flash.h" line="4" column="9" bodyfile="src/flash.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="flash_8h_1ae9963cd83d3234139fea43d97385a234" prot="public" static="no">
+        <name>FLASH_FMD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/flash.h" line="5" column="9" bodyfile="src/flash.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="flash_8h_1acec37e62cb88a0d40af83c466d03151f" prot="public" static="no">
+        <name>FLASH_FMA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/flash.h" line="6" column="9" bodyfile="src/flash.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="flash_8h_1ab165861d9848019963be1f879fb38173" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FlashInit</definition>
+        <argsstring>()</argsstring>
+        <name>FlashInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/flash.h" line="13" column="6" bodyfile="src/flash.c" bodystart="3" bodyend="5" declfile="src/flash.h" declline="13" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="flash_8h_1ac9ce33144c1ff6b3253343e1f635bf73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FlashWrite</definition>
+        <argsstring>(FlashData data)</argsstring>
+        <name>FlashWrite</name>
+        <param>
+          <type><ref refid="struct_flash_data" kindref="compound">FlashData</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/flash.h" line="15" column="6" declfile="src/flash.h" declline="15" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="flash_8h_1a43a3c0a9d8a7396326169b74b694cce2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_flash_data" kindref="compound">FlashData</ref></type>
+        <definition>FlashData FlashRead</definition>
+        <argsstring>()</argsstring>
+        <name>FlashRead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/flash.h" line="17" column="11" declfile="src/flash.h" declline="17" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="flash_8h_1ac64d149b1fb48e07560205f5a454d7df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FlashErase</definition>
+        <argsstring>()</argsstring>
+        <name>FlashErase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/flash.h" line="19" column="6" declfile="src/flash.h" declline="19" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>FLASH_STORAGE_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>not<sp/>defined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="flash_8h_1a52984b41e45a13e9f7e687e1c4a07a2d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_STORAGE_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="flash_8h_1a89c6418eced607811aec6c584f004215" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_FMC<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="flash_8h_1ae9963cd83d3234139fea43d97385a234" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_FMD<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="flash_8h_1acec37e62cb88a0d40af83c466d03151f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLASH_FMA<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="struct_flash_data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9" refid="struct_flash_data_1a098d99b6a0f1ab85c7a16b5eb154f4d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_flash_data_1a098d99b6a0f1ab85c7a16b5eb154f4d6" kindref="member">passwordLength</ref>;</highlight></codeline>
+<codeline lineno="10" refid="struct_flash_data_1ab7969b05d81fd851e3238236b94bf1e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>password[];</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}<sp/><ref refid="struct_flash_data" kindref="compound">FlashData</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="flash_8h_1ab165861d9848019963be1f879fb38173" kindref="member">FlashInit</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="flash_8h_1ac9ce33144c1ff6b3253343e1f635bf73" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="flash_8h_1ac9ce33144c1ff6b3253343e1f635bf73" kindref="member">FlashWrite</ref>(<ref refid="struct_flash_data" kindref="compound">FlashData</ref><sp/>data);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="flash_8h_1a43a3c0a9d8a7396326169b74b694cce2" refkind="member"><highlight class="normal"><ref refid="struct_flash_data" kindref="compound">FlashData</ref><sp/><ref refid="flash_8h_1a43a3c0a9d8a7396326169b74b694cce2" kindref="member">FlashRead</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="flash_8h_1ac64d149b1fb48e07560205f5a454d7df" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="flash_8h_1ac64d149b1fb48e07560205f5a454d7df" kindref="member">FlashErase</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/flash.h"/>
+  </compounddef>
+</doxygen>

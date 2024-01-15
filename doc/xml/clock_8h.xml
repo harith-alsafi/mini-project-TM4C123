@@ -3,11 +3,11 @@
   <compounddef id="clock_8h" kind="file" language="C++">
     <compoundname>clock.h</compoundname>
     <includedby refid="clock_8c" local="yes">src/clock.c</includedby>
+    <includedby refid="hardware-test_8c" local="yes">src/hardware-test.c</includedby>
     <includedby refid="keypad_8c" local="yes">src/keypad.c</includedby>
     <includedby refid="lcd_8c" local="yes">src/lcd.c</includedby>
+    <includedby refid="logic_8c" local="yes">src/logic.c</includedby>
     <includedby refid="ports_8c" local="yes">src/ports.c</includedby>
-    <includedby refid="program-logic_8c" local="yes">src/program-logic.c</includedby>
-    <includedby refid="unit-test_8c" local="yes">src/unit-test.c</includedby>
     <invincdepgraph>
       <node id="2">
         <label>src/clock.c</label>
@@ -30,24 +30,24 @@
         </childnode>
       </node>
       <node id="3">
+        <label>src/hardware-test.c</label>
+        <link refid="hardware-test_8c"/>
+      </node>
+      <node id="4">
         <label>src/keypad.c</label>
         <link refid="keypad_8c"/>
       </node>
-      <node id="4">
+      <node id="5">
         <label>src/lcd.c</label>
         <link refid="lcd_8c"/>
       </node>
-      <node id="5">
-        <label>src/ports.c</label>
-        <link refid="ports_8c"/>
-      </node>
       <node id="6">
-        <label>src/program-logic.c</label>
-        <link refid="program-logic_8c"/>
+        <label>src/logic.c</label>
+        <link refid="logic_8c"/>
       </node>
       <node id="7">
-        <label>src/unit-test.c</label>
-        <link refid="unit-test_8c"/>
+        <label>src/ports.c</label>
+        <link refid="ports_8c"/>
       </node>
     </invincdepgraph>
     <sectiondef kind="define">
@@ -181,7 +181,7 @@
         <location file="src/clock.h" line="33" column="6" bodyfile="src/clock.c" bodystart="34" bodyend="37" declfile="src/clock.h" declline="33" declcolumn="6"/>
         <references refid="clock_8c_1a21cfe49b38d53efaf75df16d21ed882a" compoundref="clock_8c" startline="10" endline="32">PLLInit</references>
         <references refid="clock_8c_1a58cf193ae5c1f330e4868e32afb9445d" compoundref="clock_8c" startline="3" endline="8">SysTickInit</references>
-        <referencedby refid="program-logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="program-logic_8c" startline="6" endline="10">InitAll</referencedby>
+        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="6" endline="10">InitAll</referencedby>
       </memberdef>
       <memberdef kind="function" id="clock_8h_1a9b776ea9ad4388518694b3c099238a74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -249,7 +249,7 @@
         <location file="src/clock.h" line="47" column="6" bodyfile="src/clock.c" bodystart="47" bodyend="50" declfile="src/clock.h" declline="47" declcolumn="6"/>
         <references refid="playground_8c_1acd46d0cd2123cbf3f87498f9f3060403" compoundref="playground_8c" startline="126" endline="135">delay</references>
         <references refid="clock_8c_1a9b776ea9ad4388518694b3c099238a74" compoundref="clock_8c" startline="40" endline="45">SysTickWait</references>
-        <referencedby refid="lcd_8c_1a07e30a245315510382ca9d5e1b508de3" compoundref="lcd_8c" startline="14" endline="19">LcdPulseEn</referencedby>
+        <referencedby refid="lcd_8c_1a07e30a245315510382ca9d5e1b508de3" compoundref="lcd_8c" startline="31" endline="36">LcdPulseEn</referencedby>
       </memberdef>
       <memberdef kind="function" id="clock_8h_1a44cfb49005f69fe95c0ce5f30b9a660e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -281,15 +281,15 @@
         </inbodydescription>
         <location file="src/clock.h" line="54" column="6" bodyfile="src/clock.c" bodystart="52" bodyend="57" declfile="src/clock.h" declline="54" declcolumn="6"/>
         <references refid="clock_8c_1a9b776ea9ad4388518694b3c099238a74" compoundref="clock_8c" startline="40" endline="45">SysTickWait</references>
-        <referencedby refid="keypad_8c_1ab826b54bc6305f49d758d28173041ab7" compoundref="keypad_8c" startline="87" endline="104">KeypadGetChar</referencedby>
-        <referencedby refid="lcd_8c_1a27164e4aa24d46318deab3dd42658978" compoundref="lcd_8c" startline="43" endline="58">LcdCursorShift</referencedby>
-        <referencedby refid="lcd_8c_1aca04f0c025afbc86a0fedc553f3a8ba4" compoundref="lcd_8c" startline="75" endline="90">LcdDisplayControl</referencedby>
-        <referencedby refid="lcd_8c_1adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" compoundref="lcd_8c" startline="60" endline="73">LcdEntryModeSet</referencedby>
-        <referencedby refid="lcd_8c_1a9b451fe57dbdfef32faf1d96b9d7dce4" compoundref="lcd_8c" startline="98" endline="114">LcdFunctionSet</referencedby>
-        <referencedby refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" compoundref="lcd_8c" startline="116" endline="169">LcdInit</referencedby>
-        <referencedby refid="lcd_8c_1a37450f91c7ae032252ea94d7c92efde2" compoundref="lcd_8c" startline="215" endline="228">LcdPrintChar</referencedby>
-        <referencedby refid="lcd_8c_1aad68360b11370fa86fcd068004ef903f" compoundref="lcd_8c" startline="92" endline="96">LcdReturnHome</referencedby>
-        <referencedby refid="lcd_8c_1a588b278d12ac539ff4f7787f03176dcb" compoundref="lcd_8c" startline="171" endline="177">LcdSetDdram</referencedby>
+        <referencedby refid="keypad_8c_1ab826b54bc6305f49d758d28173041ab7" compoundref="keypad_8c" startline="168" endline="185">KeypadGetChar</referencedby>
+        <referencedby refid="lcd_8c_1a27164e4aa24d46318deab3dd42658978" compoundref="lcd_8c" startline="60" endline="75">LcdCursorShift</referencedby>
+        <referencedby refid="lcd_8c_1aca04f0c025afbc86a0fedc553f3a8ba4" compoundref="lcd_8c" startline="92" endline="107">LcdDisplayControl</referencedby>
+        <referencedby refid="lcd_8c_1adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" compoundref="lcd_8c" startline="77" endline="90">LcdEntryModeSet</referencedby>
+        <referencedby refid="lcd_8c_1a9b451fe57dbdfef32faf1d96b9d7dce4" compoundref="lcd_8c" startline="115" endline="131">LcdFunctionSet</referencedby>
+        <referencedby refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" compoundref="lcd_8c" startline="133" endline="186">LcdInit</referencedby>
+        <referencedby refid="lcd_8c_1a37450f91c7ae032252ea94d7c92efde2" compoundref="lcd_8c" startline="234" endline="247">LcdPrintChar</referencedby>
+        <referencedby refid="lcd_8c_1aad68360b11370fa86fcd068004ef903f" compoundref="lcd_8c" startline="109" endline="113">LcdReturnHome</referencedby>
+        <referencedby refid="lcd_8c_1a588b278d12ac539ff4f7787f03176dcb" compoundref="lcd_8c" startline="188" endline="194">LcdSetDdram</referencedby>
       </memberdef>
       <memberdef kind="function" id="clock_8h_1a2e760c634cc89519ad0956fc258eab46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -321,12 +321,12 @@
         </inbodydescription>
         <location file="src/clock.h" line="61" column="6" bodyfile="src/clock.c" bodystart="59" bodyend="64" declfile="src/clock.h" declline="61" declcolumn="6"/>
         <references refid="clock_8c_1a9b776ea9ad4388518694b3c099238a74" compoundref="clock_8c" startline="40" endline="45">SysTickWait</references>
-        <referencedby refid="unit-test_8c_1a600f033d6f6a144fbd69976eab19e3ee" compoundref="unit-test_8c" startline="7" endline="10">AfterEach</referencedby>
-        <referencedby refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" compoundref="lcd_8c" startline="31" endline="40">LcdClearDisplay</referencedby>
-        <referencedby refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" compoundref="lcd_8c" startline="116" endline="169">LcdInit</referencedby>
-        <referencedby refid="unit-test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" compoundref="unit-test_8c" startline="57" endline="65">TestKeypadLcd</referencedby>
-        <referencedby refid="unit-test_8c_1ac8b99cb76697b9b78d1b364cf118342a" compoundref="unit-test_8c" startline="12" endline="17">TestLcdClear</referencedby>
-        <referencedby refid="unit-test_8c_1a6af1303d2e04cb5837731ad113c413bc" compoundref="unit-test_8c" startline="30" endline="46">TestLcdMultiLine</referencedby>
+        <referencedby refid="hardware-test_8c_1a600f033d6f6a144fbd69976eab19e3ee" compoundref="hardware-test_8c" startline="7" endline="10">AfterEach</referencedby>
+        <referencedby refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" compoundref="lcd_8c" startline="48" endline="57">LcdClearDisplay</referencedby>
+        <referencedby refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" compoundref="lcd_8c" startline="133" endline="186">LcdInit</referencedby>
+        <referencedby refid="hardware-test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" compoundref="hardware-test_8c" startline="57" endline="65">TestKeypadLcd</referencedby>
+        <referencedby refid="hardware-test_8c_1ac8b99cb76697b9b78d1b364cf118342a" compoundref="hardware-test_8c" startline="12" endline="17">TestLcdClear</referencedby>
+        <referencedby refid="hardware-test_8c_1a6af1303d2e04cb5837731ad113c413bc" compoundref="hardware-test_8c" startline="30" endline="46">TestLcdMultiLine</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>

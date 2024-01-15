@@ -1,9 +1,9 @@
 <map id="src/lcd.h" name="src/lcd.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="131,5,202,32"/>
-<area shape="rect" id="Node000002" href="$lcd_8c.html" title=" " alt="" coords="5,80,77,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,42,64,82,62,77,130,38"/>
-<area shape="rect" id="Node000003" href="$program-logic_8c.html" title=" " alt="" coords="100,80,233,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,48,169,80,164,80,164,48"/>
-<area shape="rect" id="Node000004" href="$unit-test_8c.html" title=" " alt="" coords="257,80,358,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="206,37,284,77,282,82,203,42"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="161,5,233,32"/>
+<area shape="rect" id="Node000002" href="$hardware-test_8c.html" title=" " alt="" coords="5,80,138,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,42,95,82,92,77,161,38"/>
+<area shape="rect" id="Node000003" href="$lcd_8c.html" title=" " alt="" coords="161,80,233,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,48,200,80,194,80,194,48"/>
+<area shape="rect" id="Node000004" href="$logic_8c.html" title=" " alt="" coords="256,80,338,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="228,39,281,77,278,82,225,43"/>
 </map>

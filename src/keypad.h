@@ -18,39 +18,33 @@
 #define SHIFT_CHAR 0xEF
 
 #define KEYPAD_UNKOWN_KEY '\0'
-#define KEYPAD_MAX_SPECIAL_KEYS 10
-
+#define KEYPAD_MAX_SPECIAL_KEYS 11
 
 typedef enum {
     NORMAL_NUMBER = 0,
-    DECIMAL_POINT = 1,
-    EXPONENTIAL = 2,
-    POWER_TO = 3,
-    MULTIPLY = 4,
-    DIVIDE = 5,
-    PLUS = 6,
-    MINUS = 7,
+    OPERATION = 1,
+    DECIMAL_POINT = 2,
+    PAST_ANSWER = 3,
     SHIFT_ON = 8,
     SHIFT_OFF = 9,
     END_INPUT = 10,
     CLEAR_LAST = 11,
     CLEAR_ALL = 12,
-    LAST_ANSWER = 13,
-    OPEN_PARENTHESIS = 14,
-    CLOSE_PARENTHESIS = 15,
-    OPEN_SETTINGS = 16,
-    CURSOR_LEFT = 17,
-    CURSOR_RIGHT = 18,
-    CURSOR_UP = 19,
-    CURSOR_DOWN = 20,
+    OPEN_CHANGE_PASSWORD = 16,
+    GO_BACK = 21
 } SpecialKeyFunctions;
+
+typedef enum {
+    DISPLAY_STATUS,
+    DISPLAY_NONE,
+    DISPLAY_NORMAL
+} KeyDisplayType;
 
 typedef struct {
     char key;
-    bool displayOnInput;
+    KeyDisplayType normalDisplayType;
+    KeyDisplayType shiftDisplayType;
     bool isSpecial;
-    bool hasAnyDisplay;
-    bool hasStatusDisplay;
     char normalDisplay; // display character
     SpecialKeyFunctions normalFunction; // function when shift is off
     char shiftDisplay; // display character when shift is on
@@ -61,14 +55,49 @@ extern const KeyInfo KEYPAD_SPECIAL_KEYS[KEYPAD_MAX_SPECIAL_KEYS];
 
 extern const char KEYPAD_KEYS[KEYPAD_N][KEYPAD_N];
 
-extern bool shiftIsOn;
+/**
+ * @brief Creates a default key with default values
+ * 
+ * @param key 
+ * @return `KeyInfo`  <br>
+ */
+KeyInfo KeypadCreateDefaulteKey(char key);
 
-bool KeyIsValid(KeyInfo key);
-
-KeyInfo KeypadFindSpecialKey(char key);
-
+/**
+ * @brief Initializes the keypad 
+ * 
+ */
 void KeypadInit();
 
-KeyInfo KeypadWaitForInput();
+/**
+ * @brief Finds the KeyInfo of a given key
+ * 
+ * @param key 
+ * @return `KeyInfo`  <br>
+ */
+KeyInfo KeypadFindSpecialKey(char key);
+
+/**
+ * @brief Checks if a given key is valid
+ * 
+ * @param key 
+ * @return `true`  <br>
+ * @return `false`  <br>
+ */
+bool KeyIsValid(KeyInfo key);
+
+/**
+ * @brief Gets the character from the keypad
+ * 
+ * @return `char`  <br>
+ */
+char KeypadWaitForChar();
+
+/**
+ * @brief Waits for a key to be pressed
+ * 
+ * @return `KeyInfo`  <br>
+ */
+KeyInfo KeypadWaitForKeyInfo();
 
 #endif

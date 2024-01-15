@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="struct_parser_info" kind="struct" language="C++" prot="public">
+    <compoundname>ParserInfo</compoundname>
+    <includes refid="parser_8h" local="yes">parser.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_parser_info_1abfc67a8c3f2b9d94335e175d14a67d9b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_token" kindref="compound">Token</ref></type>
+        <definition>Token ParserInfo::token</definition>
+        <argsstring></argsstring>
+        <name>token</name>
+        <qualifiedname>ParserInfo::token</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.h" line="30" column="11" bodyfile="src/parser.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="236" endline="289">ParseNumber</referencedby>
+        <referencedby refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" compoundref="parser_8c" startline="102" endline="121">ParserCompile</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_parser_info_1aab78007585df1e7b289ba34601e58409" prot="public" static="no" mutable="no">
+        <type><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09f" kindref="member">ParseError</ref></type>
+        <definition>ParseError ParserInfo::error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <qualifiedname>ParserInfo::error</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.h" line="31" column="16" bodyfile="src/parser.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" compoundref="parser_8c" startline="123" endline="150">ParseBracket</referencedby>
+        <referencedby refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" compoundref="parser_8c" startline="152" endline="193">ParseExpression</referencedby>
+        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="236" endline="289">ParseNumber</referencedby>
+        <referencedby refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" compoundref="parser_8c" startline="102" endline="121">ParserCompile</referencedby>
+        <referencedby refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" compoundref="parser_8c" startline="195" endline="234">ParseTerm</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ParserInfo::currentReuslt</definition>
+        <argsstring></argsstring>
+        <name>currentReuslt</name>
+        <qualifiedname>ParserInfo::currentReuslt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/parser.h" line="32" column="12" bodyfile="src/parser.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" compoundref="parser_8c" startline="152" endline="193">ParseExpression</referencedby>
+        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="236" endline="289">ParseNumber</referencedby>
+        <referencedby refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" compoundref="parser_8c" startline="102" endline="121">ParserCompile</referencedby>
+        <referencedby refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" compoundref="parser_8c" startline="195" endline="234">ParseTerm</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ParserInfo</label>
+        <link refid="struct_parser_info"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+token</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Token</label>
+        <link refid="struct_token"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/parser.h" line="29" column="1" bodyfile="src/parser.h" bodystart="29" bodyend="33"/>
+    <listofallmembers>
+      <member refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" prot="public" virt="non-virtual"><scope>ParserInfo</scope><name>currentReuslt</name></member>
+      <member refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" prot="public" virt="non-virtual"><scope>ParserInfo</scope><name>error</name></member>
+      <member refid="struct_parser_info_1abfc67a8c3f2b9d94335e175d14a67d9b" prot="public" virt="non-virtual"><scope>ParserInfo</scope><name>token</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
