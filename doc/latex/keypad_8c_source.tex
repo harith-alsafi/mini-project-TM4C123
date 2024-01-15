@@ -7,200 +7,221 @@
 \DoxyCodeLine{\Hypertarget{keypad_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{clock_8h}{clock.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{keypad_8c_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}stdbool.h"{}}}
 \DoxyCodeLine{\Hypertarget{keypad_8c_source_l00005}00005\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00006}00006\ \textcolor{comment}{//********************************************}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00007}00007\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00013}00013\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8c_ab826b54bc6305f49d758d28173041ab7}{KeypadGetChar}}();}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00015}00015\ \textcolor{comment}{//********************************************}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00017}\mbox{\hyperlink{keypad_8c_a4c1fef8314018fe3ce44affffbe10a72}{00017}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8c_a4c1fef8314018fe3ce44affffbe10a72}{KEYPAD\_KEYS}}[\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\_N}}][\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\_N}}]\ =\ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00018}00018\ \ \ \ \ \{\textcolor{charliteral}{'1'},\ \textcolor{charliteral}{'2'},\ \textcolor{charliteral}{'3'},\ \textcolor{charliteral}{'A'}\},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00019}00019\ \ \ \ \ \{\textcolor{charliteral}{'4'},\ \textcolor{charliteral}{'5'},\ \textcolor{charliteral}{'6'},\ \textcolor{charliteral}{'B'}\},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00020}00020\ \ \ \ \ \{\textcolor{charliteral}{'7'},\ \textcolor{charliteral}{'8'},\ \textcolor{charliteral}{'9'},\ \textcolor{charliteral}{'C'}\},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00021}00021\ \ \ \ \ \{\textcolor{charliteral}{'*'},\ \textcolor{charliteral}{'0'},\ \textcolor{charliteral}{'\#'},\ \textcolor{charliteral}{'D'}\}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00022}00022\ \};}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00024}\mbox{\hyperlink{keypad_8c_aa67f7a9fae59d327c0fef030151be800}{00024}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_key_info}{KeyInfo}}\ \mbox{\hyperlink{keypad_8c_aa67f7a9fae59d327c0fef030151be800}{KEYPAD\_SPECIAL\_KEYS}}[\mbox{\hyperlink{keypad_8h_a9c722c424a8076bfe4ee4e9e2efa03e6}{KEYPAD\_MAX\_SPECIAL\_KEYS}}]\ =\ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00025}00025\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{struct_key_info_a129a412e80d39b7257b677028c1acec0}{key}}\ =\ \textcolor{charliteral}{'A'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ .displayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \textcolor{charliteral}{'+'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9}{PLUS}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{'x'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3}{MULTIPLY}}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00036}00036\ \ \ \ \ \},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00037}00037\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'B'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ .displayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \textcolor{charliteral}{'-\/'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225}{MINUS}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{'/'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da}{DIVIDE}}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00048}00048\ \ \ \ \ \},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00049}00049\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'C'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ .displayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \textcolor{charliteral}{'.'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2}{DECIMAL\_POINT}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{'E'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e}{EXPONENTIAL}}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00060}00060\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00061}00061\ \ \ \ \ \},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00062}00062\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'D'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ .displayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536a22bfa961006c196ebfbf6a2973c6d14f}{DISPLAY\_STATUS}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ false,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \mbox{\hyperlink{keypad_8h_ab5e2164bb5d04f144ceb4740b4154c79}{SHIFT\_CHAR}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f}{SHIFT\_ON}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{'\ '},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284}{SHIFT\_OFF}}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00073}00073\ \ \ \ \ \},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00074}00074\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'*'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00076}00076\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00077}00077\ \ \ \ \ \ \ \ \ .displayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae1804614a1f20fe485d37f0bcaf05906}{DISPLAY\_NONE}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ false,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \mbox{\hyperlink{keypad_8h_ae3dadba290780b744593a2bc45264e3f}{KEYPAD\_UNKOWN\_KEY}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00082}00082\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78}{END\_INPUT}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \mbox{\hyperlink{keypad_8h_ae3dadba290780b744593a2bc45264e3f}{KEYPAD\_UNKOWN\_KEY}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccafa80cde56ec760dde1bf913ee6d2ba50}{OPEN\_SETTINGS}}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00085}00085\ \ \ \ \ \},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00086}00086\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00087}00087\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'\#'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00088}00088\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00089}00089\ \ \ \ \ \ \ \ \ .displayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae1804614a1f20fe485d37f0bcaf05906}{DISPLAY\_NONE}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ false,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00093}00093\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \mbox{\hyperlink{keypad_8h_ae3dadba290780b744593a2bc45264e3f}{KEYPAD\_UNKOWN\_KEY}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00094}00094\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca2b52d5d24f0e5d58e6c88403eb9e19c8}{CLEAR\_LAST}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00095}00095\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \mbox{\hyperlink{keypad_8h_ae3dadba290780b744593a2bc45264e3f}{KEYPAD\_UNKOWN\_KEY}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00096}00096\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4c016f5ee446f379aa869bbccb6fb5c0}{CLEAR\_ALL}}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00097}00097\ \ \ \ \ \},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00098}00098\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00099}00099\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'0'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00100}00100\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00101}00101\ \ \ \ \ \ \ \ \ .displayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00105}00105\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \textcolor{charliteral}{'0'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00106}00106\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea}{NORMAL\_NUMBER}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00107}00107\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{'A'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00108}00108\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca3f243a70f3fda6cfeeada41e2407c650}{LAST\_ANSWER}}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00109}00109\ \ \ \ \ \},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00110}00110\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00111}00111\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'7'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00112}00112\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00113}00113\ \ \ \ \ \ \ \ \ .displayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00116}00116\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00117}00117\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \textcolor{charliteral}{'7'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00118}00118\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea}{NORMAL\_NUMBER}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00119}00119\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{'('},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00120}00120\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca2fa6ac17699d67a0b42605fd1269eb35}{OPEN\_PARENTHESIS}}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00121}00121\ \ \ \ \ \},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00122}00122\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00123}00123\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'5'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00124}00124\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00125}00125\ \ \ \ \ \ \ \ \ .displayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00129}00129\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \textcolor{charliteral}{'5'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00130}00130\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea}{NORMAL\_NUMBER}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00131}00131\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{'\string^'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca03ee4db3d1e17f8bbd6d9addebd8367b}{POWER\_TO}}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00133}00133\ \ \ \ \ \},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00134}00134\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00135}00135\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'9'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ .displayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00138}00138\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00141}00141\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \textcolor{charliteral}{'9'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00142}00142\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea}{NORMAL\_NUMBER}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00143}00143\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{')'},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00144}00144\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab90a7579c3517af01b71289905e4b84a}{CLOSE\_PARENTHESIS}}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00145}00145\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00146}00146\ \};}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00147}00147\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00148}\mbox{\hyperlink{keypad_8c_a9b1fc55f525fe49144daf21ffe978141}{00148}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{keypad_8c_a9b1fc55f525fe49144daf21ffe978141}{KeyIsValid}}(\mbox{\hyperlink{struct_key_info}{KeyInfo}}\ key)\{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00149}00149\ \ \ \ \ \textcolor{keywordflow}{return}\ key.\mbox{\hyperlink{struct_key_info_a129a412e80d39b7257b677028c1acec0}{key}}\ !=\ \mbox{\hyperlink{keypad_8h_ae3dadba290780b744593a2bc45264e3f}{KEYPAD\_UNKOWN\_KEY}};}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00150}00150\ \}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00151}00151\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00152}\mbox{\hyperlink{keypad_8c_a49ffa463b26cc47b7d9e3e2cda8d9168}{00152}}\ \mbox{\hyperlink{struct_key_info}{KeyInfo}}\ \mbox{\hyperlink{keypad_8c_a49ffa463b26cc47b7d9e3e2cda8d9168}{KeypadFindSpecialKey}}(\textcolor{keywordtype}{char}\ key)\{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00153}00153\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{keypad_8h_a9c722c424a8076bfe4ee4e9e2efa03e6}{KEYPAD\_MAX\_SPECIAL\_KEYS}};\ i++)\{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00154}00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{keypad_8c_aa67f7a9fae59d327c0fef030151be800}{KEYPAD\_SPECIAL\_KEYS}}[i].key\ ==\ key)\{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{keypad_8c_aa67f7a9fae59d327c0fef030151be800}{KEYPAD\_SPECIAL\_KEYS}}[i];}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00156}00156\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00157}00157\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00006}\mbox{\hyperlink{keypad_8c_a4c1fef8314018fe3ce44affffbe10a72}{00006}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8c_a4c1fef8314018fe3ce44affffbe10a72}{KEYPAD\_KEYS}}[\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\_N}}][\mbox{\hyperlink{keypad_8h_acc73b1692bde87ce0a891af4dece22fc}{KEYPAD\_N}}]\ =\ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00007}00007\ \ \ \ \ \{\textcolor{charliteral}{'1'},\ \textcolor{charliteral}{'2'},\ \textcolor{charliteral}{'3'},\ \textcolor{charliteral}{'A'}\},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00008}00008\ \ \ \ \ \{\textcolor{charliteral}{'4'},\ \textcolor{charliteral}{'5'},\ \textcolor{charliteral}{'6'},\ \textcolor{charliteral}{'B'}\},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00009}00009\ \ \ \ \ \{\textcolor{charliteral}{'7'},\ \textcolor{charliteral}{'8'},\ \textcolor{charliteral}{'9'},\ \textcolor{charliteral}{'C'}\},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00010}00010\ \ \ \ \ \{\textcolor{charliteral}{'*'},\ \textcolor{charliteral}{'0'},\ \textcolor{charliteral}{'\#'},\ \textcolor{charliteral}{'D'}\}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00011}00011\ \};}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00013}\mbox{\hyperlink{keypad_8c_aa67f7a9fae59d327c0fef030151be800}{00013}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_key_info}{KeyInfo}}\ \mbox{\hyperlink{keypad_8c_aa67f7a9fae59d327c0fef030151be800}{KEYPAD\_SPECIAL\_KEYS}}[\mbox{\hyperlink{keypad_8h_a9c722c424a8076bfe4ee4e9e2efa03e6}{KEYPAD\_MAX\_SPECIAL\_KEYS}}]\ =\ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00015}00015\ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{struct_key_info_a129a412e80d39b7257b677028c1acec0}{key}}\ =\ \textcolor{charliteral}{'A'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00016}00016\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00017}00017\ \ \ \ \ \ \ \ \ .normalDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00018}00018\ \ \ \ \ \ \ \ \ .shiftDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \textcolor{charliteral}{'+'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae6c7d41b255eff353251fbec6fe839e4}{OPERATION}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00024}00024\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{'x'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae6c7d41b255eff353251fbec6fe839e4}{OPERATION}}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00026}00026\ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'B'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ .normalDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ .shiftDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \textcolor{charliteral}{'-\/'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00036}00036\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae6c7d41b255eff353251fbec6fe839e4}{OPERATION}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00037}00037\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{'/'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae6c7d41b255eff353251fbec6fe839e4}{OPERATION}}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00039}00039\ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00040}00040\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'C'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ .normalDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ .shiftDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \textcolor{charliteral}{'.'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2}{DECIMAL\_POINT}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{'E'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae6c7d41b255eff353251fbec6fe839e4}{OPERATION}}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00053}00053\ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'D'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ .normalDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536a22bfa961006c196ebfbf6a2973c6d14f}{DISPLAY\_STATUS}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ .shiftDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536a22bfa961006c196ebfbf6a2973c6d14f}{DISPLAY\_STATUS}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ false,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \mbox{\hyperlink{keypad_8h_ab5e2164bb5d04f144ceb4740b4154c79}{SHIFT\_CHAR}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f}{SHIFT\_ON}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{'\ '},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284}{SHIFT\_OFF}}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00066}00066\ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00067}00067\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00068}00068\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'*'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ .normalDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae1804614a1f20fe485d37f0bcaf05906}{DISPLAY\_NONE}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ .shiftDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae1804614a1f20fe485d37f0bcaf05906}{DISPLAY\_NONE}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ false,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \mbox{\hyperlink{keypad_8h_ae3dadba290780b744593a2bc45264e3f}{KEYPAD\_UNKOWN\_KEY}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00076}00076\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78}{END\_INPUT}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00077}00077\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \mbox{\hyperlink{keypad_8h_ae3dadba290780b744593a2bc45264e3f}{KEYPAD\_UNKOWN\_KEY}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccad5f6514e55924781f389d01f25c66544}{OPEN\_CHANGE\_PASSWORD}}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00079}00079\ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00080}00080\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'\#'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00082}00082\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ .normalDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae1804614a1f20fe485d37f0bcaf05906}{DISPLAY\_NONE}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ .shiftDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae1804614a1f20fe485d37f0bcaf05906}{DISPLAY\_NONE}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ false,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00088}00088\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \mbox{\hyperlink{keypad_8h_ae3dadba290780b744593a2bc45264e3f}{KEYPAD\_UNKOWN\_KEY}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00089}00089\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca2b52d5d24f0e5d58e6c88403eb9e19c8}{CLEAR\_LAST}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00090}00090\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \mbox{\hyperlink{keypad_8h_ae3dadba290780b744593a2bc45264e3f}{KEYPAD\_UNKOWN\_KEY}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00091}00091\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca4c016f5ee446f379aa869bbccb6fb5c0}{CLEAR\_ALL}}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00092}00092\ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00093}00093\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00094}00094\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'0'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00095}00095\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00096}00096\ \ \ \ \ \ \ \ \ .normalDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ .shiftDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00101}00101\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \textcolor{charliteral}{'0'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00102}00102\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea}{NORMAL\_NUMBER}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00103}00103\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{'A'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00104}00104\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca0aca0e26e06e90994203d5554a857e46}{PAST\_ANSWER}}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00105}00105\ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00106}00106\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00107}00107\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'7'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00108}00108\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00109}00109\ \ \ \ \ \ \ \ \ .normalDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00110}00110\ \ \ \ \ \ \ \ \ .shiftDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00114}00114\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \textcolor{charliteral}{'7'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00115}00115\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea}{NORMAL\_NUMBER}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00116}00116\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{'('},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00117}00117\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae6c7d41b255eff353251fbec6fe839e4}{OPERATION}}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00118}00118\ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00119}00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00120}00120\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'5'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00121}00121\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00122}00122\ \ \ \ \ \ \ \ \ .normalDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00123}00123\ \ \ \ \ \ \ \ \ .shiftDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \textcolor{charliteral}{'5'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea}{NORMAL\_NUMBER}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00129}00129\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{'\string^'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00130}00130\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae6c7d41b255eff353251fbec6fe839e4}{OPERATION}}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00131}00131\ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'9'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00134}00134\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00135}00135\ \ \ \ \ \ \ \ \ .normalDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ .shiftDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00138}00138\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00140}00140\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \textcolor{charliteral}{'9'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00141}00141\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea}{NORMAL\_NUMBER}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00142}00142\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ \textcolor{charliteral}{')'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00143}00143\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccae6c7d41b255eff353251fbec6fe839e4}{OPERATION}}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00144}00144\ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00146}00146\ \ \ \ \ \ \ \ \ .key\ =\ \textcolor{charliteral}{'1'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00147}00147\ \ \ \ \ \ \ \ \ .isSpecial\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00148}00148\ \ \ \ \ \ \ \ \ .normalDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00149}00149\ \ \ \ \ \ \ \ \ .shiftDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae1804614a1f20fe485d37f0bcaf05906}{DISPLAY\_NONE}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .isSpecial\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00151}00151\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasDisplay\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00152}00152\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .hasShiftFunction\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00153}00153\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ \textcolor{charliteral}{'1'},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00154}00154\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea}{NORMAL\_NUMBER}},}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00155}00155\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1ccacd3fe2276479c7ce7d5026cb11590895}{GO\_BACK}}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00156}00156\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00157}00157\ \};}
 \DoxyCodeLine{\Hypertarget{keypad_8c_source_l00158}00158\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00159}00159\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{struct_key_info}{KeyInfo}})\{.\mbox{\hyperlink{struct_key_info_a129a412e80d39b7257b677028c1acec0}{key}}\ =\ \mbox{\hyperlink{keypad_8h_ae3dadba290780b744593a2bc45264e3f}{KEYPAD\_UNKOWN\_KEY}}\};}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00160}00160\ \}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00161}00161\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00162}\mbox{\hyperlink{keypad_8c_aa6981f604fdfbec491e21e90507ec0de}{00162}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{keypad_8c_aa6981f604fdfbec491e21e90507ec0de}{KeypadInit}}()\{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00163}00163\ \ \ \ \ \mbox{\hyperlink{ports_8c_a21efc6fa081c0b9c85eafe9d7455b9b6}{PortDInit}}();}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00164}00164\ \ \ \ \ \mbox{\hyperlink{ports_8c_a2c10edb046a08d0f0d72d288c9c64dfc}{PortEInit}}();}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00165}00165\ \}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00166}00166\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00167}00167\ \textcolor{comment}{//\ Function\ to\ read\ the\ pressed\ key's\ position}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00168}\mbox{\hyperlink{keypad_8c_ab826b54bc6305f49d758d28173041ab7}{00168}}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8c_ab826b54bc6305f49d758d28173041ab7}{KeypadGetChar}}()\ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00169}00169\ \ \ \ \ \textcolor{keywordflow}{while}\ (1)\ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00170}00170\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ col\ =\ 0;\ col\ <\ 4;\ col++)\ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ the\ current\ column\ to\ HIGH}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{keypad_8h_a573e77c14d269b0b758af193d102d0b0}{KEYPAD\_COL\_PIN}}\ =\ (1\ <<\ col);}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{clock_8c_a44cfb49005f69fe95c0ce5f30b9a660e}{DelayMicro}}(2);}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00174}00174\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ each\ row}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ row\ =\ 0;\ row\ <\ 4;\ row++)\ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{keypad_8h_ae41b948637d7857bd49ae3a6433fe975}{KEYPAD\_ROW\_PIN}}\ \&\ (1\ <<\ row))\ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{keypad_8c_a4c1fef8314018fe3ce44affffbe10a72}{KEYPAD\_KEYS}}[row][col];}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00181}00181\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{keypad_8h_a573e77c14d269b0b758af193d102d0b0}{KEYPAD\_COL\_PIN}}\ =\ 0x00;}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00183}00183\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00184}00184\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00185}00185\ \}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00186}00186\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00187}\mbox{\hyperlink{keypad_8c_a63a4bc1c3105f40dc85fe16092790f83}{00187}}\ \mbox{\hyperlink{struct_key_info}{KeyInfo}}\ \mbox{\hyperlink{keypad_8c_a63a4bc1c3105f40dc85fe16092790f83}{KeypadWaitForInput}}()\{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00188}00188\ \ \ \ \ \textcolor{keywordtype}{char}\ key\ =\ \mbox{\hyperlink{keypad_8c_ab826b54bc6305f49d758d28173041ab7}{KeypadGetChar}}();}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00189}00189\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00190}00190\ \ \ \ \ \mbox{\hyperlink{struct_key_info}{KeyInfo}}\ specialKey\ =\ \mbox{\hyperlink{keypad_8c_a49ffa463b26cc47b7d9e3e2cda8d9168}{KeypadFindSpecialKey}}(key);}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00191}00191\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00192}00192\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{keypad_8c_a9b1fc55f525fe49144daf21ffe978141}{KeyIsValid}}(specialKey))\{\ \textcolor{comment}{//\ pressed\ key\ is\ a\ special\ key}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00193}00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ specialKey;}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00194}00194\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00195}00195\ }
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00196}00196\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{struct_key_info}{KeyInfo}})\ \{}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00197}00197\ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{struct_key_info_aad793e7d0881eafc1dd46649bb2780be}{isSpecial}}\ =\ \textcolor{keyword}{false},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00198}00198\ \ \ \ \ \ \ \ \ .displayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00199}00199\ \ \ \ \ \ \ \ \ .key\ =\ key,}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00200}00200\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ key,}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00201}00201\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea}{NORMAL\_NUMBER}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00202}00202\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ key,}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00203}00203\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea}{NORMAL\_NUMBER}},}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00204}00204\ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00205}00205\ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00159}\mbox{\hyperlink{keypad_8c_a9b1fc55f525fe49144daf21ffe978141}{00159}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{keypad_8c_a9b1fc55f525fe49144daf21ffe978141}{KeyIsValid}}(\mbox{\hyperlink{struct_key_info}{KeyInfo}}\ key)\{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00160}00160\ \ \ \ \ \textcolor{keywordflow}{return}\ key.\mbox{\hyperlink{struct_key_info_a129a412e80d39b7257b677028c1acec0}{key}}\ !=\ \mbox{\hyperlink{keypad_8h_ae3dadba290780b744593a2bc45264e3f}{KEYPAD\_UNKOWN\_KEY}};}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00161}00161\ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00163}\mbox{\hyperlink{keypad_8c_a49ffa463b26cc47b7d9e3e2cda8d9168}{00163}}\ \mbox{\hyperlink{struct_key_info}{KeyInfo}}\ \mbox{\hyperlink{keypad_8c_a49ffa463b26cc47b7d9e3e2cda8d9168}{KeypadFindSpecialKey}}(\textcolor{keywordtype}{char}\ key)\{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00164}00164\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{keypad_8h_a9c722c424a8076bfe4ee4e9e2efa03e6}{KEYPAD\_MAX\_SPECIAL\_KEYS}};\ i++)\{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00165}00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{keypad_8c_aa67f7a9fae59d327c0fef030151be800}{KEYPAD\_SPECIAL\_KEYS}}[i].key\ ==\ key)\{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{keypad_8c_aa67f7a9fae59d327c0fef030151be800}{KEYPAD\_SPECIAL\_KEYS}}[i];}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00167}00167\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00168}00168\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00170}00170\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{struct_key_info}{KeyInfo}})\{.\mbox{\hyperlink{struct_key_info_a129a412e80d39b7257b677028c1acec0}{key}}\ =\ \mbox{\hyperlink{keypad_8h_ae3dadba290780b744593a2bc45264e3f}{KEYPAD\_UNKOWN\_KEY}}\};}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00171}00171\ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00173}\mbox{\hyperlink{keypad_8c_aa6981f604fdfbec491e21e90507ec0de}{00173}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{keypad_8c_aa6981f604fdfbec491e21e90507ec0de}{KeypadInit}}()\{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00174}00174\ \ \ \ \ \mbox{\hyperlink{ports_8c_a21efc6fa081c0b9c85eafe9d7455b9b6}{PortDInit}}();}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00175}00175\ \ \ \ \ \mbox{\hyperlink{ports_8c_a2c10edb046a08d0f0d72d288c9c64dfc}{PortEInit}}();}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00176}00176\ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00178}00178\ \textcolor{comment}{//\ Function\ to\ read\ the\ pressed\ key's\ position}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00179}\mbox{\hyperlink{keypad_8c_a35a69618b097b5f64e918962cd47c824}{00179}}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keypad_8c_a35a69618b097b5f64e918962cd47c824}{KeypadWaitForChar}}()\ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00180}00180\ \ \ \ \ \textcolor{keywordflow}{while}\ (1)\ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00181}00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ col\ =\ 0;\ col\ <\ 4;\ col++)\ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ the\ current\ column\ to\ HIGH}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{keypad_8h_a573e77c14d269b0b758af193d102d0b0}{KEYPAD\_COL\_PIN}}\ =\ (1\ <<\ col);}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{clock_8c_a44cfb49005f69fe95c0ce5f30b9a660e}{DelayMicro}}(2);}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ each\ row}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ row\ =\ 0;\ row\ <\ 4;\ row++)\ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{keypad_8h_ae41b948637d7857bd49ae3a6433fe975}{KEYPAD\_ROW\_PIN}}\ \&\ (1\ <<\ row))\ \{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{keypad_8c_a4c1fef8314018fe3ce44affffbe10a72}{KEYPAD\_KEYS}}[row][col];}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{keypad_8h_a573e77c14d269b0b758af193d102d0b0}{KEYPAD\_COL\_PIN}}\ =\ 0x00;}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00194}00194\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00195}00195\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00196}00196\ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00198}\mbox{\hyperlink{keypad_8c_a4dc4195ee24a2240646ab8e3f70eaacb}{00198}}\ \mbox{\hyperlink{struct_key_info}{KeyInfo}}\ \mbox{\hyperlink{keypad_8c_a4dc4195ee24a2240646ab8e3f70eaacb}{KeypadCreateDefaulteKey}}(\textcolor{keywordtype}{char}\ key)\{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00199}00199\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{struct_key_info}{KeyInfo}})\ \{\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00200}00200\ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{struct_key_info_aad793e7d0881eafc1dd46649bb2780be}{isSpecial}}\ =\ \textcolor{keyword}{false},\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00201}00201\ \ \ \ \ \ \ \ \ .normalDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00202}00202\ \ \ \ \ \ \ \ \ .shiftDisplayType\ =\ \mbox{\hyperlink{keypad_8h_a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce}{DISPLAY\_NORMAL}},\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00203}00203\ \ \ \ \ \ \ \ \ .key\ =\ key,\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00204}00204\ \ \ \ \ \ \ \ \ .normalDisplay\ =\ key,\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00205}00205\ \ \ \ \ \ \ \ \ .normalFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea}{NORMAL\_NUMBER}},\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00206}00206\ \ \ \ \ \ \ \ \ .shiftDisplay\ =\ key,\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00207}00207\ \ \ \ \ \ \ \ \ .shiftFunction\ =\ \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea}{NORMAL\_NUMBER}},\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00208}00208\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00209}00209\ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00211}\mbox{\hyperlink{keypad_8c_a62a8113965dd111b6f91d33efcabd77d}{00211}}\ \mbox{\hyperlink{struct_key_info}{KeyInfo}}\ \mbox{\hyperlink{keypad_8c_a62a8113965dd111b6f91d33efcabd77d}{KeypadWaitForKeyInfo}}()\{}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00212}00212\ \ \ \ \ \textcolor{keywordtype}{char}\ key\ =\ \mbox{\hyperlink{keypad_8c_a35a69618b097b5f64e918962cd47c824}{KeypadWaitForChar}}();}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00213}00213\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00214}00214\ \ \ \ \ \mbox{\hyperlink{struct_key_info}{KeyInfo}}\ specialKey\ =\ \mbox{\hyperlink{keypad_8c_a49ffa463b26cc47b7d9e3e2cda8d9168}{KeypadFindSpecialKey}}(key);}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00215}00215\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00216}00216\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{keypad_8c_a9b1fc55f525fe49144daf21ffe978141}{KeyIsValid}}(specialKey))\{\ \textcolor{comment}{//\ pressed\ key\ is\ a\ special\ key}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00217}00217\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ specialKey;}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00218}00218\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00219}00219\ }
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00220}00220\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{keypad_8c_a4dc4195ee24a2240646ab8e3f70eaacb}{KeypadCreateDefaulteKey}}(key);}
+\DoxyCodeLine{\Hypertarget{keypad_8c_source_l00221}00221\ \}}
 
 \end{DoxyCode}

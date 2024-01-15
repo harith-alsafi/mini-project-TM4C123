@@ -2,7 +2,26 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="logic_8h" kind="file" language="C++">
     <compoundname>logic.h</compoundname>
+    <includes refid="keypad_8h" local="yes">keypad.h</includes>
     <includedby refid="logic_8c" local="yes">src/logic.c</includedby>
+    <includedby refid="main_8c" local="yes">src/main.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>keypad.h</label>
+        <link refid="keypad_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/logic.h</label>
+        <link refid="logic_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+    </incdepgraph>
     <invincdepgraph>
       <node id="2">
         <label>src/logic.c</label>
@@ -13,11 +32,17 @@
         <link refid="logic_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/main.c</label>
+        <link refid="main_8c"/>
       </node>
     </invincdepgraph>
     <sectiondef kind="define">
-      <memberdef kind="define" id="logic_8h_1a4aedb44dda7e02ceb062810c557f8994" prot="public" static="no">
-        <name>PROGRAM_LOGIC_H</name>
+      <memberdef kind="define" id="logic_8h_1a3fbee8963ee4080987476fc7d6e86f22" prot="public" static="no">
+        <name>LOGIC_H</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -25,6 +50,40 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/logic.h" line="2" column="9" bodyfile="src/logic.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ProgramMode</name>
+        <enumvalue id="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b" prot="public">
+          <name>LOGIN_MODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba6c62120cfab9902751a82edb16219a51" prot="public">
+          <name>CALCULATOR_MODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba210a1a97be633a55c65a4e9e982bb51b" prot="public">
+          <name>CHANGE_PASSWORD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logic.h" line="5" column="1" bodyfile="src/logic.h" bodystart="5" bodyend="9"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -40,11 +99,64 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/logic.h" line="8" column="6" bodyfile="src/logic.c" bodystart="6" bodyend="10" declfile="src/logic.h" declline="8" declcolumn="6"/>
+        <location file="src/logic.h" line="15" column="6" bodyfile="src/logic.c" bodystart="74" bodyend="90" declfile="src/logic.h" declline="15" declcolumn="6"/>
         <references refid="clock_8c_1ab89b66fae1f889e7a033bccd757a12de" compoundref="clock_8c" startline="34" endline="37">ClockInit</references>
-        <references refid="keypad_8c_1aa6981f604fdfbec491e21e90507ec0de" compoundref="keypad_8c" startline="162" endline="165">KeypadInit</references>
-        <references refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" compoundref="lcd_8c" startline="133" endline="186">LcdInit</references>
-        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="7" endline="17">main</referencedby>
+        <references refid="logic_8c_1a0accd14d87e65913db8e6a59e42b6c7d" compoundref="logic_8c" startline="67" endline="70">flashData</references>
+        <references refid="flash_8c_1a36a8e2cfd36cad487fc631562b25db83" compoundref="flash_8c" startline="31" endline="35">FlashDataIsRead</references>
+        <references refid="flash_8c_1ab165861d9848019963be1f879fb38173" compoundref="flash_8c" startline="7" endline="14">FlashInit</references>
+        <references refid="flash_8c_1a43a3c0a9d8a7396326169b74b694cce2" compoundref="flash_8c" startline="56" endline="65">FlashRead</references>
+        <references refid="flash_8c_1a028e942d1bdb9290368370559c83eab0" compoundref="flash_8c" startline="37" endline="54">FlashWrite</references>
+        <references refid="logic_8c_1a68ed8a7ac589618f57942872aff22070" compoundref="logic_8c" startline="66">inputData</references>
+        <references refid="logic_8c_1a7a07acedc029e72784867cbe9ac10543" compoundref="logic_8c" startline="63">isInit</references>
+        <references refid="keypad_8c_1aa6981f604fdfbec491e21e90507ec0de" compoundref="keypad_8c" startline="173" endline="176">KeypadInit</references>
+        <references refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" compoundref="lcd_8c" startline="129" endline="182">LcdInit</references>
+        <references refid="parser_8c_1ae23a18474f4d84e20fdcc9869d67b363" compoundref="parser_8c" startline="94" endline="99">ParserInit</references>
+        <references refid="logic_8c_1ab5517a73749b3e781a73a808ba33d533" compoundref="logic_8c" startline="65">tokenData</references>
+        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="11" endline="66">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="logic_8h_1a41a8f29e3704245cd53e2e11e03ec5f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RunMain</definition>
+        <argsstring>()</argsstring>
+        <name>RunMain</name>
+        <briefdescription>
+<para>Runs the main loop. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logic.h" line="21" column="6" bodyfile="src/logic.c" bodystart="374" bodyend="441" declfile="src/logic.h" declline="21" declcolumn="6"/>
+        <references refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba6c62120cfab9902751a82edb16219a51" compoundref="logic_8h" startline="7">CALCULATOR_MODE</references>
+        <references refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba210a1a97be633a55c65a4e9e982bb51b" compoundref="logic_8h" startline="8">CHANGE_PASSWORD</references>
+        <references refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca4c016f5ee446f379aa869bbccb6fb5c0" compoundref="keypad_8h" startline="32">CLEAR_ALL</references>
+        <references refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca2b52d5d24f0e5d58e6c88403eb9e19c8" compoundref="keypad_8h" startline="31">CLEAR_LAST</references>
+        <references refid="logic_8c_1af6da8071dabf2ebd36d99de9f70e5dce" compoundref="logic_8c" startline="306" endline="318">ClearAllInput</references>
+        <references refid="logic_8c_1a5d70b1e35da3781dc0e409643147cdd8" compoundref="logic_8c" startline="320" endline="330">ClearLastInput</references>
+        <references refid="clock_8c_1a2e760c634cc89519ad0956fc258eab46" compoundref="clock_8c" startline="59" endline="64">DelayMilli</references>
+        <references refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce" compoundref="keypad_8h" startline="40">DISPLAY_NORMAL</references>
+        <references refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78" compoundref="keypad_8h" startline="30">END_INPUT</references>
+        <references refid="logic_8c_1afa64d8084403040ad7f7f8045e075736" compoundref="logic_8c" startline="302" endline="304">GetSpecialFunction</references>
+        <references refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccacd3fe2276479c7ce7d5026cb11590895" compoundref="keypad_8h" startline="34">GO_BACK</references>
+        <references refid="logic_8c_1af7d68b5d19dab801e6460d295564d2bb" compoundref="logic_8c" startline="61">isShiftOn</references>
+        <references refid="keypad_8c_1a4dc4195ee24a2240646ab8e3f70eaacb" compoundref="keypad_8c" startline="198" endline="209">KeypadCreateDefaulteKey</references>
+        <references refid="keypad_8c_1a62a8113965dd111b6f91d33efcabd77d" compoundref="keypad_8c" startline="211" endline="221">KeypadWaitForKeyInfo</references>
+        <references refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" compoundref="lcd_8c" startline="44" endline="53">LcdClearDisplay</references>
+        <references refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b" compoundref="logic_8h" startline="6">LOGIN_MODE</references>
+        <references refid="logic_8c_1a3288701d9bc3bb0210a19c3f9042515f" compoundref="logic_8c" startline="64">mode</references>
+        <references refid="struct_key_info_1a0ee8bda4acee901e95e3050ff19c7c04" compoundref="keypad_8h" startline="45">KeyInfo::normalDisplayType</references>
+        <references refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccad5f6514e55924781f389d01f25c66544" compoundref="keypad_8h" startline="33">OPEN_CHANGE_PASSWORD</references>
+        <references refid="logic_8c_1ae7c44d3fc64010d1e217bea610c8536c" compoundref="logic_8c" startline="288" endline="292">RefreshDisplay</references>
+        <references refid="logic_8c_1a5f7f7893415d86a5a8348472dbdd0541" compoundref="logic_8c" startline="123" endline="149">RunCalculator</references>
+        <references refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="226" endline="247">RunChangePassword</references>
+        <references refid="logic_8c_1a15058a20857a8a4d38fa4ab72109a9e2" compoundref="logic_8c" startline="198" endline="224">RunLogin</references>
+        <references refid="logic_8c_1ada037e06af8abdcc0382445b22466477" compoundref="logic_8c" startline="94" endline="121">RunUserInput</references>
+        <references refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284" compoundref="keypad_8h" startline="29">SHIFT_OFF</references>
+        <references refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f" compoundref="keypad_8h" startline="28">SHIFT_ON</references>
+        <references refid="struct_key_info_1a1756a989545ac064e9a6a2c09e29446a" compoundref="keypad_8h" startline="46">KeyInfo::shiftDisplayType</references>
+        <references refid="logic_8c_1a5a3be8027400af0c949033c8c86a4360" compoundref="logic_8c" startline="253" endline="286">UpdateRows</references>
+        <references refid="logic_8c_1ac4085c7ad6b8fe21141bebd8cfe7053a" compoundref="logic_8c" startline="249" endline="251">UpdateShift</references>
+        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="11" endline="66">main</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -52,12 +164,21 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>PROGRAM_LOGIC_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>not<sp/>defined</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2" refid="logic_8h_1a4aedb44dda7e02ceb062810c557f8994" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROGRAM_LOGIC_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>it</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logic_8h_1a8468ead6b76c5ff5eb578a79fd591aa8" kindref="member">InitAll</ref>();</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>LOGIC_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>not<sp/>defined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="logic_8h_1a3fbee8963ee4080987476fc7d6e86f22" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOGIC_H<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="keypad_8h" kindref="compound">keypad.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="6" refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b" kindref="member">LOGIN_MODE</ref>,</highlight></codeline>
+<codeline lineno="7" refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba6c62120cfab9902751a82edb16219a51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba6c62120cfab9902751a82edb16219a51" kindref="member">CALCULATOR_MODE</ref>,</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba210a1a97be633a55c65a4e9e982bb51b" kindref="member">CHANGE_PASSWORD</ref></highlight></codeline>
+<codeline lineno="9" refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba210a1a97be633a55c65a4e9e982bb51b" refkind="member"><highlight class="normal">}<sp/><ref refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085b" kindref="member">ProgramMode</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logic_8h_1a8468ead6b76c5ff5eb578a79fd591aa8" kindref="member">InitAll</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logic_8h_1a41a8f29e3704245cd53e2e11e03ec5f7" kindref="member">RunMain</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/logic.h"/>
   </compounddef>

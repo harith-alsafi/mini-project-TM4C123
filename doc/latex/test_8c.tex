@@ -1,222 +1,187 @@
-\doxysection{test.\+c File Reference}
-\hypertarget{test_8c}{}\label{test_8c}\index{test.c@{test.c}}
-\doxysubsubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \mbox{\hyperlink{test_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}{GPIO\+\_\+\+PORTF\+\_\+\+DATA\+\_\+R}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x400253\+FC))
-\item 
-\#define \mbox{\hyperlink{test_8c_a4af807e7c41e4e51a09ab6598280d09b}{GPIO\+\_\+\+PORTF\+\_\+\+DIR\+\_\+R}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x40025400))
-\item 
-\#define \mbox{\hyperlink{test_8c_a8f9c5b1caa2f2206e46d6e55033ba1df}{GPIO\+\_\+\+PORTF\+\_\+\+AFSEL\+\_\+R}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x40025420))
-\item 
-\#define \mbox{\hyperlink{test_8c_ad61970840fbdec3b021a6cd4b176ceb5}{GPIO\+\_\+\+PORTF\+\_\+\+PUR\+\_\+R}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x40025510))
-\item 
-\#define \mbox{\hyperlink{test_8c_ace684566ac3dee1c9230633165118a61}{GPIO\+\_\+\+PORTF\+\_\+\+DEN\+\_\+R}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4002551C))
-\item 
-\#define \mbox{\hyperlink{test_8c_a905788cdfb00eea4f716d3ed280f1e20}{GPIO\+\_\+\+PORTF\+\_\+\+LOCK\+\_\+R}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x40025520))
-\item 
-\#define \mbox{\hyperlink{test_8c_a5b37d58feb20c8629db10975b31b6dbc}{GPIO\+\_\+\+PORTF\+\_\+\+CR\+\_\+R}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x40025524))
-\item 
-\#define \mbox{\hyperlink{test_8c_a792408dc154a55fd9e0ad13cca3db4c3}{GPIO\+\_\+\+PORTF\+\_\+\+AMSEL\+\_\+R}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x40025528))
-\item 
-\#define \mbox{\hyperlink{test_8c_abdf740d2017978b00975ad06bf38f1eb}{GPIO\+\_\+\+PORTF\+\_\+\+PCTL\+\_\+R}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4002552C))
-\item 
-\#define \mbox{\hyperlink{test_8c_a2fedfceccf18bd54a499e73d1b76e506}{SYSCTL\+\_\+\+RCGC2\+\_\+R}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x400\+FE108))
-\end{DoxyCompactItemize}
+\doxysection{src/test.c File Reference}
+\hypertarget{test_8c}{}\label{test_8c}\index{src/test.c@{src/test.c}}
+{\ttfamily \#include "{}test.\+h"{}}\newline
+{\ttfamily \#include "{}clock.\+h"{}}\newline
+{\ttfamily \#include "{}lcd.\+h"{}}\newline
+{\ttfamily \#include "{}keypad.\+h"{}}\newline
+{\ttfamily \#include "{}stdbool.\+h"{}}\newline
+{\ttfamily \#include "{}flash.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for test.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c__incl}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{test_8c_ae19ef8807dc64129635da5b3b781588a}{Port\+F\+\_\+\+Init}} (void)
+void \mbox{\hyperlink{test_8c_a600f033d6f6a144fbd69976eab19e3ee}{After\+Each}} ()
 \item 
-void \mbox{\hyperlink{test_8c_a7a3a2d8021a1d89fd58583318c4ae560}{Flash\+SOS}} (void)
+void \mbox{\hyperlink{test_8c_ac8b99cb76697b9b78d1b364cf118342a}{Test\+Lcd\+Clear}} ()
 \item 
-void \mbox{\hyperlink{test_8c_acd46d0cd2123cbf3f87498f9f3060403}{delay}} (unsigned long halfsecs)
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Variables}
-\begin{DoxyCompactItemize}
+void \mbox{\hyperlink{test_8c_a02e71048dc3a569b41b257dec3b00cf0}{Test\+Lcd\+Cursor}} ()
 \item 
-unsigned long \mbox{\hyperlink{test_8c_aaffcb829b17f75f5e57ae7d810e18def}{SW1}}
+void \mbox{\hyperlink{test_8c_a6af1303d2e04cb5837731ad113c413bc}{Test\+Lcd\+Multi\+Line}} ()
 \item 
-unsigned long \mbox{\hyperlink{test_8c_a17bc02cea6c2d2bb1322a102153fca04}{SW2}}
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{test_8c_aec3ab11b7409fd19efa26bed15100a3f}{Test\+Lcd\+All}} ()
+\item 
+void \mbox{\hyperlink{test_8c_a8ff2f0e3039fa4096f5c57d610c9281d}{Test\+Keypad\+Lcd}} ()
+\item 
+void \mbox{\hyperlink{test_8c_ac96c14effaeda91dcf6f15a034a428e9}{Test\+Flash}} ()
+\item 
+void \mbox{\hyperlink{test_8c_a681847cb468289c483c1f110b251f91c}{Run\+All\+Tests}} ()
+\begin{DoxyCompactList}\small\item\em Runs all unit test functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Macro Definition Documentation}
-\Hypertarget{test_8c_a8f9c5b1caa2f2206e46d6e55033ba1df}\label{test_8c_a8f9c5b1caa2f2206e46d6e55033ba1df} 
-\index{test.c@{test.c}!GPIO\_PORTF\_AFSEL\_R@{GPIO\_PORTF\_AFSEL\_R}}
-\index{GPIO\_PORTF\_AFSEL\_R@{GPIO\_PORTF\_AFSEL\_R}!test.c@{test.c}}
-\doxysubsubsection{\texorpdfstring{GPIO\_PORTF\_AFSEL\_R}{GPIO\_PORTF\_AFSEL\_R}}
-{\footnotesize\ttfamily \#define GPIO\+\_\+\+PORTF\+\_\+\+AFSEL\+\_\+R~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x40025420))}
-
-
-
-Definition at line \mbox{\hyperlink{test_8c_source_l00023}{23}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
-
-\Hypertarget{test_8c_a792408dc154a55fd9e0ad13cca3db4c3}\label{test_8c_a792408dc154a55fd9e0ad13cca3db4c3} 
-\index{test.c@{test.c}!GPIO\_PORTF\_AMSEL\_R@{GPIO\_PORTF\_AMSEL\_R}}
-\index{GPIO\_PORTF\_AMSEL\_R@{GPIO\_PORTF\_AMSEL\_R}!test.c@{test.c}}
-\doxysubsubsection{\texorpdfstring{GPIO\_PORTF\_AMSEL\_R}{GPIO\_PORTF\_AMSEL\_R}}
-{\footnotesize\ttfamily \#define GPIO\+\_\+\+PORTF\+\_\+\+AMSEL\+\_\+R~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x40025528))}
+\doxysubsection{Function Documentation}
+\Hypertarget{test_8c_a600f033d6f6a144fbd69976eab19e3ee}\label{test_8c_a600f033d6f6a144fbd69976eab19e3ee} 
+\index{test.c@{test.c}!AfterEach@{AfterEach}}
+\index{AfterEach@{AfterEach}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{AfterEach()}{AfterEach()}}
+{\footnotesize\ttfamily void After\+Each (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{test_8c_source_l00028}{28}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
+Definition at line \mbox{\hyperlink{test_8c_source_l00009}{9}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
 
-\Hypertarget{test_8c_a5b37d58feb20c8629db10975b31b6dbc}\label{test_8c_a5b37d58feb20c8629db10975b31b6dbc} 
-\index{test.c@{test.c}!GPIO\_PORTF\_CR\_R@{GPIO\_PORTF\_CR\_R}}
-\index{GPIO\_PORTF\_CR\_R@{GPIO\_PORTF\_CR\_R}!test.c@{test.c}}
-\doxysubsubsection{\texorpdfstring{GPIO\_PORTF\_CR\_R}{GPIO\_PORTF\_CR\_R}}
-{\footnotesize\ttfamily \#define GPIO\+\_\+\+PORTF\+\_\+\+CR\+\_\+R~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x40025524))}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_a600f033d6f6a144fbd69976eab19e3ee_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test_8c_a681847cb468289c483c1f110b251f91c}\label{test_8c_a681847cb468289c483c1f110b251f91c} 
+\index{test.c@{test.c}!RunAllTests@{RunAllTests}}
+\index{RunAllTests@{RunAllTests}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{RunAllTests()}{RunAllTests()}}
+{\footnotesize\ttfamily void Run\+All\+Tests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{test_8c_source_l00027}{27}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
+Runs all unit test functions. 
 
-\Hypertarget{test_8c_a6faf63c7d3a41fd7aa67cb3f49112d58}\label{test_8c_a6faf63c7d3a41fd7aa67cb3f49112d58} 
-\index{test.c@{test.c}!GPIO\_PORTF\_DATA\_R@{GPIO\_PORTF\_DATA\_R}}
-\index{GPIO\_PORTF\_DATA\_R@{GPIO\_PORTF\_DATA\_R}!test.c@{test.c}}
-\doxysubsubsection{\texorpdfstring{GPIO\_PORTF\_DATA\_R}{GPIO\_PORTF\_DATA\_R}}
-{\footnotesize\ttfamily \#define GPIO\+\_\+\+PORTF\+\_\+\+DATA\+\_\+R~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x400253\+FC))}
+
+
+Definition at line \mbox{\hyperlink{test_8c_source_l00083}{83}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+\Hypertarget{test_8c_ac96c14effaeda91dcf6f15a034a428e9}\label{test_8c_ac96c14effaeda91dcf6f15a034a428e9} 
+\index{test.c@{test.c}!TestFlash@{TestFlash}}
+\index{TestFlash@{TestFlash}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{TestFlash()}{TestFlash()}}
+{\footnotesize\ttfamily void Test\+Flash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test_8c_source_l00069}{69}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_ac96c14effaeda91dcf6f15a034a428e9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test_8c_a8ff2f0e3039fa4096f5c57d610c9281d}\label{test_8c_a8ff2f0e3039fa4096f5c57d610c9281d} 
+\index{test.c@{test.c}!TestKeypadLcd@{TestKeypadLcd}}
+\index{TestKeypadLcd@{TestKeypadLcd}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{TestKeypadLcd()}{TestKeypadLcd()}}
+{\footnotesize\ttfamily void Test\+Keypad\+Lcd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test_8c_source_l00059}{59}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_a8ff2f0e3039fa4096f5c57d610c9281d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test_8c_aec3ab11b7409fd19efa26bed15100a3f}\label{test_8c_aec3ab11b7409fd19efa26bed15100a3f} 
+\index{test.c@{test.c}!TestLcdAll@{TestLcdAll}}
+\index{TestLcdAll@{TestLcdAll}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{TestLcdAll()}{TestLcdAll()}}
+{\footnotesize\ttfamily void Test\+Lcd\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test_8c_source_l00050}{50}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_aec3ab11b7409fd19efa26bed15100a3f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test_8c_ac8b99cb76697b9b78d1b364cf118342a}\label{test_8c_ac8b99cb76697b9b78d1b364cf118342a} 
+\index{test.c@{test.c}!TestLcdClear@{TestLcdClear}}
+\index{TestLcdClear@{TestLcdClear}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{TestLcdClear()}{TestLcdClear()}}
+{\footnotesize\ttfamily void Test\+Lcd\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test_8c_source_l00014}{14}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_ac8b99cb76697b9b78d1b364cf118342a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test_8c_a02e71048dc3a569b41b257dec3b00cf0}\label{test_8c_a02e71048dc3a569b41b257dec3b00cf0} 
+\index{test.c@{test.c}!TestLcdCursor@{TestLcdCursor}}
+\index{TestLcdCursor@{TestLcdCursor}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{TestLcdCursor()}{TestLcdCursor()}}
+{\footnotesize\ttfamily void Test\+Lcd\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Definition at line \mbox{\hyperlink{test_8c_source_l00021}{21}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
 
-\Hypertarget{test_8c_ace684566ac3dee1c9230633165118a61}\label{test_8c_ace684566ac3dee1c9230633165118a61} 
-\index{test.c@{test.c}!GPIO\_PORTF\_DEN\_R@{GPIO\_PORTF\_DEN\_R}}
-\index{GPIO\_PORTF\_DEN\_R@{GPIO\_PORTF\_DEN\_R}!test.c@{test.c}}
-\doxysubsubsection{\texorpdfstring{GPIO\_PORTF\_DEN\_R}{GPIO\_PORTF\_DEN\_R}}
-{\footnotesize\ttfamily \#define GPIO\+\_\+\+PORTF\+\_\+\+DEN\+\_\+R~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4002551C))}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_a02e71048dc3a569b41b257dec3b00cf0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test_8c_a6af1303d2e04cb5837731ad113c413bc}\label{test_8c_a6af1303d2e04cb5837731ad113c413bc} 
+\index{test.c@{test.c}!TestLcdMultiLine@{TestLcdMultiLine}}
+\index{TestLcdMultiLine@{TestLcdMultiLine}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{TestLcdMultiLine()}{TestLcdMultiLine()}}
+{\footnotesize\ttfamily void Test\+Lcd\+Multi\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{test_8c_source_l00025}{25}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
+Definition at line \mbox{\hyperlink{test_8c_source_l00032}{32}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
 
-\Hypertarget{test_8c_a4af807e7c41e4e51a09ab6598280d09b}\label{test_8c_a4af807e7c41e4e51a09ab6598280d09b} 
-\index{test.c@{test.c}!GPIO\_PORTF\_DIR\_R@{GPIO\_PORTF\_DIR\_R}}
-\index{GPIO\_PORTF\_DIR\_R@{GPIO\_PORTF\_DIR\_R}!test.c@{test.c}}
-\doxysubsubsection{\texorpdfstring{GPIO\_PORTF\_DIR\_R}{GPIO\_PORTF\_DIR\_R}}
-{\footnotesize\ttfamily \#define GPIO\+\_\+\+PORTF\+\_\+\+DIR\+\_\+R~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x40025400))}
-
-
-
-Definition at line \mbox{\hyperlink{test_8c_source_l00022}{22}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
-
-\Hypertarget{test_8c_a905788cdfb00eea4f716d3ed280f1e20}\label{test_8c_a905788cdfb00eea4f716d3ed280f1e20} 
-\index{test.c@{test.c}!GPIO\_PORTF\_LOCK\_R@{GPIO\_PORTF\_LOCK\_R}}
-\index{GPIO\_PORTF\_LOCK\_R@{GPIO\_PORTF\_LOCK\_R}!test.c@{test.c}}
-\doxysubsubsection{\texorpdfstring{GPIO\_PORTF\_LOCK\_R}{GPIO\_PORTF\_LOCK\_R}}
-{\footnotesize\ttfamily \#define GPIO\+\_\+\+PORTF\+\_\+\+LOCK\+\_\+R~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x40025520))}
-
-
-
-Definition at line \mbox{\hyperlink{test_8c_source_l00026}{26}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
-
-\Hypertarget{test_8c_abdf740d2017978b00975ad06bf38f1eb}\label{test_8c_abdf740d2017978b00975ad06bf38f1eb} 
-\index{test.c@{test.c}!GPIO\_PORTF\_PCTL\_R@{GPIO\_PORTF\_PCTL\_R}}
-\index{GPIO\_PORTF\_PCTL\_R@{GPIO\_PORTF\_PCTL\_R}!test.c@{test.c}}
-\doxysubsubsection{\texorpdfstring{GPIO\_PORTF\_PCTL\_R}{GPIO\_PORTF\_PCTL\_R}}
-{\footnotesize\ttfamily \#define GPIO\+\_\+\+PORTF\+\_\+\+PCTL\+\_\+R~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x4002552C))}
-
-
-
-Definition at line \mbox{\hyperlink{test_8c_source_l00029}{29}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
-
-\Hypertarget{test_8c_ad61970840fbdec3b021a6cd4b176ceb5}\label{test_8c_ad61970840fbdec3b021a6cd4b176ceb5} 
-\index{test.c@{test.c}!GPIO\_PORTF\_PUR\_R@{GPIO\_PORTF\_PUR\_R}}
-\index{GPIO\_PORTF\_PUR\_R@{GPIO\_PORTF\_PUR\_R}!test.c@{test.c}}
-\doxysubsubsection{\texorpdfstring{GPIO\_PORTF\_PUR\_R}{GPIO\_PORTF\_PUR\_R}}
-{\footnotesize\ttfamily \#define GPIO\+\_\+\+PORTF\+\_\+\+PUR\+\_\+R~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x40025510))}
-
-
-
-Definition at line \mbox{\hyperlink{test_8c_source_l00024}{24}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
-
-\Hypertarget{test_8c_a2fedfceccf18bd54a499e73d1b76e506}\label{test_8c_a2fedfceccf18bd54a499e73d1b76e506} 
-\index{test.c@{test.c}!SYSCTL\_RCGC2\_R@{SYSCTL\_RCGC2\_R}}
-\index{SYSCTL\_RCGC2\_R@{SYSCTL\_RCGC2\_R}!test.c@{test.c}}
-\doxysubsubsection{\texorpdfstring{SYSCTL\_RCGC2\_R}{SYSCTL\_RCGC2\_R}}
-{\footnotesize\ttfamily \#define SYSCTL\+\_\+\+RCGC2\+\_\+R~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x400\+FE108))}
-
-
-
-Definition at line \mbox{\hyperlink{test_8c_source_l00030}{30}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
-
-
-
-\doxysubsection{Function Documentation}
-\Hypertarget{test_8c_acd46d0cd2123cbf3f87498f9f3060403}\label{test_8c_acd46d0cd2123cbf3f87498f9f3060403} 
-\index{test.c@{test.c}!delay@{delay}}
-\index{delay@{delay}!test.c@{test.c}}
-\doxysubsubsection{\texorpdfstring{delay()}{delay()}}
-{\footnotesize\ttfamily void delay (\begin{DoxyParamCaption}\item[{unsigned long}]{halfsecs }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{test_8c_source_l00126}{126}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_a6af1303d2e04cb5837731ad113c413bc_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{test_8c_acd46d0cd2123cbf3f87498f9f3060403_icgraph}
+\includegraphics[width=267pt]{test_8c_a6af1303d2e04cb5837731ad113c413bc_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{test_8c_a7a3a2d8021a1d89fd58583318c4ae560}\label{test_8c_a7a3a2d8021a1d89fd58583318c4ae560} 
-\index{test.c@{test.c}!FlashSOS@{FlashSOS}}
-\index{FlashSOS@{FlashSOS}!test.c@{test.c}}
-\doxysubsubsection{\texorpdfstring{FlashSOS()}{FlashSOS()}}
-{\footnotesize\ttfamily void Flash\+SOS (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{test_8c_source_l00094}{94}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=216pt]{test_8c_a7a3a2d8021a1d89fd58583318c4ae560_cgraph}
-\end{center}
-\end{figure}
-\Hypertarget{test_8c_ae19ef8807dc64129635da5b3b781588a}\label{test_8c_ae19ef8807dc64129635da5b3b781588a} 
-\index{test.c@{test.c}!PortF\_Init@{PortF\_Init}}
-\index{PortF\_Init@{PortF\_Init}!test.c@{test.c}}
-\doxysubsubsection{\texorpdfstring{PortF\_Init()}{PortF\_Init()}}
-{\footnotesize\ttfamily void Port\+F\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{test_8c_source_l00064}{64}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=213pt]{test_8c_ae19ef8807dc64129635da5b3b781588a_cgraph}
-\end{center}
-\end{figure}
-
-
-\doxysubsection{Variable Documentation}
-\Hypertarget{test_8c_aaffcb829b17f75f5e57ae7d810e18def}\label{test_8c_aaffcb829b17f75f5e57ae7d810e18def} 
-\index{test.c@{test.c}!SW1@{SW1}}
-\index{SW1@{SW1}!test.c@{test.c}}
-\doxysubsubsection{\texorpdfstring{SW1}{SW1}}
-{\footnotesize\ttfamily unsigned long SW1}
-
-
-
-Definition at line \mbox{\hyperlink{test_8c_source_l00034}{34}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
-
-\Hypertarget{test_8c_a17bc02cea6c2d2bb1322a102153fca04}\label{test_8c_a17bc02cea6c2d2bb1322a102153fca04} 
-\index{test.c@{test.c}!SW2@{SW2}}
-\index{SW2@{SW2}!test.c@{test.c}}
-\doxysubsubsection{\texorpdfstring{SW2}{SW2}}
-{\footnotesize\ttfamily unsigned long SW2}
-
-
-
-Definition at line \mbox{\hyperlink{test_8c_source_l00035}{35}} of file \mbox{\hyperlink{test_8c_source}{test.\+c}}.
-

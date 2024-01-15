@@ -106,9 +106,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="parser_8h__dep__incl.png" border="0" usemap="#asrc_2parser_8hdep" alt=""/></div>
 <map name="asrc_2parser_8hdep" id="asrc_2parser_8hdep">
-<area shape="rect" title=" " alt="" coords="5,5,96,32"/>
-<area shape="rect" href="parser_8c.html" title=" " alt="" coords="5,80,96,107"/>
-<area shape="poly" title=" " alt="" coords="53,48,53,80,48,80,48,48"/>
+<area shape="rect" title=" " alt="" coords="106,5,197,32"/>
+<area shape="rect" href="logic_8c.html" title=" " alt="" coords="5,80,87,107"/>
+<area shape="poly" title=" " alt="" coords="122,43,66,82,63,77,119,39"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="110,80,193,107"/>
+<area shape="poly" title=" " alt="" coords="154,48,154,80,149,80,149,48"/>
+<area shape="rect" href="parser_8c.html" title=" " alt="" coords="217,80,307,107"/>
+<area shape="poly" title=" " alt="" coords="184,38,244,77,241,82,182,43"/>
 </map>
 </div>
 </div>
@@ -125,6 +129,8 @@ Data Structures</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a5eacb3f8d827ae299ee42b9e0e99fa13" id="r_a5eacb3f8d827ae299ee42b9e0e99fa13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8h.html#a5eacb3f8d827ae299ee42b9e0e99fa13">EXPRESSION_PARSER_H</a></td></tr>
 <tr class="separator:a5eacb3f8d827ae299ee42b9e0e99fa13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1677b86fc9699414925aeca46baac9a" id="r_aa1677b86fc9699414925aeca46baac9a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8h.html#aa1677b86fc9699414925aeca46baac9a">SCB_CPACR</a>&#160;&#160;&#160;(*((volatile unsigned long *)0xE000ED88))</td></tr>
+<tr class="separator:aa1677b86fc9699414925aeca46baac9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -141,9 +147,9 @@ Enumerations</h2></td></tr>
 <tr class="separator:a0392053e13b5f2cbbfdbdd316d86e09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa520fbf142ba1e7e659590c07da31921" id="r_aa520fbf142ba1e7e659590c07da31921"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8h.html#aa520fbf142ba1e7e659590c07da31921">TokenType</a> { <br />
 &#160;&#160;<a class="el" href="parser_8h.html#aa520fbf142ba1e7e659590c07da31921a12a90dfe20486bbe3e075afcd19ef2d0">NUMBER</a>
+, <a class="el" href="parser_8h.html#aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2">EOL</a>
 , <a class="el" href="parser_8h.html#aa520fbf142ba1e7e659590c07da31921a6411d9d6073252e4d316493506bbb979">OPERATOR</a>
 , <a class="el" href="parser_8h.html#aa520fbf142ba1e7e659590c07da31921af08a543d5a1549321682e12569d0fbd6">DECIMAL</a>
-, <a class="el" href="parser_8h.html#aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2">EOL</a>
 , <br />
 &#160;&#160;<a class="el" href="parser_8h.html#aa520fbf142ba1e7e659590c07da31921a834f3e0777521aa22ca5b50e816970d9">PREVIOUS_ANSWER</a>
 <br />
@@ -157,6 +163,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aa19b910e23df23ebe5f189f93c97afdd" id="r_aa19b910e23df23ebe5f189f93c97afdd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8h.html#aa19b910e23df23ebe5f189f93c97afdd">ParserPushToken</a> (<a class="el" href="struct_token.html">Token</a> token)</td></tr>
 <tr class="memdesc:aa19b910e23df23ebe5f189f93c97afdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes new token to the parser can be used after calling.  <br /></td></tr>
 <tr class="separator:aa19b910e23df23ebe5f189f93c97afdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6d78d03bc9d7665d597b646485b647f" id="r_aa6d78d03bc9d7665d597b646485b647f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8h.html#aa6d78d03bc9d7665d597b646485b647f">ParserPopToken</a> ()</td></tr>
+<tr class="memdesc:aa6d78d03bc9d7665d597b646485b647f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes last pushed token.  <br /></td></tr>
+<tr class="separator:aa6d78d03bc9d7665d597b646485b647f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae23a18474f4d84e20fdcc9869d67b363" id="r_ae23a18474f4d84e20fdcc9869d67b363"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8h.html#ae23a18474f4d84e20fdcc9869d67b363">ParserInit</a> ()</td></tr>
 <tr class="memdesc:ae23a18474f4d84e20fdcc9869d67b363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the parser.  <br /></td></tr>
 <tr class="separator:ae23a18474f4d84e20fdcc9869d67b363"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,6 +181,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a19203c96ed6922e7092af10b63e6d298" id="r_a19203c96ed6922e7092af10b63e6d298"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_parser_info.html">ParserInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8h.html#a19203c96ed6922e7092af10b63e6d298">ParserCompile</a> ()</td></tr>
 <tr class="memdesc:a19203c96ed6922e7092af10b63e6d298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiles the tokens and returns the result.  <br /></td></tr>
 <tr class="separator:a19203c96ed6922e7092af10b63e6d298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07f87b9f5b24c331fddb0a3d57abfecf" id="r_a07f87b9f5b24c331fddb0a3d57abfecf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8h.html#a07f87b9f5b24c331fddb0a3d57abfecf">ParserEndInput</a> ()</td></tr>
+<tr class="memdesc:a07f87b9f5b24c331fddb0a3d57abfecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the input.  <br /></td></tr>
+<tr class="separator:a07f87b9f5b24c331fddb0a3d57abfecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a5eacb3f8d827ae299ee42b9e0e99fa13" name="a5eacb3f8d827ae299ee42b9e0e99fa13"></a>
@@ -187,6 +199,22 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="parser_8h_source.html#l00002">2</a> of file <a class="el" href="parser_8h_source.html">parser.h</a>.</p>
+
+</div>
+</div>
+<a id="aa1677b86fc9699414925aeca46baac9a" name="aa1677b86fc9699414925aeca46baac9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1677b86fc9699414925aeca46baac9a">&#9670;&#160;</a></span>SCB_CPACR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCB_CPACR&#160;&#160;&#160;(*((volatile unsigned long *)0xE000ED88))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="parser_8h_source.html#l00007">7</a> of file <a class="el" href="parser_8h_source.html">parser.h</a>.</p>
 
 </div>
 </div>
@@ -211,7 +239,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a0392053e13b5f2cbbfdbdd316d86e09fa2759d6055f211c659299d46ab05a7618" name="a0392053e13b5f2cbbfdbdd316d86e09fa2759d6055f211c659299d46ab05a7618"></a>MISSING_BRACKET&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="parser_8h_source.html#l00007">7</a> of file <a class="el" href="parser_8h_source.html">parser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parser_8h_source.html#l00009">9</a> of file <a class="el" href="parser_8h_source.html">parser.h</a>.</p>
 
 </div>
 </div>
@@ -228,13 +256,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa520fbf142ba1e7e659590c07da31921a12a90dfe20486bbe3e075afcd19ef2d0" name="aa520fbf142ba1e7e659590c07da31921a12a90dfe20486bbe3e075afcd19ef2d0"></a>NUMBER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2" name="aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2"></a>EOL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa520fbf142ba1e7e659590c07da31921a6411d9d6073252e4d316493506bbb979" name="aa520fbf142ba1e7e659590c07da31921a6411d9d6073252e4d316493506bbb979"></a>OPERATOR&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa520fbf142ba1e7e659590c07da31921af08a543d5a1549321682e12569d0fbd6" name="aa520fbf142ba1e7e659590c07da31921af08a543d5a1549321682e12569d0fbd6"></a>DECIMAL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2" name="aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2"></a>EOL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa520fbf142ba1e7e659590c07da31921a834f3e0777521aa22ca5b50e816970d9" name="aa520fbf142ba1e7e659590c07da31921a834f3e0777521aa22ca5b50e816970d9"></a>PREVIOUS_ANSWER&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="parser_8h_source.html#l00016">16</a> of file <a class="el" href="parser_8h_source.html">parser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parser_8h_source.html#l00018">18</a> of file <a class="el" href="parser_8h_source.html">parser.h</a>.</p>
 
 </div>
 </div>
@@ -276,35 +304,95 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><code>ParserInfo</code> <br  />
  </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="parser_8c_source.html#l00102">102</a> of file <a class="el" href="parser_8c_source.html">parser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parser_8c_source.html#l00120">120</a> of file <a class="el" href="parser_8c_source.html">parser.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="parser_8h_a19203c96ed6922e7092af10b63e6d298_cgraph.png" border="0" usemap="#aparser_8h_a19203c96ed6922e7092af10b63e6d298_cgraph" alt=""/></div>
 <map name="aparser_8h_a19203c96ed6922e7092af10b63e6d298_cgraph" id="aparser_8h_a19203c96ed6922e7092af10b63e6d298_cgraph">
-<area shape="rect" title="Compiles the tokens and returns the result." alt="" coords="5,233,112,260"/>
+<area shape="rect" title="Compiles the tokens and returns the result." alt="" coords="5,308,112,335"/>
 <area shape="rect" href="parser_8c.html#a7f8aeab74e49ee2b275a7575e8d7b5e8" title="Eats the next token." alt="" coords="762,93,866,120"/>
-<area shape="poly" title=" " alt="" coords="66,231,105,174,136,137,173,98,215,62,262,31,314,10,369,3,512,3,550,5,588,11,661,32,726,58,777,83,774,88,724,63,659,37,587,16,549,10,512,8,369,8,315,16,265,36,218,66,176,102,140,140,110,177,70,235"/>
-<area shape="rect" href="parser_8c.html#ab427a20c59c9ca0b11c82660752df62a" title="Parses arithematic expression." alt="" coords="160,233,280,260"/>
-<area shape="poly" title=" " alt="" coords="112,244,144,244,144,249,112,249"/>
+<area shape="poly" title=" " alt="" coords="63,306,97,233,125,184,160,132,202,83,251,42,278,26,307,13,337,5,369,3,512,3,550,5,588,11,661,32,726,58,777,83,774,88,724,63,659,37,587,16,549,10,512,8,369,8,338,11,308,18,280,30,254,46,206,87,164,135,129,186,101,236,68,308"/>
+<area shape="rect" href="parser_8c.html#ab427a20c59c9ca0b11c82660752df62a" title="Parses arithematic expression." alt="" coords="160,308,280,335"/>
+<area shape="poly" title=" " alt="" coords="112,319,144,319,144,324,112,324"/>
 <area shape="rect" href="parser_8c.html#a73bf16a41122c7751670f74fd415a36c" title="Peeks next token." alt="" coords="757,296,870,323"/>
-<area shape="poly" title=" " alt="" coords="76,259,121,299,190,348,231,371,276,390,322,403,369,408,512,408,549,406,587,400,659,379,724,353,774,328,777,333,726,358,661,384,588,405,550,411,512,413,369,413,321,408,274,395,229,376,188,353,118,303,72,263"/>
-<area shape="poly" title=" " alt="" coords="232,231,271,194,298,173,327,156,380,134,437,118,495,106,552,99,659,94,746,97,746,103,659,100,552,104,495,112,438,123,382,139,329,161,301,178,275,198,235,235"/>
+<area shape="poly" title=" " alt="" coords="83,333,132,361,202,394,283,421,326,429,369,432,512,432,551,429,590,421,665,394,731,361,780,330,783,334,733,365,668,399,592,426,552,434,512,437,369,437,325,434,282,426,200,399,130,366,80,338"/>
+<area shape="poly" title=" " alt="" coords="227,306,266,248,295,213,326,181,388,131,418,115,459,99,527,78,582,69,639,69,709,77,754,86,753,91,709,83,638,75,583,74,528,83,461,104,421,120,391,136,330,185,299,217,271,251,232,309"/>
 <area shape="rect" href="parser_8c.html#ab942fe3a63fed3190c76e55ebc76e5aa" title="Parses bracket expression." alt="" coords="609,245,709,272"/>
-<area shape="poly" title=" " alt="" coords="281,252,436,259,594,261,593,266,436,264,280,257"/>
-<area shape="poly" title=" " alt="" coords="281,256,430,283,609,305,742,309,741,314,608,311,429,288,280,262"/>
-<area shape="rect" href="parser_8c.html#a5656fb9995d62b96c08bfef4789ee4db" title="Parses term tokens." alt="" coords="328,171,412,197"/>
-<area shape="poly" title=" " alt="" coords="253,230,321,201,323,206,255,235"/>
+<area shape="poly" title=" " alt="" coords="280,317,436,297,593,272,594,277,436,302,281,322"/>
+<area shape="poly" title=" " alt="" coords="281,317,741,308,741,313,281,323"/>
+<area shape="rect" href="parser_8c.html#a5656fb9995d62b96c08bfef4789ee4db" title="Parses term tokens." alt="" coords="328,195,412,221"/>
+<area shape="poly" title=" " alt="" coords="238,305,337,229,341,233,241,310"/>
 <area shape="poly" title=" " alt="" coords="672,243,786,129,790,133,676,247"/>
-<area shape="poly" title=" " alt="" coords="608,254,457,247,295,244,295,239,457,242,609,249"/>
+<area shape="poly" title=" " alt="" coords="609,262,454,282,290,307,289,302,453,276,608,257"/>
 <area shape="poly" title=" " alt="" coords="703,270,757,288,755,293,701,275"/>
-<area shape="poly" title=" " alt="" coords="412,169,460,156,534,139,608,125,746,109,746,115,609,131,535,144,461,161,414,174"/>
-<area shape="poly" title=" " alt="" coords="399,195,490,239,549,262,609,281,677,295,742,303,741,308,676,300,608,287,547,267,488,244,397,200"/>
-<area shape="rect" href="parser_8c.html#a55bde1715e6e77addb80a046c96f059d" title="Parses only number tokens." alt="" coords="460,171,561,197"/>
-<area shape="poly" title=" " alt="" coords="413,181,445,181,445,187,413,187"/>
-<area shape="poly" title=" " alt="" coords="560,169,746,121,747,126,562,174"/>
-<area shape="poly" title=" " alt="" coords="540,195,618,236,616,240,538,200"/>
-<area shape="poly" title=" " alt="" coords="562,188,633,204,710,231,752,256,788,284,785,288,749,260,708,236,632,209,560,193"/>
+<area shape="poly" title=" " alt="" coords="381,192,413,160,435,143,459,130,534,107,611,97,684,94,746,97,746,102,684,100,611,102,535,113,461,134,438,147,416,164,384,196"/>
+<area shape="poly" title=" " alt="" coords="413,212,561,237,594,243,593,249,560,243,412,217"/>
+<area shape="poly" title=" " alt="" coords="409,219,461,237,535,262,609,281,677,293,742,301,741,306,676,298,608,287,533,267,459,243,408,224"/>
+<area shape="rect" href="parser_8c.html#a55bde1715e6e77addb80a046c96f059d" title="Parses only number tokens." alt="" coords="460,144,561,171"/>
+<area shape="poly" title=" " alt="" coords="409,192,456,174,458,179,410,197"/>
+<area shape="poly" title=" " alt="" coords="561,147,709,123,746,116,747,121,709,128,562,152"/>
+<area shape="poly" title=" " alt="" coords="535,169,562,187,610,225,624,234,621,239,607,229,559,191,532,174"/>
+<area shape="poly" title=" " alt="" coords="559,169,631,195,710,231,751,257,787,284,783,288,748,261,708,236,629,200,557,174"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="parser_8h_a19203c96ed6922e7092af10b63e6d298_icgraph.png" border="0" usemap="#aparser_8h_a19203c96ed6922e7092af10b63e6d298_icgraph" alt=""/></div>
+<map name="aparser_8h_a19203c96ed6922e7092af10b63e6d298_icgraph" id="aparser_8h_a19203c96ed6922e7092af10b63e6d298_icgraph">
+<area shape="rect" title="Compiles the tokens and returns the result." alt="" coords="373,5,480,32"/>
+<area shape="rect" href="logic_8c.html#a5f7f7893415d86a5a8348472dbdd0541" title=" " alt="" coords="223,5,325,32"/>
+<area shape="poly" title=" " alt="" coords="358,21,326,21,326,16,358,16"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="208,21,176,21,176,16,208,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a07f87b9f5b24c331fddb0a3d57abfecf" name="a07f87b9f5b24c331fddb0a3d57abfecf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07f87b9f5b24c331fddb0a3d57abfecf">&#9670;&#160;</a></span>ParserEndInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ParserEndInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ends the input. </p>
+
+<p class="definition">Definition at line <a class="el" href="parser_8c_source.html#l00080">80</a> of file <a class="el" href="parser_8c_source.html">parser.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="parser_8h_a07f87b9f5b24c331fddb0a3d57abfecf_cgraph.png" border="0" usemap="#aparser_8h_a07f87b9f5b24c331fddb0a3d57abfecf_cgraph" alt=""/></div>
+<map name="aparser_8h_a07f87b9f5b24c331fddb0a3d57abfecf_cgraph" id="aparser_8h_a07f87b9f5b24c331fddb0a3d57abfecf_cgraph">
+<area shape="rect" title="Ends the input." alt="" coords="5,5,116,32"/>
+<area shape="rect" href="parser_8c.html#aa19b910e23df23ebe5f189f93c97afdd" title="Pushes new token to the parser can be used after calling." alt="" coords="164,5,288,32"/>
+<area shape="poly" title=" " alt="" coords="116,16,148,16,148,21,116,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="parser_8h_a07f87b9f5b24c331fddb0a3d57abfecf_icgraph.png" border="0" usemap="#aparser_8h_a07f87b9f5b24c331fddb0a3d57abfecf_icgraph" alt=""/></div>
+<map name="aparser_8h_a07f87b9f5b24c331fddb0a3d57abfecf_icgraph" id="aparser_8h_a07f87b9f5b24c331fddb0a3d57abfecf_icgraph">
+<area shape="rect" title="Ends the input." alt="" coords="373,5,484,32"/>
+<area shape="rect" href="logic_8c.html#a5f7f7893415d86a5a8348472dbdd0541" title=" " alt="" coords="223,5,325,32"/>
+<area shape="poly" title=" " alt="" coords="358,21,326,21,326,16,358,16"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="208,21,176,21,176,16,208,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
 </div>
 
@@ -327,15 +415,17 @@ Here is the call graph for this function:</div>
 
 <p>Initializes the parser. </p>
 
-<p class="definition">Definition at line <a class="el" href="parser_8c_source.html#l00080">80</a> of file <a class="el" href="parser_8c_source.html">parser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parser_8c_source.html#l00094">94</a> of file <a class="el" href="parser_8c_source.html">parser.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="parser_8h_ae23a18474f4d84e20fdcc9869d67b363_icgraph.png" border="0" usemap="#aparser_8h_ae23a18474f4d84e20fdcc9869d67b363_icgraph" alt=""/></div>
 <map name="aparser_8h_ae23a18474f4d84e20fdcc9869d67b363_icgraph" id="aparser_8h_ae23a18474f4d84e20fdcc9869d67b363_icgraph">
-<area shape="rect" title="Initializes the parser." alt="" coords="147,5,223,32"/>
-<area shape="rect" href="parser_8c.html#a1715c490f05c2ddcb8d526684468f885" title="Calls." alt="" coords="5,5,99,32"/>
-<area shape="poly" title=" " alt="" coords="131,21,99,21,99,16,131,16"/>
+<area shape="rect" title="Initializes the parser." alt="" coords="204,5,280,32"/>
+<area shape="rect" href="logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="103,5,156,32"/>
+<area shape="poly" title=" " alt="" coords="188,21,156,21,156,16,188,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
 </div>
 
@@ -376,7 +466,28 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="parser_8c_source.html#l00086">86</a> of file <a class="el" href="parser_8c_source.html">parser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parser_8c_source.html#l00101">101</a> of file <a class="el" href="parser_8c_source.html">parser.c</a>.</p>
+
+</div>
+</div>
+<a id="aa6d78d03bc9d7665d597b646485b647f" name="aa6d78d03bc9d7665d597b646485b647f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6d78d03bc9d7665d597b646485b647f">&#9670;&#160;</a></span>ParserPopToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ParserPopToken </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes last pushed token. </p>
+
+<p class="definition">Definition at line <a class="el" href="parser_8c_source.html#l00087">87</a> of file <a class="el" href="parser_8c_source.html">parser.c</a>.</p>
 
 </div>
 </div>
@@ -407,7 +518,24 @@ ParserInitWith</dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="parser_8c_source.html#l00073">73</a> of file <a class="el" href="parser_8c_source.html">parser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parser_8c_source.html#l00076">76</a> of file <a class="el" href="parser_8c_source.html">parser.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="parser_8h_aa19b910e23df23ebe5f189f93c97afdd_icgraph.png" border="0" usemap="#aparser_8h_aa19b910e23df23ebe5f189f93c97afdd_icgraph" alt=""/></div>
+<map name="aparser_8h_aa19b910e23df23ebe5f189f93c97afdd_icgraph" id="aparser_8h_aa19b910e23df23ebe5f189f93c97afdd_icgraph">
+<area shape="rect" title="Pushes new token to the parser can be used after calling." alt="" coords="532,31,656,57"/>
+<area shape="rect" href="parser_8c.html#a07f87b9f5b24c331fddb0a3d57abfecf" title="Ends the input." alt="" coords="373,5,484,32"/>
+<area shape="poly" title=" " alt="" coords="515,35,484,30,484,24,516,29"/>
+<area shape="rect" href="logic_8c.html#a5f7f7893415d86a5a8348472dbdd0541" title=" " alt="" coords="223,31,325,57"/>
+<area shape="poly" title=" " alt="" coords="516,47,326,47,326,41,516,41"/>
+<area shape="poly" title=" " alt="" coords="358,33,326,38,325,33,357,28"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,31,175,57"/>
+<area shape="poly" title=" " alt="" coords="208,47,176,47,176,41,208,41"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -431,17 +559,29 @@ ParserInitWith</dd></dl>
 <dd>
 ParserStop </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="parser_8c_source.html#l00097">97</a> of file <a class="el" href="parser_8c_source.html">parser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parser_8c_source.html#l00112">112</a> of file <a class="el" href="parser_8c_source.html">parser.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="parser_8h_a1715c490f05c2ddcb8d526684468f885_cgraph.png" border="0" usemap="#aparser_8h_a1715c490f05c2ddcb8d526684468f885_cgraph" alt=""/></div>
 <map name="aparser_8h_a1715c490f05c2ddcb8d526684468f885_cgraph" id="aparser_8h_a1715c490f05c2ddcb8d526684468f885_cgraph">
-<area shape="rect" title="Calls." alt="" coords="5,31,99,57"/>
-<area shape="rect" href="parser_8c.html#ae23a18474f4d84e20fdcc9869d67b363" title="Initializes the parser." alt="" coords="152,5,228,32"/>
-<area shape="poly" title=" " alt="" coords="99,33,136,26,137,31,100,38"/>
-<area shape="rect" href="parser_8c.html#a9264a889771bffb6e9bb7215c8402eda" title="Stops the parser and clears all tokens." alt="" coords="147,56,233,83"/>
-<area shape="poly" title=" " alt="" coords="100,50,132,56,131,61,99,55"/>
+<area shape="rect" title="Calls." alt="" coords="5,5,99,32"/>
+<area shape="rect" href="parser_8c.html#a9264a889771bffb6e9bb7215c8402eda" title="Stops the parser and clears all tokens." alt="" coords="147,5,233,32"/>
+<area shape="poly" title=" " alt="" coords="99,16,131,16,131,21,99,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="parser_8h_a1715c490f05c2ddcb8d526684468f885_icgraph.png" border="0" usemap="#aparser_8h_a1715c490f05c2ddcb8d526684468f885_icgraph" alt=""/></div>
+<map name="aparser_8h_a1715c490f05c2ddcb8d526684468f885_icgraph" id="aparser_8h_a1715c490f05c2ddcb8d526684468f885_icgraph">
+<area shape="rect" title="Calls." alt="" coords="373,5,467,32"/>
+<area shape="rect" href="logic_8c.html#a5f7f7893415d86a5a8348472dbdd0541" title=" " alt="" coords="223,5,325,32"/>
+<area shape="poly" title=" " alt="" coords="358,21,326,21,326,16,358,16"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="208,21,176,21,176,16,208,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
 </div>
 
@@ -464,15 +604,21 @@ Here is the call graph for this function:</div>
 
 <p>Stops the parser and clears all tokens. </p>
 
-<p class="definition">Definition at line <a class="el" href="parser_8c_source.html#l00093">93</a> of file <a class="el" href="parser_8c_source.html">parser.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="parser_8c_source.html#l00108">108</a> of file <a class="el" href="parser_8c_source.html">parser.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="parser_8h_a9264a889771bffb6e9bb7215c8402eda_icgraph.png" border="0" usemap="#aparser_8h_a9264a889771bffb6e9bb7215c8402eda_icgraph" alt=""/></div>
 <map name="aparser_8h_a9264a889771bffb6e9bb7215c8402eda_icgraph" id="aparser_8h_a9264a889771bffb6e9bb7215c8402eda_icgraph">
-<area shape="rect" title="Stops the parser and clears all tokens." alt="" coords="147,5,233,32"/>
-<area shape="rect" href="parser_8c.html#a1715c490f05c2ddcb8d526684468f885" title="Calls." alt="" coords="5,5,99,32"/>
-<area shape="poly" title=" " alt="" coords="131,21,99,21,99,16,131,16"/>
+<area shape="rect" title="Stops the parser and clears all tokens." alt="" coords="515,5,601,32"/>
+<area shape="rect" href="parser_8c.html#a1715c490f05c2ddcb8d526684468f885" title="Calls." alt="" coords="373,5,467,32"/>
+<area shape="poly" title=" " alt="" coords="499,21,467,21,467,16,499,16"/>
+<area shape="rect" href="logic_8c.html#a5f7f7893415d86a5a8348472dbdd0541" title=" " alt="" coords="223,5,325,32"/>
+<area shape="poly" title=" " alt="" coords="358,21,326,21,326,16,358,16"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="208,21,176,21,176,16,208,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
 </div>
 

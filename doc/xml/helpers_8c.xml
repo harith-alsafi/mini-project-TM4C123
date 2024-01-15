@@ -20,6 +20,88 @@
         <label>stdlib.h</label>
       </node>
     </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="helpers_8c_1a562588cbdd2bdd82a792400c9bc708a8" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long randSeed</definition>
+        <argsstring></argsstring>
+        <name>randSeed</name>
+        <initializer>= 12345</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/helpers.c" line="5" column="15" bodyfile="src/helpers.c" bodystart="5" bodyend="-1"/>
+        <referencedby refid="helpers_8c_1aac8c6c00a0e52489ecf8e8a6d9eba228" compoundref="helpers_8c" startline="7" endline="10">Random</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="helpers_8c_1aac8c6c00a0e52489ecf8e8a6d9eba228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Random</definition>
+        <argsstring>()</argsstring>
+        <name>Random</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/helpers.c" line="7" column="5" bodyfile="src/helpers.c" bodystart="7" bodyend="10"/>
+        <references refid="helpers_8c_1a562588cbdd2bdd82a792400c9bc708a8" compoundref="helpers_8c" startline="5">randSeed</references>
+        <referencedby refid="helpers_8c_1aa41b8512b10550a2e21feec991f752b4" compoundref="helpers_8c" startline="13" endline="15">RandomRange</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="helpers_8c_1aa41b8512b10550a2e21feec991f752b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RandomRange</definition>
+        <argsstring>(int min, int max)</argsstring>
+        <name>RandomRange</name>
+        <param>
+          <type>int</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/helpers.c" line="13" column="5" bodyfile="src/helpers.c" bodystart="13" bodyend="15"/>
+        <references refid="helpers_8c_1aac8c6c00a0e52489ecf8e8a6d9eba228" compoundref="helpers_8c" startline="7" endline="10">Random</references>
+        <referencedby refid="logic_8c_1a93047c21ec383e462990d923ed48795e" compoundref="logic_8c" startline="151" endline="196">RunLoginAnimation</referencedby>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -28,6 +110,18 @@
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="helpers_8h" kindref="compound">helpers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"><ref refid="helpers_8h_1af81ac8e504dd921417ba754f655999f5" kindref="member">DEFINE_LIST_IMPLEMENTATION</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="helpers_8c_1a562588cbdd2bdd82a792400c9bc708a8" refkind="member"><highlight class="normal">unsigned<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="helpers_8c_1a562588cbdd2bdd82a792400c9bc708a8" kindref="member">randSeed</ref><sp/>=<sp/>12345;<sp/></highlight><highlight class="comment">//<sp/>Initial<sp/>seed<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="helpers_8c_1aac8c6c00a0e52489ecf8e8a6d9eba228" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="helpers_8c_1aac8c6c00a0e52489ecf8e8a6d9eba228" kindref="member">Random</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="helpers_8c_1a562588cbdd2bdd82a792400c9bc708a8" kindref="member">randSeed</ref><sp/>=<sp/>(1664525<sp/>*<sp/><ref refid="helpers_8c_1a562588cbdd2bdd82a792400c9bc708a8" kindref="member">randSeed</ref><sp/>+<sp/>1013904223)<sp/>%<sp/>4294967296;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="helpers_8c_1a562588cbdd2bdd82a792400c9bc708a8" kindref="member">randSeed</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>to<sp/>get<sp/>a<sp/>random<sp/>number<sp/>within<sp/>a<sp/>given<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="helpers_8c_1aa41b8512b10550a2e21feec991f752b4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="helpers_8c_1aa41b8512b10550a2e21feec991f752b4" kindref="member">RandomRange</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>min<sp/>+<sp/>(<ref refid="helpers_8c_1aac8c6c00a0e52489ecf8e8a6d9eba228" kindref="member">Random</ref>()<sp/>%<sp/>(max<sp/>-<sp/>min<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/helpers.c"/>
   </compounddef>

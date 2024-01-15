@@ -74,7 +74,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">logic.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -82,39 +84,459 @@ $(function() {
 <code>#include &quot;<a class="el" href="clock_8h_source.html">clock.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="lcd_8h_source.html">lcd.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="keypad_8h_source.html">keypad.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="flash_8h_source.html">flash.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="parser_8h_source.html">parser.h</a>&quot;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for logic.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="logic_8c__incl.png" border="0" usemap="#asrc_2logic_8c" alt=""/></div>
 <map name="asrc_2logic_8c" id="asrc_2logic_8c">
-<area shape="rect" title=" " alt="" coords="120,5,201,32"/>
-<area shape="rect" href="logic_8h.html" title=" " alt="" coords="5,80,65,107"/>
-<area shape="poly" title=" " alt="" coords="140,35,71,74,68,70,137,30"/>
-<area shape="rect" href="clock_8h.html" title=" " alt="" coords="89,80,152,107"/>
-<area shape="poly" title=" " alt="" coords="156,34,137,68,132,65,151,31"/>
-<area shape="rect" href="lcd_8h.html" title=" " alt="" coords="176,80,225,107"/>
-<area shape="poly" title=" " alt="" coords="170,31,188,65,184,68,165,34"/>
-<area shape="rect" href="keypad_8h.html" title=" " alt="" coords="249,80,323,107"/>
-<area shape="poly" title=" " alt="" coords="183,30,252,70,250,74,181,35"/>
-<area shape="rect" href="helpers_8h.html" title=" " alt="" coords="150,155,224,181"/>
-<area shape="poly" title=" " alt="" coords="201,108,195,140,189,139,195,107"/>
-<area shape="rect" title=" " alt="" coords="249,155,323,181"/>
-<area shape="poly" title=" " alt="" coords="217,105,261,143,258,147,213,109"/>
-<area shape="rect" title=" " alt="" coords="155,229,219,256"/>
-<area shape="poly" title=" " alt="" coords="190,182,190,214,184,214,184,182"/>
-<area shape="poly" title=" " alt="" coords="288,107,288,139,283,139,283,107"/>
+<area shape="rect" title=" " alt="" coords="291,5,372,32"/>
+<area shape="rect" href="logic_8h.html" title=" " alt="" coords="53,80,112,107"/>
+<area shape="poly" title=" " alt="" coords="291,34,128,82,126,76,290,29"/>
+<area shape="rect" href="keypad_8h.html" title=" " alt="" coords="36,155,110,181"/>
+<area shape="poly" title=" " alt="" coords="291,25,225,31,150,41,84,58,59,69,43,82,37,95,38,110,54,141,50,144,33,112,32,94,39,78,56,65,82,53,149,36,225,25,290,20"/>
+<area shape="rect" title=" " alt="" coords="110,229,185,256"/>
+<area shape="poly" title=" " alt="" coords="291,25,223,30,144,41,73,58,47,69,29,82,14,106,8,129,12,153,26,180,40,196,57,210,96,228,94,232,54,214,36,200,21,183,7,155,3,129,9,104,26,78,44,64,72,53,143,36,222,25,290,19"/>
+<area shape="rect" href="clock_8h.html" title=" " alt="" coords="436,80,499,107"/>
+<area shape="poly" title=" " alt="" coords="356,30,432,70,429,75,354,35"/>
+<area shape="rect" href="lcd_8h.html" title=" " alt="" coords="228,80,278,107"/>
+<area shape="poly" title=" " alt="" coords="320,35,279,71,276,67,316,31"/>
+<area shape="rect" title=" " alt="" coords="304,229,367,256"/>
+<area shape="poly" title=" " alt="" coords="346,31,362,52,375,79,380,117,375,154,365,189,352,217,347,215,360,187,370,153,375,117,370,81,358,55,342,34"/>
+<area shape="rect" href="flash_8h.html" title=" " alt="" coords="302,80,361,107"/>
+<area shape="poly" title=" " alt="" coords="334,33,334,64,329,64,329,33"/>
+<area shape="rect" href="parser_8h.html" title=" " alt="" coords="136,80,204,107"/>
+<area shape="poly" title=" " alt="" coords="305,35,213,76,211,71,302,30"/>
+<area shape="rect" title=" " alt="" coords="523,80,583,107"/>
+<area shape="poly" title=" " alt="" coords="371,30,509,75,507,80,369,35"/>
+<area shape="rect" title=" " alt="" coords="607,80,672,107"/>
+<area shape="poly" title=" " alt="" coords="373,26,593,77,592,82,372,31"/>
+<area shape="rect" title=" " alt="" coords="696,80,757,107"/>
+<area shape="poly" title=" " alt="" coords="373,23,506,43,681,77,680,82,505,49,372,28"/>
+<area shape="poly" title=" " alt="" coords="83,108,79,140,74,139,78,107"/>
+<area shape="poly" title=" " alt="" coords="88,180,126,217,122,221,84,184"/>
+<area shape="poly" title=" " alt="" coords="246,109,168,218,163,215,242,106"/>
+<area shape="rect" href="helpers_8h.html" title=" " alt="" coords="236,155,310,181"/>
+<area shape="poly" title=" " alt="" coords="259,106,268,139,263,141,254,108"/>
+<area shape="poly" title=" " alt="" coords="286,180,317,216,313,219,282,184"/>
+<area shape="poly" title=" " alt="" coords="337,107,338,143,334,164,324,183,298,207,266,224,233,234,201,241,200,235,231,229,264,219,295,203,320,180,329,162,333,143,331,107"/>
+<area shape="poly" title=" " alt="" coords="323,109,295,144,291,141,319,106"/>
+<area shape="poly" title=" " alt="" coords="155,109,103,148,100,143,152,105"/>
+<area shape="poly" title=" " alt="" coords="171,108,154,214,149,213,166,107"/>
+<area shape="poly" title=" " alt="" coords="190,105,244,143,241,147,187,109"/>
 </map>
 </div>
 </div>
 <p><a href="logic_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a457795d41a98ba74ee391e3a2fc09849" id="r_a457795d41a98ba74ee391e3a2fc09849"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a457795d41a98ba74ee391e3a2fc09849">LOGIC_STATBAR_ROW</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a457795d41a98ba74ee391e3a2fc09849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e32bc5f03b48245eceb42ef3f6a0ad" id="r_a76e32bc5f03b48245eceb42ef3f6a0ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a76e32bc5f03b48245eceb42ef3f6a0ad">LOGIC_SHORTCUTS_ROW</a>&#160;&#160;&#160;<a class="el" href="lcd_8h.html#aece2016b9a1e98b3b6543062a452c847">LCD_N_ROW</a>-1</td></tr>
+<tr class="separator:a76e32bc5f03b48245eceb42ef3f6a0ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a038bbcc9f8f7493d64b790b461743b30" id="r_a038bbcc9f8f7493d64b790b461743b30"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a038bbcc9f8f7493d64b790b461743b30">LOGIC_INPUT_ROWS</a>&#160;&#160;&#160;(<a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>[]) {1, 2}</td></tr>
+<tr class="separator:a038bbcc9f8f7493d64b790b461743b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a15058a20857a8a4d38fa4ab72109a9e2" id="r_a15058a20857a8a4d38fa4ab72109a9e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2">RunLogin</a> ()</td></tr>
+<tr class="separator:a15058a20857a8a4d38fa4ab72109a9e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee8c17e4c2f0d1376f21780a1199b97c" id="r_aee8c17e4c2f0d1376f21780a1199b97c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#aee8c17e4c2f0d1376f21780a1199b97c">RunChangePassword</a> ()</td></tr>
+<tr class="separator:aee8c17e4c2f0d1376f21780a1199b97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f7f7893415d86a5a8348472dbdd0541" id="r_a5f7f7893415d86a5a8348472dbdd0541"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a5f7f7893415d86a5a8348472dbdd0541">RunCalculator</a> ()</td></tr>
+<tr class="separator:a5f7f7893415d86a5a8348472dbdd0541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93047c21ec383e462990d923ed48795e" id="r_a93047c21ec383e462990d923ed48795e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a93047c21ec383e462990d923ed48795e">RunLoginAnimation</a> ()</td></tr>
+<tr class="separator:a93047c21ec383e462990d923ed48795e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7716334580813b0d2fddba5c31556836" id="r_a7716334580813b0d2fddba5c31556836"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_token.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a7716334580813b0d2fddba5c31556836">GetKeyToken</a> (<a class="el" href="struct_key_info.html">KeyInfo</a> key)</td></tr>
+<tr class="separator:a7716334580813b0d2fddba5c31556836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6da8071dabf2ebd36d99de9f70e5dce" id="r_af6da8071dabf2ebd36d99de9f70e5dce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#af6da8071dabf2ebd36d99de9f70e5dce">ClearAllInput</a> (bool clearData)</td></tr>
+<tr class="separator:af6da8071dabf2ebd36d99de9f70e5dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d70b1e35da3781dc0e409643147cdd8" id="r_a5d70b1e35da3781dc0e409643147cdd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a5d70b1e35da3781dc0e409643147cdd8">ClearLastInput</a> ()</td></tr>
+<tr class="separator:a5d70b1e35da3781dc0e409643147cdd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89a9f339804050ddf172c87c288312a0" id="r_a89a9f339804050ddf172c87c288312a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a89a9f339804050ddf172c87c288312a0">ShowCurrentData</a> ()</td></tr>
+<tr class="separator:a89a9f339804050ddf172c87c288312a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe7dcc508ace168bbcddb296203a1886" id="r_abe7dcc508ace168bbcddb296203a1886"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#abe7dcc508ace168bbcddb296203a1886">PrintData</a> (void *data, int length, bool isToken)</td></tr>
+<tr class="separator:abe7dcc508ace168bbcddb296203a1886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c7782e193759b778f5add39176b0975" id="r_a6c7782e193759b778f5add39176b0975"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a6c7782e193759b778f5add39176b0975">IsCalculatorAvailable</a> ()</td></tr>
+<tr class="separator:a6c7782e193759b778f5add39176b0975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd141353423c9fce837e2f56a10d810d" id="r_afd141353423c9fce837e2f56a10d810d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#afd141353423c9fce837e2f56a10d810d">IsPasswordInputAvailable</a> ()</td></tr>
+<tr class="separator:afd141353423c9fce837e2f56a10d810d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa64d8084403040ad7f7f8045e075736" id="r_afa64d8084403040ad7f7f8045e075736"><td class="memItemLeft" align="right" valign="top"><a class="el" href="keypad_8h.html#ac4837dcaa64e146bad0d3f315f7da1cc">SpecialKeyFunctions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#afa64d8084403040ad7f7f8045e075736">GetSpecialFunction</a> (<a class="el" href="struct_key_info.html">KeyInfo</a> key)</td></tr>
+<tr class="separator:afa64d8084403040ad7f7f8045e075736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add896c9f31faac13d33591bf86e4aeea" id="r_add896c9f31faac13d33591bf86e4aeea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#add896c9f31faac13d33591bf86e4aeea">MapFunctions</a> (<a class="el" href="keypad_8h.html#ac4837dcaa64e146bad0d3f315f7da1cc">SpecialKeyFunctions</a> function)</td></tr>
+<tr class="separator:add896c9f31faac13d33591bf86e4aeea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ea1341e5f25883c524a2cdb81341f9d" id="r_a2ea1341e5f25883c524a2cdb81341f9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a2ea1341e5f25883c524a2cdb81341f9d">ShowNumberOperation</a> (<a class="el" href="struct_key_info.html">KeyInfo</a> key)</td></tr>
+<tr class="separator:a2ea1341e5f25883c524a2cdb81341f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4085c7ad6b8fe21141bebd8cfe7053a" id="r_ac4085c7ad6b8fe21141bebd8cfe7053a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#ac4085c7ad6b8fe21141bebd8cfe7053a">UpdateShift</a> ()</td></tr>
+<tr class="separator:ac4085c7ad6b8fe21141bebd8cfe7053a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42669da2ad9ca71aae1bd5805b2c7c98" id="r_a42669da2ad9ca71aae1bd5805b2c7c98"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a42669da2ad9ca71aae1bd5805b2c7c98">PasswordMatch</a> (charList password)</td></tr>
+<tr class="separator:a42669da2ad9ca71aae1bd5805b2c7c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b107a1c86e52fc6f6312e077c76ac31" id="r_a3b107a1c86e52fc6f6312e077c76ac31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a3b107a1c86e52fc6f6312e077c76ac31">DisplayMessage</a> (char message[])</td></tr>
+<tr class="separator:a3b107a1c86e52fc6f6312e077c76ac31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7c44d3fc64010d1e217bea610c8536c" id="r_ae7c44d3fc64010d1e217bea610c8536c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#ae7c44d3fc64010d1e217bea610c8536c">RefreshDisplay</a> ()</td></tr>
+<tr class="separator:ae7c44d3fc64010d1e217bea610c8536c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada037e06af8abdcc0382445b22466477" id="r_ada037e06af8abdcc0382445b22466477"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#ada037e06af8abdcc0382445b22466477">RunUserInput</a> (<a class="el" href="struct_key_info.html">KeyInfo</a> key)</td></tr>
+<tr class="separator:ada037e06af8abdcc0382445b22466477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a3be8027400af0c949033c8c86a4360" id="r_a5a3be8027400af0c949033c8c86a4360"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a5a3be8027400af0c949033c8c86a4360">UpdateRows</a> ()</td></tr>
+<tr class="separator:a5a3be8027400af0c949033c8c86a4360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8468ead6b76c5ff5eb578a79fd591aa8" id="r_a8468ead6b76c5ff5eb578a79fd591aa8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8">InitAll</a> ()</td></tr>
 <tr class="memdesc:a8468ead6b76c5ff5eb578a79fd591aa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes all components.  <br /></td></tr>
 <tr class="separator:a8468ead6b76c5ff5eb578a79fd591aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a8f29e3704245cd53e2e11e03ec5f7" id="r_a41a8f29e3704245cd53e2e11e03ec5f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7">RunMain</a> ()</td></tr>
+<tr class="memdesc:a41a8f29e3704245cd53e2e11e03ec5f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the main loop.  <br /></td></tr>
+<tr class="separator:a41a8f29e3704245cd53e2e11e03ec5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8bcdda49c0758a44d7cfad4e6d8cd1b" id="r_aa8bcdda49c0758a44d7cfad4e6d8cd1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#aa8bcdda49c0758a44d7cfad4e6d8cd1b">RunChangePasswordModule</a> ()</td></tr>
+<tr class="separator:aa8bcdda49c0758a44d7cfad4e6d8cd1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4766166af50627baf168343eef03b1" id="r_a7e4766166af50627baf168343eef03b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a7e4766166af50627baf168343eef03b1">RunGraphModule</a> ()</td></tr>
+<tr class="separator:a7e4766166af50627baf168343eef03b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:af7d68b5d19dab801e6460d295564d2bb" id="r_af7d68b5d19dab801e6460d295564d2bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#af7d68b5d19dab801e6460d295564d2bb">isShiftOn</a> = false</td></tr>
+<tr class="separator:af7d68b5d19dab801e6460d295564d2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5dd0e120f9824b40a94276c4ee3dadb" id="r_af5dd0e120f9824b40a94276c4ee3dadb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#af5dd0e120f9824b40a94276c4ee3dadb">isLoggedIn</a> = false</td></tr>
+<tr class="separator:af5dd0e120f9824b40a94276c4ee3dadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a07acedc029e72784867cbe9ac10543" id="r_a7a07acedc029e72784867cbe9ac10543"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a7a07acedc029e72784867cbe9ac10543">isInit</a> = false</td></tr>
+<tr class="separator:a7a07acedc029e72784867cbe9ac10543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3288701d9bc3bb0210a19c3f9042515f" id="r_a3288701d9bc3bb0210a19c3f9042515f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085b">ProgramMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a3288701d9bc3bb0210a19c3f9042515f">mode</a> = <a class="el" href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b">LOGIN_MODE</a></td></tr>
+<tr class="separator:a3288701d9bc3bb0210a19c3f9042515f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5517a73749b3e781a73a808ba33d533" id="r_ab5517a73749b3e781a73a808ba33d533"><td class="memItemLeft" align="right" valign="top">TokenList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#ab5517a73749b3e781a73a808ba33d533">tokenData</a></td></tr>
+<tr class="separator:ab5517a73749b3e781a73a808ba33d533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ed8a7ac589618f57942872aff22070" id="r_a68ed8a7ac589618f57942872aff22070"><td class="memItemLeft" align="right" valign="top">charList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a68ed8a7ac589618f57942872aff22070">inputData</a></td></tr>
+<tr class="separator:a68ed8a7ac589618f57942872aff22070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0accd14d87e65913db8e6a59e42b6c7d" id="r_a0accd14d87e65913db8e6a59e42b6c7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_flash_data.html">FlashData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a0accd14d87e65913db8e6a59e42b6c7d">flashData</a></td></tr>
+<tr class="separator:a0accd14d87e65913db8e6a59e42b6c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a038bbcc9f8f7493d64b790b461743b30" name="a038bbcc9f8f7493d64b790b461743b30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a038bbcc9f8f7493d64b790b461743b30">&#9670;&#160;</a></span>LOGIC_INPUT_ROWS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGIC_INPUT_ROWS&#160;&#160;&#160;(<a class="el" href="helpers_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>[]) {1, 2}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00015">15</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+
+</div>
+</div>
+<a id="a76e32bc5f03b48245eceb42ef3f6a0ad" name="a76e32bc5f03b48245eceb42ef3f6a0ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76e32bc5f03b48245eceb42ef3f6a0ad">&#9670;&#160;</a></span>LOGIC_SHORTCUTS_ROW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGIC_SHORTCUTS_ROW&#160;&#160;&#160;<a class="el" href="lcd_8h.html#aece2016b9a1e98b3b6543062a452c847">LCD_N_ROW</a>-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00014">14</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+
+</div>
+</div>
+<a id="a457795d41a98ba74ee391e3a2fc09849" name="a457795d41a98ba74ee391e3a2fc09849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a457795d41a98ba74ee391e3a2fc09849">&#9670;&#160;</a></span>LOGIC_STATBAR_ROW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGIC_STATBAR_ROW&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00013">13</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="af6da8071dabf2ebd36d99de9f70e5dce" name="af6da8071dabf2ebd36d99de9f70e5dce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6da8071dabf2ebd36d99de9f70e5dce">&#9670;&#160;</a></span>ClearAllInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearAllInput </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>clearData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00306">306</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_af6da8071dabf2ebd36d99de9f70e5dce_cgraph.png" border="0" usemap="#alogic_8c_af6da8071dabf2ebd36d99de9f70e5dce_cgraph" alt=""/></div>
+<map name="alogic_8c_af6da8071dabf2ebd36d99de9f70e5dce_cgraph" id="alogic_8c_af6da8071dabf2ebd36d99de9f70e5dce_cgraph">
+<area shape="rect" title=" " alt="" coords="5,43,100,69"/>
+<area shape="rect" href="lcd_8c.html#aa0130791fdcab8f2263be12fb00a031d" title="Clears a row." alt="" coords="148,93,245,120"/>
+<area shape="poly" title=" " alt="" coords="94,67,143,85,141,90,92,72"/>
+<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="852,119,952,145"/>
+<area shape="poly" title=" " alt="" coords="99,40,208,16,274,6,340,3,517,3,567,6,618,14,716,42,801,77,865,108,862,113,799,82,714,47,617,19,567,11,517,8,340,8,274,12,209,21,101,45"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="293,169,389,196"/>
+<area shape="poly" title=" " alt="" coords="225,118,302,159,299,164,222,123"/>
+<area shape="poly" title=" " alt="" coords="246,106,836,127,836,132,245,111"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1155,245,1242,272"/>
+<area shape="poly" title=" " alt="" coords="355,194,390,230,413,249,439,264,513,294,575,306,640,308,721,307,903,307,967,303,1031,295,1140,272,1141,277,1031,300,968,309,904,312,722,312,639,313,575,311,512,299,436,269,410,253,386,234,351,198"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="437,195,594,221"/>
+<area shape="poly" title=" " alt="" coords="390,187,423,192,422,197,389,192"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="642,144,804,171"/>
+<area shape="poly" title=" " alt="" coords="390,177,626,161,626,166,390,182"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1149,195,1248,221"/>
+<area shape="poly" title=" " alt="" coords="364,194,398,214,438,231,516,250,578,257,721,256,903,256,965,253,1026,245,1133,223,1134,228,1027,250,965,258,904,261,722,261,577,262,515,255,436,236,395,219,361,199"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1159,93,1238,120"/>
+<area shape="poly" title=" " alt="" coords="365,167,425,135,512,98,614,66,668,57,721,53,904,53,969,57,1034,66,1145,89,1144,95,1033,71,969,62,903,59,722,59,668,62,615,72,514,103,427,140,367,171"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1585,220,1680,247"/>
+<area shape="poly" title=" " alt="" coords="1242,254,1569,234,1569,240,1242,259"/>
+<area shape="poly" title=" " alt="" coords="573,191,650,172,651,178,574,197"/>
+<area shape="poly" title=" " alt="" coords="804,143,836,139,837,144,805,148"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1000,119,1101,145"/>
+<area shape="poly" title=" " alt="" coords="953,129,985,129,985,135,953,135"/>
+<area shape="poly" title=" " alt="" coords="1065,144,1101,186,1150,231,1156,235,1153,239,1147,235,1097,189,1061,148"/>
+<area shape="poly" title=" " alt="" coords="1080,144,1158,185,1156,189,1077,148"/>
+<area shape="poly" title=" " alt="" coords="1101,121,1144,113,1145,119,1101,126"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1296,195,1404,221"/>
+<area shape="poly" title=" " alt="" coords="1249,205,1281,205,1281,211,1249,211"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1452,195,1537,221"/>
+<area shape="poly" title=" " alt="" coords="1405,205,1437,205,1437,211,1405,211"/>
+<area shape="poly" title=" " alt="" coords="1538,213,1570,219,1569,224,1537,218"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_af6da8071dabf2ebd36d99de9f70e5dce_icgraph.png" border="0" usemap="#alogic_8c_af6da8071dabf2ebd36d99de9f70e5dce_icgraph" alt=""/></div>
+<map name="alogic_8c_af6da8071dabf2ebd36d99de9f70e5dce_icgraph" id="alogic_8c_af6da8071dabf2ebd36d99de9f70e5dce_icgraph">
+<area shape="rect" title=" " alt="" coords="373,56,468,83"/>
+<area shape="rect" href="logic_8c.html#a5f7f7893415d86a5a8348472dbdd0541" title=" " alt="" coords="223,5,325,32"/>
+<area shape="poly" title=" " alt="" coords="364,53,314,35,316,30,366,48"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,56,175,83"/>
+<area shape="poly" title=" " alt="" coords="358,72,175,72,175,67,358,67"/>
+<area shape="rect" href="logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2" title=" " alt="" coords="237,107,312,133"/>
+<area shape="poly" title=" " alt="" coords="366,91,313,110,311,105,364,86"/>
+<area shape="poly" title=" " alt="" coords="223,40,176,58,174,53,221,35"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+<area shape="poly" title=" " alt="" coords="221,103,174,85,176,80,223,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5d70b1e35da3781dc0e409643147cdd8" name="a5d70b1e35da3781dc0e409643147cdd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d70b1e35da3781dc0e409643147cdd8">&#9670;&#160;</a></span>ClearLastInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearLastInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00320">320</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a5d70b1e35da3781dc0e409643147cdd8_cgraph.png" border="0" usemap="#alogic_8c_a5d70b1e35da3781dc0e409643147cdd8_cgraph" alt=""/></div>
+<map name="alogic_8c_a5d70b1e35da3781dc0e409643147cdd8_cgraph" id="alogic_8c_a5d70b1e35da3781dc0e409643147cdd8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,110,83"/>
+<area shape="rect" href="logic_8c.html#a6c7782e193759b778f5add39176b0975" title=" " alt="" coords="171,5,312,32"/>
+<area shape="poly" title=" " alt="" coords="108,53,175,34,176,39,110,58"/>
+<area shape="rect" href="logic_8c.html#afd141353423c9fce837e2f56a10d810d" title=" " alt="" coords="158,56,325,83"/>
+<area shape="poly" title=" " alt="" coords="110,67,142,67,142,72,110,72"/>
+<area shape="rect" href="lcd_8c.html#a08b51cf41e7c0183ca5b469dd853a666" title="Clears the last character of a row." alt="" coords="179,107,304,133"/>
+<area shape="poly" title=" " alt="" coords="110,81,176,99,175,105,108,86"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="373,157,482,184"/>
+<area shape="poly" title=" " alt="" coords="294,131,362,150,361,155,293,137"/>
+<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="1089,183,1190,209"/>
+<area shape="poly" title=" " alt="" coords="299,103,426,79,501,70,577,67,754,67,805,70,856,78,953,106,1038,141,1102,172,1100,177,1036,146,951,111,854,83,804,75,754,72,577,72,502,76,427,85,300,109"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="530,233,627,260"/>
+<area shape="poly" title=" " alt="" coords="457,182,538,224,536,228,455,187"/>
+<area shape="poly" title=" " alt="" coords="483,170,1074,191,1074,196,483,175"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1393,309,1479,336"/>
+<area shape="poly" title=" " alt="" coords="592,258,627,294,650,313,676,328,751,358,813,370,877,372,959,371,1141,371,1204,367,1268,359,1377,336,1378,341,1269,364,1205,373,1141,376,959,376,877,377,812,375,749,363,673,333,647,317,623,298,589,262"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="675,259,831,285"/>
+<area shape="poly" title=" " alt="" coords="628,251,660,256,659,261,627,256"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="879,208,1041,235"/>
+<area shape="poly" title=" " alt="" coords="627,241,863,225,863,230,627,246"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1386,259,1485,285"/>
+<area shape="poly" title=" " alt="" coords="601,258,635,278,676,295,753,314,815,321,959,320,1141,320,1202,317,1263,309,1370,287,1371,292,1264,314,1203,322,1141,325,959,325,815,326,752,319,674,300,633,283,599,263"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1397,157,1475,184"/>
+<area shape="poly" title=" " alt="" coords="602,231,662,199,749,162,851,130,905,121,959,117,1141,117,1206,121,1272,130,1382,153,1381,159,1271,135,1206,126,1141,123,959,123,906,126,853,136,751,167,665,204,605,235"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1822,284,1917,311"/>
+<area shape="poly" title=" " alt="" coords="1479,318,1806,298,1806,304,1479,323"/>
+<area shape="poly" title=" " alt="" coords="810,255,887,236,888,242,811,261"/>
+<area shape="poly" title=" " alt="" coords="1041,207,1073,203,1074,208,1042,212"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1238,183,1338,209"/>
+<area shape="poly" title=" " alt="" coords="1190,193,1222,193,1222,199,1190,199"/>
+<area shape="poly" title=" " alt="" coords="1302,208,1338,250,1388,295,1393,299,1390,303,1384,299,1334,253,1298,212"/>
+<area shape="poly" title=" " alt="" coords="1317,208,1396,249,1393,253,1315,212"/>
+<area shape="poly" title=" " alt="" coords="1338,185,1381,177,1382,183,1339,190"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1533,259,1642,285"/>
+<area shape="poly" title=" " alt="" coords="1486,269,1518,269,1518,275,1486,275"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1690,259,1774,285"/>
+<area shape="poly" title=" " alt="" coords="1642,269,1674,269,1674,275,1642,275"/>
+<area shape="poly" title=" " alt="" coords="1775,277,1807,283,1806,288,1774,282"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a5d70b1e35da3781dc0e409643147cdd8_icgraph.png" border="0" usemap="#alogic_8c_a5d70b1e35da3781dc0e409643147cdd8_icgraph" alt=""/></div>
+<map name="alogic_8c_a5d70b1e35da3781dc0e409643147cdd8_icgraph" id="alogic_8c_a5d70b1e35da3781dc0e409643147cdd8_icgraph">
+<area shape="rect" title=" " alt="" coords="223,5,327,32"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="208,21,175,21,175,16,208,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3b107a1c86e52fc6f6312e077c76ac31" name="a3b107a1c86e52fc6f6312e077c76ac31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b107a1c86e52fc6f6312e077c76ac31">&#9670;&#160;</a></span>DisplayMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisplayMessage </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>message</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00332">332</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a3b107a1c86e52fc6f6312e077c76ac31_cgraph.png" border="0" usemap="#alogic_8c_a3b107a1c86e52fc6f6312e077c76ac31_cgraph" alt=""/></div>
+<map name="alogic_8c_a3b107a1c86e52fc6f6312e077c76ac31_cgraph" id="alogic_8c_a3b107a1c86e52fc6f6312e077c76ac31_cgraph">
+<area shape="rect" title=" " alt="" coords="5,257,123,284"/>
+<area shape="rect" href="lcd_8c.html#afb88b9aba1a1db09a517c5a1ffc07299" title="Prints a string to the LCD." alt="" coords="313,232,416,259"/>
+<area shape="poly" title=" " alt="" coords="123,263,297,248,298,254,123,268"/>
+<area shape="rect" href="logic_8c.html#a5a3be8027400af0c949033c8c86a4360" title=" " alt="" coords="171,283,265,309"/>
+<area shape="poly" title=" " alt="" coords="123,278,156,283,155,288,122,283"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="622,195,718,221"/>
+<area shape="poly" title=" " alt="" coords="417,236,606,213,607,218,417,242"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1484,119,1570,145"/>
+<area shape="poly" title=" " alt="" coords="717,191,766,180,907,159,1050,155,1232,155,1359,149,1468,137,1469,143,1359,154,1232,160,1050,160,908,164,766,185,718,197"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="766,195,922,221"/>
+<area shape="poly" title=" " alt="" coords="719,205,751,205,751,211,719,211"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="970,245,1133,272"/>
+<area shape="poly" title=" " alt="" coords="718,219,766,231,863,244,955,252,955,257,863,249,766,236,717,225"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1477,17,1577,44"/>
+<area shape="poly" title=" " alt="" coords="677,193,710,143,735,115,764,91,837,46,899,19,965,6,1050,3,1232,3,1355,8,1462,19,1462,25,1354,14,1232,8,1050,8,966,11,900,24,839,51,768,95,739,119,715,147,681,196"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1488,68,1566,95"/>
+<area shape="poly" title=" " alt="" coords="689,192,747,155,834,109,885,87,938,70,994,58,1050,53,1232,53,1362,60,1472,71,1472,77,1361,65,1232,59,1050,59,995,63,940,75,886,92,836,114,750,159,692,196"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1913,68,2009,95"/>
+<area shape="poly" title=" " alt="" coords="1570,124,1897,86,1898,91,1571,130"/>
+<area shape="poly" title=" " alt="" coords="903,219,980,238,978,244,901,225"/>
+<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="1181,271,1281,297"/>
+<area shape="poly" title=" " alt="" coords="1133,268,1166,272,1165,277,1133,273"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1329,93,1429,120"/>
+<area shape="poly" title=" " alt="" coords="1242,268,1355,130,1359,134,1246,272"/>
+<area shape="poly" title=" " alt="" coords="1430,113,1469,119,1468,125,1429,118"/>
+<area shape="poly" title=" " alt="" coords="1406,90,1484,49,1487,54,1408,95"/>
+<area shape="poly" title=" " alt="" coords="1429,95,1472,88,1473,93,1430,101"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1625,24,1733,51"/>
+<area shape="poly" title=" " alt="" coords="1577,30,1609,32,1609,37,1577,36"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1781,31,1865,57"/>
+<area shape="poly" title=" " alt="" coords="1733,37,1765,39,1765,44,1733,42"/>
+<area shape="poly" title=" " alt="" coords="1866,53,1899,62,1898,67,1865,58"/>
+<area shape="poly" title=" " alt="" coords="258,280,309,262,310,267,260,285"/>
+<area shape="poly" title=" " alt="" coords="259,307,374,339,445,352,518,357,845,357,936,352,1025,337,1106,318,1172,300,1174,305,1108,323,1026,342,936,357,846,363,518,363,445,357,373,345,257,312"/>
+<area shape="rect" href="logic_8c.html#ac4085c7ad6b8fe21141bebd8cfe7053a" title=" " alt="" coords="321,283,409,309"/>
+<area shape="poly" title=" " alt="" coords="266,293,305,293,305,299,266,299"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="464,283,574,309"/>
+<area shape="poly" title=" " alt="" coords="409,293,449,293,449,299,409,299"/>
+<area shape="poly" title=" " alt="" coords="542,280,631,227,633,232,545,285"/>
+<area shape="poly" title=" " alt="" coords="574,292,1165,282,1165,288,574,298"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7716334580813b0d2fddba5c31556836" name="a7716334580813b0d2fddba5c31556836"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7716334580813b0d2fddba5c31556836">&#9670;&#160;</a></span>GetKeyToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_token.html">Token</a> GetKeyToken </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_key_info.html">KeyInfo</a>&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa64d8084403040ad7f7f8045e075736" name="afa64d8084403040ad7f7f8045e075736"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa64d8084403040ad7f7f8045e075736">&#9670;&#160;</a></span>GetSpecialFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="keypad_8h.html#ac4837dcaa64e146bad0d3f315f7da1cc">SpecialKeyFunctions</a> GetSpecialFunction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_key_info.html">KeyInfo</a>&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00302">302</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_afa64d8084403040ad7f7f8045e075736_icgraph.png" border="0" usemap="#alogic_8c_afa64d8084403040ad7f7f8045e075736_icgraph" alt=""/></div>
+<map name="alogic_8c_afa64d8084403040ad7f7f8045e075736_icgraph" id="alogic_8c_afa64d8084403040ad7f7f8045e075736_icgraph">
+<area shape="rect" title=" " alt="" coords="370,5,506,32"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="354,21,175,21,175,16,354,16"/>
+<area shape="rect" href="logic_8c.html#ada037e06af8abdcc0382445b22466477" title=" " alt="" coords="223,31,322,57"/>
+<area shape="poly" title=" " alt="" coords="355,34,323,39,322,34,355,29"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="poly" title=" " alt="" coords="207,34,175,28,176,23,208,29"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a8468ead6b76c5ff5eb578a79fd591aa8" name="a8468ead6b76c5ff5eb578a79fd591aa8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8468ead6b76c5ff5eb578a79fd591aa8">&#9670;&#160;</a></span>InitAll()</h2>
 
@@ -132,76 +554,79 @@ Functions</h2></td></tr>
 
 <p>Initializes all components. </p>
 
-<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00006">6</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00074">74</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="logic_8c_a8468ead6b76c5ff5eb578a79fd591aa8_cgraph.png" border="0" usemap="#alogic_8c_a8468ead6b76c5ff5eb578a79fd591aa8_cgraph" alt=""/></div>
 <map name="alogic_8c_a8468ead6b76c5ff5eb578a79fd591aa8_cgraph" id="alogic_8c_a8468ead6b76c5ff5eb578a79fd591aa8_cgraph">
-<area shape="rect" title="Initializes all components." alt="" coords="5,107,59,133"/>
-<area shape="rect" href="clock_8c.html#ab89b66fae1f889e7a033bccd757a12de" title="Initializes the clock." alt="" coords="107,56,178,83"/>
-<area shape="poly" title=" " alt="" coords="58,106,97,87,99,92,60,110"/>
-<area shape="rect" href="keypad_8c.html#aa6981f604fdfbec491e21e90507ec0de" title="Initializes the keypad." alt="" coords="844,107,927,133"/>
-<area shape="poly" title=" " alt="" coords="59,117,288,117,603,117,829,117,829,123,603,123,288,123,59,123"/>
-<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="113,360,172,387"/>
-<area shape="poly" title=" " alt="" coords="42,133,132,345,127,347,37,135"/>
-<area shape="rect" href="clock_8c.html#a21cfe49b38d53efaf75df16d21ed882a" title="Initalizes the PLL to 80 MHz." alt="" coords="259,56,320,83"/>
-<area shape="poly" title=" " alt="" coords="179,67,243,67,243,72,179,72"/>
-<area shape="rect" href="clock_8c.html#a58cf193ae5c1f330e4868e32afb9445d" title="Initializes sys tick." alt="" coords="247,5,332,32"/>
-<area shape="poly" title=" " alt="" coords="178,55,233,35,235,40,179,60"/>
-<area shape="rect" href="ports_8c.html#a21efc6fa081c0b9c85eafe9d7455b9b6" title="Initiates Port D." alt="" coords="988,68,1059,95"/>
-<area shape="poly" title=" " alt="" coords="926,106,972,93,973,98,928,111"/>
-<area shape="rect" href="ports_8c.html#a2c10edb046a08d0f0d72d288c9c64dfc" title="Initiates Port E." alt="" coords="988,119,1059,145"/>
-<area shape="poly" title=" " alt="" coords="927,121,973,125,972,130,927,126"/>
-<area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="1119,195,1171,221"/>
-<area shape="poly" title=" " alt="" coords="1056,93,1073,105,1106,142,1131,180,1127,183,1102,145,1069,109,1053,97"/>
-<area shape="poly" title=" " alt="" coords="1048,144,1111,184,1108,188,1045,148"/>
-<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="407,360,493,387"/>
-<area shape="poly" title=" " alt="" coords="172,360,226,345,289,340,353,345,392,353,391,358,352,351,289,345,226,351,173,365"/>
-<area shape="rect" href="clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="411,512,489,539"/>
-<area shape="poly" title=" " alt="" coords="147,387,152,426,164,478,188,531,206,554,227,572,250,583,274,588,299,588,325,583,374,566,415,545,417,549,376,571,326,589,300,593,274,593,248,588,225,577,202,557,184,534,159,480,147,427,142,388"/>
-<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="232,512,347,539"/>
-<area shape="poly" title=" " alt="" coords="152,386,180,440,201,471,228,498,233,502,230,506,224,502,197,474,175,442,147,388"/>
-<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="548,284,656,311"/>
-<area shape="poly" title=" " alt="" coords="160,357,189,339,225,323,306,304,389,294,466,290,532,291,532,296,466,296,389,299,307,309,227,328,192,343,163,362"/>
-<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="411,461,489,488"/>
-<area shape="poly" title=" " alt="" coords="148,387,154,422,168,467,192,513,208,532,227,548,259,564,287,568,317,562,351,548,367,538,376,526,384,512,399,498,404,494,407,498,402,502,388,516,380,529,370,542,354,553,318,567,288,573,258,569,225,553,204,536,187,516,163,469,149,423,143,388"/>
-<area shape="rect" href="lcd_8c.html#aca04f0c025afbc86a0fedc553f3a8ba4" title="Controls the display, cursor, and blinking." alt="" coords="226,411,352,437"/>
-<area shape="poly" title=" " alt="" coords="173,381,235,403,233,408,172,386"/>
-<area shape="rect" href="lcd_8c.html#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" title="Sets the entry mode of the LCD." alt="" coords="227,360,352,387"/>
-<area shape="poly" title=" " alt="" coords="172,371,211,371,211,376,172,376"/>
-<area shape="rect" href="lcd_8c.html#a9b451fe57dbdfef32faf1d96b9d7dce4" title=" " alt="" coords="233,461,345,488"/>
-<area shape="poly" title=" " alt="" coords="158,385,188,416,228,447,236,452,233,457,224,452,184,420,154,389"/>
-<area shape="rect" href="ports_8c.html#a03c4992f00f155be0425086ad67578f2" title="Initiates Port A." alt="" coords="566,157,638,184"/>
-<area shape="poly" title=" " alt="" coords="143,359,150,326,165,282,189,237,205,217,224,200,264,178,307,163,351,153,396,149,482,150,551,158,551,163,481,155,397,154,352,159,308,168,266,183,228,205,209,221,193,240,170,284,155,327,148,360"/>
-<area shape="rect" href="ports_8c.html#aaebad24f567e2e1f53e6252fd325371a" title="Initiates Port B." alt="" coords="714,220,785,247"/>
-<area shape="poly" title=" " alt="" coords="151,358,181,323,201,305,225,291,287,266,353,248,420,235,486,227,607,223,699,226,699,231,607,228,487,233,421,241,354,253,289,271,227,296,205,310,184,327,155,362"/>
-<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="976,347,1071,373"/>
-<area shape="poly" title=" " alt="" coords="494,370,960,359,960,364,494,375"/>
-<area shape="poly" title=" " alt="" coords="1036,344,1069,308,1124,232,1129,235,1073,311,1040,348"/>
-<area shape="poly" title=" " alt="" coords="488,512,960,375,961,380,490,517"/>
-<area shape="poly" title=" " alt="" coords="347,523,396,523,396,528,347,528"/>
-<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="400,411,500,437"/>
-<area shape="poly" title=" " alt="" coords="330,509,351,498,365,485,375,473,384,461,399,447,404,443,407,448,402,451,388,464,379,477,369,489,354,502,333,514"/>
-<area shape="poly" title=" " alt="" coords="333,509,396,489,397,494,335,514"/>
-<area shape="poly" title=" " alt="" coords="480,408,498,397,542,358,578,320,582,324,546,362,501,401,483,412"/>
-<area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="704,284,795,311"/>
-<area shape="poly" title=" " alt="" coords="656,295,688,295,688,300,656,300"/>
-<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="843,284,928,311"/>
-<area shape="poly" title=" " alt="" coords="796,295,828,295,828,300,796,300"/>
-<area shape="poly" title=" " alt="" coords="928,288,996,274,1070,250,1111,227,1114,232,1072,254,997,279,929,293"/>
-<area shape="poly" title=" " alt="" coords="918,309,979,337,977,342,916,314"/>
-<area shape="poly" title=" " alt="" coords="333,407,391,389,393,394,335,413"/>
-<area shape="poly" title=" " alt="" coords="353,421,385,421,385,427,353,427"/>
-<area shape="poly" title=" " alt="" coords="335,435,397,455,396,460,333,441"/>
-<area shape="poly" title=" " alt="" coords="352,371,391,371,391,376,352,376"/>
-<area shape="poly" title=" " alt="" coords="335,385,391,403,390,408,333,390"/>
-<area shape="poly" title=" " alt="" coords="333,385,354,396,369,410,379,422,388,434,402,447,407,451,404,455,399,451,384,438,375,425,365,413,351,401,330,390"/>
-<area shape="poly" title=" " alt="" coords="330,458,351,447,365,435,375,423,384,410,399,397,404,393,407,397,402,401,388,414,379,426,369,438,354,452,333,463"/>
-<area shape="poly" title=" " alt="" coords="333,458,390,440,391,445,335,463"/>
-<area shape="poly" title=" " alt="" coords="346,472,395,472,395,477,346,477"/>
-<area shape="poly" title=" " alt="" coords="638,170,1071,199,1104,201,1103,207,1071,204,638,175"/>
-<area shape="poly" title=" " alt="" coords="786,228,1103,208,1104,213,786,234"/>
+<area shape="rect" title="Initializes all components." alt="" coords="5,208,59,235"/>
+<area shape="rect" href="clock_8c.html#ab89b66fae1f889e7a033bccd757a12de" title="Initializes the clock." alt="" coords="131,31,203,57"/>
+<area shape="poly" title=" " alt="" coords="34,207,56,142,77,102,105,67,116,59,119,63,109,71,81,105,61,144,39,209"/>
+<area shape="rect" href="flash_8c.html#a36a8e2cfd36cad487fc631562b25db83" title="Checks if flash data is read." alt="" coords="107,81,227,108"/>
+<area shape="poly" title=" " alt="" coords="38,206,64,163,83,139,105,118,111,114,114,118,108,122,87,143,68,166,43,209"/>
+<area shape="rect" href="flash_8c.html#ab165861d9848019963be1f879fb38173" title="Initializes flash storage." alt="" coords="132,132,202,159"/>
+<area shape="poly" title=" " alt="" coords="50,205,105,168,116,163,119,167,108,173,53,210"/>
+<area shape="rect" href="flash_8c.html#a43a3c0a9d8a7396326169b74b694cce2" title="Reads data from flash." alt="" coords="125,183,209,209"/>
+<area shape="poly" title=" " alt="" coords="58,214,110,204,111,209,59,219"/>
+<area shape="rect" href="flash_8c.html#a028e942d1bdb9290368370559c83eab0" title="Writes data to flash." alt="" coords="125,233,209,260"/>
+<area shape="poly" title=" " alt="" coords="59,224,110,233,109,239,58,229"/>
+<area shape="rect" href="keypad_8c.html#aa6981f604fdfbec491e21e90507ec0de" title="Initializes the keypad." alt="" coords="126,284,208,311"/>
+<area shape="poly" title=" " alt="" coords="53,233,108,270,118,275,115,279,105,274,50,238"/>
+<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="137,512,197,539"/>
+<area shape="poly" title=" " alt="" coords="42,234,156,496,151,498,37,236"/>
+<area shape="rect" href="parser_8c.html#ae23a18474f4d84e20fdcc9869d67b363" title="Initializes the parser." alt="" coords="129,563,205,589"/>
+<area shape="poly" title=" " alt="" coords="37,235,45,301,60,395,81,488,94,524,109,549,117,557,113,561,105,552,90,526,76,489,55,396,40,302,32,236"/>
+<area shape="rect" href="clock_8c.html#a21cfe49b38d53efaf75df16d21ed882a" title="Initalizes the PLL to 80 MHz." alt="" coords="308,56,369,83"/>
+<area shape="poly" title=" " alt="" coords="204,47,292,60,292,65,203,52"/>
+<area shape="rect" href="clock_8c.html#a58cf193ae5c1f330e4868e32afb9445d" title="Initializes sys tick." alt="" coords="296,5,381,32"/>
+<area shape="poly" title=" " alt="" coords="203,36,280,24,281,30,204,41"/>
+<area shape="rect" href="flash_8c.html#ab7c1a5c377d3f3d9156c5d3db6c95951" title="Erases flash." alt="" coords="295,183,382,209"/>
+<area shape="poly" title=" " alt="" coords="209,232,279,211,280,216,210,237"/>
+<area shape="rect" href="ports_8c.html#a21efc6fa081c0b9c85eafe9d7455b9b6" title="Initiates Port D." alt="" coords="303,284,374,311"/>
+<area shape="poly" title=" " alt="" coords="209,295,287,295,287,300,209,300"/>
+<area shape="rect" href="ports_8c.html#a2c10edb046a08d0f0d72d288c9c64dfc" title="Initiates Port E." alt="" coords="303,233,374,260"/>
+<area shape="poly" title=" " alt="" coords="208,283,287,259,288,264,209,288"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="456,689,542,716"/>
+<area shape="poly" title=" " alt="" coords="198,530,215,537,229,549,244,573,251,597,249,644,248,666,250,687,259,707,277,726,297,738,319,744,367,746,415,736,456,720,458,725,416,741,368,751,318,750,295,743,273,730,254,710,245,689,243,666,244,644,245,598,239,575,225,552,212,542,196,534"/>
+<area shape="rect" href="clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="460,436,538,463"/>
+<area shape="poly" title=" " alt="" coords="171,510,184,481,206,443,235,406,253,390,274,378,308,364,337,361,367,367,402,378,442,397,475,423,471,427,439,402,400,382,365,372,337,367,309,369,276,382,257,395,239,410,210,446,189,483,176,513"/>
+<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="281,436,396,463"/>
+<area shape="poly" title=" " alt="" coords="195,509,274,472,287,467,289,471,276,477,198,514"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="597,639,705,665"/>
+<area shape="poly" title=" " alt="" coords="198,529,214,537,229,549,246,577,252,605,252,632,249,659,246,684,248,709,257,732,277,754,311,776,343,788,374,791,405,786,437,776,471,762,547,726,589,701,623,674,626,678,592,706,550,730,473,766,439,781,406,792,374,796,342,793,308,781,273,758,252,735,242,710,241,684,243,658,247,632,247,605,241,579,225,552,212,541,196,534"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="460,588,538,615"/>
+<area shape="poly" title=" " alt="" coords="175,510,214,464,242,440,274,422,309,409,340,403,369,406,403,422,426,446,450,487,489,572,484,574,445,489,422,450,400,426,368,412,340,408,311,414,276,426,245,444,217,468,179,513"/>
+<area shape="rect" href="lcd_8c.html#aca04f0c025afbc86a0fedc553f3a8ba4" title="Controls the display, cursor, and blinking." alt="" coords="275,639,401,665"/>
+<area shape="poly" title=" " alt="" coords="198,531,229,549,245,568,253,588,261,606,277,625,282,629,279,633,273,629,257,609,248,590,241,571,225,553,196,536"/>
+<area shape="rect" href="lcd_8c.html#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" title="Sets the entry mode of the LCD." alt="" coords="276,689,401,716"/>
+<area shape="poly" title=" " alt="" coords="198,530,214,538,229,549,242,565,249,582,253,614,258,645,265,660,277,676,280,679,277,683,273,679,260,663,253,646,248,615,244,583,237,568,225,553,211,542,196,535"/>
+<area shape="rect" href="lcd_8c.html#a9b451fe57dbdfef32faf1d96b9d7dce4" title=" " alt="" coords="282,588,394,615"/>
+<area shape="poly" title=" " alt="" coords="198,535,228,548,276,574,288,579,286,584,274,578,226,553,196,540"/>
+<area shape="rect" href="ports_8c.html#a03c4992f00f155be0425086ad67578f2" title="Initiates Port A." alt="" coords="303,487,374,513"/>
+<area shape="poly" title=" " alt="" coords="197,518,287,505,288,510,198,524"/>
+<area shape="rect" href="ports_8c.html#aaebad24f567e2e1f53e6252fd325371a" title="Initiates Port B." alt="" coords="303,537,374,564"/>
+<area shape="poly" title=" " alt="" coords="198,527,288,541,287,546,197,532"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="885,639,981,665"/>
+<area shape="poly" title=" " alt="" coords="543,699,675,693,756,686,837,675,871,667,872,672,838,680,756,691,675,698,543,705"/>
+<area shape="poly" title=" " alt="" coords="531,461,890,629,888,634,529,466"/>
+<area shape="poly" title=" " alt="" coords="396,447,445,447,445,452,396,452"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="449,639,549,665"/>
+<area shape="poly" title=" " alt="" coords="388,461,403,473,418,493,425,512,429,550,432,587,439,605,451,625,453,627,449,631,447,628,434,608,427,588,424,550,420,513,413,495,399,477,385,465"/>
+<area shape="poly" title=" " alt="" coords="383,461,403,473,429,496,452,523,485,573,481,576,447,526,425,500,400,477,380,465"/>
+<area shape="poly" title=" " alt="" coords="549,649,581,649,581,655,549,655"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="753,639,837,665"/>
+<area shape="poly" title=" " alt="" coords="705,649,737,649,737,655,705,655"/>
+<area shape="poly" title=" " alt="" coords="838,649,870,649,870,655,838,655"/>
+<area shape="poly" title=" " alt="" coords="384,663,442,682,440,687,382,669"/>
+<area shape="poly" title=" " alt="" coords="402,649,434,649,434,655,402,655"/>
+<area shape="poly" title=" " alt="" coords="382,635,445,616,446,621,384,641"/>
+<area shape="poly" title=" " alt="" coords="401,700,440,700,440,705,401,705"/>
+<area shape="poly" title=" " alt="" coords="382,686,439,668,440,673,384,691"/>
+<area shape="poly" title=" " alt="" coords="379,686,400,675,414,663,424,651,433,638,448,625,453,621,456,625,451,629,437,642,428,654,418,666,403,680,382,691"/>
+<area shape="poly" title=" " alt="" coords="382,613,403,624,418,638,428,650,437,662,451,675,456,679,453,683,448,679,433,666,424,653,414,641,400,629,379,618"/>
+<area shape="poly" title=" " alt="" coords="384,613,440,631,439,636,382,618"/>
+<area shape="poly" title=" " alt="" coords="395,599,444,599,444,604,395,604"/>
 </map>
 </div>
 <div class="dynheader">
@@ -214,6 +639,1415 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a6c7782e193759b778f5add39176b0975" name="a6c7782e193759b778f5add39176b0975"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c7782e193759b778f5add39176b0975">&#9670;&#160;</a></span>IsCalculatorAvailable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsCalculatorAvailable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00294">294</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a6c7782e193759b778f5add39176b0975_icgraph.png" border="0" usemap="#alogic_8c_a6c7782e193759b778f5add39176b0975_icgraph" alt=""/></div>
+<map name="alogic_8c_a6c7782e193759b778f5add39176b0975_icgraph" id="alogic_8c_a6c7782e193759b778f5add39176b0975_icgraph">
+<area shape="rect" title=" " alt="" coords="550,31,690,57"/>
+<area shape="rect" href="logic_8c.html#a5d70b1e35da3781dc0e409643147cdd8" title=" " alt="" coords="388,5,493,32"/>
+<area shape="poly" title=" " alt="" coords="534,35,493,29,493,23,534,29"/>
+<area shape="rect" href="logic_8c.html#a89a9f339804050ddf172c87c288312a0" title=" " alt="" coords="379,56,502,83"/>
+<area shape="poly" title=" " alt="" coords="535,59,502,63,501,58,534,53"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,56,175,83"/>
+<area shape="poly" title=" " alt="" coords="373,26,301,34,224,47,176,60,175,54,222,41,300,29,373,21"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+<area shape="rect" href="logic_8c.html#ae7c44d3fc64010d1e217bea610c8536c" title=" " alt="" coords="223,56,331,83"/>
+<area shape="poly" title=" " alt="" coords="364,72,332,72,332,67,364,67"/>
+<area shape="rect" href="logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2" title=" " alt="" coords="240,107,315,133"/>
+<area shape="poly" title=" " alt="" coords="382,90,316,111,314,106,380,85"/>
+<area shape="poly" title=" " alt="" coords="207,72,175,72,175,67,207,67"/>
+<area shape="poly" title=" " alt="" coords="224,104,175,85,176,80,226,99"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afd141353423c9fce837e2f56a10d810d" name="afd141353423c9fce837e2f56a10d810d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd141353423c9fce837e2f56a10d810d">&#9670;&#160;</a></span>IsPasswordInputAvailable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsPasswordInputAvailable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00298">298</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_afd141353423c9fce837e2f56a10d810d_icgraph.png" border="0" usemap="#alogic_8c_afd141353423c9fce837e2f56a10d810d_icgraph" alt=""/></div>
+<map name="alogic_8c_afd141353423c9fce837e2f56a10d810d_icgraph" id="alogic_8c_afd141353423c9fce837e2f56a10d810d_icgraph">
+<area shape="rect" title=" " alt="" coords="550,31,717,57"/>
+<area shape="rect" href="logic_8c.html#a5d70b1e35da3781dc0e409643147cdd8" title=" " alt="" coords="388,5,493,32"/>
+<area shape="poly" title=" " alt="" coords="534,34,493,28,494,23,535,28"/>
+<area shape="rect" href="logic_8c.html#a89a9f339804050ddf172c87c288312a0" title=" " alt="" coords="379,56,502,83"/>
+<area shape="poly" title=" " alt="" coords="535,60,502,64,502,59,534,54"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,56,175,83"/>
+<area shape="poly" title=" " alt="" coords="373,26,301,34,224,47,176,60,175,54,222,41,300,29,373,21"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+<area shape="rect" href="logic_8c.html#ae7c44d3fc64010d1e217bea610c8536c" title=" " alt="" coords="223,56,331,83"/>
+<area shape="poly" title=" " alt="" coords="364,72,332,72,332,67,364,67"/>
+<area shape="rect" href="logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2" title=" " alt="" coords="240,107,315,133"/>
+<area shape="poly" title=" " alt="" coords="382,90,316,111,314,106,380,85"/>
+<area shape="poly" title=" " alt="" coords="207,72,175,72,175,67,207,67"/>
+<area shape="poly" title=" " alt="" coords="224,104,175,85,176,80,226,99"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="add896c9f31faac13d33591bf86e4aeea" name="add896c9f31faac13d33591bf86e4aeea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add896c9f31faac13d33591bf86e4aeea">&#9670;&#160;</a></span>MapFunctions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapFunctions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="keypad_8h.html#ac4837dcaa64e146bad0d3f315f7da1cc">SpecialKeyFunctions</a>&#160;</td>
+          <td class="paramname"><em>function</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42669da2ad9ca71aae1bd5805b2c7c98" name="a42669da2ad9ca71aae1bd5805b2c7c98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42669da2ad9ca71aae1bd5805b2c7c98">&#9670;&#160;</a></span>PasswordMatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PasswordMatch </td>
+          <td>(</td>
+          <td class="paramtype">charList&#160;</td>
+          <td class="paramname"><em>password</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00362">362</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a42669da2ad9ca71aae1bd5805b2c7c98_icgraph.png" border="0" usemap="#alogic_8c_a42669da2ad9ca71aae1bd5805b2c7c98_icgraph" alt=""/></div>
+<map name="alogic_8c_a42669da2ad9ca71aae1bd5805b2c7c98_icgraph" id="alogic_8c_a42669da2ad9ca71aae1bd5805b2c7c98_icgraph">
+<area shape="rect" title=" " alt="" coords="346,5,461,32"/>
+<area shape="rect" href="logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2" title=" " alt="" coords="223,5,298,32"/>
+<area shape="poly" title=" " alt="" coords="331,21,299,21,299,16,331,16"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="208,21,176,21,176,16,208,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abe7dcc508ace168bbcddb296203a1886" name="abe7dcc508ace168bbcddb296203a1886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe7dcc508ace168bbcddb296203a1886">&#9670;&#160;</a></span>PrintData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrintData </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isToken</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00337">337</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_abe7dcc508ace168bbcddb296203a1886_cgraph.png" border="0" usemap="#alogic_8c_abe7dcc508ace168bbcddb296203a1886_cgraph" alt=""/></div>
+<map name="alogic_8c_abe7dcc508ace168bbcddb296203a1886_cgraph" id="alogic_8c_abe7dcc508ace168bbcddb296203a1886_cgraph">
+<area shape="rect" title=" " alt="" coords="5,17,81,44"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="129,68,225,95"/>
+<area shape="poly" title=" " alt="" coords="81,42,126,60,125,65,80,47"/>
+<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="688,61,788,88"/>
+<area shape="poly" title=" " alt="" coords="81,26,178,24,317,24,477,30,640,47,678,54,677,59,639,52,477,36,317,29,179,29,81,32"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="991,169,1077,196"/>
+<area shape="poly" title=" " alt="" coords="191,93,225,129,248,148,274,163,349,192,411,204,475,206,557,205,739,205,866,199,975,188,976,193,866,205,739,211,557,211,475,212,410,210,348,197,272,168,245,152,222,133,187,97"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="273,93,429,120"/>
+<area shape="poly" title=" " alt="" coords="226,86,259,90,258,96,225,91"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="477,61,640,88"/>
+<area shape="poly" title=" " alt="" coords="225,78,462,74,462,79,225,83"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="984,119,1084,145"/>
+<area shape="poly" title=" " alt="" coords="200,93,233,113,274,129,351,149,413,156,557,155,739,155,861,149,969,138,969,143,862,154,739,160,557,160,413,161,350,154,272,135,231,117,197,97"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="995,43,1073,69"/>
+<area shape="poly" title=" " alt="" coords="219,65,283,46,367,26,461,9,557,3,739,3,805,6,870,15,980,39,979,44,869,20,804,12,739,8,557,8,462,15,368,31,285,51,220,70"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1420,144,1516,171"/>
+<area shape="poly" title=" " alt="" coords="1077,178,1404,158,1405,164,1078,183"/>
+<area shape="poly" title=" " alt="" coords="429,92,461,87,462,92,430,97"/>
+<area shape="poly" title=" " alt="" coords="640,72,672,72,672,77,640,77"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="836,73,936,100"/>
+<area shape="poly" title=" " alt="" coords="789,76,821,79,820,84,788,81"/>
+<area shape="poly" title=" " alt="" coords="906,98,986,155,993,160,990,164,983,160,903,103"/>
+<area shape="poly" title=" " alt="" coords="933,98,974,111,973,116,931,103"/>
+<area shape="poly" title=" " alt="" coords="936,74,979,65,980,70,937,79"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1132,119,1240,145"/>
+<area shape="poly" title=" " alt="" coords="1084,129,1116,129,1116,135,1084,135"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1288,119,1372,145"/>
+<area shape="poly" title=" " alt="" coords="1240,129,1272,129,1272,135,1240,135"/>
+<area shape="poly" title=" " alt="" coords="1373,137,1406,143,1405,148,1372,142"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_abe7dcc508ace168bbcddb296203a1886_icgraph.png" border="0" usemap="#alogic_8c_abe7dcc508ace168bbcddb296203a1886_icgraph" alt=""/></div>
+<map name="alogic_8c_abe7dcc508ace168bbcddb296203a1886_icgraph" id="alogic_8c_abe7dcc508ace168bbcddb296203a1886_icgraph">
+<area shape="rect" title=" " alt="" coords="550,31,625,57"/>
+<area shape="rect" href="logic_8c.html#a89a9f339804050ddf172c87c288312a0" title=" " alt="" coords="379,31,502,57"/>
+<area shape="poly" title=" " alt="" coords="534,47,502,47,502,41,534,41"/>
+<area shape="rect" href="logic_8c.html#ae7c44d3fc64010d1e217bea610c8536c" title=" " alt="" coords="223,5,331,32"/>
+<area shape="poly" title=" " alt="" coords="363,35,331,30,332,24,364,29"/>
+<area shape="rect" href="logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2" title=" " alt="" coords="240,56,315,83"/>
+<area shape="poly" title=" " alt="" coords="365,58,316,66,315,61,364,53"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,31,175,57"/>
+<area shape="poly" title=" " alt="" coords="208,34,176,40,175,35,207,29"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="poly" title=" " alt="" coords="224,62,175,53,176,48,225,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae7c44d3fc64010d1e217bea610c8536c" name="ae7c44d3fc64010d1e217bea610c8536c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7c44d3fc64010d1e217bea610c8536c">&#9670;&#160;</a></span>RefreshDisplay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RefreshDisplay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00288">288</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_ae7c44d3fc64010d1e217bea610c8536c_cgraph.png" border="0" usemap="#alogic_8c_ae7c44d3fc64010d1e217bea610c8536c_cgraph" alt=""/></div>
+<map name="alogic_8c_ae7c44d3fc64010d1e217bea610c8536c_cgraph" id="alogic_8c_ae7c44d3fc64010d1e217bea610c8536c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,93,114,120"/>
+<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="1397,195,1512,221"/>
+<area shape="poly" title=" " alt="" coords="83,90,133,65,201,36,281,12,322,5,364,3,1121,3,1171,8,1220,23,1267,45,1310,71,1383,130,1433,181,1430,185,1379,134,1307,76,1264,49,1218,28,1170,13,1121,8,364,8,323,11,282,18,203,41,135,70,86,95"/>
+<area shape="rect" href="logic_8c.html#a89a9f339804050ddf172c87c288312a0" title=" " alt="" coords="304,93,426,120"/>
+<area shape="poly" title=" " alt="" coords="114,104,288,104,288,109,114,109"/>
+<area shape="rect" href="logic_8c.html#a5a3be8027400af0c949033c8c86a4360" title=" " alt="" coords="162,232,256,259"/>
+<area shape="poly" title=" " alt="" coords="77,119,184,219,180,223,74,122"/>
+<area shape="rect" href="clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="1723,220,1801,247"/>
+<area shape="poly" title=" " alt="" coords="1513,210,1708,226,1707,232,1513,215"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1560,296,1660,323"/>
+<area shape="poly" title=" " alt="" coords="1475,220,1562,282,1569,286,1566,291,1559,286,1472,224"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1571,245,1649,272"/>
+<area shape="poly" title=" " alt="" coords="1499,219,1557,239,1555,244,1497,225"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1996,296,2092,323"/>
+<area shape="poly" title=" " alt="" coords="1802,241,1982,290,1981,295,1800,246"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1708,296,1816,323"/>
+<area shape="poly" title=" " alt="" coords="1660,307,1692,307,1692,312,1660,312"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1864,296,1948,323"/>
+<area shape="poly" title=" " alt="" coords="1816,307,1848,307,1848,312,1816,312"/>
+<area shape="poly" title=" " alt="" coords="1949,307,1981,307,1981,312,1949,312"/>
+<area shape="rect" href="logic_8c.html#a6c7782e193759b778f5add39176b0975" title=" " alt="" coords="488,93,628,120"/>
+<area shape="poly" title=" " alt="" coords="427,104,472,104,472,109,427,109"/>
+<area shape="rect" href="logic_8c.html#afd141353423c9fce837e2f56a10d810d" title=" " alt="" coords="474,43,642,69"/>
+<area shape="poly" title=" " alt="" coords="418,90,489,71,490,76,420,95"/>
+<area shape="rect" href="logic_8c.html#abe7dcc508ace168bbcddb296203a1886" title=" " alt="" coords="520,144,596,171"/>
+<area shape="poly" title=" " alt="" coords="420,118,506,141,505,146,418,123"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="690,347,786,373"/>
+<area shape="poly" title=" " alt="" coords="574,170,717,333,713,337,570,173"/>
+<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="1249,296,1349,323"/>
+<area shape="poly" title=" " alt="" coords="596,147,704,130,778,123,859,119,946,122,1034,133,1120,154,1202,187,1230,206,1253,231,1286,280,1282,283,1249,234,1226,210,1199,192,1119,159,1033,138,945,128,859,125,778,128,705,135,596,152"/>
+<area shape="poly" title=" " alt="" coords="753,372,788,404,810,421,835,434,911,457,973,464,1118,459,1300,459,1336,444,1409,409,1568,328,1570,332,1411,414,1338,449,1301,464,1118,464,973,469,910,463,833,438,807,425,784,408,749,376"/>
+<area shape="poly" title=" " alt="" coords="768,344,831,318,917,289,1016,266,1067,259,1118,256,1300,256,1555,256,1555,261,1300,261,1118,261,1068,264,1017,271,918,295,833,323,770,349"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1567,347,1653,373"/>
+<area shape="poly" title=" " alt="" coords="748,372,780,426,805,455,835,478,874,497,908,508,940,515,970,516,1036,513,1118,509,1300,509,1411,511,1457,503,1511,478,1537,458,1560,434,1593,386,1597,389,1564,438,1541,462,1514,482,1459,508,1411,516,1300,515,1118,515,1036,518,970,522,939,520,907,514,872,502,833,482,801,458,775,429,743,375"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="834,397,990,424"/>
+<area shape="poly" title=" " alt="" coords="787,371,850,390,848,395,786,377"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="1038,347,1201,373"/>
+<area shape="poly" title=" " alt="" coords="786,357,1023,357,1023,363,786,363"/>
+<area shape="poly" title=" " alt="" coords="1654,357,1786,350,1867,343,1948,332,1982,325,1983,330,1949,337,1867,348,1786,356,1654,362"/>
+<area shape="poly" title=" " alt="" coords="969,394,1046,375,1048,380,971,399"/>
+<area shape="poly" title=" " alt="" coords="1169,343,1234,325,1235,330,1170,349"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1405,296,1505,323"/>
+<area shape="poly" title=" " alt="" coords="1349,307,1389,307,1389,312,1349,312"/>
+<area shape="poly" title=" " alt="" coords="1505,307,1545,307,1545,312,1505,312"/>
+<area shape="poly" title=" " alt="" coords="1497,293,1555,274,1557,279,1499,298"/>
+<area shape="poly" title=" " alt="" coords="1499,321,1553,339,1551,344,1497,326"/>
+<area shape="poly" title=" " alt="" coords="256,234,391,216,473,208,557,205,914,205,962,208,1010,214,1105,235,1189,262,1254,287,1252,292,1187,267,1103,240,1010,219,961,213,913,211,557,211,474,214,391,221,257,240"/>
+<area shape="rect" href="lcd_8c.html#afb88b9aba1a1db09a517c5a1ffc07299" title="Prints a string to the LCD." alt="" coords="314,321,417,348"/>
+<area shape="poly" title=" " alt="" coords="230,257,305,307,315,312,313,317,303,312,227,261"/>
+<area shape="rect" href="logic_8c.html#ac4085c7ad6b8fe21141bebd8cfe7053a" title=" " alt="" coords="321,271,409,297"/>
+<area shape="poly" title=" " alt="" coords="257,254,306,267,305,272,256,260"/>
+<area shape="poly" title=" " alt="" coords="417,335,674,353,674,358,417,341"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="503,296,613,323"/>
+<area shape="poly" title=" " alt="" coords="410,287,488,298,487,303,409,292"/>
+<area shape="poly" title=" " alt="" coords="609,321,675,340,674,345,607,326"/>
+<area shape="poly" title=" " alt="" coords="613,307,1233,307,1233,312,613,312"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_ae7c44d3fc64010d1e217bea610c8536c_icgraph.png" border="0" usemap="#alogic_8c_ae7c44d3fc64010d1e217bea610c8536c_icgraph" alt=""/></div>
+<map name="alogic_8c_ae7c44d3fc64010d1e217bea610c8536c_icgraph" id="alogic_8c_ae7c44d3fc64010d1e217bea610c8536c_icgraph">
+<area shape="rect" title=" " alt="" coords="223,5,331,32"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="207,21,175,21,175,16,207,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5f7f7893415d86a5a8348472dbdd0541" name="a5f7f7893415d86a5a8348472dbdd0541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f7f7893415d86a5a8348472dbdd0541">&#9670;&#160;</a></span>RunCalculator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RunCalculator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00123">123</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a5f7f7893415d86a5a8348472dbdd0541_cgraph.png" border="0" usemap="#alogic_8c_a5f7f7893415d86a5a8348472dbdd0541_cgraph" alt=""/></div>
+<map name="alogic_8c_a5f7f7893415d86a5a8348472dbdd0541_cgraph" id="alogic_8c_a5f7f7893415d86a5a8348472dbdd0541_cgraph">
+<area shape="rect" title=" " alt="" coords="5,640,108,667"/>
+<area shape="rect" href="logic_8c.html#af6da8071dabf2ebd36d99de9f70e5dce" title=" " alt="" coords="164,296,258,323"/>
+<area shape="poly" title=" " alt="" coords="62,638,195,336,200,338,66,640"/>
+<area shape="rect" href="lcd_8c.html#afb88b9aba1a1db09a517c5a1ffc07299" title="Prints a string to the LCD." alt="" coords="325,169,428,196"/>
+<area shape="poly" title=" " alt="" coords="55,639,57,577,69,483,81,431,98,378,122,328,154,282,188,251,228,226,269,207,309,194,310,199,271,212,230,231,191,255,158,286,127,330,103,380,86,432,74,484,62,577,60,639"/>
+<area shape="rect" href="parser_8c.html#a19203c96ed6922e7092af10b63e6d298" title="Compiles the tokens and returns the result." alt="" coords="158,581,264,608"/>
+<area shape="poly" title=" " alt="" coords="93,637,159,612,161,616,95,642"/>
+<area shape="rect" href="parser_8c.html#a07f87b9f5b24c331fddb0a3d57abfecf" title="Ends the input." alt="" coords="156,665,266,692"/>
+<area shape="poly" title=" " alt="" coords="108,659,141,665,140,670,107,664"/>
+<area shape="rect" href="parser_8c.html#aa19b910e23df23ebe5f189f93c97afdd" title="Pushes new token to the parser can be used after calling." alt="" coords="314,749,438,776"/>
+<area shape="poly" title=" " alt="" coords="82,665,157,702,230,726,300,744,298,749,228,731,155,706,80,670"/>
+<area shape="rect" href="parser_8c.html#a1715c490f05c2ddcb8d526684468f885" title="Calls." alt="" coords="164,767,258,793"/>
+<area shape="poly" title=" " alt="" coords="72,665,109,703,157,746,172,756,169,761,154,750,105,707,68,669"/>
+<area shape="rect" href="lcd_8c.html#aa0130791fdcab8f2263be12fb00a031d" title="Clears a row." alt="" coords="328,245,425,272"/>
+<area shape="poly" title=" " alt="" coords="256,293,315,275,317,280,258,298"/>
+<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="1052,144,1152,171"/>
+<area shape="poly" title=" " alt="" coords="258,307,533,307,710,307,763,303,816,292,868,277,917,258,1004,215,1067,177,1070,182,1006,220,919,263,870,282,817,298,764,308,710,312,533,312,258,312"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="486,144,583,171"/>
+<area shape="poly" title=" " alt="" coords="397,243,498,177,501,182,400,247"/>
+<area shape="poly" title=" " alt="" coords="425,252,671,227,833,206,997,180,1036,172,1037,177,998,185,834,212,671,233,425,257"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1362,169,1448,196"/>
+<area shape="poly" title=" " alt="" coords="582,169,631,180,772,201,915,205,1103,205,1234,199,1346,188,1347,193,1234,205,1103,211,915,211,772,206,630,185,581,174"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="631,144,787,171"/>
+<area shape="poly" title=" " alt="" coords="583,155,615,155,615,160,583,160"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="835,144,997,171"/>
+<area shape="poly" title=" " alt="" coords="578,141,630,129,709,123,787,129,843,138,842,143,787,135,709,129,631,135,579,146"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1355,68,1454,95"/>
+<area shape="poly" title=" " alt="" coords="545,142,579,104,603,84,629,67,704,31,767,12,832,4,915,3,1103,3,1174,8,1243,23,1306,41,1357,59,1356,64,1305,46,1242,28,1173,14,1103,8,915,8,832,10,768,17,706,36,632,72,606,88,583,108,548,145"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1366,119,1444,145"/>
+<area shape="poly" title=" " alt="" coords="558,141,592,124,630,108,708,82,770,65,833,56,915,53,1103,53,1174,59,1243,73,1306,92,1357,110,1356,115,1305,97,1242,78,1173,64,1103,59,915,59,834,61,771,71,709,87,632,113,594,129,561,146"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1791,119,1886,145"/>
+<area shape="poly" title=" " alt="" coords="1448,175,1775,137,1776,142,1448,180"/>
+<area shape="poly" title=" " alt="" coords="788,155,820,155,820,160,788,160"/>
+<area shape="poly" title=" " alt="" coords="998,155,1036,155,1036,160,998,160"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1207,144,1307,171"/>
+<area shape="poly" title=" " alt="" coords="1153,155,1191,155,1191,160,1153,160"/>
+<area shape="poly" title=" " alt="" coords="1308,163,1347,170,1346,175,1307,169"/>
+<area shape="poly" title=" " alt="" coords="1284,141,1362,100,1365,105,1286,146"/>
+<area shape="poly" title=" " alt="" coords="1307,146,1350,139,1351,144,1308,151"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1502,75,1611,101"/>
+<area shape="poly" title=" " alt="" coords="1455,81,1487,82,1487,88,1455,86"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1659,81,1743,108"/>
+<area shape="poly" title=" " alt="" coords="1611,88,1643,89,1643,95,1611,93"/>
+<area shape="poly" title=" " alt="" coords="1744,104,1777,112,1775,118,1743,109"/>
+<area shape="poly" title=" " alt="" coords="428,172,470,165,471,170,429,177"/>
+<area shape="rect" href="parser_8c.html#a7f8aeab74e49ee2b275a7575e8d7b5e8" title="Eats the next token." alt="" coords="1050,675,1154,701"/>
+<area shape="poly" title=" " alt="" coords="252,606,487,687,627,730,685,744,740,753,795,756,854,753,920,745,997,731,1031,720,1062,707,1064,711,1033,725,998,736,921,750,854,759,795,761,739,758,684,749,626,735,486,692,250,611"/>
+<area shape="rect" href="parser_8c.html#ab427a20c59c9ca0b11c82660752df62a" title="Parses arithematic expression." alt="" coords="316,516,436,543"/>
+<area shape="poly" title=" " alt="" coords="246,578,325,546,327,551,248,583"/>
+<area shape="rect" href="parser_8c.html#a73bf16a41122c7751670f74fd415a36c" title="Peeks next token." alt="" coords="1045,472,1159,499"/>
+<area shape="poly" title=" " alt="" coords="219,579,261,523,293,487,332,449,376,414,425,385,477,365,533,357,710,357,762,360,813,369,912,396,999,431,1064,462,1061,467,997,435,911,401,812,374,761,366,710,363,533,363,479,370,427,390,379,419,335,453,297,491,265,527,223,582"/>
+<area shape="poly" title=" " alt="" coords="392,541,430,577,486,623,555,668,593,687,631,701,685,714,740,722,850,724,952,715,1034,701,1035,706,953,720,850,729,739,727,684,720,630,707,591,692,552,673,483,627,426,581,389,545"/>
+<area shape="rect" href="parser_8c.html#ab942fe3a63fed3190c76e55ebc76e5aa" title="Parses bracket expression." alt="" coords="866,523,966,549"/>
+<area shape="poly" title=" " alt="" coords="437,533,642,539,851,539,851,544,642,544,436,539"/>
+<area shape="poly" title=" " alt="" coords="423,513,486,499,637,482,788,476,924,476,1030,479,1030,484,924,481,788,481,637,488,487,504,424,518"/>
+<area shape="rect" href="parser_8c.html#a5656fb9995d62b96c08bfef4789ee4db" title="Parses term tokens." alt="" coords="492,573,577,600"/>
+<area shape="poly" title=" " alt="" coords="416,541,482,565,480,570,414,546"/>
+<area shape="poly" title=" " alt="" coords="935,547,1074,663,1071,667,932,552"/>
+<area shape="poly" title=" " alt="" coords="865,533,665,527,452,526,452,521,665,521,866,527"/>
+<area shape="poly" title=" " alt="" coords="966,520,1035,501,1036,506,967,525"/>
+<area shape="poly" title=" " alt="" coords="550,598,584,631,607,648,632,660,684,677,738,689,849,700,951,700,1034,694,1035,699,951,706,848,706,738,694,683,682,630,665,604,652,581,635,546,602"/>
+<area shape="poly" title=" " alt="" coords="577,579,787,552,850,543,851,548,787,557,578,584"/>
+<area shape="poly" title=" " alt="" coords="573,570,630,552,731,526,835,508,937,495,1030,487,1030,492,937,501,835,513,733,531,631,557,575,575"/>
+<area shape="rect" href="parser_8c.html#a55bde1715e6e77addb80a046c96f059d" title="Parses only number tokens." alt="" coords="659,624,759,651"/>
+<area shape="poly" title=" " alt="" coords="578,596,647,617,645,622,576,601"/>
+<area shape="poly" title=" " alt="" coords="760,639,998,667,1035,673,1034,678,997,672,759,644"/>
+<area shape="poly" title=" " alt="" coords="748,621,786,603,809,585,834,566,858,553,861,558,836,570,813,589,788,608,750,626"/>
+<area shape="poly" title=" " alt="" coords="759,627,870,604,934,584,996,559,1038,534,1073,507,1076,511,1041,538,999,564,936,589,871,609,760,633"/>
+<area shape="poly" title=" " alt="" coords="240,690,336,740,333,744,238,695"/>
+<area shape="rect" href="parser_8c.html#a9264a889771bffb6e9bb7215c8402eda" title="Stops the parser and clears all tokens." alt="" coords="333,800,419,827"/>
+<area shape="poly" title=" " alt="" coords="258,787,319,799,318,804,257,792"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a5f7f7893415d86a5a8348472dbdd0541_icgraph.png" border="0" usemap="#alogic_8c_a5f7f7893415d86a5a8348472dbdd0541_icgraph" alt=""/></div>
+<map name="alogic_8c_a5f7f7893415d86a5a8348472dbdd0541_icgraph" id="alogic_8c_a5f7f7893415d86a5a8348472dbdd0541_icgraph">
+<area shape="rect" title=" " alt="" coords="223,5,325,32"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="208,21,176,21,176,16,208,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aee8c17e4c2f0d1376f21780a1199b97c" name="aee8c17e4c2f0d1376f21780a1199b97c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee8c17e4c2f0d1376f21780a1199b97c">&#9670;&#160;</a></span>RunChangePassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RunChangePassword </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00226">226</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_aee8c17e4c2f0d1376f21780a1199b97c_cgraph.png" border="0" usemap="#alogic_8c_aee8c17e4c2f0d1376f21780a1199b97c_cgraph" alt=""/></div>
+<map name="alogic_8c_aee8c17e4c2f0d1376f21780a1199b97c_cgraph" id="alogic_8c_aee8c17e4c2f0d1376f21780a1199b97c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,94,151,121"/>
+<area shape="rect" href="clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="1531,94,1609,121"/>
+<area shape="poly" title=" " alt="" coords="94,92,139,59,168,43,198,29,250,13,293,5,391,4,1260,4,1299,6,1338,12,1414,33,1480,59,1532,84,1530,89,1478,64,1412,38,1337,17,1299,11,1260,9,391,9,293,11,251,18,200,34,170,47,142,64,97,96"/>
+<area shape="rect" href="flash_8c.html#a028e942d1bdb9290368370559c83eab0" title="Writes data to flash." alt="" coords="204,44,288,70"/>
+<area shape="poly" title=" " alt="" coords="124,91,188,72,189,77,126,96"/>
+<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="1357,94,1472,121"/>
+<area shape="poly" title=" " alt="" coords="151,105,391,105,1081,105,1342,105,1342,110,1081,110,391,110,151,110"/>
+<area shape="rect" href="lcd_8c.html#afb88b9aba1a1db09a517c5a1ffc07299" title="Prints a string to the LCD." alt="" coords="341,272,444,298"/>
+<area shape="poly" title=" " alt="" coords="105,119,355,261,353,266,102,124"/>
+<area shape="rect" href="logic_8c.html#a5a3be8027400af0c949033c8c86a4360" title=" " alt="" coords="199,334,293,361"/>
+<area shape="poly" title=" " alt="" coords="91,120,229,320,224,323,87,123"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1956,145,2052,172"/>
+<area shape="poly" title=" " alt="" coords="1609,106,1742,112,1825,119,1909,130,1943,138,1942,143,1908,136,1825,124,1742,117,1609,111"/>
+<area shape="rect" href="flash_8c.html#ab7c1a5c377d3f3d9156c5d3db6c95951" title="Erases flash." alt="" coords="349,44,436,70"/>
+<area shape="poly" title=" " alt="" coords="288,54,333,54,333,60,288,60"/>
+<area shape="poly" title=" " alt="" coords="1473,105,1516,105,1516,110,1473,110"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1520,145,1620,172"/>
+<area shape="poly" title=" " alt="" coords="1459,119,1513,137,1511,142,1457,124"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1531,196,1609,222"/>
+<area shape="poly" title=" " alt="" coords="1435,119,1522,181,1529,186,1526,190,1519,186,1432,124"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1668,145,1776,172"/>
+<area shape="poly" title=" " alt="" coords="1620,156,1652,156,1652,161,1620,161"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1824,145,1908,172"/>
+<area shape="poly" title=" " alt="" coords="1776,156,1808,156,1808,161,1776,161"/>
+<area shape="poly" title=" " alt="" coords="1909,156,1941,156,1941,161,1909,161"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="650,272,746,298"/>
+<area shape="poly" title=" " alt="" coords="445,282,634,282,634,288,445,288"/>
+<area shape="poly" title=" " alt="" coords="713,269,748,242,793,216,869,185,932,166,996,158,1078,156,1260,156,1505,156,1505,161,1260,161,1078,161,996,163,933,172,871,190,795,221,751,246,716,273"/>
+<area shape="poly" title=" " alt="" coords="740,269,804,250,888,229,982,213,1078,206,1260,206,1515,206,1515,212,1260,212,1078,212,983,218,889,234,806,255,741,274"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1527,246,1613,273"/>
+<area shape="poly" title=" " alt="" coords="746,282,1472,282,1511,275,1512,280,1473,288,746,288"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="794,297,950,324"/>
+<area shape="poly" title=" " alt="" coords="747,289,780,294,779,299,746,295"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="998,348,1161,374"/>
+<area shape="poly" title=" " alt="" coords="721,297,754,316,795,333,842,345,891,352,983,359,983,365,890,358,841,350,793,338,752,321,718,301"/>
+<area shape="poly" title=" " alt="" coords="1613,248,1908,181,1941,173,1942,178,1909,186,1614,253"/>
+<area shape="poly" title=" " alt="" coords="931,322,1008,341,1006,346,929,327"/>
+<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="1209,373,1309,400"/>
+<area shape="poly" title=" " alt="" coords="1161,370,1194,375,1193,380,1161,375"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1365,246,1465,273"/>
+<area shape="poly" title=" " alt="" coords="1275,371,1383,281,1387,285,1278,375"/>
+<area shape="poly" title=" " alt="" coords="1432,244,1519,181,1526,177,1529,182,1522,186,1435,248"/>
+<area shape="poly" title=" " alt="" coords="1457,243,1515,224,1517,229,1459,248"/>
+<area shape="poly" title=" " alt="" coords="1465,257,1511,257,1511,262,1465,262"/>
+<area shape="poly" title=" " alt="" coords="278,331,345,302,347,307,280,336"/>
+<area shape="poly" title=" " alt="" coords="287,359,402,391,473,404,546,409,873,409,1047,403,1193,391,1194,396,1047,408,874,414,546,414,473,409,401,396,285,364"/>
+<area shape="rect" href="logic_8c.html#ac4085c7ad6b8fe21141bebd8cfe7053a" title=" " alt="" coords="349,449,437,476"/>
+<area shape="poly" title=" " alt="" coords="263,359,343,428,357,438,354,443,339,432,259,363"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="492,449,602,476"/>
+<area shape="poly" title=" " alt="" coords="437,460,477,460,477,465,437,465"/>
+<area shape="poly" title=" " alt="" coords="558,447,673,309,677,312,562,450"/>
+<area shape="poly" title=" " alt="" coords="602,464,707,467,846,466,1003,455,1083,444,1160,428,1191,418,1219,405,1222,410,1193,423,1161,433,1084,449,1004,460,846,472,707,473,602,469"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_aee8c17e4c2f0d1376f21780a1199b97c_icgraph.png" border="0" usemap="#alogic_8c_aee8c17e4c2f0d1376f21780a1199b97c_icgraph" alt=""/></div>
+<map name="alogic_8c_aee8c17e4c2f0d1376f21780a1199b97c_icgraph" id="alogic_8c_aee8c17e4c2f0d1376f21780a1199b97c_icgraph">
+<area shape="rect" title=" " alt="" coords="223,5,368,32"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="207,21,176,21,176,16,207,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa8bcdda49c0758a44d7cfad4e6d8cd1b" name="aa8bcdda49c0758a44d7cfad4e6d8cd1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8bcdda49c0758a44d7cfad4e6d8cd1b">&#9670;&#160;</a></span>RunChangePasswordModule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RunChangePasswordModule </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00454">454</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+
+</div>
+</div>
+<a id="a7e4766166af50627baf168343eef03b1" name="a7e4766166af50627baf168343eef03b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e4766166af50627baf168343eef03b1">&#9670;&#160;</a></span>RunGraphModule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RunGraphModule </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00463">463</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+
+</div>
+</div>
+<a id="a15058a20857a8a4d38fa4ab72109a9e2" name="a15058a20857a8a4d38fa4ab72109a9e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15058a20857a8a4d38fa4ab72109a9e2">&#9670;&#160;</a></span>RunLogin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RunLogin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00198">198</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a15058a20857a8a4d38fa4ab72109a9e2_cgraph.png" border="0" usemap="#alogic_8c_a15058a20857a8a4d38fa4ab72109a9e2_cgraph" alt=""/></div>
+<map name="alogic_8c_a15058a20857a8a4d38fa4ab72109a9e2_cgraph" id="alogic_8c_a15058a20857a8a4d38fa4ab72109a9e2_cgraph">
+<area shape="rect" title=" " alt="" coords="5,284,81,311"/>
+<area shape="rect" href="logic_8c.html#af6da8071dabf2ebd36d99de9f70e5dce" title=" " alt="" coords="311,613,405,640"/>
+<area shape="poly" title=" " alt="" coords="51,310,79,380,102,423,131,464,175,508,225,547,317,604,314,608,222,551,172,512,127,467,97,426,74,382,46,312"/>
+<area shape="rect" href="clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="697,5,775,32"/>
+<area shape="poly" title=" " alt="" coords="49,282,79,234,101,206,127,182,196,137,271,101,348,74,427,52,502,37,571,27,681,17,682,23,572,32,503,43,428,58,350,79,273,106,198,142,130,186,105,210,83,237,54,285"/>
+<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="498,107,614,133"/>
+<area shape="poly" title=" " alt="" coords="54,282,85,251,127,222,219,183,315,155,406,136,482,124,483,130,407,141,317,160,221,188,130,226,89,255,58,286"/>
+<area shape="rect" href="lcd_8c.html#afb88b9aba1a1db09a517c5a1ffc07299" title="Prints a string to the LCD." alt="" coords="504,309,608,336"/>
+<area shape="poly" title=" " alt="" coords="81,294,243,295,374,303,489,313,489,318,374,308,243,300,81,299"/>
+<area shape="rect" href="logic_8c.html#a42669da2ad9ca71aae1bd5805b2c7c98" title=" " alt="" coords="129,309,243,336"/>
+<area shape="poly" title=" " alt="" coords="82,301,114,307,113,312,81,307"/>
+<area shape="rect" href="logic_8c.html#a93047c21ec383e462990d923ed48795e" title=" " alt="" coords="291,208,424,235"/>
+<area shape="poly" title=" " alt="" coords="65,281,94,265,128,251,203,233,275,223,276,229,204,238,129,256,96,270,67,286"/>
+<area shape="rect" href="logic_8c.html#a89a9f339804050ddf172c87c288312a0" title=" " alt="" coords="297,487,419,513"/>
+<area shape="poly" title=" " alt="" coords="55,310,85,352,107,375,130,397,170,423,214,446,296,479,294,484,211,450,168,428,127,401,103,379,81,355,51,313"/>
+<area shape="rect" href="logic_8c.html#a5a3be8027400af0c949033c8c86a4360" title=" " alt="" coords="139,360,233,387"/>
+<area shape="poly" title=" " alt="" coords="67,309,130,346,140,351,137,355,127,350,64,313"/>
+<area shape="rect" href="lcd_8c.html#aa0130791fdcab8f2263be12fb00a031d" title="Clears a row." alt="" coords="507,613,605,640"/>
+<area shape="poly" title=" " alt="" coords="405,624,492,624,492,629,405,629"/>
+<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="1247,411,1347,437"/>
+<area shape="poly" title=" " alt="" coords="406,636,473,649,603,669,735,675,911,675,959,673,999,667,1034,658,1065,645,1126,606,1197,550,1222,526,1245,500,1279,450,1283,452,1249,503,1226,530,1200,554,1129,610,1068,649,1036,663,1000,672,960,678,912,680,734,680,603,674,472,655,405,641"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="688,385,784,412"/>
+<area shape="poly" title=" " alt="" coords="604,617,622,610,638,599,673,559,698,512,716,465,726,426,732,428,721,467,703,514,677,562,641,603,625,614,606,622"/>
+<area shape="poly" title=" " alt="" coords="605,621,714,609,864,586,947,568,1032,547,1117,521,1198,490,1235,469,1267,445,1270,449,1238,473,1200,494,1118,526,1034,552,948,574,865,591,715,614,605,626"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1550,259,1636,285"/>
+<area shape="poly" title=" " alt="" coords="779,410,844,429,927,449,1021,465,1116,472,1298,472,1343,467,1386,452,1426,431,1464,405,1527,347,1571,296,1575,300,1531,351,1467,409,1429,435,1388,457,1344,472,1298,477,1116,477,1020,471,926,454,842,434,778,415"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="832,360,988,387"/>
+<area shape="poly" title=" " alt="" coords="784,389,817,384,818,390,785,394"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="1036,411,1199,437"/>
+<area shape="poly" title=" " alt="" coords="785,399,1021,415,1020,420,784,404"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1543,107,1643,133"/>
+<area shape="poly" title=" " alt="" coords="745,384,780,345,804,324,831,306,923,261,1020,224,1119,194,1216,170,1394,138,1527,122,1528,127,1395,143,1217,175,1120,199,1022,229,925,266,833,310,807,328,784,349,749,387"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1554,208,1632,235"/>
+<area shape="poly" title=" " alt="" coords="757,382,791,363,831,346,914,319,985,300,1109,278,1234,264,1395,244,1538,225,1539,230,1395,249,1235,270,1110,283,987,305,916,324,833,350,793,368,760,387"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1979,107,2075,133"/>
+<area shape="poly" title=" " alt="" coords="1633,256,1971,136,1973,141,1635,261"/>
+<area shape="poly" title=" " alt="" coords="969,385,1046,404,1044,409,967,390"/>
+<area shape="poly" title=" " alt="" coords="1199,421,1231,421,1231,427,1199,427"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1395,259,1495,285"/>
+<area shape="poly" title=" " alt="" coords="1309,409,1418,295,1422,298,1313,412"/>
+<area shape="poly" title=" " alt="" coords="1496,269,1534,269,1534,275,1496,275"/>
+<area shape="poly" title=" " alt="" coords="1457,257,1566,143,1570,146,1461,260"/>
+<area shape="poly" title=" " alt="" coords="1486,256,1538,237,1540,242,1487,261"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1691,107,1799,133"/>
+<area shape="poly" title=" " alt="" coords="1643,117,1675,117,1675,123,1643,123"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1847,107,1931,133"/>
+<area shape="poly" title=" " alt="" coords="1799,117,1831,117,1831,123,1799,123"/>
+<area shape="poly" title=" " alt="" coords="1932,117,1964,117,1964,123,1932,123"/>
+<area shape="poly" title=" " alt="" coords="775,16,1116,16,1746,16,1781,18,1817,24,1885,45,1945,71,1992,96,1989,101,1943,76,1883,50,1816,30,1781,24,1746,21,1116,21,775,21"/>
+<area shape="poly" title=" " alt="" coords="614,104,748,80,828,70,909,67,1298,67,1360,70,1421,78,1529,100,1528,105,1421,83,1359,75,1298,72,909,72,829,76,749,85,615,109"/>
+<area shape="poly" title=" " alt="" coords="614,123,1539,213,1538,219,614,128"/>
+<area shape="poly" title=" " alt="" coords="599,104,638,86,663,68,686,49,700,39,703,43,689,53,666,72,641,90,601,109"/>
+<area shape="poly" title=" " alt="" coords="591,334,689,376,687,381,589,339"/>
+<area shape="poly" title=" " alt="" coords="425,232,546,261,602,278,641,295,664,312,686,332,719,371,715,374,682,335,661,316,638,300,600,283,545,266,424,237"/>
+<area shape="poly" title=" " alt="" coords="425,218,601,219,829,229,944,239,1049,254,1137,274,1172,287,1200,302,1226,322,1249,347,1283,395,1279,398,1245,350,1223,326,1197,306,1170,292,1135,280,1048,259,943,244,829,234,601,224,425,223"/>
+<area shape="poly" title=" " alt="" coords="365,206,406,151,436,119,471,92,510,75,565,57,682,28,683,33,566,62,512,80,474,97,440,123,410,154,370,209"/>
+<area shape="poly" title=" " alt="" coords="375,205,417,174,471,143,486,137,488,142,474,148,420,179,378,210"/>
+<area shape="poly" title=" " alt="" coords="392,233,426,251,450,270,474,288,499,301,497,306,471,293,446,274,423,256,389,237"/>
+<area shape="rect" href="helpers_8c.html#aa41b8512b10550a2e21feec991f752b4" title=" " alt="" coords="503,157,609,184"/>
+<area shape="poly" title=" " alt="" coords="412,205,487,185,488,191,414,210"/>
+<area shape="rect" href="helpers_8c.html#aac8c6c00a0e52489ecf8e8a6d9eba228" title=" " alt="" coords="701,157,771,184"/>
+<area shape="poly" title=" " alt="" coords="610,168,685,168,685,173,610,173"/>
+<area shape="rect" href="logic_8c.html#a6c7782e193759b778f5add39176b0975" title=" " alt="" coords="486,512,626,539"/>
+<area shape="poly" title=" " alt="" coords="420,505,471,512,470,517,419,510"/>
+<area shape="rect" href="logic_8c.html#afd141353423c9fce837e2f56a10d810d" title=" " alt="" coords="472,563,640,589"/>
+<area shape="poly" title=" " alt="" coords="389,511,473,548,493,555,491,560,471,553,386,516"/>
+<area shape="rect" href="logic_8c.html#abe7dcc508ace168bbcddb296203a1886" title=" " alt="" coords="518,461,594,488"/>
+<area shape="poly" title=" " alt="" coords="419,490,503,479,503,484,420,495"/>
+<area shape="poly" title=" " alt="" coords="593,463,639,447,697,418,700,422,641,452,595,468"/>
+<area shape="poly" title=" " alt="" coords="594,476,699,485,849,491,1023,486,1112,477,1198,463,1228,454,1256,442,1258,447,1230,459,1199,468,1112,483,1023,492,849,497,698,491,594,482"/>
+<area shape="poly" title=" " alt="" coords="233,368,642,351,861,344,989,345,1057,356,1125,371,1239,403,1238,408,1123,376,1056,361,988,351,861,349,642,356,233,374"/>
+<area shape="poly" title=" " alt="" coords="233,362,291,352,489,327,489,332,291,357,234,367"/>
+<area shape="rect" href="logic_8c.html#ac4085c7ad6b8fe21141bebd8cfe7053a" title=" " alt="" coords="314,411,402,437"/>
+<area shape="poly" title=" " alt="" coords="234,385,300,404,298,409,233,390"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="501,411,611,437"/>
+<area shape="poly" title=" " alt="" coords="402,421,486,421,486,427,402,427"/>
+<area shape="poly" title=" " alt="" coords="611,414,672,405,673,410,611,419"/>
+<area shape="poly" title=" " alt="" coords="612,430,720,443,865,454,1031,458,1116,455,1198,447,1237,439,1238,444,1199,452,1116,460,1031,463,865,460,719,448,611,435"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a15058a20857a8a4d38fa4ab72109a9e2_icgraph.png" border="0" usemap="#alogic_8c_a15058a20857a8a4d38fa4ab72109a9e2_icgraph" alt=""/></div>
+<map name="alogic_8c_a15058a20857a8a4d38fa4ab72109a9e2_icgraph" id="alogic_8c_a15058a20857a8a4d38fa4ab72109a9e2_icgraph">
+<area shape="rect" title=" " alt="" coords="223,5,298,32"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="208,21,176,21,176,16,208,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a93047c21ec383e462990d923ed48795e" name="a93047c21ec383e462990d923ed48795e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93047c21ec383e462990d923ed48795e">&#9670;&#160;</a></span>RunLoginAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RunLoginAnimation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00151">151</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a93047c21ec383e462990d923ed48795e_cgraph.png" border="0" usemap="#alogic_8c_a93047c21ec383e462990d923ed48795e_cgraph" alt=""/></div>
+<map name="alogic_8c_a93047c21ec383e462990d923ed48795e_cgraph" id="alogic_8c_a93047c21ec383e462990d923ed48795e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,271,139,297"/>
+<area shape="rect" href="clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="1223,245,1300,272"/>
+<area shape="poly" title=" " alt="" coords="108,295,162,314,231,335,308,351,388,357,951,357,990,355,1028,349,1103,328,1169,302,1221,277,1224,282,1172,307,1105,333,1030,354,990,360,952,363,388,363,308,356,229,340,160,319,107,300"/>
+<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="1048,245,1164,272"/>
+<area shape="poly" title=" " alt="" coords="139,290,255,301,388,307,772,307,842,304,911,296,1033,273,1033,279,912,301,842,309,772,312,388,312,255,306,139,295"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="341,144,437,171"/>
+<area shape="poly" title=" " alt="" coords="107,268,338,175,340,179,109,273"/>
+<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="900,144,1000,171"/>
+<area shape="poly" title=" " alt="" coords="139,273,255,262,388,256,565,256,613,254,661,247,755,226,838,200,903,175,905,180,840,205,756,232,662,253,613,259,565,261,388,261,255,267,139,278"/>
+<area shape="rect" href="lcd_8c.html#afb88b9aba1a1db09a517c5a1ffc07299" title="Prints a string to the LCD." alt="" coords="188,144,292,171"/>
+<area shape="poly" title=" " alt="" coords="87,268,130,230,185,187,200,177,203,182,188,191,133,235,90,272"/>
+<area shape="rect" href="helpers_8c.html#aa41b8512b10550a2e21feec991f752b4" title=" " alt="" coords="187,397,293,424"/>
+<area shape="poly" title=" " alt="" coords="90,296,133,333,188,377,203,386,200,391,185,381,130,338,87,300"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1648,144,1743,171"/>
+<area shape="poly" title=" " alt="" coords="1300,248,1599,180,1632,172,1633,177,1600,185,1301,253"/>
+<area shape="poly" title=" " alt="" coords="1164,256,1207,256,1207,261,1164,261"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1212,144,1311,171"/>
+<area shape="poly" title=" " alt="" coords="1123,243,1210,180,1218,176,1221,180,1213,185,1126,247"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1222,195,1301,221"/>
+<area shape="poly" title=" " alt="" coords="1149,242,1206,223,1208,228,1150,247"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1359,144,1467,171"/>
+<area shape="poly" title=" " alt="" coords="1312,155,1344,155,1344,160,1312,160"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1515,144,1600,171"/>
+<area shape="poly" title=" " alt="" coords="1468,155,1500,155,1500,160,1468,160"/>
+<area shape="poly" title=" " alt="" coords="1600,155,1632,155,1632,160,1600,160"/>
+<area shape="poly" title=" " alt="" coords="413,141,446,124,484,108,562,82,624,65,688,56,769,53,952,53,1005,62,1075,83,1214,135,1212,140,1073,88,1003,67,951,59,770,59,688,61,625,71,564,87,486,113,449,129,416,146"/>
+<area shape="poly" title=" " alt="" coords="437,169,486,180,627,201,770,205,952,205,1206,205,1206,211,952,211,769,211,626,206,485,185,436,174"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1218,93,1305,120"/>
+<area shape="poly" title=" " alt="" coords="399,142,434,104,458,84,484,67,559,31,621,12,686,4,769,3,952,3,990,5,1030,11,1105,32,1172,58,1224,83,1221,88,1169,63,1103,37,1028,16,990,10,951,8,770,8,687,10,622,17,561,36,487,72,461,88,438,108,403,145"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="485,144,642,171"/>
+<area shape="poly" title=" " alt="" coords="438,155,470,155,470,160,438,160"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="690,144,852,171"/>
+<area shape="poly" title=" " alt="" coords="432,141,485,129,563,123,642,129,698,138,697,143,641,135,563,129,486,135,434,146"/>
+<area shape="poly" title=" " alt="" coords="1305,105,1437,111,1519,118,1600,129,1635,137,1634,142,1599,135,1518,123,1437,116,1305,110"/>
+<area shape="poly" title=" " alt="" coords="642,155,674,155,674,160,642,160"/>
+<area shape="poly" title=" " alt="" coords="852,155,884,155,884,160,852,160"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1056,144,1156,171"/>
+<area shape="poly" title=" " alt="" coords="1001,155,1040,155,1040,160,1001,160"/>
+<area shape="poly" title=" " alt="" coords="1156,155,1196,155,1196,160,1156,160"/>
+<area shape="poly" title=" " alt="" coords="1150,169,1208,188,1206,193,1149,174"/>
+<area shape="poly" title=" " alt="" coords="1149,141,1203,123,1204,128,1150,146"/>
+<area shape="poly" title=" " alt="" coords="292,155,325,155,325,160,292,160"/>
+<area shape="rect" href="helpers_8c.html#aac8c6c00a0e52489ecf8e8a6d9eba228" title=" " alt="" coords="355,397,424,424"/>
+<area shape="poly" title=" " alt="" coords="293,408,339,408,339,413,293,413"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a93047c21ec383e462990d923ed48795e_icgraph.png" border="0" usemap="#alogic_8c_a93047c21ec383e462990d923ed48795e_icgraph" alt=""/></div>
+<map name="alogic_8c_a93047c21ec383e462990d923ed48795e_icgraph" id="alogic_8c_a93047c21ec383e462990d923ed48795e_icgraph">
+<area shape="rect" title=" " alt="" coords="346,5,480,32"/>
+<area shape="rect" href="logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2" title=" " alt="" coords="223,5,298,32"/>
+<area shape="poly" title=" " alt="" coords="331,21,299,21,299,16,331,16"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="208,21,176,21,176,16,208,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a41a8f29e3704245cd53e2e11e03ec5f7" name="a41a8f29e3704245cd53e2e11e03ec5f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41a8f29e3704245cd53e2e11e03ec5f7">&#9670;&#160;</a></span>RunMain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RunMain </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Runs the main loop. </p>
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00374">374</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a41a8f29e3704245cd53e2e11e03ec5f7_cgraph.png" border="0" usemap="#alogic_8c_a41a8f29e3704245cd53e2e11e03ec5f7_cgraph" alt=""/></div>
+<map name="alogic_8c_a41a8f29e3704245cd53e2e11e03ec5f7_cgraph" id="alogic_8c_a41a8f29e3704245cd53e2e11e03ec5f7_cgraph">
+<area shape="rect" title="Runs the main loop." alt="" coords="5,487,78,513"/>
+<area shape="rect" href="logic_8c.html#af6da8071dabf2ebd36d99de9f70e5dce" title=" " alt="" coords="586,816,680,843"/>
+<area shape="poly" title=" " alt="" coords="53,512,89,567,150,645,189,686,232,726,279,761,329,790,390,811,455,824,517,829,570,830,570,835,516,835,454,829,389,816,327,794,276,765,228,730,185,690,146,648,85,570,49,515"/>
+<area shape="rect" href="logic_8c.html#a5d70b1e35da3781dc0e409643147cdd8" title=" " alt="" coords="363,208,467,235"/>
+<area shape="poly" title=" " alt="" coords="42,486,48,448,62,397,87,343,103,318,124,297,149,278,176,262,235,240,294,226,347,220,348,225,295,232,236,245,178,267,152,282,127,301,108,322,91,346,67,399,53,450,47,487"/>
+<area shape="rect" href="clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="788,968,866,995"/>
+<area shape="poly" title=" " alt="" coords="46,514,50,618,63,780,74,866,88,945,106,1010,128,1056,146,1075,170,1093,236,1125,317,1151,408,1169,500,1180,586,1181,661,1173,691,1166,715,1155,739,1132,765,1092,810,1007,815,1010,770,1095,743,1135,718,1160,693,1171,662,1179,586,1187,499,1185,407,1174,316,1156,234,1130,168,1097,142,1079,123,1059,101,1012,82,946,68,866,58,781,45,619,41,514"/>
+<area shape="rect" href="logic_8c.html#afa64d8084403040ad7f7f8045e075736" title=" " alt="" coords="347,259,482,285"/>
+<area shape="poly" title=" " alt="" coords="44,485,53,456,69,419,92,379,124,346,173,316,227,295,281,281,331,274,332,279,282,287,228,300,175,321,127,350,97,383,74,421,58,458,49,487"/>
+<area shape="rect" href="keypad_8c.html#a4dc4195ee24a2240646ab8e3f70eaacb" title="Creates a default key with default values." alt="" coords="328,5,501,32"/>
+<area shape="poly" title=" " alt="" coords="41,486,48,406,63,288,88,171,104,125,124,93,165,60,213,38,263,24,312,17,313,22,264,29,215,43,168,65,128,96,109,127,93,172,68,289,53,406,46,486"/>
+<area shape="rect" href="keypad_8c.html#a62a8113965dd111b6f91d33efcabd77d" title="Waits for a key to be pressed." alt="" coords="126,107,280,133"/>
+<area shape="poly" title=" " alt="" coords="42,486,66,370,90,291,123,213,148,175,176,142,180,146,153,178,128,216,95,293,71,372,47,487"/>
+<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="575,867,691,893"/>
+<area shape="poly" title=" " alt="" coords="46,514,51,560,63,626,88,699,105,734,128,765,172,806,224,838,281,860,341,875,401,884,460,888,560,886,560,891,459,893,401,889,340,881,280,865,222,843,169,811,124,768,101,736,83,701,58,628,45,561,41,514"/>
+<area shape="rect" href="logic_8c.html#ae7c44d3fc64010d1e217bea610c8536c" title=" " alt="" coords="149,461,257,488"/>
+<area shape="poly" title=" " alt="" coords="78,492,133,483,134,488,78,497"/>
+<area shape="rect" href="logic_8c.html#a5a3be8027400af0c949033c8c86a4360" title=" " alt="" coords="368,461,462,488"/>
+<area shape="poly" title=" " alt="" coords="78,499,170,502,280,497,353,486,353,491,280,503,170,507,78,505"/>
+<area shape="rect" href="logic_8c.html#ac4085c7ad6b8fe21141bebd8cfe7053a" title=" " alt="" coords="589,360,677,387"/>
+<area shape="poly" title=" " alt="" coords="59,484,89,464,125,447,185,428,247,412,371,390,484,377,573,372,573,377,485,383,372,395,248,417,186,433,127,452,92,469,62,488"/>
+<area shape="rect" href="logic_8c.html#a5f7f7893415d86a5a8348472dbdd0541" title=" " alt="" coords="364,1221,466,1248"/>
+<area shape="poly" title=" " alt="" coords="46,513,54,653,70,874,81,987,95,1086,110,1162,119,1186,128,1201,151,1219,177,1233,205,1242,234,1248,294,1250,348,1246,349,1251,294,1256,234,1253,203,1247,174,1238,148,1224,124,1204,114,1189,105,1163,89,1087,76,987,64,874,48,654,41,514"/>
+<area shape="rect" href="logic_8c.html#aee8c17e4c2f0d1376f21780a1199b97c" title=" " alt="" coords="130,1019,276,1045"/>
+<area shape="poly" title=" " alt="" coords="46,514,51,609,65,754,76,830,90,900,107,958,128,998,138,1008,134,1012,124,1002,102,960,84,902,70,831,60,755,46,609,41,514"/>
+<area shape="rect" href="logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2" title=" " alt="" coords="165,563,241,589"/>
+<area shape="poly" title=" " alt="" coords="69,512,127,542,154,554,152,559,125,546,66,516"/>
+<area shape="rect" href="logic_8c.html#ada037e06af8abdcc0382445b22466477" title=" " alt="" coords="153,360,253,387"/>
+<area shape="poly" title=" " alt="" coords="50,484,80,445,124,403,144,391,147,396,127,407,84,449,54,488"/>
+<area shape="rect" href="lcd_8c.html#aa0130791fdcab8f2263be12fb00a031d" title="Clears a row." alt="" coords="778,765,876,792"/>
+<area shape="poly" title=" " alt="" coords="680,814,762,793,764,798,681,820"/>
+<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="1503,512,1603,539"/>
+<area shape="poly" title=" " alt="" coords="681,827,984,827,1161,827,1194,824,1226,818,1287,794,1344,759,1396,716,1441,670,1480,625,1533,550,1537,553,1484,628,1445,674,1400,720,1347,763,1290,799,1227,823,1195,830,1161,832,984,832,681,832"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="937,512,1033,539"/>
+<area shape="poly" title=" " alt="" coords="834,763,965,550,970,553,839,766"/>
+<area shape="poly" title=" " alt="" coords="875,767,981,744,1125,707,1287,657,1369,626,1447,592,1486,570,1521,546,1524,550,1489,575,1449,597,1371,631,1289,662,1127,713,982,749,876,772"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1850,563,1937,589"/>
+<area shape="poly" title=" " alt="" coords="1032,509,1081,497,1222,476,1365,472,1554,472,1596,474,1639,481,1722,501,1795,528,1853,553,1850,558,1793,533,1720,507,1638,486,1596,480,1554,477,1366,477,1223,482,1082,503,1033,514"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="1081,512,1238,539"/>
+<area shape="poly" title=" " alt="" coords="1034,523,1066,523,1066,528,1034,528"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="1286,512,1448,539"/>
+<area shape="poly" title=" " alt="" coords="1030,537,1082,548,1159,554,1237,548,1293,540,1294,545,1238,553,1159,559,1081,553,1028,542"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1844,715,1943,741"/>
+<area shape="poly" title=" " alt="" coords="994,538,1026,597,1051,631,1083,659,1154,700,1185,712,1215,719,1282,725,1366,725,1554,725,1828,725,1828,731,1554,731,1365,731,1281,730,1215,725,1183,717,1152,705,1080,663,1047,635,1021,600,990,540"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1854,664,1933,691"/>
+<area shape="poly" title=" " alt="" coords="1007,537,1065,574,1151,620,1202,641,1255,658,1310,670,1366,675,1554,675,1839,675,1839,680,1554,680,1365,680,1309,676,1254,664,1200,646,1149,625,1062,579,1004,541"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="2280,715,2375,741"/>
+<area shape="poly" title=" " alt="" coords="1935,587,2273,707,2272,712,1933,592"/>
+<area shape="poly" title=" " alt="" coords="1238,523,1270,523,1270,528,1238,528"/>
+<area shape="poly" title=" " alt="" coords="1449,523,1487,523,1487,528,1449,528"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1676,588,1777,615"/>
+<area shape="poly" title=" " alt="" coords="1586,537,1681,579,1679,584,1584,542"/>
+<area shape="poly" title=" " alt="" coords="1777,591,1835,582,1836,587,1777,596"/>
+<area shape="poly" title=" " alt="" coords="1743,613,1787,654,1845,701,1851,704,1848,709,1842,705,1784,659,1740,617"/>
+<area shape="poly" title=" " alt="" coords="1759,613,1850,655,1847,660,1757,618"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1991,715,2099,741"/>
+<area shape="poly" title=" " alt="" coords="1944,725,1976,725,1976,731,1944,731"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="2147,715,2232,741"/>
+<area shape="poly" title=" " alt="" coords="2100,725,2132,725,2132,731,2100,731"/>
+<area shape="poly" title=" " alt="" coords="2232,725,2264,725,2264,731,2232,731"/>
+<area shape="rect" href="logic_8c.html#a6c7782e193759b778f5add39176b0975" title=" " alt="" coords="563,208,703,235"/>
+<area shape="poly" title=" " alt="" coords="467,219,547,219,547,224,467,224"/>
+<area shape="rect" href="logic_8c.html#afd141353423c9fce837e2f56a10d810d" title=" " alt="" coords="549,259,717,285"/>
+<area shape="poly" title=" " alt="" coords="468,231,558,252,557,257,467,236"/>
+<area shape="rect" href="lcd_8c.html#a08b51cf41e7c0183ca5b469dd853a666" title="Clears the last character of a row." alt="" coords="571,157,695,184"/>
+<area shape="poly" title=" " alt="" coords="467,207,557,186,558,191,468,212"/>
+<area shape="poly" title=" " alt="" coords="694,182,827,206,905,215,984,219,1161,219,1248,220,1317,229,1349,240,1381,255,1414,277,1450,306,1471,327,1489,351,1517,403,1537,454,1548,496,1543,498,1532,456,1512,405,1484,354,1467,331,1446,310,1411,281,1378,260,1347,245,1316,235,1248,225,1161,224,984,224,905,220,826,211,693,187"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="772,309,882,336"/>
+<area shape="poly" title=" " alt="" coords="695,182,718,194,762,237,808,295,804,298,758,241,715,198,693,187"/>
+<area shape="poly" title=" " alt="" coords="842,335,891,397,967,498,963,501,887,400,837,338"/>
+<area shape="poly" title=" " alt="" coords="881,307,992,289,1063,282,1139,280,1219,283,1299,296,1377,318,1449,352,1486,383,1513,422,1533,462,1546,496,1541,498,1528,464,1509,424,1482,387,1447,357,1375,323,1298,301,1218,289,1139,285,1063,287,993,294,882,312"/>
+<area shape="poly" title=" " alt="" coords="866,979,1158,979,2046,979,2094,972,2138,953,2178,925,2215,891,2246,854,2273,817,2310,754,2315,757,2277,820,2250,857,2218,895,2182,929,2141,958,2096,977,2047,984,1158,984,866,984"/>
+<area shape="poly" title=" " alt="" coords="225,104,327,48,357,35,359,40,329,53,228,109"/>
+<area shape="rect" href="keypad_8c.html#a9b1fc55f525fe49144daf21ffe978141" title="Checks if a given key is valid." alt="" coords="373,107,456,133"/>
+<area shape="poly" title=" " alt="" coords="280,117,358,117,358,123,280,123"/>
+<area shape="rect" href="keypad_8c.html#a49ffa463b26cc47b7d9e3e2cda8d9168" title="Finds the KeyInfo of a given key." alt="" coords="337,157,493,184"/>
+<area shape="poly" title=" " alt="" coords="263,131,342,151,340,156,261,137"/>
+<area shape="rect" href="keypad_8c.html#a35a69618b097b5f64e918962cd47c824" title="Gets the character from the keypad." alt="" coords="1657,233,1796,260"/>
+<area shape="poly" title=" " alt="" coords="265,103,328,92,479,72,632,67,1368,67,1420,71,1470,84,1519,103,1565,126,1644,176,1700,221,1697,225,1641,181,1562,130,1517,108,1469,89,1419,77,1368,72,632,72,480,77,328,97,265,109"/>
+<area shape="poly" title=" " alt="" coords="1737,259,1881,547,1876,550,1732,262"/>
+<area shape="poly" title=" " alt="" coords="691,891,824,915,904,924,984,928,1554,928,1625,932,1682,935,1708,933,1734,927,1763,915,1794,897,1827,866,1852,828,1870,790,1882,756,1887,758,1875,792,1857,831,1831,869,1797,901,1765,920,1736,932,1709,938,1682,940,1625,937,1554,933,984,933,904,930,824,920,690,896"/>
+<area shape="poly" title=" " alt="" coords="691,877,984,877,1554,877,1604,873,1643,860,1676,841,1704,817,1762,760,1798,730,1842,700,1850,696,1853,701,1845,705,1801,734,1766,764,1708,821,1679,846,1646,865,1605,878,1554,883,984,883,691,883"/>
+<area shape="poly" title=" " alt="" coords="678,891,718,910,743,928,766,947,784,958,782,963,763,952,739,932,715,914,676,896"/>
+<area shape="poly" title=" " alt="" coords="224,487,254,514,282,549,293,571,299,592,304,628,310,663,317,681,330,701,350,724,370,739,410,760,453,777,503,807,526,831,536,842,551,852,562,858,560,863,548,857,533,846,523,835,500,811,451,782,408,765,367,744,347,727,326,704,313,684,305,665,299,629,294,593,288,573,278,552,250,517,220,490"/>
+<area shape="rect" href="logic_8c.html#a89a9f339804050ddf172c87c288312a0" title=" " alt="" coords="354,309,476,336"/>
+<area shape="poly" title=" " alt="" coords="222,459,381,343,384,347,225,463"/>
+<area shape="poly" title=" " alt="" coords="257,472,352,472,352,477,257,477"/>
+<area shape="poly" title=" " alt="" coords="475,307,500,295,514,283,523,271,532,257,548,244,558,239,560,244,551,249,536,261,528,274,518,287,503,300,478,311"/>
+<area shape="poly" title=" " alt="" coords="475,306,557,287,558,292,476,311"/>
+<area shape="rect" href="logic_8c.html#abe7dcc508ace168bbcddb296203a1886" title=" " alt="" coords="789,411,865,437"/>
+<area shape="poly" title=" " alt="" coords="476,316,529,316,590,319,655,328,718,346,764,370,802,398,799,403,761,374,716,350,654,334,590,324,529,321,476,321"/>
+<area shape="poly" title=" " alt="" coords="858,435,890,454,956,500,953,505,888,458,855,440"/>
+<area shape="poly" title=" " alt="" coords="865,424,1111,449,1278,470,1448,497,1488,506,1487,511,1448,503,1278,475,1110,454,865,430"/>
+<area shape="poly" title=" " alt="" coords="462,458,556,433,685,404,833,380,909,373,984,371,1161,371,1215,375,1268,385,1320,401,1370,420,1457,463,1521,501,1518,506,1455,468,1368,425,1319,406,1267,390,1214,380,1161,376,984,376,909,379,833,386,686,409,557,438,463,463"/>
+<area shape="rect" href="lcd_8c.html#afb88b9aba1a1db09a517c5a1ffc07299" title="Prints a string to the LCD." alt="" coords="581,512,685,539"/>
+<area shape="poly" title=" " alt="" coords="463,483,567,507,565,513,462,488"/>
+<area shape="poly" title=" " alt="" coords="460,458,500,440,524,422,548,403,574,390,576,395,551,408,527,426,503,445,462,463"/>
+<area shape="poly" title=" " alt="" coords="685,523,922,523,922,528,685,528"/>
+<area shape="poly" title=" " alt="" coords="677,359,758,338,759,343,678,364"/>
+<area shape="poly" title=" " alt="" coords="426,1219,463,1172,482,1140,499,1107,510,1070,514,1036,510,974,509,944,513,915,525,884,547,853,570,837,573,842,551,857,529,887,518,916,515,945,516,973,519,1036,515,1071,504,1109,487,1143,467,1175,430,1223"/>
+<area shape="poly" title=" " alt="" coords="427,1219,464,1172,484,1141,499,1107,519,1033,524,967,521,908,514,851,507,795,508,736,519,672,547,600,569,570,595,546,599,550,573,573,552,603,524,673,513,736,513,794,519,850,526,907,530,968,524,1034,504,1109,488,1143,468,1175,431,1222"/>
+<area shape="rect" href="parser_8c.html#a19203c96ed6922e7092af10b63e6d298" title="Compiles the tokens and returns the result." alt="" coords="580,1328,686,1355"/>
+<area shape="poly" title=" " alt="" coords="443,1246,551,1302,587,1319,585,1324,548,1306,441,1251"/>
+<area shape="rect" href="parser_8c.html#a07f87b9f5b24c331fddb0a3d57abfecf" title="Ends the input." alt="" coords="578,1221,688,1248"/>
+<area shape="poly" title=" " alt="" coords="466,1232,562,1232,562,1237,466,1237"/>
+<area shape="rect" href="parser_8c.html#aa19b910e23df23ebe5f189f93c97afdd" title="Pushes new token to the parser can be used after calling." alt="" coords="765,1120,889,1147"/>
+<area shape="poly" title=" " alt="" coords="448,1246,502,1265,572,1280,609,1283,646,1281,682,1273,715,1258,727,1248,734,1238,741,1215,746,1190,763,1164,775,1153,779,1157,767,1167,751,1192,746,1217,739,1241,731,1252,718,1262,684,1278,647,1286,609,1288,571,1285,501,1270,446,1251"/>
+<area shape="rect" href="parser_8c.html#a1715c490f05c2ddcb8d526684468f885" title="Calls." alt="" coords="586,1563,680,1589"/>
+<area shape="poly" title=" " alt="" coords="427,1247,617,1548,612,1551,422,1250"/>
+<area shape="rect" href="parser_8c.html#a7f8aeab74e49ee2b275a7575e8d7b5e8" title="Eats the next token." alt="" coords="1501,1272,1605,1299"/>
+<area shape="poly" title=" " alt="" coords="657,1325,726,1286,819,1239,912,1198,952,1186,984,1181,1161,1181,1243,1182,1307,1186,1371,1198,1449,1223,1488,1240,1521,1261,1519,1265,1485,1245,1447,1228,1369,1204,1307,1191,1243,1187,1161,1187,984,1187,953,1191,914,1203,821,1244,729,1291,660,1330"/>
+<area shape="rect" href="parser_8c.html#ab427a20c59c9ca0b11c82660752df62a" title="Parses arithematic expression." alt="" coords="767,1405,887,1432"/>
+<area shape="poly" title=" " alt="" coords="670,1353,778,1397,776,1402,668,1358"/>
+<area shape="rect" href="parser_8c.html#a73bf16a41122c7751670f74fd415a36c" title="Peeks next token." alt="" coords="1496,1499,1609,1525"/>
+<area shape="poly" title=" " alt="" coords="645,1354,689,1417,723,1459,764,1503,812,1544,865,1578,923,1602,953,1608,984,1611,1161,1611,1209,1608,1259,1602,1354,1581,1439,1554,1505,1529,1507,1534,1441,1559,1356,1586,1260,1607,1210,1614,1161,1616,984,1616,952,1614,921,1607,862,1583,809,1548,761,1507,719,1463,684,1421,640,1357"/>
+<area shape="poly" title=" " alt="" coords="844,1403,941,1337,1008,1300,1080,1271,1181,1243,1262,1233,1345,1237,1449,1251,1502,1264,1501,1269,1447,1256,1344,1242,1263,1238,1182,1248,1082,1276,1011,1305,944,1342,847,1407"/>
+<area shape="rect" href="parser_8c.html#ab942fe3a63fed3190c76e55ebc76e5aa" title="Parses bracket expression." alt="" coords="1317,1432,1417,1459"/>
+<area shape="poly" title=" " alt="" coords="887,1425,1093,1438,1302,1446,1301,1451,1093,1443,887,1430"/>
+<area shape="poly" title=" " alt="" coords="886,1430,1064,1468,1174,1487,1286,1501,1388,1508,1481,1510,1480,1515,1388,1513,1285,1507,1174,1492,1063,1473,885,1435"/>
+<area shape="rect" href="parser_8c.html#a5656fb9995d62b96c08bfef4789ee4db" title="Parses term tokens." alt="" coords="943,1373,1027,1400"/>
+<area shape="poly" title=" " alt="" coords="887,1404,927,1396,928,1401,888,1409"/>
+<area shape="poly" title=" " alt="" coords="1382,1430,1523,1307,1526,1311,1386,1434"/>
+<area shape="poly" title=" " alt="" coords="1316,1440,1115,1427,902,1419,902,1413,1116,1421,1316,1435"/>
+<area shape="poly" title=" " alt="" coords="1407,1457,1500,1490,1498,1495,1406,1462"/>
+<area shape="poly" title=" " alt="" coords="996,1371,1031,1338,1055,1321,1080,1308,1133,1291,1188,1279,1299,1268,1402,1268,1485,1274,1485,1279,1402,1273,1299,1273,1189,1285,1135,1296,1082,1313,1057,1326,1035,1342,1000,1375"/>
+<area shape="poly" title=" " alt="" coords="1028,1388,1238,1416,1303,1428,1302,1434,1237,1421,1028,1394"/>
+<area shape="poly" title=" " alt="" coords="1019,1398,1082,1421,1190,1450,1298,1473,1481,1501,1480,1507,1297,1478,1188,1455,1081,1427,1017,1403"/>
+<area shape="rect" href="parser_8c.html#a55bde1715e6e77addb80a046c96f059d" title="Parses only number tokens." alt="" coords="1109,1323,1210,1349"/>
+<area shape="poly" title=" " alt="" coords="1027,1372,1096,1352,1097,1357,1028,1377"/>
+<area shape="poly" title=" " alt="" coords="1210,1329,1448,1301,1485,1295,1486,1301,1448,1307,1211,1334"/>
+<area shape="poly" title=" " alt="" coords="1202,1348,1239,1366,1263,1386,1287,1406,1318,1423,1316,1427,1284,1410,1260,1390,1236,1370,1199,1352"/>
+<area shape="poly" title=" " alt="" coords="1211,1341,1323,1367,1388,1389,1449,1418,1495,1450,1531,1485,1527,1489,1491,1454,1447,1422,1386,1394,1322,1372,1210,1346"/>
+<area shape="poly" title=" " alt="" coords="676,1218,715,1200,739,1182,763,1163,782,1152,784,1157,766,1168,743,1187,718,1205,678,1223"/>
+<area shape="rect" href="parser_8c.html#a9264a889771bffb6e9bb7215c8402eda" title="Stops the parser and clears all tokens." alt="" coords="784,1651,870,1677"/>
+<area shape="poly" title=" " alt="" coords="666,1588,783,1641,780,1646,664,1592"/>
+<area shape="poly" title=" " alt="" coords="222,1044,268,1077,297,1093,329,1105,437,1135,483,1145,526,1150,568,1149,613,1142,661,1128,715,1106,746,1086,772,1060,809,1007,814,1010,776,1064,749,1090,718,1110,663,1133,614,1148,569,1155,526,1155,482,1150,436,1141,327,1111,295,1098,265,1081,218,1048"/>
+<area shape="poly" title=" " alt="" coords="276,1034,327,1033,385,1028,444,1017,500,998,534,978,564,954,611,904,614,907,568,957,537,982,502,1002,445,1022,385,1034,327,1039,276,1039"/>
+<area shape="poly" title=" " alt="" coords="202,1018,209,943,228,823,243,754,264,684,292,614,326,549,350,519,377,495,381,499,354,523,330,552,297,617,269,685,248,756,233,824,214,943,207,1018"/>
+<area shape="poly" title=" " alt="" coords="202,1018,206,953,223,854,238,799,260,745,289,695,326,650,348,633,369,623,410,618,452,615,475,610,500,599,514,589,524,578,533,567,548,555,572,543,574,547,551,560,537,571,528,581,518,593,503,604,477,615,453,621,410,623,370,629,351,638,330,654,293,698,265,748,243,801,228,855,211,953,207,1018"/>
+<area shape="rect" href="flash_8c.html#a028e942d1bdb9290368370559c83eab0" title="Writes data to flash." alt="" coords="373,1069,457,1096"/>
+<area shape="poly" title=" " alt="" coords="263,1043,358,1067,357,1072,261,1049"/>
+<area shape="rect" href="flash_8c.html#ab7c1a5c377d3f3d9156c5d3db6c95951" title="Erases flash." alt="" coords="589,1069,677,1096"/>
+<area shape="poly" title=" " alt="" coords="457,1080,574,1080,574,1085,457,1085"/>
+<area shape="poly" title=" " alt="" coords="217,588,262,642,294,673,330,700,391,737,455,767,572,809,570,815,453,772,388,741,326,705,291,677,259,645,213,592"/>
+<area shape="poly" title=" " alt="" coords="208,590,217,642,237,718,253,759,273,799,299,836,330,867,382,903,440,931,501,952,563,966,623,975,680,980,773,982,773,987,680,985,623,981,562,971,499,957,438,936,379,908,326,871,295,839,269,801,248,761,232,720,212,643,203,590"/>
+<area shape="poly" title=" " alt="" coords="210,589,224,628,248,683,283,741,305,767,330,790,385,824,445,847,506,863,561,872,560,877,505,868,444,853,382,828,326,794,301,771,279,744,243,685,219,630,205,590"/>
+<area shape="poly" title=" " alt="" coords="217,560,278,498,343,417,393,347,397,351,347,420,282,502,221,564"/>
+<area shape="poly" title=" " alt="" coords="240,560,279,542,302,523,327,504,353,492,355,497,329,509,306,527,281,546,242,565"/>
+<area shape="poly" title=" " alt="" coords="240,565,328,548,454,534,566,526,566,531,455,539,328,553,241,570"/>
+<area shape="rect" href="logic_8c.html#a42669da2ad9ca71aae1bd5805b2c7c98" title=" " alt="" coords="358,563,472,589"/>
+<area shape="poly" title=" " alt="" coords="241,573,342,573,342,579,241,579"/>
+<area shape="rect" href="logic_8c.html#a93047c21ec383e462990d923ed48795e" title=" " alt="" coords="348,664,481,691"/>
+<area shape="poly" title=" " alt="" coords="234,587,372,654,370,659,232,592"/>
+<area shape="poly" title=" " alt="" coords="481,664,500,655,515,642,523,628,532,613,548,599,578,586,619,574,719,554,921,528,922,534,720,559,620,579,580,591,551,604,536,616,527,630,519,645,503,660,483,669"/>
+<area shape="poly" title=" " alt="" coords="482,674,665,667,777,660,889,649,1047,629,1169,607,1447,548,1487,539,1488,544,1449,553,1170,613,1048,634,889,655,777,665,665,673,482,679"/>
+<area shape="poly" title=" " alt="" coords="479,689,535,705,597,729,661,761,718,802,752,838,780,879,817,952,812,955,775,882,748,841,715,806,658,765,595,734,533,710,478,694"/>
+<area shape="poly" title=" " alt="" coords="476,689,503,707,517,726,524,745,527,782,531,818,538,835,551,853,563,862,560,866,547,857,533,838,525,819,522,783,519,747,513,729,499,711,473,693"/>
+<area shape="poly" title=" " alt="" coords="469,661,500,643,516,622,523,601,530,578,548,555,566,543,569,547,551,559,535,581,528,602,521,625,503,647,472,666"/>
+<area shape="rect" href="helpers_8c.html#aa41b8512b10550a2e21feec991f752b4" title=" " alt="" coords="580,613,686,640"/>
+<area shape="poly" title=" " alt="" coords="475,661,564,640,565,645,476,666"/>
+<area shape="rect" href="helpers_8c.html#aac8c6c00a0e52489ecf8e8a6d9eba228" title=" " alt="" coords="792,613,862,640"/>
+<area shape="poly" title=" " alt="" coords="687,624,777,624,777,629,687,629"/>
+<area shape="poly" title=" " alt="" coords="253,380,890,504,922,510,921,516,888,509,252,385"/>
+<area shape="poly" title=" " alt="" coords="222,357,268,327,327,295,343,288,345,293,329,300,271,331,224,362"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a41a8f29e3704245cd53e2e11e03ec5f7_icgraph.png" border="0" usemap="#alogic_8c_a41a8f29e3704245cd53e2e11e03ec5f7_icgraph" alt=""/></div>
+<map name="alogic_8c_a41a8f29e3704245cd53e2e11e03ec5f7_icgraph" id="alogic_8c_a41a8f29e3704245cd53e2e11e03ec5f7_icgraph">
+<area shape="rect" title="Runs the main loop." alt="" coords="103,5,175,32"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ada037e06af8abdcc0382445b22466477" name="ada037e06af8abdcc0382445b22466477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada037e06af8abdcc0382445b22466477">&#9670;&#160;</a></span>RunUserInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RunUserInput </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_key_info.html">KeyInfo</a>&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00094">94</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_ada037e06af8abdcc0382445b22466477_cgraph.png" border="0" usemap="#alogic_8c_ada037e06af8abdcc0382445b22466477_cgraph" alt=""/></div>
+<map name="alogic_8c_ada037e06af8abdcc0382445b22466477_cgraph" id="alogic_8c_ada037e06af8abdcc0382445b22466477_cgraph">
+<area shape="rect" title=" " alt="" coords="5,76,105,103"/>
+<area shape="rect" href="logic_8c.html#afa64d8084403040ad7f7f8045e075736" title=" " alt="" coords="153,51,288,78"/>
+<area shape="poly" title=" " alt="" coords="105,79,137,74,138,80,106,85"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="172,102,269,128"/>
+<area shape="poly" title=" " alt="" coords="106,94,158,103,157,108,105,100"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1054,76,1140,103"/>
+<area shape="poly" title=" " alt="" coords="265,99,286,87,300,75,309,61,318,48,335,37,375,19,410,9,442,4,473,3,538,7,620,11,802,11,871,17,939,31,1000,49,1051,67,1049,72,999,54,938,36,870,22,802,16,620,16,538,12,473,8,443,9,411,14,377,24,337,41,322,52,313,64,304,78,290,92,268,103"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="336,51,492,78"/>
+<area shape="poly" title=" " alt="" coords="268,100,345,79,346,85,270,105"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="540,102,703,128"/>
+<area shape="poly" title=" " alt="" coords="269,112,525,112,525,118,269,118"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1047,127,1147,154"/>
+<area shape="poly" title=" " alt="" coords="269,122,425,148,522,159,620,163,802,163,924,157,1032,146,1032,152,925,163,802,168,620,168,521,164,424,153,268,127"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1058,178,1136,204"/>
+<area shape="poly" title=" " alt="" coords="250,126,291,145,337,162,415,185,477,202,539,211,620,214,802,214,931,207,1042,196,1042,201,932,213,802,219,620,219,539,216,475,207,413,191,335,167,289,150,248,131"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1483,102,1579,128"/>
+<area shape="poly" title=" " alt="" coords="1141,89,1468,109,1467,114,1140,95"/>
+<area shape="poly" title=" " alt="" coords="473,76,550,95,548,100,471,81"/>
+<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="751,102,851,128"/>
+<area shape="poly" title=" " alt="" coords="703,112,735,112,735,118,703,118"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="899,102,999,128"/>
+<area shape="poly" title=" " alt="" coords="851,112,883,112,883,118,851,118"/>
+<area shape="poly" title=" " alt="" coords="999,104,1038,97,1039,102,1000,109"/>
+<area shape="poly" title=" " alt="" coords="1000,121,1032,126,1032,132,999,126"/>
+<area shape="poly" title=" " alt="" coords="978,126,1057,168,1054,172,976,131"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1195,127,1303,154"/>
+<area shape="poly" title=" " alt="" coords="1147,138,1179,138,1179,143,1147,143"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1351,127,1435,154"/>
+<area shape="poly" title=" " alt="" coords="1303,138,1335,138,1335,143,1303,143"/>
+<area shape="poly" title=" " alt="" coords="1435,130,1468,124,1469,129,1436,135"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_ada037e06af8abdcc0382445b22466477_icgraph.png" border="0" usemap="#alogic_8c_ada037e06af8abdcc0382445b22466477_icgraph" alt=""/></div>
+<map name="alogic_8c_ada037e06af8abdcc0382445b22466477_icgraph" id="alogic_8c_ada037e06af8abdcc0382445b22466477_icgraph">
+<area shape="rect" title=" " alt="" coords="223,5,322,32"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="207,21,176,21,176,16,207,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a89a9f339804050ddf172c87c288312a0" name="a89a9f339804050ddf172c87c288312a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89a9f339804050ddf172c87c288312a0">&#9670;&#160;</a></span>ShowCurrentData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShowCurrentData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00353">353</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a89a9f339804050ddf172c87c288312a0_cgraph.png" border="0" usemap="#alogic_8c_a89a9f339804050ddf172c87c288312a0_cgraph" alt=""/></div>
+<map name="alogic_8c_a89a9f339804050ddf172c87c288312a0_cgraph" id="alogic_8c_a89a9f339804050ddf172c87c288312a0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,128,83"/>
+<area shape="rect" href="logic_8c.html#a6c7782e193759b778f5add39176b0975" title=" " alt="" coords="189,5,330,32"/>
+<area shape="poly" title=" " alt="" coords="120,53,190,34,192,39,121,58"/>
+<area shape="rect" href="logic_8c.html#afd141353423c9fce837e2f56a10d810d" title=" " alt="" coords="176,56,343,83"/>
+<area shape="poly" title=" " alt="" coords="128,67,160,67,160,72,128,72"/>
+<area shape="rect" href="logic_8c.html#abe7dcc508ace168bbcddb296203a1886" title=" " alt="" coords="222,107,297,133"/>
+<area shape="poly" title=" " alt="" coords="121,81,207,104,206,109,120,86"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="391,157,487,184"/>
+<area shape="poly" title=" " alt="" coords="298,128,377,150,375,156,297,133"/>
+<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="950,151,1050,177"/>
+<area shape="poly" title=" " alt="" coords="297,116,401,112,551,112,725,118,902,136,940,144,939,149,902,141,725,124,551,117,401,118,298,121"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1253,259,1340,285"/>
+<area shape="poly" title=" " alt="" coords="453,182,488,218,511,237,537,252,611,282,673,294,738,296,819,295,1001,295,1128,289,1238,277,1238,283,1129,294,1002,300,820,300,737,301,673,299,610,287,534,257,508,241,484,222,449,186"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="535,183,692,209"/>
+<area shape="poly" title=" " alt="" coords="488,175,521,180,520,185,487,180"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="740,151,902,177"/>
+<area shape="poly" title=" " alt="" coords="488,167,724,163,724,168,488,173"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1247,208,1346,235"/>
+<area shape="poly" title=" " alt="" coords="462,182,496,202,536,219,614,238,676,245,819,244,1001,244,1124,238,1231,227,1231,233,1124,244,1002,249,820,249,675,250,613,243,534,224,493,207,459,187"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1257,132,1336,159"/>
+<area shape="poly" title=" " alt="" coords="481,154,546,135,629,115,724,99,819,92,1002,92,1067,96,1132,104,1243,128,1242,133,1131,110,1067,101,1001,97,820,97,724,104,630,120,547,140,483,159"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1683,233,1778,260"/>
+<area shape="poly" title=" " alt="" coords="1340,267,1667,248,1667,253,1340,272"/>
+<area shape="poly" title=" " alt="" coords="692,181,724,176,725,182,693,187"/>
+<area shape="poly" title=" " alt="" coords="902,161,934,161,934,167,902,167"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1098,163,1199,189"/>
+<area shape="poly" title=" " alt="" coords="1051,165,1083,168,1083,173,1051,171"/>
+<area shape="poly" title=" " alt="" coords="1169,188,1248,244,1256,249,1253,253,1245,249,1166,192"/>
+<area shape="poly" title=" " alt="" coords="1195,187,1237,200,1235,205,1194,193"/>
+<area shape="poly" title=" " alt="" coords="1198,163,1242,154,1243,159,1200,168"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1394,208,1502,235"/>
+<area shape="poly" title=" " alt="" coords="1347,219,1379,219,1379,224,1347,224"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1550,208,1635,235"/>
+<area shape="poly" title=" " alt="" coords="1503,219,1535,219,1535,224,1503,224"/>
+<area shape="poly" title=" " alt="" coords="1636,226,1668,233,1667,238,1635,232"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a89a9f339804050ddf172c87c288312a0_icgraph.png" border="0" usemap="#alogic_8c_a89a9f339804050ddf172c87c288312a0_icgraph" alt=""/></div>
+<map name="alogic_8c_a89a9f339804050ddf172c87c288312a0_icgraph" id="alogic_8c_a89a9f339804050ddf172c87c288312a0_icgraph">
+<area shape="rect" title=" " alt="" coords="379,31,502,57"/>
+<area shape="rect" href="logic_8c.html#ae7c44d3fc64010d1e217bea610c8536c" title=" " alt="" coords="223,5,331,32"/>
+<area shape="poly" title=" " alt="" coords="363,35,331,30,332,24,364,29"/>
+<area shape="rect" href="logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2" title=" " alt="" coords="240,56,315,83"/>
+<area shape="poly" title=" " alt="" coords="365,58,316,66,315,61,364,53"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,31,175,57"/>
+<area shape="poly" title=" " alt="" coords="208,34,176,40,175,35,207,29"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="poly" title=" " alt="" coords="224,62,175,53,176,48,225,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2ea1341e5f25883c524a2cdb81341f9d" name="a2ea1341e5f25883c524a2cdb81341f9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ea1341e5f25883c524a2cdb81341f9d">&#9670;&#160;</a></span>ShowNumberOperation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShowNumberOperation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_key_info.html">KeyInfo</a>&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a3be8027400af0c949033c8c86a4360" name="a5a3be8027400af0c949033c8c86a4360"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a3be8027400af0c949033c8c86a4360">&#9670;&#160;</a></span>UpdateRows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateRows </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00253">253</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a5a3be8027400af0c949033c8c86a4360_cgraph.png" border="0" usemap="#alogic_8c_a5a3be8027400af0c949033c8c86a4360_cgraph" alt=""/></div>
+<map name="alogic_8c_a5a3be8027400af0c949033c8c86a4360_cgraph" id="alogic_8c_a5a3be8027400af0c949033c8c86a4360_cgraph">
+<area shape="rect" title=" " alt="" coords="5,93,100,120"/>
+<area shape="rect" href="lcd_8c.html#afb88b9aba1a1db09a517c5a1ffc07299" title="Prints a string to the LCD." alt="" coords="287,144,390,171"/>
+<area shape="poly" title=" " alt="" coords="101,118,148,129,272,148,271,153,147,135,100,123"/>
+<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="1000,119,1101,145"/>
+<area shape="poly" title=" " alt="" coords="75,90,121,65,185,36,259,13,298,5,337,3,665,3,716,6,767,14,864,42,949,77,1013,108,1011,113,947,82,862,47,765,19,715,11,665,8,337,8,299,11,260,18,187,41,123,70,77,95"/>
+<area shape="rect" href="logic_8c.html#ac4085c7ad6b8fe21141bebd8cfe7053a" title=" " alt="" coords="148,93,236,120"/>
+<area shape="poly" title=" " alt="" coords="100,104,132,104,132,109,100,109"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="441,144,538,171"/>
+<area shape="poly" title=" " alt="" coords="391,155,426,155,426,160,391,160"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1304,119,1390,145"/>
+<area shape="poly" title=" " alt="" coords="520,141,582,116,668,87,767,63,819,56,870,53,1052,53,1121,59,1189,73,1250,91,1300,110,1298,115,1248,97,1187,78,1120,64,1052,59,870,59,819,61,768,68,670,92,584,121,522,146"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="586,195,742,221"/>
+<area shape="poly" title=" " alt="" coords="539,169,601,187,600,192,537,174"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="790,144,952,171"/>
+<area shape="poly" title=" " alt="" coords="538,155,774,155,774,160,538,160"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1297,169,1396,196"/>
+<area shape="poly" title=" " alt="" coords="505,169,539,202,562,218,587,231,662,255,724,261,870,256,1052,256,1120,250,1187,236,1248,218,1298,200,1300,205,1250,223,1189,242,1121,256,1052,261,870,261,724,266,661,260,585,236,559,223,536,206,501,173"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1308,245,1386,272"/>
+<area shape="poly" title=" " alt="" coords="500,169,533,218,558,244,587,266,626,285,660,298,692,306,722,309,787,309,870,307,1052,307,1117,303,1182,294,1292,271,1293,276,1183,300,1117,308,1052,312,870,312,787,314,722,314,691,311,658,303,624,290,584,270,554,248,529,221,496,172"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1733,144,1828,171"/>
+<area shape="poly" title=" " alt="" coords="1390,132,1717,151,1717,156,1390,137"/>
+<area shape="poly" title=" " alt="" coords="721,191,798,172,799,178,722,197"/>
+<area shape="poly" title=" " alt="" coords="952,143,984,139,985,144,953,148"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1149,144,1249,171"/>
+<area shape="poly" title=" " alt="" coords="1102,138,1134,144,1133,149,1101,143"/>
+<area shape="poly" title=" " alt="" coords="1249,146,1288,139,1289,145,1250,151"/>
+<area shape="poly" title=" " alt="" coords="1250,163,1282,169,1281,174,1249,169"/>
+<area shape="poly" title=" " alt="" coords="1221,169,1315,234,1312,238,1218,173"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1444,169,1553,196"/>
+<area shape="poly" title=" " alt="" coords="1397,180,1429,180,1429,185,1397,185"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1601,169,1685,196"/>
+<area shape="poly" title=" " alt="" coords="1553,180,1585,180,1585,185,1553,185"/>
+<area shape="poly" title=" " alt="" coords="1685,172,1717,166,1718,171,1686,178"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="284,93,393,120"/>
+<area shape="poly" title=" " alt="" coords="236,104,268,104,268,109,236,109"/>
+<area shape="poly" title=" " alt="" coords="382,118,434,136,432,141,380,123"/>
+<area shape="poly" title=" " alt="" coords="394,106,985,127,985,132,394,111"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a5a3be8027400af0c949033c8c86a4360_icgraph.png" border="0" usemap="#alogic_8c_a5a3be8027400af0c949033c8c86a4360_icgraph" alt=""/></div>
+<map name="alogic_8c_a5a3be8027400af0c949033c8c86a4360_icgraph" id="alogic_8c_a5a3be8027400af0c949033c8c86a4360_icgraph">
+<area shape="rect" title=" " alt="" coords="416,107,511,133"/>
+<area shape="rect" href="logic_8c.html#a3b107a1c86e52fc6f6312e077c76ac31" title=" " alt="" coords="237,5,354,32"/>
+<area shape="poly" title=" " alt="" coords="436,98,404,71,367,46,343,35,345,30,370,42,407,67,439,94"/>
+<area shape="rect" href="logic_8c.html#ae7c44d3fc64010d1e217bea610c8536c" title=" " alt="" coords="242,56,350,83"/>
+<area shape="poly" title=" " alt="" coords="401,104,342,86,343,81,403,99"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,132,175,159"/>
+<area shape="poly" title=" " alt="" coords="401,127,175,145,175,140,401,122"/>
+<area shape="rect" href="logic_8c.html#aee8c17e4c2f0d1376f21780a1199b97c" title=" " alt="" coords="223,157,368,184"/>
+<area shape="poly" title=" " alt="" coords="403,141,343,159,342,154,401,136"/>
+<area shape="rect" href="logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2" title=" " alt="" coords="258,208,333,235"/>
+<area shape="poly" title=" " alt="" coords="439,146,407,173,370,198,335,213,333,208,367,194,404,169,436,142"/>
+<area shape="poly" title=" " alt="" coords="249,92,224,104,167,134,164,129,222,99,247,87"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,132,55,159"/>
+<area shape="poly" title=" " alt="" coords="87,148,55,148,55,143,87,143"/>
+<area shape="poly" title=" " alt="" coords="207,159,175,154,176,149,208,154"/>
+<area shape="poly" title=" " alt="" coords="242,207,222,198,159,162,162,157,224,194,244,202"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac4085c7ad6b8fe21141bebd8cfe7053a" name="ac4085c7ad6b8fe21141bebd8cfe7053a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4085c7ad6b8fe21141bebd8cfe7053a">&#9670;&#160;</a></span>UpdateShift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateShift </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00249">249</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_ac4085c7ad6b8fe21141bebd8cfe7053a_cgraph.png" border="0" usemap="#alogic_8c_ac4085c7ad6b8fe21141bebd8cfe7053a_cgraph" alt=""/></div>
+<map name="alogic_8c_ac4085c7ad6b8fe21141bebd8cfe7053a_cgraph" id="alogic_8c_ac4085c7ad6b8fe21141bebd8cfe7053a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,17,94,44"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="142,17,251,44"/>
+<area shape="poly" title=" " alt="" coords="94,28,126,28,126,33,94,33"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="299,68,395,95"/>
+<area shape="poly" title=" " alt="" coords="239,42,292,60,290,65,238,47"/>
+<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="858,61,958,88"/>
+<area shape="poly" title=" " alt="" coords="251,26,355,23,494,24,652,30,810,47,848,54,847,59,810,52,651,36,494,29,355,28,251,31"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1161,169,1248,196"/>
+<area shape="poly" title=" " alt="" coords="361,93,396,129,419,148,445,163,519,192,581,204,646,206,727,205,909,205,1036,199,1146,188,1146,193,1037,205,910,211,728,211,645,212,581,210,518,197,442,168,416,152,392,133,357,97"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="443,93,600,120"/>
+<area shape="poly" title=" " alt="" coords="396,86,429,90,428,96,395,91"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="648,61,810,88"/>
+<area shape="poly" title=" " alt="" coords="396,78,632,74,632,79,396,83"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1155,119,1254,145"/>
+<area shape="poly" title=" " alt="" coords="370,93,404,113,444,129,522,149,584,156,727,155,909,155,1032,149,1139,138,1139,143,1032,154,910,160,728,160,583,161,521,154,442,135,401,117,367,97"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1165,43,1244,69"/>
+<area shape="poly" title=" " alt="" coords="389,65,454,46,537,26,632,9,727,3,910,3,975,6,1040,15,1151,39,1150,44,1039,20,975,12,909,8,728,8,632,15,538,31,455,51,391,70"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1591,144,1686,171"/>
+<area shape="poly" title=" " alt="" coords="1248,178,1575,158,1575,164,1248,183"/>
+<area shape="poly" title=" " alt="" coords="600,92,632,87,633,92,601,97"/>
+<area shape="poly" title=" " alt="" coords="810,72,842,72,842,77,810,77"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1006,73,1107,100"/>
+<area shape="poly" title=" " alt="" coords="959,76,991,79,991,84,959,81"/>
+<area shape="poly" title=" " alt="" coords="1077,98,1156,155,1164,160,1161,164,1153,160,1074,103"/>
+<area shape="poly" title=" " alt="" coords="1103,98,1145,111,1143,116,1102,103"/>
+<area shape="poly" title=" " alt="" coords="1106,74,1150,65,1151,70,1108,79"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1302,119,1410,145"/>
+<area shape="poly" title=" " alt="" coords="1255,129,1287,129,1287,135,1255,135"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1458,119,1543,145"/>
+<area shape="poly" title=" " alt="" coords="1411,129,1443,129,1443,135,1411,135"/>
+<area shape="poly" title=" " alt="" coords="1544,137,1576,143,1575,148,1543,142"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_ac4085c7ad6b8fe21141bebd8cfe7053a_icgraph.png" border="0" usemap="#alogic_8c_ac4085c7ad6b8fe21141bebd8cfe7053a_icgraph" alt=""/></div>
+<map name="alogic_8c_ac4085c7ad6b8fe21141bebd8cfe7053a_icgraph" id="alogic_8c_ac4085c7ad6b8fe21141bebd8cfe7053a_icgraph">
+<area shape="rect" title=" " alt="" coords="559,44,647,71"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,120,175,147"/>
+<area shape="poly" title=" " alt="" coords="549,41,482,23,398,10,354,8,309,11,266,19,224,34,198,52,177,76,149,121,144,118,172,72,195,48,222,30,264,14,308,6,354,3,399,5,483,18,551,36"/>
+<area shape="rect" href="logic_8c.html#a5a3be8027400af0c949033c8c86a4360" title=" " alt="" coords="416,95,511,121"/>
+<area shape="poly" title=" " alt="" coords="551,79,503,97,501,92,549,74"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,120,55,147"/>
+<area shape="poly" title=" " alt="" coords="87,136,55,136,55,131,87,131"/>
+<area shape="poly" title=" " alt="" coords="429,88,400,72,368,60,327,50,295,45,263,48,224,60,202,72,182,88,152,121,148,118,178,84,199,68,222,55,262,43,295,40,328,45,369,55,402,67,432,83"/>
+<area shape="rect" href="logic_8c.html#a3b107a1c86e52fc6f6312e077c76ac31" title=" " alt="" coords="237,69,354,96"/>
+<area shape="poly" title=" " alt="" coords="400,101,354,94,355,89,401,96"/>
+<area shape="rect" href="logic_8c.html#ae7c44d3fc64010d1e217bea610c8536c" title=" " alt="" coords="242,120,350,147"/>
+<area shape="poly" title=" " alt="" coords="401,120,350,128,350,123,400,115"/>
+<area shape="rect" href="logic_8c.html#aee8c17e4c2f0d1376f21780a1199b97c" title=" " alt="" coords="223,171,368,197"/>
+<area shape="poly" title=" " alt="" coords="427,132,369,161,341,173,339,168,367,156,425,127"/>
+<area shape="rect" href="logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2" title=" " alt="" coords="258,221,333,248"/>
+<area shape="poly" title=" " alt="" coords="446,136,413,174,370,212,335,228,333,223,367,207,409,171,442,132"/>
+<area shape="poly" title=" " alt="" coords="226,136,176,136,176,131,226,131"/>
+<area shape="poly" title=" " alt="" coords="237,168,174,147,176,142,239,163"/>
+<area shape="poly" title=" " alt="" coords="242,222,222,212,180,180,150,149,154,145,184,176,224,207,244,217"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a0accd14d87e65913db8e6a59e42b6c7d" name="a0accd14d87e65913db8e6a59e42b6c7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0accd14d87e65913db8e6a59e42b6c7d">&#9670;&#160;</a></span>flashData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_flash_data.html">FlashData</a> flashData</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    .passwordLength = 3,</div>
+<div class="line">    .password = <span class="stringliteral">&quot;123&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00067">67</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+
+</div>
+</div>
+<a id="a68ed8a7ac589618f57942872aff22070" name="a68ed8a7ac589618f57942872aff22070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ed8a7ac589618f57942872aff22070">&#9670;&#160;</a></span>inputData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">charList inputData</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00066">66</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+
+</div>
+</div>
+<a id="a7a07acedc029e72784867cbe9ac10543" name="a7a07acedc029e72784867cbe9ac10543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a07acedc029e72784867cbe9ac10543">&#9670;&#160;</a></span>isInit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isInit = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00063">63</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+
+</div>
+</div>
+<a id="af5dd0e120f9824b40a94276c4ee3dadb" name="af5dd0e120f9824b40a94276c4ee3dadb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5dd0e120f9824b40a94276c4ee3dadb">&#9670;&#160;</a></span>isLoggedIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isLoggedIn = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00062">62</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+
+</div>
+</div>
+<a id="af7d68b5d19dab801e6460d295564d2bb" name="af7d68b5d19dab801e6460d295564d2bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d68b5d19dab801e6460d295564d2bb">&#9670;&#160;</a></span>isShiftOn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isShiftOn = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00061">61</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+
+</div>
+</div>
+<a id="a3288701d9bc3bb0210a19c3f9042515f" name="a3288701d9bc3bb0210a19c3f9042515f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3288701d9bc3bb0210a19c3f9042515f">&#9670;&#160;</a></span>mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085b">ProgramMode</a> mode = <a class="el" href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b">LOGIN_MODE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00064">64</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+
+</div>
+</div>
+<a id="ab5517a73749b3e781a73a808ba33d533" name="ab5517a73749b3e781a73a808ba33d533"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5517a73749b3e781a73a808ba33d533">&#9670;&#160;</a></span>tokenData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TokenList tokenData</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logic_8c_source.html#l00065">65</a> of file <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
 
 </div>
 </div>

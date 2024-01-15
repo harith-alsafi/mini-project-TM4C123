@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['array_5flen_0',['ARRAY_LEN',['../helpers_8h.html#abad5e4191558987772c01a31c46b8997',1,'helpers.h']]]
+  ['array_5fmax_5flength_0',['ARRAY_MAX_LENGTH',['../helpers_8h.html#a7732dd97bdb60ecae9aa857355cf9841',1,'helpers.h']]]
 ];

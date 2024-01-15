@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['displaytype_0',['displayType',['../struct_key_info.html#a1e801a0e9f9c1d289b3b50535701d282',1,'KeyInfo']]]
+  ['error_0',['error',['../struct_parser_info.html#aab78007585df1e7b289ba34601e58409',1,'ParserInfo']]]
 ];

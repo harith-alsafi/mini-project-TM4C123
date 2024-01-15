@@ -3,8 +3,7 @@
 {\ttfamily \#include "{}keypad.\+h"{}}\newline
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
 {\ttfamily \#include "{}helpers.\+h"{}}\newline
-Include dependency graph for parser.\+h\+:
-\nopagebreak
+Include dependency graph for parser.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,7 +15,7 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=148pt]{parser_8h__dep__incl}
+\includegraphics[width=306pt]{parser_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Data Structures}
@@ -30,6 +29,8 @@ struct \mbox{\hyperlink{struct_parser_info}{Parser\+Info}}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{parser_8h_a5eacb3f8d827ae299ee42b9e0e99fa13}{EXPRESSION\+\_\+\+PARSER\+\_\+H}}
+\item 
+\#define \mbox{\hyperlink{parser_8h_aa1677b86fc9699414925aeca46baac9a}{SCB\+\_\+\+CPACR}}~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x\+E000\+ED88))
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -46,9 +47,9 @@ enum \mbox{\hyperlink{parser_8h_a0392053e13b5f2cbbfdbdd316d86e09f}{Parse\+Error}
 \item 
 enum \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921}{Token\+Type}} \{ \newline
 \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a12a90dfe20486bbe3e075afcd19ef2d0}{NUMBER}}
+, \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2}{EOL}}
 , \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a6411d9d6073252e4d316493506bbb979}{OPERATOR}}
 , \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921af08a543d5a1549321682e12569d0fbd6}{DECIMAL}}
-, \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2}{EOL}}
 , \newline
 \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921a834f3e0777521aa22ca5b50e816970d9}{PREVIOUS\+\_\+\+ANSWER}}
  \}
@@ -60,6 +61,8 @@ enum \mbox{\hyperlink{parser_8h_aa520fbf142ba1e7e659590c07da31921}{Token\+Type}}
 \item 
 void \mbox{\hyperlink{parser_8h_aa19b910e23df23ebe5f189f93c97afdd}{Parser\+Push\+Token}} (\mbox{\hyperlink{struct_token}{Token}} token)
 \begin{DoxyCompactList}\small\item\em Pushes new token to the parser can be used after calling. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{parser_8h_aa6d78d03bc9d7665d597b646485b647f}{Parser\+Pop\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Removes last pushed token. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{parser_8h_ae23a18474f4d84e20fdcc9869d67b363}{Parser\+Init}} ()
 \begin{DoxyCompactList}\small\item\em Initializes the parser. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{parser_8h_a1034bedc0b6b8bdb22f67b0e72a101d0}{Parser\+Init\+With}} (\mbox{\hyperlink{struct_token}{Token}} items\mbox{[}$\,$\mbox{]}, int length)
@@ -69,7 +72,9 @@ void \mbox{\hyperlink{parser_8h_a9264a889771bffb6e9bb7215c8402eda}{Parser\+Stop}
 void \mbox{\hyperlink{parser_8h_a1715c490f05c2ddcb8d526684468f885}{Parser\+Reset}} ()
 \begin{DoxyCompactList}\small\item\em Calls. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_parser_info}{Parser\+Info}} \mbox{\hyperlink{parser_8h_a19203c96ed6922e7092af10b63e6d298}{Parser\+Compile}} ()
-\begin{DoxyCompactList}\small\item\em Compiles the tokens and returns the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Compiles the tokens and returns the result. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{parser_8h_a07f87b9f5b24c331fddb0a3d57abfecf}{Parser\+End\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Ends the input. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -82,6 +87,16 @@ void \mbox{\hyperlink{parser_8h_a1715c490f05c2ddcb8d526684468f885}{Parser\+Reset
 
 
 Definition at line \mbox{\hyperlink{parser_8h_source_l00002}{2}} of file \mbox{\hyperlink{parser_8h_source}{parser.\+h}}.
+
+\Hypertarget{parser_8h_aa1677b86fc9699414925aeca46baac9a}\label{parser_8h_aa1677b86fc9699414925aeca46baac9a} 
+\index{parser.h@{parser.h}!SCB\_CPACR@{SCB\_CPACR}}
+\index{SCB\_CPACR@{SCB\_CPACR}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{SCB\_CPACR}{SCB\_CPACR}}
+{\footnotesize\ttfamily \#define SCB\+\_\+\+CPACR~(\texorpdfstring{$\ast$}{*}((volatile unsigned long \texorpdfstring{$\ast$}{*})0x\+E000\+ED88))}
+
+
+
+Definition at line \mbox{\hyperlink{parser_8h_source_l00007}{7}} of file \mbox{\hyperlink{parser_8h_source}{parser.\+h}}.
 
 
 
@@ -120,7 +135,7 @@ MISSING\+\_\+\+BRACKET&\\
 \end{DoxyEnumFields}
 
 
-Definition at line \mbox{\hyperlink{parser_8h_source_l00007}{7}} of file \mbox{\hyperlink{parser_8h_source}{parser.\+h}}.
+Definition at line \mbox{\hyperlink{parser_8h_source_l00009}{9}} of file \mbox{\hyperlink{parser_8h_source}{parser.\+h}}.
 
 \Hypertarget{parser_8h_aa520fbf142ba1e7e659590c07da31921}\label{parser_8h_aa520fbf142ba1e7e659590c07da31921} 
 \index{parser.h@{parser.h}!TokenType@{TokenType}}
@@ -133,16 +148,16 @@ Definition at line \mbox{\hyperlink{parser_8h_source_l00007}{7}} of file \mbox{\
 NUMBER&\\
 \hline
 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EOL@{EOL}!parser.h@{parser.h}}\index{parser.h@{parser.h}!EOL@{EOL}}}\Hypertarget{parser_8h_aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2}\label{parser_8h_aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2} 
+EOL&\\
+\hline
+
 \raisebox{\heightof{T}}[0pt][0pt]{\index{OPERATOR@{OPERATOR}!parser.h@{parser.h}}\index{parser.h@{parser.h}!OPERATOR@{OPERATOR}}}\Hypertarget{parser_8h_aa520fbf142ba1e7e659590c07da31921a6411d9d6073252e4d316493506bbb979}\label{parser_8h_aa520fbf142ba1e7e659590c07da31921a6411d9d6073252e4d316493506bbb979} 
 OPERATOR&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{DECIMAL@{DECIMAL}!parser.h@{parser.h}}\index{parser.h@{parser.h}!DECIMAL@{DECIMAL}}}\Hypertarget{parser_8h_aa520fbf142ba1e7e659590c07da31921af08a543d5a1549321682e12569d0fbd6}\label{parser_8h_aa520fbf142ba1e7e659590c07da31921af08a543d5a1549321682e12569d0fbd6} 
 DECIMAL&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{EOL@{EOL}!parser.h@{parser.h}}\index{parser.h@{parser.h}!EOL@{EOL}}}\Hypertarget{parser_8h_aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2}\label{parser_8h_aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2} 
-EOL&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{PREVIOUS\_ANSWER@{PREVIOUS\_ANSWER}!parser.h@{parser.h}}\index{parser.h@{parser.h}!PREVIOUS\_ANSWER@{PREVIOUS\_ANSWER}}}\Hypertarget{parser_8h_aa520fbf142ba1e7e659590c07da31921a834f3e0777521aa22ca5b50e816970d9}\label{parser_8h_aa520fbf142ba1e7e659590c07da31921a834f3e0777521aa22ca5b50e816970d9} 
@@ -152,7 +167,7 @@ PREVIOUS\+\_\+\+ANSWER&\\
 \end{DoxyEnumFields}
 
 
-Definition at line \mbox{\hyperlink{parser_8h_source_l00016}{16}} of file \mbox{\hyperlink{parser_8h_source}{parser.\+h}}.
+Definition at line \mbox{\hyperlink{parser_8h_source_l00018}{18}} of file \mbox{\hyperlink{parser_8h_source}{parser.\+h}}.
 
 
 
@@ -179,7 +194,7 @@ Compiles the tokens and returns the result.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{parser_8c_source_l00102}{102}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
+Definition at line \mbox{\hyperlink{parser_8c_source_l00120}{120}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -187,6 +202,44 @@ Here is the call graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{parser_8h_a19203c96ed6922e7092af10b63e6d298_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{parser_8h_a19203c96ed6922e7092af10b63e6d298_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{parser_8h_a07f87b9f5b24c331fddb0a3d57abfecf}\label{parser_8h_a07f87b9f5b24c331fddb0a3d57abfecf} 
+\index{parser.h@{parser.h}!ParserEndInput@{ParserEndInput}}
+\index{ParserEndInput@{ParserEndInput}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{ParserEndInput()}{ParserEndInput()}}
+{\footnotesize\ttfamily void Parser\+End\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ends the input. 
+
+
+
+Definition at line \mbox{\hyperlink{parser_8c_source_l00080}{80}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{parser_8h_a07f87b9f5b24c331fddb0a3d57abfecf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{parser_8h_a07f87b9f5b24c331fddb0a3d57abfecf_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{parser_8h_ae23a18474f4d84e20fdcc9869d67b363}\label{parser_8h_ae23a18474f4d84e20fdcc9869d67b363} 
@@ -201,14 +254,14 @@ Initializes the parser.
 
 
 
-Definition at line \mbox{\hyperlink{parser_8c_source_l00080}{80}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
+Definition at line \mbox{\hyperlink{parser_8c_source_l00094}{94}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=243pt]{parser_8h_ae23a18474f4d84e20fdcc9869d67b363_icgraph}
+\includegraphics[width=286pt]{parser_8h_ae23a18474f4d84e20fdcc9869d67b363_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{parser_8h_a1034bedc0b6b8bdb22f67b0e72a101d0}\label{parser_8h_a1034bedc0b6b8bdb22f67b0e72a101d0} 
@@ -230,7 +283,21 @@ Initializes the parser with initial token list.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{parser_8c_source_l00086}{86}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
+Definition at line \mbox{\hyperlink{parser_8c_source_l00101}{101}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
+
+\Hypertarget{parser_8h_aa6d78d03bc9d7665d597b646485b647f}\label{parser_8h_aa6d78d03bc9d7665d597b646485b647f} 
+\index{parser.h@{parser.h}!ParserPopToken@{ParserPopToken}}
+\index{ParserPopToken@{ParserPopToken}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{ParserPopToken()}{ParserPopToken()}}
+{\footnotesize\ttfamily void Parser\+Pop\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes last pushed token. 
+
+
+
+Definition at line \mbox{\hyperlink{parser_8c_source_l00087}{87}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
 
 \Hypertarget{parser_8h_aa19b910e23df23ebe5f189f93c97afdd}\label{parser_8h_aa19b910e23df23ebe5f189f93c97afdd} 
 \index{parser.h@{parser.h}!ParserPushToken@{ParserPushToken}}
@@ -254,8 +321,16 @@ Parser\+Init\+With
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{parser_8c_source_l00073}{73}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
+Definition at line \mbox{\hyperlink{parser_8c_source_l00076}{76}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{parser_8h_aa19b910e23df23ebe5f189f93c97afdd_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{parser_8h_a1715c490f05c2ddcb8d526684468f885}\label{parser_8h_a1715c490f05c2ddcb8d526684468f885} 
 \index{parser.h@{parser.h}!ParserReset@{ParserReset}}
 \index{ParserReset@{ParserReset}!parser.h@{parser.h}}
@@ -273,7 +348,7 @@ Parser\+Stop
 \end{DoxySeeAlso}
 
 
-Definition at line \mbox{\hyperlink{parser_8c_source_l00097}{97}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
+Definition at line \mbox{\hyperlink{parser_8c_source_l00112}{112}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -281,6 +356,14 @@ Here is the call graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=251pt]{parser_8h_a1715c490f05c2ddcb8d526684468f885_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{parser_8h_a1715c490f05c2ddcb8d526684468f885_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{parser_8h_a9264a889771bffb6e9bb7215c8402eda}\label{parser_8h_a9264a889771bffb6e9bb7215c8402eda} 
@@ -295,13 +378,13 @@ Stops the parser and clears all tokens.
 
 
 
-Definition at line \mbox{\hyperlink{parser_8c_source_l00093}{93}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
+Definition at line \mbox{\hyperlink{parser_8c_source_l00108}{108}} of file \mbox{\hyperlink{parser_8c_source}{parser.\+c}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=251pt]{parser_8h_a9264a889771bffb6e9bb7215c8402eda_icgraph}
+\includegraphics[width=350pt]{parser_8h_a9264a889771bffb6e9bb7215c8402eda_icgraph}
 \end{center}
 \end{figure}

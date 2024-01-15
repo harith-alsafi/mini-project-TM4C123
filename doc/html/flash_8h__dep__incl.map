@@ -1,5 +1,11 @@
 <map id="src/flash.h" name="src/flash.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,87,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="163,5,244,32"/>
 <area shape="rect" id="Node000002" href="$flash_8c.html" title=" " alt="" coords="5,80,87,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,48,49,80,43,80,43,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,41,75,82,73,77,161,36"/>
+<area shape="rect" id="Node000003" href="$logic_8c.html" title=" " alt="" coords="111,80,192,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,46,162,81,158,78,183,43"/>
+<area shape="rect" id="Node000004" href="$main_8c.html" title=" " alt="" coords="216,80,298,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="224,43,250,78,245,81,220,46"/>
+<area shape="rect" id="Node000005" href="$test_8c.html" title=" " alt="" coords="323,80,399,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="246,36,334,77,332,82,243,41"/>
 </map>

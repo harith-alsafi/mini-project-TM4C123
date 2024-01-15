@@ -2,6 +2,4 @@
 <area shape="rect" id="Node000001" title="Uses." alt="" coords="5,5,83,32"/>
 <area shape="rect" id="Node000002" href="$clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="131,5,226,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,16,115,16,115,21,83,21"/>
-<area shape="rect" id="Node000003" href="$playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="274,5,326,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="226,16,258,16,258,21,226,21"/>
 </map>

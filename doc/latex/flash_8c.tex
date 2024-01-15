@@ -1,22 +1,94 @@
 \doxysection{src/flash.c File Reference}
 \hypertarget{flash_8c}{}\label{flash_8c}\index{src/flash.c@{src/flash.c}}
 {\ttfamily \#include "{}flash.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
 Include dependency graph for flash.\+c\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=141pt]{flash_8c__incl}
+\includegraphics[width=314pt]{flash_8c__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{flash_8c_ab165861d9848019963be1f879fb38173}{Flash\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes flash storage. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{flash_8c_ab7c1a5c377d3f3d9156c5d3db6c95951}{Flash\+Erase}} ()
+\begin{DoxyCompactList}\small\item\em Erases flash. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{flash_8c_a36a8e2cfd36cad487fc631562b25db83}{Flash\+Data\+Is\+Read}} (\mbox{\hyperlink{struct_flash_data}{Flash\+Data}} data)
+\begin{DoxyCompactList}\small\item\em Checks if flash data is read. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{flash_8c_a028e942d1bdb9290368370559c83eab0}{Flash\+Write}} (\mbox{\hyperlink{struct_flash_data}{Flash\+Data}} data)
+\begin{DoxyCompactList}\small\item\em Writes data to flash. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_flash_data}{Flash\+Data}} \mbox{\hyperlink{flash_8c_a43a3c0a9d8a7396326169b74b694cce2}{Flash\+Read}} ()
+\begin{DoxyCompactList}\small\item\em Reads data from flash. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{flash_8c_ae44b3676440fdea4160b7868e26465ab}{flash\+Write\+Key}} = 0
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{flash_8c_a36a8e2cfd36cad487fc631562b25db83}\label{flash_8c_a36a8e2cfd36cad487fc631562b25db83} 
+\index{flash.c@{flash.c}!FlashDataIsRead@{FlashDataIsRead}}
+\index{FlashDataIsRead@{FlashDataIsRead}!flash.c@{flash.c}}
+\doxysubsubsection{\texorpdfstring{FlashDataIsRead()}{FlashDataIsRead()}}
+{\footnotesize\ttfamily bool Flash\+Data\+Is\+Read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_flash_data}{Flash\+Data}}}]{data }\end{DoxyParamCaption})}
+
+
+
+Checks if flash data is read. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{flash_8c_source_l00031}{31}} of file \mbox{\hyperlink{flash_8c_source}{flash.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{flash_8c_a36a8e2cfd36cad487fc631562b25db83_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{flash_8c_ab7c1a5c377d3f3d9156c5d3db6c95951}\label{flash_8c_ab7c1a5c377d3f3d9156c5d3db6c95951} 
+\index{flash.c@{flash.c}!FlashErase@{FlashErase}}
+\index{FlashErase@{FlashErase}!flash.c@{flash.c}}
+\doxysubsubsection{\texorpdfstring{FlashErase()}{FlashErase()}}
+{\footnotesize\ttfamily int Flash\+Erase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Erases flash. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{flash_8c_source_l00016}{16}} of file \mbox{\hyperlink{flash_8c_source}{flash.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{flash_8c_ab7c1a5c377d3f3d9156c5d3db6c95951_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{flash_8c_ab165861d9848019963be1f879fb38173}\label{flash_8c_ab165861d9848019963be1f879fb38173} 
 \index{flash.c@{flash.c}!FlashInit@{FlashInit}}
 \index{FlashInit@{FlashInit}!flash.c@{flash.c}}
@@ -25,5 +97,93 @@ void \mbox{\hyperlink{flash_8c_ab165861d9848019963be1f879fb38173}{Flash\+Init}} 
 
 
 
-Definition at line \mbox{\hyperlink{flash_8c_source_l00003}{3}} of file \mbox{\hyperlink{flash_8c_source}{flash.\+c}}.
+Initializes flash storage. 
+
+
+
+Definition at line \mbox{\hyperlink{flash_8c_source_l00007}{7}} of file \mbox{\hyperlink{flash_8c_source}{flash.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{flash_8c_ab165861d9848019963be1f879fb38173_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{flash_8c_a43a3c0a9d8a7396326169b74b694cce2}\label{flash_8c_a43a3c0a9d8a7396326169b74b694cce2} 
+\index{flash.c@{flash.c}!FlashRead@{FlashRead}}
+\index{FlashRead@{FlashRead}!flash.c@{flash.c}}
+\doxysubsubsection{\texorpdfstring{FlashRead()}{FlashRead()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_flash_data}{Flash\+Data}} Flash\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads data from flash. 
+
+\begin{DoxyReturn}{Returns}
+Flash\+Data 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{flash_8c_source_l00056}{56}} of file \mbox{\hyperlink{flash_8c_source}{flash.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{flash_8c_a43a3c0a9d8a7396326169b74b694cce2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{flash_8c_a028e942d1bdb9290368370559c83eab0}\label{flash_8c_a028e942d1bdb9290368370559c83eab0} 
+\index{flash.c@{flash.c}!FlashWrite@{FlashWrite}}
+\index{FlashWrite@{FlashWrite}!flash.c@{flash.c}}
+\doxysubsubsection{\texorpdfstring{FlashWrite()}{FlashWrite()}}
+{\footnotesize\ttfamily int Flash\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_flash_data}{Flash\+Data}}}]{data }\end{DoxyParamCaption})}
+
+
+
+Writes data to flash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{flash_8c_source_l00037}{37}} of file \mbox{\hyperlink{flash_8c_source}{flash.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{flash_8c_a028e942d1bdb9290368370559c83eab0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{flash_8c_a028e942d1bdb9290368370559c83eab0_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{flash_8c_ae44b3676440fdea4160b7868e26465ab}\label{flash_8c_ae44b3676440fdea4160b7868e26465ab} 
+\index{flash.c@{flash.c}!flashWriteKey@{flashWriteKey}}
+\index{flashWriteKey@{flashWriteKey}!flash.c@{flash.c}}
+\doxysubsubsection{\texorpdfstring{flashWriteKey}{flashWriteKey}}
+{\footnotesize\ttfamily int flash\+Write\+Key = 0}
+
+
+
+Definition at line \mbox{\hyperlink{flash_8c_source_l00005}{5}} of file \mbox{\hyperlink{flash_8c_source}{flash.\+c}}.
 

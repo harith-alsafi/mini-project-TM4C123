@@ -1,13 +1,20 @@
 <map id="ParseTerm" name="ParseTerm">
-<area shape="rect" id="Node000001" title="Parses term tokens." alt="" coords="476,81,561,108"/>
-<area shape="rect" id="Node000002" href="$parser_8c.html#ab427a20c59c9ca0b11c82660752df62a" title="Parses arithematic expression." alt="" coords="308,31,428,57"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="461,78,409,60,411,55,463,73"/>
-<area shape="rect" id="Node000003" href="$parser_8c.html#ab942fe3a63fed3190c76e55ebc76e5aa" title="Parses bracket expression." alt="" coords="157,5,257,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="292,44,246,35,247,30,293,39"/>
-<area shape="rect" id="Node000005" href="$parser_8c.html#a19203c96ed6922e7092af10b63e6d298" title="Compiles the tokens and returns the result." alt="" coords="154,56,260,83"/>
-<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="293,58,261,64,260,58,292,53"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="273,17,329,27,328,33,272,23"/>
-<area shape="rect" id="Node000004" href="$parser_8c.html#a55bde1715e6e77addb80a046c96f059d" title="Parses only number tokens." alt="" coords="5,56,106,83"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="151,40,99,58,97,53,149,35"/>
-<area shape="poly" id="edge5_Node000004_Node000001" title=" " alt="" coords="115,84,154,92,244,100,333,101,476,95,476,101,333,106,243,105,153,97,114,90"/>
+<area shape="rect" id="Node000001" title="Parses term tokens." alt="" coords="696,31,780,57"/>
+<area shape="rect" id="Node000002" href="$parser_8c.html#ab427a20c59c9ca0b11c82660752df62a" title="Parses arithematic expression." alt="" coords="528,81,648,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="683,65,631,83,629,78,681,60"/>
+<area shape="rect" id="Node000003" href="$parser_8c.html#ab942fe3a63fed3190c76e55ebc76e5aa" title="Parses bracket expression." alt="" coords="376,31,477,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="512,83,450,60,452,55,514,78"/>
+<area shape="rect" id="Node000005" href="$parser_8c.html#a19203c96ed6922e7092af10b63e6d298" title="Compiles the tokens and returns the result." alt="" coords="373,81,480,108"/>
+<area shape="poly" id="edge7_Node000002_Node000005" title=" " alt="" coords="512,97,480,97,480,92,512,92"/>
+<area shape="poly" id="edge6_Node000003_Node000001" title=" " alt="" coords="493,41,696,41,696,47,493,47"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="493,53,564,78,563,83,491,58"/>
+<area shape="rect" id="Node000004" href="$parser_8c.html#a55bde1715e6e77addb80a046c96f059d" title="Parses only number tokens." alt="" coords="224,5,324,32"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="360,36,324,30,325,24,361,30"/>
+<area shape="poly" id="edge5_Node000004_Node000001" title=" " alt="" coords="340,13,481,12,565,15,648,23,696,31,695,36,648,28,565,21,481,17,340,18"/>
+<area shape="rect" id="Node000006" href="$logic_8c.html#a5f7f7893415d86a5a8348472dbdd0541" title=" " alt="" coords="223,81,325,108"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="358,97,326,97,326,92,358,92"/>
+<area shape="rect" id="Node000007" href="$logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,81,175,108"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="208,97,176,97,176,92,208,92"/>
+<area shape="rect" id="Node000008" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,81,55,108"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="87,97,55,97,55,92,87,92"/>
 </map>

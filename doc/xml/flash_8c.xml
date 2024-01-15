@@ -3,18 +3,62 @@
   <compounddef id="flash_8c" kind="file" language="C++">
     <compoundname>flash.c</compoundname>
     <includes refid="flash_8h" local="yes">flash.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
     <incdepgraph>
       <node id="1">
         <label>src/flash.c</label>
         <link refid="flash_8c"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>flash.h</label>
         <link refid="flash_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>helpers.h</label>
+        <link refid="helpers_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
       </node>
     </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="flash_8c_1ae44b3676440fdea4160b7868e26465ab" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flashWriteKey</definition>
+        <argsstring></argsstring>
+        <name>flashWriteKey</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/flash.c" line="5" column="4" bodyfile="src/flash.c" bodystart="5" bodyend="-1"/>
+        <referencedby refid="flash_8c_1ab7c1a5c377d3f3d9156c5d3db6c95951" compoundref="flash_8c" startline="16" endline="29">FlashErase</referencedby>
+        <referencedby refid="flash_8c_1ab165861d9848019963be1f879fb38173" compoundref="flash_8c" startline="7" endline="14">FlashInit</referencedby>
+        <referencedby refid="flash_8c_1a028e942d1bdb9290368370559c83eab0" compoundref="flash_8c" startline="37" endline="54">FlashWrite</referencedby>
+      </memberdef>
+    </sectiondef>
     <sectiondef kind="func">
       <memberdef kind="function" id="flash_8c_1ab165861d9848019963be1f879fb38173" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -22,12 +66,138 @@
         <argsstring>()</argsstring>
         <name>FlashInit</name>
         <briefdescription>
+<para>Initializes flash storage. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/flash.c" line="3" column="6" bodyfile="src/flash.c" bodystart="3" bodyend="5"/>
+        <location file="src/flash.c" line="7" column="6" bodyfile="src/flash.c" bodystart="7" bodyend="14"/>
+        <references refid="flash_8h_1a8ab835c787a1619e3e41a99cdbef73fe" compoundref="flash_8h" startline="4">FLASH_BOOTCFG_R</references>
+        <references refid="flash_8c_1ae44b3676440fdea4160b7868e26465ab" compoundref="flash_8c" startline="5">flashWriteKey</references>
+        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="74" endline="90">InitAll</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="flash_8c_1ab7c1a5c377d3f3d9156c5d3db6c95951" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FlashErase</definition>
+        <argsstring>()</argsstring>
+        <name>FlashErase</name>
+        <briefdescription>
+<para>Erases flash. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/flash.c" line="16" column="5" bodyfile="src/flash.c" bodystart="16" bodyend="29"/>
+        <references refid="flash_8h_1a0571de796f539e5779da6a9203190645" compoundref="flash_8h" startline="8">FLASH_BASE_ADDR</references>
+        <references refid="flash_8h_1a815af6a66624da5e7fb5151d36cf1887" compoundref="flash_8h" startline="5">FLASH_FMA_R</references>
+        <references refid="flash_8h_1aef6f95c857edd1897fcb581723eddd2b" compoundref="flash_8h" startline="7">FLASH_FMC_R</references>
+        <references refid="flash_8h_1adb54546355b25806000b2d35e8539f13" compoundref="flash_8h" startline="9">FLASH_KB</references>
+        <references refid="flash_8h_1a814b210c5d0de41d2a2236aa12385447" compoundref="flash_8h" startline="20">FLASH_NUMBER_BLOCKS</references>
+        <references refid="flash_8c_1ae44b3676440fdea4160b7868e26465ab" compoundref="flash_8c" startline="5">flashWriteKey</references>
+        <referencedby refid="flash_8c_1a028e942d1bdb9290368370559c83eab0" compoundref="flash_8c" startline="37" endline="54">FlashWrite</referencedby>
+        <referencedby refid="test_8c_1ac96c14effaeda91dcf6f15a034a428e9" compoundref="test_8c" startline="69" endline="81">TestFlash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="flash_8c_1a36a8e2cfd36cad487fc631562b25db83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FlashDataIsRead</definition>
+        <argsstring>(FlashData data)</argsstring>
+        <name>FlashDataIsRead</name>
+        <param>
+          <type><ref refid="struct_flash_data" kindref="compound">FlashData</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Checks if flash data is read. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/flash.c" line="31" column="6" bodyfile="src/flash.c" bodystart="31" bodyend="35"/>
+        <references refid="struct_flash_data_1a4422d8fa663a07bef935b1a5b256388a" compoundref="flash_8h" startline="16">FlashData::password</references>
+        <references refid="struct_flash_data_1a098d99b6a0f1ab85c7a16b5eb154f4d6" compoundref="flash_8h" startline="15">FlashData::passwordLength</references>
+        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="74" endline="90">InitAll</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="flash_8c_1a028e942d1bdb9290368370559c83eab0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FlashWrite</definition>
+        <argsstring>(FlashData data)</argsstring>
+        <name>FlashWrite</name>
+        <param>
+          <type><ref refid="struct_flash_data" kindref="compound">FlashData</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Writes data to flash. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/flash.c" line="37" column="5" bodyfile="src/flash.c" bodystart="37" bodyend="54"/>
+        <references refid="flash_8h_1a0571de796f539e5779da6a9203190645" compoundref="flash_8h" startline="8">FLASH_BASE_ADDR</references>
+        <references refid="flash_8h_1a6afb081a75593f3c034881ada625cf8d" compoundref="flash_8h" startline="19">FLASH_BLOCK_SIZE</references>
+        <references refid="flash_8h_1a815af6a66624da5e7fb5151d36cf1887" compoundref="flash_8h" startline="5">FLASH_FMA_R</references>
+        <references refid="flash_8h_1aef6f95c857edd1897fcb581723eddd2b" compoundref="flash_8h" startline="7">FLASH_FMC_R</references>
+        <references refid="flash_8h_1a31c1116fe0b48148a13f9df480fc0bf1" compoundref="flash_8h" startline="6">FLASH_FMD_R</references>
+        <references refid="flash_8c_1ab7c1a5c377d3f3d9156c5d3db6c95951" compoundref="flash_8c" startline="16" endline="29">FlashErase</references>
+        <references refid="flash_8c_1ae44b3676440fdea4160b7868e26465ab" compoundref="flash_8c" startline="5">flashWriteKey</references>
+        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="74" endline="90">InitAll</referencedby>
+        <referencedby refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="226" endline="247">RunChangePassword</referencedby>
+        <referencedby refid="test_8c_1ac96c14effaeda91dcf6f15a034a428e9" compoundref="test_8c" startline="69" endline="81">TestFlash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="flash_8c_1a43a3c0a9d8a7396326169b74b694cce2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_flash_data" kindref="compound">FlashData</ref></type>
+        <definition>FlashData FlashRead</definition>
+        <argsstring>()</argsstring>
+        <name>FlashRead</name>
+        <briefdescription>
+<para>Reads data from flash. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>FlashData </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/flash.c" line="56" column="11" bodyfile="src/flash.c" bodystart="56" bodyend="65"/>
+        <references refid="flash_8h_1a0571de796f539e5779da6a9203190645" compoundref="flash_8h" startline="8">FLASH_BASE_ADDR</references>
+        <references refid="flash_8h_1a6afb081a75593f3c034881ada625cf8d" compoundref="flash_8h" startline="19">FLASH_BLOCK_SIZE</references>
+        <references refid="struct_flash_data_1a098d99b6a0f1ab85c7a16b5eb154f4d6" compoundref="flash_8h" startline="15">FlashData::passwordLength</references>
+        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="74" endline="90">InitAll</referencedby>
+        <referencedby refid="test_8c_1ac96c14effaeda91dcf6f15a034a428e9" compoundref="test_8c" startline="69" endline="81">TestFlash</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -36,10 +206,72 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="flash_8h" kindref="compound">flash.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="flash_8c_1ab165861d9848019963be1f879fb38173" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="flash_8c_1ab165861d9848019963be1f879fb38173" kindref="member">FlashInit</ref>(){</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="5"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="flash_8c_1ae44b3676440fdea4160b7868e26465ab" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="flash_8c_1ae44b3676440fdea4160b7868e26465ab" kindref="member">flashWriteKey</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="flash_8c_1ab165861d9848019963be1f879fb38173" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="flash_8c_1ab165861d9848019963be1f879fb38173" kindref="member">FlashInit</ref>(){</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="flash_8h_1a8ab835c787a1619e3e41a99cdbef73fe" kindref="member">FLASH_BOOTCFG_R</ref><sp/>&amp;<sp/>0x10)<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="flash_8c_1ae44b3676440fdea4160b7868e26465ab" kindref="member">flashWriteKey</ref><sp/>=<sp/>0xA442;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="flash_8c_1ae44b3676440fdea4160b7868e26465ab" kindref="member">flashWriteKey</ref><sp/>=<sp/>0x71D5;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="flash_8c_1ab7c1a5c377d3f3d9156c5d3db6c95951" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="flash_8c_1ab7c1a5c377d3f3d9156c5d3db6c95951" kindref="member">FlashErase</ref>()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="flash_8h_1a814b210c5d0de41d2a2236aa12385447" kindref="member">FLASH_NUMBER_BLOCKS</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="flash_8h_1a815af6a66624da5e7fb5151d36cf1887" kindref="member">FLASH_FMA_R</ref><sp/>&amp;=<sp/>0xFFFC0000;<sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="flash_8h_1a815af6a66624da5e7fb5151d36cf1887" kindref="member">FLASH_FMA_R</ref><sp/>|=<sp/>(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>long)<ref refid="flash_8h_1a0571de796f539e5779da6a9203190645" kindref="member">FLASH_BASE_ADDR</ref><sp/>+<sp/>(i*<ref refid="flash_8h_1adb54546355b25806000b2d35e8539f13" kindref="member">FLASH_KB</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="flash_8h_1aef6f95c857edd1897fcb581723eddd2b" kindref="member">FLASH_FMC_R</ref><sp/>=<sp/>(<ref refid="flash_8c_1ae44b3676440fdea4160b7868e26465ab" kindref="member">flashWriteKey</ref><sp/>&lt;&lt;<sp/>16)<sp/>|<sp/>0x2;<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="flash_8h_1aef6f95c857edd1897fcb581723eddd2b" kindref="member">FLASH_FMC_R</ref><sp/>&amp;<sp/>0x2)<sp/>{}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="flash_8c_1a36a8e2cfd36cad487fc631562b25db83" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="flash_8c_1a36a8e2cfd36cad487fc631562b25db83" kindref="member">FlashDataIsRead</ref>(<ref refid="struct_flash_data" kindref="compound">FlashData</ref><sp/>data){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>data.<ref refid="struct_flash_data_1a098d99b6a0f1ab85c7a16b5eb154f4d6" kindref="member">passwordLength</ref><sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>strlen(data.<ref refid="struct_flash_data_1a4422d8fa663a07bef935b1a5b256388a" kindref="member">password</ref>)<sp/>==<sp/>data.<ref refid="struct_flash_data_1a098d99b6a0f1ab85c7a16b5eb154f4d6" kindref="member">passwordLength</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="flash_8c_1a028e942d1bdb9290368370559c83eab0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="flash_8c_1a028e942d1bdb9290368370559c83eab0" kindref="member">FlashWrite</ref>(<ref refid="struct_flash_data" kindref="compound">FlashData</ref><sp/>data){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="flash_8c_1ab7c1a5c377d3f3d9156c5d3db6c95951" kindref="member">FlashErase</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="flash_8h_1a6afb081a75593f3c034881ada625cf8d" kindref="member">FLASH_BLOCK_SIZE</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="flash_8h_1a31c1116fe0b48148a13f9df480fc0bf1" kindref="member">FLASH_FMD_R</ref><sp/>=<sp/>((</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*)&amp;data)[i];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="flash_8h_1a815af6a66624da5e7fb5151d36cf1887" kindref="member">FLASH_FMA_R</ref><sp/>&amp;=<sp/>0xFFFC0000;<sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="flash_8h_1a815af6a66624da5e7fb5151d36cf1887" kindref="member">FLASH_FMA_R</ref><sp/>|=<sp/>(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>long)<ref refid="flash_8h_1a0571de796f539e5779da6a9203190645" kindref="member">FLASH_BASE_ADDR</ref><sp/>+<sp/>(i<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="flash_8h_1aef6f95c857edd1897fcb581723eddd2b" kindref="member">FLASH_FMC_R</ref><sp/>=<sp/>(<ref refid="flash_8c_1ae44b3676440fdea4160b7868e26465ab" kindref="member">flashWriteKey</ref><sp/>&lt;&lt;<sp/>16)<sp/>|<sp/>0x1;<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="flash_8h_1aef6f95c857edd1897fcb581723eddd2b" kindref="member">FLASH_FMC_R</ref><sp/>&amp;<sp/>0x1)<sp/>{}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="flash_8c_1a43a3c0a9d8a7396326169b74b694cce2" refkind="member"><highlight class="normal"><ref refid="struct_flash_data" kindref="compound">FlashData</ref><sp/><ref refid="flash_8c_1a43a3c0a9d8a7396326169b74b694cce2" kindref="member">FlashRead</ref>(){</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_flash_data" kindref="compound">FlashData</ref><sp/>data<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="struct_flash_data_1a098d99b6a0f1ab85c7a16b5eb154f4d6" kindref="member">passwordLength</ref><sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.password<sp/>=<sp/>NULL,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="flash_8h_1a6afb081a75593f3c034881ada625cf8d" kindref="member">FLASH_BLOCK_SIZE</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*)&amp;data)[i]<sp/>=<sp/><ref refid="flash_8h_1a0571de796f539e5779da6a9203190645" kindref="member">FLASH_BASE_ADDR</ref>[i];</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
     </programlisting>
     <location file="src/flash.c"/>
   </compounddef>

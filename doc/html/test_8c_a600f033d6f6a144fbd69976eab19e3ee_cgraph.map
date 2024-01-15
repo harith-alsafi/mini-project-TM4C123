@@ -1,0 +1,19 @@
+<map id="AfterEach" name="AfterEach">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,84,57"/>
+<area shape="rect" id="Node000002" href="$clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="306,5,383,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,38,290,20,291,26,84,43"/>
+<area shape="rect" id="Node000004" href="$lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="132,56,247,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="85,48,117,54,116,59,84,53"/>
+<area shape="rect" id="Node000003" href="$clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="731,31,826,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="384,18,716,38,716,43,384,24"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="232,53,291,33,292,38,234,58"/>
+<area shape="rect" id="Node000005" href="$lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="295,56,394,83"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="248,67,279,67,279,72,248,72"/>
+<area shape="rect" id="Node000008" href="$lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="306,107,384,133"/>
+<area shape="poly" id="edge9_Node000004_Node000008" title=" " alt="" coords="234,81,291,100,290,105,232,86"/>
+<area shape="rect" id="Node000006" href="$lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="442,56,551,83"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="395,67,427,67,427,72,395,72"/>
+<area shape="rect" id="Node000007" href="$clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="599,56,683,83"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="551,67,583,67,583,72,551,72"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="683,59,715,53,716,58,684,64"/>
+</map>

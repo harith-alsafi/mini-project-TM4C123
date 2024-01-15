@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['expression_5fparser_5fh_0',['EXPRESSION_PARSER_H',['../parser_8h.html#a5eacb3f8d827ae299ee42b9e0e99fa13',1,'parser.h']]]
+  ['define_5flist_5fimplementation_0',['DEFINE_LIST_IMPLEMENTATION',['../helpers_8h.html#af81ac8e504dd921417ba754f655999f5',1,'helpers.h']]],
+  ['define_5flist_5fprototype_1',['DEFINE_LIST_PROTOTYPE',['../helpers_8h.html#ab9b5864bb7f364790006596ce97eb4ea',1,'helpers.h']]]
 ];

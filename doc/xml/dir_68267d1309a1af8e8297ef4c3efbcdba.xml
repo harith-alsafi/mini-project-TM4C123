@@ -6,8 +6,6 @@
     <innerfile refid="clock_8h">clock.h</innerfile>
     <innerfile refid="flash_8c">flash.c</innerfile>
     <innerfile refid="flash_8h">flash.h</innerfile>
-    <innerfile refid="hardware-test_8c">hardware-test.c</innerfile>
-    <innerfile refid="hardware-test_8h">hardware-test.h</innerfile>
     <innerfile refid="helpers_8c">helpers.c</innerfile>
     <innerfile refid="helpers_8h">helpers.h</innerfile>
     <innerfile refid="keypad_8c">keypad.c</innerfile>
@@ -19,12 +17,11 @@
     <innerfile refid="main_8c">main.c</innerfile>
     <innerfile refid="parser_8c">parser.c</innerfile>
     <innerfile refid="parser_8h">parser.h</innerfile>
-    <innerfile refid="playground_8c">playground.c</innerfile>
     <innerfile refid="ports_8c">ports.c</innerfile>
     <innerfile refid="ports_8h">ports.h</innerfile>
+    <innerfile refid="test_8c">test.c</innerfile>
+    <innerfile refid="test_8h">test.h</innerfile>
     <innerfile refid="_t_exa_s_8h">TExaS.h</innerfile>
-    <innerfile refid="user-interface_8c">user-interface.c</innerfile>
-    <innerfile refid="user-interface_8h">user-interface.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

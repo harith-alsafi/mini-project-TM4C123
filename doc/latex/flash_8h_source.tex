@@ -5,23 +5,34 @@
 \DoxyCodeLine{\Hypertarget{flash_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ FLASH\_STORAGE\_H\ \ \ }\textcolor{comment}{//\ If\ not\ defined}}
 \DoxyCodeLine{\Hypertarget{flash_8h_source_l00002}\mbox{\hyperlink{flash_8h_a52984b41e45a13e9f7e687e1c4a07a2d}{00002}}\ \textcolor{preprocessor}{\#define\ FLASH\_STORAGE\_H\ \ \ }\textcolor{comment}{//\ Define\ it}}
 \DoxyCodeLine{\Hypertarget{flash_8h_source_l00003}00003\ }
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00004}\mbox{\hyperlink{flash_8h_a89c6418eced607811aec6c584f004215}{00004}}\ \textcolor{preprocessor}{\#define\ FLASH\_FMC\ }}
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00005}\mbox{\hyperlink{flash_8h_ae9963cd83d3234139fea43d97385a234}{00005}}\ \textcolor{preprocessor}{\#define\ FLASH\_FMD\ }}
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00006}\mbox{\hyperlink{flash_8h_acec37e62cb88a0d40af83c466d03151f}{00006}}\ \textcolor{preprocessor}{\#define\ FLASH\_FMA\ }}
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00007}00007\ }
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00008}\mbox{\hyperlink{struct_flash_data}{00008}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00009}\mbox{\hyperlink{struct_flash_data_a098d99b6a0f1ab85c7a16b5eb154f4d6}{00009}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_flash_data_a098d99b6a0f1ab85c7a16b5eb154f4d6}{passwordLength}};}
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00010}\mbox{\hyperlink{struct_flash_data_ab7969b05d81fd851e3238236b94bf1e4}{00010}}\ \ \ \ \ \textcolor{keywordtype}{char}\ password[];}
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00011}00011\ \}\ \mbox{\hyperlink{struct_flash_data}{FlashData}};}
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00012}00012\ }
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00013}00013\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{flash_8h_ab165861d9848019963be1f879fb38173}{FlashInit}}();}
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00015}\mbox{\hyperlink{flash_8h_ac9ce33144c1ff6b3253343e1f635bf73}{00015}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{flash_8h_ac9ce33144c1ff6b3253343e1f635bf73}{FlashWrite}}(\mbox{\hyperlink{struct_flash_data}{FlashData}}\ data);}
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00017}\mbox{\hyperlink{flash_8h_a43a3c0a9d8a7396326169b74b694cce2}{00017}}\ \mbox{\hyperlink{struct_flash_data}{FlashData}}\ \mbox{\hyperlink{flash_8h_a43a3c0a9d8a7396326169b74b694cce2}{FlashRead}}();}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00004}\mbox{\hyperlink{flash_8h_a8ab835c787a1619e3e41a99cdbef73fe}{00004}}\ \textcolor{preprocessor}{\#define\ FLASH\_BOOTCFG\_R\ \ \ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x400FE1D0))}}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00005}\mbox{\hyperlink{flash_8h_a815af6a66624da5e7fb5151d36cf1887}{00005}}\ \textcolor{preprocessor}{\#define\ FLASH\_FMA\_R\ \ \ \ \ \ \ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x400FD000))}}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00006}\mbox{\hyperlink{flash_8h_a31c1116fe0b48148a13f9df480fc0bf1}{00006}}\ \textcolor{preprocessor}{\#define\ FLASH\_FMD\_R\ \ \ \ \ \ \ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x400FD004))}}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00007}\mbox{\hyperlink{flash_8h_aef6f95c857edd1897fcb581723eddd2b}{00007}}\ \textcolor{preprocessor}{\#define\ FLASH\_FMC\_R\ \ \ \ \ \ \ \ \ \ \ \ \ (*((volatile\ unsigned\ long\ *)0x400FD008))}}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00008}\mbox{\hyperlink{flash_8h_a0571de796f539e5779da6a9203190645}{00008}}\ \textcolor{preprocessor}{\#define\ FLASH\_BASE\_ADDR\ \ \ \ \ \ \ \ \ (((volatile\ unsigned\ long\ *)0x00020000))}}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00009}\mbox{\hyperlink{flash_8h_adb54546355b25806000b2d35e8539f13}{00009}}\ \textcolor{preprocessor}{\#define\ FLASH\_KB\ 1024}}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{helpers_8h}{helpers.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00014}\mbox{\hyperlink{struct_flash_data}{00014}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00015}\mbox{\hyperlink{struct_flash_data_a098d99b6a0f1ab85c7a16b5eb154f4d6}{00015}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_flash_data_a098d99b6a0f1ab85c7a16b5eb154f4d6}{passwordLength}};}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00016}\mbox{\hyperlink{struct_flash_data_a4422d8fa663a07bef935b1a5b256388a}{00016}}\ \ \ \ \ \textcolor{keywordtype}{char}\ password[\mbox{\hyperlink{helpers_8h_a7732dd97bdb60ecae9aa857355cf9841}{ARRAY\_MAX\_LENGTH}}];}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00017}00017\ \}\ \mbox{\hyperlink{struct_flash_data}{FlashData}};}
 \DoxyCodeLine{\Hypertarget{flash_8h_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00019}\mbox{\hyperlink{flash_8h_ac64d149b1fb48e07560205f5a454d7df}{00019}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{flash_8h_ac64d149b1fb48e07560205f5a454d7df}{FlashErase}}();}
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{flash_8h_source_l00021}00021\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00019}\mbox{\hyperlink{flash_8h_a6afb081a75593f3c034881ada625cf8d}{00019}}\ \textcolor{preprocessor}{\#define\ FLASH\_BLOCK\_SIZE\ sizeof(FlashData)\ /\ sizeof(unsigned\ long)}}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00020}\mbox{\hyperlink{flash_8h_a814b210c5d0de41d2a2236aa12385447}{00020}}\ \textcolor{preprocessor}{\#define\ FLASH\_NUMBER\_BLOCKS\ (((FLASH\_BLOCK\_SIZE\ *\ sizeof(unsigned\ long))\ /\ 1024)\ +\ 1)}}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00026}00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{flash_8h_ab165861d9848019963be1f879fb38173}{FlashInit}}();}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00034}00034\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{flash_8h_a028e942d1bdb9290368370559c83eab0}{FlashWrite}}(\mbox{\hyperlink{struct_flash_data}{FlashData}}\ data);}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00041}00041\ \mbox{\hyperlink{struct_flash_data}{FlashData}}\ \mbox{\hyperlink{flash_8h_a43a3c0a9d8a7396326169b74b694cce2}{FlashRead}}();}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00048}00048\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{flash_8h_ab7c1a5c377d3f3d9156c5d3db6c95951}{FlashErase}}();}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00057}00057\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{flash_8h_a36a8e2cfd36cad487fc631562b25db83}{FlashDataIsRead}}(\mbox{\hyperlink{struct_flash_data}{FlashData}}\ data);}
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{flash_8h_source_l00059}00059\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

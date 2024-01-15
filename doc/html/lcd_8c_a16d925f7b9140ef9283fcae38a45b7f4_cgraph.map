@@ -8,20 +8,15 @@
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="521,67,553,67,553,72,521,72"/>
 <area shape="rect" id="Node000005" href="$clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="875,5,961,32"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="667,53,716,41,859,21,860,27,717,47,668,58"/>
-<area shape="rect" id="Node000008" href="$lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="717,56,816,83"/>
-<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="669,67,701,67,701,72,669,72"/>
-<area shape="rect" id="Node000012" href="$lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="727,107,806,133"/>
-<area shape="poly" id="edge13_Node000004_Node000012" title=" " alt="" coords="661,81,713,99,712,104,659,86"/>
-<area shape="rect" id="Node000006" href="$clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1292,5,1387,32"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="962,16,1277,16,1277,21,962,21"/>
-<area shape="rect" id="Node000007" href="$playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="1435,31,1488,57"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1388,26,1421,33,1419,38,1387,31"/>
-<area shape="rect" id="Node000009" href="$lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="864,56,972,83"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="817,67,849,67,849,72,817,72"/>
-<area shape="rect" id="Node000010" href="$lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="1020,56,1112,83"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="973,67,1005,67,1005,72,973,72"/>
-<area shape="rect" id="Node000011" href="$clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1160,56,1244,83"/>
-<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="1112,67,1144,67,1144,72,1112,72"/>
-<area shape="poly" id="edge12_Node000011_Node000006" title=" " alt="" coords="1240,53,1286,35,1288,40,1241,58"/>
-<area shape="poly" id="edge11_Node000011_Node000007" title=" " alt="" coords="1244,63,1420,45,1420,51,1245,68"/>
+<area shape="rect" id="Node000007" href="$lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="717,56,816,83"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="669,67,701,67,701,72,669,72"/>
+<area shape="rect" id="Node000010" href="$lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="727,107,806,133"/>
+<area shape="poly" id="edge10_Node000004_Node000010" title=" " alt="" coords="661,81,713,99,712,104,659,86"/>
+<area shape="rect" id="Node000006" href="$clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="1153,31,1248,57"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="962,20,1138,36,1137,41,962,25"/>
+<area shape="rect" id="Node000008" href="$lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="864,56,972,83"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="817,67,849,67,849,72,817,72"/>
+<area shape="rect" id="Node000009" href="$clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1020,56,1105,83"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="973,67,1005,67,1005,72,973,72"/>
+<area shape="poly" id="edge9_Node000009_Node000006" title=" " alt="" coords="1105,59,1137,53,1138,58,1106,64"/>
 </map>

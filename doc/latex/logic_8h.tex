@@ -1,35 +1,81 @@
 \doxysection{src/logic.h File Reference}
 \hypertarget{logic_8h}{}\label{logic_8h}\index{src/logic.h@{src/logic.h}}
+{\ttfamily \#include "{}keypad.\+h"{}}\newline
+Include dependency graph for logic.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{logic_8h__incl}
+\end{center}
+\end{figure}
 This graph shows which files directly or indirectly include this file\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=141pt]{logic_8h__dep__incl}
+\includegraphics[width=220pt]{logic_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{logic_8h_a4aedb44dda7e02ceb062810c557f8994}{PROGRAM\+\_\+\+LOGIC\+\_\+H}}
+\#define \mbox{\hyperlink{logic_8h_a3fbee8963ee4080987476fc7d6e86f22}{LOGIC\+\_\+H}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085b}{Program\+Mode}} \{ \mbox{\hyperlink{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b}{LOGIN\+\_\+\+MODE}}
+, \mbox{\hyperlink{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085ba6c62120cfab9902751a82edb16219a51}{CALCULATOR\+\_\+\+MODE}}
+, \mbox{\hyperlink{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085ba210a1a97be633a55c65a4e9e982bb51b}{CHANGE\+\_\+\+PASSWORD}}
+ \}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{logic_8h_a8468ead6b76c5ff5eb578a79fd591aa8}{Init\+All}} ()
-\begin{DoxyCompactList}\small\item\em Initializes all components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initializes all components. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8h_a41a8f29e3704245cd53e2e11e03ec5f7}{Run\+Main}} ()
+\begin{DoxyCompactList}\small\item\em Runs the main loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
-\Hypertarget{logic_8h_a4aedb44dda7e02ceb062810c557f8994}\label{logic_8h_a4aedb44dda7e02ceb062810c557f8994} 
-\index{logic.h@{logic.h}!PROGRAM\_LOGIC\_H@{PROGRAM\_LOGIC\_H}}
-\index{PROGRAM\_LOGIC\_H@{PROGRAM\_LOGIC\_H}!logic.h@{logic.h}}
-\doxysubsubsection{\texorpdfstring{PROGRAM\_LOGIC\_H}{PROGRAM\_LOGIC\_H}}
-{\footnotesize\ttfamily \#define PROGRAM\+\_\+\+LOGIC\+\_\+H}
+\Hypertarget{logic_8h_a3fbee8963ee4080987476fc7d6e86f22}\label{logic_8h_a3fbee8963ee4080987476fc7d6e86f22} 
+\index{logic.h@{logic.h}!LOGIC\_H@{LOGIC\_H}}
+\index{LOGIC\_H@{LOGIC\_H}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{LOGIC\_H}{LOGIC\_H}}
+{\footnotesize\ttfamily \#define LOGIC\+\_\+H}
 
 
 
 Definition at line \mbox{\hyperlink{logic_8h_source_l00002}{2}} of file \mbox{\hyperlink{logic_8h_source}{logic.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085b}\label{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085b} 
+\index{logic.h@{logic.h}!ProgramMode@{ProgramMode}}
+\index{ProgramMode@{ProgramMode}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{ProgramMode}{ProgramMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085b}{Program\+Mode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOGIN\_MODE@{LOGIN\_MODE}!logic.h@{logic.h}}\index{logic.h@{logic.h}!LOGIN\_MODE@{LOGIN\_MODE}}}\Hypertarget{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b}\label{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b} 
+LOGIN\+\_\+\+MODE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CALCULATOR\_MODE@{CALCULATOR\_MODE}!logic.h@{logic.h}}\index{logic.h@{logic.h}!CALCULATOR\_MODE@{CALCULATOR\_MODE}}}\Hypertarget{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085ba6c62120cfab9902751a82edb16219a51}\label{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085ba6c62120cfab9902751a82edb16219a51} 
+CALCULATOR\+\_\+\+MODE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHANGE\_PASSWORD@{CHANGE\_PASSWORD}!logic.h@{logic.h}}\index{logic.h@{logic.h}!CHANGE\_PASSWORD@{CHANGE\_PASSWORD}}}\Hypertarget{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085ba210a1a97be633a55c65a4e9e982bb51b}\label{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085ba210a1a97be633a55c65a4e9e982bb51b} 
+CHANGE\+\_\+\+PASSWORD&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{logic_8h_source_l00005}{5}} of file \mbox{\hyperlink{logic_8h_source}{logic.\+h}}.
 
 
 
@@ -46,7 +92,7 @@ Initializes all components.
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00006}{6}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00074}{74}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -56,11 +102,40 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{logic_8h_a8468ead6b76c5ff5eb578a79fd591aa8_cgraph}
 \end{center}
 \end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{logic_8h_a8468ead6b76c5ff5eb578a79fd591aa8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8h_a41a8f29e3704245cd53e2e11e03ec5f7}\label{logic_8h_a41a8f29e3704245cd53e2e11e03ec5f7} 
+\index{logic.h@{logic.h}!RunMain@{RunMain}}
+\index{RunMain@{RunMain}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{RunMain()}{RunMain()}}
+{\footnotesize\ttfamily void Run\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Runs the main loop. 
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00374}{374}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8h_a41a8f29e3704245cd53e2e11e03ec5f7_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=193pt]{logic_8h_a8468ead6b76c5ff5eb578a79fd591aa8_icgraph}
+\includegraphics[width=207pt]{logic_8h_a41a8f29e3704245cd53e2e11e03ec5f7_icgraph}
 \end{center}
 \end{figure}

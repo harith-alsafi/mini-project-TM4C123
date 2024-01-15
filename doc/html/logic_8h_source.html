@@ -81,13 +81,30 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">logic.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="logic_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PROGRAM_LOGIC_H   </span><span class="comment">// If not defined</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno"><a class="line" href="logic_8h.html#a4aedb44dda7e02ceb062810c557f8994">    2</a></span><span class="preprocessor">#define PROGRAM_LOGIC_H   </span><span class="comment">// Define it</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keywordtype">void</span> <a class="code hl_function" href="logic_8h.html#a8468ead6b76c5ff5eb578a79fd591aa8">InitAll</a>();</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="alogic_8h_html_a8468ead6b76c5ff5eb578a79fd591aa8"><div class="ttname"><a href="logic_8h.html#a8468ead6b76c5ff5eb578a79fd591aa8">InitAll</a></div><div class="ttdeci">void InitAll()</div><div class="ttdoc">Initializes all components.</div><div class="ttdef"><b>Definition</b> <a href="logic_8c_source.html#l00006">logic.c:6</a></div></div>
+<a href="logic_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef LOGIC_H   </span><span class="comment">// If not defined</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno"><a class="line" href="logic_8h.html#a3fbee8963ee4080987476fc7d6e86f22">    2</a></span><span class="preprocessor">#define LOGIC_H   </span><span class="comment">// Define it</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="keypad_8h.html">keypad.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085b">    5</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b">    6</a></span>    <a class="code hl_enumvalue" href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b">LOGIN_MODE</a>,</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085ba6c62120cfab9902751a82edb16219a51">    7</a></span>    <a class="code hl_enumvalue" href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085ba6c62120cfab9902751a82edb16219a51">CALCULATOR_MODE</a>,</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_enumvalue" href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085ba210a1a97be633a55c65a4e9e982bb51b">CHANGE_PASSWORD</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085ba210a1a97be633a55c65a4e9e982bb51b">    9</a></span>} <a class="code hl_enumeration" href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085b">ProgramMode</a>;</div>
+</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">void</span> <a class="code hl_function" href="logic_8h.html#a8468ead6b76c5ff5eb578a79fd591aa8">InitAll</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> <a class="code hl_function" href="logic_8h.html#a41a8f29e3704245cd53e2e11e03ec5f7">RunMain</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="akeypad_8h_html"><div class="ttname"><a href="keypad_8h.html">keypad.h</a></div></div>
+<div class="ttc" id="alogic_8h_html_a41a8f29e3704245cd53e2e11e03ec5f7"><div class="ttname"><a href="logic_8h.html#a41a8f29e3704245cd53e2e11e03ec5f7">RunMain</a></div><div class="ttdeci">void RunMain()</div><div class="ttdoc">Runs the main loop.</div><div class="ttdef"><b>Definition</b> <a href="logic_8c_source.html#l00374">logic.c:374</a></div></div>
+<div class="ttc" id="alogic_8h_html_a808b41e4ebcfcf6cd6b2ad9ee7e6085b"><div class="ttname"><a href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085b">ProgramMode</a></div><div class="ttdeci">ProgramMode</div><div class="ttdef"><b>Definition</b> <a href="logic_8h_source.html#l00005">logic.h:5</a></div></div>
+<div class="ttc" id="alogic_8h_html_a808b41e4ebcfcf6cd6b2ad9ee7e6085ba210a1a97be633a55c65a4e9e982bb51b"><div class="ttname"><a href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085ba210a1a97be633a55c65a4e9e982bb51b">CHANGE_PASSWORD</a></div><div class="ttdeci">@ CHANGE_PASSWORD</div><div class="ttdef"><b>Definition</b> <a href="logic_8h_source.html#l00009">logic.h:8</a></div></div>
+<div class="ttc" id="alogic_8h_html_a808b41e4ebcfcf6cd6b2ad9ee7e6085ba6c62120cfab9902751a82edb16219a51"><div class="ttname"><a href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085ba6c62120cfab9902751a82edb16219a51">CALCULATOR_MODE</a></div><div class="ttdeci">@ CALCULATOR_MODE</div><div class="ttdef"><b>Definition</b> <a href="logic_8h_source.html#l00007">logic.h:7</a></div></div>
+<div class="ttc" id="alogic_8h_html_a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b"><div class="ttname"><a href="logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b">LOGIN_MODE</a></div><div class="ttdeci">@ LOGIN_MODE</div><div class="ttdef"><b>Definition</b> <a href="logic_8h_source.html#l00006">logic.h:6</a></div></div>
+<div class="ttc" id="alogic_8h_html_a8468ead6b76c5ff5eb578a79fd591aa8"><div class="ttname"><a href="logic_8h.html#a8468ead6b76c5ff5eb578a79fd591aa8">InitAll</a></div><div class="ttdeci">void InitAll()</div><div class="ttdoc">Initializes all components.</div><div class="ttdef"><b>Definition</b> <a href="logic_8c_source.html#l00074">logic.c:74</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

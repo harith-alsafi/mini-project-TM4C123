@@ -1,0 +1,12 @@
+<map id="ParserPushToken" name="ParserPushToken">
+<area shape="rect" id="Node000001" title="Pushes new token to the parser can be used after calling." alt="" coords="532,31,656,57"/>
+<area shape="rect" id="Node000002" href="$parser_8c.html#a07f87b9f5b24c331fddb0a3d57abfecf" title="Ends the input." alt="" coords="373,5,484,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="515,35,484,30,484,24,516,29"/>
+<area shape="rect" id="Node000003" href="$logic_8c.html#a5f7f7893415d86a5a8348472dbdd0541" title=" " alt="" coords="223,31,325,57"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="516,47,326,47,326,41,516,41"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="358,33,326,38,325,33,357,28"/>
+<area shape="rect" id="Node000004" href="$logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,31,175,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="208,47,176,47,176,41,208,41"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+</map>

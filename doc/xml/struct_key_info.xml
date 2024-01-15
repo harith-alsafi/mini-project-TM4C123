@@ -16,24 +16,40 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="54" column="10" bodyfile="src/keypad.h" bodystart="54" bodyend="-1"/>
-        <referencedby refid="keypad_8c_1a9b1fc55f525fe49144daf21ffe978141" compoundref="keypad_8c" startline="148" endline="150">KeyIsValid</referencedby>
-        <referencedby refid="keypad_8c_1a49ffa463b26cc47b7d9e3e2cda8d9168" compoundref="keypad_8c" startline="152" endline="160">KeypadFindSpecialKey</referencedby>
-        <referencedby refid="hardware-test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" compoundref="hardware-test_8c" startline="57" endline="65">TestKeypadLcd</referencedby>
+        <location file="src/keypad.h" line="44" column="10" bodyfile="src/keypad.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="keypad_8c_1a9b1fc55f525fe49144daf21ffe978141" compoundref="keypad_8c" startline="159" endline="161">KeyIsValid</referencedby>
+        <referencedby refid="keypad_8c_1a49ffa463b26cc47b7d9e3e2cda8d9168" compoundref="keypad_8c" startline="163" endline="171">KeypadFindSpecialKey</referencedby>
+        <referencedby refid="test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" compoundref="test_8c" startline="59" endline="67">TestKeypadLcd</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="struct_key_info_1a1e801a0e9f9c1d289b3b50535701d282" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct_key_info_1a0ee8bda4acee901e95e3050ff19c7c04" prot="public" static="no" mutable="no">
         <type><ref refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536" kindref="member">KeyDisplayType</ref></type>
-        <definition>KeyDisplayType KeyInfo::displayType</definition>
+        <definition>KeyDisplayType KeyInfo::normalDisplayType</definition>
         <argsstring></argsstring>
-        <name>displayType</name>
-        <qualifiedname>KeyInfo::displayType</qualifiedname>
+        <name>normalDisplayType</name>
+        <qualifiedname>KeyInfo::normalDisplayType</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="55" column="20" bodyfile="src/keypad.h" bodystart="55" bodyend="-1"/>
+        <location file="src/keypad.h" line="45" column="20" bodyfile="src/keypad.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" compoundref="logic_8c" startline="374" endline="441">RunMain</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_key_info_1a1756a989545ac064e9a6a2c09e29446a" prot="public" static="no" mutable="no">
+        <type><ref refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536" kindref="member">KeyDisplayType</ref></type>
+        <definition>KeyDisplayType KeyInfo::shiftDisplayType</definition>
+        <argsstring></argsstring>
+        <name>shiftDisplayType</name>
+        <qualifiedname>KeyInfo::shiftDisplayType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/keypad.h" line="46" column="20" bodyfile="src/keypad.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" compoundref="logic_8c" startline="374" endline="441">RunMain</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_key_info_1aad793e7d0881eafc1dd46649bb2780be" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -47,8 +63,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="56" column="10" bodyfile="src/keypad.h" bodystart="56" bodyend="-1"/>
-        <referencedby refid="keypad_8c_1a63a4bc1c3105f40dc85fe16092790f83" compoundref="keypad_8c" startline="187" endline="205">KeypadWaitForInput</referencedby>
+        <location file="src/keypad.h" line="47" column="10" bodyfile="src/keypad.h" bodystart="47" bodyend="-1"/>
+        <referencedby refid="keypad_8c_1a4dc4195ee24a2240646ab8e3f70eaacb" compoundref="keypad_8c" startline="198" endline="209">KeypadCreateDefaulteKey</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_key_info_1a608d6ef74598363d1753588fd73c2aef" prot="public" static="no" mutable="no">
         <type>char</type>
@@ -62,7 +78,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="57" column="10" bodyfile="src/keypad.h" bodystart="57" bodyend="-1"/>
+        <location file="src/keypad.h" line="48" column="10" bodyfile="src/keypad.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="logic_8c_1ada037e06af8abdcc0382445b22466477" compoundref="logic_8c" startline="94" endline="121">RunUserInput</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_key_info_1a44c82d8b5620cb791276feba579ff337" prot="public" static="no" mutable="no">
         <type><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" kindref="member">SpecialKeyFunctions</ref></type>
@@ -76,7 +93,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="58" column="25" bodyfile="src/keypad.h" bodystart="58" bodyend="-1"/>
+        <location file="src/keypad.h" line="49" column="25" bodyfile="src/keypad.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="logic_8c_1afa64d8084403040ad7f7f8045e075736" compoundref="logic_8c" startline="302" endline="304">GetSpecialFunction</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_key_info_1ad4e8166e71feacf01a45a0346818aa39" prot="public" static="no" mutable="no">
         <type>char</type>
@@ -90,7 +108,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="59" column="10" bodyfile="src/keypad.h" bodystart="59" bodyend="-1"/>
+        <location file="src/keypad.h" line="50" column="10" bodyfile="src/keypad.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="logic_8c_1ada037e06af8abdcc0382445b22466477" compoundref="logic_8c" startline="94" endline="121">RunUserInput</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_key_info_1ae84e8c2103cde405fc762cafb1727015" prot="public" static="no" mutable="no">
         <type><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" kindref="member">SpecialKeyFunctions</ref></type>
@@ -104,7 +123,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/keypad.h" line="60" column="25" bodyfile="src/keypad.h" bodystart="60" bodyend="-1"/>
+        <location file="src/keypad.h" line="51" column="25" bodyfile="src/keypad.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="logic_8c_1afa64d8084403040ad7f7f8045e075736" compoundref="logic_8c" startline="302" endline="304">GetSpecialFunction</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -117,14 +137,15 @@
         <link refid="struct_key_info"/>
       </node>
     </collaborationgraph>
-    <location file="src/keypad.h" line="53" column="1" bodyfile="src/keypad.h" bodystart="53" bodyend="61"/>
+    <location file="src/keypad.h" line="43" column="1" bodyfile="src/keypad.h" bodystart="43" bodyend="52"/>
     <listofallmembers>
-      <member refid="struct_key_info_1a1e801a0e9f9c1d289b3b50535701d282" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>displayType</name></member>
       <member refid="struct_key_info_1aad793e7d0881eafc1dd46649bb2780be" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>isSpecial</name></member>
       <member refid="struct_key_info_1a129a412e80d39b7257b677028c1acec0" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>key</name></member>
       <member refid="struct_key_info_1a608d6ef74598363d1753588fd73c2aef" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>normalDisplay</name></member>
+      <member refid="struct_key_info_1a0ee8bda4acee901e95e3050ff19c7c04" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>normalDisplayType</name></member>
       <member refid="struct_key_info_1a44c82d8b5620cb791276feba579ff337" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>normalFunction</name></member>
       <member refid="struct_key_info_1ad4e8166e71feacf01a45a0346818aa39" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>shiftDisplay</name></member>
+      <member refid="struct_key_info_1a1756a989545ac064e9a6a2c09e29446a" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>shiftDisplayType</name></member>
       <member refid="struct_key_info_1ae84e8c2103cde405fc762cafb1727015" prot="public" virt="non-virtual"><scope>KeyInfo</scope><name>shiftFunction</name></member>
     </listofallmembers>
   </compounddef>

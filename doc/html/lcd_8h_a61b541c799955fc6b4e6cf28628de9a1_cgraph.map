@@ -1,50 +1,43 @@
 <map id="LcdInit" name="LcdInit">
-<area shape="rect" id="Node000001" title="Initializes the LCD." alt="" coords="5,214,65,241"/>
-<area shape="rect" id="Node000002" href="$clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="294,88,380,114"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="34,214,37,175,48,122,58,94,71,67,89,43,111,23,144,6,173,4,204,10,240,23,282,46,315,75,312,79,279,50,238,28,203,15,173,9,145,12,114,27,93,46,76,70,63,96,54,123,43,175,39,214"/>
-<area shape="rect" id="Node000005" href="$clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="298,290,375,317"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="66,232,283,288,282,293,64,238"/>
-<area shape="rect" id="Node000006" href="$lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="118,189,234,216"/>
-<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="65,220,102,213,103,218,66,225"/>
-<area shape="rect" id="Node000008" href="$lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="434,341,543,368"/>
-<area shape="poly" id="edge27_Node000001_Node000008" title=" " alt="" coords="53,239,80,262,114,283,192,312,275,332,353,344,419,350,419,355,352,349,274,337,191,318,111,287,77,266,49,244"/>
-<area shape="rect" id="Node000011" href="$lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="298,189,376,216"/>
-<area shape="poly" id="edge28_Node000001_Node000011" title=" " alt="" coords="65,227,143,230,239,225,282,216,283,222,239,230,143,236,65,233"/>
-<area shape="rect" id="Node000012" href="$lcd_8c.html#aca04f0c025afbc86a0fedc553f3a8ba4" title="Controls the display, cursor, and blinking." alt="" coords="113,88,239,114"/>
-<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="41,213,68,170,88,146,111,124,117,120,121,124,114,128,92,149,73,173,46,215"/>
-<area shape="rect" id="Node000013" href="$lcd_8c.html#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" title="Sets the entry mode of the LCD." alt="" coords="113,138,239,165"/>
-<area shape="poly" id="edge19_Node000001_Node000013" title=" " alt="" coords="53,212,111,175,122,169,125,174,114,179,56,216"/>
-<area shape="rect" id="Node000014" href="$lcd_8c.html#a9b451fe57dbdfef32faf1d96b9d7dce4" title=" " alt="" coords="120,37,232,64"/>
-<area shape="poly" id="edge23_Node000001_Node000014" title=" " alt="" coords="37,213,61,148,82,108,111,74,115,70,119,74,115,78,86,111,65,150,42,215"/>
-<area shape="rect" id="Node000015" href="$ports_8c.html#a03c4992f00f155be0425086ad67578f2" title="Initiates Port A." alt="" coords="453,392,524,418"/>
-<area shape="poly" id="edge29_Node000001_Node000015" title=" " alt="" coords="45,240,70,285,90,309,114,330,154,351,197,368,285,391,369,401,438,404,437,409,369,406,284,396,195,373,152,356,111,334,86,313,66,288,40,243"/>
-<area shape="rect" id="Node000016" href="$ports_8c.html#aaebad24f567e2e1f53e6252fd325371a" title="Initiates Port B." alt="" coords="601,442,672,469"/>
-<area shape="poly" id="edge31_Node000001_Node000016" title=" " alt="" coords="41,241,48,272,61,312,83,353,97,372,114,387,172,421,234,444,300,460,366,468,430,471,490,470,585,461,586,467,490,475,430,477,366,474,299,465,233,450,169,425,111,391,93,375,78,356,56,314,43,273,36,242"/>
-<area shape="rect" id="Node000003" href="$clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="862,290,958,317"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="378,112,856,282,854,287,376,118"/>
-<area shape="rect" id="Node000004" href="$playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="1006,366,1058,393"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="935,315,998,356,995,360,932,320"/>
-<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="376,301,847,301,847,306,376,306"/>
-<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="200,214,302,279,300,284,197,218"/>
-<area shape="rect" id="Node000007" href="$lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="287,138,386,165"/>
-<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="220,186,276,168,278,173,222,191"/>
-<area shape="poly" id="edge14_Node000006_Node000011" title=" " alt="" coords="234,200,282,200,282,205,234,205"/>
-<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="373,164,388,175,420,212,445,253,480,325,475,328,441,255,415,215,385,179,369,168"/>
-<area shape="rect" id="Node000009" href="$lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="591,341,682,368"/>
-<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="543,352,575,352,575,357,543,357"/>
-<area shape="rect" id="Node000010" href="$clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="730,341,814,368"/>
-<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="682,352,714,352,714,357,682,357"/>
-<area shape="poly" id="edge13_Node000010_Node000003" title=" " alt="" coords="810,338,856,321,858,326,812,343"/>
-<area shape="poly" id="edge12_Node000010_Node000004" title=" " alt="" coords="815,356,991,373,990,378,815,361"/>
-<area shape="poly" id="edge16_Node000012_Node000002" title=" " alt="" coords="239,98,278,98,278,104,239,104"/>
-<area shape="poly" id="edge17_Node000012_Node000007" title=" " alt="" coords="222,113,278,131,276,136,220,118"/>
-<area shape="poly" id="edge18_Node000012_Node000011" title=" " alt="" coords="220,113,241,124,256,137,265,150,275,162,289,175,294,179,291,183,285,179,271,166,261,153,252,141,237,129,217,117"/>
-<area shape="poly" id="edge20_Node000013_Node000002" title=" " alt="" coords="220,135,278,117,280,122,222,140"/>
-<area shape="poly" id="edge21_Node000013_Node000007" title=" " alt="" coords="239,149,271,149,271,154,239,154"/>
-<area shape="poly" id="edge22_Node000013_Node000011" title=" " alt="" coords="222,163,284,183,282,188,220,168"/>
-<area shape="poly" id="edge24_Node000014_Node000002" title=" " alt="" coords="222,62,280,80,278,85,220,67"/>
-<area shape="poly" id="edge25_Node000014_Node000007" title=" " alt="" coords="220,62,241,74,256,87,265,99,275,111,289,124,294,128,291,132,285,128,271,115,261,102,252,90,237,78,217,67"/>
-<area shape="poly" id="edge26_Node000014_Node000011" title=" " alt="" coords="224,62,241,74,259,100,266,125,272,150,289,175,291,178,288,181,285,179,268,152,261,126,254,102,237,78,221,66"/>
-<area shape="poly" id="edge30_Node000015_Node000004" title=" " alt="" coords="524,401,990,379,991,384,525,406"/>
-<area shape="poly" id="edge32_Node000016_Node000004" title=" " alt="" coords="672,455,728,455,800,451,879,441,957,421,999,400,1002,404,959,426,880,446,800,456,728,460,672,460"/>
+<area shape="rect" id="Node000001" title="Initializes the LCD." alt="" coords="5,188,65,215"/>
+<area shape="rect" id="Node000002" href="$clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="294,112,380,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="36,187,43,157,56,118,78,78,93,61,111,47,145,32,174,28,205,34,240,47,257,58,267,71,275,85,289,98,294,102,291,106,285,102,271,88,262,74,253,62,238,52,203,39,174,33,146,37,114,52,97,65,83,82,61,120,48,158,41,189"/>
+<area shape="rect" id="Node000004" href="$clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="298,62,375,88"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="35,188,40,152,52,105,74,58,91,37,111,19,135,8,161,3,187,4,214,9,264,28,305,51,302,55,262,33,212,14,187,9,161,9,137,13,114,24,95,40,79,60,57,107,45,153,40,189"/>
+<area shape="rect" id="Node000005" href="$lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="118,62,234,88"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="41,187,68,144,88,120,111,98,117,94,121,98,114,102,92,123,73,147,46,189"/>
+<area shape="rect" id="Node000007" href="$lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="434,163,543,190"/>
+<area shape="poly" id="edge24_Node000001_Node000007" title=" " alt="" coords="49,213,76,241,94,255,114,265,188,286,220,290,250,289,311,277,385,250,428,226,462,198,465,202,431,231,387,255,313,282,250,295,219,295,187,291,112,269,91,259,73,245,45,217"/>
+<area shape="rect" id="Node000009" href="$lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="298,214,376,240"/>
+<area shape="poly" id="edge25_Node000001_Node000009" title=" " alt="" coords="53,213,80,234,113,250,157,257,201,257,244,251,282,242,283,247,245,256,202,262,156,263,112,255,77,238,50,218"/>
+<area shape="rect" id="Node000010" href="$lcd_8c.html#aca04f0c025afbc86a0fedc553f3a8ba4" title="Controls the display, cursor, and blinking." alt="" coords="113,112,239,139"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="53,186,111,149,122,143,125,148,114,153,56,190"/>
+<area shape="rect" id="Node000011" href="$lcd_8c.html#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" title="Sets the entry mode of the LCD." alt="" coords="113,163,239,190"/>
+<area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="65,194,97,188,98,193,66,199"/>
+<area shape="rect" id="Node000012" href="$lcd_8c.html#a9b451fe57dbdfef32faf1d96b9d7dce4" title=" " alt="" coords="120,214,232,240"/>
+<area shape="poly" id="edge20_Node000001_Node000012" title=" " alt="" coords="66,204,105,212,104,217,65,210"/>
+<area shape="rect" id="Node000013" href="$ports_8c.html#a03c4992f00f155be0425086ad67578f2" title="Initiates Port A." alt="" coords="140,366,212,392"/>
+<area shape="poly" id="edge26_Node000001_Node000013" title=" " alt="" coords="43,214,67,276,88,312,115,345,129,356,125,360,111,349,84,315,63,278,38,216"/>
+<area shape="rect" id="Node000014" href="$ports_8c.html#aaebad24f567e2e1f53e6252fd325371a" title="Initiates Port B." alt="" coords="140,416,212,443"/>
+<area shape="poly" id="edge27_Node000001_Node000014" title=" " alt="" coords="40,215,46,252,59,302,81,355,96,380,115,402,128,413,125,417,111,406,92,383,76,358,54,303,41,253,35,216"/>
+<area shape="rect" id="Node000003" href="$clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="723,112,818,139"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="380,123,707,123,707,128,380,128"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="376,75,508,85,675,104,708,110,707,115,675,110,508,90,375,80"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="234,72,282,72,282,78,234,78"/>
+<area shape="rect" id="Node000006" href="$lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="287,163,386,190"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="220,87,241,98,256,111,265,124,275,136,289,149,294,153,291,157,285,153,271,139,261,127,252,115,237,103,217,91"/>
+<area shape="poly" id="edge11_Node000005_Node000009" title=" " alt="" coords="224,87,241,98,259,124,266,150,272,174,289,200,291,202,288,206,285,203,268,177,261,151,254,127,237,102,221,91"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="387,174,419,174,419,179,387,179"/>
+<area shape="rect" id="Node000008" href="$clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="591,163,675,190"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="543,174,575,174,575,179,543,179"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="671,160,717,142,719,147,672,165"/>
+<area shape="poly" id="edge13_Node000010_Node000002" title=" " alt="" coords="239,123,278,123,278,128,239,128"/>
+<area shape="poly" id="edge14_Node000010_Node000006" title=" " alt="" coords="222,137,278,155,276,160,220,142"/>
+<area shape="poly" id="edge15_Node000010_Node000009" title=" " alt="" coords="220,137,241,149,256,162,265,174,275,187,289,200,294,203,291,208,285,204,271,190,261,178,252,166,237,153,217,142"/>
+<area shape="poly" id="edge17_Node000011_Node000002" title=" " alt="" coords="220,160,278,141,280,146,222,165"/>
+<area shape="poly" id="edge18_Node000011_Node000006" title=" " alt="" coords="239,174,271,174,271,179,239,179"/>
+<area shape="poly" id="edge19_Node000011_Node000009" title=" " alt="" coords="222,188,284,208,282,213,220,193"/>
+<area shape="poly" id="edge21_Node000012_Node000002" title=" " alt="" coords="217,211,237,199,252,187,261,175,271,163,285,149,291,145,294,149,289,153,275,166,265,178,256,191,241,204,220,215"/>
+<area shape="poly" id="edge22_Node000012_Node000006" title=" " alt="" coords="220,210,276,192,278,197,222,216"/>
+<area shape="poly" id="edge23_Node000012_Node000009" title=" " alt="" coords="232,224,282,224,282,230,232,230"/>
 </map>

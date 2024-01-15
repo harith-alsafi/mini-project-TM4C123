@@ -4,8 +4,7 @@
 {\ttfamily \#include "{}ports.\+h"{}}\newline
 {\ttfamily \#include "{}clock.\+h"{}}\newline
 {\ttfamily \#include "{}stdbool.\+h"{}}\newline
-Include dependency graph for keypad.\+c\+:
-\nopagebreak
+Include dependency graph for keypad.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,15 +14,17 @@ Include dependency graph for keypad.\+c\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-char \mbox{\hyperlink{keypad_8c_ab826b54bc6305f49d758d28173041ab7}{Keypad\+Get\+Char}} ()
-\begin{DoxyCompactList}\small\item\em Gets the character from the keypad. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{keypad_8c_a9b1fc55f525fe49144daf21ffe978141}{Key\+Is\+Valid}} (\mbox{\hyperlink{struct_key_info}{Key\+Info}} key)
 \begin{DoxyCompactList}\small\item\em Checks if a given key is valid. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_key_info}{Key\+Info}} \mbox{\hyperlink{keypad_8c_a49ffa463b26cc47b7d9e3e2cda8d9168}{Keypad\+Find\+Special\+Key}} (char key)
 \begin{DoxyCompactList}\small\item\em Finds the Key\+Info of a given key. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{keypad_8c_aa6981f604fdfbec491e21e90507ec0de}{Keypad\+Init}} ()
 \begin{DoxyCompactList}\small\item\em Initializes the keypad. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_key_info}{Key\+Info}} \mbox{\hyperlink{keypad_8c_a63a4bc1c3105f40dc85fe16092790f83}{Keypad\+Wait\+For\+Input}} ()
+char \mbox{\hyperlink{keypad_8c_a35a69618b097b5f64e918962cd47c824}{Keypad\+Wait\+For\+Char}} ()
+\begin{DoxyCompactList}\small\item\em Gets the character from the keypad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_key_info}{Key\+Info}} \mbox{\hyperlink{keypad_8c_a4dc4195ee24a2240646ab8e3f70eaacb}{Keypad\+Create\+Defaulte\+Key}} (char key)
+\begin{DoxyCompactList}\small\item\em Creates a default key with default values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_key_info}{Key\+Info}} \mbox{\hyperlink{keypad_8c_a62a8113965dd111b6f91d33efcabd77d}{Keypad\+Wait\+For\+Key\+Info}} ()
 \begin{DoxyCompactList}\small\item\em Waits for a key to be pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -59,7 +60,7 @@ Checks if a given key is valid.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00148}{148}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00159}{159}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -67,6 +68,37 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{keypad_8c_a9b1fc55f525fe49144daf21ffe978141_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{keypad_8c_a4dc4195ee24a2240646ab8e3f70eaacb}\label{keypad_8c_a4dc4195ee24a2240646ab8e3f70eaacb} 
+\index{keypad.c@{keypad.c}!KeypadCreateDefaulteKey@{KeypadCreateDefaulteKey}}
+\index{KeypadCreateDefaulteKey@{KeypadCreateDefaulteKey}!keypad.c@{keypad.c}}
+\doxysubsubsection{\texorpdfstring{KeypadCreateDefaulteKey()}{KeypadCreateDefaulteKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_key_info}{Key\+Info}} Keypad\+Create\+Defaulte\+Key (\begin{DoxyParamCaption}\item[{char}]{key }\end{DoxyParamCaption})}
+
+
+
+Creates a default key with default values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily Key\+Info} ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00198}{198}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keypad_8c_a4dc4195ee24a2240646ab8e3f70eaacb_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{keypad_8c_a49ffa463b26cc47b7d9e3e2cda8d9168}\label{keypad_8c_a49ffa463b26cc47b7d9e3e2cda8d9168} 
@@ -90,7 +122,7 @@ Finds the Key\+Info of a given key.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00152}{152}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00163}{163}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -98,40 +130,6 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{keypad_8c_a49ffa463b26cc47b7d9e3e2cda8d9168_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{keypad_8c_ab826b54bc6305f49d758d28173041ab7}\label{keypad_8c_ab826b54bc6305f49d758d28173041ab7} 
-\index{keypad.c@{keypad.c}!KeypadGetChar@{KeypadGetChar}}
-\index{KeypadGetChar@{KeypadGetChar}!keypad.c@{keypad.c}}
-\doxysubsubsection{\texorpdfstring{KeypadGetChar()}{KeypadGetChar()}}
-{\footnotesize\ttfamily char Keypad\+Get\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Gets the character from the keypad. 
-
-\begin{DoxyReturn}{Returns}
-{\ttfamily char} ~\newline
- 
-\end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00168}{168}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{keypad_8c_ab826b54bc6305f49d758d28173041ab7_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{keypad_8c_ab826b54bc6305f49d758d28173041ab7_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{keypad_8c_aa6981f604fdfbec491e21e90507ec0de}\label{keypad_8c_aa6981f604fdfbec491e21e90507ec0de} 
@@ -146,14 +144,47 @@ Initializes the keypad.
 
 
 
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00162}{162}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00173}{173}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=307pt]{keypad_8c_aa6981f604fdfbec491e21e90507ec0de_cgraph}
+\includegraphics[width=231pt]{keypad_8c_aa6981f604fdfbec491e21e90507ec0de_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{keypad_8c_aa6981f604fdfbec491e21e90507ec0de_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{keypad_8c_a35a69618b097b5f64e918962cd47c824}\label{keypad_8c_a35a69618b097b5f64e918962cd47c824} 
+\index{keypad.c@{keypad.c}!KeypadWaitForChar@{KeypadWaitForChar}}
+\index{KeypadWaitForChar@{KeypadWaitForChar}!keypad.c@{keypad.c}}
+\doxysubsubsection{\texorpdfstring{KeypadWaitForChar()}{KeypadWaitForChar()}}
+{\footnotesize\ttfamily char Keypad\+Wait\+For\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the character from the keypad. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily char} ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00179}{179}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keypad_8c_a35a69618b097b5f64e918962cd47c824_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -161,14 +192,14 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=291pt]{keypad_8c_aa6981f604fdfbec491e21e90507ec0de_icgraph}
+\includegraphics[width=350pt]{keypad_8c_a35a69618b097b5f64e918962cd47c824_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{keypad_8c_a63a4bc1c3105f40dc85fe16092790f83}\label{keypad_8c_a63a4bc1c3105f40dc85fe16092790f83} 
-\index{keypad.c@{keypad.c}!KeypadWaitForInput@{KeypadWaitForInput}}
-\index{KeypadWaitForInput@{KeypadWaitForInput}!keypad.c@{keypad.c}}
-\doxysubsubsection{\texorpdfstring{KeypadWaitForInput()}{KeypadWaitForInput()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_key_info}{Key\+Info}} Keypad\+Wait\+For\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\Hypertarget{keypad_8c_a62a8113965dd111b6f91d33efcabd77d}\label{keypad_8c_a62a8113965dd111b6f91d33efcabd77d} 
+\index{keypad.c@{keypad.c}!KeypadWaitForKeyInfo@{KeypadWaitForKeyInfo}}
+\index{KeypadWaitForKeyInfo@{KeypadWaitForKeyInfo}!keypad.c@{keypad.c}}
+\doxysubsubsection{\texorpdfstring{KeypadWaitForKeyInfo()}{KeypadWaitForKeyInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_key_info}{Key\+Info}} Keypad\+Wait\+For\+Key\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -180,14 +211,14 @@ Waits for a key to be pressed.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00187}{187}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00211}{211}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{keypad_8c_a63a4bc1c3105f40dc85fe16092790f83_cgraph}
+\includegraphics[width=350pt]{keypad_8c_a62a8113965dd111b6f91d33efcabd77d_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -195,7 +226,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{keypad_8c_a63a4bc1c3105f40dc85fe16092790f83_icgraph}
+\includegraphics[width=350pt]{keypad_8c_a62a8113965dd111b6f91d33efcabd77d_icgraph}
 \end{center}
 \end{figure}
 
@@ -219,7 +250,7 @@ Here is the caller graph for this function\+:
 \end{DoxyCode}
 
 
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00017}{17}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00006}{6}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
 
 \Hypertarget{keypad_8c_aa67f7a9fae59d327c0fef030151be800}\label{keypad_8c_aa67f7a9fae59d327c0fef030151be800} 
 \index{keypad.c@{keypad.c}!KEYPAD\_SPECIAL\_KEYS@{KEYPAD\_SPECIAL\_KEYS}}
@@ -229,5 +260,5 @@ Definition at line \mbox{\hyperlink{keypad_8c_source_l00017}{17}} of file \mbox{
 
 
 
-Definition at line \mbox{\hyperlink{keypad_8c_source_l00024}{24}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
+Definition at line \mbox{\hyperlink{keypad_8c_source_l00013}{13}} of file \mbox{\hyperlink{keypad_8c_source}{keypad.\+c}}.
 

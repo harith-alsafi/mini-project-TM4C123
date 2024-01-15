@@ -1,25 +1,26 @@
 <map id="ParserCompile" name="ParserCompile">
-<area shape="rect" id="Node000001" title="Compiles the tokens and returns the result." alt="" coords="5,233,112,260"/>
+<area shape="rect" id="Node000001" title="Compiles the tokens and returns the result." alt="" coords="5,308,112,335"/>
 <area shape="rect" id="Node000002" href="$parser_8c.html#a7f8aeab74e49ee2b275a7575e8d7b5e8" title="Eats the next token." alt="" coords="762,93,866,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,231,105,174,136,137,173,98,215,62,262,31,314,10,369,3,512,3,550,5,588,11,661,32,726,58,777,83,774,88,724,63,659,37,587,16,549,10,512,8,369,8,315,16,265,36,218,66,176,102,140,140,110,177,70,235"/>
-<area shape="rect" id="Node000003" href="$parser_8c.html#ab427a20c59c9ca0b11c82660752df62a" title="Parses arithematic expression." alt="" coords="160,233,280,260"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="112,244,144,244,144,249,112,249"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,306,97,233,125,184,160,132,202,83,251,42,278,26,307,13,337,5,369,3,512,3,550,5,588,11,661,32,726,58,777,83,774,88,724,63,659,37,587,16,549,10,512,8,369,8,338,11,308,18,280,30,254,46,206,87,164,135,129,186,101,236,68,308"/>
+<area shape="rect" id="Node000003" href="$parser_8c.html#ab427a20c59c9ca0b11c82660752df62a" title="Parses arithematic expression." alt="" coords="160,308,280,335"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="112,319,144,319,144,324,112,324"/>
 <area shape="rect" id="Node000005" href="$parser_8c.html#a73bf16a41122c7751670f74fd415a36c" title="Peeks next token." alt="" coords="757,296,870,323"/>
-<area shape="poly" id="edge16_Node000001_Node000005" title=" " alt="" coords="76,259,121,299,190,348,231,371,276,390,322,403,369,408,512,408,549,406,587,400,659,379,724,353,774,328,777,333,726,358,661,384,588,405,550,411,512,413,369,413,321,408,274,395,229,376,188,353,118,303,72,263"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="232,231,271,194,298,173,327,156,380,134,437,118,495,106,552,99,659,94,746,97,746,103,659,100,552,104,495,112,438,123,382,139,329,161,301,178,275,198,235,235"/>
+<area shape="poly" id="edge17_Node000001_Node000005" title=" " alt="" coords="83,333,132,361,202,394,283,421,326,429,369,432,512,432,551,429,590,421,665,394,731,361,780,330,783,334,733,365,668,399,592,426,552,434,512,437,369,437,325,434,282,426,200,399,130,366,80,338"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="227,306,266,248,295,213,326,181,388,131,418,115,459,99,527,78,582,69,639,69,709,77,754,86,753,91,709,83,638,75,583,74,528,83,461,104,421,120,391,136,330,185,299,217,271,251,232,309"/>
 <area shape="rect" id="Node000004" href="$parser_8c.html#ab942fe3a63fed3190c76e55ebc76e5aa" title="Parses bracket expression." alt="" coords="609,245,709,272"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="281,252,436,259,594,261,593,266,436,264,280,257"/>
-<area shape="poly" id="edge15_Node000003_Node000005" title=" " alt="" coords="281,256,430,283,609,305,742,309,741,314,608,311,429,288,280,262"/>
-<area shape="rect" id="Node000006" href="$parser_8c.html#a5656fb9995d62b96c08bfef4789ee4db" title="Parses term tokens." alt="" coords="328,171,412,197"/>
-<area shape="poly" id="edge8_Node000003_Node000006" title=" " alt="" coords="253,230,321,201,323,206,255,235"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="280,317,436,297,593,272,594,277,436,302,281,322"/>
+<area shape="poly" id="edge16_Node000003_Node000005" title=" " alt="" coords="281,317,741,308,741,313,281,323"/>
+<area shape="rect" id="Node000006" href="$parser_8c.html#a5656fb9995d62b96c08bfef4789ee4db" title="Parses term tokens." alt="" coords="328,195,412,221"/>
+<area shape="poly" id="edge8_Node000003_Node000006" title=" " alt="" coords="238,305,337,229,341,233,241,310"/>
 <area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="672,243,786,129,790,133,676,247"/>
-<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="608,254,457,247,295,244,295,239,457,242,609,249"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="609,262,454,282,290,307,289,302,453,276,608,257"/>
 <area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="703,270,757,288,755,293,701,275"/>
-<area shape="poly" id="edge9_Node000006_Node000002" title=" " alt="" coords="412,169,460,156,534,139,608,125,746,109,746,115,609,131,535,144,461,161,414,174"/>
-<area shape="poly" id="edge14_Node000006_Node000005" title=" " alt="" coords="399,195,490,239,549,262,609,281,677,295,742,303,741,308,676,300,608,287,547,267,488,244,397,200"/>
-<area shape="rect" id="Node000007" href="$parser_8c.html#a55bde1715e6e77addb80a046c96f059d" title="Parses only number tokens." alt="" coords="460,171,561,197"/>
-<area shape="poly" id="edge10_Node000006_Node000007" title=" " alt="" coords="413,181,445,181,445,187,413,187"/>
-<area shape="poly" id="edge11_Node000007_Node000002" title=" " alt="" coords="560,169,746,121,747,126,562,174"/>
-<area shape="poly" id="edge12_Node000007_Node000004" title=" " alt="" coords="540,195,618,236,616,240,538,200"/>
-<area shape="poly" id="edge13_Node000007_Node000005" title=" " alt="" coords="562,188,633,204,710,231,752,256,788,284,785,288,749,260,708,236,632,209,560,193"/>
+<area shape="poly" id="edge9_Node000006_Node000002" title=" " alt="" coords="381,192,413,160,435,143,459,130,534,107,611,97,684,94,746,97,746,102,684,100,611,102,535,113,461,134,438,147,416,164,384,196"/>
+<area shape="poly" id="edge10_Node000006_Node000004" title=" " alt="" coords="413,212,561,237,594,243,593,249,560,243,412,217"/>
+<area shape="poly" id="edge15_Node000006_Node000005" title=" " alt="" coords="409,219,461,237,535,262,609,281,677,293,742,301,741,306,676,298,608,287,533,267,459,243,408,224"/>
+<area shape="rect" id="Node000007" href="$parser_8c.html#a55bde1715e6e77addb80a046c96f059d" title="Parses only number tokens." alt="" coords="460,144,561,171"/>
+<area shape="poly" id="edge11_Node000006_Node000007" title=" " alt="" coords="409,192,456,174,458,179,410,197"/>
+<area shape="poly" id="edge12_Node000007_Node000002" title=" " alt="" coords="561,147,709,123,746,116,747,121,709,128,562,152"/>
+<area shape="poly" id="edge13_Node000007_Node000004" title=" " alt="" coords="535,169,562,187,610,225,624,234,621,239,607,229,559,191,532,174"/>
+<area shape="poly" id="edge14_Node000007_Node000005" title=" " alt="" coords="559,169,631,195,710,231,751,257,787,284,783,288,748,261,708,236,629,200,557,174"/>
 </map>

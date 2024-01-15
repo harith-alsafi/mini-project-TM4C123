@@ -16,12 +16,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/flash.h" line="9" column="9" bodyfile="src/flash.h" bodystart="9" bodyend="-1"/>
+        <location file="src/flash.h" line="15" column="9" bodyfile="src/flash.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="flash_8c_1a36a8e2cfd36cad487fc631562b25db83" compoundref="flash_8c" startline="31" endline="35">FlashDataIsRead</referencedby>
+        <referencedby refid="flash_8c_1a43a3c0a9d8a7396326169b74b694cce2" compoundref="flash_8c" startline="56" endline="65">FlashRead</referencedby>
+        <referencedby refid="logic_8c_1a42669da2ad9ca71aae1bd5805b2c7c98" compoundref="logic_8c" startline="362" endline="372">PasswordMatch</referencedby>
+        <referencedby refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="226" endline="247">RunChangePassword</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="struct_flash_data_1ab7969b05d81fd851e3238236b94bf1e4" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="struct_flash_data_1a4422d8fa663a07bef935b1a5b256388a" prot="public" static="no" mutable="no">
         <type>char</type>
-        <definition>char FlashData::password[]</definition>
-        <argsstring>[]</argsstring>
+        <definition>char FlashData::password[ARRAY_MAX_LENGTH]</definition>
+        <argsstring>[ARRAY_MAX_LENGTH]</argsstring>
         <name>password</name>
         <qualifiedname>FlashData::password</qualifiedname>
         <briefdescription>
@@ -30,7 +34,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/flash.h" line="10" column="10" bodyfile="src/flash.h" bodystart="10" bodyend="-1"/>
+        <location file="src/flash.h" line="16" column="10" bodyfile="src/flash.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="flash_8c_1a36a8e2cfd36cad487fc631562b25db83" compoundref="flash_8c" startline="31" endline="35">FlashDataIsRead</referencedby>
+        <referencedby refid="logic_8c_1a42669da2ad9ca71aae1bd5805b2c7c98" compoundref="logic_8c" startline="362" endline="372">PasswordMatch</referencedby>
+        <referencedby refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="226" endline="247">RunChangePassword</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -43,9 +50,9 @@
         <link refid="struct_flash_data"/>
       </node>
     </collaborationgraph>
-    <location file="src/flash.h" line="8" column="1" bodyfile="src/flash.h" bodystart="8" bodyend="11"/>
+    <location file="src/flash.h" line="14" column="1" bodyfile="src/flash.h" bodystart="14" bodyend="17"/>
     <listofallmembers>
-      <member refid="struct_flash_data_1ab7969b05d81fd851e3238236b94bf1e4" prot="public" virt="non-virtual"><scope>FlashData</scope><name>password</name></member>
+      <member refid="struct_flash_data_1a4422d8fa663a07bef935b1a5b256388a" prot="public" virt="non-virtual"><scope>FlashData</scope><name>password</name></member>
       <member refid="struct_flash_data_1a098d99b6a0f1ab85c7a16b5eb154f4d6" prot="public" virt="non-virtual"><scope>FlashData</scope><name>passwordLength</name></member>
     </listofallmembers>
   </compounddef>

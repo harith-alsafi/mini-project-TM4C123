@@ -78,21 +78,51 @@ $(function() {
   <div class="headertitle"><div class="title">main.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;program-logic.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="hardware-test_8h_source.html">hardware-test.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ports_8h_source.html">ports.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="logic_8h_source.html">logic.h</a>&quot;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="test_8h_source.html">test.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lcd_8h_source.html">lcd.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="clock_8h_source.html">clock.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="helpers_8h_source.html">helpers.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="flash_8h_source.html">flash.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="parser_8h_source.html">parser.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c__incl.png" border="0" usemap="#asrc_2main_8c" alt=""/></div>
 <map name="asrc_2main_8c" id="asrc_2main_8c">
-<area shape="rect" title=" " alt="" coords="154,5,236,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,116,107"/>
-<area shape="poly" title=" " alt="" coords="173,35,99,75,96,70,170,30"/>
-<area shape="rect" href="hardware-test_8h.html" title=" " alt="" coords="140,80,250,107"/>
-<area shape="poly" title=" " alt="" coords="198,33,198,64,193,64,193,33"/>
-<area shape="rect" href="ports_8h.html" title=" " alt="" coords="274,80,335,107"/>
-<area shape="poly" title=" " alt="" coords="216,30,274,69,272,74,213,35"/>
+<area shape="rect" title=" " alt="" coords="250,5,332,32"/>
+<area shape="rect" href="logic_8h.html" title=" " alt="" coords="28,80,88,107"/>
+<area shape="poly" title=" " alt="" coords="251,35,103,81,101,76,250,30"/>
+<area shape="rect" title=" " alt="" coords="110,229,184,256"/>
+<area shape="poly" title=" " alt="" coords="250,26,188,32,118,43,56,59,33,70,19,82,11,98,8,122,12,151,25,180,40,196,57,209,97,227,94,232,55,213,36,200,21,183,7,153,3,123,6,97,14,78,31,65,54,54,117,38,187,27,249,20"/>
+<area shape="rect" href="test_8h.html" title=" " alt="" coords="412,80,466,107"/>
+<area shape="poly" title=" " alt="" coords="318,30,401,70,398,75,316,35"/>
+<area shape="rect" href="lcd_8h.html" title=" " alt="" coords="204,80,253,107"/>
+<area shape="poly" title=" " alt="" coords="282,34,251,70,247,66,278,31"/>
+<area shape="rect" href="helpers_8h.html" title=" " alt="" coords="243,155,318,181"/>
+<area shape="poly" title=" " alt="" coords="293,33,285,139,280,139,288,32"/>
+<area shape="rect" href="clock_8h.html" title=" " alt="" coords="490,80,554,107"/>
+<area shape="poly" title=" " alt="" coords="332,30,476,75,474,80,331,35"/>
+<area shape="rect" href="flash_8h.html" title=" " alt="" coords="328,80,388,107"/>
+<area shape="poly" title=" " alt="" coords="305,31,338,67,334,70,301,34"/>
+<area shape="rect" href="parser_8h.html" title=" " alt="" coords="112,80,180,107"/>
+<area shape="poly" title=" " alt="" coords="267,35,186,75,184,70,265,30"/>
+<area shape="rect" title=" " alt="" coords="577,80,637,107"/>
+<area shape="poly" title=" " alt="" coords="333,26,562,77,561,82,332,31"/>
+<area shape="rect" href="keypad_8h.html" title=" " alt="" coords="35,155,110,181"/>
+<area shape="poly" title=" " alt="" coords="63,107,70,139,64,140,58,108"/>
+<area shape="poly" title=" " alt="" coords="87,180,126,217,122,221,84,184"/>
+<area shape="poly" title=" " alt="" coords="224,108,164,217,159,214,219,106"/>
+<area shape="poly" title=" " alt="" coords="240,106,265,141,261,144,235,109"/>
+<area shape="rect" title=" " alt="" coords="249,229,312,256"/>
+<area shape="poly" title=" " alt="" coords="283,182,283,214,278,214,278,182"/>
+<area shape="poly" title=" " alt="" coords="360,108,353,144,345,165,332,183,310,198,276,211,200,232,199,227,274,206,307,193,328,179,340,162,348,143,355,107"/>
+<area shape="poly" title=" " alt="" coords="346,109,307,146,303,142,343,105"/>
+<area shape="poly" title=" " alt="" coords="135,109,98,145,94,142,131,105"/>
+<area shape="poly" title=" " alt="" coords="149,107,150,214,144,214,143,107"/>
+<area shape="poly" title=" " alt="" coords="171,105,245,144,242,149,168,110"/>
 </map>
 </div>
 </div>
@@ -119,113 +149,227 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00007">7</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00011">11</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#amain_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
 <map name="amain_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="amain_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,487,55,513"/>
-<area shape="rect" href="logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="1020,765,1073,792"/>
-<area shape="poly" title=" " alt="" coords="39,513,64,573,85,612,111,652,142,690,178,721,219,743,241,749,264,751,636,751,843,759,1004,772,1004,777,843,764,636,756,264,756,240,754,217,748,175,726,138,694,106,655,80,615,59,575,34,515"/>
-<area shape="rect" href="hardware-test_8c.html#ac43be5887d2ddcce27989432c6415651" title="Runs all unit test functions." alt="" coords="103,335,162,361"/>
-<area shape="poly" title=" " alt="" coords="38,485,112,373,116,376,42,488"/>
-<area shape="rect" href="clock_8c.html#ab89b66fae1f889e7a033bccd757a12de" title="Initializes the clock." alt="" coords="1190,765,1262,792"/>
-<area shape="poly" title=" " alt="" coords="1074,776,1174,776,1174,781,1074,781"/>
-<area shape="rect" href="keypad_8c.html#aa6981f604fdfbec491e21e90507ec0de" title="Initializes the keypad." alt="" coords="1942,600,2025,627"/>
-<area shape="poly" title=" " alt="" coords="1075,790,1130,815,1206,844,1294,868,1340,875,1386,877,1701,877,1750,870,1795,850,1836,820,1873,784,1904,745,1931,706,1967,640,1972,642,1935,708,1909,748,1877,788,1840,824,1798,855,1752,875,1701,883,1386,883,1340,880,1293,873,1204,849,1128,820,1073,795"/>
-<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="1196,411,1256,437"/>
-<area shape="poly" title=" " alt="" coords="1052,764,1208,450,1213,453,1057,766"/>
-<area shape="rect" href="clock_8c.html#a21cfe49b38d53efaf75df16d21ed882a" title="Initalizes the PLL to 80 MHz." alt="" coords="1357,765,1418,792"/>
-<area shape="poly" title=" " alt="" coords="1262,776,1341,776,1341,781,1262,781"/>
-<area shape="rect" href="clock_8c.html#a58cf193ae5c1f330e4868e32afb9445d" title="Initializes sys tick." alt="" coords="1345,816,1430,843"/>
-<area shape="poly" title=" " alt="" coords="1263,787,1331,809,1329,814,1261,792"/>
-<area shape="rect" href="ports_8c.html#a21efc6fa081c0b9c85eafe9d7455b9b6" title="Initiates Port D." alt="" coords="2086,549,2157,576"/>
-<area shape="poly" title=" " alt="" coords="2021,597,2070,579,2072,584,2023,602"/>
-<area shape="rect" href="ports_8c.html#a2c10edb046a08d0f0d72d288c9c64dfc" title="Initiates Port E." alt="" coords="2086,600,2157,627"/>
-<area shape="poly" title=" " alt="" coords="2025,611,2070,611,2070,616,2025,616"/>
-<area shape="rect" href="playground_8c.html#acd46d0cd2123cbf3f87498f9f3060403" title=" " alt="" coords="2217,467,2269,493"/>
-<area shape="poly" title=" " alt="" coords="2141,547,2167,529,2208,500,2211,505,2171,533,2144,551"/>
-<area shape="poly" title=" " alt="" coords="2151,597,2167,586,2201,546,2226,506,2231,509,2206,549,2171,590,2155,602"/>
-<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1505,487,1591,513"/>
-<area shape="poly" title=" " alt="" coords="1235,437,1247,462,1267,494,1293,525,1325,548,1358,561,1385,562,1450,548,1483,536,1513,520,1516,524,1485,541,1451,553,1386,568,1357,566,1323,553,1289,529,1262,497,1243,465,1230,439"/>
-<area shape="rect" href="clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="1509,183,1587,209"/>
-<area shape="poly" title=" " alt="" coords="1234,409,1278,348,1322,295,1364,267,1410,243,1494,209,1496,214,1412,247,1367,271,1326,299,1282,351,1239,412"/>
-<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="1330,107,1445,133"/>
-<area shape="poly" title=" " alt="" coords="1234,409,1274,347,1371,146,1376,148,1278,349,1239,412"/>
-<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="1646,309,1754,336"/>
-<area shape="poly" title=" " alt="" coords="1236,409,1256,381,1274,347,1284,309,1286,274,1280,209,1279,179,1283,149,1296,121,1322,93,1359,69,1394,58,1429,59,1463,69,1497,86,1531,110,1600,169,1628,199,1653,233,1688,294,1684,297,1648,236,1624,203,1596,173,1527,114,1494,91,1461,73,1428,64,1395,63,1361,74,1326,97,1301,124,1288,151,1284,179,1285,209,1292,274,1289,310,1278,349,1260,384,1240,412"/>
-<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1509,360,1587,387"/>
-<area shape="poly" title=" " alt="" coords="1256,413,1323,396,1413,383,1493,375,1493,380,1413,388,1325,401,1257,418"/>
-<area shape="rect" href="lcd_8c.html#aca04f0c025afbc86a0fedc553f3a8ba4" title="Controls the display, cursor, and blinking." alt="" coords="1324,411,1450,437"/>
-<area shape="poly" title=" " alt="" coords="1256,421,1309,421,1309,427,1256,427"/>
-<area shape="rect" href="lcd_8c.html#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" title="Sets the entry mode of the LCD." alt="" coords="1325,461,1450,488"/>
-<area shape="poly" title=" " alt="" coords="1257,431,1329,454,1327,459,1255,436"/>
-<area shape="rect" href="lcd_8c.html#a9b451fe57dbdfef32faf1d96b9d7dce4" title=" " alt="" coords="1331,512,1443,539"/>
-<area shape="poly" title=" " alt="" coords="1244,436,1280,466,1325,498,1335,503,1332,508,1323,502,1276,470,1240,440"/>
-<area shape="rect" href="ports_8c.html#a03c4992f00f155be0425086ad67578f2" title="Initiates Port A." alt="" coords="1664,600,1736,627"/>
-<area shape="poly" title=" " alt="" coords="1234,437,1246,466,1265,502,1291,539,1325,569,1365,589,1408,603,1452,613,1496,619,1580,622,1649,618,1649,623,1580,627,1496,625,1451,619,1406,609,1363,594,1323,573,1287,543,1260,505,1241,468,1229,439"/>
-<area shape="rect" href="ports_8c.html#aaebad24f567e2e1f53e6252fd325371a" title="Initiates Port B." alt="" coords="1812,116,1883,143"/>
-<area shape="poly" title=" " alt="" coords="1236,409,1256,381,1274,347,1285,304,1287,264,1278,190,1275,155,1279,122,1293,89,1322,57,1351,36,1381,21,1414,11,1447,5,1516,5,1587,16,1654,35,1716,59,1811,106,1809,110,1714,64,1652,40,1585,21,1516,10,1448,11,1415,16,1383,26,1353,41,1326,61,1298,92,1284,123,1280,155,1283,189,1292,263,1290,305,1278,349,1260,384,1241,412"/>
-<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="2074,435,2169,461"/>
-<area shape="poly" title=" " alt="" coords="1592,494,2058,451,2058,456,1592,499"/>
-<area shape="poly" title=" " alt="" coords="2170,458,2203,467,2201,472,2169,463"/>
-<area shape="poly" title=" " alt="" coords="1558,208,1600,283,1625,322,1647,346,1679,362,1723,378,1835,404,1956,425,2059,438,2058,444,1955,430,1834,409,1722,383,1677,367,1644,350,1621,325,1595,286,1554,211"/>
-<area shape="poly" title=" " alt="" coords="1419,132,1505,173,1503,178,1416,136"/>
-<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1498,309,1598,336"/>
-<area shape="poly" title=" " alt="" coords="1425,132,1452,150,1472,176,1495,215,1536,294,1531,296,1490,217,1468,179,1449,154,1422,136"/>
-<area shape="poly" title=" " alt="" coords="1403,132,1428,163,1453,202,1468,243,1472,278,1479,311,1487,328,1500,346,1502,348,1498,352,1496,350,1483,331,1474,313,1467,279,1462,244,1448,204,1423,166,1399,135"/>
-<area shape="poly" title=" " alt="" coords="1598,320,1630,320,1630,325,1598,325"/>
-<area shape="rect" href="lcd_8c.html#a07e30a245315510382ca9d5e1b508de3" title="Pulses the EN pin HIGH wait 450ns and then LOW wait 450ns." alt="" coords="1802,328,1893,355"/>
-<area shape="poly" title=" " alt="" coords="1755,327,1787,331,1786,336,1754,332"/>
-<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="1941,347,2026,373"/>
-<area shape="poly" title=" " alt="" coords="1894,345,1926,350,1926,355,1893,350"/>
-<area shape="poly" title=" " alt="" coords="2027,367,2095,388,2170,420,2217,454,2214,458,2168,425,2094,393,2025,372"/>
-<area shape="poly" title=" " alt="" coords="2007,372,2087,424,2084,428,2004,376"/>
-<area shape="poly" title=" " alt="" coords="1425,436,1451,447,1510,477,1508,482,1449,452,1423,440"/>
-<area shape="poly" title=" " alt="" coords="1406,408,1497,346,1505,341,1507,346,1500,350,1409,412"/>
-<area shape="poly" title=" " alt="" coords="1431,408,1494,388,1495,393,1433,413"/>
-<area shape="poly" title=" " alt="" coords="1451,482,1490,488,1489,494,1450,487"/>
-<area shape="poly" title=" " alt="" coords="1432,459,1448,448,1466,423,1472,399,1479,373,1496,346,1499,344,1503,348,1500,350,1484,375,1478,400,1471,425,1452,451,1435,463"/>
-<area shape="poly" title=" " alt="" coords="1426,458,1449,447,1487,422,1519,395,1523,399,1490,426,1452,452,1428,463"/>
-<area shape="poly" title=" " alt="" coords="1443,514,1489,507,1490,512,1444,519"/>
-<area shape="poly" title=" " alt="" coords="1434,510,1448,498,1462,480,1469,461,1473,425,1476,387,1483,367,1496,346,1498,344,1502,348,1500,350,1488,369,1481,388,1478,425,1474,463,1467,482,1452,502,1437,514"/>
-<area shape="poly" title=" " alt="" coords="1429,509,1449,498,1474,475,1496,449,1530,399,1534,402,1501,452,1478,479,1452,502,1432,514"/>
-<area shape="poly" title=" " alt="" coords="1735,602,2201,487,2202,493,1736,607"/>
-<area shape="poly" title=" " alt="" coords="1871,141,2002,237,2088,307,2171,384,2201,419,2227,453,2222,456,2197,422,2167,387,2085,311,1999,241,1868,145"/>
-<area shape="rect" href="hardware-test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="210,208,321,235"/>
-<area shape="poly" title=" " alt="" coords="146,333,237,244,241,248,150,336"/>
-<area shape="poly" title=" " alt="" coords="278,206,331,157,414,94,464,64,518,39,575,22,633,16,1227,16,1294,20,1346,33,1394,57,1452,93,1496,130,1530,168,1526,172,1492,133,1449,97,1392,61,1344,38,1293,25,1227,21,634,21,576,28,520,44,466,69,416,98,334,161,282,209"/>
-<area shape="poly" title=" " alt="" coords="289,205,326,186,368,168,441,144,499,129,557,120,633,117,1048,117,1314,117,1314,123,1048,123,634,123,558,125,500,134,442,149,370,173,328,191,292,210"/>
-<area shape="rect" href="keypad_8c.html#a63a4bc1c3105f40dc85fe16092790f83" title="Waits for a key to be pressed." alt="" coords="369,183,509,209"/>
-<area shape="poly" title=" " alt="" coords="322,211,354,206,355,211,322,216"/>
-<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="587,259,683,285"/>
-<area shape="poly" title=" " alt="" coords="322,226,572,261,571,266,322,232"/>
-<area shape="rect" href="lcd_8c.html#afb88b9aba1a1db09a517c5a1ffc07299" title="Prints a string to the LCD." alt="" coords="387,284,491,311"/>
-<area shape="poly" title=" " alt="" coords="299,233,394,275,392,280,297,238"/>
-<area shape="rect" href="keypad_8c.html#a9b1fc55f525fe49144daf21ffe978141" title="Checks if a given key is valid." alt="" coords="593,208,677,235"/>
-<area shape="poly" title=" " alt="" coords="509,202,578,211,577,217,509,208"/>
-<area shape="rect" href="keypad_8c.html#a49ffa463b26cc47b7d9e3e2cda8d9168" title="Finds the KeyInfo of a given key." alt="" coords="557,157,713,184"/>
-<area shape="poly" title=" " alt="" coords="509,184,541,180,542,185,509,190"/>
-<area shape="rect" href="keypad_8c.html#ab826b54bc6305f49d758d28173041ab7" title="Gets the character from the keypad." alt="" coords="783,689,896,716"/>
-<area shape="poly" title=" " alt="" coords="456,208,511,270,551,326,583,375,632,462,683,547,718,593,763,644,804,678,801,682,759,647,713,596,678,550,627,465,578,378,547,329,507,274,452,211"/>
-<area shape="poly" title=" " alt="" coords="897,710,1006,721,1074,724,1149,723,1226,715,1304,701,1379,677,1449,643,1479,619,1503,588,1521,556,1534,527,1539,529,1526,558,1507,591,1483,623,1452,648,1381,682,1305,706,1227,721,1149,728,1074,730,1005,727,896,715"/>
-<area shape="poly" title=" " alt="" coords="645,285,693,365,732,421,779,479,836,534,899,580,933,599,969,612,1007,621,1045,624,1227,624,1292,621,1342,613,1390,595,1449,568,1487,546,1519,521,1522,526,1490,551,1452,573,1392,600,1343,618,1292,627,1227,629,1045,629,1006,626,968,617,931,603,896,585,832,538,776,483,727,424,688,368,641,287"/>
-<area shape="poly" title=" " alt="" coords="682,258,712,244,725,234,734,222,744,211,760,200,836,173,899,164,1045,168,1227,168,1344,165,1394,174,1452,200,1479,220,1502,245,1535,294,1531,297,1498,248,1475,224,1449,205,1392,179,1343,171,1227,173,1045,173,899,170,837,178,762,205,748,215,739,225,729,237,714,249,685,262"/>
-<area shape="poly" title=" " alt="" coords="683,259,761,244,902,225,1045,219,1227,219,1294,223,1346,236,1394,259,1452,295,1467,308,1477,320,1486,333,1500,346,1505,350,1502,354,1497,350,1482,336,1473,324,1463,312,1449,300,1392,264,1344,241,1293,228,1227,224,1045,224,903,230,761,249,684,264"/>
-<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="761,259,917,285"/>
-<area shape="poly" title=" " alt="" coords="683,269,746,269,746,275,683,275"/>
-<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="965,309,1128,336"/>
-<area shape="poly" title=" " alt="" coords="684,280,761,295,950,314,950,320,761,300,683,286"/>
-<area shape="poly" title=" " alt="" coords="898,283,975,303,973,308,896,289"/>
-<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="1176,309,1276,336"/>
-<area shape="poly" title=" " alt="" coords="1128,320,1160,320,1160,325,1128,325"/>
-<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1337,309,1437,336"/>
-<area shape="poly" title=" " alt="" coords="1277,320,1321,320,1321,325,1277,325"/>
-<area shape="poly" title=" " alt="" coords="1403,335,1526,473,1522,477,1399,338"/>
-<area shape="poly" title=" " alt="" coords="1438,320,1483,320,1483,325,1438,325"/>
-<area shape="poly" title=" " alt="" coords="1433,334,1495,354,1494,359,1431,339"/>
-<area shape="poly" title=" " alt="" coords="491,288,571,278,572,283,491,293"/>
+<area shape="rect" title=" " alt="" coords="5,943,55,969"/>
+<area shape="rect" href="logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="274,208,327,235"/>
+<area shape="poly" title=" " alt="" coords="34,942,286,248,291,250,39,944"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,968,175,995"/>
+<area shape="poly" title=" " alt="" coords="56,959,88,967,87,972,54,964"/>
+<area shape="rect" href="clock_8c.html#ab89b66fae1f889e7a033bccd757a12de" title="Initializes the clock." alt="" coords="476,512,548,539"/>
+<area shape="poly" title=" " alt="" coords="313,234,495,497,490,500,309,237"/>
+<area shape="rect" href="flash_8c.html#a36a8e2cfd36cad487fc631562b25db83" title="Checks if flash data is read." alt="" coords="452,157,572,184"/>
+<area shape="poly" title=" " alt="" coords="327,213,438,185,439,191,328,218"/>
+<area shape="rect" href="flash_8c.html#ab165861d9848019963be1f879fb38173" title="Initializes flash storage." alt="" coords="477,208,547,235"/>
+<area shape="poly" title=" " alt="" coords="327,219,461,219,461,224,327,224"/>
+<area shape="rect" href="flash_8c.html#a43a3c0a9d8a7396326169b74b694cce2" title="Reads data from flash." alt="" coords="470,5,554,32"/>
+<area shape="poly" title=" " alt="" coords="305,206,321,173,346,128,381,82,424,42,454,27,457,31,427,46,385,85,351,131,326,175,310,209"/>
+<area shape="rect" href="flash_8c.html#a028e942d1bdb9290368370559c83eab0" title="Writes data to flash." alt="" coords="470,613,554,640"/>
+<area shape="poly" title=" " alt="" coords="304,235,309,300,326,398,341,452,362,506,391,556,427,599,440,609,456,616,453,621,438,614,424,603,386,559,358,508,336,454,320,399,304,301,299,235"/>
+<area shape="rect" href="keypad_8c.html#aa6981f604fdfbec491e21e90507ec0de" title="Initializes the keypad." alt="" coords="471,56,553,83"/>
+<area shape="poly" title=" " alt="" coords="309,206,354,151,387,120,424,92,455,79,457,84,427,97,390,124,358,155,313,209"/>
+<area shape="rect" href="lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="482,360,542,387"/>
+<area shape="poly" title=" " alt="" coords="322,233,482,349,478,353,319,237"/>
+<area shape="rect" href="parser_8c.html#ae23a18474f4d84e20fdcc9869d67b363" title="Initializes the parser." alt="" coords="474,107,550,133"/>
+<area shape="poly" title=" " alt="" coords="319,205,366,175,424,143,458,130,460,135,426,148,368,179,322,210"/>
+<area shape="rect" href="clock_8c.html#a21cfe49b38d53efaf75df16d21ed882a" title="Initalizes the PLL to 80 MHz." alt="" coords="700,613,761,640"/>
+<area shape="poly" title=" " alt="" coords="549,529,575,536,600,548,616,561,625,574,634,587,648,599,686,615,684,620,645,604,630,591,621,577,612,565,597,553,573,541,548,534"/>
+<area shape="rect" href="clock_8c.html#a58cf193ae5c1f330e4868e32afb9445d" title="Initializes sys tick." alt="" coords="688,563,773,589"/>
+<area shape="poly" title=" " alt="" coords="549,531,673,560,672,565,547,536"/>
+<area shape="rect" href="flash_8c.html#ab7c1a5c377d3f3d9156c5d3db6c95951" title="Erases flash." alt="" coords="687,765,774,792"/>
+<area shape="poly" title=" " alt="" coords="556,629,579,637,600,650,619,674,626,698,632,722,648,745,674,761,671,765,645,749,627,724,621,699,614,676,597,654,577,642,554,635"/>
+<area shape="rect" href="ports_8c.html#a21efc6fa081c0b9c85eafe9d7455b9b6" title="Initiates Port D." alt="" coords="695,5,766,32"/>
+<area shape="poly" title=" " alt="" coords="553,57,679,28,680,33,554,63"/>
+<area shape="rect" href="ports_8c.html#a2c10edb046a08d0f0d72d288c9c64dfc" title="Initiates Port E." alt="" coords="695,56,766,83"/>
+<area shape="poly" title=" " alt="" coords="553,67,679,67,679,72,553,72"/>
+<area shape="rect" href="clock_8c.html#a44cfb49005f69fe95c0ce5f30b9a660e" title="Uses." alt="" coords="1978,385,2064,412"/>
+<area shape="poly" title=" " alt="" coords="541,369,570,364,597,351,613,334,620,316,628,296,645,278,682,255,715,238,746,228,776,221,841,218,923,219,1693,219,1741,223,1788,236,1832,254,1874,277,1946,328,1997,372,1993,376,1942,332,1871,282,1830,259,1786,241,1740,229,1693,224,923,224,841,223,777,227,747,233,717,243,684,259,648,282,632,299,625,318,617,337,600,355,572,369,543,375"/>
+<area shape="rect" href="clock_8c.html#a2e760c634cc89519ad0956fc258eab46" title="Uses." alt="" coords="886,1424,963,1451"/>
+<area shape="poly" title=" " alt="" coords="527,386,564,434,601,499,611,530,616,558,615,608,616,631,620,654,630,677,649,701,668,716,689,723,732,724,753,723,775,726,796,734,816,752,835,786,847,833,853,888,857,948,859,1067,865,1158,893,1299,918,1408,913,1409,887,1300,859,1159,854,1067,852,949,848,889,841,834,830,788,812,755,793,739,774,731,753,729,732,730,688,729,666,721,645,705,626,679,615,655,611,632,610,608,610,558,606,531,596,501,559,437,523,389"/>
+<area shape="rect" href="lcd_8c.html#abcfdb05f65f66ac2f004c865d8d34933" title="Clears the display." alt="" coords="673,1373,788,1400"/>
+<area shape="poly" title=" " alt="" coords="529,385,566,433,586,465,601,499,610,560,613,662,615,936,616,1080,621,1207,632,1306,639,1339,649,1360,661,1371,657,1374,645,1363,634,1341,626,1307,616,1208,611,1080,609,936,608,662,604,560,596,501,581,467,562,436,524,389"/>
+<area shape="rect" href="lcd_8c.html#a93ae42864f782da4a4e0515d7faa449f" title="Sends a nibble to the LCD." alt="" coords="2118,461,2227,488"/>
+<area shape="poly" title=" " alt="" coords="542,371,570,365,597,351,609,337,616,323,620,292,624,261,632,245,645,230,679,204,711,186,742,174,773,168,840,166,923,168,1861,168,1890,170,1918,177,1970,201,2017,236,2058,279,2093,325,2122,371,2162,446,2157,448,2118,373,2089,328,2054,282,2014,240,1968,206,1917,182,1890,176,1861,173,923,173,840,171,774,173,744,179,714,190,682,208,648,234,636,248,629,262,625,293,621,324,614,340,600,355,572,370,543,376"/>
+<area shape="rect" href="lcd_8c.html#a20f0fe593368605d1bd6a28ad1a0a43f" title="Sets the rs flag to the given value." alt="" coords="1982,487,2060,513"/>
+<area shape="poly" title=" " alt="" coords="527,385,576,433,610,459,648,480,721,508,781,520,843,523,923,523,1693,523,1842,516,1966,504,1967,509,1842,521,1693,528,923,528,843,528,780,526,719,513,646,485,607,464,573,437,523,389"/>
+<area shape="rect" href="lcd_8c.html#aca04f0c025afbc86a0fedc553f3a8ba4" title="Controls the display, cursor, and blinking." alt="" coords="1797,360,1923,387"/>
+<area shape="poly" title=" " alt="" coords="542,368,570,362,597,351,611,339,620,326,629,313,646,302,691,289,728,290,766,296,814,301,1282,314,1487,326,1749,352,1782,356,1781,362,1748,357,1486,332,1282,319,814,307,766,302,728,295,692,294,648,306,633,317,624,329,615,343,600,356,571,367,543,373"/>
+<area shape="rect" href="lcd_8c.html#adbaeb94dbb0cd5ee4efa5a4a6a06f0c2" title="Sets the entry mode of the LCD." alt="" coords="1797,411,1923,437"/>
+<area shape="poly" title=" " alt="" coords="542,364,590,353,646,345,730,342,814,345,1094,359,1370,378,1782,414,1782,419,1369,384,1094,365,814,351,730,347,647,351,591,359,543,369"/>
+<area shape="rect" href="lcd_8c.html#a9b451fe57dbdfef32faf1d96b9d7dce4" title=" " alt="" coords="1804,461,1916,488"/>
+<area shape="poly" title=" " alt="" coords="533,385,583,417,614,434,647,447,723,466,783,473,923,472,1508,472,1788,472,1788,477,1508,477,923,477,782,479,722,472,646,452,612,439,580,422,530,389"/>
+<area shape="rect" href="ports_8c.html#a03c4992f00f155be0425086ad67578f2" title="Initiates Port A." alt="" coords="695,360,766,387"/>
+<area shape="poly" title=" " alt="" coords="542,371,679,371,679,376,542,376"/>
+<area shape="rect" href="ports_8c.html#aaebad24f567e2e1f53e6252fd325371a" title="Initiates Port B." alt="" coords="695,411,766,437"/>
+<area shape="poly" title=" " alt="" coords="543,377,680,410,679,415,541,383"/>
+<area shape="rect" href="clock_8c.html#a9b776ea9ad4388518694b3c099238a74" title="Uses the 80 MHz PLL to create a delay in units of 12.5ns." alt="" coords="2407,461,2502,488"/>
+<area shape="poly" title=" " alt="" coords="2065,401,2197,418,2360,447,2393,455,2391,460,2358,452,2196,424,2064,406"/>
+<area shape="poly" title=" " alt="" coords="963,1430,1110,1417,1297,1409,2174,1409,2191,1407,2208,1401,2239,1378,2268,1340,2295,1291,2319,1232,2341,1166,2378,1017,2406,861,2427,712,2448,504,2454,504,2432,713,2412,861,2383,1018,2346,1167,2324,1234,2300,1294,2273,1343,2243,1381,2210,1406,2192,1412,2174,1415,1298,1415,1110,1422,964,1436"/>
+<area shape="poly" title=" " alt="" coords="785,1398,871,1421,870,1426,784,1403"/>
+<area shape="rect" href="lcd_8c.html#a40d081728cfd391fce0ec51b3c055169" title="Sends a byte to the LCD." alt="" coords="1971,537,2070,564"/>
+<area shape="poly" title=" " alt="" coords="788,1371,930,1347,1016,1337,1102,1333,1693,1333,1746,1327,1787,1310,1817,1283,1841,1247,1861,1205,1879,1157,1921,1050,1947,985,1968,917,1996,782,2011,663,2016,579,2021,580,2016,663,2001,783,1973,919,1952,987,1925,1052,1884,1159,1866,1207,1846,1250,1821,1286,1790,1314,1748,1332,1693,1339,1102,1339,1016,1342,931,1352,789,1377"/>
+<area shape="poly" title=" " alt="" coords="782,1370,813,1359,836,1345,861,1331,926,1307,979,1292,1033,1285,1102,1283,1300,1283,1411,1280,1509,1270,1595,1251,1673,1222,1742,1180,1806,1122,1865,1048,1921,955,1935,924,1944,895,1951,839,1947,787,1938,737,1929,687,1928,636,1939,582,1951,553,1969,524,1970,523,1974,526,1973,527,1956,556,1944,583,1933,636,1935,686,1943,736,1952,787,1956,839,1949,896,1940,926,1925,957,1869,1051,1810,1126,1745,1184,1675,1227,1597,1257,1509,1275,1411,1285,1300,1288,1102,1288,1033,1290,980,1297,928,1312,863,1336,839,1349,815,1364,784,1375"/>
+<area shape="poly" title=" " alt="" coords="2048,534,2129,493,2132,498,2051,539"/>
+<area shape="rect" href="clock_8c.html#a2b0d30a37314c42f7d52aeec96a6e3ac" title="Uses." alt="" coords="2275,461,2359,488"/>
+<area shape="poly" title=" " alt="" coords="2227,472,2259,472,2259,477,2227,477"/>
+<area shape="poly" title=" " alt="" coords="2359,472,2392,472,2392,477,2359,477"/>
+<area shape="poly" title=" " alt="" coords="1924,381,1962,387,1962,392,1923,386"/>
+<area shape="poly" title=" " alt="" coords="1909,385,1925,397,1938,413,1945,430,1950,461,1955,492,1962,507,1973,524,1975,526,1971,530,1969,527,1957,510,1950,493,1945,462,1940,431,1933,416,1921,401,1906,389"/>
+<area shape="poly" title=" " alt="" coords="1903,385,1925,396,1968,434,2002,472,1998,476,1964,438,1921,401,1900,389"/>
+<area shape="poly" title=" " alt="" coords="1922,411,1962,405,1963,410,1923,417"/>
+<area shape="poly" title=" " alt="" coords="1906,436,1925,447,1942,467,1950,486,1958,504,1973,523,1976,526,1973,531,1969,527,1953,507,1945,488,1937,470,1921,451,1904,440"/>
+<area shape="poly" title=" " alt="" coords="1898,435,1924,447,1983,477,1980,481,1922,452,1896,440"/>
+<area shape="poly" title=" " alt="" coords="1896,458,1922,447,1980,417,1983,422,1924,452,1898,463"/>
+<area shape="poly" title=" " alt="" coords="1891,486,1978,528,1976,533,1889,491"/>
+<area shape="poly" title=" " alt="" coords="1917,481,1967,489,1966,494,1916,486"/>
+<area shape="poly" title=" " alt="" coords="144,995,152,1086,168,1226,192,1368,208,1426,225,1467,266,1527,307,1567,358,1596,426,1623,498,1627,628,1625,813,1617,833,1603,851,1586,879,1544,900,1501,913,1464,918,1466,905,1504,884,1547,855,1589,836,1607,815,1623,628,1630,497,1632,425,1628,355,1601,304,1572,262,1530,221,1469,203,1427,187,1369,163,1227,146,1087,139,995"/>
+<area shape="poly" title=" " alt="" coords="144,995,149,1042,162,1110,186,1187,204,1224,225,1258,269,1312,311,1347,360,1372,426,1395,485,1407,547,1410,605,1407,657,1400,658,1405,606,1412,547,1415,485,1412,425,1400,358,1377,308,1352,265,1316,221,1262,199,1227,181,1189,157,1112,144,1043,138,995"/>
+<area shape="rect" href="logic_8c.html#af6da8071dabf2ebd36d99de9f70e5dce" title=" " alt="" coords="683,1424,778,1451"/>
+<area shape="poly" title=" " alt="" coords="144,995,150,1076,164,1194,175,1255,189,1310,205,1355,225,1385,274,1421,329,1446,389,1461,451,1468,512,1469,570,1465,667,1450,668,1455,571,1470,512,1474,451,1474,388,1467,328,1451,271,1426,221,1389,200,1358,184,1312,170,1256,159,1195,145,1076,138,995"/>
+<area shape="rect" href="logic_8c.html#a5d70b1e35da3781dc0e409643147cdd8" title=" " alt="" coords="460,867,564,893"/>
+<area shape="poly" title=" " alt="" coords="150,965,180,936,222,910,279,891,338,880,394,875,445,874,445,879,395,880,338,885,280,896,224,914,184,940,154,969"/>
+<area shape="rect" href="logic_8c.html#afa64d8084403040ad7f7f8045e075736" title=" " alt="" coords="444,765,580,792"/>
+<area shape="poly" title=" " alt="" coords="139,967,146,933,161,887,185,840,201,819,222,802,271,777,324,764,379,760,429,763,428,768,379,766,325,770,272,782,224,806,205,823,189,843,165,889,151,934,145,968"/>
+<area shape="rect" href="keypad_8c.html#a4dc4195ee24a2240646ab8e3f70eaacb" title="Creates a default key with default values." alt="" coords="425,563,599,589"/>
+<area shape="poly" title=" " alt="" coords="139,967,148,901,165,805,189,712,204,675,221,650,263,618,311,596,361,583,410,575,410,580,362,588,312,601,265,623,225,654,209,678,194,714,170,807,154,901,144,968"/>
+<area shape="rect" href="keypad_8c.html#a62a8113965dd111b6f91d33efcabd77d" title="Waits for a key to be pressed." alt="" coords="223,664,377,691"/>
+<area shape="poly" title=" " alt="" coords="141,967,167,876,191,817,221,759,245,727,270,699,274,703,249,730,225,761,196,819,172,878,146,968"/>
+<area shape="rect" href="logic_8c.html#ae7c44d3fc64010d1e217bea610c8536c" title=" " alt="" coords="246,1019,354,1045"/>
+<area shape="poly" title=" " alt="" coords="176,990,242,1011,240,1016,175,995"/>
+<area shape="rect" href="logic_8c.html#a5a3be8027400af0c949033c8c86a4360" title=" " alt="" coords="465,1019,559,1045"/>
+<area shape="poly" title=" " alt="" coords="176,982,378,1004,451,1017,450,1022,377,1009,175,987"/>
+<area shape="rect" href="logic_8c.html#ac4085c7ad6b8fe21141bebd8cfe7053a" title=" " alt="" coords="686,968,775,995"/>
+<area shape="poly" title=" " alt="" coords="175,973,251,963,357,953,477,948,599,953,671,965,671,970,598,959,477,954,357,959,252,968,176,978"/>
+<area shape="rect" href="logic_8c.html#a5f7f7893415d86a5a8348472dbdd0541" title=" " alt="" coords="461,1728,563,1755"/>
+<area shape="poly" title=" " alt="" coords="143,995,150,1139,166,1368,177,1485,191,1588,207,1667,216,1693,225,1708,248,1726,274,1740,302,1749,332,1755,391,1757,445,1752,446,1758,391,1763,331,1760,301,1754,272,1744,245,1730,221,1711,211,1695,202,1668,186,1589,172,1485,161,1368,145,1139,138,995"/>
+<area shape="rect" href="logic_8c.html#aee8c17e4c2f0d1376f21780a1199b97c" title=" " alt="" coords="228,1221,373,1248"/>
+<area shape="poly" title=" " alt="" coords="147,994,176,1067,198,1113,225,1157,248,1185,273,1209,269,1213,244,1189,221,1160,193,1115,171,1069,142,996"/>
+<area shape="rect" href="logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2" title=" " alt="" coords="263,1120,338,1147"/>
+<area shape="poly" title=" " alt="" coords="156,993,276,1107,272,1111,152,997"/>
+<area shape="rect" href="logic_8c.html#ada037e06af8abdcc0382445b22466477" title=" " alt="" coords="251,816,350,843"/>
+<area shape="poly" title=" " alt="" coords="144,966,173,915,195,886,221,859,239,848,242,852,225,863,199,889,177,918,149,969"/>
+<area shape="rect" href="lcd_8c.html#aa0130791fdcab8f2263be12fb00a031d" title="Clears a row." alt="" coords="876,1120,973,1147"/>
+<area shape="poly" title=" " alt="" coords="777,1428,796,1421,812,1410,837,1382,858,1351,889,1282,908,1215,917,1162,922,1163,913,1216,894,1284,863,1353,842,1386,816,1414,798,1426,779,1433"/>
+<area shape="rect" href="lcd_8c.html#ab336d65567699c41886446b710e9d859" title="Sets the cursor position." alt="" coords="1642,943,1742,969"/>
+<area shape="poly" title=" " alt="" coords="777,1424,953,1381,1193,1314,1316,1275,1428,1234,1521,1191,1557,1171,1586,1150,1621,1111,1648,1066,1668,1021,1681,984,1686,985,1673,1023,1653,1068,1625,1114,1589,1154,1560,1175,1523,1196,1430,1238,1317,1280,1195,1319,954,1386,778,1429"/>
+<area shape="rect" href="lcd_8c.html#a37450f91c7ae032252ea94d7c92efde2" title="Prints a character to the LCD." alt="" coords="1055,917,1152,944"/>
+<area shape="poly" title=" " alt="" coords="957,1117,985,1099,1018,1064,1046,1026,1087,956,1092,959,1051,1029,1022,1068,988,1103,960,1122"/>
+<area shape="poly" title=" " alt="" coords="973,1128,1085,1118,1239,1098,1413,1064,1501,1041,1586,1014,1624,996,1658,976,1660,981,1627,1001,1588,1018,1503,1046,1415,1069,1240,1103,1085,1123,973,1133"/>
+<area shape="poly" title=" " alt="" coords="1113,915,1196,811,1265,734,1349,648,1446,560,1554,476,1612,437,1671,402,1733,371,1796,345,1831,335,1859,333,1888,337,1924,345,1958,358,1988,374,1986,379,1956,363,1922,351,1887,342,1859,338,1831,341,1798,351,1735,376,1674,407,1615,442,1557,480,1449,564,1352,652,1269,737,1200,815,1117,918"/>
+<area shape="poly" title=" " alt="" coords="1121,942,1164,976,1192,992,1222,1004,1425,1064,1514,1083,1598,1091,1638,1091,1678,1086,1717,1077,1757,1063,1797,1044,1837,1020,1879,990,1921,954,1940,927,1958,886,1985,780,2004,666,2014,579,2019,580,2009,667,1990,781,1963,888,1945,930,1925,958,1882,994,1840,1025,1799,1049,1759,1068,1719,1082,1679,1091,1638,1096,1598,1097,1513,1088,1424,1069,1220,1009,1189,997,1161,980,1118,947"/>
+<area shape="poly" title=" " alt="" coords="1152,918,1308,892,1406,882,1505,877,1693,877,1727,875,1756,868,1779,856,1798,841,1813,822,1826,800,1847,750,1866,693,1888,634,1921,576,1943,549,1969,523,1974,520,1977,524,1973,527,1947,552,1925,579,1893,636,1871,695,1852,752,1831,803,1818,825,1801,845,1782,860,1757,873,1728,880,1693,883,1505,883,1406,887,1309,898,1152,923"/>
+<area shape="rect" href="lcd_8c.html#a16d925f7b9140ef9283fcae38a45b7f4" title="Increments the cursor column." alt="" coords="1221,968,1377,995"/>
+<area shape="poly" title=" " alt="" coords="1153,940,1230,961,1229,966,1151,946"/>
+<area shape="rect" href="lcd_8c.html#a60854aad97ec6bbdb5a001eea7c6b3b8" title="Increments the cursor row." alt="" coords="1425,943,1587,969"/>
+<area shape="poly" title=" " alt="" coords="1152,931,1410,947,1409,953,1152,936"/>
+<area shape="poly" title=" " alt="" coords="1377,969,1409,965,1410,970,1378,974"/>
+<area shape="poly" title=" " alt="" coords="1588,953,1626,953,1626,959,1588,959"/>
+<area shape="rect" href="lcd_8c.html#a588b278d12ac539ff4f7787f03176dcb" title="Sets the DDRAM address (cursor position)" alt="" coords="1810,917,1910,944"/>
+<area shape="poly" title=" " alt="" coords="1742,946,1794,938,1795,943,1743,951"/>
+<area shape="poly" title=" " alt="" coords="1860,916,1870,846,1891,736,1923,605,1944,538,1969,474,1997,423,2002,426,1973,476,1949,540,1928,606,1896,737,1875,847,1865,917"/>
+<area shape="poly" title=" " alt="" coords="1898,915,1921,897,1947,858,1968,816,1985,771,1997,726,2011,643,2016,579,2022,580,2017,643,2002,727,1990,773,1973,818,1952,861,1925,900,1902,919"/>
+<area shape="poly" title=" " alt="" coords="1900,915,1921,897,1936,872,1946,848,1955,802,1952,757,1945,713,1936,668,1934,622,1943,574,1953,549,1969,524,1970,523,1974,526,1973,527,1958,552,1948,576,1939,622,1942,667,1950,712,1958,756,1960,802,1951,850,1941,875,1925,900,1903,919"/>
+<area shape="rect" href="logic_8c.html#a6c7782e193759b778f5add39176b0975" title=" " alt="" coords="660,867,801,893"/>
+<area shape="poly" title=" " alt="" coords="564,877,645,877,645,883,564,883"/>
+<area shape="rect" href="logic_8c.html#afd141353423c9fce837e2f56a10d810d" title=" " alt="" coords="647,917,814,944"/>
+<area shape="poly" title=" " alt="" coords="565,889,655,911,654,916,564,895"/>
+<area shape="rect" href="lcd_8c.html#a08b51cf41e7c0183ca5b469dd853a666" title="Clears the last character of a row." alt="" coords="668,664,793,691"/>
+<area shape="poly" title=" " alt="" coords="528,864,597,802,645,751,700,699,704,703,649,755,601,806,531,868"/>
+<area shape="poly" title=" " alt="" coords="793,675,1102,675,1300,675,1385,671,1454,669,1486,673,1518,682,1552,698,1589,723,1612,745,1632,770,1661,826,1679,882,1689,927,1684,928,1674,883,1656,828,1627,773,1608,748,1586,727,1550,703,1517,687,1485,678,1454,674,1385,676,1300,680,1102,680,793,680"/>
+<area shape="rect" href="lcd_8c.html#a85868d62c8073baad86aa03e88ac1001" title="Prints a character to the LCD at a given position." alt="" coords="870,740,979,767"/>
+<area shape="poly" title=" " alt="" coords="769,689,815,707,876,731,874,736,813,712,767,694"/>
+<area shape="poly" title=" " alt="" coords="943,765,988,809,1081,904,1077,907,984,813,939,769"/>
+<area shape="poly" title=" " alt="" coords="979,744,1119,731,1297,722,1387,722,1470,727,1538,738,1566,747,1589,758,1610,774,1629,794,1658,840,1677,887,1688,927,1683,929,1672,889,1653,842,1625,797,1607,778,1586,762,1564,752,1537,744,1469,732,1387,727,1298,727,1119,737,980,750"/>
+<area shape="poly" title=" " alt="" coords="319,661,366,631,424,599,440,592,442,597,426,604,368,635,322,666"/>
+<area shape="rect" href="keypad_8c.html#a9b1fc55f525fe49144daf21ffe978141" title="Checks if a given key is valid." alt="" coords="470,664,554,691"/>
+<area shape="poly" title=" " alt="" coords="378,675,455,675,455,680,378,680"/>
+<area shape="rect" href="keypad_8c.html#a49ffa463b26cc47b7d9e3e2cda8d9168" title="Finds the KeyInfo of a given key." alt="" coords="434,715,590,741"/>
+<area shape="poly" title=" " alt="" coords="360,689,439,708,438,713,359,694"/>
+<area shape="rect" href="keypad_8c.html#a35a69618b097b5f64e918962cd47c824" title="Gets the character from the keypad." alt="" coords="1034,107,1173,133"/>
+<area shape="poly" title=" " alt="" coords="301,663,311,608,332,525,349,479,369,432,394,387,423,346,445,325,467,310,510,294,553,278,574,265,597,245,612,220,617,196,625,172,633,160,645,150,690,125,739,108,789,97,841,91,939,91,1023,101,1022,106,939,97,841,96,790,102,740,113,692,130,648,154,637,164,630,174,623,197,617,222,601,248,578,269,555,283,512,299,469,315,448,329,427,350,398,390,374,434,353,481,337,527,316,609,306,664"/>
+<area shape="poly" title=" " alt="" coords="1173,117,1505,117,1693,117,1764,120,1819,132,1870,157,1925,201,1959,241,1985,287,2004,332,2015,370,2010,371,1999,334,1980,289,1955,244,1921,205,1867,161,1818,137,1763,125,1693,123,1505,123,1173,123"/>
+<area shape="poly" title=" " alt="" coords="325,1044,427,1106,478,1131,521,1147,560,1168,580,1185,601,1208,614,1229,620,1249,623,1287,627,1324,634,1341,649,1359,660,1368,657,1373,645,1363,630,1344,622,1325,618,1288,615,1250,609,1231,597,1211,577,1189,557,1173,519,1152,476,1136,424,1110,322,1048"/>
+<area shape="rect" href="logic_8c.html#a89a9f339804050ddf172c87c288312a0" title=" " alt="" coords="451,968,573,995"/>
+<area shape="poly" title=" " alt="" coords="354,1016,438,996,439,1001,355,1022"/>
+<area shape="poly" title=" " alt="" coords="355,1029,449,1029,449,1035,355,1035"/>
+<area shape="poly" title=" " alt="" coords="533,965,583,935,646,903,662,896,664,901,648,908,586,939,536,970"/>
+<area shape="poly" title=" " alt="" coords="572,965,654,946,655,951,573,970"/>
+<area shape="rect" href="logic_8c.html#abe7dcc508ace168bbcddb296203a1886" title=" " alt="" coords="887,917,962,944"/>
+<area shape="poly" title=" " alt="" coords="574,993,647,1004,732,1017,769,1016,813,1004,828,996,837,985,846,973,860,961,878,949,881,954,864,965,850,977,841,989,831,1000,815,1009,769,1022,732,1022,646,1009,573,998"/>
+<area shape="poly" title=" " alt="" coords="962,928,1040,928,1040,933,962,933"/>
+<area shape="poly" title=" " alt="" coords="963,941,1077,975,1148,992,1221,1004,1324,1013,1404,1010,1485,998,1587,979,1626,970,1627,976,1588,984,1485,1003,1405,1015,1324,1018,1220,1009,1147,997,1076,980,961,946"/>
+<area shape="poly" title=" " alt="" coords="560,1042,600,1055,674,1085,730,1112,786,1136,863,1156,974,1176,1070,1189,1157,1196,1238,1193,1317,1180,1398,1156,1487,1119,1586,1067,1612,1049,1636,1026,1672,981,1676,984,1640,1030,1616,1053,1589,1072,1489,1124,1400,1161,1318,1185,1238,1198,1157,1201,1070,1195,973,1181,861,1161,785,1141,728,1117,671,1089,598,1060,559,1048"/>
+<area shape="rect" href="lcd_8c.html#afb88b9aba1a1db09a517c5a1ffc07299" title="Prints a string to the LCD." alt="" coords="679,1323,782,1349"/>
+<area shape="poly" title=" " alt="" coords="561,1034,582,1042,601,1055,619,1081,629,1105,632,1130,632,1154,631,1204,636,1230,649,1259,671,1287,698,1311,694,1315,668,1291,644,1261,631,1232,626,1204,626,1154,627,1130,624,1107,615,1083,597,1059,579,1047,559,1039"/>
+<area shape="poly" title=" " alt="" coords="559,1019,670,992,672,998,560,1024"/>
+<area shape="poly" title=" " alt="" coords="750,1320,782,1294,812,1259,823,1237,828,1218,832,1181,837,1145,845,1126,860,1106,875,1092,891,1084,920,1076,951,1071,985,1055,1014,1032,1040,1005,1082,955,1086,958,1044,1009,1017,1036,988,1060,953,1076,922,1082,893,1089,878,1097,864,1110,850,1128,842,1146,837,1181,833,1219,827,1239,816,1261,786,1298,753,1324"/>
+<area shape="poly" title=" " alt="" coords="774,972,794,965,812,954,831,933,841,912,848,889,860,860,905,779,910,781,864,863,853,890,846,914,836,936,816,958,797,970,776,977"/>
+<area shape="poly" title=" " alt="" coords="521,1726,708,1462,712,1465,525,1729"/>
+<area shape="poly" title=" " alt="" coords="511,1727,518,1662,537,1563,554,1509,577,1455,607,1404,645,1359,663,1347,666,1351,648,1363,611,1407,582,1457,559,1511,542,1565,523,1663,517,1728"/>
+<area shape="rect" href="parser_8c.html#a19203c96ed6922e7092af10b63e6d298" title="Compiles the tokens and returns the result." alt="" coords="677,2004,784,2031"/>
+<area shape="poly" title=" " alt="" coords="526,1753,711,1990,707,1993,522,1757"/>
+<area shape="rect" href="parser_8c.html#a07f87b9f5b24c331fddb0a3d57abfecf" title="Ends the input." alt="" coords="675,1779,786,1805"/>
+<area shape="poly" title=" " alt="" coords="564,1750,660,1773,659,1778,563,1756"/>
+<area shape="rect" href="parser_8c.html#aa19b910e23df23ebe5f189f93c97afdd" title="Pushes new token to the parser can be used after calling." alt="" coords="862,1740,986,1767"/>
+<area shape="poly" title=" " alt="" coords="564,1740,847,1748,847,1754,563,1745"/>
+<area shape="rect" href="parser_8c.html#a1715c490f05c2ddcb8d526684468f885" title="Calls." alt="" coords="684,1829,777,1856"/>
+<area shape="poly" title=" " alt="" coords="536,1753,586,1783,648,1815,670,1823,668,1828,646,1820,583,1788,533,1757"/>
+<area shape="rect" href="parser_8c.html#a7f8aeab74e49ee2b275a7575e8d7b5e8" title="Eats the next token." alt="" coords="1640,2171,1744,2197"/>
+<area shape="poly" title=" " alt="" coords="742,2030,788,2097,824,2143,868,2190,918,2234,975,2272,1037,2297,1069,2304,1102,2307,1300,2307,1351,2304,1402,2295,1501,2268,1587,2234,1651,2203,1654,2207,1589,2239,1502,2273,1403,2301,1352,2309,1300,2312,1102,2312,1068,2309,1035,2302,972,2276,915,2239,864,2194,820,2146,783,2100,737,2033"/>
+<area shape="rect" href="parser_8c.html#ab427a20c59c9ca0b11c82660752df62a" title="Parses arithematic expression." alt="" coords="864,2127,984,2153"/>
+<area shape="poly" title=" " alt="" coords="755,2029,890,2116,887,2120,752,2033"/>
+<area shape="rect" href="parser_8c.html#a73bf16a41122c7751670f74fd415a36c" title="Peeks next token." alt="" coords="1635,1968,1749,1995"/>
+<area shape="poly" title=" " alt="" coords="751,2001,810,1967,894,1926,943,1907,995,1892,1049,1881,1102,1877,1300,1877,1382,1878,1447,1884,1510,1897,1588,1922,1626,1938,1660,1957,1657,1962,1624,1943,1586,1926,1508,1902,1446,1889,1382,1884,1300,1883,1102,1883,1049,1887,996,1897,945,1912,896,1931,812,1972,754,2006"/>
+<area shape="poly" title=" " alt="" coords="985,2144,1181,2162,1425,2179,1624,2182,1624,2187,1425,2184,1180,2167,985,2149"/>
+<area shape="rect" href="parser_8c.html#ab942fe3a63fed3190c76e55ebc76e5aa" title="Parses bracket expression." alt="" coords="1456,2120,1556,2147"/>
+<area shape="poly" title=" " alt="" coords="985,2142,1211,2143,1440,2137,1441,2143,1211,2148,985,2148"/>
+<area shape="poly" title=" " alt="" coords="940,2124,981,2091,1033,2055,1123,2004,1165,1986,1220,1969,1321,1945,1402,1934,1484,1935,1588,1948,1640,1960,1638,1965,1587,1953,1484,1941,1403,1939,1322,1950,1221,1975,1166,1991,1125,2009,1036,2060,984,2095,943,2128"/>
+<area shape="rect" href="parser_8c.html#a5656fb9995d62b96c08bfef4789ee4db" title="Parses term tokens." alt="" coords="1061,2069,1146,2096"/>
+<area shape="poly" title=" " alt="" coords="967,2124,1046,2098,1047,2103,969,2129"/>
+<area shape="poly" title=" " alt="" coords="1557,2144,1626,2163,1625,2169,1556,2149"/>
+<area shape="poly" title=" " alt="" coords="1456,2131,1235,2130,1000,2136,1000,2130,1235,2125,1456,2126"/>
+<area shape="poly" title=" " alt="" coords="1522,2118,1661,2002,1664,2007,1525,2122"/>
+<area shape="poly" title=" " alt="" coords="1147,2092,1221,2112,1323,2137,1425,2156,1530,2169,1625,2177,1624,2182,1529,2174,1425,2161,1322,2142,1220,2117,1145,2097"/>
+<area shape="poly" title=" " alt="" coords="1146,2084,1377,2112,1441,2121,1440,2126,1377,2117,1146,2090"/>
+<area shape="poly" title=" " alt="" coords="1118,2067,1162,2034,1190,2017,1220,2004,1272,1990,1327,1979,1436,1968,1537,1967,1620,1971,1620,1977,1537,1972,1436,1973,1327,1984,1274,1995,1222,2009,1192,2022,1165,2038,1122,2071"/>
+<area shape="rect" href="parser_8c.html#a55bde1715e6e77addb80a046c96f059d" title="Parses only number tokens." alt="" coords="1249,2019,1349,2045"/>
+<area shape="poly" title=" " alt="" coords="1145,2069,1233,2046,1234,2051,1147,2074"/>
+<area shape="poly" title=" " alt="" coords="1350,2037,1461,2061,1526,2080,1589,2106,1631,2131,1666,2158,1663,2163,1628,2135,1586,2110,1524,2085,1460,2066,1349,2042"/>
+<area shape="poly" title=" " alt="" coords="1340,2043,1378,2062,1403,2081,1426,2099,1451,2111,1448,2116,1424,2104,1399,2085,1376,2066,1338,2048"/>
+<area shape="poly" title=" " alt="" coords="1349,2025,1587,1997,1620,1992,1621,1997,1588,2003,1350,2030"/>
+<area shape="poly" title=" " alt="" coords="785,1778,846,1766,847,1771,786,1784"/>
+<area shape="rect" href="parser_8c.html#a9264a889771bffb6e9bb7215c8402eda" title="Stops the parser and clears all tokens." alt="" coords="881,1816,967,1843"/>
+<area shape="poly" title=" " alt="" coords="777,1837,865,1831,866,1836,778,1842"/>
+<area shape="poly" title=" " alt="" coords="320,1219,350,1193,375,1158,388,1111,392,1049,390,900,389,824,392,753,402,694,411,670,423,650,437,638,454,631,456,635,440,643,427,654,416,672,407,695,397,754,394,824,395,900,398,1049,393,1112,380,1160,354,1196,324,1223"/>
+<area shape="poly" title=" " alt="" coords="304,1248,309,1308,326,1394,342,1440,363,1484,391,1523,427,1555,478,1586,525,1606,570,1616,614,1618,659,1611,706,1598,813,1555,843,1537,868,1513,906,1462,910,1466,872,1516,846,1541,815,1560,708,1603,660,1616,614,1623,569,1621,523,1611,475,1591,424,1559,387,1527,358,1486,337,1442,321,1395,304,1309,299,1249"/>
+<area shape="poly" title=" " alt="" coords="313,1247,357,1300,390,1329,426,1352,484,1373,545,1384,605,1389,657,1389,657,1395,604,1394,545,1390,483,1378,424,1357,386,1334,353,1304,309,1250"/>
+<area shape="poly" title=" " alt="" coords="316,1219,346,1192,375,1157,389,1129,395,1104,404,1080,424,1055,449,1041,451,1045,427,1059,408,1082,400,1106,394,1131,380,1160,350,1195,320,1223"/>
+<area shape="poly" title=" " alt="" coords="361,1246,665,1318,663,1323,360,1251"/>
+<area shape="poly" title=" " alt="" coords="322,1145,352,1172,380,1208,393,1241,397,1272,394,1328,393,1355,396,1380,406,1405,427,1430,451,1449,477,1465,534,1486,595,1496,657,1497,719,1491,777,1480,871,1454,873,1459,778,1485,720,1496,658,1502,594,1501,532,1491,475,1470,448,1454,423,1434,402,1408,391,1381,388,1355,389,1328,392,1272,388,1242,375,1211,348,1176,319,1149"/>
+<area shape="poly" title=" " alt="" coords="317,1145,379,1208,402,1234,427,1258,486,1294,548,1324,663,1366,661,1371,546,1329,483,1299,424,1262,398,1238,375,1211,314,1149"/>
+<area shape="poly" title=" " alt="" coords="321,1145,351,1172,380,1208,390,1229,395,1248,399,1284,405,1316,413,1332,427,1349,453,1370,483,1388,547,1413,611,1427,668,1433,668,1439,610,1432,545,1418,480,1392,450,1374,423,1353,409,1335,400,1318,394,1284,390,1249,385,1231,375,1211,347,1176,318,1149"/>
+<area shape="poly" title=" " alt="" coords="314,1118,375,1056,397,1028,408,1016,424,1004,435,998,437,1003,427,1009,412,1020,402,1031,379,1059,317,1121"/>
+<area shape="poly" title=" " alt="" coords="319,1117,366,1087,424,1055,449,1045,451,1050,426,1060,368,1091,322,1122"/>
+<area shape="poly" title=" " alt="" coords="338,1131,394,1135,463,1146,535,1169,569,1186,600,1207,619,1231,626,1255,632,1279,649,1302,666,1314,663,1319,645,1306,627,1281,621,1257,614,1233,597,1211,566,1191,533,1174,462,1151,393,1140,338,1136"/>
+<area shape="rect" href="logic_8c.html#a42669da2ad9ca71aae1bd5805b2c7c98" title=" " alt="" coords="455,1221,569,1248"/>
+<area shape="poly" title=" " alt="" coords="325,1145,426,1200,457,1213,455,1218,424,1205,323,1150"/>
+<area shape="rect" href="logic_8c.html#a93047c21ec383e462990d923ed48795e" title=" " alt="" coords="445,1069,579,1096"/>
+<area shape="poly" title=" " alt="" coords="338,1122,438,1098,439,1103,339,1127"/>
+<area shape="poly" title=" " alt="" coords="535,1094,568,1121,601,1157,616,1186,622,1211,630,1235,648,1258,669,1273,689,1281,728,1286,769,1289,792,1296,815,1308,845,1331,871,1358,909,1409,905,1413,866,1362,841,1335,813,1313,790,1301,768,1295,728,1291,688,1286,667,1277,645,1262,625,1237,617,1213,611,1188,596,1160,564,1125,531,1099"/>
+<area shape="poly" title=" " alt="" coords="535,1094,569,1124,601,1164,614,1193,619,1219,619,1268,619,1291,622,1313,631,1336,649,1359,661,1369,657,1373,645,1363,626,1339,617,1315,614,1291,614,1268,614,1220,608,1194,596,1167,565,1127,531,1098"/>
+<area shape="poly" title=" " alt="" coords="578,1072,689,1054,813,1024,861,1004,1040,946,1041,951,863,1009,815,1029,690,1059,579,1077"/>
+<area shape="poly" title=" " alt="" coords="571,1066,813,1004,823,993,829,980,834,954,840,927,847,914,860,903,910,876,963,855,1018,841,1074,831,1130,827,1188,827,1300,837,1407,857,1504,883,1585,910,1646,934,1645,939,1583,915,1502,888,1406,862,1300,842,1187,832,1131,832,1074,837,1019,846,965,860,913,881,864,908,851,918,845,929,839,955,834,982,828,996,815,1009,572,1071"/>
+<area shape="poly" title=" " alt="" coords="575,1094,601,1113,617,1138,625,1162,625,1209,626,1256,633,1279,649,1302,666,1316,663,1320,645,1306,628,1281,620,1256,620,1209,620,1163,613,1140,597,1117,572,1099"/>
+<area shape="rect" href="helpers_8c.html#aa41b8512b10550a2e21feec991f752b4" title=" " alt="" coords="677,1221,784,1248"/>
+<area shape="poly" title=" " alt="" coords="569,1094,600,1113,618,1135,625,1158,632,1179,649,1201,665,1212,662,1216,645,1205,627,1182,620,1159,613,1138,597,1117,567,1099"/>
+<area shape="rect" href="helpers_8c.html#aac8c6c00a0e52489ecf8e8a6d9eba228" title=" " alt="" coords="890,1019,959,1045"/>
+<area shape="poly" title=" " alt="" coords="783,1220,799,1212,812,1201,825,1184,832,1167,836,1134,840,1099,847,1081,860,1062,875,1049,878,1053,864,1066,852,1083,846,1101,842,1135,837,1169,830,1187,816,1205,802,1216,785,1224"/>
+<area shape="poly" title=" " alt="" coords="350,826,553,829,683,837,814,852,940,879,1047,910,1045,915,939,884,814,857,683,842,553,834,350,831"/>
+<area shape="poly" title=" " alt="" coords="349,815,438,794,439,799,351,820"/>
 </map>
 </div>
 

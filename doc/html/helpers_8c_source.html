@@ -84,8 +84,27 @@ $(document).ready(function() { init_codefold(0); });
 <a href="helpers_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="helpers_8h.html">helpers.h</a>&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><a class="code hl_define" href="helpers_8h.html#af81ac8e504dd921417ba754f655999f5">DEFINE_LIST_IMPLEMENTATION</a>(<span class="keywordtype">char</span>)</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="helpers_8c.html#a562588cbdd2bdd82a792400c9bc708a8">    5</a></span>unsigned <span class="keywordtype">long</span> <a class="code hl_variable" href="helpers_8c.html#a562588cbdd2bdd82a792400c9bc708a8">randSeed</a> = 12345; <span class="comment">// Initial seed value</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="helpers_8c.html#aac8c6c00a0e52489ecf8e8a6d9eba228">    7</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="helpers_8c.html#aac8c6c00a0e52489ecf8e8a6d9eba228">Random</a>() {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_variable" href="helpers_8c.html#a562588cbdd2bdd82a792400c9bc708a8">randSeed</a> = (1664525 * <a class="code hl_variable" href="helpers_8c.html#a562588cbdd2bdd82a792400c9bc708a8">randSeed</a> + 1013904223) % 4294967296;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="helpers_8c.html#a562588cbdd2bdd82a792400c9bc708a8">randSeed</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>}</div>
+</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Function to get a random number within a given range</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="helpers_8c.html#aa41b8512b10550a2e21feec991f752b4">   13</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="helpers_8c.html#aa41b8512b10550a2e21feec991f752b4">RandomRange</a>(<span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max) {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordflow">return</span> min + (<a class="code hl_function" href="helpers_8c.html#aac8c6c00a0e52489ecf8e8a6d9eba228">Random</a>() % (max - min + 1));</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
+</div>
+<div class="ttc" id="ahelpers_8c_html_a562588cbdd2bdd82a792400c9bc708a8"><div class="ttname"><a href="helpers_8c.html#a562588cbdd2bdd82a792400c9bc708a8">randSeed</a></div><div class="ttdeci">unsigned long randSeed</div><div class="ttdef"><b>Definition</b> <a href="helpers_8c_source.html#l00005">helpers.c:5</a></div></div>
+<div class="ttc" id="ahelpers_8c_html_aa41b8512b10550a2e21feec991f752b4"><div class="ttname"><a href="helpers_8c.html#aa41b8512b10550a2e21feec991f752b4">RandomRange</a></div><div class="ttdeci">int RandomRange(int min, int max)</div><div class="ttdef"><b>Definition</b> <a href="helpers_8c_source.html#l00013">helpers.c:13</a></div></div>
+<div class="ttc" id="ahelpers_8c_html_aac8c6c00a0e52489ecf8e8a6d9eba228"><div class="ttname"><a href="helpers_8c.html#aac8c6c00a0e52489ecf8e8a6d9eba228">Random</a></div><div class="ttdeci">int Random()</div><div class="ttdef"><b>Definition</b> <a href="helpers_8c_source.html#l00007">helpers.c:7</a></div></div>
 <div class="ttc" id="ahelpers_8h_html"><div class="ttname"><a href="helpers_8h.html">helpers.h</a></div></div>
-<div class="ttc" id="ahelpers_8h_html_af81ac8e504dd921417ba754f655999f5"><div class="ttname"><a href="helpers_8h.html#af81ac8e504dd921417ba754f655999f5">DEFINE_LIST_IMPLEMENTATION</a></div><div class="ttdeci">#define DEFINE_LIST_IMPLEMENTATION(Type)</div><div class="ttdef"><b>Definition</b> <a href="helpers_8h_source.html#l00025">helpers.h:25</a></div></div>
+<div class="ttc" id="ahelpers_8h_html_af81ac8e504dd921417ba754f655999f5"><div class="ttname"><a href="helpers_8h.html#af81ac8e504dd921417ba754f655999f5">DEFINE_LIST_IMPLEMENTATION</a></div><div class="ttdeci">#define DEFINE_LIST_IMPLEMENTATION(Type)</div><div class="ttdef"><b>Definition</b> <a href="helpers_8h_source.html#l00029">helpers.h:29</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

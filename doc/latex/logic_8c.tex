@@ -4,22 +4,228 @@
 {\ttfamily \#include "{}clock.\+h"{}}\newline
 {\ttfamily \#include "{}lcd.\+h"{}}\newline
 {\ttfamily \#include "{}keypad.\+h"{}}\newline
+{\ttfamily \#include "{}flash.\+h"{}}\newline
+{\ttfamily \#include "{}parser.\+h"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
 Include dependency graph for logic.\+c\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=318pt]{logic_8c__incl}
+\includegraphics[width=350pt]{logic_8c__incl}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{logic_8c_a457795d41a98ba74ee391e3a2fc09849}{LOGIC\+\_\+\+STATBAR\+\_\+\+ROW}}~0
+\item 
+\#define \mbox{\hyperlink{logic_8c_a76e32bc5f03b48245eceb42ef3f6a0ad}{LOGIC\+\_\+\+SHORTCUTS\+\_\+\+ROW}}~\mbox{\hyperlink{lcd_8h_aece2016b9a1e98b3b6543062a452c847}{LCD\+\_\+\+N\+\_\+\+ROW}}-\/1
+\item 
+\#define \mbox{\hyperlink{logic_8c_a038bbcc9f8f7493d64b790b461743b30}{LOGIC\+\_\+\+INPUT\+\_\+\+ROWS}}~(\mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}}\mbox{[}$\,$\mbox{]}) \{1, 2\}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{logic_8c_a15058a20857a8a4d38fa4ab72109a9e2}{Run\+Login}} ()
+\item 
+void \mbox{\hyperlink{logic_8c_aee8c17e4c2f0d1376f21780a1199b97c}{Run\+Change\+Password}} ()
+\item 
+void \mbox{\hyperlink{logic_8c_a5f7f7893415d86a5a8348472dbdd0541}{Run\+Calculator}} ()
+\item 
+void \mbox{\hyperlink{logic_8c_a93047c21ec383e462990d923ed48795e}{Run\+Login\+Animation}} ()
+\item 
+\mbox{\hyperlink{struct_token}{Token}} \mbox{\hyperlink{logic_8c_a7716334580813b0d2fddba5c31556836}{Get\+Key\+Token}} (\mbox{\hyperlink{struct_key_info}{Key\+Info}} key)
+\item 
+void \mbox{\hyperlink{logic_8c_af6da8071dabf2ebd36d99de9f70e5dce}{Clear\+All\+Input}} (bool clear\+Data)
+\item 
+void \mbox{\hyperlink{logic_8c_a5d70b1e35da3781dc0e409643147cdd8}{Clear\+Last\+Input}} ()
+\item 
+void \mbox{\hyperlink{logic_8c_a89a9f339804050ddf172c87c288312a0}{Show\+Current\+Data}} ()
+\item 
+void \mbox{\hyperlink{logic_8c_abe7dcc508ace168bbcddb296203a1886}{Print\+Data}} (void \texorpdfstring{$\ast$}{*}data, int length, bool is\+Token)
+\item 
+bool \mbox{\hyperlink{logic_8c_a6c7782e193759b778f5add39176b0975}{Is\+Calculator\+Available}} ()
+\item 
+bool \mbox{\hyperlink{logic_8c_afd141353423c9fce837e2f56a10d810d}{Is\+Password\+Input\+Available}} ()
+\item 
+\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc}{Special\+Key\+Functions}} \mbox{\hyperlink{logic_8c_afa64d8084403040ad7f7f8045e075736}{Get\+Special\+Function}} (\mbox{\hyperlink{struct_key_info}{Key\+Info}} key)
+\item 
+void \mbox{\hyperlink{logic_8c_add896c9f31faac13d33591bf86e4aeea}{Map\+Functions}} (\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc}{Special\+Key\+Functions}} function)
+\item 
+void \mbox{\hyperlink{logic_8c_a2ea1341e5f25883c524a2cdb81341f9d}{Show\+Number\+Operation}} (\mbox{\hyperlink{struct_key_info}{Key\+Info}} key)
+\item 
+void \mbox{\hyperlink{logic_8c_ac4085c7ad6b8fe21141bebd8cfe7053a}{Update\+Shift}} ()
+\item 
+bool \mbox{\hyperlink{logic_8c_a42669da2ad9ca71aae1bd5805b2c7c98}{Password\+Match}} (char\+List password)
+\item 
+void \mbox{\hyperlink{logic_8c_a3b107a1c86e52fc6f6312e077c76ac31}{Display\+Message}} (char message\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{logic_8c_ae7c44d3fc64010d1e217bea610c8536c}{Refresh\+Display}} ()
+\item 
+void \mbox{\hyperlink{logic_8c_ada037e06af8abdcc0382445b22466477}{Run\+User\+Input}} (\mbox{\hyperlink{struct_key_info}{Key\+Info}} key)
+\item 
+void \mbox{\hyperlink{logic_8c_a5a3be8027400af0c949033c8c86a4360}{Update\+Rows}} ()
+\item 
 void \mbox{\hyperlink{logic_8c_a8468ead6b76c5ff5eb578a79fd591aa8}{Init\+All}} ()
-\begin{DoxyCompactList}\small\item\em Initializes all components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initializes all components. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8c_a41a8f29e3704245cd53e2e11e03ec5f7}{Run\+Main}} ()
+\begin{DoxyCompactList}\small\item\em Runs the main loop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8c_aa8bcdda49c0758a44d7cfad4e6d8cd1b}{Run\+Change\+Password\+Module}} ()
+\item 
+void \mbox{\hyperlink{logic_8c_a7e4766166af50627baf168343eef03b1}{Run\+Graph\+Module}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{logic_8c_af7d68b5d19dab801e6460d295564d2bb}{is\+Shift\+On}} = false
+\item 
+bool \mbox{\hyperlink{logic_8c_af5dd0e120f9824b40a94276c4ee3dadb}{is\+Logged\+In}} = false
+\item 
+bool \mbox{\hyperlink{logic_8c_a7a07acedc029e72784867cbe9ac10543}{is\+Init}} = false
+\item 
+\mbox{\hyperlink{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085b}{Program\+Mode}} \mbox{\hyperlink{logic_8c_a3288701d9bc3bb0210a19c3f9042515f}{mode}} = \mbox{\hyperlink{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b}{LOGIN\+\_\+\+MODE}}
+\item 
+Token\+List \mbox{\hyperlink{logic_8c_ab5517a73749b3e781a73a808ba33d533}{token\+Data}}
+\item 
+char\+List \mbox{\hyperlink{logic_8c_a68ed8a7ac589618f57942872aff22070}{input\+Data}}
+\item 
+\mbox{\hyperlink{struct_flash_data}{Flash\+Data}} \mbox{\hyperlink{logic_8c_a0accd14d87e65913db8e6a59e42b6c7d}{flash\+Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{logic_8c_a038bbcc9f8f7493d64b790b461743b30}\label{logic_8c_a038bbcc9f8f7493d64b790b461743b30} 
+\index{logic.c@{logic.c}!LOGIC\_INPUT\_ROWS@{LOGIC\_INPUT\_ROWS}}
+\index{LOGIC\_INPUT\_ROWS@{LOGIC\_INPUT\_ROWS}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{LOGIC\_INPUT\_ROWS}{LOGIC\_INPUT\_ROWS}}
+{\footnotesize\ttfamily \#define LOGIC\+\_\+\+INPUT\+\_\+\+ROWS~(\mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}}\mbox{[}$\,$\mbox{]}) \{1, 2\}}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00015}{15}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+\Hypertarget{logic_8c_a76e32bc5f03b48245eceb42ef3f6a0ad}\label{logic_8c_a76e32bc5f03b48245eceb42ef3f6a0ad} 
+\index{logic.c@{logic.c}!LOGIC\_SHORTCUTS\_ROW@{LOGIC\_SHORTCUTS\_ROW}}
+\index{LOGIC\_SHORTCUTS\_ROW@{LOGIC\_SHORTCUTS\_ROW}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{LOGIC\_SHORTCUTS\_ROW}{LOGIC\_SHORTCUTS\_ROW}}
+{\footnotesize\ttfamily \#define LOGIC\+\_\+\+SHORTCUTS\+\_\+\+ROW~\mbox{\hyperlink{lcd_8h_aece2016b9a1e98b3b6543062a452c847}{LCD\+\_\+\+N\+\_\+\+ROW}}-\/1}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00014}{14}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+\Hypertarget{logic_8c_a457795d41a98ba74ee391e3a2fc09849}\label{logic_8c_a457795d41a98ba74ee391e3a2fc09849} 
+\index{logic.c@{logic.c}!LOGIC\_STATBAR\_ROW@{LOGIC\_STATBAR\_ROW}}
+\index{LOGIC\_STATBAR\_ROW@{LOGIC\_STATBAR\_ROW}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{LOGIC\_STATBAR\_ROW}{LOGIC\_STATBAR\_ROW}}
+{\footnotesize\ttfamily \#define LOGIC\+\_\+\+STATBAR\+\_\+\+ROW~0}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00013}{13}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{logic_8c_af6da8071dabf2ebd36d99de9f70e5dce}\label{logic_8c_af6da8071dabf2ebd36d99de9f70e5dce} 
+\index{logic.c@{logic.c}!ClearAllInput@{ClearAllInput}}
+\index{ClearAllInput@{ClearAllInput}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{ClearAllInput()}{ClearAllInput()}}
+{\footnotesize\ttfamily void Clear\+All\+Input (\begin{DoxyParamCaption}\item[{bool}]{clear\+Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00306}{306}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_af6da8071dabf2ebd36d99de9f70e5dce_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_af6da8071dabf2ebd36d99de9f70e5dce_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_a5d70b1e35da3781dc0e409643147cdd8}\label{logic_8c_a5d70b1e35da3781dc0e409643147cdd8} 
+\index{logic.c@{logic.c}!ClearLastInput@{ClearLastInput}}
+\index{ClearLastInput@{ClearLastInput}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{ClearLastInput()}{ClearLastInput()}}
+{\footnotesize\ttfamily void Clear\+Last\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00320}{320}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_a5d70b1e35da3781dc0e409643147cdd8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{logic_8c_a5d70b1e35da3781dc0e409643147cdd8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_a3b107a1c86e52fc6f6312e077c76ac31}\label{logic_8c_a3b107a1c86e52fc6f6312e077c76ac31} 
+\index{logic.c@{logic.c}!DisplayMessage@{DisplayMessage}}
+\index{DisplayMessage@{DisplayMessage}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{DisplayMessage()}{DisplayMessage()}}
+{\footnotesize\ttfamily void Display\+Message (\begin{DoxyParamCaption}\item[{char}]{message\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00332}{332}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_a3b107a1c86e52fc6f6312e077c76ac31_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_a7716334580813b0d2fddba5c31556836}\label{logic_8c_a7716334580813b0d2fddba5c31556836} 
+\index{logic.c@{logic.c}!GetKeyToken@{GetKeyToken}}
+\index{GetKeyToken@{GetKeyToken}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{GetKeyToken()}{GetKeyToken()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_token}{Token}} Get\+Key\+Token (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_key_info}{Key\+Info}}}]{key }\end{DoxyParamCaption})}
+
+\Hypertarget{logic_8c_afa64d8084403040ad7f7f8045e075736}\label{logic_8c_afa64d8084403040ad7f7f8045e075736} 
+\index{logic.c@{logic.c}!GetSpecialFunction@{GetSpecialFunction}}
+\index{GetSpecialFunction@{GetSpecialFunction}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{GetSpecialFunction()}{GetSpecialFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc}{Special\+Key\+Functions}} Get\+Special\+Function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_key_info}{Key\+Info}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00302}{302}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_afa64d8084403040ad7f7f8045e075736_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{logic_8c_a8468ead6b76c5ff5eb578a79fd591aa8}\label{logic_8c_a8468ead6b76c5ff5eb578a79fd591aa8} 
 \index{logic.c@{logic.c}!InitAll@{InitAll}}
 \index{InitAll@{InitAll}!logic.c@{logic.c}}
@@ -32,7 +238,7 @@ Initializes all components.
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00006}{6}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00074}{74}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -42,11 +248,467 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{logic_8c_a8468ead6b76c5ff5eb578a79fd591aa8_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=193pt]{logic_8c_a8468ead6b76c5ff5eb578a79fd591aa8_icgraph}
 \end{center}
 \end{figure}
+\Hypertarget{logic_8c_a6c7782e193759b778f5add39176b0975}\label{logic_8c_a6c7782e193759b778f5add39176b0975} 
+\index{logic.c@{logic.c}!IsCalculatorAvailable@{IsCalculatorAvailable}}
+\index{IsCalculatorAvailable@{IsCalculatorAvailable}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{IsCalculatorAvailable()}{IsCalculatorAvailable()}}
+{\footnotesize\ttfamily bool Is\+Calculator\+Available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00294}{294}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_a6c7782e193759b778f5add39176b0975_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_afd141353423c9fce837e2f56a10d810d}\label{logic_8c_afd141353423c9fce837e2f56a10d810d} 
+\index{logic.c@{logic.c}!IsPasswordInputAvailable@{IsPasswordInputAvailable}}
+\index{IsPasswordInputAvailable@{IsPasswordInputAvailable}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{IsPasswordInputAvailable()}{IsPasswordInputAvailable()}}
+{\footnotesize\ttfamily bool Is\+Password\+Input\+Available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00298}{298}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_afd141353423c9fce837e2f56a10d810d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_add896c9f31faac13d33591bf86e4aeea}\label{logic_8c_add896c9f31faac13d33591bf86e4aeea} 
+\index{logic.c@{logic.c}!MapFunctions@{MapFunctions}}
+\index{MapFunctions@{MapFunctions}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{MapFunctions()}{MapFunctions()}}
+{\footnotesize\ttfamily void Map\+Functions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{keypad_8h_ac4837dcaa64e146bad0d3f315f7da1cc}{Special\+Key\+Functions}}}]{function }\end{DoxyParamCaption})}
+
+\Hypertarget{logic_8c_a42669da2ad9ca71aae1bd5805b2c7c98}\label{logic_8c_a42669da2ad9ca71aae1bd5805b2c7c98} 
+\index{logic.c@{logic.c}!PasswordMatch@{PasswordMatch}}
+\index{PasswordMatch@{PasswordMatch}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{PasswordMatch()}{PasswordMatch()}}
+{\footnotesize\ttfamily bool Password\+Match (\begin{DoxyParamCaption}\item[{char\+List}]{password }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00362}{362}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_a42669da2ad9ca71aae1bd5805b2c7c98_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_abe7dcc508ace168bbcddb296203a1886}\label{logic_8c_abe7dcc508ace168bbcddb296203a1886} 
+\index{logic.c@{logic.c}!PrintData@{PrintData}}
+\index{PrintData@{PrintData}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{PrintData()}{PrintData()}}
+{\footnotesize\ttfamily void Print\+Data (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{int}]{length,  }\item[{bool}]{is\+Token }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00337}{337}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_abe7dcc508ace168bbcddb296203a1886_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_abe7dcc508ace168bbcddb296203a1886_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_ae7c44d3fc64010d1e217bea610c8536c}\label{logic_8c_ae7c44d3fc64010d1e217bea610c8536c} 
+\index{logic.c@{logic.c}!RefreshDisplay@{RefreshDisplay}}
+\index{RefreshDisplay@{RefreshDisplay}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{RefreshDisplay()}{RefreshDisplay()}}
+{\footnotesize\ttfamily void Refresh\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00288}{288}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_ae7c44d3fc64010d1e217bea610c8536c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{logic_8c_ae7c44d3fc64010d1e217bea610c8536c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_a5f7f7893415d86a5a8348472dbdd0541}\label{logic_8c_a5f7f7893415d86a5a8348472dbdd0541} 
+\index{logic.c@{logic.c}!RunCalculator@{RunCalculator}}
+\index{RunCalculator@{RunCalculator}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{RunCalculator()}{RunCalculator()}}
+{\footnotesize\ttfamily void Run\+Calculator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00123}{123}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_a5f7f7893415d86a5a8348472dbdd0541_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{logic_8c_a5f7f7893415d86a5a8348472dbdd0541_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_aee8c17e4c2f0d1376f21780a1199b97c}\label{logic_8c_aee8c17e4c2f0d1376f21780a1199b97c} 
+\index{logic.c@{logic.c}!RunChangePassword@{RunChangePassword}}
+\index{RunChangePassword@{RunChangePassword}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{RunChangePassword()}{RunChangePassword()}}
+{\footnotesize\ttfamily void Run\+Change\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00226}{226}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_aee8c17e4c2f0d1376f21780a1199b97c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_aee8c17e4c2f0d1376f21780a1199b97c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_aa8bcdda49c0758a44d7cfad4e6d8cd1b}\label{logic_8c_aa8bcdda49c0758a44d7cfad4e6d8cd1b} 
+\index{logic.c@{logic.c}!RunChangePasswordModule@{RunChangePasswordModule}}
+\index{RunChangePasswordModule@{RunChangePasswordModule}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{RunChangePasswordModule()}{RunChangePasswordModule()}}
+{\footnotesize\ttfamily void Run\+Change\+Password\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00454}{454}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+\Hypertarget{logic_8c_a7e4766166af50627baf168343eef03b1}\label{logic_8c_a7e4766166af50627baf168343eef03b1} 
+\index{logic.c@{logic.c}!RunGraphModule@{RunGraphModule}}
+\index{RunGraphModule@{RunGraphModule}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{RunGraphModule()}{RunGraphModule()}}
+{\footnotesize\ttfamily void Run\+Graph\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00463}{463}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+\Hypertarget{logic_8c_a15058a20857a8a4d38fa4ab72109a9e2}\label{logic_8c_a15058a20857a8a4d38fa4ab72109a9e2} 
+\index{logic.c@{logic.c}!RunLogin@{RunLogin}}
+\index{RunLogin@{RunLogin}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{RunLogin()}{RunLogin()}}
+{\footnotesize\ttfamily void Run\+Login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00198}{198}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_a15058a20857a8a4d38fa4ab72109a9e2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{logic_8c_a15058a20857a8a4d38fa4ab72109a9e2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_a93047c21ec383e462990d923ed48795e}\label{logic_8c_a93047c21ec383e462990d923ed48795e} 
+\index{logic.c@{logic.c}!RunLoginAnimation@{RunLoginAnimation}}
+\index{RunLoginAnimation@{RunLoginAnimation}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{RunLoginAnimation()}{RunLoginAnimation()}}
+{\footnotesize\ttfamily void Run\+Login\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00151}{151}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_a93047c21ec383e462990d923ed48795e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_a93047c21ec383e462990d923ed48795e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_a41a8f29e3704245cd53e2e11e03ec5f7}\label{logic_8c_a41a8f29e3704245cd53e2e11e03ec5f7} 
+\index{logic.c@{logic.c}!RunMain@{RunMain}}
+\index{RunMain@{RunMain}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{RunMain()}{RunMain()}}
+{\footnotesize\ttfamily void Run\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Runs the main loop. 
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00374}{374}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_a41a8f29e3704245cd53e2e11e03ec5f7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{logic_8c_a41a8f29e3704245cd53e2e11e03ec5f7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_ada037e06af8abdcc0382445b22466477}\label{logic_8c_ada037e06af8abdcc0382445b22466477} 
+\index{logic.c@{logic.c}!RunUserInput@{RunUserInput}}
+\index{RunUserInput@{RunUserInput}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{RunUserInput()}{RunUserInput()}}
+{\footnotesize\ttfamily void Run\+User\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_key_info}{Key\+Info}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00094}{94}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_ada037e06af8abdcc0382445b22466477_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{logic_8c_ada037e06af8abdcc0382445b22466477_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_a89a9f339804050ddf172c87c288312a0}\label{logic_8c_a89a9f339804050ddf172c87c288312a0} 
+\index{logic.c@{logic.c}!ShowCurrentData@{ShowCurrentData}}
+\index{ShowCurrentData@{ShowCurrentData}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{ShowCurrentData()}{ShowCurrentData()}}
+{\footnotesize\ttfamily void Show\+Current\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00353}{353}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_a89a9f339804050ddf172c87c288312a0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_a89a9f339804050ddf172c87c288312a0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_a2ea1341e5f25883c524a2cdb81341f9d}\label{logic_8c_a2ea1341e5f25883c524a2cdb81341f9d} 
+\index{logic.c@{logic.c}!ShowNumberOperation@{ShowNumberOperation}}
+\index{ShowNumberOperation@{ShowNumberOperation}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{ShowNumberOperation()}{ShowNumberOperation()}}
+{\footnotesize\ttfamily void Show\+Number\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_key_info}{Key\+Info}}}]{key }\end{DoxyParamCaption})}
+
+\Hypertarget{logic_8c_a5a3be8027400af0c949033c8c86a4360}\label{logic_8c_a5a3be8027400af0c949033c8c86a4360} 
+\index{logic.c@{logic.c}!UpdateRows@{UpdateRows}}
+\index{UpdateRows@{UpdateRows}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{UpdateRows()}{UpdateRows()}}
+{\footnotesize\ttfamily void Update\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00253}{253}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_a5a3be8027400af0c949033c8c86a4360_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_a5a3be8027400af0c949033c8c86a4360_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logic_8c_ac4085c7ad6b8fe21141bebd8cfe7053a}\label{logic_8c_ac4085c7ad6b8fe21141bebd8cfe7053a} 
+\index{logic.c@{logic.c}!UpdateShift@{UpdateShift}}
+\index{UpdateShift@{UpdateShift}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{UpdateShift()}{UpdateShift()}}
+{\footnotesize\ttfamily void Update\+Shift (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00249}{249}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_ac4085c7ad6b8fe21141bebd8cfe7053a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logic_8c_ac4085c7ad6b8fe21141bebd8cfe7053a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{logic_8c_a0accd14d87e65913db8e6a59e42b6c7d}\label{logic_8c_a0accd14d87e65913db8e6a59e42b6c7d} 
+\index{logic.c@{logic.c}!flashData@{flashData}}
+\index{flashData@{flashData}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{flashData}{flashData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_flash_data}{Flash\+Data}} flash\+Data}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .passwordLength\ =\ 3,}
+\DoxyCodeLine{\ \ \ \ .password\ =\ \textcolor{stringliteral}{"{}123"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00067}{67}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+\Hypertarget{logic_8c_a68ed8a7ac589618f57942872aff22070}\label{logic_8c_a68ed8a7ac589618f57942872aff22070} 
+\index{logic.c@{logic.c}!inputData@{inputData}}
+\index{inputData@{inputData}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{inputData}{inputData}}
+{\footnotesize\ttfamily char\+List input\+Data}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00066}{66}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+\Hypertarget{logic_8c_a7a07acedc029e72784867cbe9ac10543}\label{logic_8c_a7a07acedc029e72784867cbe9ac10543} 
+\index{logic.c@{logic.c}!isInit@{isInit}}
+\index{isInit@{isInit}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{isInit}{isInit}}
+{\footnotesize\ttfamily bool is\+Init = false}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00063}{63}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+\Hypertarget{logic_8c_af5dd0e120f9824b40a94276c4ee3dadb}\label{logic_8c_af5dd0e120f9824b40a94276c4ee3dadb} 
+\index{logic.c@{logic.c}!isLoggedIn@{isLoggedIn}}
+\index{isLoggedIn@{isLoggedIn}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{isLoggedIn}{isLoggedIn}}
+{\footnotesize\ttfamily bool is\+Logged\+In = false}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00062}{62}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+\Hypertarget{logic_8c_af7d68b5d19dab801e6460d295564d2bb}\label{logic_8c_af7d68b5d19dab801e6460d295564d2bb} 
+\index{logic.c@{logic.c}!isShiftOn@{isShiftOn}}
+\index{isShiftOn@{isShiftOn}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{isShiftOn}{isShiftOn}}
+{\footnotesize\ttfamily bool is\+Shift\+On = false}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00061}{61}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+\Hypertarget{logic_8c_a3288701d9bc3bb0210a19c3f9042515f}\label{logic_8c_a3288701d9bc3bb0210a19c3f9042515f} 
+\index{logic.c@{logic.c}!mode@{mode}}
+\index{mode@{mode}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085b}{Program\+Mode}} mode = \mbox{\hyperlink{logic_8h_a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b}{LOGIN\+\_\+\+MODE}}}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00064}{64}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+
+\Hypertarget{logic_8c_ab5517a73749b3e781a73a808ba33d533}\label{logic_8c_ab5517a73749b3e781a73a808ba33d533} 
+\index{logic.c@{logic.c}!tokenData@{tokenData}}
+\index{tokenData@{tokenData}!logic.c@{logic.c}}
+\doxysubsubsection{\texorpdfstring{tokenData}{tokenData}}
+{\footnotesize\ttfamily Token\+List token\+Data}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8c_source_l00065}{65}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+

@@ -5,5 +5,17 @@
 \DoxyCodeLine{\Hypertarget{helpers_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{helpers_8h}{helpers.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{helpers_8c_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{helpers_8c_source_l00003}00003\ \mbox{\hyperlink{helpers_8h_af81ac8e504dd921417ba754f655999f5}{DEFINE\_LIST\_IMPLEMENTATION}}(\textcolor{keywordtype}{char})}
+\DoxyCodeLine{\Hypertarget{helpers_8c_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{helpers_8c_source_l00005}\mbox{\hyperlink{helpers_8c_a562588cbdd2bdd82a792400c9bc708a8}{00005}}\ unsigned\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{helpers_8c_a562588cbdd2bdd82a792400c9bc708a8}{randSeed}}\ =\ 12345;\ \textcolor{comment}{//\ Initial\ seed\ value}}
+\DoxyCodeLine{\Hypertarget{helpers_8c_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{helpers_8c_source_l00007}\mbox{\hyperlink{helpers_8c_aac8c6c00a0e52489ecf8e8a6d9eba228}{00007}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{helpers_8c_aac8c6c00a0e52489ecf8e8a6d9eba228}{Random}}()\ \{}
+\DoxyCodeLine{\Hypertarget{helpers_8c_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{helpers_8c_a562588cbdd2bdd82a792400c9bc708a8}{randSeed}}\ =\ (1664525\ *\ \mbox{\hyperlink{helpers_8c_a562588cbdd2bdd82a792400c9bc708a8}{randSeed}}\ +\ 1013904223)\ \%\ 4294967296;}
+\DoxyCodeLine{\Hypertarget{helpers_8c_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{helpers_8c_a562588cbdd2bdd82a792400c9bc708a8}{randSeed}};}
+\DoxyCodeLine{\Hypertarget{helpers_8c_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{helpers_8c_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{helpers_8c_source_l00012}00012\ \textcolor{comment}{//\ Function\ to\ get\ a\ random\ number\ within\ a\ given\ range}}
+\DoxyCodeLine{\Hypertarget{helpers_8c_source_l00013}\mbox{\hyperlink{helpers_8c_aa41b8512b10550a2e21feec991f752b4}{00013}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{helpers_8c_aa41b8512b10550a2e21feec991f752b4}{RandomRange}}(\textcolor{keywordtype}{int}\ min,\ \textcolor{keywordtype}{int}\ max)\ \{}
+\DoxyCodeLine{\Hypertarget{helpers_8c_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{return}\ min\ +\ (\mbox{\hyperlink{helpers_8c_aac8c6c00a0e52489ecf8e8a6d9eba228}{Random}}()\ \%\ (max\ -\/\ min\ +\ 1));}
+\DoxyCodeLine{\Hypertarget{helpers_8c_source_l00015}00015\ \}}
 
 \end{DoxyCode}

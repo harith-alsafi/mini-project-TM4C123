@@ -2,11 +2,12 @@
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
   <compound refid="struct_flash_data" kind="struct"><name>FlashData</name>
     <member refid="struct_flash_data_1a098d99b6a0f1ab85c7a16b5eb154f4d6" kind="variable"><name>passwordLength</name></member>
-    <member refid="struct_flash_data_1ab7969b05d81fd851e3238236b94bf1e4" kind="variable"><name>password</name></member>
+    <member refid="struct_flash_data_1a4422d8fa663a07bef935b1a5b256388a" kind="variable"><name>password</name></member>
   </compound>
   <compound refid="struct_key_info" kind="struct"><name>KeyInfo</name>
     <member refid="struct_key_info_1a129a412e80d39b7257b677028c1acec0" kind="variable"><name>key</name></member>
-    <member refid="struct_key_info_1a1e801a0e9f9c1d289b3b50535701d282" kind="variable"><name>displayType</name></member>
+    <member refid="struct_key_info_1a0ee8bda4acee901e95e3050ff19c7c04" kind="variable"><name>normalDisplayType</name></member>
+    <member refid="struct_key_info_1a1756a989545ac064e9a6a2c09e29446a" kind="variable"><name>shiftDisplayType</name></member>
     <member refid="struct_key_info_1aad793e7d0881eafc1dd46649bb2780be" kind="variable"><name>isSpecial</name></member>
     <member refid="struct_key_info_1a608d6ef74598363d1753588fd73c2aef" kind="variable"><name>normalDisplay</name></member>
     <member refid="struct_key_info_1a44c82d8b5620cb791276feba579ff337" kind="variable"><name>normalFunction</name></member>
@@ -16,7 +17,7 @@
   <compound refid="struct_parser_info" kind="struct"><name>ParserInfo</name>
     <member refid="struct_parser_info_1abfc67a8c3f2b9d94335e175d14a67d9b" kind="variable"><name>token</name></member>
     <member refid="struct_parser_info_1aab78007585df1e7b289ba34601e58409" kind="variable"><name>error</name></member>
-    <member refid="struct_parser_info_1a4e78625adfd58d83ac140b5f237a2aef" kind="variable"><name>currentReuslt</name></member>
+    <member refid="struct_parser_info_1a9acac3333c87aa6eaae7b3c10d3a3694" kind="variable"><name>currentResult</name></member>
   </compound>
   <compound refid="struct_token" kind="struct"><name>Token</name>
     <member refid="struct_token_1a4bb9bb3a9dcd67c9fe73b95fadea96e6" kind="variable"><name>value</name></member>
@@ -50,51 +51,55 @@
     <member refid="clock_8h_1a2e760c634cc89519ad0956fc258eab46" kind="function"><name>DelayMilli</name></member>
   </compound>
   <compound refid="flash_8c" kind="file"><name>flash.c</name>
+    <member refid="flash_8c_1ae44b3676440fdea4160b7868e26465ab" kind="variable"><name>flashWriteKey</name></member>
     <member refid="flash_8c_1ab165861d9848019963be1f879fb38173" kind="function"><name>FlashInit</name></member>
+    <member refid="flash_8c_1ab7c1a5c377d3f3d9156c5d3db6c95951" kind="function"><name>FlashErase</name></member>
+    <member refid="flash_8c_1a36a8e2cfd36cad487fc631562b25db83" kind="function"><name>FlashDataIsRead</name></member>
+    <member refid="flash_8c_1a028e942d1bdb9290368370559c83eab0" kind="function"><name>FlashWrite</name></member>
+    <member refid="flash_8c_1a43a3c0a9d8a7396326169b74b694cce2" kind="function"><name>FlashRead</name></member>
   </compound>
   <compound refid="flash_8h" kind="file"><name>flash.h</name>
     <member refid="flash_8h_1a52984b41e45a13e9f7e687e1c4a07a2d" kind="define"><name>FLASH_STORAGE_H</name></member>
-    <member refid="flash_8h_1a89c6418eced607811aec6c584f004215" kind="define"><name>FLASH_FMC</name></member>
-    <member refid="flash_8h_1ae9963cd83d3234139fea43d97385a234" kind="define"><name>FLASH_FMD</name></member>
-    <member refid="flash_8h_1acec37e62cb88a0d40af83c466d03151f" kind="define"><name>FLASH_FMA</name></member>
+    <member refid="flash_8h_1a8ab835c787a1619e3e41a99cdbef73fe" kind="define"><name>FLASH_BOOTCFG_R</name></member>
+    <member refid="flash_8h_1a815af6a66624da5e7fb5151d36cf1887" kind="define"><name>FLASH_FMA_R</name></member>
+    <member refid="flash_8h_1a31c1116fe0b48148a13f9df480fc0bf1" kind="define"><name>FLASH_FMD_R</name></member>
+    <member refid="flash_8h_1aef6f95c857edd1897fcb581723eddd2b" kind="define"><name>FLASH_FMC_R</name></member>
+    <member refid="flash_8h_1a0571de796f539e5779da6a9203190645" kind="define"><name>FLASH_BASE_ADDR</name></member>
+    <member refid="flash_8h_1adb54546355b25806000b2d35e8539f13" kind="define"><name>FLASH_KB</name></member>
+    <member refid="flash_8h_1a6afb081a75593f3c034881ada625cf8d" kind="define"><name>FLASH_BLOCK_SIZE</name></member>
+    <member refid="flash_8h_1a814b210c5d0de41d2a2236aa12385447" kind="define"><name>FLASH_NUMBER_BLOCKS</name></member>
     <member refid="flash_8h_1ab165861d9848019963be1f879fb38173" kind="function"><name>FlashInit</name></member>
-    <member refid="flash_8h_1ac9ce33144c1ff6b3253343e1f635bf73" kind="function"><name>FlashWrite</name></member>
+    <member refid="flash_8h_1a028e942d1bdb9290368370559c83eab0" kind="function"><name>FlashWrite</name></member>
     <member refid="flash_8h_1a43a3c0a9d8a7396326169b74b694cce2" kind="function"><name>FlashRead</name></member>
-    <member refid="flash_8h_1ac64d149b1fb48e07560205f5a454d7df" kind="function"><name>FlashErase</name></member>
-  </compound>
-  <compound refid="hardware-test_8c" kind="file"><name>hardware-test.c</name>
-    <member refid="hardware-test_8c_1a600f033d6f6a144fbd69976eab19e3ee" kind="function"><name>AfterEach</name></member>
-    <member refid="hardware-test_8c_1ac8b99cb76697b9b78d1b364cf118342a" kind="function"><name>TestLcdClear</name></member>
-    <member refid="hardware-test_8c_1a02e71048dc3a569b41b257dec3b00cf0" kind="function"><name>TestLcdCursor</name></member>
-    <member refid="hardware-test_8c_1a6af1303d2e04cb5837731ad113c413bc" kind="function"><name>TestLcdMultiLine</name></member>
-    <member refid="hardware-test_8c_1aec3ab11b7409fd19efa26bed15100a3f" kind="function"><name>TestLcdAll</name></member>
-    <member refid="hardware-test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" kind="function"><name>TestKeypadLcd</name></member>
-    <member refid="hardware-test_8c_1ac43be5887d2ddcce27989432c6415651" kind="function"><name>RunAll</name></member>
-  </compound>
-  <compound refid="hardware-test_8h" kind="file"><name>hardware-test.h</name>
-    <member refid="hardware-test_8h_1aaca9bad4dfe82f439fda079b604ea29d" kind="define"><name>UNIT_TEST_H</name></member>
-    <member refid="hardware-test_8h_1ac43be5887d2ddcce27989432c6415651" kind="function"><name>RunAll</name></member>
+    <member refid="flash_8h_1ab7c1a5c377d3f3d9156c5d3db6c95951" kind="function"><name>FlashErase</name></member>
+    <member refid="flash_8h_1a36a8e2cfd36cad487fc631562b25db83" kind="function"><name>FlashDataIsRead</name></member>
   </compound>
   <compound refid="helpers_8c" kind="file"><name>helpers.c</name>
+    <member refid="helpers_8c_1a562588cbdd2bdd82a792400c9bc708a8" kind="variable"><name>randSeed</name></member>
+    <member refid="helpers_8c_1aac8c6c00a0e52489ecf8e8a6d9eba228" kind="function"><name>Random</name></member>
+    <member refid="helpers_8c_1aa41b8512b10550a2e21feec991f752b4" kind="function"><name>RandomRange</name></member>
   </compound>
   <compound refid="helpers_8h" kind="file"><name>helpers.h</name>
     <member refid="helpers_8h_1a4fd85cebb3a7e1a87f883886a1e43791" kind="define"><name>HELPERS_H</name></member>
     <member refid="helpers_8h_1a5bb885982ff66a2e0a0a45a8ee9c35e2" kind="define"><name>HIGH</name></member>
     <member refid="helpers_8h_1ab811d8c6ff3a505312d3276590444289" kind="define"><name>LOW</name></member>
-    <member refid="helpers_8h_1abad5e4191558987772c01a31c46b8997" kind="define"><name>ARRAY_LEN</name></member>
+    <member refid="helpers_8h_1a7732dd97bdb60ecae9aa857355cf9841" kind="define"><name>ARRAY_MAX_LENGTH</name></member>
     <member refid="helpers_8h_1ab9b5864bb7f364790006596ce97eb4ea" kind="define"><name>DEFINE_LIST_PROTOTYPE</name></member>
     <member refid="helpers_8h_1af81ac8e504dd921417ba754f655999f5" kind="define"><name>DEFINE_LIST_IMPLEMENTATION</name></member>
     <member refid="helpers_8h_1a0c8186d9b9b7880309c27230bbb5e69d" kind="typedef"><name>byte</name></member>
     <member refid="helpers_8h_1a20ff7803fa076e4c75b49d77ed58b681" kind="function"><name>DEFINE_LIST_PROTOTYPE</name></member>
+    <member refid="helpers_8h_1aac8c6c00a0e52489ecf8e8a6d9eba228" kind="function"><name>Random</name></member>
+    <member refid="helpers_8h_1aa41b8512b10550a2e21feec991f752b4" kind="function"><name>RandomRange</name></member>
   </compound>
   <compound refid="keypad_8c" kind="file"><name>keypad.c</name>
     <member refid="keypad_8c_1a4c1fef8314018fe3ce44affffbe10a72" kind="variable"><name>KEYPAD_KEYS</name></member>
     <member refid="keypad_8c_1aa67f7a9fae59d327c0fef030151be800" kind="variable"><name>KEYPAD_SPECIAL_KEYS</name></member>
-    <member refid="keypad_8c_1ab826b54bc6305f49d758d28173041ab7" kind="function"><name>KeypadGetChar</name></member>
     <member refid="keypad_8c_1a9b1fc55f525fe49144daf21ffe978141" kind="function"><name>KeyIsValid</name></member>
     <member refid="keypad_8c_1a49ffa463b26cc47b7d9e3e2cda8d9168" kind="function"><name>KeypadFindSpecialKey</name></member>
     <member refid="keypad_8c_1aa6981f604fdfbec491e21e90507ec0de" kind="function"><name>KeypadInit</name></member>
-    <member refid="keypad_8c_1a63a4bc1c3105f40dc85fe16092790f83" kind="function"><name>KeypadWaitForInput</name></member>
+    <member refid="keypad_8c_1a35a69618b097b5f64e918962cd47c824" kind="function"><name>KeypadWaitForChar</name></member>
+    <member refid="keypad_8c_1a4dc4195ee24a2240646ab8e3f70eaacb" kind="function"><name>KeypadCreateDefaulteKey</name></member>
+    <member refid="keypad_8c_1a62a8113965dd111b6f91d33efcabd77d" kind="function"><name>KeypadWaitForKeyInfo</name></member>
   </compound>
   <compound refid="keypad_8h" kind="file"><name>keypad.h</name>
     <member refid="keypad_8h_1ae317b84750ff882cede31494435f459f" kind="define"><name>KEYPAD_H</name></member>
@@ -106,36 +111,28 @@
     <member refid="keypad_8h_1a9c722c424a8076bfe4ee4e9e2efa03e6" kind="define"><name>KEYPAD_MAX_SPECIAL_KEYS</name></member>
     <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" kind="enum"><name>SpecialKeyFunctions</name></member>
     <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea" kind="enumvalue"><name>NORMAL_NUMBER</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccae6c7d41b255eff353251fbec6fe839e4" kind="enumvalue"><name>OPERATION</name></member>
     <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca4dac334d1a66181b8519c25fef6783b2" kind="enumvalue"><name>DECIMAL_POINT</name></member>
-    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccaa6055a3a8ab1aed0594419b51d9ec15e" kind="enumvalue"><name>EXPONENTIAL</name></member>
-    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca03ee4db3d1e17f8bbd6d9addebd8367b" kind="enumvalue"><name>POWER_TO</name></member>
-    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccae59a728a365f9d6b2643057973cdf4c3" kind="enumvalue"><name>MULTIPLY</name></member>
-    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0cb86713ee09fe297dde9ab03d50d5da" kind="enumvalue"><name>DIVIDE</name></member>
-    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca87fe59ef12c3d13dc2a4d14c9b16c1f9" kind="enumvalue"><name>PLUS</name></member>
-    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccaf613d73b4e7b570ffd967df4a13c4225" kind="enumvalue"><name>MINUS</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0aca0e26e06e90994203d5554a857e46" kind="enumvalue"><name>PAST_ANSWER</name></member>
     <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab6fafa343e23c41507d063ed5c9ed91f" kind="enumvalue"><name>SHIFT_ON</name></member>
     <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccada29c53cacfb6e58b283329543628284" kind="enumvalue"><name>SHIFT_OFF</name></member>
     <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca0ddfc8846f90572f05d2e8e1afc05f78" kind="enumvalue"><name>END_INPUT</name></member>
     <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca2b52d5d24f0e5d58e6c88403eb9e19c8" kind="enumvalue"><name>CLEAR_LAST</name></member>
     <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca4c016f5ee446f379aa869bbccb6fb5c0" kind="enumvalue"><name>CLEAR_ALL</name></member>
-    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca3f243a70f3fda6cfeeada41e2407c650" kind="enumvalue"><name>LAST_ANSWER</name></member>
-    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca2fa6ac17699d67a0b42605fd1269eb35" kind="enumvalue"><name>OPEN_PARENTHESIS</name></member>
-    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab90a7579c3517af01b71289905e4b84a" kind="enumvalue"><name>CLOSE_PARENTHESIS</name></member>
-    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccafa80cde56ec760dde1bf913ee6d2ba50" kind="enumvalue"><name>OPEN_SETTINGS</name></member>
-    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca804f54479240e4585b64a57aa53df58b" kind="enumvalue"><name>CURSOR_LEFT</name></member>
-    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca9b5cea0b81e6ba5016df73182861ec86" kind="enumvalue"><name>CURSOR_RIGHT</name></member>
-    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccab0c4058c3097d23fce049b33970cd564" kind="enumvalue"><name>CURSOR_UP</name></member>
-    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca9bd2c7c2e70700c98eb7ed895ce47f82" kind="enumvalue"><name>CURSOR_DOWN</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccad5f6514e55924781f389d01f25c66544" kind="enumvalue"><name>OPEN_CHANGE_PASSWORD</name></member>
+    <member refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1ccacd3fe2276479c7ce7d5026cb11590895" kind="enumvalue"><name>GO_BACK</name></member>
     <member refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536" kind="enum"><name>KeyDisplayType</name></member>
     <member refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536a22bfa961006c196ebfbf6a2973c6d14f" kind="enumvalue"><name>DISPLAY_STATUS</name></member>
     <member refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536ae1804614a1f20fe485d37f0bcaf05906" kind="enumvalue"><name>DISPLAY_NONE</name></member>
     <member refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536ae4d5a45dc34c786970d29c82663750ce" kind="enumvalue"><name>DISPLAY_NORMAL</name></member>
     <member refid="keypad_8h_1aa67f7a9fae59d327c0fef030151be800" kind="variable"><name>KEYPAD_SPECIAL_KEYS</name></member>
     <member refid="keypad_8h_1a4c1fef8314018fe3ce44affffbe10a72" kind="variable"><name>KEYPAD_KEYS</name></member>
+    <member refid="keypad_8h_1a4dc4195ee24a2240646ab8e3f70eaacb" kind="function"><name>KeypadCreateDefaulteKey</name></member>
     <member refid="keypad_8h_1aa6981f604fdfbec491e21e90507ec0de" kind="function"><name>KeypadInit</name></member>
     <member refid="keypad_8h_1a49ffa463b26cc47b7d9e3e2cda8d9168" kind="function"><name>KeypadFindSpecialKey</name></member>
     <member refid="keypad_8h_1a9b1fc55f525fe49144daf21ffe978141" kind="function"><name>KeyIsValid</name></member>
-    <member refid="keypad_8h_1a63a4bc1c3105f40dc85fe16092790f83" kind="function"><name>KeypadWaitForInput</name></member>
+    <member refid="keypad_8h_1a35a69618b097b5f64e918962cd47c824" kind="function"><name>KeypadWaitForChar</name></member>
+    <member refid="keypad_8h_1a62a8113965dd111b6f91d33efcabd77d" kind="function"><name>KeypadWaitForKeyInfo</name></member>
   </compound>
   <compound refid="lcd_8c" kind="file"><name>lcd.c</name>
     <member refid="lcd_8c_1a789bfe83cfe007cc723e4fd58bb6b112" kind="variable"><name>currentRow</name></member>
@@ -143,7 +140,6 @@
     <member refid="lcd_8c_1a60854aad97ec6bbdb5a001eea7c6b3b8" kind="function"><name>LcdIncrementCursorRow</name></member>
     <member refid="lcd_8c_1a16d925f7b9140ef9283fcae38a45b7f4" kind="function"><name>LcdIncrementCursorCol</name></member>
     <member refid="lcd_8c_1a20f0fe593368605d1bd6a28ad1a0a43f" kind="function"><name>LcdSetRs</name></member>
-    <member refid="lcd_8c_1a07e30a245315510382ca9d5e1b508de3" kind="function"><name>LcdPulseEn</name></member>
     <member refid="lcd_8c_1a93ae42864f782da4a4e0515d7faa449f" kind="function"><name>LcdSendNibble</name></member>
     <member refid="lcd_8c_1a40d081728cfd391fce0ec51b3c055169" kind="function"><name>LcdSendByte</name></member>
     <member refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" kind="function"><name>LcdClearDisplay</name></member>
@@ -158,6 +154,9 @@
     <member refid="lcd_8c_1a37450f91c7ae032252ea94d7c92efde2" kind="function"><name>LcdPrintChar</name></member>
     <member refid="lcd_8c_1a85868d62c8073baad86aa03e88ac1001" kind="function"><name>LcdPrintCharAt</name></member>
     <member refid="lcd_8c_1afb88b9aba1a1db09a517c5a1ffc07299" kind="function"><name>LcdPrintString</name></member>
+    <member refid="lcd_8c_1aa0130791fdcab8f2263be12fb00a031d" kind="function"><name>LcdClearRow</name></member>
+    <member refid="lcd_8c_1a08b51cf41e7c0183ca5b469dd853a666" kind="function"><name>LcdClearLastChar</name></member>
+    <member refid="lcd_8c_1a381cc054a91df1e85f2b4e63a05e8ab5" kind="function"><name>LcdClearCol</name></member>
   </compound>
   <compound refid="lcd_8h" kind="file"><name>lcd.h</name>
     <member refid="lcd_8h_1a137b94e8638bc4b6a0740668aefe5a58" kind="define"><name>LCD_H</name></member>
@@ -166,8 +165,15 @@
     <member refid="lcd_8h_1a4781e073871c6f27f89b9463ad3a4ed1" kind="define"><name>LCD_RS</name></member>
     <member refid="lcd_8h_1a09aa49f7f7c7173b0ad1fbdefb0e2280" kind="define"><name>LCD_N_COL</name></member>
     <member refid="lcd_8h_1aece2016b9a1e98b3b6543062a452c847" kind="define"><name>LCD_N_ROW</name></member>
+    <member refid="lcd_8h_1ada878a8b4864a1658ee0f0acd5a89412" kind="define"><name>CHAR_P</name></member>
+    <member refid="lcd_8h_1a26ac0a0707d60b57ae6526fccbff614b" kind="define"><name>LCD_CHAR_S</name></member>
+    <member refid="lcd_8h_1ac9c7adc5ba35b5ea1d4163ee8bd1c22e" kind="define"><name>CHAR_LOCKED</name></member>
+    <member refid="lcd_8h_1ab7f0f8b1872a01b61e98e1982e59087b" kind="define"><name>CHAR_V_LINE</name></member>
+    <member refid="lcd_8h_1af9d800f23706399c30ccf6e023d36d57" kind="define"><name>CHAR_H_LINE</name></member>
+    <member refid="lcd_8h_1a50e47f12ad711cd93ebcb8ba6fa03e0c" kind="define"><name>CHAR_CROSS</name></member>
+    <member refid="lcd_8h_1a789bfe83cfe007cc723e4fd58bb6b112" kind="variable"><name>currentRow</name></member>
+    <member refid="lcd_8h_1a5c92777341dd0851fe17e1bd05b885dd" kind="variable"><name>currentCol</name></member>
     <member refid="lcd_8h_1a20f0fe593368605d1bd6a28ad1a0a43f" kind="function"><name>LcdSetRs</name></member>
-    <member refid="lcd_8h_1a07e30a245315510382ca9d5e1b508de3" kind="function"><name>LcdPulseEn</name></member>
     <member refid="lcd_8h_1a93ae42864f782da4a4e0515d7faa449f" kind="function"><name>LcdSendNibble</name></member>
     <member refid="lcd_8h_1a40d081728cfd391fce0ec51b3c055169" kind="function"><name>LcdSendByte</name></member>
     <member refid="lcd_8h_1abcfdb05f65f66ac2f004c865d8d34933" kind="function"><name>LcdClearDisplay</name></member>
@@ -182,25 +188,61 @@
     <member refid="lcd_8h_1a37450f91c7ae032252ea94d7c92efde2" kind="function"><name>LcdPrintChar</name></member>
     <member refid="lcd_8h_1afb88b9aba1a1db09a517c5a1ffc07299" kind="function"><name>LcdPrintString</name></member>
     <member refid="lcd_8h_1a85868d62c8073baad86aa03e88ac1001" kind="function"><name>LcdPrintCharAt</name></member>
-    <member refid="lcd_8h_1ae0edd9926fb8c39106fa76493af49d91" kind="function"><name>LcdClearRow</name></member>
-    <member refid="lcd_8h_1ad2abde3bb9d35adad03395d02371fffe" kind="function"><name>LcdClearCol</name></member>
-    <member refid="lcd_8h_1a826fd004d4d84fe5388e2fbcb241237d" kind="function"><name>LcdDrawLine</name></member>
-    <member refid="lcd_8h_1a24b941ff0a9f08c3ae9f17b31e3d99c1" kind="function"><name>LcdDrawBox</name></member>
+    <member refid="lcd_8h_1aa0130791fdcab8f2263be12fb00a031d" kind="function"><name>LcdClearRow</name></member>
+    <member refid="lcd_8h_1a08b51cf41e7c0183ca5b469dd853a666" kind="function"><name>LcdClearLastChar</name></member>
   </compound>
   <compound refid="logic_8c" kind="file"><name>logic.c</name>
+    <member refid="logic_8c_1a457795d41a98ba74ee391e3a2fc09849" kind="define"><name>LOGIC_STATBAR_ROW</name></member>
+    <member refid="logic_8c_1a76e32bc5f03b48245eceb42ef3f6a0ad" kind="define"><name>LOGIC_SHORTCUTS_ROW</name></member>
+    <member refid="logic_8c_1a038bbcc9f8f7493d64b790b461743b30" kind="define"><name>LOGIC_INPUT_ROWS</name></member>
+    <member refid="logic_8c_1af7d68b5d19dab801e6460d295564d2bb" kind="variable"><name>isShiftOn</name></member>
+    <member refid="logic_8c_1af5dd0e120f9824b40a94276c4ee3dadb" kind="variable"><name>isLoggedIn</name></member>
+    <member refid="logic_8c_1a7a07acedc029e72784867cbe9ac10543" kind="variable"><name>isInit</name></member>
+    <member refid="logic_8c_1a3288701d9bc3bb0210a19c3f9042515f" kind="variable"><name>mode</name></member>
+    <member refid="logic_8c_1ab5517a73749b3e781a73a808ba33d533" kind="variable"><name>tokenData</name></member>
+    <member refid="logic_8c_1a68ed8a7ac589618f57942872aff22070" kind="variable"><name>inputData</name></member>
+    <member refid="logic_8c_1a0accd14d87e65913db8e6a59e42b6c7d" kind="variable"><name>flashData</name></member>
+    <member refid="logic_8c_1a15058a20857a8a4d38fa4ab72109a9e2" kind="function"><name>RunLogin</name></member>
+    <member refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" kind="function"><name>RunChangePassword</name></member>
+    <member refid="logic_8c_1a5f7f7893415d86a5a8348472dbdd0541" kind="function"><name>RunCalculator</name></member>
+    <member refid="logic_8c_1a93047c21ec383e462990d923ed48795e" kind="function"><name>RunLoginAnimation</name></member>
+    <member refid="logic_8c_1a7716334580813b0d2fddba5c31556836" kind="function"><name>GetKeyToken</name></member>
+    <member refid="logic_8c_1af6da8071dabf2ebd36d99de9f70e5dce" kind="function"><name>ClearAllInput</name></member>
+    <member refid="logic_8c_1a5d70b1e35da3781dc0e409643147cdd8" kind="function"><name>ClearLastInput</name></member>
+    <member refid="logic_8c_1a89a9f339804050ddf172c87c288312a0" kind="function"><name>ShowCurrentData</name></member>
+    <member refid="logic_8c_1abe7dcc508ace168bbcddb296203a1886" kind="function"><name>PrintData</name></member>
+    <member refid="logic_8c_1a6c7782e193759b778f5add39176b0975" kind="function"><name>IsCalculatorAvailable</name></member>
+    <member refid="logic_8c_1afd141353423c9fce837e2f56a10d810d" kind="function"><name>IsPasswordInputAvailable</name></member>
+    <member refid="logic_8c_1afa64d8084403040ad7f7f8045e075736" kind="function"><name>GetSpecialFunction</name></member>
+    <member refid="logic_8c_1add896c9f31faac13d33591bf86e4aeea" kind="function"><name>MapFunctions</name></member>
+    <member refid="logic_8c_1a2ea1341e5f25883c524a2cdb81341f9d" kind="function"><name>ShowNumberOperation</name></member>
+    <member refid="logic_8c_1ac4085c7ad6b8fe21141bebd8cfe7053a" kind="function"><name>UpdateShift</name></member>
+    <member refid="logic_8c_1a42669da2ad9ca71aae1bd5805b2c7c98" kind="function"><name>PasswordMatch</name></member>
+    <member refid="logic_8c_1a3b107a1c86e52fc6f6312e077c76ac31" kind="function"><name>DisplayMessage</name></member>
+    <member refid="logic_8c_1ae7c44d3fc64010d1e217bea610c8536c" kind="function"><name>RefreshDisplay</name></member>
+    <member refid="logic_8c_1ada037e06af8abdcc0382445b22466477" kind="function"><name>RunUserInput</name></member>
+    <member refid="logic_8c_1a5a3be8027400af0c949033c8c86a4360" kind="function"><name>UpdateRows</name></member>
     <member refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" kind="function"><name>InitAll</name></member>
+    <member refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" kind="function"><name>RunMain</name></member>
+    <member refid="logic_8c_1aa8bcdda49c0758a44d7cfad4e6d8cd1b" kind="function"><name>RunChangePasswordModule</name></member>
+    <member refid="logic_8c_1a7e4766166af50627baf168343eef03b1" kind="function"><name>RunGraphModule</name></member>
   </compound>
   <compound refid="logic_8h" kind="file"><name>logic.h</name>
-    <member refid="logic_8h_1a4aedb44dda7e02ceb062810c557f8994" kind="define"><name>PROGRAM_LOGIC_H</name></member>
+    <member refid="logic_8h_1a3fbee8963ee4080987476fc7d6e86f22" kind="define"><name>LOGIC_H</name></member>
+    <member refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085b" kind="enum"><name>ProgramMode</name></member>
+    <member refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b" kind="enumvalue"><name>LOGIN_MODE</name></member>
+    <member refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba6c62120cfab9902751a82edb16219a51" kind="enumvalue"><name>CALCULATOR_MODE</name></member>
+    <member refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba210a1a97be633a55c65a4e9e982bb51b" kind="enumvalue"><name>CHANGE_PASSWORD</name></member>
     <member refid="logic_8h_1a8468ead6b76c5ff5eb578a79fd591aa8" kind="function"><name>InitAll</name></member>
+    <member refid="logic_8h_1a41a8f29e3704245cd53e2e11e03ec5f7" kind="function"><name>RunMain</name></member>
   </compound>
   <compound refid="main_8c" kind="file"><name>main.c</name>
     <member refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>
   <compound refid="parser_8c" kind="file"><name>parser.c</name>
-    <member refid="parser_8c_1a2875192a853252042ae25ea84bd66155" kind="variable"><name>tokens</name></member>
-    <member refid="parser_8c_1a90c1a51331d7017d5acffc8f102af658" kind="variable"><name>currentResult</name></member>
-    <member refid="parser_8c_1ad6e5391dcd7235b6d8a37fb24dc64eec" kind="variable"><name>previousResult</name></member>
+    <member refid="parser_8c_1af9afb4fc52b7d490cae8c4e249f85fb2" kind="variable"><name>tokens</name></member>
+    <member refid="parser_8c_1a69b8767e364a7b9e977558b8e91ea3a2" kind="variable"><name>currentResult</name></member>
+    <member refid="parser_8c_1a0d8de172d5bce32edba9878abf08c64d" kind="variable"><name>previousResult</name></member>
     <member refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" kind="function"><name>ParseNumber</name></member>
     <member refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" kind="function"><name>ParseTerm</name></member>
     <member refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" kind="function"><name>ParseBracket</name></member>
@@ -209,6 +251,8 @@
     <member refid="parser_8c_1a7f8aeab74e49ee2b275a7575e8d7b5e8" kind="function"><name>GetNextToken</name></member>
     <member refid="parser_8c_1a5f9f8254464237d9eb81ee4abc0fc70b" kind="function"><name>DEFINE_LIST_IMPLEMENTATION</name></member>
     <member refid="parser_8c_1aa19b910e23df23ebe5f189f93c97afdd" kind="function"><name>ParserPushToken</name></member>
+    <member refid="parser_8c_1a07f87b9f5b24c331fddb0a3d57abfecf" kind="function"><name>ParserEndInput</name></member>
+    <member refid="parser_8c_1aa6d78d03bc9d7665d597b646485b647f" kind="function"><name>ParserPopToken</name></member>
     <member refid="parser_8c_1ae23a18474f4d84e20fdcc9869d67b363" kind="function"><name>ParserInit</name></member>
     <member refid="parser_8c_1a1034bedc0b6b8bdb22f67b0e72a101d0" kind="function"><name>ParserInitWith</name></member>
     <member refid="parser_8c_1a9264a889771bffb6e9bb7215c8402eda" kind="function"><name>ParserStop</name></member>
@@ -217,6 +261,7 @@
   </compound>
   <compound refid="parser_8h" kind="file"><name>parser.h</name>
     <member refid="parser_8h_1a5eacb3f8d827ae299ee42b9e0e99fa13" kind="define"><name>EXPRESSION_PARSER_H</name></member>
+    <member refid="parser_8h_1aa1677b86fc9699414925aeca46baac9a" kind="define"><name>SCB_CPACR</name></member>
     <member refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09f" kind="enum"><name>ParseError</name></member>
     <member refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fa5d594af14177857fc7661d03eda0baea" kind="enumvalue"><name>SYNTAX_ERROR</name></member>
     <member refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fabf350750d0d4fabd8954c0f1e9bbae94" kind="enumvalue"><name>NO_ERROR</name></member>
@@ -226,34 +271,19 @@
     <member refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09fa2759d6055f211c659299d46ab05a7618" kind="enumvalue"><name>MISSING_BRACKET</name></member>
     <member refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921" kind="enum"><name>TokenType</name></member>
     <member refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921a12a90dfe20486bbe3e075afcd19ef2d0" kind="enumvalue"><name>NUMBER</name></member>
+    <member refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2" kind="enumvalue"><name>EOL</name></member>
     <member refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921a6411d9d6073252e4d316493506bbb979" kind="enumvalue"><name>OPERATOR</name></member>
     <member refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921af08a543d5a1549321682e12569d0fbd6" kind="enumvalue"><name>DECIMAL</name></member>
-    <member refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921a34f27712bd95a0c2c963cd56365ad7a2" kind="enumvalue"><name>EOL</name></member>
     <member refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921a834f3e0777521aa22ca5b50e816970d9" kind="enumvalue"><name>PREVIOUS_ANSWER</name></member>
     <member refid="parser_8h_1a4f9090efc910ceda64fee9b0bc305428" kind="function"><name>DEFINE_LIST_PROTOTYPE</name></member>
     <member refid="parser_8h_1aa19b910e23df23ebe5f189f93c97afdd" kind="function"><name>ParserPushToken</name></member>
+    <member refid="parser_8h_1aa6d78d03bc9d7665d597b646485b647f" kind="function"><name>ParserPopToken</name></member>
     <member refid="parser_8h_1ae23a18474f4d84e20fdcc9869d67b363" kind="function"><name>ParserInit</name></member>
     <member refid="parser_8h_1a1034bedc0b6b8bdb22f67b0e72a101d0" kind="function"><name>ParserInitWith</name></member>
     <member refid="parser_8h_1a9264a889771bffb6e9bb7215c8402eda" kind="function"><name>ParserStop</name></member>
     <member refid="parser_8h_1a1715c490f05c2ddcb8d526684468f885" kind="function"><name>ParserReset</name></member>
     <member refid="parser_8h_1a19203c96ed6922e7092af10b63e6d298" kind="function"><name>ParserCompile</name></member>
-  </compound>
-  <compound refid="playground_8c" kind="file"><name>playground.c</name>
-    <member refid="playground_8c_1a6faf63c7d3a41fd7aa67cb3f49112d58" kind="define"><name>GPIO_PORTF_DATA_R</name></member>
-    <member refid="playground_8c_1a4af807e7c41e4e51a09ab6598280d09b" kind="define"><name>GPIO_PORTF_DIR_R</name></member>
-    <member refid="playground_8c_1a8f9c5b1caa2f2206e46d6e55033ba1df" kind="define"><name>GPIO_PORTF_AFSEL_R</name></member>
-    <member refid="playground_8c_1ad61970840fbdec3b021a6cd4b176ceb5" kind="define"><name>GPIO_PORTF_PUR_R</name></member>
-    <member refid="playground_8c_1ace684566ac3dee1c9230633165118a61" kind="define"><name>GPIO_PORTF_DEN_R</name></member>
-    <member refid="playground_8c_1a905788cdfb00eea4f716d3ed280f1e20" kind="define"><name>GPIO_PORTF_LOCK_R</name></member>
-    <member refid="playground_8c_1a5b37d58feb20c8629db10975b31b6dbc" kind="define"><name>GPIO_PORTF_CR_R</name></member>
-    <member refid="playground_8c_1a792408dc154a55fd9e0ad13cca3db4c3" kind="define"><name>GPIO_PORTF_AMSEL_R</name></member>
-    <member refid="playground_8c_1abdf740d2017978b00975ad06bf38f1eb" kind="define"><name>GPIO_PORTF_PCTL_R</name></member>
-    <member refid="playground_8c_1a2fedfceccf18bd54a499e73d1b76e506" kind="define"><name>SYSCTL_RCGC2_R</name></member>
-    <member refid="playground_8c_1aaffcb829b17f75f5e57ae7d810e18def" kind="variable"><name>SW1</name></member>
-    <member refid="playground_8c_1a17bc02cea6c2d2bb1322a102153fca04" kind="variable"><name>SW2</name></member>
-    <member refid="playground_8c_1ae19ef8807dc64129635da5b3b781588a" kind="function"><name>PortF_Init</name></member>
-    <member refid="playground_8c_1a7a3a2d8021a1d89fd58583318c4ae560" kind="function"><name>FlashSOS</name></member>
-    <member refid="playground_8c_1acd46d0cd2123cbf3f87498f9f3060403" kind="function"><name>delay</name></member>
+    <member refid="parser_8h_1a07f87b9f5b24c331fddb0a3d57abfecf" kind="function"><name>ParserEndInput</name></member>
   </compound>
   <compound refid="ports_8c" kind="file"><name>ports.c</name>
     <member refid="ports_8c_1a2c10edb046a08d0f0d72d288c9c64dfc" kind="function"><name>PortEInit</name></member>
@@ -316,6 +346,20 @@
     <member refid="ports_8h_1a03c4992f00f155be0425086ad67578f2" kind="function"><name>PortAInit</name></member>
     <member refid="ports_8h_1af2e39e21502cda9b92080c1e650e3ca6" kind="function"><name>PortFInit</name></member>
   </compound>
+  <compound refid="test_8c" kind="file"><name>test.c</name>
+    <member refid="test_8c_1a600f033d6f6a144fbd69976eab19e3ee" kind="function"><name>AfterEach</name></member>
+    <member refid="test_8c_1ac8b99cb76697b9b78d1b364cf118342a" kind="function"><name>TestLcdClear</name></member>
+    <member refid="test_8c_1a02e71048dc3a569b41b257dec3b00cf0" kind="function"><name>TestLcdCursor</name></member>
+    <member refid="test_8c_1a6af1303d2e04cb5837731ad113c413bc" kind="function"><name>TestLcdMultiLine</name></member>
+    <member refid="test_8c_1aec3ab11b7409fd19efa26bed15100a3f" kind="function"><name>TestLcdAll</name></member>
+    <member refid="test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" kind="function"><name>TestKeypadLcd</name></member>
+    <member refid="test_8c_1ac96c14effaeda91dcf6f15a034a428e9" kind="function"><name>TestFlash</name></member>
+    <member refid="test_8c_1a681847cb468289c483c1f110b251f91c" kind="function"><name>RunAllTests</name></member>
+  </compound>
+  <compound refid="test_8h" kind="file"><name>test.h</name>
+    <member refid="test_8h_1a2e1a6b7df58991e843316f749f49d0c4" kind="define"><name>TEST_H</name></member>
+    <member refid="test_8h_1a681847cb468289c483c1f110b251f91c" kind="function"><name>RunAllTests</name></member>
+  </compound>
   <compound refid="_t_exa_s_8h" kind="file"><name>TExaS.h</name>
     <member refid="_t_exa_s_8h_1a53ea182d5a09a410df69fca268877072" kind="enum"><name>InputPorts</name></member>
     <member refid="_t_exa_s_8h_1a53ea182d5a09a410df69fca268877072a931c4bc0840b2f59a701eabfd69fd1c9" kind="enumvalue"><name>SW_PIN_PF40</name></member>
@@ -323,11 +367,6 @@
     <member refid="_t_exa_s_8h_1a3bc4dd15d49b553a283366165300d515adc1d716abf5f4d3f101cb8e06161a29b" kind="enumvalue"><name>LED_PIN_PF321</name></member>
     <member refid="_t_exa_s_8h_1ad2b7923d22b40d0651b1be3ed8214c1d" kind="function"><name>TExaS_Init</name></member>
     <member refid="_t_exa_s_8h_1adeb7fccbbb1881b866ba3ad16712294c" kind="function"><name>TExaS_Stop</name></member>
-  </compound>
-  <compound refid="user-interface_8c" kind="file"><name>user-interface.c</name>
-  </compound>
-  <compound refid="user-interface_8h" kind="file"><name>user-interface.h</name>
-    <member refid="user-interface_8h_1a8608c8eb776842681d315eb77899f737" kind="define"><name>USER_INTERFACE_H</name></member>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
   </compound>

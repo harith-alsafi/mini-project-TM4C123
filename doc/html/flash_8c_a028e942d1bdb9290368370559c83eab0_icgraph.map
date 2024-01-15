@@ -1,0 +1,14 @@
+<map id="FlashWrite" name="FlashWrite">
+<area shape="rect" id="Node000001" title="Writes data to flash." alt="" coords="416,56,501,83"/>
+<area shape="rect" id="Node000002" href="$logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="112,5,166,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="401,55,368,47,256,30,166,23,166,17,256,25,369,41,402,49"/>
+<area shape="rect" id="Node000004" href="$logic_8c.html#aee8c17e4c2f0d1376f21780a1199b97c" title=" " alt="" coords="223,56,368,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="401,72,369,72,369,67,401,67"/>
+<area shape="rect" id="Node000006" href="$test_8c.html#ac96c14effaeda91dcf6f15a034a428e9" title=" " alt="" coords="257,107,335,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="402,90,336,110,335,105,401,84"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="98,31,56,41,54,36,96,26"/>
+<area shape="rect" id="Node000005" href="$logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,56,175,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="207,72,176,72,176,67,207,67"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="87,60,55,52,56,47,88,55"/>
+</map>

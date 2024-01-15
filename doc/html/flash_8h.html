@@ -80,14 +80,36 @@ $(function() {
   <div class="headertitle"><div class="title">flash.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="helpers_8h_source.html">helpers.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for flash.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="flash_8h__incl.png" border="0" usemap="#asrc_2flash_8h" alt=""/></div>
+<map name="asrc_2flash_8h" id="asrc_2flash_8h">
+<area shape="rect" title=" " alt="" coords="51,5,133,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,80,107"/>
+<area shape="poly" title=" " alt="" coords="85,34,62,69,57,66,81,31"/>
+<area shape="rect" href="helpers_8h.html" title=" " alt="" coords="104,80,178,107"/>
+<area shape="poly" title=" " alt="" coords="103,31,126,66,122,69,98,34"/>
+<area shape="rect" title=" " alt="" coords="110,155,173,181"/>
+<area shape="poly" title=" " alt="" coords="144,107,144,139,139,139,139,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="flash_8h__dep__incl.png" border="0" usemap="#asrc_2flash_8hdep" alt=""/></div>
 <map name="asrc_2flash_8hdep" id="asrc_2flash_8hdep">
-<area shape="rect" title=" " alt="" coords="5,5,87,32"/>
+<area shape="rect" title=" " alt="" coords="163,5,244,32"/>
 <area shape="rect" href="flash_8c.html" title=" " alt="" coords="5,80,87,107"/>
-<area shape="poly" title=" " alt="" coords="49,48,49,80,43,80,43,48"/>
+<area shape="poly" title=" " alt="" coords="163,41,75,82,73,77,161,36"/>
+<area shape="rect" href="logic_8c.html" title=" " alt="" coords="111,80,192,107"/>
+<area shape="poly" title=" " alt="" coords="188,46,162,81,158,78,183,43"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="216,80,298,107"/>
+<area shape="poly" title=" " alt="" coords="224,43,250,78,245,81,220,46"/>
+<area shape="rect" href="test_8c.html" title=" " alt="" coords="323,80,399,107"/>
+<area shape="poly" title=" " alt="" coords="246,36,334,77,332,82,243,41"/>
 </map>
 </div>
 </div>
@@ -102,49 +124,82 @@ Data Structures</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a52984b41e45a13e9f7e687e1c4a07a2d" id="r_a52984b41e45a13e9f7e687e1c4a07a2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#a52984b41e45a13e9f7e687e1c4a07a2d">FLASH_STORAGE_H</a></td></tr>
 <tr class="separator:a52984b41e45a13e9f7e687e1c4a07a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89c6418eced607811aec6c584f004215" id="r_a89c6418eced607811aec6c584f004215"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#a89c6418eced607811aec6c584f004215">FLASH_FMC</a></td></tr>
-<tr class="separator:a89c6418eced607811aec6c584f004215"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9963cd83d3234139fea43d97385a234" id="r_ae9963cd83d3234139fea43d97385a234"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#ae9963cd83d3234139fea43d97385a234">FLASH_FMD</a></td></tr>
-<tr class="separator:ae9963cd83d3234139fea43d97385a234"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acec37e62cb88a0d40af83c466d03151f" id="r_acec37e62cb88a0d40af83c466d03151f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#acec37e62cb88a0d40af83c466d03151f">FLASH_FMA</a></td></tr>
-<tr class="separator:acec37e62cb88a0d40af83c466d03151f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab835c787a1619e3e41a99cdbef73fe" id="r_a8ab835c787a1619e3e41a99cdbef73fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#a8ab835c787a1619e3e41a99cdbef73fe">FLASH_BOOTCFG_R</a>&#160;&#160;&#160;(*((volatile unsigned long *)0x400FE1D0))</td></tr>
+<tr class="separator:a8ab835c787a1619e3e41a99cdbef73fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a815af6a66624da5e7fb5151d36cf1887" id="r_a815af6a66624da5e7fb5151d36cf1887"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#a815af6a66624da5e7fb5151d36cf1887">FLASH_FMA_R</a>&#160;&#160;&#160;(*((volatile unsigned long *)0x400FD000))</td></tr>
+<tr class="separator:a815af6a66624da5e7fb5151d36cf1887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c1116fe0b48148a13f9df480fc0bf1" id="r_a31c1116fe0b48148a13f9df480fc0bf1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#a31c1116fe0b48148a13f9df480fc0bf1">FLASH_FMD_R</a>&#160;&#160;&#160;(*((volatile unsigned long *)0x400FD004))</td></tr>
+<tr class="separator:a31c1116fe0b48148a13f9df480fc0bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef6f95c857edd1897fcb581723eddd2b" id="r_aef6f95c857edd1897fcb581723eddd2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#aef6f95c857edd1897fcb581723eddd2b">FLASH_FMC_R</a>&#160;&#160;&#160;(*((volatile unsigned long *)0x400FD008))</td></tr>
+<tr class="separator:aef6f95c857edd1897fcb581723eddd2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0571de796f539e5779da6a9203190645" id="r_a0571de796f539e5779da6a9203190645"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#a0571de796f539e5779da6a9203190645">FLASH_BASE_ADDR</a>&#160;&#160;&#160;(((volatile unsigned long *)0x00020000))</td></tr>
+<tr class="separator:a0571de796f539e5779da6a9203190645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb54546355b25806000b2d35e8539f13" id="r_adb54546355b25806000b2d35e8539f13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#adb54546355b25806000b2d35e8539f13">FLASH_KB</a>&#160;&#160;&#160;1024</td></tr>
+<tr class="separator:adb54546355b25806000b2d35e8539f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6afb081a75593f3c034881ada625cf8d" id="r_a6afb081a75593f3c034881ada625cf8d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#a6afb081a75593f3c034881ada625cf8d">FLASH_BLOCK_SIZE</a>&#160;&#160;&#160;sizeof(<a class="el" href="struct_flash_data.html">FlashData</a>) / sizeof(unsigned long)</td></tr>
+<tr class="separator:a6afb081a75593f3c034881ada625cf8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a814b210c5d0de41d2a2236aa12385447" id="r_a814b210c5d0de41d2a2236aa12385447"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#a814b210c5d0de41d2a2236aa12385447">FLASH_NUMBER_BLOCKS</a>&#160;&#160;&#160;(((<a class="el" href="flash_8h.html#a6afb081a75593f3c034881ada625cf8d">FLASH_BLOCK_SIZE</a> * sizeof(unsigned long)) / 1024) + 1)</td></tr>
+<tr class="separator:a814b210c5d0de41d2a2236aa12385447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ab165861d9848019963be1f879fb38173" id="r_ab165861d9848019963be1f879fb38173"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#ab165861d9848019963be1f879fb38173">FlashInit</a> ()</td></tr>
+<tr class="memdesc:ab165861d9848019963be1f879fb38173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes flash storage.  <br /></td></tr>
 <tr class="separator:ab165861d9848019963be1f879fb38173"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9ce33144c1ff6b3253343e1f635bf73" id="r_ac9ce33144c1ff6b3253343e1f635bf73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#ac9ce33144c1ff6b3253343e1f635bf73">FlashWrite</a> (<a class="el" href="struct_flash_data.html">FlashData</a> data)</td></tr>
-<tr class="separator:ac9ce33144c1ff6b3253343e1f635bf73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a028e942d1bdb9290368370559c83eab0" id="r_a028e942d1bdb9290368370559c83eab0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#a028e942d1bdb9290368370559c83eab0">FlashWrite</a> (<a class="el" href="struct_flash_data.html">FlashData</a> data)</td></tr>
+<tr class="memdesc:a028e942d1bdb9290368370559c83eab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes data to flash.  <br /></td></tr>
+<tr class="separator:a028e942d1bdb9290368370559c83eab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43a3c0a9d8a7396326169b74b694cce2" id="r_a43a3c0a9d8a7396326169b74b694cce2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_flash_data.html">FlashData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#a43a3c0a9d8a7396326169b74b694cce2">FlashRead</a> ()</td></tr>
+<tr class="memdesc:a43a3c0a9d8a7396326169b74b694cce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads data from flash.  <br /></td></tr>
 <tr class="separator:a43a3c0a9d8a7396326169b74b694cce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac64d149b1fb48e07560205f5a454d7df" id="r_ac64d149b1fb48e07560205f5a454d7df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#ac64d149b1fb48e07560205f5a454d7df">FlashErase</a> ()</td></tr>
-<tr class="separator:ac64d149b1fb48e07560205f5a454d7df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c1a5c377d3f3d9156c5d3db6c95951" id="r_ab7c1a5c377d3f3d9156c5d3db6c95951"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#ab7c1a5c377d3f3d9156c5d3db6c95951">FlashErase</a> ()</td></tr>
+<tr class="memdesc:ab7c1a5c377d3f3d9156c5d3db6c95951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases flash.  <br /></td></tr>
+<tr class="separator:ab7c1a5c377d3f3d9156c5d3db6c95951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a8e2cfd36cad487fc631562b25db83" id="r_a36a8e2cfd36cad487fc631562b25db83"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flash_8h.html#a36a8e2cfd36cad487fc631562b25db83">FlashDataIsRead</a> (<a class="el" href="struct_flash_data.html">FlashData</a> data)</td></tr>
+<tr class="memdesc:a36a8e2cfd36cad487fc631562b25db83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if flash data is read.  <br /></td></tr>
+<tr class="separator:a36a8e2cfd36cad487fc631562b25db83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="acec37e62cb88a0d40af83c466d03151f" name="acec37e62cb88a0d40af83c466d03151f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acec37e62cb88a0d40af83c466d03151f">&#9670;&#160;</a></span>FLASH_FMA</h2>
+<a id="a0571de796f539e5779da6a9203190645" name="a0571de796f539e5779da6a9203190645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0571de796f539e5779da6a9203190645">&#9670;&#160;</a></span>FLASH_BASE_ADDR</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define FLASH_FMA</td>
+          <td class="memname">#define FLASH_BASE_ADDR&#160;&#160;&#160;(((volatile unsigned long *)0x00020000))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="flash_8h_source.html#l00006">6</a> of file <a class="el" href="flash_8h_source.html">flash.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="flash_8h_source.html#l00008">8</a> of file <a class="el" href="flash_8h_source.html">flash.h</a>.</p>
 
 </div>
 </div>
-<a id="a89c6418eced607811aec6c584f004215" name="a89c6418eced607811aec6c584f004215"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89c6418eced607811aec6c584f004215">&#9670;&#160;</a></span>FLASH_FMC</h2>
+<a id="a6afb081a75593f3c034881ada625cf8d" name="a6afb081a75593f3c034881ada625cf8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6afb081a75593f3c034881ada625cf8d">&#9670;&#160;</a></span>FLASH_BLOCK_SIZE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define FLASH_FMC</td>
+          <td class="memname">#define FLASH_BLOCK_SIZE&#160;&#160;&#160;sizeof(<a class="el" href="struct_flash_data.html">FlashData</a>) / sizeof(unsigned long)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="flash_8h_source.html#l00019">19</a> of file <a class="el" href="flash_8h_source.html">flash.h</a>.</p>
+
+</div>
+</div>
+<a id="a8ab835c787a1619e3e41a99cdbef73fe" name="a8ab835c787a1619e3e41a99cdbef73fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab835c787a1619e3e41a99cdbef73fe">&#9670;&#160;</a></span>FLASH_BOOTCFG_R</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FLASH_BOOTCFG_R&#160;&#160;&#160;(*((volatile unsigned long *)0x400FE1D0))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -153,19 +208,83 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae9963cd83d3234139fea43d97385a234" name="ae9963cd83d3234139fea43d97385a234"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9963cd83d3234139fea43d97385a234">&#9670;&#160;</a></span>FLASH_FMD</h2>
+<a id="a815af6a66624da5e7fb5151d36cf1887" name="a815af6a66624da5e7fb5151d36cf1887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a815af6a66624da5e7fb5151d36cf1887">&#9670;&#160;</a></span>FLASH_FMA_R</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define FLASH_FMD</td>
+          <td class="memname">#define FLASH_FMA_R&#160;&#160;&#160;(*((volatile unsigned long *)0x400FD000))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="flash_8h_source.html#l00005">5</a> of file <a class="el" href="flash_8h_source.html">flash.h</a>.</p>
+
+</div>
+</div>
+<a id="aef6f95c857edd1897fcb581723eddd2b" name="aef6f95c857edd1897fcb581723eddd2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef6f95c857edd1897fcb581723eddd2b">&#9670;&#160;</a></span>FLASH_FMC_R</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FLASH_FMC_R&#160;&#160;&#160;(*((volatile unsigned long *)0x400FD008))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="flash_8h_source.html#l00007">7</a> of file <a class="el" href="flash_8h_source.html">flash.h</a>.</p>
+
+</div>
+</div>
+<a id="a31c1116fe0b48148a13f9df480fc0bf1" name="a31c1116fe0b48148a13f9df480fc0bf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31c1116fe0b48148a13f9df480fc0bf1">&#9670;&#160;</a></span>FLASH_FMD_R</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FLASH_FMD_R&#160;&#160;&#160;(*((volatile unsigned long *)0x400FD004))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="flash_8h_source.html#l00006">6</a> of file <a class="el" href="flash_8h_source.html">flash.h</a>.</p>
+
+</div>
+</div>
+<a id="adb54546355b25806000b2d35e8539f13" name="adb54546355b25806000b2d35e8539f13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb54546355b25806000b2d35e8539f13">&#9670;&#160;</a></span>FLASH_KB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FLASH_KB&#160;&#160;&#160;1024</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="flash_8h_source.html#l00009">9</a> of file <a class="el" href="flash_8h_source.html">flash.h</a>.</p>
+
+</div>
+</div>
+<a id="a814b210c5d0de41d2a2236aa12385447" name="a814b210c5d0de41d2a2236aa12385447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a814b210c5d0de41d2a2236aa12385447">&#9670;&#160;</a></span>FLASH_NUMBER_BLOCKS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FLASH_NUMBER_BLOCKS&#160;&#160;&#160;(((<a class="el" href="flash_8h.html#a6afb081a75593f3c034881ada625cf8d">FLASH_BLOCK_SIZE</a> * sizeof(unsigned long)) / 1024) + 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="flash_8h_source.html#l00020">20</a> of file <a class="el" href="flash_8h_source.html">flash.h</a>.</p>
 
 </div>
 </div>
@@ -186,20 +305,90 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ac64d149b1fb48e07560205f5a454d7df" name="ac64d149b1fb48e07560205f5a454d7df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac64d149b1fb48e07560205f5a454d7df">&#9670;&#160;</a></span>FlashErase()</h2>
+<a id="a36a8e2cfd36cad487fc631562b25db83" name="a36a8e2cfd36cad487fc631562b25db83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36a8e2cfd36cad487fc631562b25db83">&#9670;&#160;</a></span>FlashDataIsRead()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void FlashErase </td>
+          <td class="memname">bool FlashDataIsRead </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_flash_data.html">FlashData</a>&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if flash data is read. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="flash_8c_source.html#l00031">31</a> of file <a class="el" href="flash_8c_source.html">flash.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="flash_8h_a36a8e2cfd36cad487fc631562b25db83_icgraph.png" border="0" usemap="#aflash_8h_a36a8e2cfd36cad487fc631562b25db83_icgraph" alt=""/></div>
+<map name="aflash_8h_a36a8e2cfd36cad487fc631562b25db83_icgraph" id="aflash_8h_a36a8e2cfd36cad487fc631562b25db83_icgraph">
+<area shape="rect" title="Checks if flash data is read." alt="" coords="204,5,324,32"/>
+<area shape="rect" href="logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="103,5,156,32"/>
+<area shape="poly" title=" " alt="" coords="189,21,157,21,157,16,189,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab7c1a5c377d3f3d9156c5d3db6c95951" name="ab7c1a5c377d3f3d9156c5d3db6c95951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7c1a5c377d3f3d9156c5d3db6c95951">&#9670;&#160;</a></span>FlashErase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FlashErase </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Erases flash. </p>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="flash_8c_source.html#l00016">16</a> of file <a class="el" href="flash_8c_source.html">flash.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="flash_8h_ab7c1a5c377d3f3d9156c5d3db6c95951_icgraph.png" border="0" usemap="#aflash_8h_ab7c1a5c377d3f3d9156c5d3db6c95951_icgraph" alt=""/></div>
+<map name="aflash_8h_ab7c1a5c377d3f3d9156c5d3db6c95951_icgraph" id="aflash_8h_ab7c1a5c377d3f3d9156c5d3db6c95951_icgraph">
+<area shape="rect" title="Erases flash." alt="" coords="549,81,636,108"/>
+<area shape="rect" href="flash_8c.html#a028e942d1bdb9290368370559c83eab0" title="Writes data to flash." alt="" coords="416,56,501,83"/>
+<area shape="poly" title=" " alt="" coords="533,86,501,80,502,75,534,81"/>
+<area shape="rect" href="test_8c.html#ac96c14effaeda91dcf6f15a034a428e9" title=" " alt="" coords="257,107,335,133"/>
+<area shape="poly" title=" " alt="" coords="534,102,335,119,335,114,533,97"/>
+<area shape="rect" href="logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="112,5,166,32"/>
+<area shape="poly" title=" " alt="" coords="401,55,368,47,256,30,166,23,166,17,256,25,369,41,402,49"/>
+<area shape="rect" href="logic_8c.html#aee8c17e4c2f0d1376f21780a1199b97c" title=" " alt="" coords="223,56,368,83"/>
+<area shape="poly" title=" " alt="" coords="401,72,369,72,369,67,401,67"/>
+<area shape="poly" title=" " alt="" coords="402,90,336,110,335,105,401,84"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="98,31,56,41,54,36,96,26"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,56,175,83"/>
+<area shape="poly" title=" " alt="" coords="207,72,176,72,176,67,207,67"/>
+<area shape="poly" title=" " alt="" coords="87,60,55,52,56,47,88,55"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -218,7 +407,21 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="flash_8c_source.html#l00003">3</a> of file <a class="el" href="flash_8c_source.html">flash.c</a>.</p>
+<p>Initializes flash storage. </p>
+
+<p class="definition">Definition at line <a class="el" href="flash_8c_source.html#l00007">7</a> of file <a class="el" href="flash_8c_source.html">flash.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="flash_8h_ab165861d9848019963be1f879fb38173_icgraph.png" border="0" usemap="#aflash_8h_ab165861d9848019963be1f879fb38173_icgraph" alt=""/></div>
+<map name="aflash_8h_ab165861d9848019963be1f879fb38173_icgraph" id="aflash_8h_ab165861d9848019963be1f879fb38173_icgraph">
+<area shape="rect" title="Initializes flash storage." alt="" coords="204,5,274,32"/>
+<area shape="rect" href="logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="103,5,156,32"/>
+<area shape="poly" title=" " alt="" coords="188,21,157,21,157,16,188,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -237,16 +440,35 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Reads data from flash. </p>
+<dl class="section return"><dt>Returns</dt><dd>FlashData </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="flash_8c_source.html#l00056">56</a> of file <a class="el" href="flash_8c_source.html">flash.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="flash_8h_a43a3c0a9d8a7396326169b74b694cce2_icgraph.png" border="0" usemap="#aflash_8h_a43a3c0a9d8a7396326169b74b694cce2_icgraph" alt=""/></div>
+<map name="aflash_8h_a43a3c0a9d8a7396326169b74b694cce2_icgraph" id="aflash_8h_a43a3c0a9d8a7396326169b74b694cce2_icgraph">
+<area shape="rect" title="Reads data from flash." alt="" coords="229,31,312,57"/>
+<area shape="rect" href="logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="115,5,169,32"/>
+<area shape="poly" title=" " alt="" coords="213,35,168,26,169,21,214,30"/>
+<area shape="rect" href="test_8c.html#ac96c14effaeda91dcf6f15a034a428e9" title=" " alt="" coords="103,56,181,83"/>
+<area shape="poly" title=" " alt="" coords="214,58,182,64,181,59,213,53"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="100,21,55,21,55,16,100,16"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="ac9ce33144c1ff6b3253343e1f635bf73" name="ac9ce33144c1ff6b3253343e1f635bf73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9ce33144c1ff6b3253343e1f635bf73">&#9670;&#160;</a></span>FlashWrite()</h2>
+<a id="a028e942d1bdb9290368370559c83eab0" name="a028e942d1bdb9290368370559c83eab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a028e942d1bdb9290368370559c83eab0">&#9670;&#160;</a></span>FlashWrite()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void FlashWrite </td>
+          <td class="memname">int FlashWrite </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_flash_data.html">FlashData</a>&#160;</td>
           <td class="paramname"><em>data</em></td><td>)</td>
@@ -254,6 +476,46 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes data to flash. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="flash_8c_source.html#l00037">37</a> of file <a class="el" href="flash_8c_source.html">flash.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="flash_8h_a028e942d1bdb9290368370559c83eab0_cgraph.png" border="0" usemap="#aflash_8h_a028e942d1bdb9290368370559c83eab0_cgraph" alt=""/></div>
+<map name="aflash_8h_a028e942d1bdb9290368370559c83eab0_cgraph" id="aflash_8h_a028e942d1bdb9290368370559c83eab0_cgraph">
+<area shape="rect" title="Writes data to flash." alt="" coords="5,5,90,32"/>
+<area shape="rect" href="flash_8c.html#ab7c1a5c377d3f3d9156c5d3db6c95951" title="Erases flash." alt="" coords="138,5,225,32"/>
+<area shape="poly" title=" " alt="" coords="90,16,122,16,122,21,90,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="flash_8h_a028e942d1bdb9290368370559c83eab0_icgraph.png" border="0" usemap="#aflash_8h_a028e942d1bdb9290368370559c83eab0_icgraph" alt=""/></div>
+<map name="aflash_8h_a028e942d1bdb9290368370559c83eab0_icgraph" id="aflash_8h_a028e942d1bdb9290368370559c83eab0_icgraph">
+<area shape="rect" title="Writes data to flash." alt="" coords="416,56,501,83"/>
+<area shape="rect" href="logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="112,5,166,32"/>
+<area shape="poly" title=" " alt="" coords="401,55,368,47,256,30,166,23,166,17,256,25,369,41,402,49"/>
+<area shape="rect" href="logic_8c.html#aee8c17e4c2f0d1376f21780a1199b97c" title=" " alt="" coords="223,56,368,83"/>
+<area shape="poly" title=" " alt="" coords="401,72,369,72,369,67,401,67"/>
+<area shape="rect" href="test_8c.html#ac96c14effaeda91dcf6f15a034a428e9" title=" " alt="" coords="257,107,335,133"/>
+<area shape="poly" title=" " alt="" coords="402,90,336,110,335,105,401,84"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="98,31,56,41,54,36,96,26"/>
+<area shape="rect" href="logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,56,175,83"/>
+<area shape="poly" title=" " alt="" coords="207,72,176,72,176,67,207,67"/>
+<area shape="poly" title=" " alt="" coords="87,60,55,52,56,47,88,55"/>
+</map>
+</div>
 
 </div>
 </div>

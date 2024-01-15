@@ -1,0 +1,5 @@
+<map id="ParserEndInput" name="ParserEndInput">
+<area shape="rect" id="Node000001" title="Ends the input." alt="" coords="5,5,116,32"/>
+<area shape="rect" id="Node000002" href="$parser_8c.html#aa19b910e23df23ebe5f189f93c97afdd" title="Pushes new token to the parser can be used after calling." alt="" coords="164,5,288,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,16,148,16,148,21,116,21"/>
+</map>
