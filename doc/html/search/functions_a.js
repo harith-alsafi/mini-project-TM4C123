@@ -6,10 +6,8 @@ var searchData=
   ['runalltests_3',['runalltests',['../test_8c.html#a681847cb468289c483c1f110b251f91c',1,'RunAllTests():&#160;test.c'],['../test_8h.html#a681847cb468289c483c1f110b251f91c',1,'RunAllTests():&#160;test.c']]],
   ['runcalculator_4',['RunCalculator',['../logic_8c.html#a5f7f7893415d86a5a8348472dbdd0541',1,'logic.c']]],
   ['runchangepassword_5',['RunChangePassword',['../logic_8c.html#aee8c17e4c2f0d1376f21780a1199b97c',1,'logic.c']]],
-  ['runchangepasswordmodule_6',['RunChangePasswordModule',['../logic_8c.html#aa8bcdda49c0758a44d7cfad4e6d8cd1b',1,'logic.c']]],
-  ['rungraphmodule_7',['RunGraphModule',['../logic_8c.html#a7e4766166af50627baf168343eef03b1',1,'logic.c']]],
-  ['runlogin_8',['RunLogin',['../logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2',1,'logic.c']]],
-  ['runloginanimation_9',['RunLoginAnimation',['../logic_8c.html#a93047c21ec383e462990d923ed48795e',1,'logic.c']]],
-  ['runmain_10',['runmain',['../logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7',1,'RunMain():&#160;logic.c'],['../logic_8h.html#a41a8f29e3704245cd53e2e11e03ec5f7',1,'RunMain():&#160;logic.c']]],
-  ['runuserinput_11',['RunUserInput',['../logic_8c.html#ada037e06af8abdcc0382445b22466477',1,'logic.c']]]
+  ['runlogin_6',['RunLogin',['../logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2',1,'logic.c']]],
+  ['runloginanimation_7',['RunLoginAnimation',['../logic_8c.html#a93047c21ec383e462990d923ed48795e',1,'logic.c']]],
+  ['runmain_8',['runmain',['../logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7',1,'RunMain():&#160;logic.c'],['../logic_8h.html#a41a8f29e3704245cd53e2e11e03ec5f7',1,'RunMain():&#160;logic.c']]],
+  ['runuserinput_9',['RunUserInput',['../logic_8c.html#ada037e06af8abdcc0382445b22466477',1,'logic.c']]]
 ];

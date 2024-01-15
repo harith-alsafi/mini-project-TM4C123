@@ -1,16 +1,14 @@
 \doxysection{src/logic.h File Reference}
 \hypertarget{logic_8h}{}\label{logic_8h}\index{src/logic.h@{src/logic.h}}
 {\ttfamily \#include "{}keypad.\+h"{}}\newline
-Include dependency graph for logic.\+h\+:
-\nopagebreak
+Include dependency graph for logic.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=141pt]{logic_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,6 +19,12 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{logic_8h_a3fbee8963ee4080987476fc7d6e86f22}{LOGIC\+\_\+H}}
+\item 
+\#define \mbox{\hyperlink{logic_8h_a457795d41a98ba74ee391e3a2fc09849}{LOGIC\+\_\+\+STATBAR\+\_\+\+ROW}}~0
+\item 
+\#define \mbox{\hyperlink{logic_8h_a76e32bc5f03b48245eceb42ef3f6a0ad}{LOGIC\+\_\+\+SHORTCUTS\+\_\+\+ROW}}~\mbox{\hyperlink{lcd_8h_aece2016b9a1e98b3b6543062a452c847}{LCD\+\_\+\+N\+\_\+\+ROW}}-\/1
+\item 
+\#define \mbox{\hyperlink{logic_8h_a038bbcc9f8f7493d64b790b461743b30}{LOGIC\+\_\+\+INPUT\+\_\+\+ROWS}}~(\mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}}\mbox{[}$\,$\mbox{]}) \{1, 2\}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -50,6 +54,36 @@ void \mbox{\hyperlink{logic_8h_a41a8f29e3704245cd53e2e11e03ec5f7}{Run\+Main}} ()
 
 Definition at line \mbox{\hyperlink{logic_8h_source_l00002}{2}} of file \mbox{\hyperlink{logic_8h_source}{logic.\+h}}.
 
+\Hypertarget{logic_8h_a038bbcc9f8f7493d64b790b461743b30}\label{logic_8h_a038bbcc9f8f7493d64b790b461743b30} 
+\index{logic.h@{logic.h}!LOGIC\_INPUT\_ROWS@{LOGIC\_INPUT\_ROWS}}
+\index{LOGIC\_INPUT\_ROWS@{LOGIC\_INPUT\_ROWS}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{LOGIC\_INPUT\_ROWS}{LOGIC\_INPUT\_ROWS}}
+{\footnotesize\ttfamily \#define LOGIC\+\_\+\+INPUT\+\_\+\+ROWS~(\mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}}\mbox{[}$\,$\mbox{]}) \{1, 2\}}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8h_source_l00007}{7}} of file \mbox{\hyperlink{logic_8h_source}{logic.\+h}}.
+
+\Hypertarget{logic_8h_a76e32bc5f03b48245eceb42ef3f6a0ad}\label{logic_8h_a76e32bc5f03b48245eceb42ef3f6a0ad} 
+\index{logic.h@{logic.h}!LOGIC\_SHORTCUTS\_ROW@{LOGIC\_SHORTCUTS\_ROW}}
+\index{LOGIC\_SHORTCUTS\_ROW@{LOGIC\_SHORTCUTS\_ROW}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{LOGIC\_SHORTCUTS\_ROW}{LOGIC\_SHORTCUTS\_ROW}}
+{\footnotesize\ttfamily \#define LOGIC\+\_\+\+SHORTCUTS\+\_\+\+ROW~\mbox{\hyperlink{lcd_8h_aece2016b9a1e98b3b6543062a452c847}{LCD\+\_\+\+N\+\_\+\+ROW}}-\/1}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8h_source_l00006}{6}} of file \mbox{\hyperlink{logic_8h_source}{logic.\+h}}.
+
+\Hypertarget{logic_8h_a457795d41a98ba74ee391e3a2fc09849}\label{logic_8h_a457795d41a98ba74ee391e3a2fc09849} 
+\index{logic.h@{logic.h}!LOGIC\_STATBAR\_ROW@{LOGIC\_STATBAR\_ROW}}
+\index{LOGIC\_STATBAR\_ROW@{LOGIC\_STATBAR\_ROW}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{LOGIC\_STATBAR\_ROW}{LOGIC\_STATBAR\_ROW}}
+{\footnotesize\ttfamily \#define LOGIC\+\_\+\+STATBAR\+\_\+\+ROW~0}
+
+
+
+Definition at line \mbox{\hyperlink{logic_8h_source_l00005}{5}} of file \mbox{\hyperlink{logic_8h_source}{logic.\+h}}.
+
 
 
 \doxysubsection{Enumeration Type Documentation}
@@ -75,7 +109,7 @@ CHANGE\+\_\+\+PASSWORD&\\
 \end{DoxyEnumFields}
 
 
-Definition at line \mbox{\hyperlink{logic_8h_source_l00005}{5}} of file \mbox{\hyperlink{logic_8h_source}{logic.\+h}}.
+Definition at line \mbox{\hyperlink{logic_8h_source_l00009}{9}} of file \mbox{\hyperlink{logic_8h_source}{logic.\+h}}.
 
 
 
@@ -92,10 +126,9 @@ Initializes all components.
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00074}{74}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00070}{70}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -121,7 +154,7 @@ Runs the main loop.
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00374}{374}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00387}{387}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -131,8 +164,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{logic_8h_a41a8f29e3704245cd53e2e11e03ec5f7_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

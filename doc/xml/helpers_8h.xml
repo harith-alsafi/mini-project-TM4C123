@@ -279,7 +279,7 @@
         </inbodydescription>
         <location file="src/helpers.h" line="98" column="5" bodyfile="src/helpers.c" bodystart="13" bodyend="15" declfile="src/helpers.h" declline="98" declcolumn="5"/>
         <references refid="helpers_8c_1aac8c6c00a0e52489ecf8e8a6d9eba228" compoundref="helpers_8c" startline="7" endline="10">Random</references>
-        <referencedby refid="logic_8c_1a93047c21ec383e462990d923ed48795e" compoundref="logic_8c" startline="151" endline="196">RunLoginAnimation</referencedby>
+        <referencedby refid="logic_8c_1a93047c21ec383e462990d923ed48795e" compoundref="logic_8c" startline="163" endline="208">RunLoginAnimation</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>

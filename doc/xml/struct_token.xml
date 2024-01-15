@@ -17,12 +17,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/parser.h" line="27" column="10" bodyfile="src/parser.h" bodystart="27" bodyend="-1"/>
-        <referencedby refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" compoundref="parser_8c" startline="141" endline="168">ParseBracket</referencedby>
-        <referencedby refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" compoundref="parser_8c" startline="170" endline="212">ParseExpression</referencedby>
-        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="265" endline="322">ParseNumber</referencedby>
-        <referencedby refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" compoundref="parser_8c" startline="214" endline="263">ParseTerm</referencedby>
-        <referencedby refid="logic_8c_1abe7dcc508ace168bbcddb296203a1886" compoundref="logic_8c" startline="337" endline="351">PrintData</referencedby>
-        <referencedby refid="logic_8c_1ada037e06af8abdcc0382445b22466477" compoundref="logic_8c" startline="94" endline="121">RunUserInput</referencedby>
+        <referencedby refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" compoundref="parser_8c" startline="145" endline="173">ParseBracket</referencedby>
+        <referencedby refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" compoundref="parser_8c" startline="175" endline="217">ParseExpression</referencedby>
+        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="270" endline="330">ParseNumber</referencedby>
+        <referencedby refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" compoundref="parser_8c" startline="219" endline="268">ParseTerm</referencedby>
+        <referencedby refid="logic_8c_1abe7dcc508ace168bbcddb296203a1886" compoundref="logic_8c" startline="350" endline="364">PrintData</referencedby>
+        <referencedby refid="logic_8c_1ada037e06af8abdcc0382445b22466477" compoundref="logic_8c" startline="90" endline="117">RunUserInput</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_token_1a67919af9f3a80dc0b28a0ab1e6d5bf8a" prot="public" static="no" mutable="no">
         <type><ref refid="parser_8h_1aa520fbf142ba1e7e659590c07da31921" kindref="member">TokenType</ref></type>
@@ -37,9 +37,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/parser.h" line="28" column="15" bodyfile="src/parser.h" bodystart="28" bodyend="-1"/>
-        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="265" endline="322">ParseNumber</referencedby>
-        <referencedby refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" compoundref="parser_8c" startline="120" endline="139">ParserCompile</referencedby>
-        <referencedby refid="logic_8c_1ada037e06af8abdcc0382445b22466477" compoundref="logic_8c" startline="94" endline="121">RunUserInput</referencedby>
+        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="270" endline="330">ParseNumber</referencedby>
+        <referencedby refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" compoundref="parser_8c" startline="124" endline="143">ParserCompile</referencedby>
+        <referencedby refid="logic_8c_1ada037e06af8abdcc0382445b22466477" compoundref="logic_8c" startline="90" endline="117">RunUserInput</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -1,9 +1,12 @@
 <map id="FlashRead" name="FlashRead">
-<area shape="rect" id="Node000001" title="Reads data from flash." alt="" coords="229,31,312,57"/>
-<area shape="rect" id="Node000002" href="$logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="115,5,169,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,35,168,26,169,21,214,30"/>
-<area shape="rect" id="Node000004" href="$test_8c.html#ac96c14effaeda91dcf6f15a034a428e9" title=" " alt="" coords="103,56,181,83"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="214,58,182,64,181,59,213,53"/>
-<area shape="rect" id="Node000003" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="100,21,55,21,55,16,100,16"/>
+<area shape="rect" id="Node000001" title="Reads data from flash." alt="" coords="368,31,452,57"/>
+<area shape="rect" id="Node000002" href="$logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="122,5,175,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="353,41,175,24,176,19,353,36"/>
+<area shape="rect" id="Node000004" href="$test_8c.html#ac96c14effaeda91dcf6f15a034a428e9" title=" " alt="" coords="242,56,320,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="353,58,321,64,320,59,352,53"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,30,56,41,54,36,106,25"/>
+<area shape="rect" id="Node000005" href="$test_8c.html#a681847cb468289c483c1f110b251f91c" title="Runs all unit test functions." alt="" coords="103,56,194,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="226,72,195,72,195,67,226,67"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="87,59,54,52,55,47,88,54"/>
 </map>

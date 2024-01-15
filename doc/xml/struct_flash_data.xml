@@ -19,8 +19,8 @@
         <location file="src/flash.h" line="15" column="9" bodyfile="src/flash.h" bodystart="15" bodyend="-1"/>
         <referencedby refid="flash_8c_1a36a8e2cfd36cad487fc631562b25db83" compoundref="flash_8c" startline="31" endline="35">FlashDataIsRead</referencedby>
         <referencedby refid="flash_8c_1a43a3c0a9d8a7396326169b74b694cce2" compoundref="flash_8c" startline="56" endline="65">FlashRead</referencedby>
-        <referencedby refid="logic_8c_1a42669da2ad9ca71aae1bd5805b2c7c98" compoundref="logic_8c" startline="362" endline="372">PasswordMatch</referencedby>
-        <referencedby refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="226" endline="247">RunChangePassword</referencedby>
+        <referencedby refid="logic_8c_1a42669da2ad9ca71aae1bd5805b2c7c98" compoundref="logic_8c" startline="375" endline="385">PasswordMatch</referencedby>
+        <referencedby refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="238" endline="260">RunChangePassword</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_flash_data_1a4422d8fa663a07bef935b1a5b256388a" prot="public" static="no" mutable="no">
         <type>char</type>
@@ -36,8 +36,8 @@
         </inbodydescription>
         <location file="src/flash.h" line="16" column="10" bodyfile="src/flash.h" bodystart="16" bodyend="-1"/>
         <referencedby refid="flash_8c_1a36a8e2cfd36cad487fc631562b25db83" compoundref="flash_8c" startline="31" endline="35">FlashDataIsRead</referencedby>
-        <referencedby refid="logic_8c_1a42669da2ad9ca71aae1bd5805b2c7c98" compoundref="logic_8c" startline="362" endline="372">PasswordMatch</referencedby>
-        <referencedby refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="226" endline="247">RunChangePassword</referencedby>
+        <referencedby refid="logic_8c_1a42669da2ad9ca71aae1bd5805b2c7c98" compoundref="logic_8c" startline="375" endline="385">PasswordMatch</referencedby>
+        <referencedby refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="238" endline="260">RunChangePassword</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>

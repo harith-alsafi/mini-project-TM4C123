@@ -268,11 +268,11 @@
         <references refid="helpers_8h_1ab811d8c6ff3a505312d3276590444289" compoundref="helpers_8h" startline="7">LOW</references>
         <referencedby refid="test_8c_1a600f033d6f6a144fbd69976eab19e3ee" compoundref="test_8c" startline="9" endline="12">AfterEach</referencedby>
         <referencedby refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" compoundref="lcd_8c" startline="129" endline="182">LcdInit</referencedby>
-        <referencedby refid="logic_8c_1ae7c44d3fc64010d1e217bea610c8536c" compoundref="logic_8c" startline="288" endline="292">RefreshDisplay</referencedby>
-        <referencedby refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="226" endline="247">RunChangePassword</referencedby>
-        <referencedby refid="logic_8c_1a15058a20857a8a4d38fa4ab72109a9e2" compoundref="logic_8c" startline="198" endline="224">RunLogin</referencedby>
-        <referencedby refid="logic_8c_1a93047c21ec383e462990d923ed48795e" compoundref="logic_8c" startline="151" endline="196">RunLoginAnimation</referencedby>
-        <referencedby refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" compoundref="logic_8c" startline="374" endline="441">RunMain</referencedby>
+        <referencedby refid="logic_8c_1ae7c44d3fc64010d1e217bea610c8536c" compoundref="logic_8c" startline="301" endline="305">RefreshDisplay</referencedby>
+        <referencedby refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="238" endline="260">RunChangePassword</referencedby>
+        <referencedby refid="logic_8c_1a15058a20857a8a4d38fa4ab72109a9e2" compoundref="logic_8c" startline="210" endline="236">RunLogin</referencedby>
+        <referencedby refid="logic_8c_1a93047c21ec383e462990d923ed48795e" compoundref="logic_8c" startline="163" endline="208">RunLoginAnimation</referencedby>
+        <referencedby refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" compoundref="logic_8c" startline="387" endline="453">RunMain</referencedby>
         <referencedby refid="test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" compoundref="test_8c" startline="59" endline="67">TestKeypadLcd</referencedby>
         <referencedby refid="test_8c_1ac8b99cb76697b9b78d1b364cf118342a" compoundref="test_8c" startline="14" endline="19">TestLcdClear</referencedby>
         <referencedby refid="test_8c_1a6af1303d2e04cb5837731ad113c413bc" compoundref="test_8c" startline="32" endline="48">TestLcdMultiLine</referencedby>
@@ -521,7 +521,7 @@
         <references refid="helpers_8h_1ab811d8c6ff3a505312d3276590444289" compoundref="helpers_8h" startline="7">LOW</references>
         <references refid="ports_8c_1a03c4992f00f155be0425086ad67578f2" compoundref="ports_8c" startline="47" endline="58">PortAInit</references>
         <references refid="ports_8c_1aaebad24f567e2e1f53e6252fd325371a" compoundref="ports_8c" startline="32" endline="45">PortBInit</references>
-        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="74" endline="90">InitAll</referencedby>
+        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="70" endline="86">InitAll</referencedby>
       </memberdef>
       <memberdef kind="function" id="lcd_8c_1a588b278d12ac539ff4f7787f03176dcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -610,15 +610,15 @@
         <references refid="lcd_8c_1a5c92777341dd0851fe17e1bd05b885dd" compoundref="lcd_8c" startline="25">currentCol</references>
         <references refid="lcd_8c_1a789bfe83cfe007cc723e4fd58bb6b112" compoundref="lcd_8c" startline="24">currentRow</references>
         <references refid="lcd_8c_1a588b278d12ac539ff4f7787f03176dcb" compoundref="lcd_8c" startline="184" endline="190">LcdSetDdram</references>
-        <referencedby refid="logic_8c_1af6da8071dabf2ebd36d99de9f70e5dce" compoundref="logic_8c" startline="306" endline="318">ClearAllInput</referencedby>
+        <referencedby refid="logic_8c_1af6da8071dabf2ebd36d99de9f70e5dce" compoundref="logic_8c" startline="319" endline="331">ClearAllInput</referencedby>
         <referencedby refid="lcd_8c_1a08b51cf41e7c0183ca5b469dd853a666" compoundref="lcd_8c" startline="267" endline="272">LcdClearLastChar</referencedby>
         <referencedby refid="lcd_8c_1aa0130791fdcab8f2263be12fb00a031d" compoundref="lcd_8c" startline="257" endline="263">LcdClearRow</referencedby>
         <referencedby refid="lcd_8c_1a60854aad97ec6bbdb5a001eea7c6b3b8" compoundref="lcd_8c" startline="211" endline="220">LcdIncrementCursorRow</referencedby>
         <referencedby refid="lcd_8c_1a85868d62c8073baad86aa03e88ac1001" compoundref="lcd_8c" startline="245" endline="249">LcdPrintCharAt</referencedby>
-        <referencedby refid="logic_8c_1abe7dcc508ace168bbcddb296203a1886" compoundref="logic_8c" startline="337" endline="351">PrintData</referencedby>
-        <referencedby refid="logic_8c_1a93047c21ec383e462990d923ed48795e" compoundref="logic_8c" startline="151" endline="196">RunLoginAnimation</referencedby>
+        <referencedby refid="logic_8c_1abe7dcc508ace168bbcddb296203a1886" compoundref="logic_8c" startline="350" endline="364">PrintData</referencedby>
+        <referencedby refid="logic_8c_1a93047c21ec383e462990d923ed48795e" compoundref="logic_8c" startline="163" endline="208">RunLoginAnimation</referencedby>
         <referencedby refid="test_8c_1a02e71048dc3a569b41b257dec3b00cf0" compoundref="test_8c" startline="21" endline="30">TestLcdCursor</referencedby>
-        <referencedby refid="logic_8c_1a5a3be8027400af0c949033c8c86a4360" compoundref="logic_8c" startline="253" endline="286">UpdateRows</referencedby>
+        <referencedby refid="logic_8c_1a5a3be8027400af0c949033c8c86a4360" compoundref="logic_8c" startline="266" endline="299">UpdateRows</referencedby>
       </memberdef>
       <memberdef kind="function" id="lcd_8c_1a37450f91c7ae032252ea94d7c92efde2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -668,9 +668,9 @@
         <referencedby refid="lcd_8c_1aa0130791fdcab8f2263be12fb00a031d" compoundref="lcd_8c" startline="257" endline="263">LcdClearRow</referencedby>
         <referencedby refid="lcd_8c_1a85868d62c8073baad86aa03e88ac1001" compoundref="lcd_8c" startline="245" endline="249">LcdPrintCharAt</referencedby>
         <referencedby refid="lcd_8c_1afb88b9aba1a1db09a517c5a1ffc07299" compoundref="lcd_8c" startline="251" endline="255">LcdPrintString</referencedby>
-        <referencedby refid="logic_8c_1abe7dcc508ace168bbcddb296203a1886" compoundref="logic_8c" startline="337" endline="351">PrintData</referencedby>
-        <referencedby refid="logic_8c_1a93047c21ec383e462990d923ed48795e" compoundref="logic_8c" startline="151" endline="196">RunLoginAnimation</referencedby>
-        <referencedby refid="logic_8c_1ada037e06af8abdcc0382445b22466477" compoundref="logic_8c" startline="94" endline="121">RunUserInput</referencedby>
+        <referencedby refid="logic_8c_1abe7dcc508ace168bbcddb296203a1886" compoundref="logic_8c" startline="350" endline="364">PrintData</referencedby>
+        <referencedby refid="logic_8c_1a93047c21ec383e462990d923ed48795e" compoundref="logic_8c" startline="163" endline="208">RunLoginAnimation</referencedby>
+        <referencedby refid="logic_8c_1ada037e06af8abdcc0382445b22466477" compoundref="logic_8c" startline="90" endline="117">RunUserInput</referencedby>
         <referencedby refid="test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" compoundref="test_8c" startline="59" endline="67">TestKeypadLcd</referencedby>
         <referencedby refid="test_8c_1ac8b99cb76697b9b78d1b364cf118342a" compoundref="test_8c" startline="14" endline="19">TestLcdClear</referencedby>
       </memberdef>
@@ -730,7 +730,7 @@
         <references refid="lcd_8c_1a37450f91c7ae032252ea94d7c92efde2" compoundref="lcd_8c" startline="230" endline="243">LcdPrintChar</references>
         <references refid="lcd_8c_1ab336d65567699c41886446b710e9d859" compoundref="lcd_8c" startline="192" endline="209">LcdSetCursor</references>
         <referencedby refid="lcd_8c_1a08b51cf41e7c0183ca5b469dd853a666" compoundref="lcd_8c" startline="267" endline="272">LcdClearLastChar</referencedby>
-        <referencedby refid="logic_8c_1ac4085c7ad6b8fe21141bebd8cfe7053a" compoundref="logic_8c" startline="249" endline="251">UpdateShift</referencedby>
+        <referencedby refid="logic_8c_1ac4085c7ad6b8fe21141bebd8cfe7053a" compoundref="logic_8c" startline="262" endline="264">UpdateShift</referencedby>
       </memberdef>
       <memberdef kind="function" id="lcd_8c_1afb88b9aba1a1db09a517c5a1ffc07299" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -765,16 +765,16 @@
         </inbodydescription>
         <location file="src/lcd.c" line="251" column="6" bodyfile="src/lcd.c" bodystart="251" bodyend="255"/>
         <references refid="lcd_8c_1a37450f91c7ae032252ea94d7c92efde2" compoundref="lcd_8c" startline="230" endline="243">LcdPrintChar</references>
-        <referencedby refid="logic_8c_1a3b107a1c86e52fc6f6312e077c76ac31" compoundref="logic_8c" startline="332" endline="335">DisplayMessage</referencedby>
-        <referencedby refid="logic_8c_1a5f7f7893415d86a5a8348472dbdd0541" compoundref="logic_8c" startline="123" endline="149">RunCalculator</referencedby>
-        <referencedby refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="226" endline="247">RunChangePassword</referencedby>
-        <referencedby refid="logic_8c_1a15058a20857a8a4d38fa4ab72109a9e2" compoundref="logic_8c" startline="198" endline="224">RunLogin</referencedby>
-        <referencedby refid="logic_8c_1a93047c21ec383e462990d923ed48795e" compoundref="logic_8c" startline="151" endline="196">RunLoginAnimation</referencedby>
+        <referencedby refid="logic_8c_1a3b107a1c86e52fc6f6312e077c76ac31" compoundref="logic_8c" startline="345" endline="348">DisplayMessage</referencedby>
+        <referencedby refid="logic_8c_1a5f7f7893415d86a5a8348472dbdd0541" compoundref="logic_8c" startline="119" endline="161">RunCalculator</referencedby>
+        <referencedby refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="238" endline="260">RunChangePassword</referencedby>
+        <referencedby refid="logic_8c_1a15058a20857a8a4d38fa4ab72109a9e2" compoundref="logic_8c" startline="210" endline="236">RunLogin</referencedby>
+        <referencedby refid="logic_8c_1a93047c21ec383e462990d923ed48795e" compoundref="logic_8c" startline="163" endline="208">RunLoginAnimation</referencedby>
         <referencedby refid="test_8c_1ac96c14effaeda91dcf6f15a034a428e9" compoundref="test_8c" startline="69" endline="81">TestFlash</referencedby>
         <referencedby refid="test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" compoundref="test_8c" startline="59" endline="67">TestKeypadLcd</referencedby>
         <referencedby refid="test_8c_1a02e71048dc3a569b41b257dec3b00cf0" compoundref="test_8c" startline="21" endline="30">TestLcdCursor</referencedby>
         <referencedby refid="test_8c_1a6af1303d2e04cb5837731ad113c413bc" compoundref="test_8c" startline="32" endline="48">TestLcdMultiLine</referencedby>
-        <referencedby refid="logic_8c_1a5a3be8027400af0c949033c8c86a4360" compoundref="logic_8c" startline="253" endline="286">UpdateRows</referencedby>
+        <referencedby refid="logic_8c_1a5a3be8027400af0c949033c8c86a4360" compoundref="logic_8c" startline="266" endline="299">UpdateRows</referencedby>
       </memberdef>
       <memberdef kind="function" id="lcd_8c_1aa0130791fdcab8f2263be12fb00a031d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -806,7 +806,7 @@
         <references refid="lcd_8h_1a09aa49f7f7c7173b0ad1fbdefb0e2280" compoundref="lcd_8h" startline="17">LCD_N_COL</references>
         <references refid="lcd_8c_1a37450f91c7ae032252ea94d7c92efde2" compoundref="lcd_8c" startline="230" endline="243">LcdPrintChar</references>
         <references refid="lcd_8c_1ab336d65567699c41886446b710e9d859" compoundref="lcd_8c" startline="192" endline="209">LcdSetCursor</references>
-        <referencedby refid="logic_8c_1af6da8071dabf2ebd36d99de9f70e5dce" compoundref="logic_8c" startline="306" endline="318">ClearAllInput</referencedby>
+        <referencedby refid="logic_8c_1af6da8071dabf2ebd36d99de9f70e5dce" compoundref="logic_8c" startline="319" endline="331">ClearAllInput</referencedby>
       </memberdef>
       <memberdef kind="function" id="lcd_8c_1a08b51cf41e7c0183ca5b469dd853a666" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -840,7 +840,7 @@
         <references refid="lcd_8h_1a09aa49f7f7c7173b0ad1fbdefb0e2280" compoundref="lcd_8h" startline="17">LCD_N_COL</references>
         <references refid="lcd_8c_1a85868d62c8073baad86aa03e88ac1001" compoundref="lcd_8c" startline="245" endline="249">LcdPrintCharAt</references>
         <references refid="lcd_8c_1ab336d65567699c41886446b710e9d859" compoundref="lcd_8c" startline="192" endline="209">LcdSetCursor</references>
-        <referencedby refid="logic_8c_1a5d70b1e35da3781dc0e409643147cdd8" compoundref="logic_8c" startline="320" endline="330">ClearLastInput</referencedby>
+        <referencedby refid="logic_8c_1a5d70b1e35da3781dc0e409643147cdd8" compoundref="logic_8c" startline="333" endline="343">ClearLastInput</referencedby>
       </memberdef>
       <memberdef kind="function" id="lcd_8c_1a381cc054a91df1e85f2b4e63a05e8ab5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>

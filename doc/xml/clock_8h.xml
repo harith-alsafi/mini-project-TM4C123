@@ -195,7 +195,7 @@
         <location file="src/clock.h" line="33" column="6" bodyfile="src/clock.c" bodystart="34" bodyend="37" declfile="src/clock.h" declline="33" declcolumn="6"/>
         <references refid="clock_8c_1a21cfe49b38d53efaf75df16d21ed882a" compoundref="clock_8c" startline="10" endline="32">PLLInit</references>
         <references refid="clock_8c_1a58cf193ae5c1f330e4868e32afb9445d" compoundref="clock_8c" startline="3" endline="8">SysTickInit</references>
-        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="74" endline="90">InitAll</referencedby>
+        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="70" endline="86">InitAll</referencedby>
       </memberdef>
       <memberdef kind="function" id="clock_8h_1a9b776ea9ad4388518694b3c099238a74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -336,10 +336,10 @@
         <referencedby refid="test_8c_1a600f033d6f6a144fbd69976eab19e3ee" compoundref="test_8c" startline="9" endline="12">AfterEach</referencedby>
         <referencedby refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" compoundref="lcd_8c" startline="44" endline="53">LcdClearDisplay</referencedby>
         <referencedby refid="lcd_8c_1a61b541c799955fc6b4e6cf28628de9a1" compoundref="lcd_8c" startline="129" endline="182">LcdInit</referencedby>
-        <referencedby refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="226" endline="247">RunChangePassword</referencedby>
-        <referencedby refid="logic_8c_1a15058a20857a8a4d38fa4ab72109a9e2" compoundref="logic_8c" startline="198" endline="224">RunLogin</referencedby>
-        <referencedby refid="logic_8c_1a93047c21ec383e462990d923ed48795e" compoundref="logic_8c" startline="151" endline="196">RunLoginAnimation</referencedby>
-        <referencedby refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" compoundref="logic_8c" startline="374" endline="441">RunMain</referencedby>
+        <referencedby refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="238" endline="260">RunChangePassword</referencedby>
+        <referencedby refid="logic_8c_1a15058a20857a8a4d38fa4ab72109a9e2" compoundref="logic_8c" startline="210" endline="236">RunLogin</referencedby>
+        <referencedby refid="logic_8c_1a93047c21ec383e462990d923ed48795e" compoundref="logic_8c" startline="163" endline="208">RunLoginAnimation</referencedby>
+        <referencedby refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" compoundref="logic_8c" startline="387" endline="453">RunMain</referencedby>
         <referencedby refid="test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" compoundref="test_8c" startline="59" endline="67">TestKeypadLcd</referencedby>
         <referencedby refid="test_8c_1ac8b99cb76697b9b78d1b364cf118342a" compoundref="test_8c" startline="14" endline="19">TestLcdClear</referencedby>
         <referencedby refid="test_8c_1a6af1303d2e04cb5837731ad113c413bc" compoundref="test_8c" startline="32" endline="48">TestLcdMultiLine</referencedby>

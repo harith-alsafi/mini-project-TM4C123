@@ -10,10 +10,6 @@
 #include <string.h>
 #include <math.h>
 
-#define LOGIC_STATBAR_ROW 0
-#define LOGIC_SHORTCUTS_ROW LCD_N_ROW-1
-#define LOGIC_INPUT_ROWS (byte[]) {1, 2}
-
 //********************************************
 
 void RunLogin();
@@ -138,13 +134,29 @@ void RunCalculator(){
         }
         // error cccured 
         else{
-            LcdPrintString("Error occured",true);
+            char* str;
+            switch (pi.error) {
+                case SYNTAX_ERROR:
+                    str = "Syntax Error";
+                    break;
+                case INVALID_MATH_EXPRESSION:
+                    str = "Invalid Math Expression";
+                    break;
+                case MULTIPLE_DECIMAL_POINT:
+                    str = "Multiple Decimal Point";
+                    break;
+                case MISSING_NUMBER:
+                    str = "Missing Number";
+                    break;
+                case MISSING_BRACKET:
+                    str = "Missing Bracket";
+                    break;
+            }
+            LcdPrintString(str,true);
         }
     }
     // No input was given 
     else{
-        ClearAllInput(false);
-        LcdPrintString("No input was given", true);
     }
 }
 
@@ -239,10 +251,11 @@ void RunChangePassword(){
         // changing password was a success 
         mode = CALCULATOR_MODE;
         UpdateRows();
+        ShowCurrentData();
     }
     // no input was given error 
     else{
-        LcdPrintString("No Input", true);
+        // LcdPrintString("No Input", true);
     }
 }
 
@@ -436,33 +449,5 @@ void RunMain(){
             isShiftOn = false;
             RefreshDisplay();
         }
-        
     }
 }
-
-
-
-
-// ***********GENERAL UI***************************
-
-
-
-
-
-//************CHANGE PASSWORD MODULE****************
-
-void RunChangePasswordModule(){
-
-}
-
-//************CALCULATOR MODULE****************
-
-
-//************GRAPH MODULE****************
-
-void RunGraphModule(){
-
-}
-
-//************MAIN MODULE****************
-

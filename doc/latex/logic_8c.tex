@@ -11,23 +11,13 @@
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$math.\+h$>$}\newline
-Include dependency graph for logic.\+c\+:
-\nopagebreak
+Include dependency graph for logic.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{logic_8c__incl}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \mbox{\hyperlink{logic_8c_a457795d41a98ba74ee391e3a2fc09849}{LOGIC\+\_\+\+STATBAR\+\_\+\+ROW}}~0
-\item 
-\#define \mbox{\hyperlink{logic_8c_a76e32bc5f03b48245eceb42ef3f6a0ad}{LOGIC\+\_\+\+SHORTCUTS\+\_\+\+ROW}}~\mbox{\hyperlink{lcd_8h_aece2016b9a1e98b3b6543062a452c847}{LCD\+\_\+\+N\+\_\+\+ROW}}-\/1
-\item 
-\#define \mbox{\hyperlink{logic_8c_a038bbcc9f8f7493d64b790b461743b30}{LOGIC\+\_\+\+INPUT\+\_\+\+ROWS}}~(\mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}}\mbox{[}$\,$\mbox{]}) \{1, 2\}
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -74,11 +64,7 @@ void \mbox{\hyperlink{logic_8c_a5a3be8027400af0c949033c8c86a4360}{Update\+Rows}}
 void \mbox{\hyperlink{logic_8c_a8468ead6b76c5ff5eb578a79fd591aa8}{Init\+All}} ()
 \begin{DoxyCompactList}\small\item\em Initializes all components. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{logic_8c_a41a8f29e3704245cd53e2e11e03ec5f7}{Run\+Main}} ()
-\begin{DoxyCompactList}\small\item\em Runs the main loop. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{logic_8c_aa8bcdda49c0758a44d7cfad4e6d8cd1b}{Run\+Change\+Password\+Module}} ()
-\item 
-void \mbox{\hyperlink{logic_8c_a7e4766166af50627baf168343eef03b1}{Run\+Graph\+Module}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Runs the main loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -98,39 +84,6 @@ char\+List \mbox{\hyperlink{logic_8c_a68ed8a7ac589618f57942872aff22070}{input\+D
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Macro Definition Documentation}
-\Hypertarget{logic_8c_a038bbcc9f8f7493d64b790b461743b30}\label{logic_8c_a038bbcc9f8f7493d64b790b461743b30} 
-\index{logic.c@{logic.c}!LOGIC\_INPUT\_ROWS@{LOGIC\_INPUT\_ROWS}}
-\index{LOGIC\_INPUT\_ROWS@{LOGIC\_INPUT\_ROWS}!logic.c@{logic.c}}
-\doxysubsubsection{\texorpdfstring{LOGIC\_INPUT\_ROWS}{LOGIC\_INPUT\_ROWS}}
-{\footnotesize\ttfamily \#define LOGIC\+\_\+\+INPUT\+\_\+\+ROWS~(\mbox{\hyperlink{helpers_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}}\mbox{[}$\,$\mbox{]}) \{1, 2\}}
-
-
-
-Definition at line \mbox{\hyperlink{logic_8c_source_l00015}{15}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
-
-\Hypertarget{logic_8c_a76e32bc5f03b48245eceb42ef3f6a0ad}\label{logic_8c_a76e32bc5f03b48245eceb42ef3f6a0ad} 
-\index{logic.c@{logic.c}!LOGIC\_SHORTCUTS\_ROW@{LOGIC\_SHORTCUTS\_ROW}}
-\index{LOGIC\_SHORTCUTS\_ROW@{LOGIC\_SHORTCUTS\_ROW}!logic.c@{logic.c}}
-\doxysubsubsection{\texorpdfstring{LOGIC\_SHORTCUTS\_ROW}{LOGIC\_SHORTCUTS\_ROW}}
-{\footnotesize\ttfamily \#define LOGIC\+\_\+\+SHORTCUTS\+\_\+\+ROW~\mbox{\hyperlink{lcd_8h_aece2016b9a1e98b3b6543062a452c847}{LCD\+\_\+\+N\+\_\+\+ROW}}-\/1}
-
-
-
-Definition at line \mbox{\hyperlink{logic_8c_source_l00014}{14}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
-
-\Hypertarget{logic_8c_a457795d41a98ba74ee391e3a2fc09849}\label{logic_8c_a457795d41a98ba74ee391e3a2fc09849} 
-\index{logic.c@{logic.c}!LOGIC\_STATBAR\_ROW@{LOGIC\_STATBAR\_ROW}}
-\index{LOGIC\_STATBAR\_ROW@{LOGIC\_STATBAR\_ROW}!logic.c@{logic.c}}
-\doxysubsubsection{\texorpdfstring{LOGIC\_STATBAR\_ROW}{LOGIC\_STATBAR\_ROW}}
-{\footnotesize\ttfamily \#define LOGIC\+\_\+\+STATBAR\+\_\+\+ROW~0}
-
-
-
-Definition at line \mbox{\hyperlink{logic_8c_source_l00013}{13}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
-
-
-
 \doxysubsection{Function Documentation}
 \Hypertarget{logic_8c_af6da8071dabf2ebd36d99de9f70e5dce}\label{logic_8c_af6da8071dabf2ebd36d99de9f70e5dce} 
 \index{logic.c@{logic.c}!ClearAllInput@{ClearAllInput}}
@@ -140,18 +93,16 @@ Definition at line \mbox{\hyperlink{logic_8c_source_l00013}{13}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00306}{306}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00319}{319}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{logic_8c_af6da8071dabf2ebd36d99de9f70e5dce_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -166,18 +117,16 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00320}{320}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00333}{333}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{logic_8c_a5d70b1e35da3781dc0e409643147cdd8_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -192,10 +141,9 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00332}{332}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00345}{345}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -216,10 +164,9 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00302}{302}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00315}{315}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -238,10 +185,9 @@ Initializes all components.
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00074}{74}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00070}{70}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -263,7 +209,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00294}{294}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00307}{307}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -281,7 +227,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00298}{298}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00311}{311}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -305,10 +251,9 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00362}{362}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00375}{375}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -323,10 +268,9 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00337}{337}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00350}{350}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -349,18 +293,16 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00288}{288}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00301}{301}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{logic_8c_ae7c44d3fc64010d1e217bea610c8536c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -375,18 +317,16 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00123}{123}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00119}{119}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{logic_8c_a5f7f7893415d86a5a8348472dbdd0541_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -401,7 +341,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00226}{226}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00238}{238}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -411,34 +351,13 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{logic_8c_aee8c17e4c2f0d1376f21780a1199b97c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{logic_8c_aee8c17e4c2f0d1376f21780a1199b97c_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{logic_8c_aa8bcdda49c0758a44d7cfad4e6d8cd1b}\label{logic_8c_aa8bcdda49c0758a44d7cfad4e6d8cd1b} 
-\index{logic.c@{logic.c}!RunChangePasswordModule@{RunChangePasswordModule}}
-\index{RunChangePasswordModule@{RunChangePasswordModule}!logic.c@{logic.c}}
-\doxysubsubsection{\texorpdfstring{RunChangePasswordModule()}{RunChangePasswordModule()}}
-{\footnotesize\ttfamily void Run\+Change\+Password\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{logic_8c_source_l00454}{454}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
-
-\Hypertarget{logic_8c_a7e4766166af50627baf168343eef03b1}\label{logic_8c_a7e4766166af50627baf168343eef03b1} 
-\index{logic.c@{logic.c}!RunGraphModule@{RunGraphModule}}
-\index{RunGraphModule@{RunGraphModule}!logic.c@{logic.c}}
-\doxysubsubsection{\texorpdfstring{RunGraphModule()}{RunGraphModule()}}
-{\footnotesize\ttfamily void Run\+Graph\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{logic_8c_source_l00463}{463}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
-
 \Hypertarget{logic_8c_a15058a20857a8a4d38fa4ab72109a9e2}\label{logic_8c_a15058a20857a8a4d38fa4ab72109a9e2} 
 \index{logic.c@{logic.c}!RunLogin@{RunLogin}}
 \index{RunLogin@{RunLogin}!logic.c@{logic.c}}
@@ -447,18 +366,16 @@ Definition at line \mbox{\hyperlink{logic_8c_source_l00463}{463}} of file \mbox{
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00198}{198}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00210}{210}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{logic_8c_a15058a20857a8a4d38fa4ab72109a9e2_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -473,18 +390,16 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00151}{151}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00163}{163}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{logic_8c_a93047c21ec383e462990d923ed48795e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -503,7 +418,7 @@ Runs the main loop.
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00374}{374}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00387}{387}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -513,8 +428,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{logic_8c_a41a8f29e3704245cd53e2e11e03ec5f7_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -529,18 +443,16 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00094}{94}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00090}{90}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{logic_8c_ada037e06af8abdcc0382445b22466477_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -555,10 +467,9 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00353}{353}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00366}{366}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -587,18 +498,16 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00253}{253}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00266}{266}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{logic_8c_a5a3be8027400af0c949033c8c86a4360_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -613,18 +522,16 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00249}{249}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00262}{262}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{logic_8c_ac4085c7ad6b8fe21141bebd8cfe7053a_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -650,7 +557,7 @@ Here is the caller graph for this function\+:
 \end{DoxyCode}
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00067}{67}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00063}{63}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
 \Hypertarget{logic_8c_a68ed8a7ac589618f57942872aff22070}\label{logic_8c_a68ed8a7ac589618f57942872aff22070} 
 \index{logic.c@{logic.c}!inputData@{inputData}}
@@ -660,7 +567,7 @@ Definition at line \mbox{\hyperlink{logic_8c_source_l00067}{67}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00066}{66}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00062}{62}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
 \Hypertarget{logic_8c_a7a07acedc029e72784867cbe9ac10543}\label{logic_8c_a7a07acedc029e72784867cbe9ac10543} 
 \index{logic.c@{logic.c}!isInit@{isInit}}
@@ -670,7 +577,7 @@ Definition at line \mbox{\hyperlink{logic_8c_source_l00066}{66}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00063}{63}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00059}{59}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
 \Hypertarget{logic_8c_af5dd0e120f9824b40a94276c4ee3dadb}\label{logic_8c_af5dd0e120f9824b40a94276c4ee3dadb} 
 \index{logic.c@{logic.c}!isLoggedIn@{isLoggedIn}}
@@ -680,7 +587,7 @@ Definition at line \mbox{\hyperlink{logic_8c_source_l00063}{63}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00062}{62}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00058}{58}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
 \Hypertarget{logic_8c_af7d68b5d19dab801e6460d295564d2bb}\label{logic_8c_af7d68b5d19dab801e6460d295564d2bb} 
 \index{logic.c@{logic.c}!isShiftOn@{isShiftOn}}
@@ -690,7 +597,7 @@ Definition at line \mbox{\hyperlink{logic_8c_source_l00062}{62}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00061}{61}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00057}{57}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
 \Hypertarget{logic_8c_a3288701d9bc3bb0210a19c3f9042515f}\label{logic_8c_a3288701d9bc3bb0210a19c3f9042515f} 
 \index{logic.c@{logic.c}!mode@{mode}}
@@ -700,7 +607,7 @@ Definition at line \mbox{\hyperlink{logic_8c_source_l00061}{61}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00064}{64}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00060}{60}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 
 \Hypertarget{logic_8c_ab5517a73749b3e781a73a808ba33d533}\label{logic_8c_ab5517a73749b3e781a73a808ba33d533} 
 \index{logic.c@{logic.c}!tokenData@{tokenData}}
@@ -710,5 +617,5 @@ Definition at line \mbox{\hyperlink{logic_8c_source_l00064}{64}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{logic_8c_source_l00065}{65}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
+Definition at line \mbox{\hyperlink{logic_8c_source_l00061}{61}} of file \mbox{\hyperlink{logic_8c_source}{logic.\+c}}.
 

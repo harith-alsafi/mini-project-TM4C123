@@ -1,11 +1,14 @@
 <map id="KeyIsValid" name="KeyIsValid">
-<area shape="rect" id="Node000001" title="Checks if a given key is valid." alt="" coords="464,31,548,57"/>
-<area shape="rect" id="Node000002" href="$keypad_8c.html#a62a8113965dd111b6f91d33efcabd77d" title="Waits for a key to be pressed." alt="" coords="262,31,416,57"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="449,47,416,47,416,41,449,41"/>
-<area shape="rect" id="Node000003" href="$logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="122,5,195,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="247,34,194,26,195,21,247,28"/>
-<area shape="rect" id="Node000005" href="$test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="103,56,214,83"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="247,60,215,64,214,59,246,54"/>
-<area shape="rect" id="Node000004" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="107,21,55,21,55,16,107,16"/>
+<area shape="rect" id="Node000001" title="Checks if a given key is valid." alt="" coords="604,31,687,57"/>
+<area shape="rect" id="Node000002" href="$keypad_8c.html#a62a8113965dd111b6f91d33efcabd77d" title="Waits for a key to be pressed." alt="" coords="401,31,556,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="588,47,556,47,556,41,588,41"/>
+<area shape="rect" id="Node000003" href="$logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="112,5,185,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="385,40,185,24,185,19,386,34"/>
+<area shape="rect" id="Node000005" href="$test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="242,56,353,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="386,60,354,64,353,59,386,54"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="98,32,56,41,55,36,96,27"/>
+<area shape="rect" id="Node000006" href="$test_8c.html#a681847cb468289c483c1f110b251f91c" title="Runs all unit test functions." alt="" coords="103,56,194,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="226,72,194,72,194,67,226,67"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="87,59,54,52,55,47,88,54"/>
 </map>

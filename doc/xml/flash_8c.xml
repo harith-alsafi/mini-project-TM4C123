@@ -75,7 +75,7 @@
         <location file="src/flash.c" line="7" column="6" bodyfile="src/flash.c" bodystart="7" bodyend="14"/>
         <references refid="flash_8h_1a8ab835c787a1619e3e41a99cdbef73fe" compoundref="flash_8h" startline="4">FLASH_BOOTCFG_R</references>
         <references refid="flash_8c_1ae44b3676440fdea4160b7868e26465ab" compoundref="flash_8c" startline="5">flashWriteKey</references>
-        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="74" endline="90">InitAll</referencedby>
+        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="70" endline="86">InitAll</referencedby>
       </memberdef>
       <memberdef kind="function" id="flash_8c_1ab7c1a5c377d3f3d9156c5d3db6c95951" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -135,7 +135,7 @@
         <location file="src/flash.c" line="31" column="6" bodyfile="src/flash.c" bodystart="31" bodyend="35"/>
         <references refid="struct_flash_data_1a4422d8fa663a07bef935b1a5b256388a" compoundref="flash_8h" startline="16">FlashData::password</references>
         <references refid="struct_flash_data_1a098d99b6a0f1ab85c7a16b5eb154f4d6" compoundref="flash_8h" startline="15">FlashData::passwordLength</references>
-        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="74" endline="90">InitAll</referencedby>
+        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="70" endline="86">InitAll</referencedby>
       </memberdef>
       <memberdef kind="function" id="flash_8c_1a028e942d1bdb9290368370559c83eab0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -173,8 +173,8 @@
         <references refid="flash_8h_1a31c1116fe0b48148a13f9df480fc0bf1" compoundref="flash_8h" startline="6">FLASH_FMD_R</references>
         <references refid="flash_8c_1ab7c1a5c377d3f3d9156c5d3db6c95951" compoundref="flash_8c" startline="16" endline="29">FlashErase</references>
         <references refid="flash_8c_1ae44b3676440fdea4160b7868e26465ab" compoundref="flash_8c" startline="5">flashWriteKey</references>
-        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="74" endline="90">InitAll</referencedby>
-        <referencedby refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="226" endline="247">RunChangePassword</referencedby>
+        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="70" endline="86">InitAll</referencedby>
+        <referencedby refid="logic_8c_1aee8c17e4c2f0d1376f21780a1199b97c" compoundref="logic_8c" startline="238" endline="260">RunChangePassword</referencedby>
         <referencedby refid="test_8c_1ac96c14effaeda91dcf6f15a034a428e9" compoundref="test_8c" startline="69" endline="81">TestFlash</referencedby>
       </memberdef>
       <memberdef kind="function" id="flash_8c_1a43a3c0a9d8a7396326169b74b694cce2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -196,7 +196,7 @@
         <references refid="flash_8h_1a0571de796f539e5779da6a9203190645" compoundref="flash_8h" startline="8">FLASH_BASE_ADDR</references>
         <references refid="flash_8h_1a6afb081a75593f3c034881ada625cf8d" compoundref="flash_8h" startline="19">FLASH_BLOCK_SIZE</references>
         <references refid="struct_flash_data_1a098d99b6a0f1ab85c7a16b5eb154f4d6" compoundref="flash_8h" startline="15">FlashData::passwordLength</references>
-        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="74" endline="90">InitAll</referencedby>
+        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="70" endline="86">InitAll</referencedby>
         <referencedby refid="test_8c_1ac96c14effaeda91dcf6f15a034a428e9" compoundref="test_8c" startline="69" endline="81">TestFlash</referencedby>
       </memberdef>
     </sectiondef>

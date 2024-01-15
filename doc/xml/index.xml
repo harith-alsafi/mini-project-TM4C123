@@ -192,9 +192,6 @@
     <member refid="lcd_8h_1a08b51cf41e7c0183ca5b469dd853a666" kind="function"><name>LcdClearLastChar</name></member>
   </compound>
   <compound refid="logic_8c" kind="file"><name>logic.c</name>
-    <member refid="logic_8c_1a457795d41a98ba74ee391e3a2fc09849" kind="define"><name>LOGIC_STATBAR_ROW</name></member>
-    <member refid="logic_8c_1a76e32bc5f03b48245eceb42ef3f6a0ad" kind="define"><name>LOGIC_SHORTCUTS_ROW</name></member>
-    <member refid="logic_8c_1a038bbcc9f8f7493d64b790b461743b30" kind="define"><name>LOGIC_INPUT_ROWS</name></member>
     <member refid="logic_8c_1af7d68b5d19dab801e6460d295564d2bb" kind="variable"><name>isShiftOn</name></member>
     <member refid="logic_8c_1af5dd0e120f9824b40a94276c4ee3dadb" kind="variable"><name>isLoggedIn</name></member>
     <member refid="logic_8c_1a7a07acedc029e72784867cbe9ac10543" kind="variable"><name>isInit</name></member>
@@ -224,11 +221,12 @@
     <member refid="logic_8c_1a5a3be8027400af0c949033c8c86a4360" kind="function"><name>UpdateRows</name></member>
     <member refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" kind="function"><name>InitAll</name></member>
     <member refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" kind="function"><name>RunMain</name></member>
-    <member refid="logic_8c_1aa8bcdda49c0758a44d7cfad4e6d8cd1b" kind="function"><name>RunChangePasswordModule</name></member>
-    <member refid="logic_8c_1a7e4766166af50627baf168343eef03b1" kind="function"><name>RunGraphModule</name></member>
   </compound>
   <compound refid="logic_8h" kind="file"><name>logic.h</name>
     <member refid="logic_8h_1a3fbee8963ee4080987476fc7d6e86f22" kind="define"><name>LOGIC_H</name></member>
+    <member refid="logic_8h_1a457795d41a98ba74ee391e3a2fc09849" kind="define"><name>LOGIC_STATBAR_ROW</name></member>
+    <member refid="logic_8h_1a76e32bc5f03b48245eceb42ef3f6a0ad" kind="define"><name>LOGIC_SHORTCUTS_ROW</name></member>
+    <member refid="logic_8h_1a038bbcc9f8f7493d64b790b461743b30" kind="define"><name>LOGIC_INPUT_ROWS</name></member>
     <member refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085b" kind="enum"><name>ProgramMode</name></member>
     <member refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b" kind="enumvalue"><name>LOGIN_MODE</name></member>
     <member refid="logic_8h_1a808b41e4ebcfcf6cd6b2ad9ee7e6085ba6c62120cfab9902751a82edb16219a51" kind="enumvalue"><name>CALCULATOR_MODE</name></member>

@@ -17,7 +17,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/parser.h" line="32" column="11" bodyfile="src/parser.h" bodystart="32" bodyend="-1"/>
-        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="265" endline="322">ParseNumber</referencedby>
+        <referencedby refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" compoundref="parser_8c" startline="145" endline="173">ParseBracket</referencedby>
+        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="270" endline="330">ParseNumber</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_parser_info_1aab78007585df1e7b289ba34601e58409" prot="public" static="no" mutable="no">
         <type><ref refid="parser_8h_1a0392053e13b5f2cbbfdbdd316d86e09f" kindref="member">ParseError</ref></type>
@@ -32,12 +33,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/parser.h" line="33" column="16" bodyfile="src/parser.h" bodystart="33" bodyend="-1"/>
-        <referencedby refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" compoundref="parser_8c" startline="141" endline="168">ParseBracket</referencedby>
-        <referencedby refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" compoundref="parser_8c" startline="170" endline="212">ParseExpression</referencedby>
-        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="265" endline="322">ParseNumber</referencedby>
-        <referencedby refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" compoundref="parser_8c" startline="120" endline="139">ParserCompile</referencedby>
-        <referencedby refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" compoundref="parser_8c" startline="214" endline="263">ParseTerm</referencedby>
-        <referencedby refid="logic_8c_1a5f7f7893415d86a5a8348472dbdd0541" compoundref="logic_8c" startline="123" endline="149">RunCalculator</referencedby>
+        <referencedby refid="parser_8c_1ab942fe3a63fed3190c76e55ebc76e5aa" compoundref="parser_8c" startline="145" endline="173">ParseBracket</referencedby>
+        <referencedby refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" compoundref="parser_8c" startline="175" endline="217">ParseExpression</referencedby>
+        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="270" endline="330">ParseNumber</referencedby>
+        <referencedby refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" compoundref="parser_8c" startline="124" endline="143">ParserCompile</referencedby>
+        <referencedby refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" compoundref="parser_8c" startline="219" endline="268">ParseTerm</referencedby>
+        <referencedby refid="logic_8c_1a5f7f7893415d86a5a8348472dbdd0541" compoundref="logic_8c" startline="119" endline="161">RunCalculator</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_parser_info_1a9acac3333c87aa6eaae7b3c10d3a3694" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -52,11 +53,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/parser.h" line="34" column="11" bodyfile="src/parser.h" bodystart="34" bodyend="-1"/>
-        <referencedby refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" compoundref="parser_8c" startline="170" endline="212">ParseExpression</referencedby>
-        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="265" endline="322">ParseNumber</referencedby>
-        <referencedby refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" compoundref="parser_8c" startline="120" endline="139">ParserCompile</referencedby>
-        <referencedby refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" compoundref="parser_8c" startline="214" endline="263">ParseTerm</referencedby>
-        <referencedby refid="logic_8c_1a5f7f7893415d86a5a8348472dbdd0541" compoundref="logic_8c" startline="123" endline="149">RunCalculator</referencedby>
+        <referencedby refid="parser_8c_1ab427a20c59c9ca0b11c82660752df62a" compoundref="parser_8c" startline="175" endline="217">ParseExpression</referencedby>
+        <referencedby refid="parser_8c_1a55bde1715e6e77addb80a046c96f059d" compoundref="parser_8c" startline="270" endline="330">ParseNumber</referencedby>
+        <referencedby refid="parser_8c_1a19203c96ed6922e7092af10b63e6d298" compoundref="parser_8c" startline="124" endline="143">ParserCompile</referencedby>
+        <referencedby refid="parser_8c_1a5656fb9995d62b96c08bfef4789ee4db" compoundref="parser_8c" startline="219" endline="268">ParseTerm</referencedby>
+        <referencedby refid="logic_8c_1a5f7f7893415d86a5a8348472dbdd0541" compoundref="logic_8c" startline="119" endline="161">RunCalculator</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>

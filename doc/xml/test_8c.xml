@@ -151,6 +151,7 @@
         </inbodydescription>
         <location file="src/test.c" line="50" column="6" bodyfile="src/test.c" bodystart="50" bodyend="57"/>
         <references refid="test_8c_1a6af1303d2e04cb5837731ad113c413bc" compoundref="test_8c" startline="32" endline="48">TestLcdMultiLine</references>
+        <referencedby refid="test_8c_1a681847cb468289c483c1f110b251f91c" compoundref="test_8c" startline="83" endline="89">RunAllTests</referencedby>
       </memberdef>
       <memberdef kind="function" id="test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -170,6 +171,7 @@
         <references refid="lcd_8c_1abcfdb05f65f66ac2f004c865d8d34933" compoundref="lcd_8c" startline="44" endline="53">LcdClearDisplay</references>
         <references refid="lcd_8c_1a37450f91c7ae032252ea94d7c92efde2" compoundref="lcd_8c" startline="230" endline="243">LcdPrintChar</references>
         <references refid="lcd_8c_1afb88b9aba1a1db09a517c5a1ffc07299" compoundref="lcd_8c" startline="251" endline="255">LcdPrintString</references>
+        <referencedby refid="test_8c_1a681847cb468289c483c1f110b251f91c" compoundref="test_8c" startline="83" endline="89">RunAllTests</referencedby>
       </memberdef>
       <memberdef kind="function" id="test_8c_1ac96c14effaeda91dcf6f15a034a428e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -187,6 +189,7 @@
         <references refid="flash_8c_1a43a3c0a9d8a7396326169b74b694cce2" compoundref="flash_8c" startline="56" endline="65">FlashRead</references>
         <references refid="flash_8c_1a028e942d1bdb9290368370559c83eab0" compoundref="flash_8c" startline="37" endline="54">FlashWrite</references>
         <references refid="lcd_8c_1afb88b9aba1a1db09a517c5a1ffc07299" compoundref="lcd_8c" startline="251" endline="255">LcdPrintString</references>
+        <referencedby refid="test_8c_1a681847cb468289c483c1f110b251f91c" compoundref="test_8c" startline="83" endline="89">RunAllTests</referencedby>
       </memberdef>
       <memberdef kind="function" id="test_8c_1a681847cb468289c483c1f110b251f91c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -200,7 +203,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/test.c" line="83" column="6" bodyfile="src/test.c" bodystart="83" bodyend="87"/>
+        <location file="src/test.c" line="83" column="6" bodyfile="src/test.c" bodystart="83" bodyend="89"/>
+        <references refid="test_8c_1ac96c14effaeda91dcf6f15a034a428e9" compoundref="test_8c" startline="69" endline="81">TestFlash</references>
+        <references refid="test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" compoundref="test_8c" startline="59" endline="67">TestKeypadLcd</references>
+        <references refid="test_8c_1aec3ab11b7409fd19efa26bed15100a3f" compoundref="test_8c" startline="50" endline="57">TestLcdAll</references>
+        <referencedby refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8c" startline="13" endline="69">main</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -291,10 +298,12 @@
 <codeline lineno="81"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight></codeline>
 <codeline lineno="83" refid="test_8c_1a681847cb468289c483c1f110b251f91c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="test_8c_1a681847cb468289c483c1f110b251f91c" kindref="member">RunAllTests</ref>(){</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TestLcdAll();</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TestKeypadLcd();</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TestFlash();</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>RUN_HARDWARE_TEST</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test_8c_1aec3ab11b7409fd19efa26bed15100a3f" kindref="member">TestLcdAll</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" kindref="member">TestKeypadLcd</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test_8c_1ac96c14effaeda91dcf6f15a034a428e9" kindref="member">TestFlash</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/test.c"/>
   </compounddef>

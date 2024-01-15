@@ -12,61 +12,64 @@
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{parser_8h}{parser.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00011}\mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{00011}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{logic_8c_a8468ead6b76c5ff5eb578a79fd591aa8}{InitAll}}();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00014}00014\ \ \ \ \ \textcolor{comment}{//\ ParserPushToken((Token)\{}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00015}00015\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .type\ =\ NUMBER,\ }}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .value\ =\ '5'}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//\ \});}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00018}00018\ \ \ \ \ \textcolor{comment}{//\ ParserPushToken((Token)\{}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .type\ =\ OPERATOR,\ }}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .value\ =\ '+'}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ \});}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//\ ParserPushToken((Token)\{}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .type\ =\ NUMBER,\ }}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00024}00024\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .value\ =\ '2'}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//\ \});}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00026}00026\ \ \ \ \ \textcolor{comment}{//\ ParserEndInput();}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00027}00027\ \ \ \ \ \textcolor{comment}{//\ LcdPrintString("{}started\ "{},\ true);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00028}00028\ \ \ \ \ \textcolor{comment}{//\ ParserInfo\ pi\ =\ ParserCompile();}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//\ ParserStop();}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00030}00030\ \ \ \ \ \textcolor{comment}{//\ LcdPrintString("{}done\ "{},\ true);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00031}00031\ \ \ \ \ \textcolor{comment}{//\ DelayMilli(1000);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00032}00032\ \ \ \ \ \textcolor{comment}{//\ LcdClearDisplay();}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00033}00033\ \ \ \ \ \textcolor{comment}{//\ char\ buffer[10];}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00034}00034\ \ \ \ \ \textcolor{comment}{//\ snprintf(buffer,\ 10,\ "{}\%2.f"{},\ pi.currentResult);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ buffer[9]\ =\ '\(\backslash\)0';\ \ //\ Ensure\ null-\/termination}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00036}00036\ \ \ \ \ \textcolor{comment}{//\ LcdPrintString(buffer,\ true);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00037}00037\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00039}00039\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ LcdClearDisplay();}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//\ RunAllTests();}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ LcdPrintChar('H',\ false);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ RunMain();}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ ClockInit();}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00045}00045\ \ \ \ \ \textcolor{comment}{//\ LcdInit();}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00046}00046\ \ \ \ \ \textcolor{comment}{//\ KeypadInit();}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//\ FlashInit();}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ FlashData\ flashData\ =\ \{}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00049}00049\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .passwordLength\ =\ 3,}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00050}00050\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .password\ =\ "{}123"{}}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//\ \};}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00052}00052\ \ \ \ \ \textcolor{comment}{//\ FlashWrite(flashData);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00053}00053\ \ \ \ \ \textcolor{comment}{//\ LcdPrintString(flashData.password,\ true);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00054}00054\ \ \ \ \ \textcolor{comment}{//\ DelayMilli(3000);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ LcdClearDisplay();}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ FlashData\ flashData2\ =\ FlashRead();}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00057}00057\ \ \ \ \ \textcolor{comment}{//\ LcdPrintString(flashData2.password,\ true);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00058}00058\ \ \ \ \ \textcolor{comment}{//\ while\ (1)\{}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ LcdPrintChar('a',\ true);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ KeyInfo\ key\ =\ KeypadWaitForKeyInfo();}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ RunUserInput(key);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ LcdPrintChar(key.key,\ true);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{logic_8c_a41a8f29e3704245cd53e2e11e03ec5f7}{RunMain}}();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ DelayMilli(200);s}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00065}00065\ \ \ \ \ \textcolor{comment}{//\ \}}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00066}00066\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00011}00011\ \textcolor{comment}{//\ \#define\ RUN\_HARDWARE\_TEST}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00013}\mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{00013}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{logic_8c_a8468ead6b76c5ff5eb578a79fd591aa8}{InitAll}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{test_8c_a681847cb468289c483c1f110b251f91c}{RunAllTests}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//\ ParserPushToken((Token)\{}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00018}00018\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .type\ =\ NUMBER,\ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .value\ =\ '5'}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//\ \});}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ ParserPushToken((Token)\{}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .type\ =\ OPERATOR,\ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .value\ =\ '+'}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00024}00024\ \ \ \ \ \textcolor{comment}{//\ \});}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//\ ParserPushToken((Token)\{}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00026}00026\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .type\ =\ NUMBER,\ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00027}00027\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .value\ =\ '2'}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00028}00028\ \ \ \ \ \textcolor{comment}{//\ \});}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//\ ParserEndInput();}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00030}00030\ \ \ \ \ \textcolor{comment}{//\ LcdPrintString("{}started\ "{},\ true);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00031}00031\ \ \ \ \ \textcolor{comment}{//\ ParserInfo\ pi\ =\ ParserCompile();}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00032}00032\ \ \ \ \ \textcolor{comment}{//\ ParserStop();}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00033}00033\ \ \ \ \ \textcolor{comment}{//\ LcdPrintString("{}done\ "{},\ true);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00034}00034\ \ \ \ \ \textcolor{comment}{//\ DelayMilli(1000);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ LcdClearDisplay();}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00036}00036\ \ \ \ \ \textcolor{comment}{//\ char\ buffer[10];}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00037}00037\ \ \ \ \ \textcolor{comment}{//\ snprintf(buffer,\ 10,\ "{}\%2.f"{},\ pi.currentResult);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00038}00038\ \ \ \ \ \textcolor{comment}{//\ buffer[9]\ =\ '\(\backslash\)0';\ \ //\ Ensure\ null-\/termination}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00039}00039\ \ \ \ \ \textcolor{comment}{//\ LcdPrintString(buffer,\ true);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ LcdClearDisplay();}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ RunAllTests();}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00045}00045\ \ \ \ \ \textcolor{comment}{//\ LcdPrintChar('H',\ false);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ RunMain();}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//\ ClockInit();}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ LcdInit();}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00049}00049\ \ \ \ \ \textcolor{comment}{//\ KeypadInit();}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00050}00050\ \ \ \ \ \textcolor{comment}{//\ FlashInit();}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//\ FlashData\ flashData\ =\ \{}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00052}00052\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .passwordLength\ =\ 3,}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00053}00053\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ .password\ =\ "{}123"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00054}00054\ \ \ \ \ \textcolor{comment}{//\ \};}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ FlashWrite(flashData);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ LcdPrintString(flashData.password,\ true);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00057}00057\ \ \ \ \ \textcolor{comment}{//\ DelayMilli(3000);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00058}00058\ \ \ \ \ \textcolor{comment}{//\ LcdClearDisplay();}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00059}00059\ \ \ \ \ \textcolor{comment}{//\ FlashData\ flashData2\ =\ FlashRead();}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00060}00060\ \ \ \ \ \textcolor{comment}{//\ LcdPrintString(flashData2.password,\ true);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//\ while\ (1)\{}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ LcdPrintChar('a',\ true);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ KeyInfo\ key\ =\ KeypadWaitForKeyInfo();}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ RunUserInput(key);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ LcdPrintChar(key.key,\ true);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{logic_8c_a41a8f29e3704245cd53e2e11e03ec5f7}{RunMain}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ DelayMilli(200);s}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00068}00068\ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00069}00069\ \}}
 
 \end{DoxyCode}

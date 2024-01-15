@@ -81,7 +81,9 @@ void TestFlash(){
 }
 
 void RunAllTests(){
-    // TestLcdAll();
-    // TestKeypadLcd();
-    // TestFlash();
+    #ifdef RUN_HARDWARE_TEST
+    TestLcdAll();
+    TestKeypadLcd();
+    TestFlash();
+    #endif
 }

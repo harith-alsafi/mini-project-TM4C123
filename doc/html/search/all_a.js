@@ -33,9 +33,9 @@ var searchData=
   ['logic_2ec_30',['logic.c',['../logic_8c.html',1,'']]],
   ['logic_2eh_31',['logic.h',['../logic_8h.html',1,'']]],
   ['logic_5fh_32',['LOGIC_H',['../logic_8h.html#a3fbee8963ee4080987476fc7d6e86f22',1,'logic.h']]],
-  ['logic_5finput_5frows_33',['LOGIC_INPUT_ROWS',['../logic_8c.html#a038bbcc9f8f7493d64b790b461743b30',1,'logic.c']]],
-  ['logic_5fshortcuts_5frow_34',['LOGIC_SHORTCUTS_ROW',['../logic_8c.html#a76e32bc5f03b48245eceb42ef3f6a0ad',1,'logic.c']]],
-  ['logic_5fstatbar_5frow_35',['LOGIC_STATBAR_ROW',['../logic_8c.html#a457795d41a98ba74ee391e3a2fc09849',1,'logic.c']]],
+  ['logic_5finput_5frows_33',['LOGIC_INPUT_ROWS',['../logic_8h.html#a038bbcc9f8f7493d64b790b461743b30',1,'logic.h']]],
+  ['logic_5fshortcuts_5frow_34',['LOGIC_SHORTCUTS_ROW',['../logic_8h.html#a76e32bc5f03b48245eceb42ef3f6a0ad',1,'logic.h']]],
+  ['logic_5fstatbar_5frow_35',['LOGIC_STATBAR_ROW',['../logic_8h.html#a457795d41a98ba74ee391e3a2fc09849',1,'logic.h']]],
   ['login_5fmode_36',['LOGIN_MODE',['../logic_8h.html#a808b41e4ebcfcf6cd6b2ad9ee7e6085ba8ab1e296f8b5e91f361310188bc5494b',1,'logic.h']]],
   ['low_37',['LOW',['../helpers_8h.html#ab811d8c6ff3a505312d3276590444289',1,'helpers.h']]]
 ];

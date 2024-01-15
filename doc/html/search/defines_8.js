@@ -8,8 +8,8 @@ var searchData=
   ['lcd_5fn_5frow_5',['LCD_N_ROW',['../lcd_8h.html#aece2016b9a1e98b3b6543062a452c847',1,'lcd.h']]],
   ['lcd_5frs_6',['LCD_RS',['../lcd_8h.html#a4781e073871c6f27f89b9463ad3a4ed1',1,'lcd.h']]],
   ['logic_5fh_7',['LOGIC_H',['../logic_8h.html#a3fbee8963ee4080987476fc7d6e86f22',1,'logic.h']]],
-  ['logic_5finput_5frows_8',['LOGIC_INPUT_ROWS',['../logic_8c.html#a038bbcc9f8f7493d64b790b461743b30',1,'logic.c']]],
-  ['logic_5fshortcuts_5frow_9',['LOGIC_SHORTCUTS_ROW',['../logic_8c.html#a76e32bc5f03b48245eceb42ef3f6a0ad',1,'logic.c']]],
-  ['logic_5fstatbar_5frow_10',['LOGIC_STATBAR_ROW',['../logic_8c.html#a457795d41a98ba74ee391e3a2fc09849',1,'logic.c']]],
+  ['logic_5finput_5frows_8',['LOGIC_INPUT_ROWS',['../logic_8h.html#a038bbcc9f8f7493d64b790b461743b30',1,'logic.h']]],
+  ['logic_5fshortcuts_5frow_9',['LOGIC_SHORTCUTS_ROW',['../logic_8h.html#a76e32bc5f03b48245eceb42ef3f6a0ad',1,'logic.h']]],
+  ['logic_5fstatbar_5frow_10',['LOGIC_STATBAR_ROW',['../logic_8h.html#a457795d41a98ba74ee391e3a2fc09849',1,'logic.h']]],
   ['low_11',['LOW',['../helpers_8h.html#ab811d8c6ff3a505312d3276590444289',1,'helpers.h']]]
 ];

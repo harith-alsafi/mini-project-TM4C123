@@ -8,8 +8,11 @@
 #include "parser.h"
 #include <stdio.h>
 
+// #define RUN_HARDWARE_TEST
+
 int main() {
     InitAll();
+    RunAllTests();
 
     // ParserPushToken((Token){
     //     .type = NUMBER, 

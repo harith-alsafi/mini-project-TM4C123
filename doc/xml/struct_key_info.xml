@@ -34,7 +34,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/keypad.h" line="45" column="20" bodyfile="src/keypad.h" bodystart="45" bodyend="-1"/>
-        <referencedby refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" compoundref="logic_8c" startline="374" endline="441">RunMain</referencedby>
+        <referencedby refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" compoundref="logic_8c" startline="387" endline="453">RunMain</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_key_info_1a1756a989545ac064e9a6a2c09e29446a" prot="public" static="no" mutable="no">
         <type><ref refid="keypad_8h_1a7bee0655d5b08dfebd153f788ebbc536" kindref="member">KeyDisplayType</ref></type>
@@ -49,7 +49,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/keypad.h" line="46" column="20" bodyfile="src/keypad.h" bodystart="46" bodyend="-1"/>
-        <referencedby refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" compoundref="logic_8c" startline="374" endline="441">RunMain</referencedby>
+        <referencedby refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" compoundref="logic_8c" startline="387" endline="453">RunMain</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_key_info_1aad793e7d0881eafc1dd46649bb2780be" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -79,7 +79,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/keypad.h" line="48" column="10" bodyfile="src/keypad.h" bodystart="48" bodyend="-1"/>
-        <referencedby refid="logic_8c_1ada037e06af8abdcc0382445b22466477" compoundref="logic_8c" startline="94" endline="121">RunUserInput</referencedby>
+        <referencedby refid="logic_8c_1ada037e06af8abdcc0382445b22466477" compoundref="logic_8c" startline="90" endline="117">RunUserInput</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_key_info_1a44c82d8b5620cb791276feba579ff337" prot="public" static="no" mutable="no">
         <type><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" kindref="member">SpecialKeyFunctions</ref></type>
@@ -94,7 +94,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/keypad.h" line="49" column="25" bodyfile="src/keypad.h" bodystart="49" bodyend="-1"/>
-        <referencedby refid="logic_8c_1afa64d8084403040ad7f7f8045e075736" compoundref="logic_8c" startline="302" endline="304">GetSpecialFunction</referencedby>
+        <referencedby refid="logic_8c_1afa64d8084403040ad7f7f8045e075736" compoundref="logic_8c" startline="315" endline="317">GetSpecialFunction</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_key_info_1ad4e8166e71feacf01a45a0346818aa39" prot="public" static="no" mutable="no">
         <type>char</type>
@@ -109,7 +109,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/keypad.h" line="50" column="10" bodyfile="src/keypad.h" bodystart="50" bodyend="-1"/>
-        <referencedby refid="logic_8c_1ada037e06af8abdcc0382445b22466477" compoundref="logic_8c" startline="94" endline="121">RunUserInput</referencedby>
+        <referencedby refid="logic_8c_1ada037e06af8abdcc0382445b22466477" compoundref="logic_8c" startline="90" endline="117">RunUserInput</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_key_info_1ae84e8c2103cde405fc762cafb1727015" prot="public" static="no" mutable="no">
         <type><ref refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cc" kindref="member">SpecialKeyFunctions</ref></type>
@@ -124,7 +124,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/keypad.h" line="51" column="25" bodyfile="src/keypad.h" bodystart="51" bodyend="-1"/>
-        <referencedby refid="logic_8c_1afa64d8084403040ad7f7f8045e075736" compoundref="logic_8c" startline="302" endline="304">GetSpecialFunction</referencedby>
+        <referencedby refid="logic_8c_1afa64d8084403040ad7f7f8045e075736" compoundref="logic_8c" startline="315" endline="317">GetSpecialFunction</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>

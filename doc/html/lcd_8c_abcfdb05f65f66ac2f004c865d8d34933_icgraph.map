@@ -1,34 +1,38 @@
 <map id="LcdClearDisplay" name="LcdClearDisplay">
-<area shape="rect" id="Node000001" title="Clears the display." alt="" coords="598,233,713,260"/>
-<area shape="rect" id="Node000002" href="$test_8c.html#a600f033d6f6a144fbd69976eab19e3ee" title=" " alt="" coords="444,5,522,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="644,219,631,180,611,134,583,87,548,46,521,31,524,26,551,42,588,84,616,132,636,179,649,217"/>
-<area shape="rect" id="Node000003" href="$lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="453,56,513,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="638,221,601,163,576,131,548,103,511,82,514,77,551,99,580,128,605,160,642,218"/>
-<area shape="rect" id="Node000006" href="$logic_8c.html#ae7c44d3fc64010d1e217bea610c8536c" title=" " alt="" coords="242,107,350,133"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="632,223,596,186,573,169,549,154,498,137,445,126,395,121,350,120,350,115,395,116,446,121,500,132,551,150,576,164,600,182,636,220"/>
-<area shape="rect" id="Node000007" href="$logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="103,157,175,184"/>
-<area shape="poly" id="edge14_Node000001_Node000007" title=" " alt="" coords="595,231,549,220,443,202,338,189,175,175,176,170,338,184,444,197,550,215,596,226"/>
-<area shape="rect" id="Node000008" href="$logic_8c.html#aee8c17e4c2f0d1376f21780a1199b97c" title=" " alt="" coords="223,208,368,235"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="582,244,368,229,369,224,582,239"/>
-<area shape="rect" id="Node000009" href="$logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2" title=" " alt="" coords="258,259,333,285"/>
-<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="582,254,334,272,333,267,582,249"/>
-<area shape="rect" id="Node000010" href="$logic_8c.html#a93047c21ec383e462990d923ed48795e" title=" " alt="" coords="416,309,550,336"/>
-<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="610,269,516,311,514,306,608,264"/>
-<area shape="rect" id="Node000011" href="$test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="427,360,539,387"/>
-<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="635,274,598,312,551,350,529,362,526,357,548,346,595,309,631,270"/>
-<area shape="rect" id="Node000012" href="$test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="434,411,532,437"/>
-<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="644,275,608,338,582,371,551,401,532,412,529,408,548,397,578,368,603,335,639,273"/>
-<area shape="rect" id="Node000013" href="$test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="423,461,543,488"/>
-<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="649,276,636,315,616,362,588,409,551,451,534,463,531,459,548,447,583,406,611,359,631,313,644,274"/>
-<area shape="rect" id="Node000004" href="$logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="112,81,166,108"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="438,75,166,95,166,90,438,70"/>
-<area shape="rect" id="Node000005" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,132,55,159"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="99,116,56,136,54,132,97,111"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="239,141,176,162,174,157,237,136"/>
-<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="87,161,55,154,56,148,88,156"/>
-<area shape="poly" id="edge9_Node000008_Node000007" title=" " alt="" coords="237,205,174,185,176,180,239,200"/>
-<area shape="poly" id="edge11_Node000009_Node000007" title=" " alt="" coords="242,259,222,249,180,217,150,186,154,182,184,213,224,244,244,254"/>
-<area shape="poly" id="edge13_Node000010_Node000009" title=" " alt="" coords="415,307,333,285,334,280,417,302"/>
-<area shape="rect" id="Node000014" href="$test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="255,461,337,488"/>
-<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="408,477,337,477,337,472,408,472"/>
+<area shape="rect" id="Node000001" title="Clears the display." alt="" coords="617,233,732,260"/>
+<area shape="rect" id="Node000002" href="$test_8c.html#a600f033d6f6a144fbd69976eab19e3ee" title=" " alt="" coords="463,5,541,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="663,219,650,180,630,134,602,87,567,46,540,31,543,26,570,42,607,84,635,132,655,179,668,217"/>
+<area shape="rect" id="Node000003" href="$lcd_8c.html#a61b541c799955fc6b4e6cf28628de9a1" title="Initializes the LCD." alt="" coords="472,56,532,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="657,221,620,163,595,131,567,103,530,82,533,77,570,99,599,128,624,160,661,218"/>
+<area shape="rect" id="Node000006" href="$logic_8c.html#ae7c44d3fc64010d1e217bea610c8536c" title=" " alt="" coords="261,107,369,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="651,223,615,186,592,169,568,154,517,137,464,126,414,121,369,120,369,115,414,116,465,121,519,132,570,150,595,164,619,182,655,220"/>
+<area shape="rect" id="Node000007" href="$logic_8c.html#a41a8f29e3704245cd53e2e11e03ec5f7" title="Runs the main loop." alt="" coords="112,183,185,209"/>
+<area shape="poly" id="edge14_Node000001_Node000007" title=" " alt="" coords="614,231,568,220,478,205,387,199,277,196,185,197,185,192,277,191,387,193,479,200,569,215,615,226"/>
+<area shape="rect" id="Node000008" href="$logic_8c.html#aee8c17e4c2f0d1376f21780a1199b97c" title=" " alt="" coords="242,208,387,235"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="601,244,387,229,388,224,601,239"/>
+<area shape="rect" id="Node000009" href="$logic_8c.html#a15058a20857a8a4d38fa4ab72109a9e2" title=" " alt="" coords="277,259,352,285"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="601,254,353,272,352,267,601,249"/>
+<area shape="rect" id="Node000010" href="$logic_8c.html#a93047c21ec383e462990d923ed48795e" title=" " alt="" coords="435,309,569,336"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="629,269,535,311,533,306,627,264"/>
+<area shape="rect" id="Node000011" href="$test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d" title=" " alt="" coords="259,360,370,387"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="657,274,620,315,596,335,570,350,519,368,466,377,415,381,371,381,371,375,415,376,466,372,518,363,568,346,593,330,616,311,653,271"/>
+<area shape="rect" id="Node000013" href="$test_8c.html#ac8b99cb76697b9b78d1b364cf118342a" title=" " alt="" coords="453,411,551,437"/>
+<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="661,275,624,334,599,365,570,394,541,412,538,408,567,390,595,362,620,331,657,272"/>
+<area shape="rect" id="Node000014" href="$test_8c.html#a6af1303d2e04cb5837731ad113c413bc" title=" " alt="" coords="442,461,562,488"/>
+<area shape="poly" id="edge19_Node000001_Node000014" title=" " alt="" coords="668,276,655,315,635,362,607,409,570,451,553,463,550,459,567,447,602,406,630,359,650,313,663,274"/>
+<area shape="rect" id="Node000004" href="$logic_8c.html#a8468ead6b76c5ff5eb578a79fd591aa8" title="Initializes all components." alt="" coords="122,95,175,121"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="457,76,242,97,176,107,175,101,242,92,457,70"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,183,55,209"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="119,133,51,184,48,180,116,129"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="270,142,243,154,179,185,177,180,241,150,267,137"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="96,199,55,199,55,193,96,193"/>
+<area shape="poly" id="edge9_Node000008_Node000007" title=" " alt="" coords="226,211,185,204,185,199,227,205"/>
+<area shape="poly" id="edge11_Node000009_Node000007" title=" " alt="" coords="262,258,241,249,171,212,174,208,243,244,264,253"/>
+<area shape="poly" id="edge13_Node000010_Node000009" title=" " alt="" coords="434,307,352,285,353,280,436,302"/>
+<area shape="rect" id="Node000012" href="$test_8c.html#a681847cb468289c483c1f110b251f91c" title="Runs all unit test functions." alt="" coords="103,360,194,387"/>
+<area shape="poly" id="edge16_Node000011_Node000012" title=" " alt="" coords="243,376,194,376,194,371,243,371"/>
+<area shape="poly" id="edge17_Node000012_Node000005" title=" " alt="" coords="128,348,38,211,43,208,132,345"/>
+<area shape="rect" id="Node000015" href="$test_8c.html#aec3ab11b7409fd19efa26bed15100a3f" title=" " alt="" coords="274,436,356,463"/>
+<area shape="poly" id="edge20_Node000014_Node000015" title=" " alt="" coords="426,467,356,458,357,452,427,462"/>
+<area shape="poly" id="edge21_Node000015_Node000012" title=" " alt="" coords="269,431,178,390,181,385,271,427"/>
 </map>

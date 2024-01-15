@@ -179,10 +179,12 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
 <div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="test_8c.html#a681847cb468289c483c1f110b251f91c">   83</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="test_8c.html#a681847cb468289c483c1f110b251f91c">RunAllTests</a>(){</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">// TestLcdAll();</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// TestKeypadLcd();</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// TestFlash();</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">    #ifdef RUN_HARDWARE_TEST</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_function" href="test_8c.html#aec3ab11b7409fd19efa26bed15100a3f">TestLcdAll</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_function" href="test_8c.html#a8ff2f0e3039fa4096f5c57d610c9281d">TestKeypadLcd</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_function" href="test_8c.html#ac96c14effaeda91dcf6f15a034a428e9">TestFlash</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
 </div>
 <div class="ttc" id="aclock_8c_html_a2e760c634cc89519ad0956fc258eab46"><div class="ttname"><a href="clock_8c.html#a2e760c634cc89519ad0956fc258eab46">DelayMilli</a></div><div class="ttdeci">void DelayMilli(unsigned long milliseconds)</div><div class="ttdoc">Uses.</div><div class="ttdef"><b>Definition</b> <a href="clock_8c_source.html#l00059">clock.c:59</a></div></div>
 <div class="ttc" id="aclock_8h_html"><div class="ttname"><a href="clock_8h.html">clock.h</a></div></div>

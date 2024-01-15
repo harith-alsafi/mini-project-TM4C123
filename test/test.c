@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "../lib/minunit/minunit.h"
 
+
 MU_TEST(TestBracket){
     printf("TestBracket \n");
     // (2^(2+1)-2)x0.5 = 3
@@ -69,9 +70,11 @@ MU_TEST(TestBracket){
         }
     };
     ParserInitWith(tokens, 15);
+    ParserEndInput();
     ParserInfo pi = ParserCompile();
     ParserStop();
     mu_assert_double_eq(3.0, pi.currentResult);
+    mu_assert_int_eq(1, pi.error);
 }
 
 MU_TEST(TestParse){

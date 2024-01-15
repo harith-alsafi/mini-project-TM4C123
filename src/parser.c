@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include "clock.h"
 
+// #define RUN_UNIT_TEST
+
 //********************************************
 
 /**
@@ -95,7 +97,9 @@ void ParserInit(){
     previousResult = currentResult;
     currentResult = 0.0;
     tokens = TokenListCreate();
+    #ifndef RUN_UNIT_TEST
     SCB_CPACR |= (0xF << 20); // Enable CP10 and CP11
+    #endif
 }
 
 void ParserInitWith(Token items[], int length){
@@ -161,6 +165,7 @@ ParserInfo ParseBracket(){
     next_token = GetNextToken(); // eat the ')'
     if(next_token.value != ')'){
         pi.error = MISSING_BRACKET;
+        pi.token = next_token;
         return pi;
     }
 
@@ -182,7 +187,6 @@ ParserInfo ParseExpression(){
 
     next_token = PeekNextToken();
     while(next_token.value == '+' || next_token.value == '-' || next_token.value == '('){
-        GetNextToken();
         if(next_token.value == '('){
             pi = ParseBracket();
             if(pi.error != NO_ERROR){
@@ -190,6 +194,7 @@ ParserInfo ParseExpression(){
             }
         } 
         else {
+            GetNextToken();
             pi = ParseTerm();
             if(pi.error != NO_ERROR){
                 return pi;
@@ -226,7 +231,6 @@ ParserInfo ParseTerm(){
  
     next_token = PeekNextToken();
     while(next_token.value == 'x' || next_token.value == '/' || next_token.value == 'E' || next_token.value == '^' || next_token.value == '('){
-        GetNextToken();
     
         if(next_token.value == '('){
             pi = ParseBracket();
@@ -235,6 +239,7 @@ ParserInfo ParseTerm(){
             }
         } 
         else {
+            GetNextToken();
             pi = ParseNumber();
             if(pi.error != NO_ERROR){
                 return pi;
@@ -284,7 +289,10 @@ ParserInfo ParseNumber(){
         if(pi.error != NO_ERROR){
             return pi;
         }
-    } else if(next_token.value == '-' ) {
+        return pi;
+    } 
+    // else 
+    if(next_token.value == '-' ) {
         charListPushBack(&str, next_token.value);
         GetNextToken(); // eats the token 
     }
@@ -320,3 +328,5 @@ ParserInfo ParseNumber(){
 
     return pi;
 }
+
+

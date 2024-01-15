@@ -350,7 +350,7 @@
         <references refid="struct_key_info_1aad793e7d0881eafc1dd46649bb2780be" compoundref="keypad_8h" startline="47">KeyInfo::isSpecial</references>
         <references refid="keypad_8h_1ac4837dcaa64e146bad0d3f315f7da1cca6b93afbf74a3dba1f519656b075221ea" compoundref="keypad_8h" startline="24">NORMAL_NUMBER</references>
         <referencedby refid="keypad_8c_1a62a8113965dd111b6f91d33efcabd77d" compoundref="keypad_8c" startline="211" endline="221">KeypadWaitForKeyInfo</referencedby>
-        <referencedby refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" compoundref="logic_8c" startline="374" endline="441">RunMain</referencedby>
+        <referencedby refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" compoundref="logic_8c" startline="387" endline="453">RunMain</referencedby>
       </memberdef>
       <memberdef kind="function" id="keypad_8h_1aa6981f604fdfbec491e21e90507ec0de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -367,7 +367,7 @@
         <location file="src/keypad.h" line="70" column="6" bodyfile="src/keypad.c" bodystart="173" bodyend="176" declfile="src/keypad.h" declline="70" declcolumn="6"/>
         <references refid="ports_8c_1a21efc6fa081c0b9c85eafe9d7455b9b6" compoundref="ports_8c" startline="19" endline="30">PortDInit</references>
         <references refid="ports_8c_1a2c10edb046a08d0f0d72d288c9c64dfc" compoundref="ports_8c" startline="4" endline="17">PortEInit</references>
-        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="74" endline="90">InitAll</referencedby>
+        <referencedby refid="logic_8c_1a8468ead6b76c5ff5eb578a79fd591aa8" compoundref="logic_8c" startline="70" endline="86">InitAll</referencedby>
       </memberdef>
       <memberdef kind="function" id="keypad_8h_1a49ffa463b26cc47b7d9e3e2cda8d9168" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_key_info" kindref="compound">KeyInfo</ref></type>
@@ -486,7 +486,7 @@
         <references refid="keypad_8c_1a4dc4195ee24a2240646ab8e3f70eaacb" compoundref="keypad_8c" startline="198" endline="209">KeypadCreateDefaulteKey</references>
         <references refid="keypad_8c_1a49ffa463b26cc47b7d9e3e2cda8d9168" compoundref="keypad_8c" startline="163" endline="171">KeypadFindSpecialKey</references>
         <references refid="keypad_8c_1a35a69618b097b5f64e918962cd47c824" compoundref="keypad_8c" startline="179" endline="196">KeypadWaitForChar</references>
-        <referencedby refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" compoundref="logic_8c" startline="374" endline="441">RunMain</referencedby>
+        <referencedby refid="logic_8c_1a41a8f29e3704245cd53e2e11e03ec5f7" compoundref="logic_8c" startline="387" endline="453">RunMain</referencedby>
         <referencedby refid="test_8c_1a8ff2f0e3039fa4096f5c57d610c9281d" compoundref="test_8c" startline="59" endline="67">TestKeypadLcd</referencedby>
       </memberdef>
     </sectiondef>
